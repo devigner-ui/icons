@@ -1,0 +1,65 @@
+{
+  "name": "@devigner-ui/icons-react-native",
+  "version": "2.0.0",
+  "description": "8,568 open-source icons for React Native: 2,142 symbols, each in outline, twotone, bold and bulk. Built on Solar Icon Set and Iconsax.",
+  "keywords": [
+    "icons",
+    "react-native",
+    "expo",
+    "react-native-svg",
+    "svg",
+    "svg-icons",
+    "icon-set",
+    "icon-library"
+  ],
+  "license": "MIT AND CC-BY-4.0",
+  "author": "Devigner",
+  "homepage": "https://icons.remidevigner.pro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigner-ui/icons.git",
+    "directory": "packages/icons-react-native"
+  },
+  "bugs": {
+    "url": "https://github.com/devigner-ui/icons/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./icons/*": "./dist/icons/*.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "ATTRIBUTION.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "test": "node scripts/check.mjs"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-native-svg": ">=13.0.0"
+  },
+  "devDependencies": {
+    "@devigner-ui/icons": "workspace:^",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

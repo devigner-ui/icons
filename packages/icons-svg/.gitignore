@@ -1,0 +1,4 @@
+# Rendered from @devigner-ui/icons at build time, never edited by hand.
+# `pnpm build` writes them; prepublishOnly runs it before the tarball is made.
+svg/
+sprite/

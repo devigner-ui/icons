@@ -1,0 +1,94 @@
+{
+  "name": "@devigner-ui/icons",
+  "version": "3.0.0",
+  "description": "8,568 open-source icons for React: 2,142 symbols, each in outline, twotone, bold and bulk. Built on Solar Icon Set and Iconsax.",
+  "keywords": [
+    "icons",
+    "react",
+    "react-icons",
+    "svg",
+    "svg-icons",
+    "icon-set",
+    "icon-library",
+    "typescript",
+    "tree-shaking",
+    "outline-icons"
+  ],
+  "license": "MIT AND CC-BY-4.0",
+  "author": "Devigner",
+  "homepage": "https://icons.remidevigner.pro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigner-ui/icons.git",
+    "directory": "packages/icons"
+  },
+  "bugs": {
+    "url": "https://github.com/devigner-ui/icons/issues"
+  },
+  "type": "module",
+  "bin": {
+    "icons": "./bin/cli.mjs"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./metadata.json": "./dist/metadata.json",
+    "./embeddings.json": "./dist/embeddings.json",
+    "./styles.css": "./dist/styles.css",
+    "./package.json": "./package.json",
+    "./*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/icons/*.js",
+      "require": "./dist/icons/*.cjs"
+    }
+  },
+  "files": [
+    "bin",
+    "dist",
+    "ATTRIBUTION.md"
+  ],
+  "scripts": {
+    "sync": "node scripts/sync.mjs",
+    "sync:watch": "node scripts/sync.mjs --watch",
+    "deduplicate": "node scripts/deduplicate.mjs",
+    "optimize:paths": "node scripts/optimize-paths.mjs",
+    "fix-names": "node scripts/fix-names.mjs",
+    "generate:metadata": "node scripts/generate-metadata.mjs",
+    "generate:embeddings": "node scripts/generate-embeddings.mjs",
+    "build": "pnpm optimize:paths && pnpm sync && pnpm generate:metadata && pnpm generate:embeddings && tsup",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "test": "node scripts/artwork-check.mjs && node scripts/surface-check.mjs && node scripts/render-check.mjs && node scripts/emit-svg.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@xenova/transformers": "^2.17.0",
+    "chokidar": "^3.6.0",
+    "svgo": "^3.2.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,0 +1,5 @@
+# Generated from @devigner-ui/icons by `pnpm build`, never edited by hand.
+dist/
+
+# Compiled components from scripts/check.mjs, removed on exit.
+.check-*/

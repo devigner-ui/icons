@@ -1,0 +1,77 @@
+Devigner Icons is a free and open-source project. Two different licences apply
+to two different parts of it.
+
+The CODE is MIT licensed and original work.
+The ICON ARTWORK is derived from third-party sets and carries their terms.
+
+See ATTRIBUTION.md for the full provenance of the artwork, what changed, and
+how to credit it in your own project.
+
+
+================================================================================
+CODE
+================================================================================
+
+Applies to the React components, the CLI, the build scripts, the type
+definitions, the generated metadata and embeddings, the website and the
+documentation.
+
+MIT License
+
+Copyright (c) 2026 Devigner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+================================================================================
+ICON ARTWORK
+================================================================================
+
+The SVG path data is not original work. It is derived from two existing open
+icon sets:
+
+  Iconsax, by Vuesax                                            909 icons
+  https://iconsax.io
+  Free for personal and commercial use.
+
+  Solar Icon Set, by 480 Design                               1,055 icons
+  https://www.figma.com/community/file/1166831539721848736
+  Licensed under CC BY 4.0.
+  https://creativecommons.org/licenses/by/4.0/
+
+Both sets were modified: merged, deduplicated, renamed, recoloured to
+currentColor and rebuilt as React components.
+
+CC BY 4.0 requires attribution. If you ship the Solar-derived icons, free or
+commercial, open or closed, credit the original author somewhere you keep
+third-party notices:
+
+  Icons from Devigner Icons, derived from Solar Icon Set by 480 Design
+  (CC BY 4.0) and Iconsax by Vuesax. Modified.
+
+CC BY 4.0 does not require you to open-source your own project.
+
+
+================================================================================
+TRADEMARKS
+================================================================================
+
+Around 35 icons reproduce third-party logos and wordmarks. Those marks belong
+to their respective owners. Nothing in this licence grants any right to use
+them, and each owner's brand guidelines govern instead. See ATTRIBUTION.md.

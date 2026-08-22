@@ -1,0 +1,2054 @@
+# Icon Library Taxonomy
+
+## Finance & Banking
+
+- Banknote
+- Banknote 2
+- Bill
+- Bill 2
+- Bill Check
+- Bill Cross
+- Bill List
+- Card
+- Card 2
+- Card Add
+- Card Coin
+- Card Edit
+- Card Pos
+- Card Receive
+- Card Recive
+- Card Remove
+- Card Search
+- Card Send
+- Card Slash
+- Card Tick
+- Card Transfer
+- Cardholder
+- Cards
+- Cash Out
+- Coin
+- Dollar
+- Dollar Circle
+- Dollar Minimalistic
+- Dollar Square
+- Empty Wallet
+- Empty Wallet Add
+- Empty Wallet Change
+- Empty Wallet Remove
+- Empty Wallet Tick
+- Empty Wallet Time
+- Euro
+- Money
+- Money 2
+- Money 3
+- Money 4
+- Money Add
+- Money Bag
+- Money Change
+- Money Forbidden
+- Money Receive
+- Money Recive
+- Money Remove
+- Money Send
+- Money Tick
+- Money Time
+- Moneys
+- Percentage Square
+- Personalcard
+- Receipt
+- Receipt 2
+- Receipt Add
+- Receipt Discount
+- Receipt Disscount
+- Receipt Edit
+- Receipt Item
+- Receipt Minus
+- Receipt Search
+- Receipt Square
+- Receipt Text
+- Ruble
+- Safe 2
+- Safe Circle
+- Safe Square
+- Security Card
+- Strongbox
+- Strongbox 2
+- Transaction Minus
+- Wad Of Money
+- Wallet
+- Wallet 2
+- Wallet 3
+- Wallet Add
+- Wallet Check
+- Wallet Minus
+- Wallet Money
+- Wallet Remove
+- Wallet Search
+
+## Crypto & Web3
+
+- Aave (Aave)
+- Ankr (Ankr)
+- Augur (Rep)
+- Autonio (Niox)
+- Avalanche (Avax)
+- Binance Coin (Bnb)
+- Binance Usd (Busd)
+- Bitcoin (Btc)
+- Bitcoin Card
+- Bitcoin Convert
+- Bitcoin Refresh
+- Buy Crypto
+- Cardano (Ada)
+- Celsius (Cel)
+- Celo (Celo)
+- Chainlink (Link)
+- Civic (Cvc)
+- Dai (Dai)
+- Dash (Dash)
+- Decred (Dcr)
+- Dent (Dent)
+- Educare (Ekt)
+- Emercoin (Emc)
+- Enjin Coin (Enj)
+- Eos (Eos)
+- Ethereum (Eth)
+- Ethereum Classic (Etc)
+- FTX Token (Ftt)
+- Harmony (One)
+- Hedera Hashgraph (Hbar)
+- Hex (Hex)
+- Huobi Token (Ht)
+- Icon (Icx)
+- Iost (Iost)
+- Kyber Network (Knc)
+- Litecoin (Ltc)
+- Maker (Mkr)
+- Monero (Xmr)
+- Nebulas (Nas)
+- Nem (Xem)
+- Nexo (Nexo)
+- Ocean Protocol (Ocean)
+- Okb (Okb)
+- Ontology (Ont)
+- Polkadot (Dot)
+- Polygon (Matic)
+- Polyswarm (Nct)
+- Quant (Qnt)
+- Siacoin (Sc)
+- Solana (Sol)
+- Stacks (Stx)
+- Stellar (Xlm)
+- Tenx (Pay)
+- Tether (Usdt)
+- The Graph (Grt)
+- Theta (Theta)
+- Thorchain (Rune)
+- Trade
+- Trontron (Trx)
+- USD Coin (Usdc)
+- Velas (Vlx)
+- Vibe (Vibe)
+- Wanchain (Wan)
+- Wing (Wing)
+- XRP (Xrp)
+- Zel (Zel)
+
+## Brands & Logos
+
+- Android
+- Apple
+- Be
+- Blogger
+- Bootstrap
+- Bootsrap
+- Chrome
+- Dribbble
+- Dropbox
+- Facebook
+- Figma
+- Framer
+- Google
+- Google Play
+- Grammarly
+- Grammerly
+- HTML 3
+- HTML 5
+- Html 3
+- Html 5
+- Illustrator
+- Instagram
+- Java Script
+- JavaScript
+- JS
+- Js
+- Messenger
+- PayPal
+- Paypal
+- Photoshop
+- Python
+- Slack
+- Snapchat
+- Spotify
+- Trello
+- Twitch
+- UI8
+- Ui8
+- Vuesax
+- WhatsApp
+- Whatsapp
+- Windows
+- WinRar
+- Winrar
+- XD
+- Xd
+- Xiaomi
+- YouTube
+- Youtube
+
+## Communication & Messaging
+
+- Chat Dots
+- Chat Line
+- Chat Round
+- Chat Round Call
+- Chat Round Check
+- Chat Round Dots
+- Chat Round Like
+- Chat Round Line
+- Chat Round Money
+- Chat Round Unread
+- Chat Round Video
+- Chat Square
+- Chat Square Arrow
+- Chat Square Call
+- Chat Square Check
+- Chat Square Code
+- Chat Square Like
+- Chat Unread
+- Check Read
+- Device Message
+- Dialog
+- Dialog 2
+- Direct
+- Direct Inbox
+- Direct Normal
+- Direct Notification
+- Direct Send
+- Directbox Default
+- Directbox Notif
+- Directbox Receive
+- Directbox Send
+- Forward
+- Forward 2
+- Inbox
+- Inbox Archive
+- Inbox In
+- Inbox Line
+- Inbox Out
+- Inbox Unread
+- Letter
+- Letter Opened
+- Letter Unread
+- Mailbox
+- Message
+- Message 2
+- Message Add
+- Message Circle
+- Message Edit
+- Message Favorite
+- Message Minus
+- Message Notif
+- Message Programming
+- Message Question
+- Message Remove
+- Message Search
+- Message Square
+- Message Text
+- Message Tick
+- Message Time
+- Messages
+- Messages 2
+- Messages 3
+- Multiple Forward Left
+- Multiple Forward Right
+- Paperclip
+- Paperclip 2
+- Paperclip Rounded
+- Paperclip Rounded 2
+- Pen
+- Pen 2
+- Pen New Round
+- Pen New Square
+- Plain
+- Plain 2
+- Plain 3
+- Reply
+- Reply 2
+- SMS
+- SMS Edit
+- SMS Notification
+- SMS Search
+- SMS Star
+- SMS Tracking
+- Sms
+- Sms Edit
+- Sms Notification
+- Sms Search
+- Sms Star
+- Sms Tracking
+- Square Forward
+- Square Share Line
+- Unread
+
+## Calls & Telephony
+
+- 24 Support
+- Call
+- Call Add
+- Call Calling
+- Call Cancel
+- Call Cancel Rounded
+- Call Chat
+- Call Chat Rounded
+- Call Dropped
+- Call Dropped Rounded
+- Call Incoming
+- Call Incoming Rounded
+- Call Medicine
+- Call Medicine Rounded
+- Call Minus
+- Call Outgoing
+- Call Outgoing Rounded
+- Call Received
+- Call Remove
+- Call Slash
+- End Call
+- End Call Rounded
+- Incoming Call
+- Incoming Call Rounded
+- Outgoing Call
+- Outgoing Call Rounded
+- Phone
+- Phone Calling
+- Phone Calling Rounded
+- Phone Rounded
+- Record Circle
+- Record Minimalistic
+- Record Square
+
+## Arrows & Direction
+
+- Alt Arrow Down
+- Alt Arrow Left
+- Alt Arrow Right
+- Alt Arrow Up
+- Arrange Circle
+- Arrange Circle 2
+- Arrange Square
+- Arrange Square 2
+- Arrow
+- Arrow 2
+- Arrow 3
+- Arrow Bottom
+- Arrow Circle Down
+- Arrow Circle Left
+- Arrow Circle Right
+- Arrow Down
+- Arrow Left
+- Arrow Left Down
+- Arrow Left Up
+- Arrow Right
+- Arrow Right Down
+- Arrow Right Up
+- Arrow Square
+- Arrow Square Down
+- Arrow Square Left
+- Arrow Square Right
+- Arrow Square Up
+- Arrow Swap Horizontal
+- Arrow To Down Left
+- Arrow To Down Right
+- Arrow To Top Left
+- Arrow To Top Right
+- Arrow Up
+- Back Square
+- Circle Bottom Down
+- Circle Bottom Up
+- Circle Top Down
+- Circle Top Up
+- Convert
+- Double Alt Arrow Down
+- Double Alt Arrow Left
+- Double Alt Arrow Right
+- Double Alt Arrow Up
+- Download
+- Download Minimalistic
+- Download Square
+- Download Twice Square
+- Exit
+- Export
+- Forward Square
+- Import
+- Login
+- Login 2
+- Login 3
+- Logout
+- Logout 2
+- Logout 3
+- Maximize Square
+- Maximize Square 2
+- Maximize Square 3
+- Maximize Square Minimalistic
+- Minimize
+- Minimize Square
+- Minimize Square 2
+- Minimize Square 3
+- Minimize Square Minimalistic
+- Receive Square
+- Receive Square 2
+- Received
+- Recive Square
+- Recive Twice Square
+- Redo
+- Refresh
+- Refresh 2
+- Refresh Circle
+- Refresh Left Square
+- Refresh Right Square
+- Refresh Square
+- Refresh Square 2
+- Repeat
+- Repeat Circle
+- Restart
+- Restart Circle
+- Restart Square
+- Rotate Left
+- Rotate Right
+- Round Alt Arrow Down
+- Round Alt Arrow Left
+- Round Alt Arrow Right
+- Round Alt Arrow Up
+- Round Arrow Down
+- Round Arrow Left
+- Round Arrow Left Down
+- Round Arrow Left Up
+- Round Arrow Right
+- Round Arrow Right Down
+- Round Arrow Right Up
+- Round Arrow Up
+- Round Double Alt Arrow Down
+- Round Double Alt Arrow Left
+- Round Double Alt Arrow Right
+- Round Double Alt Arrow Up
+- Round Sort Horizontal
+- Round Sort Vertical
+- Round Transfer Diagonal
+- Round Transfer Horizontal
+- Round Transfer Vertical
+- Send Square
+- Send Sqaure 2
+- Send Twice Square
+- Sort Horizontal
+- Sort Vertical
+- Square Alt Arrow Down
+- Square Alt Arrow Left
+- Square Alt Arrow Right
+- Square Alt Arrow Up
+- Square Arrow Down
+- Square Arrow Left
+- Square Arrow Left Down
+- Square Arrow Left Up
+- Square Arrow Right
+- Square Arrow Right Down
+- Square Arrow Right Up
+- Square Arrow Up
+- Square Bottom Down
+- Square Bottom Up
+- Square Double Alt Arrow Down
+- Square Double Alt Arrow Left
+- Square Double Alt Arrow Right
+- Square Double Alt Arrow Up
+- Square Sort Horizontal
+- Square Sort Vertical
+- Square Top Down
+- Square Top Up
+- Square Transfer Horizontal
+- Square Transfer Vertical
+- Transfer Horizontal
+- Transfer Vertical
+- Undo
+- Undo Left
+- Undo Left Round
+- Undo Left Round Square
+- Undo Left Square
+- Undo Right
+- Undo Right Round
+- Undo Right Round Square
+- Undo Right Square
+- Upload
+- Upload Minimalistic
+- Upload Square
+- Upload Twice Square
+
+## Files & Documents
+
+- Archive
+- Archive Add
+- Archive Book
+- Archive Check
+- Archive Down
+- Archive Down Minimlistic
+- Archive Minimalistic
+- Archive Minus
+- Archive Slash
+- Archive Tick
+- Archive Up
+- Archive Up Minimlistic
+- Bill
+- Book Saved
+- Clipboard
+- Clipboard Add
+- Clipboard Check
+- Clipboard Close
+- Clipboard Export
+- Clipboard Heart
+- Clipboard Import
+- Clipboard List
+- Clipboard Remove
+- Clipboard Text
+- Clipboard Tick
+- Cloud File
+- Code File
+- Copyright
+- Creative Commons
+- Document
+- Document Add
+- Document Cloud
+- Document Copy
+- Document Download
+- Document Favorite
+- Document Filter
+- Document Forward
+- Document Like
+- Document Medicine
+- Document Normal
+- Document Previous
+- Document Sketch
+- Document Text
+- Document Upload
+- Documents
+- Documents Minimalistic
+- Edit
+- Edit 2
+- Figma File
+- File
+- File Check
+- File Corrupted
+- File Download
+- File Favourite
+- File Left
+- File Remove
+- File Right
+- File Send
+- File Smile :)
+- File Text
+- Note
+- Note 2
+- Note Add
+- Note Favorite
+- Note Remove
+- Note Text
+- Notebook
+- Notebook Bookmark
+- Notebook Minimalistic
+- Notebook Square
+- Notes
+- Notes Minimalistic
+- Save 2
+- Save Add
+- Save Minus
+- Save Remove
+- Stickynote
+- ZIP File
+
+## Folders & Storage
+
+- Add Folder
+- Folder
+- Folder 2
+- Folder Add
+- Folder Check
+- Folder Cloud
+- Folder Connection
+- Folder Cross
+- Folder Error
+- Folder Favorite
+- Folder Favourite (Bookmark)
+- Folder Favourite (Star)
+- Folder Minus
+- Folder Open
+- Folder Path Connect
+- Folder Security
+- Folder With Files
+- Move To Folder
+- Remove Folder
+
+## Typography & Text Formatting
+
+- Attach Circle
+- Attach Square
+- Backspace
+- Eraser
+- Eraser Circle
+- Eraser Square
+- Firstline
+- Language Circle
+- Language Square
+- Link
+- Link 2
+- Link Broken
+- Link Broken Minimalistic
+- Link Circle
+- Link Minimalistic
+- Link Minimalistic 2
+- Link Round
+- Link Round Angle
+- Link Square
+- Paragraph Spacing
+- Pharagraphspacing
+- Quote Down
+- Quote Down Circle
+- Quote Down Square
+- Quote Up
+- Quote Up Circle
+- Quote Up Square
+- Smallcaps
+- Text
+- Text Block
+- Text Bold
+- Text Bold Circle
+- Text Bold Square
+- Text Circle
+- Text Cross
+- Text Cross Circle
+- Text Cross Square
+- Text Field
+- Text Field Focus
+- Text Italic
+- Text Italic Circle
+- Text Italic Square
+- Text Selection
+- Text Square
+- Text Square 2
+- Text Underline
+- Text Underline Circle
+- Text Underline Cross
+- Textalign Center
+- Textalign Justifycenter
+- Textalign Justifyleft
+- Textalign Justifyright
+- Textalign Left
+- Textalign Right
+- Translate
+- Translation
+- Translation 2
+
+## Design, Vectors & Layout
+
+- 3Square
+- Additem
+- Align Bottom
+- Align Horizonta Spacing
+- Align Horizontal Center
+- Align Horizontally
+- Align Left
+- Align Right
+- Align Top
+- Align Vertical Center
+- Align Vertical Spacing
+- Align Vertically
+- Backward Item
+- Bezier
+- Blend
+- Blend 2
+- Blur
+- Brush
+- Bucket Circle
+- Bucket Square
+- Color Swatch
+- Colorfilter
+- Colors Square
+- Colour Tuneing
+- Component
+- Convertshape
+- Convertshape 2
+- Copy
+- Copy Success
+- Crop
+- Crop Minimalistic
+- Designtools
+- Element 1
+- Element 2
+- Element 3
+- Element 4
+- Element Equal
+- Element Plus
+- Fatrows
+- Filters
+- Flip Horizontal
+- Flip Vertical
+- Format Circle
+- Format Square
+- Forward Item
+- Glass
+- Grid 1
+- Grid 2
+- Grid 3
+- Grid 4
+- Grid 5
+- Grid 6
+- Grid 7
+- Grid 8
+- Grid 9
+- Grid Edit
+- Grid Eraser
+- Grid Lock
+- Layer
+- Layers
+- Layers Minimalistic
+- Magic Stick
+- Magic Stick 2
+- Magic Stick 3
+- Magicpen
+- Main Component
+- Mask
+- Mask Happly
+- Mask Sad
+- Masks
+- Mirror Left
+- Mirror Right
+- Omega Circle
+- Omega Square
+- Paint Roller
+- Paintbucket
+- Palette
+- Palette Round
+- Pallete 2
+- Path
+- Path 2
+- Path Square
+- Pen Add
+- Pen Close
+- Pen Remove
+- Pen Tool
+- Pen Tool 2
+- Pipette
+- Radial Blur
+- Recovery Convert
+- Rotate Left
+- Rotate Right
+- Row Horizontal
+- Row Vertical
+- Ruler
+- Ruler & Pen
+- Ruler Angular
+- Ruler Cross Pen
+- Ruler Pen
+- Ruler&pen
+- Scissor
+- Scissors
+- Scissors Square
+- Shapes
+- Size
+- Three Squares
+
+## Media & Playback
+
+- Album
+- Audio Square
+- Backward
+- Backward 10 Seconds
+- Backward 15 Seconds
+- Backward 5 Seconds
+- Boombox
+- Camera
+- Camera Add
+- Camera Minimalistic
+- Camera Rotate
+- Camera Slash
+- Camera Square
+- Cassette
+- Cassette 2
+- Clapperboard
+- Clapperboard Edit
+- Clapperboard Open
+- Clapperboard Open Play
+- Clapperboard Play
+- Clapperboard Text
+- Forward 10 Seconds
+- Forward 15 Seconds
+- Forward 5 Seconds
+- Full Screen
+- Full Screen Circle
+- Full Screen Square
+- Gallery
+- Gallery Add
+- Gallery Check
+- Gallery Circle
+- Gallery Download
+- Gallery Edit
+- Gallery Export
+- Gallery Favorite
+- Gallery Favourite
+- Gallery Import
+- Gallery Minimalistic
+- Gallery Remove
+- Gallery Round
+- Gallery Send
+- Gallery Slash
+- Gallery Tick
+- Gallery Wide
+- Image
+- Library
+- Maximize Circle
+- Microphone
+- Microphone 2
+- Microphone 3
+- Microphone Large
+- Microphone Slash
+- Mini Music Sqaure
+- Mirroring Screen
+- Music
+- Music Circle
+- Music Dashboard
+- Music Filter
+- Music Library
+- Music Library 2
+- Music Note
+- Music Note 2
+- Music Note 3
+- Music Note 4
+- Music Note Slider
+- Music Note Slider 2
+- Music Notes
+- Music Play
+- Music Playlist
+- Music Square
+- Music Square Add
+- Music Square Remove
+- Music Square Search
+- Musicnote
+- Muted
+- Next
+- Note Square
+- Panorama
+- Pause
+- Pause Circle
+- PIP
+- PIP 2
+- Play
+- Play Circle
+- Play Cricle
+- Play Stream
+- Playback Speed
+- Podcast
+- Previous
+- Quit Full Screen
+- Quit Full Screen Circle
+- Quit Full Screen Square
+- Quit PIP
+- Radio
+- Radio Minimalistic
+- Record
+- Reel
+- Reel 2
+- Repeat One
+- Repeat One Minimalistic
+- Repeate Music
+- Repeate One
+- Rewind 10 Seconds Back
+- Rewind 10 Seconds Forward
+- Rewind 15 Seconds Back
+- Rewind 15 Seconds Forward
+- Rewind 5 Seconds Back
+- Rewind 5 Seconds Forward
+- Rewind Back
+- Rewind Back Circle
+- Rewind Forward
+- Rewind Forward Circle
+- Screen Share
+- Screenmirroring
+- Shuffle
+- Skip Next
+- Skip Previous
+- Sound
+- Soundwave
+- Soundwave Circle
+- Soundwave Square
+- Stop
+- Stop Circle
+- Stream
+- Subtitle
+- Subtitles
+- To PIP
+- Turntable
+- Turntable Minimalistic
+- Turntable Music Note
+- Upload Track
+- Upload Track 2
+- Video
+- Video Add
+- Video Circle
+- Video Frame
+- Video Frame 2
+- Video Frame Cut
+- Video Frame Cut 2
+- Video Frame Play Horizontal
+- Video Frame Play Vertical
+- Video Frame Replace
+- Video Horizontal
+- Video Library
+- Video Octagon
+- Video Play
+- Video Remove
+- Video Slash
+- Video Square
+- Video Tick
+- Video Time
+- Video Vertical
+- Videocamera
+- Videocamera Add
+- Videocamera Record
+- Vinyl
+- Vinyl Record
+- Voice Cricle
+- Voice Square
+- Volume
+- Volume Cross
+- Volume High
+- Volume Knob
+- Volume Loud
+- Volume Low
+- Volume Mute
+- Volume Slash
+- Volume Small
+- Volume Up
+- Wallpaper
+
+## Hardware, Devices & Electronics
+
+- Airbuds
+- Airbuds Case
+- Airbuds Case Charge
+- Airbuds Case Minimalistic
+- Airbuds Case Open
+- Airbuds Charge
+- Airbuds Check
+- Airbuds Left
+- Airbuds Remove
+- Airbuds Right
+- Airpod
+- Airpods
+- CPU
+- CPU Bolt
+- Cpu Charge
+- Cpu Setting
+- Devices
+- Diskette
+- Display
+- Driver
+- Driver 2
+- Driver Refresh
+- External Drive
+- Flash Drive
+- Game
+- Gameboy
+- Gamepad
+- Gamepad Charge
+- Gamepad Minimalistic
+- Gamepad No Charge
+- Gamepad Old
+- Headphone
+- Headphones
+- Headphones Round
+- Headphones Round Sound
+- Headphones Square
+- Headphones Square Sound
+- iPhone
+- Keyboard
+- Keyboard Open
+- Laptop
+- Laptop 2
+- Laptop 3
+- Laptop Minimalistic
+- Mobile
+- Monitor
+- Monitor Camera
+- Monitor Mobbile
+- Monitor Recorder
+- Monitor Smartphone
+- Mouse
+- Mouse Circle
+- Mouse Minimalistic
+- Mouse Square
+- Printer
+- Printer 2
+- Printer Minimalistic
+- Printer Slash
+- Projector
+- RAM
+- RAM 2
+- Ram
+- Ram 2
+- SD Card
+- Smart Speaker
+- Smart Speaker 2
+- Smart Speaker Minimalistic
+- Smartphone
+- Smartphone 2
+- Smartphone Rotate 2
+- Smartphone Rotate Angle
+- Smartphone Rotate Orientation
+- Smartphone Update
+- Smartphone Vibration
+- Speaker
+- Speaker Minimalistic
+- SSD Round
+- SSD Square
+- Tablet
+- TV
+
+## Connectivity, Network & Power
+
+- 3Full
+- 3full
+- Airdrop
+- Battery Charge
+- Battery Charge Minimalistic
+- Battery Charging
+- Battery Disable
+- Battery Empty
+- Battery Full
+- Battery Full Minimalistic
+- Battery Half
+- Battery Half Minimalistic
+- Battery Low
+- Battery Low Minimalistic
+- Bluetooth
+- Bluetooth 2
+- Bluetooth Circle
+- Bluetooth Rectangle
+- Bluetooth Square
+- Bluetooth Wave
+- Bolt
+- Bolt Circle
+- Cloud Add
+- Cloud Change
+- Cloud Connection
+- Cloud Remove
+- Cloud Storage
+- Electricity
+- Home WiFi
+- Home Wifi
+- Home Wifi Angle
+- Lightning
+- Plug Circle
+- Power
+- SIM Card
+- SIM Card Minimalistic
+- SIM Cards
+- Simcard
+- Simcard 2
+- Socket
+- USB
+- USB Circle
+- USB Square
+- Wi-Fi Router
+- Wi-Fi Router Minimalistic
+- Wi-Fi Router Round
+- Wifi
+- Wifi Square
+- Wireless Charge
+
+## Coding & Architecture
+
+- Code
+- Code 2
+- Code Circle
+- Code Square
+- Command
+- Command Square
+- Data
+- Data 2
+- Database
+- Document Code
+- Document Code 2
+- Hashtag
+- Hashtag Chat
+- Hashtag Circle
+- Hashtag Down
+- Hashtag Square
+- Hashtag Up
+- Hierarchy
+- Hierarchy 2
+- Hierarchy 3
+- Hierarchy Square
+- Hierarchy Square 2
+- Hierarchy Square 3
+- Mobile Programming
+- Programming
+- Programming Arrow
+- Programming Arrows
+- Screencast
+- Screencast 2
+- Sidebar Code
+- Slash Circle
+- Slash Square
+- Structure
+
+## Security & Biometrics
+
+- Alarm
+- Bomb
+- Bomb Emoji
+- Bomb Minimalistic
+- Check
+- Code Scan
+- Eye
+- Eye Closed
+- Eye Scan
+- Eye Slash
+- Face Scan Circle
+- Face Scan Square
+- Finger Cricle
+- Finger Scan
+- Incognito
+- Key
+- Key Minimalistic
+- Key Minimalistic 2
+- Key Minimalistic Square
+- Key Minimalistic Square 2
+- Key Minimalistic Square 3
+- Key Square
+- Key Square 2
+- Lock
+- Lock Circle
+- Lock Keyhole
+- Lock Keyhole Minimalistic
+- Lock Keyhole Minimalistic Unlocked
+- Lock Keyhole Unlocked
+- Lock Password
+- Lock Password Unlocked
+- Lock Slash
+- Lock Unlocked
+- Object Scan
+- Password
+- Password Check
+- Password Minimalistic
+- Password Minimalistic Input
+- QR Code
+- Radar
+- Scan
+- Scan Barcode
+- Scanner
+- Scanner 2
+- Scanning
+- Security
+- Security Safe
+- Security Time
+- Security User
+- Shield
+- Shield Check
+- Shield Cross
+- Shield Keyhole
+- Shield Keyhole Minimalistic
+- Shield Minimalistic
+- Shield Minus
+- Shield Network
+- Shield Plus
+- Shield Search
+- Shield Security
+- Shield Slash
+- Shield Star
+- Shield Tick
+- Shield Up
+- Shield User
+- Shield Warning
+- Siren
+- Siren Rounded
+- Unlock
+- Verified Check
+- Verify
+
+## System Controls, Navigation & UI
+
+- Add
+- Add Circle
+- Add Square
+- Augmented Reality
+- Autobrightness
+- Category
+- Category 2
+- Check Circle
+- Check Square
+- Close Circle
+- Close Square
+- Computing
+- Cursor
+- Cursor Square
+- Danger
+- Danger Circle
+- Danger Square
+- Danger Triangle
+- Feed
+- Filter
+- Filter Add
+- Filter Edit
+- Filter Remove
+- Filter Search
+- Filter Square
+- Filter Tick
+- Forbidden
+- Forbidden Circle
+- Frame
+- Hamburger Menu
+- Info Circle
+- Info Square
+- Information
+- Kanban
+- Level
+- Menu
+- Menu 2
+- Menu Board
+- Menu Dots
+- Menu Dots Circle
+- Menu Dots Square
+- Minus
+- Minus Circle
+- Minus Cirlce
+- Minus Square
+- More
+- More 2
+- More Circle
+- More Square
+- Paper Bin
+- Pin
+- Pin Circle
+- Pin List
+- Plus, Minus
+- Posts Carousel Horizontal
+- Posts Carousel Vertical
+- Question Circle
+- Question Square
+- Reorder
+- Revote
+- Scale
+- Scroll
+- Setting
+- Setting 2
+- Setting 3
+- Setting 4
+- Setting 5
+- Settings
+- Settings Minimalistic
+- Share
+- Share Circle
+- Sidebar Bottom
+- Sidebar Left
+- Sidebar Minimalistic
+- Sidebar Right
+- Sidebar Top
+- Siderbar
+- Slider
+- Slider Horizontal
+- Slider Minimalistic Horizontal
+- Slider Vertical
+- Slider Vertical Minimalistic
+- Sort
+- Sort By Alphabet
+- Sort By Time
+- Sort From Bottom To Top
+- Sort From Top To Bottom
+- Status
+- Status Up
+- Target
+- Tick Circle
+- Tick Square
+- Toggle Off
+- Toggle Off Circle
+- Toggle On
+- Toggle On Circle
+- Trash
+- Trash Bin 2
+- Trash Bin Minimalistic
+- Trash Bin Minimalistic 2
+- Trash Bin Trash
+- Trush Square
+- Tuning
+- Tuning 2
+- Tuning 3
+- Tuning 4
+- Tuning Square
+- Tuning Square 2
+- Warning 2
+- Widget
+- Widget 2
+- Widget 3
+- Widget 4
+- Widget 5
+- Widget 6
+- Widget Add
+- Window Frame
+
+## Users & Profiles
+
+- Group
+- People
+- People Nearby
+- Profile
+- Profile 2User
+- Profile 2user
+- Profile Add
+- Profile Circle
+- Profile Delete
+- Profile Remove
+- Profile Tick
+- Tag User
+- User
+- User Add
+- User Block
+- User Block Rounded
+- User Check
+- User Check Rounded
+- User Circle
+- User Cirlce Add
+- User Cross
+- User Cross Rounded
+- User Edit
+- User Hand Up
+- User Hands
+- User Heart
+- User Heart Rounded
+- User Id
+- User Minus
+- User Minus Rounded
+- User Octagon
+- User Plus
+- User Plus Rounded
+- User Remove
+- User Rounded
+- User Search
+- User Speak
+- User Speak Rounded
+- User Square
+- User Tag
+- User Tick
+- Users Group Rounded
+- Users Group Two Rounded
+
+## Shopping & E-Commerce
+
+- Bag
+- Bag 2
+- Bag 3
+- Bag 4
+- Bag 5
+- Bag Check
+- Bag Cross
+- Bag Happy
+- Bag Heart
+- Bag Music
+- Bag Music 2
+- Bag Smile
+- Bag Tick
+- Bag Tick 2
+- Bag Timer
+- Barcode
+- Cart
+- Cart 2
+- Cart 3
+- Cart 4
+- Cart 5
+- Cart Check
+- Cart Cross
+- Cart Large
+- Cart Large 2
+- Cart Large 3
+- Cart Large 4
+- Cart Large Minimalistic
+- Cart Plus
+- Discount Circle
+- Discount Shape
+- Sale
+- Sale Square
+- Shop
+- Shop 2
+- Shop Add
+- Shop Minimalistic
+- Shop Remove
+- Shopping Bag
+- Shopping Cart
+- Tag
+- Tag 2
+- Tag Cross
+- Tag Horizontal
+- Tag Price
+- Tag Right
+- Ticker Star
+- Ticket
+- Ticket 2
+- Ticket Discount
+- Ticket Expired
+- Ticket Sale
+- Ticket Star
+
+## Location, Maps & Navigation
+
+- Branching Paths Down
+- Branching Paths Up
+- Compass
+- Compass Big
+- Compass Square
+- Direct Down
+- Direct Left
+- Direct Right
+- Direct Up
+- Discover
+- Global
+- Global Edit
+- Global Refresh
+- Global Search
+- Globus
+- GPS
+- GPS Slash
+- Location
+- Location Add
+- Location Cross
+- Location Minus
+- Location Slash
+- Location Tick
+- Map
+- Map Arrow Down
+- Map Arrow Left
+- Map Arrow Right
+- Map Arrow Square
+- Map Arrow Up
+- Map Point
+- Map Point Add
+- Map Point Favourite
+- Map Point Hospital
+- Map Point Remove
+- Map Point Rotate
+- Map Point School
+- Map Point Search
+- Map Point Wave
+- Picture Frame
+- Point On Map
+- Point On Map Perspective
+- Radar 2
+- Route
+- Route Square
+- Routing
+- Routing 2
+- Routing 3
+- Signpost
+- Signpost 2
+- Streets
+- Streets Map Point
+- Streets Navigation
+
+## Time & Calendar
+
+- Alarm Add
+- Alarm Pause
+- Alarm Play
+- Alarm Remove
+- Alarm Sleep
+- Alarm Turn Off
+- Calendar
+- Calendar 2
+- Calendar Add
+- Calendar Circle
+- Calendar Date
+- Calendar Edit
+- Calendar Mark
+- Calendar Minimalistic
+- Calendar Remove
+- Calendar Search
+- Calendar Tick
+- Clock
+- Clock Circle
+- Clock Square
+- History
+- History 2
+- History 3
+- Hourglass
+- Hourglass Line
+- Speedometer
+- Stopwatch
+- Stopwatch Pause
+- Stopwatch Play
+- Timer
+- Timer Pause
+- Timer Start
+- Watch
+- Watch Round
+- Watch Square
+- Watch Square Minimalistic
+- Watch Square Minimalistic Charge
+- Watch Status
+
+## Weather & Environment
+
+- Bonfire
+- Cloud
+- Cloud Bolt
+- Cloud Bolt Minimalistic
+- Cloud Check
+- Cloud Cross
+- Cloud Download
+- Cloud Drizzle
+- Cloud Fog
+- Cloud Lightning
+- Cloud Minus
+- Cloud Notif
+- Cloud Plus
+- Cloud Rain
+- Cloud Snow
+- Cloud Snowfall
+- Cloud Snowfall Minimalistic
+- Cloud Storm
+- Cloud Sun
+- Cloud Sun 2
+- Cloud Sunny
+- Cloud Upload
+- Cloud Waterdrop
+- Cloud Waterdrops
+- Clound Cross
+- Clouds
+- Cloudy Moon
+- Drop
+- Fire
+- Fire Minimalistic
+- Fire Square
+- Flame
+- Flash
+- Flash Circle
+- Flash Slash
+- Fog
+- Leaf
+- Moon
+- Moon Fog
+- Moon Sleep
+- Moon Stars
+- Snowflake
+- Sun
+- Sun 2
+- Sun Fog
+- Sunrise
+- Sunset
+- Temperature
+- Tornado
+- Tornado Small
+- Waterdrop
+- Waterdrops
+- Wind
+- Wind 2
+
+## Astronomy & Astrology
+
+- Aquarius
+- Asteroid
+- Atom
+- Black Hole
+- Black Hole 2
+- Black Hole 3
+- Earth
+- Gemini
+- Gemini 2
+- Infinity
+- Man
+- Men
+- Planet
+- Planet 2
+- Planet 3
+- Planet 4
+- Rocket
+- Rocket 2
+- Sagittarius
+- Satellite
+- Telescope
+- UFO
+- UFO 2
+- UFO 3
+- Woman
+- Women
+
+## Healthcare, Medicine & Fitness
+
+- Adhesive Plaster
+- Adhesive Plaster 2
+- Bacteria
+- Balls
+- Basketball
+- Benzene Ring
+- Bicycling
+- Bicycling Round
+- Body Shape
+- Body Shape Minimalistic
+- Bone
+- Bone Broken
+- Bone Crack
+- Bones
+- Bowling
+- DNA
+- Dropper
+- Dropper 2
+- Dropper 3
+- Dropper Minimalistic
+- Dropper Minimalistic 2
+- Dumbbell
+- Dumbbell Large
+- Dumbbell Large Minimalistic
+- Dumbbell Small
+- Dumbbells
+- Dumbbells 2
+- Football
+- Golf
+- Hand Pills
+- Health
+- Heart Pulse
+- Heart Pulse 2
+- Hiking
+- Hiking Minimalistic
+- Hiking Round
+- Hospital
+- Jar Of Pills
+- Jar Of Pills 2
+- Medical Kit
+- Meditation
+- Meditation Round
+- Microscope
+- Pill
+- Pills
+- Pills 2
+- Pills 3
+- Pulse
+- Pulse 2
+- Rugby
+- Running
+- Running 2
+- Running Round
+- Skateboard
+- Skateboarding
+- Skateboarding Round
+- Stethoscope
+- Stretching
+- Stretching Round
+- Swimming
+- Syringe
+- Tennis
+- Tennis 2
+- Test Tube
+- Test Tube Minimalistic
+- Thermometer
+- Treadmill
+- Treadmill Round
+- Virus
+- Volleyball
+- Volleyball 2
+- Walking
+- Walking Round
+- Water
+- Water Sun
+
+## Food, Drinks & Kitchen
+
+- Bottle
+- Cake
+- Chef Hat
+- Chef Hat Heart
+- Chef Hat Minimalistic
+- Coffee
+- Corkscrew
+- Cup
+- Cup First
+- Cup Hot
+- Cup Music
+- Cup Paper
+- Cup Star
+- Donut
+- Donut Bitten
+- Ladle
+- Milk
+- Oven Mitts
+- Oven Mitts Minimalistic
+- Plate
+- Rolling Pin
+- Tea Cup
+- Whisk
+- Wineglass
+- Wineglass Triangle
+
+## Home, Architecture & Furniture
+
+- Armchair
+- Armchair 2
+- Bank
+- Bar Chair
+- Bath
+- Bed
+- Bedside Table
+- Bedside Table 2
+- Bedside Table 3
+- Bedside Table 4
+- Building
+- Building 3
+- Building 4
+- Buildings
+- Buildings 2
+- Buildings 3
+- Buildings 4
+- Buliding
+- Candle
+- Candle 2
+- Chair
+- Chair 2
+- Chandelier
+- City
+- Closet
+- Closet 2
+- Conditioner
+- Conditioner 2
+- Condicioner
+- Condicioner 2
+- Courthouse
+- Floor Lamp
+- Floor Lamp Minimalistic
+- Fridge
+- Garage
+- Home
+- Home 2
+- Home Add
+- Home Add Angle
+- Home Angle
+- Home Angle 2
+- Home Smile
+- Home Smile Angle
+- Hospital
+- House
+- House 2
+- Lamp
+- Lamp Charge
+- Lamp On
+- Lamp Slash
+- Lightbulb
+- Lightbulb Bolt
+- Lightbulb Minimalistic
+- Mirror
+- Remote Controller
+- Remote Controller 2
+- Remote Controller Minimalistic
+- Safe Home
+- Smart Home
+- Smart Home Angle
+- Smart Vacuum Cleaner
+- Smart Vacuum Cleaner 2
+- Sofa
+- Sofa 2
+- Sofa 3
+- Trellis
+- Washing Machine
+- Washing Machine Minimalistic
+
+## Transport & Automotive
+
+- Accumulator
+- Airplane
+- Airplane Square
+- Bus
+- Car
+- Driving
+- Electric Refueling
+- Fuel
+- Gas Station
+- Kick Scooter
+- Scooter
+- Ship
+- Shock Absorber
+- Smart Car
+- Spedometer Low
+- Spedometer Max
+- Spedometer Middle
+- Suspension
+- Suspension Bolt
+- Suspension Cross
+- Traffic
+- Traffic Economy
+- Tram
+- Transmission
+- Transmission Circle
+- Transmission Square
+- Truck Remove
+- Truck Tick
+- Truck Time
+- Wheel
+- Wheel Angle
+
+## Education, Office & School
+
+- Award
+- Backpack
+- Book
+- Book 2
+- Book Bookmark
+- Book Bookmark Minimalistic
+- Book Minimalistic
+- Book Square
+- Bookmark
+- Bookmark 2
+- Bookmark Circle
+- Bookmark Opened
+- Bookmark Square
+- Bookmark Square Minimalistic
+- Briefcase
+- Brifecase Cross
+- Brifecase Tick
+- Brifecase Timer
+- Calculator
+- Calculator Minimalistic
+- Case
+- Case Minimalistic
+- Case Round
+- Case Round Minimalistic
+- Diploma
+- Diploma Verified
+- Math
+- Passport
+- Passport Minimalistic
+- Square Academic Cap
+- Square Academic Cap 2
+- Teacher
+
+## Reactions, Badges & Emojis
+
+- Confounded Circle
+- Confounded Square
+- Crown
+- Crown Line
+- Crown Minimalistic
+- Crown Star
+- Dislike
+- Emoji Funny Circle
+- Emoji Funny Square
+- Emoji Happy
+- Emoji Normal
+- Emoji Sad
+- Expressionless Circle
+- Expressionless Square
+- Facemask Circle
+- Facemask Square
+- Hand Heart
+- Hand Money
+- Hand Shake
+- Hand Stars
+- Happyemoji
+- Heart
+- Heart Add
+- Heart Angle
+- Heart Broken
+- Heart Circle
+- Heart Edit
+- Heart Lock
+- Heart Remove
+- Heart Search
+- Heart Shine
+- Heart Slash
+- Heart Tick
+- Heart Unlock
+- Hearts
+- Like
+- Like Dislike
+- Like Shapes
+- Like Tag
+- Lovely
+- Magic Star
+- Medal
+- Medal Ribbon
+- Medal Ribbon Star
+- Medal Ribbons Star
+- Medal Star
+- Medal Star Circle
+- Medal Star Square
+- Ranking
+- Sad Circle
+- Sad Square
+- Sleeping
+- Sleeping Circle
+- Sleeping Square
+- Smile Circle
+- Smile Square
+- Smileys
+- Star
+- Star Angle
+- Star Circle
+- Star Fall
+- Star Fall 2
+- Star Fall Minimalistic
+- Star Fall Minimalistic 2
+- Star Rainbow
+- Star Ring
+- Star Rings
+- Star Shine
+- Star Slash
+- Stars
+- Stars Line
+- Stars Minimalistic
+- Sticker
+- Sticker Circle
+- Sticker Smile Circle
+- Sticker Smile Circle 2
+- Sticker Smile Square
+- Sticker Square
+
+## Business & Analytics
+
+- Activity
+- Chart
+- Chart 2
+- Chart Square
+- Chart Square 2
+- Chart Success
+- Course Down
+- Course Up
+- Diagram
+- Diagram Down
+- Diagram Up
+- Favorite Chart
+- Graph
+- Graph Down
+- Graph Down New
+- Graph New
+- Graph New Up
+- Graph Up
+- Home Hashtag
+- Home Trend Down
+- Home Trend Up
+- Pie Chart
+- Pie Chart 2
+- Pie Chart 3
+- Presentation Graph
+- Presention Chart
+- Round Graph
+- Trend Down
+- Trend Up
+
+## Lists & Tasks
+
+- Checklist
+- Checklist Minimalistic
+- List
+- List Arrow Down
+- List Arrow Down Minimalistic
+- List Arrow Up
+- List Arrow Up Minimalistic
+- List Check
+- List Check Minimalistic
+- List Cross
+- List Cross Minimalistic
+- List Down
+- List Down Minimalistic
+- List Heart
+- List Heart Minimalistic
+- List Up
+- List Up Minimalistic
+- Plaaylist Minimalistic
+- Playlist
+- Playlist 2
+- Playlist Minimalistic 2
+- Playlist Minimalistic 3
+- Task
+- Task Square
+
+## General Objects & Miscellaneous
+
+- 3D Cube Scan
+- 3D Rotate
+- 3D Square
+- 3d Cube Scan
+- 3d Rotate
+- 3d Square
+- 3dcube
+- 4K
+- Accessibility
+- Balloon
+- Body
+- Box
+- Box 2
+- Box Add
+- Box Minimalistic
+- Box Remove
+- Box Search
+- Box Tick
+- Box Time
+- Broom
+- Bubble
+- Bug
+- Bug Minimalistic
+- Cat
+- CD
+- Cd
+- Confetti
+- Confetti Minimalistic
+- Convert 3D Cube
+- Convert 3d Cube
+- Cosmetic
+- Cup
+- Delivery
+- Diamonds
+- Explicit
+- Ferris Wheel
+- Flag
+- Flag 2
+- Flashlight
+- Flashlight On
+- Ghost
+- Ghost Smile
+- Gift
+- Glasses
+- Hanger
+- Hanger 2
+- High Definition
+- High Quality
+- Judge
+- Lifebuoy
+- Magnet
+- Magnet Wave
+- Mention Circle
+- Mention Square
+- Mirror
+- Paw
+- Perfume
+- Pet
+- Reserve
+- Scissor
+- Scissors
+- Scissors Square
+- Skirt
+- Slash
+- Sledgehammer
+- Special Effects
+- Story
+- Suitcase
+- Suitcase Lines
+- Suitcase Tag
+- T-Shirt
+- T-shirt
+- Tree
+- Triangle
+- Umbrella
+- Unlimited
+- Weigher
+- Weight
+- XXX

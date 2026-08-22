@@ -1,0 +1,52 @@
+{
+  "name": "@devigner-ui/icons-svg",
+  "version": "2.0.0",
+  "description": "8,568 raw SVG files for @devigner-ui/icons: 2,142 symbols in outline, twotone, bold and bulk. No framework, no build step, CDN-ready.",
+  "keywords": [
+    "icons",
+    "svg",
+    "svg-icons",
+    "icon-set",
+    "sprite",
+    "cdn",
+    "vanilla"
+  ],
+  "license": "MIT AND CC-BY-4.0",
+  "author": "Devigner",
+  "homepage": "https://icons.remidevigner.pro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigner-ui/icons.git",
+    "directory": "packages/icons-svg"
+  },
+  "bugs": {
+    "url": "https://github.com/devigner-ui/icons/issues"
+  },
+  "type": "module",
+  "exports": {
+    "./svg/*": "./svg/*",
+    "./sprite/*": "./sprite/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "svg",
+    "sprite",
+    "ATTRIBUTION.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "test": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@devigner-ui/icons": "workspace:^"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

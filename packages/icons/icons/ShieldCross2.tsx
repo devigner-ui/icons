@@ -1,0 +1,112 @@
+import { forwardRef } from "react";
+import type { SVGProps } from "react";
+import type { IconProps } from "./types";
+
+const IconShieldCross2 = forwardRef<SVGSVGElement, IconProps>(
+  function IconShieldCross2(
+    { className, variant = "Outline", strokeWidth = "1.5", ...rest },
+    ref,
+  ) {
+    /* The four drawings are two booleans: filled or stroked, and whether the
+     secondary shapes drop to half tone. */
+    const fill = variant === "Bold" || variant === "Bulk";
+    const duotone = variant === "TwoTone" || variant === "Bulk";
+
+    /* Decorative by default: an icon sitting beside its own text label is read
+     out twice otherwise. Naming it with aria-label or aria-labelledby promotes
+     it to an image instead. */
+    const labelled =
+      rest["aria-label"] != null || rest["aria-labelledby"] != null;
+    const a11y: SVGProps<SVGSVGElement> = labelled
+      ? { role: "img" }
+      : { "aria-hidden": true };
+
+    return (
+      <>
+        {!fill ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+            <path
+              d="M11.16 2.23 6.17 4.11a3.5 3.5 0 0 0-2.09 3.01v7.43c0 1.18.78 2.73 1.73 3.44l4.3 3.21a4.55 4.55 0 0 0 5.14 0l4.3-3.21a5 5 0 0 0 1.73-3.44V7.12c0-1.23-.94-2.59-2.09-3.02L14.2 2.23a5 5 0 0 0-3.04 0"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <g opacity={duotone ? "0.4" : "1"}>
+              <path
+                d="m14.82 13.44-4.25-4.25"
+                stroke="currentColor"
+                strokeWidth={strokeWidth}
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="m14.77 9.24-4.25 4.25"
+                stroke="currentColor"
+                strokeWidth={strokeWidth}
+                strokeMiterlimit="10"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </g>
+          </svg>
+        ) : duotone ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+            <path
+              opacity={duotone ? "0.4" : "1"}
+              d="m11.63 2.06-5.5 2.06a3.2 3.2 0 0 0-1.91 2.77v8.1c0 .81.53 1.88 1.18 2.36l5.5 4.11c.97.73 2.56.73 3.53 0l5.5-4.11a3.3 3.3 0 0 0 1.18-2.36v-8.1c0-1.12-.86-2.37-1.91-2.76l-5.5-2.06a3.4 3.4 0 0 0-2.07-.01"
+              fill="currentColor"
+            />
+            <path
+              d="m15.35 12.91-1.59-1.59 1.55-1.55a.75.75 0 0 0 0-1.06.75.75 0 0 0-1.06 0l-1.55 1.55-1.59-1.59a.75.75 0 0 0-1.06 0 .75.75 0 0 0 0 1.06l1.59 1.59L10 12.96a.75.75 0 0 0 0 1.06q.24.22.53.22t.53-.22l1.64-1.64 1.59 1.59q.23.22.53.22t.53-.22a.75.75 0 0 0 0-1.06"
+              fill="currentColor"
+            />
+          </svg>
+        ) : (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+            <path
+              d="m19.21 4.12-5.5-2.06a3.5 3.5 0 0 0-2.07 0l-5.5 2.06a3.2 3.2 0 0 0-1.92 2.77v8.1c0 .81.53 1.88 1.18 2.36l5.5 4.11c.97.73 2.56.73 3.53 0l5.5-4.11a3.3 3.3 0 0 0 1.18-2.36v-8.1a3.2 3.2 0 0 0-1.9-2.77m-3.86 9.85a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-1.59-1.59-1.64 1.64a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l1.64-1.64-1.6-1.6a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l1.59 1.59 1.55-1.55a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-1.55 1.55 1.59 1.59c.3.3.3.77.01 1.07"
+              fill="currentColor"
+            />
+          </svg>
+        )}
+      </>
+    );
+  },
+);
+
+export default IconShieldCross2;

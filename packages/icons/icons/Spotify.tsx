@@ -1,0 +1,133 @@
+import { forwardRef } from "react";
+import type { SVGProps } from "react";
+import type { IconProps } from "./types";
+
+const IconSpotify = forwardRef<SVGSVGElement, IconProps>(function IconSpotify(
+  { className, variant = "Outline", strokeWidth = "1.5", ...rest },
+  ref,
+) {
+  /* The four drawings are two booleans: filled or stroked, and whether the
+     secondary shapes drop to half tone. */
+  const fill = variant === "Bold" || variant === "Bulk";
+  const duotone = variant === "TwoTone" || variant === "Bulk";
+
+  /* Decorative by default: an icon sitting beside its own text label is read
+     out twice otherwise. Naming it with aria-label or aria-labelledby promotes
+     it to an image instead. */
+  const labelled =
+    rest["aria-label"] != null || rest["aria-labelledby"] != null;
+  const a11y: SVGProps<SVGSVGElement> = labelled
+    ? { role: "img" }
+    : { "aria-hidden": true };
+
+  return (
+    <>
+      {!fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M7.24 9.33a11.5 11.5 0 0 1 10.92 1.34"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M8.61 12.38a8.4 8.4 0 0 1 7.97.98"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M9.5 15.41a6.3 6.3 0 0 1 5.98.73"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : duotone ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M24.67 0h-24v24h24z"
+            fill="none"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            fill="currentColor"
+          />
+          <path
+            d="M18.15 11.42a1 1 0 0 1-.44-.14 10.7 10.7 0 0 0-10.2-1.25.75.75 0 0 1-.97-.42.75.75 0 0 1 .42-.97 12.2 12.2 0 0 1 11.63 1.43c.34.24.41.71.17 1.05a.8.8 0 0 1-.61.3"
+            fill="currentColor"
+          />
+          <path
+            d="M16.58 14.11a1 1 0 0 1-.44-.14 7.6 7.6 0 0 0-7.26-.89.75.75 0 0 1-.97-.42.75.75 0 0 1 .42-.97 9.1 9.1 0 0 1 8.68 1.07c.34.24.41.71.17 1.05a.8.8 0 0 1-.6.3"
+            fill="currentColor"
+          />
+          <path
+            d="M15.48 16.9a1 1 0 0 1-.44-.14 5.6 5.6 0 0 0-5.27-.65.75.75 0 0 1-.97-.42.75.75 0 0 1 .42-.97 7 7 0 0 1 6.69.82c.34.24.41.71.17 1.05a.7.7 0 0 1-.6.31"
+            fill="currentColor"
+          />
+        </svg>
+      ) : (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m3.42 14.58a.7.7 0 0 1-.61.31 1 1 0 0 1-.44-.14 5.6 5.6 0 0 0-5.27-.65.75.75 0 0 1-.97-.42.75.75 0 0 1 .42-.97 7 7 0 0 1 6.69.82c.35.25.42.72.18 1.05m1.1-2.79a.7.7 0 0 1-.61.31 1 1 0 0 1-.44-.14 7.6 7.6 0 0 0-7.26-.89.75.75 0 0 1-.97-.42.75.75 0 0 1 .42-.97 9.1 9.1 0 0 1 8.68 1.07c.34.24.42.71.18 1.04m1.57-2.68a.7.7 0 0 1-.61.31 1 1 0 0 1-.44-.14 10.7 10.7 0 0 0-10.2-1.25.75.75 0 0 1-.97-.42.75.75 0 0 1 .42-.97 12.2 12.2 0 0 1 11.63 1.43c.34.23.42.7.17 1.04"
+            fill="currentColor"
+          />
+        </svg>
+      )}
+    </>
+  );
+});
+
+export default IconSpotify;

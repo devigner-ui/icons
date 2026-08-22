@@ -1,0 +1,63 @@
+{
+  "name": "@devigner-ui/icons-svelte",
+  "version": "2.0.0",
+  "description": "8,568 open-source icons for Svelte: 2,142 symbols, each in outline, twotone, bold and bulk. Built on Solar Icon Set and Iconsax.",
+  "keywords": [
+    "icons",
+    "svelte",
+    "sveltekit",
+    "svelte-icons",
+    "svg",
+    "svg-icons",
+    "icon-set",
+    "icon-library",
+    "tree-shaking"
+  ],
+  "license": "MIT AND CC-BY-4.0",
+  "author": "Devigner",
+  "homepage": "https://icons.remidevigner.pro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigner-ui/icons.git",
+    "directory": "packages/icons-svelte"
+  },
+  "bugs": {
+    "url": "https://github.com/devigner-ui/icons/issues"
+  },
+  "type": "module",
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "ATTRIBUTION.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "test": "node scripts/check.mjs"
+  },
+  "peerDependencies": {
+    "svelte": "^4.0.0 || ^5.0.0"
+  },
+  "devDependencies": {
+    "@devigner-ui/icons": "workspace:^",
+    "svelte": "^4.2.19"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

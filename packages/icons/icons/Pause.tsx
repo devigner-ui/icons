@@ -1,0 +1,100 @@
+import { forwardRef } from "react";
+import type { SVGProps } from "react";
+import type { IconProps } from "./types";
+
+const IconPause = forwardRef<SVGSVGElement, IconProps>(function IconPause(
+  { className, variant = "Outline", strokeWidth = "1.5", ...rest },
+  ref,
+) {
+  /* The four drawings are two booleans: filled or stroked, and whether the
+     secondary shapes drop to half tone. */
+  const fill = variant === "Bold" || variant === "Bulk";
+  const duotone = variant === "TwoTone" || variant === "Bulk";
+
+  /* Decorative by default: an icon sitting beside its own text label is read
+     out twice otherwise. Naming it with aria-label or aria-labelledby promotes
+     it to an image instead. */
+  const labelled =
+    rest["aria-label"] != null || rest["aria-labelledby"] != null;
+  const a11y: SVGProps<SVGSVGElement> = labelled
+    ? { role: "img" }
+    : { "aria-hidden": true };
+
+  return (
+    <>
+      {!fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 6c0-1.89 0-2.83.59-3.41C3.17 2 4.1 2 6 2s2.83 0 3.41.59C10 3.17 10 4.1 10 6v12c0 1.89 0 2.83-.59 3.41C8.83 22 7.9 22 6 22s-2.83 0-3.41-.59C2 20.83 2 19.9 2 18z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M14 6c0-1.89 0-2.83.59-3.41C15.17 2 16.1 2 18 2s2.83 0 3.41.59C22 3.17 22 4.1 22 6v12c0 1.89 0 2.83-.59 3.41-.58.59-1.52.59-3.41.59s-2.83 0-3.41-.59C14 20.83 14 19.9 14 18z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : duotone ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 6c0-1.89 0-2.83.59-3.41C3.17 2 4.1 2 6 2s2.83 0 3.41.59C10 3.17 10 4.1 10 6v12c0 1.89 0 2.83-.59 3.41C8.83 22 7.9 22 6 22s-2.83 0-3.41-.59C2 20.83 2 19.9 2 18z"
+            fill="currentColor"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M14 6c0-1.89 0-2.83.59-3.41C15.17 2 16.1 2 18 2s2.83 0 3.41.59C22 3.17 22 4.1 22 6v12c0 1.89 0 2.83-.59 3.41-.58.59-1.52.59-3.41.59s-2.83 0-3.41-.59C14 20.83 14 19.9 14 18z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 6c0-1.89 0-2.83.59-3.41C3.17 2 4.1 2 6 2s2.83 0 3.41.59C10 3.17 10 4.1 10 6v12c0 1.89 0 2.83-.59 3.41C8.83 22 7.9 22 6 22s-2.83 0-3.41-.59C2 20.83 2 19.9 2 18z"
+            fill="currentColor"
+          />
+          <path
+            d="M14 6c0-1.89 0-2.83.59-3.41C15.17 2 16.1 2 18 2s2.83 0 3.41.59C22 3.17 22 4.1 22 6v12c0 1.89 0 2.83-.59 3.41-.58.59-1.52.59-3.41.59s-2.83 0-3.41-.59C14 20.83 14 19.9 14 18z"
+            fill="currentColor"
+          />
+        </svg>
+      )}
+    </>
+  );
+});
+
+export default IconPause;

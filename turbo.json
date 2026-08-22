@@ -1,0 +1,40 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        "dist/**",
+        "docs/.vitepress/dist/**",
+        "svg/**",
+        "sprite/**"
+      ]
+    },
+    "sync": {
+      "outputs": ["packages/icons/src/**"]
+    },
+    "generate:metadata": {
+      "dependsOn": ["sync"],
+      "outputs": ["packages/icons/src/metadata.json"]
+    },
+    "generate:embeddings": {
+      "dependsOn": ["generate:metadata"],
+      "outputs": ["packages/icons/src/embeddings.json", "packages/icons/dist/embeddings.json", "docs/public/embeddings.json"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "docs:build": {
+      "dependsOn": ["generate:embeddings"],
+      "outputs": ["docs/.vitepress/dist/**"]
+    },
+    "test": {
+      "outputs": ["coverage/**"],
+      "dependsOn": ["build"]
+    },
+    "lint": {},
+    "typecheck": {}
+  },
+  "globalEnv": ["NODE_ENV", "PRO_REGISTRY_TOKEN"]
+}

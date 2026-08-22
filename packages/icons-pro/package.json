@@ -1,0 +1,41 @@
+{
+  "name": "@devigner-ui/icons-pro",
+  "version": "2.2.0",
+  "description": "Pro tier for @devigner-ui/icons - unlocks all styles, analytics, CDN, SLA",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./metadata.json": "./dist/metadata.json",
+    "./embeddings.json": "./dist/embeddings.json",
+    "./styles.css": "./dist/styles.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.0"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.remidevigner.pro/"
+  }
+}

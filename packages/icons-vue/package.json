@@ -1,0 +1,63 @@
+{
+  "name": "@devigner-ui/icons-vue",
+  "version": "2.0.0",
+  "description": "8,568 open-source icons for Vue 3: 2,142 symbols, each in outline, twotone, bold and bulk. Built on Solar Icon Set and Iconsax.",
+  "keywords": [
+    "icons",
+    "vue",
+    "vue3",
+    "vue-icons",
+    "svg",
+    "svg-icons",
+    "icon-set",
+    "icon-library",
+    "tree-shaking"
+  ],
+  "license": "MIT AND CC-BY-4.0",
+  "author": "Devigner",
+  "homepage": "https://icons.remidevigner.pro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigner-ui/icons.git",
+    "directory": "packages/icons-vue"
+  },
+  "bugs": {
+    "url": "https://github.com/devigner-ui/icons/issues"
+  },
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "ATTRIBUTION.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "test": "node scripts/check.mjs"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@devigner-ui/icons": "workspace:^",
+    "@vue/server-renderer": "^3.4.0",
+    "vue": "^3.4.0"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
