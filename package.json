@@ -18,7 +18,8 @@
     "generate:embeddings": "pnpm --filter=@devigner-ui/icons generate:embeddings",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck",
-    "version": "changeset version"
+    "version": "changeset version",
+    "release": "pnpm build && pnpm test && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
