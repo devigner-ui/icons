@@ -1,6 +1,7 @@
 {
   "name": "@devigner-ui/icons-pro",
   "version": "2.2.0",
+  "private": true,
   "description": "Pro tier for @devigner-ui/icons - unlocks all styles, analytics, CDN, SLA",
   "type": "module",
   "main": "./dist/index.cjs",
