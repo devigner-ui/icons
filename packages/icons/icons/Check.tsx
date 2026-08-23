@@ -36,19 +36,11 @@ const IconCheck = forwardRef<SVGSVGElement, IconProps>(function IconCheck(
           {...rest}
         >
           <path
-            d="m10.17 15.65 7.32-7.32"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
-          />
-          <path
-            opacity={duotone ? "0.4" : "1"}
-            d="m6.5 12 3.66 3.64"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            d="m5 13.26 2.59 2.7c.66.7 1 1.04 1.41 1.04s.75-.35 1.41-1.04L19 7"
           />
         </svg>
       ) : duotone ? (

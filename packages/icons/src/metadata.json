@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-23T15:58:39.692Z",
+  "generatedAt": "2026-08-23T18:29:30.185Z",
   "totalIcons": 2145,
   "categories": [
     {
@@ -12744,6 +12744,8 @@
       "keywords": [
         "check",
         "path",
+        "curved",
+        "smooth",
         "arc",
         "curve",
         "closed",
@@ -12754,7 +12756,7 @@
         "complete",
         "verified"
       ],
-      "pathCount": 5,
+      "pathCount": 4,
       "styles": {
         "outline": "free",
         "twotone": "free",
