@@ -1,6 +1,6 @@
 # @devigner-ui/icons
 
-8,568 open-source icons for React. Every one of the 2,142 symbols carries four separate drawings:
+8,580 open-source icons for React. Every one of the 2,145 symbols carries four separate drawings:
 outline, twotone, bold and bulk, rather than one generated and filtered.
 
 Built on [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736)
@@ -108,7 +108,7 @@ UI trigger and anything else that needs to measure or position against it.
 <IconShoppingCart variant="Bulk" />
 ```
 
-**All four styles are free on all 2,142 symbols.** Bulk used to be sold on 1,682
+**All four styles are free on all 2,145 symbols.** Bulk used to be sold on 1,682
 of them; it is not any more, and this package contains every drawing.
 
 ```ts
@@ -138,7 +138,7 @@ for that directly and skips the model load.
 - **No runtime dependencies.** React 18 or newer as a peer.
 - **Tree shakeable.** `sideEffects: false`; you ship only what you import.
 - **Typed.** `IconName`, `IconStyle`, `IconProps` and `IconComponentType` are
-  exported; `IconName` is a literal union of all 2,142 symbol names.
+  exported; `IconName` is a literal union of all 2,145 symbol names.
 - ESM and CJS builds, plus `./metadata.json`, `./embeddings.json` and
   `./styles.css` subpath exports.
 

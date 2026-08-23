@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { pipeline } from '@xenova/transformers';
+import { pathToFileURL } from 'node:url';
 
 const SRC_DIR = path.resolve('src');
 const ICONS_DIR = path.resolve('icons');
@@ -9,6 +9,11 @@ async function generateEmbeddings() {
   // Naming this wrongly is what put the website on a different model than the
   // vectors below; the query side reads this line. Keep the two in step.
   console.log('Loading Xenova/all-MiniLM-L6-v2 model (quantized)...');
+
+  /* Imported here, not at the top: scripts/import-svgs.mjs wants the two
+     vector helpers below and nothing else, and a static import would make it
+     load the whole inference library to do a dot product. */
+  const { pipeline } = await import('@xenova/transformers');
   
   const extractor = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
     quantized: true,
@@ -49,13 +54,6 @@ async function generateEmbeddings() {
   const outputPath = path.join(SRC_DIR, 'embeddings.json');
   fs.writeFileSync(outputPath, JSON.stringify(embeddings));
   console.log(`\nSaved embeddings to ${outputPath}`);
-
-  // Also copy to docs/public for client-side search
-  const docsPublicPath = path.resolve('../../docs/public/embeddings.json');
-  if (fs.existsSync(path.dirname(docsPublicPath))) {
-    fs.writeFileSync(docsPublicPath, JSON.stringify(embeddings));
-    console.log(`Copied to ${docsPublicPath}`);
-  }
 }
 
 function buildRichText(icon) {
@@ -111,4 +109,9 @@ export function cosineSimilarity(a, b) {
   return dot / (Math.sqrt(normA) * Math.sqrt(normB));
 }
 
-generateEmbeddings().catch(console.error);
+/* Runnable on its own; importable for the two helpers above, which
+   scripts/import-svgs.mjs uses to rank a new name against the shipped vectors.
+   Without the guard, importing them would start a full re-embedding run. */
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  generateEmbeddings().catch(console.error);
+}

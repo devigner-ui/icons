@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-21T20:17:23.965Z",
-  "totalIcons": 2142,
+  "generatedAt": "2026-08-23T15:58:39.692Z",
+  "totalIcons": 2145,
   "categories": [
     {
       "slug": "finance-banking",
@@ -631,6 +631,74 @@
       ],
       "proStyles": [],
       "usage": "editors, canvas, layers, colour, alignment, grids"
+    },
+    {
+      "name": "AiAudio",
+      "displayName": "Ai Audio",
+      "category": "media-playback",
+      "categoryLabel": "Media & Playback",
+      "keywords": [
+        "ai",
+        "audio",
+        "path",
+        "curved",
+        "smooth",
+        "arc",
+        "curve",
+        "closed",
+        "music"
+      ],
+      "pathCount": 16,
+      "styles": {
+        "outline": "free",
+        "twotone": "free",
+        "bold": "free",
+        "bulk": "free"
+      },
+      "freeStyles": [
+        "outline",
+        "twotone",
+        "bold",
+        "bulk"
+      ],
+      "proStyles": [],
+      "usage": "player, gallery, camera, music, volume"
+    },
+    {
+      "name": "AiSearch",
+      "displayName": "Ai Search",
+      "category": "search",
+      "categoryLabel": "Search",
+      "keywords": [
+        "ai",
+        "search",
+        "path",
+        "curved",
+        "smooth",
+        "arc",
+        "curve",
+        "closed",
+        "find",
+        "magnifier",
+        "explore",
+        "lookup",
+        "scan"
+      ],
+      "pathCount": 8,
+      "styles": {
+        "outline": "free",
+        "twotone": "free",
+        "bold": "free",
+        "bulk": "free"
+      },
+      "freeStyles": [
+        "outline",
+        "twotone",
+        "bold",
+        "bulk"
+      ],
+      "proStyles": [],
+      "usage": "search bars, filters, zoom, discovery"
     },
     {
       "name": "Airbuds",
@@ -16861,6 +16929,37 @@
       ],
       "proStyles": [],
       "usage": "editors, canvas, layers, colour, alignment, grids"
+    },
+    {
+      "name": "CopyAlt",
+      "displayName": "Copy Alt",
+      "category": "coding-architecture",
+      "categoryLabel": "Coding & Architecture",
+      "keywords": [
+        "copy",
+        "alt",
+        "path",
+        "curved",
+        "smooth",
+        "arc",
+        "curve",
+        "closed"
+      ],
+      "pathCount": 6,
+      "styles": {
+        "outline": "free",
+        "twotone": "free",
+        "bold": "free",
+        "bulk": "free"
+      },
+      "freeStyles": [
+        "outline",
+        "twotone",
+        "bold",
+        "bulk"
+      ],
+      "proStyles": [],
+      "usage": "code, servers, databases, devops, terminals"
     },
     {
       "name": "CopySuccess",

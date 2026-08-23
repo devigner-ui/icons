@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "workspaces": [
-    "packages/*",
-    "docs"
+    "packages/*"
   ],
   "scripts": {
     "build": "pnpm -r build",
+    "add-icons": "pnpm --filter=@devigner-ui/icons import:svgs && pnpm build && pnpm test",
     "dev": "pnpm -r --parallel dev",
-    "dev:docs": "pnpm --filter=@devigner-ui/icons-docs dev",
-    "docs:build": "pnpm --filter=@devigner-ui/icons-docs build",
     "sync": "pnpm --filter=@devigner-ui/icons sync",
     "sync:watch": "pnpm --filter=@devigner-ui/icons sync:watch",
     "fix-names": "pnpm --filter=@devigner-ui/icons fix-names",

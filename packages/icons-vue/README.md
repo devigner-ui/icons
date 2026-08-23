@@ -1,6 +1,6 @@
 # @devigner-ui/icons-vue
 
-8,568 icons for Vue 3: 2,142 symbols, each in outline, twotone, bold and bulk. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn, so the two cannot drift.
+8,580 icons for Vue 3: 2,145 symbols, each in outline, twotone, bold and bulk. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn, so the two cannot drift.
 
 ```bash
 pnpm add @devigner-ui/icons-vue

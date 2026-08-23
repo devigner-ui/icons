@@ -5,7 +5,6 @@
       "dependsOn": ["^build"],
       "outputs": [
         "dist/**",
-        "docs/.vitepress/dist/**",
         "svg/**",
         "sprite/**"
       ]
@@ -19,15 +18,11 @@
     },
     "generate:embeddings": {
       "dependsOn": ["generate:metadata"],
-      "outputs": ["packages/icons/src/embeddings.json", "packages/icons/dist/embeddings.json", "docs/public/embeddings.json"]
+      "outputs": ["packages/icons/src/embeddings.json", "packages/icons/dist/embeddings.json"]
     },
     "dev": {
       "cache": false,
       "persistent": true
-    },
-    "docs:build": {
-      "dependsOn": ["generate:embeddings"],
-      "outputs": ["docs/.vitepress/dist/**"]
     },
     "test": {
       "outputs": ["coverage/**"],

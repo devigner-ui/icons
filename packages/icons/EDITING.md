@@ -119,22 +119,18 @@ pnpm site:dev
 writes `website/public/svgs/` and `icons.json`. If the site still shows the old
 drawing, the icons package wasn't rebuilt — step 4, then this.
 
-The docs site is the same story: `pnpm docs:build`.
+The documentation is not here any more: it is markdown in the website repo
+under `content/docs/`, rendered into the site's own `/docs` route.
 
 ---
 
 ## Adding a new icon
 
-1. Create `packages/icons/icons/<Name>.tsx`. Copy an existing icon of the same
-   shape and replace the three branches — it's the fastest way to inherit the
-   props, the a11y block and the branch structure.
-2. Name it in PascalCase, no `Icon` prefix; `sync` derives `Icon<Name>` from
-   the filename.
-3. Rebuild. `sync` adds the export and the `IconName` union, and
-   `generate-metadata` assigns a category from the name prefix — check
-   `CATEGORY_PREFIXES` in `scripts/generate-metadata.mjs` if it lands in the
-   wrong family, and add a prefix there rather than hand-editing
-   `metadata.json`.
+See [ADDING.md](ADDING.md). Four SVGs per symbol into `incoming/`, then
+`pnpm add-icons` writes the components, files their categories, builds and
+tests. By hand it is the artwork rules above plus the two things an edit never
+needs: a line in `scripts/icon-categories.json` (the build fails without it) and
+a changeset, through to the release.
 
 ## Renaming an icon
 

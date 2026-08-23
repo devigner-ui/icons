@@ -1,7 +1,7 @@
 {
   "name": "@devigner-ui/icons",
   "version": "3.0.0",
-  "description": "8,568 open-source icons for React: 2,142 symbols, each in outline, twotone, bold and bulk. Built on Solar Icon Set and Iconsax.",
+  "description": "8,580 open-source icons for React: 2,145 symbols, each in outline, twotone, bold and bulk. Built on Solar Icon Set and Iconsax.",
   "keywords": [
     "icons",
     "react",
@@ -54,6 +54,7 @@
     "ATTRIBUTION.md"
   ],
   "scripts": {
+    "import:svgs": "node scripts/import-svgs.mjs",
     "sync": "node scripts/sync.mjs",
     "sync:watch": "node scripts/sync.mjs --watch",
     "deduplicate": "node scripts/deduplicate.mjs",
@@ -63,7 +64,7 @@
     "generate:embeddings": "node scripts/generate-embeddings.mjs",
     "build": "pnpm optimize:paths && pnpm sync && pnpm generate:metadata && pnpm generate:embeddings && tsup",
     "prepublishOnly": "pnpm build && pnpm test",
-    "test": "node scripts/artwork-check.mjs && node scripts/surface-check.mjs && node scripts/render-check.mjs && node scripts/emit-svg.mjs",
+    "test": "node scripts/artwork-check.mjs && node scripts/surface-check.mjs && node scripts/render-check.mjs && node scripts/emit-svg.mjs && node scripts/import-check.mjs",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {

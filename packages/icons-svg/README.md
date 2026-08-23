@@ -1,6 +1,6 @@
 # @devigner-ui/icons-svg
 
-The artwork of [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons) as plain SVG files. 2,142 symbols in outline, twotone, bold and bulk: 8,568 drawings, no framework, no build step.
+The artwork of [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons) as plain SVG files. 2,145 symbols in outline, twotone, bold and bulk: 8,580 drawings, no framework, no build step.
 
 Use this when you are not in React: vanilla pages, a CDN `<img>`, a CSS background, a server-side template, a design tool.
 

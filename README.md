@@ -1,6 +1,6 @@
 # @devigner-ui/icons
 
-> 8,568 open-source icons for React. 2,142 symbols, each in four styles: outline, twotone, bold and bulk.
+> 8,580 open-source icons for React. 2,145 symbols, each in four styles: outline, twotone, bold and bulk.
 >
 > Built on [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736)
 > and [Iconsax](https://iconsax.io); see [ATTRIBUTION.md](ATTRIBUTION.md).
@@ -11,7 +11,7 @@
 
 ## Features
 
-- 🎨 **8,568 icons**: 2,142 symbols from two open sets, merged, deduplicated and consistently named
+- 🎨 **8,580 icons**: 2,145 symbols from two open sets, merged, deduplicated and consistently named
 - 🎯 **4 drawings each**: outline, twotone, bold and bulk, all free on every symbol
 - 🔍 **Semantic search data**: one 384-dim vector per symbol, shipped as `embeddings.json`
 - 📝 **TypeScript first**: every symbol a typed named export
@@ -65,7 +65,7 @@ second copy of the artwork, so the two cannot drift apart.
 
 ## Licensing and credits
 
-All four styles of all 2,142 symbols are free. Bulk used to be sold on 1,682 of
+All four styles of all 2,145 symbols are free. Bulk used to be sold on 1,682 of
 them and stripped from the free build; that gate is gone, and there is one
 build now.
 
