@@ -26,6 +26,11 @@ REDESIGN.md
 CHANGELOG.md
 docs/
 
+# Where SVGs are dropped for scripts/import-svgs.mjs. A staging area: the
+# importer moves what it consumes into incoming/imported/, and the .tsx it
+# writes is the tracked copy of the artwork.
+packages/icons/incoming/
+
 # Environment
 .env
 .env.local
@@ -52,3 +57,5 @@ pnpm-debug.log*
 # OS
 .DS_Store
 Thumbs.db
+CLAUDE.md
+CLAUDE.md
