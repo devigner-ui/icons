@@ -33,6 +33,7 @@ jobs:
       # Pending changesets -> opens/updates the "Version Packages" PR.
       # No pending changesets (i.e. that PR just merged) -> runs `publish`.
       - uses: changesets/action@v1
+        id: changesets
         with:
           publish: pnpm release
           commit: "chore: version packages"
@@ -40,3 +41,24 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # One GitHub release per published package, and the API marks whichever
+      # was created last as "Latest" — alphabetical luck, which had icons-svg
+      # holding the sidebar. The five stay; the badge moves to the package the
+      # repo is named for. A publish that did not include it is left alone.
+      - name: Point the Latest badge at @devigner-ui/icons
+        if: steps.changesets.outputs.published == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISHED: ${{ steps.changesets.outputs.publishedPackages }}
+        run: |
+          tag=$(node -e '
+            const main = JSON.parse(process.env.PUBLISHED)
+              .find((pkg) => pkg.name === "@devigner-ui/icons");
+            if (main) console.log(`${main.name}@${main.version}`);
+          ')
+          if [ -z "$tag" ]; then
+            echo "@devigner-ui/icons was not in this publish; badge left where it is."
+            exit 0
+          fi
+          gh release edit "$tag" --latest --repo "$GITHUB_REPOSITORY"
