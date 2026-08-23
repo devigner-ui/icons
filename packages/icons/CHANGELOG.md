@@ -1,5 +1,11 @@
 # @devigner-ui/icons
 
+## 3.1.0
+
+### Minor Changes
+
+- 1372f09: Add IconAiAudio.
+
 ## 3.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @devigner-ui/icons-react-native
 
+## 2.1.0
+
+### Minor Changes
+
+- 1372f09: Add IconAiAudio.
+
 ## 2.0.0
 
 ### Major Changes
