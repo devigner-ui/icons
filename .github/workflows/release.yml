@@ -57,8 +57,21 @@ jobs:
               .find((pkg) => pkg.name === "@devigner-ui/icons");
             if (main) console.log(`${main.name}@${main.version}`);
           ')
+
+          # A publish that bumped only a port has already taken the badge by
+          # now, so there is nothing to leave alone: fall back to the newest
+          # release this package has. The `@` in the prefix is what keeps
+          # `@devigner-ui/icons-svg@2.1.0` from matching.
           if [ -z "$tag" ]; then
-            echo "@devigner-ui/icons was not in this publish; badge left where it is."
+            tag=$(gh release list --repo "$GITHUB_REPOSITORY" --limit 100 \
+              --json tagName \
+              -q '[.[] | select(.tagName | startswith("@devigner-ui/icons@"))] | .[0].tagName')
+          fi
+
+          if [ -z "$tag" ]; then
+            echo "No @devigner-ui/icons release exists yet; nothing to pin."
             exit 0
           fi
+
+          echo "Pinning $tag as the latest release."
           gh release edit "$tag" --latest --repo "$GITHUB_REPOSITORY"
