@@ -1,34 +1,57 @@
-# @devigner-ui/icons
+<div align="center">
 
-> 8,580 open-source icons for React, Vue, Svelte, React Native and plain SVG.
-> 2,145 symbols, each in four styles: outline, twotone, bold and bulk.
->
-> Built on [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736)
-> and [Iconsax](https://iconsax.io); see [ATTRIBUTION.md](ATTRIBUTION.md).
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logo/white.svg" />
+  <img src=".github/assets/logo/black.svg" alt="Devigner Icons" width="280" />
+</picture>
 
-[![npm version](https://img.shields.io/npm/v/@devigner-ui/icons.svg)](https://www.npmjs.com/package/@devigner-ui/icons)
-[![license](https://img.shields.io/npm/l/@devigner-ui/icons.svg)](https://github.com/devigner-ui/icons/blob/main/LICENSE)
-[![downloads](https://img.shields.io/npm/dm/@devigner-ui/icons.svg)](https://www.npmjs.com/package/@devigner-ui/icons)
+**Consistent, free, open-source icons for every framework you build with.**
 
-## Features
+8,580 icons · 2,145 symbols · 4 styles each · drawn on a 24×24 grid, all free.
 
-- 🎨 **8,580 icons**: 2,145 symbols from two open sets, merged, deduplicated and consistently named
-- 🎯 **4 drawings each**: outline, twotone, bold and bulk, all free on every symbol
-- 🧩 **Five targets**: React, Vue 3, Svelte, React Native and raw SVG, one set of artwork behind all of them
-- 🔍 **Semantic search data**: one 384-dim vector per symbol, shipped as `embeddings.json`
+[![Website](https://img.shields.io/badge/Website-icons.remidevigner.pro-16161A?style=flat-square)](https://icons.remidevigner.pro)
+[![npm](https://img.shields.io/npm/v/@devigner-ui/icons?style=flat-square&label=%40devigner-ui%2Ficons&color=CB3837)](https://www.npmjs.com/package/@devigner-ui/icons)
+[![downloads](https://img.shields.io/npm/dm/@devigner-ui/icons?style=flat-square&label=downloads)](https://www.npmjs.com/package/@devigner-ui/icons)
+[![license](https://img.shields.io/badge/License-MIT-3FA037?style=flat-square)](LICENSE)
+
+[Browse icons →](https://icons.remidevigner.pro) · [Documentation →](packages/icons/README.md) · [Attribution →](ATTRIBUTION.md)
+
+<img src=".github/assets/preview.svg" width="100%" alt="A grid of icons from the set" />
+
+</div>
+
+## Why Devigner Icons
+
+Two open icon sets, merged, deduplicated and consistently named, then rebuilt as
+components for five targets from one set of artwork. One design language,
+wherever you work.
+
+- 🎨 **8,580 icons**: 2,145 symbols
+- 🎯 **4 drawings each**: outline, twotone, bold and bulk, free on every symbol
+- 🧩 **Five targets**: React, Vue 3, Svelte, React Native and raw SVG
+- 🔍 **Semantic search data**: one 384-dim vector per symbol, as `embeddings.json`
 - 📝 **TypeScript first**: every symbol a typed named export
 - ⚡ **Tree shakeable**: `sideEffects: false`, ship only what you import
 - 📦 **No runtime dependencies**: React 18+ as a peer
+- 🌱 **Always growing**: new icons added regularly
+
+Artwork built on [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736)
+and [Iconsax](https://iconsax.io); see [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## Packages
 
-| Package | For | Install |
-| --- | --- | --- |
-| [`@devigner-ui/icons`](packages/icons/README.md) | React 18+, plus the `icons` CLI | `npm i @devigner-ui/icons` |
-| [`@devigner-ui/icons-vue`](packages/icons-vue/README.md) | Vue 3 | `npm i @devigner-ui/icons-vue` |
-| [`@devigner-ui/icons-svelte`](packages/icons-svelte/README.md) | Svelte 4 and 5 | `npm i @devigner-ui/icons-svelte` |
-| [`@devigner-ui/icons-react-native`](packages/icons-react-native/README.md) | React Native / Expo | `npm i @devigner-ui/icons-react-native react-native-svg` |
-| [`@devigner-ui/icons-svg`](packages/icons-svg/README.md) | Anything else: CDN, CSS, templates | `npm i @devigner-ui/icons-svg` |
+Pick your framework and install:
+
+| Framework | Package | Latest | Install |
+| --- | --- | --- | --- |
+| **React** | [`@devigner-ui/icons`](packages/icons/README.md) | ![](https://img.shields.io/npm/v/@devigner-ui/icons?label=&color=2563eb) | `npm i @devigner-ui/icons` |
+| **Vue 3** | [`@devigner-ui/icons-vue`](packages/icons-vue/README.md) | ![](https://img.shields.io/npm/v/@devigner-ui/icons-vue?label=&color=2563eb) | `npm i @devigner-ui/icons-vue` |
+| **Svelte** | [`@devigner-ui/icons-svelte`](packages/icons-svelte/README.md) | ![](https://img.shields.io/npm/v/@devigner-ui/icons-svelte?label=&color=2563eb) | `npm i @devigner-ui/icons-svelte` |
+| **React Native** | [`@devigner-ui/icons-react-native`](packages/icons-react-native/README.md) | ![](https://img.shields.io/npm/v/@devigner-ui/icons-react-native?label=&color=2563eb) | `npm i @devigner-ui/icons-react-native react-native-svg` |
+| **SVG** | [`@devigner-ui/icons-svg`](packages/icons-svg/README.md) | ![](https://img.shields.io/npm/v/@devigner-ui/icons-svg?label=&color=2563eb) | `npm i @devigner-ui/icons-svg` |
+
+React needs 18+ and ships the `icons` CLI; Svelte covers 4 and 5; React Native
+covers Expo; the SVG package is for everything else (CDN, CSS, templates).
 
 The four non-React packages are generated from the **built React components**, not
 re-parsed from source and not redrawn, so the five cannot drift apart. Props are
@@ -122,10 +145,12 @@ Releases go out from `main` through [changesets](.changeset/).
 | `packages/icons-svg` | Raw `svg/<style>/<Name>.svg` files and one sprite per style. |
 | `packages/icons-pro` | Licence-handling stub. Unpublished, unlocks nothing today. |
 
-## Documentation
+## Community & contributing
 
-[icons.remidevigner.pro](https://icons.remidevigner.pro): icon browser with search by
-description, copy-paste TSX and SVG, and per-icon pages.
+- Browse and search every icon at [icons.remidevigner.pro](https://icons.remidevigner.pro) — copy-paste TSX or SVG, per-icon pages
+- Read the package docs in [packages/icons/README.md](packages/icons/README.md)
+- Found a bug or have a request? [Open an issue](https://github.com/devigner-ui/icons/issues)
+- Questions and ideas are always welcome
 
 ## License
 
