@@ -42,13 +42,13 @@ and [Iconsax](https://iconsax.io); see [ATTRIBUTION.md](ATTRIBUTION.md).
 
 Pick your framework and install:
 
-| Framework | Package | Latest | Install |
-| --- | --- | --- | --- |
-| **React** | [`@devigner-ui/icons`](packages/icons/README.md) | ![](https://img.shields.io/npm/v/@devigner-ui/icons?label=&color=2563eb) | `npm i @devigner-ui/icons` |
-| **Vue 3** | [`@devigner-ui/icons-vue`](packages/icons-vue/README.md) | ![](https://img.shields.io/npm/v/@devigner-ui/icons-vue?label=&color=2563eb) | `npm i @devigner-ui/icons-vue` |
-| **Svelte** | [`@devigner-ui/icons-svelte`](packages/icons-svelte/README.md) | ![](https://img.shields.io/npm/v/@devigner-ui/icons-svelte?label=&color=2563eb) | `npm i @devigner-ui/icons-svelte` |
+| Framework        | Package                                                                    | Latest                                                                                | Install                                                  |
+| ---------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| **React**        | [`@devigner-ui/icons`](packages/icons/README.md)                           | ![](https://img.shields.io/npm/v/@devigner-ui/icons?label=&color=2563eb)              | `npm i @devigner-ui/icons`                               |
+| **Vue 3**        | [`@devigner-ui/icons-vue`](packages/icons-vue/README.md)                   | ![](https://img.shields.io/npm/v/@devigner-ui/icons-vue?label=&color=2563eb)          | `npm i @devigner-ui/icons-vue`                           |
+| **Svelte**       | [`@devigner-ui/icons-svelte`](packages/icons-svelte/README.md)             | ![](https://img.shields.io/npm/v/@devigner-ui/icons-svelte?label=&color=2563eb)       | `npm i @devigner-ui/icons-svelte`                        |
 | **React Native** | [`@devigner-ui/icons-react-native`](packages/icons-react-native/README.md) | ![](https://img.shields.io/npm/v/@devigner-ui/icons-react-native?label=&color=2563eb) | `npm i @devigner-ui/icons-react-native react-native-svg` |
-| **SVG** | [`@devigner-ui/icons-svg`](packages/icons-svg/README.md) | ![](https://img.shields.io/npm/v/@devigner-ui/icons-svg?label=&color=2563eb) | `npm i @devigner-ui/icons-svg` |
+| **SVG**          | [`@devigner-ui/icons-svg`](packages/icons-svg/README.md)                   | ![](https://img.shields.io/npm/v/@devigner-ui/icons-svg?label=&color=2563eb)          | `npm i @devigner-ui/icons-svg`                           |
 
 React needs 18+ and ships the `icons` CLI; Svelte covers 4 and 5; React Native
 covers Expo; the SVG package is for everything else (CDN, CSS, templates).
@@ -61,14 +61,14 @@ React; `size` and `color` on React Native, which has no cascade to inherit from)
 ## Quick start
 
 ```tsx
-import { IconShoppingCart, IconArrowRight } from '@devigner-ui/icons';
+import { IconShoppingCart, IconArrowRight } from "@devigner-ui/icons";
 
 function Header() {
   return (
     <nav>
-      <IconArrowRight className="size-6" />                    {/* outline */}
-      <IconShoppingCart variant="TwoTone" className="size-6" />   {/* twotone */}
-      <IconShoppingCart variant="Bold" className="size-6" />      {/* bold */}
+      <IconArrowRight className="size-6" /> {/* outline */}
+      <IconShoppingCart variant="TwoTone" className="size-6" /> {/* twotone */}
+      <IconShoppingCart variant="Bold" className="size-6" /> {/* bold */}
     </nav>
   );
 }
@@ -106,10 +106,10 @@ there is one build now.
 The artwork is **not original work**. It comes from two open icon sets, merged
 and rebuilt as components:
 
-| Set | Author | Icons | Licence |
-| --- | --- | --- | --- |
+| Set                                                                        | Author     | Icons | Licence                                                   |
+| -------------------------------------------------------------------------- | ---------- | ----- | --------------------------------------------------------- |
 | [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736) | 480 Design | 1,055 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
-| [Iconsax](https://iconsax.io) | Vuesax | 908 | Free for personal and commercial use |
+| [Iconsax](https://iconsax.io)                                              | Vuesax     | 908   | Free for personal and commercial use                      |
 
 CC BY 4.0 asks for credit, so shipping these icons means carrying a line like
 this wherever you keep third-party notices:
@@ -136,18 +136,18 @@ Releases go out from `main` through [changesets](.changeset/).
 
 ## Repository layout
 
-| Path | What it is |
-| --- | --- |
-| `packages/icons` | The React package, and the source of truth. `icons/` holds all four drawings per symbol as `.tsx`. |
-| `packages/icons-vue` | Vue 3 build, generated from `packages/icons`. |
-| `packages/icons-svelte` | Svelte build, generated from `packages/icons`. |
-| `packages/icons-react-native` | React Native build (`react-native-svg` peer), generated from `packages/icons`. |
-| `packages/icons-svg` | Raw `svg/<style>/<Name>.svg` files and one sprite per style. |
-| `packages/icons-pro` | Licence-handling stub. Unpublished, unlocks nothing today. |
+| Path                          | What it is                                                                                         |
+| ----------------------------- | -------------------------------------------------------------------------------------------------- |
+| `packages/icons`              | The React package, and the source of truth. `icons/` holds all four drawings per symbol as `.tsx`. |
+| `packages/icons-vue`          | Vue 3 build, generated from `packages/icons`.                                                      |
+| `packages/icons-svelte`       | Svelte build, generated from `packages/icons`.                                                     |
+| `packages/icons-react-native` | React Native build (`react-native-svg` peer), generated from `packages/icons`.                     |
+| `packages/icons-svg`          | Raw `svg/<style>/<Name>.svg` files and one sprite per style.                                       |
+| `packages/icons-pro`          | Licence-handling stub. Unpublished, unlocks nothing today.                                         |
 
 ## Community & contributing
 
-- Browse and search every icon at [icons.remidevigner.pro](https://icons.remidevigner.pro) — copy-paste TSX or SVG, per-icon pages
+- Browse and search every icon at [icons.remidevigner.pro](https://icons.remidevigner.pro), copy-paste TSX or SVG, per-icon pages
 - Read the package docs in [packages/icons/README.md](packages/icons/README.md)
 - Found a bug or have a request? [Open an issue](https://github.com/devigner-ui/icons/issues)
 - Questions and ideas are always welcome
