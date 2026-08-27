@@ -26,14 +26,14 @@ Two open icon sets, merged, deduplicated and consistently named, then rebuilt as
 components for five targets from one set of artwork. One design language,
 wherever you work.
 
-- 🎨 **8,580 icons**: 2,145 symbols
-- 🎯 **4 drawings each**: outline, twotone, bold and bulk, free on every symbol
-- 🧩 **Five targets**: React, Vue 3, Svelte, React Native and raw SVG
-- 🔍 **Semantic search data**: one 384-dim vector per symbol, as `embeddings.json`
-- 📝 **TypeScript first**: every symbol a typed named export
-- ⚡ **Tree shakeable**: `sideEffects: false`, ship only what you import
-- 📦 **No runtime dependencies**: React 18+ as a peer
-- 🌱 **Always growing**: new icons added regularly
+- **8,580 icons**: 2,145 symbols
+- **4 drawings each**: outline, twotone, bold and bulk, free on every symbol
+- **Five targets**: React, Vue 3, Svelte, React Native and raw SVG
+- **Semantic search data**: one 384-dim vector per symbol, as `embeddings.json`
+- **TypeScript first**: every symbol a typed named export
+- **Tree shakeable**: `sideEffects: false`, ship only what you import
+- **No runtime dependencies**: React 18+ as a peer
+- **Always growing**: new icons added regularly
 
 Artwork built on [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736)
 and [Iconsax](https://iconsax.io); see [ATTRIBUTION.md](ATTRIBUTION.md).
