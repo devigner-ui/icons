@@ -2,7 +2,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/assets/logo/white.svg" />
-  <img src=".github/assets/logo/black.svg" alt="Devigner Icons" width="280" />
+  <img src=".github/assets/logo/black.svg" alt="Devigner Icons" width="233" height="60" />
 </picture>
 
 **Consistent, free, open-source icons for every framework you build with.**
