@@ -23,7 +23,11 @@ const NS = 'xmlns="http://www.w3.org/2000/svg"';
 function optimizePath(d) {
   const { data } = optimize(`<svg ${NS}><path d="${d}"/></svg>`, {
     floatPrecision: 2,
-    plugins: ["convertPathData"],
+    /* removeUseless drops the closepath from a subpath whose last curve already
+       lands on its first point. That is only true for a fill: a stroked path
+       without `z` ends in two butt caps instead of a join, which chops the tip
+       off every star, arrow and chevron drawn as one closed outline. */
+    plugins: [{ name: "convertPathData", params: { removeUseless: false } }],
   });
   // convertPathData can decide a path is empty; keep the original if so rather
   // than silently deleting artwork.
