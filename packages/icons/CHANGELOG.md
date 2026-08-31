@@ -1,5 +1,11 @@
 # @devigner-ui/icons
 
+## 3.2.0
+
+### Minor Changes
+
+- Renamed IconStar2 to IconSpinner, simplified the IconStar artwork, and added IconStarList.
+
 ## 3.1.0
 
 ### Minor Changes
