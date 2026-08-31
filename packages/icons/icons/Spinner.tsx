@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconStar2 = forwardRef<SVGSVGElement, IconProps>(function IconStar2(
+const IconSpinner = forwardRef<SVGSVGElement, IconProps>(function IconSpinner(
   { className, variant = "Outline", strokeWidth = "1.5", ...rest },
   ref,
 ) {
@@ -112,4 +112,4 @@ const IconStar2 = forwardRef<SVGSVGElement, IconProps>(function IconStar2(
   );
 });
 
-export default IconStar2;
+export default IconSpinner;

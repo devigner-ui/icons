@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-31T18:12:29.869Z",
-  "totalIcons": 2145,
+  "generatedAt": "2026-08-31T18:37:53.280Z",
+  "totalIcons": 2146,
   "categories": [
     {
       "slug": "finance-banking",
@@ -57287,6 +57287,35 @@
       "usage": "calendar, scheduling, alarms, timers, history"
     },
     {
+      "name": "Spinner",
+      "displayName": "Spinner",
+      "category": "system-ui",
+      "categoryLabel": "System Controls, Navigation & UI",
+      "keywords": [
+        "spinner",
+        "path",
+        "curved",
+        "smooth",
+        "arc",
+        "curve"
+      ],
+      "pathCount": 8,
+      "styles": {
+        "outline": "free",
+        "twotone": "free",
+        "bold": "free",
+        "bulk": "free"
+      },
+      "freeStyles": [
+        "outline",
+        "twotone",
+        "bold",
+        "bulk"
+      ],
+      "proStyles": [],
+      "usage": "buttons, forms, toolbars, menus, states"
+    },
+    {
       "name": "Split",
       "displayName": "Split",
       "category": "arrows-direction",
@@ -58625,36 +58654,7 @@
         "sparkle",
         "shine"
       ],
-      "pathCount": 12,
-      "styles": {
-        "outline": "free",
-        "twotone": "free",
-        "bold": "free",
-        "bulk": "free"
-      },
-      "freeStyles": [
-        "outline",
-        "twotone",
-        "bold",
-        "bulk"
-      ],
-      "proStyles": [],
-      "usage": "reactions, ratings, favourites, awards, stickers"
-    },
-    {
-      "name": "Star2",
-      "displayName": "Star2",
-      "category": "reactions-emojis",
-      "categoryLabel": "Reactions, Badges & Emojis",
-      "keywords": [
-        "star2",
-        "path",
-        "curved",
-        "smooth",
-        "arc",
-        "curve"
-      ],
-      "pathCount": 8,
+      "pathCount": 3,
       "styles": {
         "outline": "free",
         "twotone": "free",
@@ -58880,6 +58880,41 @@
         "shine"
       ],
       "pathCount": 8,
+      "styles": {
+        "outline": "free",
+        "twotone": "free",
+        "bold": "free",
+        "bulk": "free"
+      },
+      "freeStyles": [
+        "outline",
+        "twotone",
+        "bold",
+        "bulk"
+      ],
+      "proStyles": [],
+      "usage": "reactions, ratings, favourites, awards, stickers"
+    },
+    {
+      "name": "StarList",
+      "displayName": "Star List",
+      "category": "reactions-emojis",
+      "categoryLabel": "Reactions, Badges & Emojis",
+      "keywords": [
+        "star",
+        "list",
+        "path",
+        "curved",
+        "smooth",
+        "arc",
+        "curve",
+        "favorite",
+        "rating",
+        "review",
+        "sparkle",
+        "shine"
+      ],
+      "pathCount": 12,
       "styles": {
         "outline": "free",
         "twotone": "free",
