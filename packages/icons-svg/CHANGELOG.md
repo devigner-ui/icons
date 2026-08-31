@@ -1,5 +1,11 @@
 # @devigner-ui/icons-svg
 
+## 2.2.0
+
+### Minor Changes
+
+- Renamed Star2 to Spinner, simplified the Star artwork, and added StarList.
+
 ## 2.1.0
 
 ### Minor Changes
