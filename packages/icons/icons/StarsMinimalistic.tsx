@@ -44,6 +44,7 @@ const IconStarsMinimalistic = forwardRef<SVGSVGElement, IconProps>(
             <path
               stroke="currentColor"
               strokeLinejoin="round"
+              strokeWidth={strokeWidth}
               d="M4.99 2s.288 1.458.92 2.085C6.54 4.712 8 4.99 8 4.99s-1.458.288-2.085.92C5.288 6.54 5.01 8 5.01 8s-.288-1.458-.92-2.085C3.46 5.288 2 5.01 2 5.01s1.458-.288 2.085-.92C4.712 3.46 4.99 2 4.99 2Z"
               opacity={duotone ? "0.4" : "1"}
             />
