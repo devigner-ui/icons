@@ -9,12 +9,12 @@
 
 8,580 icons · 2,145 symbols · 4 styles each · drawn on a 24×24 grid, all free.
 
-[![Website](https://img.shields.io/badge/Website-icons.remidevigner.pro-16161A?style=flat-square)](https://icons.remidevigner.pro)
+[![Website](https://img.shields.io/badge/Website-icons.devigner.cc-16161A?style=flat-square)](https://icons.devigner.cc)
 [![npm](https://img.shields.io/npm/v/@devigner-ui/icons?style=flat-square&label=%40devigner-ui%2Ficons&color=CB3837)](https://www.npmjs.com/package/@devigner-ui/icons)
 [![downloads](https://img.shields.io/npm/dm/@devigner-ui/icons?style=flat-square&label=downloads)](https://www.npmjs.com/package/@devigner-ui/icons)
 [![license](https://img.shields.io/badge/License-MIT-3FA037?style=flat-square)](LICENSE)
 
-[Browse icons →](https://icons.remidevigner.pro) · [Documentation →](packages/icons/README.md) · [Attribution →](ATTRIBUTION.md)
+[Browse icons →](https://icons.devigner.cc) · [Documentation →](packages/icons/README.md) · [Attribution →](ATTRIBUTION.md)
 
 <img src=".github/assets/preview.svg" width="100%" alt="A grid of icons from the set" />
 
@@ -141,13 +141,13 @@ Releases go out from `main` through [changesets](.changeset/).
 | `packages/icons`              | The React package, and the source of truth. `icons/` holds all four drawings per symbol as `.tsx`. |
 | `packages/icons-vue`          | Vue 3 build, generated from `packages/icons`.                                                      |
 | `packages/icons-svelte`       | Svelte build, generated from `packages/icons`.                                                     |
-| `packages/icons-react-native` | React Native build (`react-native-svg` peer), generated from `packages/icons`.                     |
+| `packages/icons-react-native` | React Native build, generated from `packages/icons`.                                               |
 | `packages/icons-svg`          | Raw `svg/<style>/<Name>.svg` files and one sprite per style.                                       |
 | `packages/icons-pro`          | Licence-handling stub. Unpublished, unlocks nothing today.                                         |
 
 ## Community & contributing
 
-- Browse and search every icon at [icons.remidevigner.pro](https://icons.remidevigner.pro), copy-paste TSX or SVG, per-icon pages
+- Browse and search every icon at [icons.devigner.cc](https://icons.devigner.cc), copy-paste TSX or SVG, per-icon pages
 - Read the package docs in [packages/icons/README.md](packages/icons/README.md)
 - Found a bug or have a request? [Open an issue](https://github.com/devigner-ui/icons/issues)
 - Questions and ideas are always welcome
