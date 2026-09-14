@@ -24,6 +24,7 @@ PLAN.md
 DESIGN.md
 REDESIGN.md
 CHANGELOG.md
+CLAUDE.md
 docs/
 
 # Where SVGs are dropped for scripts/import-svgs.mjs. A staging area: the
