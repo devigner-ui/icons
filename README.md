@@ -7,7 +7,7 @@
 
 **Consistent, free, open-source icons for every framework you build with.**
 
-8,584 icons · 2,146 symbols · 4 styles each · drawn on a 24×24 grid, all free.
+8,588 icons · 2,147 symbols · 4 styles each · drawn on a 24×24 grid, all free.
 
 [![Website](https://img.shields.io/badge/Website-icons.devigner.cc-16161A?style=flat-square)](https://icons.devigner.cc)
 [![npm](https://img.shields.io/npm/v/@devigner-ui/icons?style=flat-square&label=%40devigner-ui%2Ficons&color=CB3837)](https://www.npmjs.com/package/@devigner-ui/icons)
@@ -26,7 +26,7 @@ Two open icon sets, merged, deduplicated and consistently named, then rebuilt as
 components for five targets from one set of artwork. One design language,
 wherever you work.
 
-- **8,584 icons**: 2,146 symbols
+- **8,588 icons**: 2,147 symbols
 - **4 drawings each**: outline, twotone, bold and bulk, free on every symbol
 - **Five targets**: React, Vue 3, Svelte, React Native and raw SVG
 - **Semantic search data**: one 384-dim vector per symbol, as `embeddings.json`
@@ -99,7 +99,7 @@ second copy of the artwork, so the two cannot drift apart.
 
 ## Licensing and credits
 
-All four styles of all 2,146 symbols are free, in every package. Bulk used to be
+All four styles of all 2,147 symbols are free, in every package. Bulk used to be
 sold on 1,682 of them and stripped from the free build; that gate is gone, and
 there is one build now.
 

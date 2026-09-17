@@ -101,6 +101,7 @@ export { default as IconArrowToDownRight } from '../icons/ArrowToDownRight';
 export { default as IconArrowToTopLeft } from '../icons/ArrowToTopLeft';
 export { default as IconArrowToTopRight } from '../icons/ArrowToTopRight';
 export { default as IconArrowUp } from '../icons/ArrowUp';
+export { default as IconArrowUpDown } from '../icons/ArrowUpDown';
 export { default as IconArrowUpMinimalistic } from '../icons/ArrowUpMinimalistic';
 export { default as IconAtom } from '../icons/Atom';
 export { default as IconAttachCircle } from '../icons/AttachCircle';
