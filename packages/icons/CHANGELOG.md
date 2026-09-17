@@ -1,5 +1,11 @@
 # @devigner-ui/icons
 
+## 3.3.0
+
+### Minor Changes
+
+- ea39e90: Add IconArrowUpDown.
+
 ## 3.2.0
 
 ### Minor Changes
