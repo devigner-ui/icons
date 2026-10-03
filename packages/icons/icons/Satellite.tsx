@@ -23,7 +23,38 @@ const IconSatellite = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20.47 10.92s-1.85-.62-4.31-3.08-3.08-4.31-3.08-4.31"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M20.47 10.92a5.22 5.22 0 0 1-7.39-7.39m7.39 7.39A5.22 5.22 0 0 0 18 2.14m2.47 8.78L17.65 16M13.08 3.53A5 5 0 0 1 15 2.31m-1.92 1.22L6.84 7m9.32.84L11 13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m2 9.69 3-1.67M14.31 22l2.19-4M5 19l4-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

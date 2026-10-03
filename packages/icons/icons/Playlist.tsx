@@ -22,7 +22,50 @@ const IconPlaylist = forwardRef<SVGSVGElement, IconProps>(function IconPlaylist(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11 14H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11 18H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18.88 14.12c1.65.95 2.48 1.43 2.6 2.12q.05.26 0 .52c-.12.69-.95 1.17-2.6 2.12s-2.49 1.43-3.14 1.2a2 2 0 0 1-.45-.27c-.54-.45-.54-1.4-.54-3.31s0-2.86.54-3.31q.2-.17.45-.26c.65-.24 1.48.23 3.14 1.19Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M3 6h10.5M20 6h-2.25"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 10H9.5M3 10h2.25"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

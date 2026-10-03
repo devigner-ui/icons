@@ -1,5 +1,11 @@
 # @devigner-ui/icons-react-native
 
+## 2.2.0
+
+### Minor Changes
+
+- ea39e90: Add IconArrowUpDown.
+
 ## 2.1.0
 
 ### Minor Changes

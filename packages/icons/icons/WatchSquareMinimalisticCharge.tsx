@@ -23,7 +23,46 @@ const IconWatchSquareMinimalisticCharge = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12.86 9 10 12h4l-2.86 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7 2h10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 22h10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18.96 9.2c-.08-1.54-.3-2.5-.99-3.17C16.95 5 15.3 5 12 5S7.05 5 6.03 6.03C5 7.05 5 8.7 5 12s0 4.95 1.03 5.97C7.05 19 8.7 19 12 19s4.95 0 5.97-1.03c.8-.79.98-1.95 1.02-3.97"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

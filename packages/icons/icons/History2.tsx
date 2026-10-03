@@ -22,7 +22,41 @@ const IconHistory2 = forwardRef<SVGSVGElement, IconProps>(function IconHistory2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 12a10 10 0 0 0 15 8.66M12 2a10 10 0 0 1 8.66 15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 9v4h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17 20.66A10 10 0 1 1 20.66 17"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray="0.5 3.5"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

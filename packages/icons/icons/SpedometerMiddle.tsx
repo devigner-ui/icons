@@ -23,7 +23,74 @@ const IconSpedometerMiddle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 21.54a10 10 0 1 1 6 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m19 19-1.5-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m19 5-1.5 1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m5 19 1.5-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m5 5 1.5 1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 12h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 12h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 4V2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 12a3 3 0 0 1-6 0c0-.63.43-1.5.97-2.35.8-1.25 1.2-1.88 2.03-1.88s1.22.63 2.03 1.88c.54.85.97 1.72.97 2.35Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

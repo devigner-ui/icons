@@ -22,7 +22,67 @@ const IconCity = forwardRef<SVGSVGElement, IconProps>(function IconCity(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3.75 18a.75.75 0 0 0-1.5 0zm-1.5-4a.75.75 0 0 0 1.5 0zM7 8.75c.96 0 1.61 0 2.1.07.46.06.65.17.78.3l1.06-1.06a2.7 2.7 0 0 0-1.65-.73c-.6-.08-1.37-.08-2.29-.08zM11.75 12q.02-1.38-.08-2.3a2.7 2.7 0 0 0-.73-1.64L9.88 9.12c.13.13.24.32.3.79.07.48.07 1.13.07 2.09zM7 7.25c-.92 0-1.69 0-2.3.08-.62.08-1.19.27-1.64.73l1.06 1.06c.13-.13.32-.24.79-.3.48-.07 1.13-.07 2.09-.07zM3.75 12c0-.96 0-1.61.07-2.1.06-.46.17-.65.3-.78L3.06 8.06a2.7 2.7 0 0 0-.73 1.65c-.08.6-.08 1.37-.08 2.29zm0 10v-4h-1.5v4zm0-8v-2h-1.5v2z"
+            fill="currentColor"
+          />
+          <path
+            d="M7 22v-6c0-1.89 0-2.83.59-3.41C8.17 12 9.1 12 11 12h2c1.89 0 2.83 0 3.41.59.48.47.57 1.17.59 2.41m0 7v-2.75"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M21 7.77c0-1.34 0-2-.36-2.52-.35-.52-.98-.75-2.24-1.22-2.45-.92-3.68-1.38-4.54-.79-.86.6-.86 1.91-.86 4.53V12m8 10V12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M4 8V6.5c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3h2c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7V8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 4V2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 22H2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 15h.5m3.5 0h-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 18h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

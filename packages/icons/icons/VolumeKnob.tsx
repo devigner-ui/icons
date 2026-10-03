@@ -23,7 +23,61 @@ const IconVolumeKnob = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17 12a5 5 0 1 0-5 5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 7v4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13 3.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M20.5 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
+            fill="currentColor"
+          />
+          <path
+            d="M3.5 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
+            fill="currentColor"
+          />
+          <path
+            d="M6.7 5.28A1 1 0 1 1 5.28 6.7 1 1 0 0 1 6.7 5.28Z"
+            fill="currentColor"
+          />
+          <path
+            d="M18.72 17.3a1 1 0 1 1-1.42 1.42 1 1 0 0 1 1.42-1.42Z"
+            fill="currentColor"
+          />
+          <path
+            d="M18.72 6.7a1 1 0 1 1-1.42-1.42 1 1 0 0 1 1.42 1.42Z"
+            fill="currentColor"
+          />
+          <path
+            d="M6.7 18.72a1 1 0 1 1-1.42-1.42 1 1 0 0 1 1.42 1.42Z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

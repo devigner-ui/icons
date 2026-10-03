@@ -2,7 +2,7 @@ import { h } from "vue";
 
 /*
  * The one component behind all 1,963 exports. Each generated module hands this
- * its own four drawings and gets a Vue component back, so the per-icon modules
+ * its own drawings and gets a Vue component back, so the per-icon modules
  * carry artwork and nothing else, which is what keeps them tree-shakeable and
  * what stops 1,963 copies of this logic existing.
  *

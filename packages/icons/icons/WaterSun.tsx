@@ -22,7 +22,71 @@ const IconWaterSun = forwardRef<SVGSVGElement, IconProps>(function IconWaterSun(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 16.77a4.8 4.8 0 0 1-3.08-2.31c-.42-.64-1.35-.6-1.81.01A6 6 0 0 1 12 17c-2.5 0-4.08-1.43-5.13-2.78a1.02 1.02 0 0 0-1.67.05c-.7 1.1-1.52 2.1-3.2 2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17.92 11a6 6 0 0 0-11.84 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 2v1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 12h-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 12H2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m19.07 4.93-.4.4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m5.32 5.32-.4-.4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 22a6.5 6.5 0 0 1-5.13-2.61c-.44-.53-1.28-.52-1.67.04A5 5 0 0 1 2 21.8m20 0a4.8 4.8 0 0 1-3.08-2.18c-.42-.6-1.35-.57-1.81.01q-.6.8-1.5 1.38"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

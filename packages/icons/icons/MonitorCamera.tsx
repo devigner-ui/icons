@@ -23,7 +23,55 @@ const IconMonitorCamera = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 5c0-1.41 0-2.12.44-2.56S13.59 2 15 2h1c1.41 0 2.12 0 2.56.44S19 3.59 19 5s0 2.12-.44 2.56S17.41 8 16 8h-1c-1.41 0-2.12 0-2.56-.44S12 6.41 12 5Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m19 3.75 1.62-.67c.62-.26.93-.4 1.16-.25S22 3.33 22 4v2c0 .68 0 1.02-.22 1.17-.23.14-.54.01-1.16-.25L19 6.25z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M16 22H8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 17v5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 10v1c0 2.83 0 4.24-.88 5.12S18.82 17 16 17H8c-2.83 0-4.24 0-5.12-.88S2 13.82 2 11v-1m7.5-8c-3.29 0-4.93 0-6.04.9a4 4 0 0 0-.55.56c-.5.62-.73 1.4-.83 2.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 13h-6M2 13h10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

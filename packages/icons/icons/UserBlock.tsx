@@ -23,7 +23,47 @@ const IconUserBlock = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="12"
+            cy="6"
+            r="4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M15.5 13.54A11 11 0 0 0 12 13c-3.87 0-7 1.8-7 4q0 .52.03 1M13 20.99 12 21c-1.72 0-3.02-.1-4-.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m19.95 17.05-3.9 3.9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="18"
+            cy="19"
+            r="3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

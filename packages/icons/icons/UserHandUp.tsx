@@ -23,7 +23,34 @@ const IconUserHandUp = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8 13h8a3.37 3.37 0 0 1 3.35 2.98L20 21.5M8 13a7.5 7.5 0 0 1-5.62-5.47L2 6m6 7v5c0 1.89 0 2.83.59 3.41.58.59 1.52.59 3.41.59s2.83 0 3.41-.59C16 20.83 16 19.9 16 18v-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="12"
+            cy="6"
+            r="4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

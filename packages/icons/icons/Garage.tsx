@@ -22,7 +22,57 @@ const IconGarage = forwardRef<SVGSVGElement, IconProps>(function IconGarage(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 22H2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 22V11.35A3 3 0 0 1 4 9.1M21 22v-6M7.25 6.22l2.76-2.45a3 3 0 0 1 3.98 0l6 5.34A3 3 0 0 1 21 11.35V12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 18.5h6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6 22v-3m12 3v-6c0-1.89 0-2.83-.59-3.41C16.83 12 15.9 12 14 12h-4c-1.89 0-2.83 0-3.41.59-.48.47-.57 1.17-.59 2.41"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 9h.5M14 9h-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 15.5h1.5m4.5 0h-2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,51 @@ const IconPointOnMapPerspective = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 16c0 2.83 0 4.24.88 5.12S5.18 22 8 22h8c2.83 0 4.24 0 5.12-.88S22 18.82 22 16s0-4.24-.88-5.12S18.82 10 16 10H8c-2.83 0-4.24 0-5.12.88q-.44.44-.63 1.12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m21 21-3.76-2.1M3 11l11 6.11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m3.5 21 6.36-3.74L12 16"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 13V8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.5 2.04Q16.74 2 17 2a3 3 0 1 1-2.96 2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

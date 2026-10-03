@@ -23,7 +23,33 @@ const IconPenNewSquare = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 12c0 4.71 0 7.07 1.46 8.54C4.93 22 7.3 22 12 22s7.07 0 8.54-1.46C22 19.07 22 16.7 22 12v-1.5M13.5 2H12C7.29 2 4.93 2 3.46 3.46c-.97.98-1.3 2.35-1.4 4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m17.56 10.33 2.98-2.98.65-.65a2.75 2.75 0 0 0-3.89-3.9l-.65.66m0 0s.08 1.37 1.3 2.59a4.4 4.4 0 0 0 2.6 1.3m-3.9-3.9L10.7 9.43c-.4.4-.6.6-.78.83q-.3.4-.53.85c-.12.25-.2.52-.39 1.06l-.58 1.74m0 0-.37 1.12a.74.74 0 0 0 .94.94l1.12-.37 1.74-.58c.54-.18.8-.27 1.06-.4q.46-.2.85-.52c.22-.17.43-.37.83-.78M10.1 15.6l-1.69-1.7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

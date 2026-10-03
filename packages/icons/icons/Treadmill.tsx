@@ -23,7 +23,57 @@ const IconTreadmill = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="15"
+            cy="4"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M11 16v-1.63c0-.55-.24-1.07-.67-1.42l-1-.83a1.6 1.6 0 0 1-.1-2.35L10.9 8.1c.53-.53.36-1.43-.34-1.73a4.3 4.3 0 0 0-3.94.3L4.5 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m7 14-.33.33c-.58.58-.87.87-1.23 1.02-.37.15-.78.15-1.6.15H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12.5 10h3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11.29 22h-8.2a1.09 1.09 0 0 1-.2-2.16l16.17-2.83a2.51 2.51 0 1 1 .43 4.99H15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m19.3 8.89-.75-.11zm1.58-1.67.14.74zm1.27.52a.75.75 0 1 0-.3-1.48zm-2.9 6.37a.75.75 0 0 0-1.5-.22zm-.86-4.26a.75.75 0 1 0 1.48.23zm2.63-1.89 1.13-.22-.3-1.48-1.12.23zM20.03 9a7 7 0 0 1 .17-.83q0 0 0 0l-1.08-1.03q-.32.36-.41.77-.1.38-.16.87zm.7-2.51q-.48.08-.86.2c-.26.08-.53.2-.75.45l1.08 1.03q0 0 0 0h.02q.01-.02.1-.05c.15-.05.35-.09.7-.16zM18.74 17.6l.5-3.5-1.48-.22-.5 3.5zm1.13-7.53L20.03 9l-1.48-.22-.16 1.07z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -23,7 +23,64 @@ const IconWashingMachine = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 22v-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 22v-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 10c0-3.77 0-5.66 1.17-6.83S7.23 2 11 2h2c3.77 0 5.66 0 6.83 1.17S21 6.23 21 10v3c0 3.77 0 5.66-1.17 6.83S16.77 21 13 21h-2c-3.77 0-5.66 0-6.83-1.17C3.11 18.77 3.01 17.1 3 14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 9h9m9 0h-5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 15a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M6.5 5.5h3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15.5 5.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M18.5 5.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

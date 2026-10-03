@@ -22,7 +22,27 @@ const IconWhisk = forwardRef<SVGSVGElement, IconProps>(function IconWhisk(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m12.9 15.13-3.02 3.02m-3.02 3.02a2.85 2.85 0 0 1-4.03-4.03l6.04-6.04m11.68-7.65c1.2 1.21-1.45 4.67-3.22 6.44s-6.04 5.24-7.25 4.03M20.55 3.45c2.22 2.23 1.82 6.23-.73 8.79-2.56 2.55-7.52 3.9-9.74 1.68M20.55 3.45c-2.23-2.22-6.23-1.82-8.79.73-2.55 2.56-3.9 7.52-1.68 9.74M20.55 3.45c-.6-.6-1.76-.24-3 .49m-7.47 9.98c-1.2-1.2 2.26-5.48 4.03-7.25"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

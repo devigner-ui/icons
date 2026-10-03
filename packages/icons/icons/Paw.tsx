@@ -22,7 +22,47 @@ const IconPaw = forwardRef<SVGSVGElement, IconProps>(function IconPaw(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17.97 18.7a1.95 1.95 0 0 1-1.84 2.3c-.29 0-.73-.11-1.61-.36-.51-.13-.76-.2-1.02-.25q-1.5-.3-3 0c-.26.05-.51.12-1.02.25-.88.25-1.32.37-1.6.36a1.95 1.95 0 0 1-1.85-2.3c.05-.28.25-.7.66-1.53l.88-1.8c1.59-3.22 2.38-4.84 3.52-5.22q.92-.3 1.82 0c1.14.38 1.93 2 3.52 5.23"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6.14 5.53c.42 1.63 1.58 2.71 2.6 2.42 1.03-.29 1.53-1.85 1.12-3.48-.42-1.63-1.58-2.71-2.6-2.42-1.03.29-1.53 1.85-1.12 3.48Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M17.86 5.53c-.42 1.63-1.58 2.71-2.6 2.42-1.03-.29-1.53-1.85-1.12-3.48.42-1.63 1.58-2.71 2.6-2.42 1.03.29 1.53 1.85 1.12 3.48Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M2.2 12.3c.45 1.2 1.51 1.93 2.36 1.63.86-.3 1.19-1.52.74-2.73-.45-1.2-1.51-1.93-2.36-1.63-.86.3-1.19 1.52-.74 2.73Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M21.8 12.3c-.45 1.2-1.51 1.93-2.36 1.63-.86-.3-1.19-1.52-.74-2.73.45-1.2 1.51-1.93 2.36-1.63.86.3 1.19 1.52.74 2.73Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

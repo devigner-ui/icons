@@ -22,7 +22,33 @@ const IconBag3 = forwardRef<SVGSVGElement, IconProps>(function IconBag3(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20.23 10.53c-.58-3.13-.88-4.69-1.99-5.6C17.14 4 15.54 4 12.37 4h-.72c-3.18 0-4.77 0-5.88.92-1.1.92-1.4 2.48-1.99 5.6-.82 4.4-1.23 6.59-.03 8.03C4.95 20 7.18 20 11.65 20h.72c4.46 0 6.7 0 7.9-1.45.7-.83.85-1.92.7-3.55"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9.17 8a3 3 0 0 0 5.66 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

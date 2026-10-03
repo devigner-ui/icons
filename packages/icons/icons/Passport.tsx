@@ -22,7 +22,43 @@ const IconPassport = forwardRef<SVGSVGElement, IconProps>(function IconPassport(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4 6v13a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-5M4 6V5m0 1h13a3 3 0 0 1 3 3v1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 13a3 3 0 1 1 3 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 6v.75h.75V6zm-2.28-3.67-.1-.75zM4.92 3.87l-.1-.74h0zm.15 2.88H18v-1.5H5.07zM18.75 6V4.3h-1.5V6zm-3.14-4.42L4.81 3.13l.22 1.48 10.8-1.54zM4.81 3.13c-.9.12-1.56.9-1.56 1.8h1.5c0-.16.12-.3.28-.32zM18.75 4.3a2.75 2.75 0 0 0-3.14-2.73l.21 1.49c.76-.1 1.43.48 1.43 1.24zm-13.68.94a.3.3 0 0 1-.32-.32h-1.5c0 1 .82 1.82 1.82 1.82z"
+            fill="currentColor"
+          />
+          <path
+            d="M10 19h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

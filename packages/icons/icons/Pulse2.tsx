@@ -22,7 +22,33 @@ const IconPulse2 = forwardRef<SVGSVGElement, IconProps>(function IconPulse2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 15h3c.63 0 .95 0 1.23.12s.5.35.94.81l1.14 1.2c.39.4.58.6.81.59s.4-.24.73-.7l3.63-5c.34-.47.5-.7.75-.72.24 0 .43.2.81.64l1.78 2.04c.44.5.66.75.96.89.29.13.63.13 1.3.13H22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 12c0 4.71 0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46c.97.98 1.3 2.35 1.4 4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

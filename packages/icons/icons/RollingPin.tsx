@@ -23,7 +23,27 @@ const IconRollingPin = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15.78 5.79q.52.48 1.23 1.2.72.71 1.2 1.23c.66.72.98 1.25.98 1.85 0 .9-.72 1.63-2.18 3.09M8.22 18.2l-1.96 2.75-.16.22a2.18 2.18 0 0 1-3.35.07l-.19-.18A2.2 2.2 0 0 1 2.1 19M14 16.17l-.84.84c-1.46 1.46-2.18 2.18-3.09 2.18-.6 0-1.13-.32-1.85-.98q-.52-.48-1.23-1.2-.72-.71-1.2-1.23m0 0c-.66-.72-.98-1.25-.98-1.85 0-.9.72-1.63 2.18-3.09L10.84 7c1.46-1.46 2.18-2.18 3.09-2.18.6 0 1.13.32 1.85.98m-10 9.99-1.37.98m13.8-8.54 2.75-1.96.22-.16a2.18 2.18 0 0 0 .07-3.35l-.18-.19a2.18 2.18 0 0 0-3.33.48L15.78 5.8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

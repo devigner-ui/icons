@@ -23,7 +23,45 @@ const IconPlugCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 15.1v5.05c0 1.11-.9 2.04-1.99 1.82-4.57-.93-8.01-5-8.01-9.89C2 10.23 2.5 8.5 3.36 7m13 14.16A10.1 10.1 0 0 0 22 12.08C22 6.51 17.52 2 12 2a10 10 0 0 0-5 1.35"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M9 11.8c0-.44.36-.8.8-.8h4.4c.44 0 .8.36.8.8v.2a3 3 0 1 1-6 0z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M13.5 11V9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10.5 11V9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

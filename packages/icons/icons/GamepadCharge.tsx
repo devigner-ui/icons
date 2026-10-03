@@ -23,7 +23,61 @@ const IconGamepadCharge = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21.22 8c-.69-2.18-1.8-3.37-3.13-3.84A4 4 0 0 0 16.9 4h-.6a4.2 4.2 0 0 0-2.45.78l-.5.35a2.3 2.3 0 0 1-2.67 0l-.5-.35A4.2 4.2 0 0 0 7.71 4H7.1q-.6-.02-1.2.16C3.54 5.01 1.9 8.1 2 15.1c.03 1.41.36 2.97 1.63 3.58q.6.31 1.4.32c.63 0 1.14-.18 1.53-.44.91-.6 1.58-1.6 2.55-2.1a4 4 0 0 1 1.9-.46H13q1 0 1.89.46c.97.5 1.64 1.5 2.55 2.1.4.26.9.44 1.53.44q.8-.02 1.4-.32c1.27-.6 1.6-2.17 1.62-3.58q.03-1.7-.07-3.1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 22v-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10.5 16.5V18a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7.5 9v3M6 10.5h3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M19 10.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M16 10.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M16.75 8a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z"
+            fill="currentColor"
+          />
+          <path
+            d="M16.75 11a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

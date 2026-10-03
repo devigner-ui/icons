@@ -22,7 +22,51 @@ const IconScooter = forwardRef<SVGSVGElement, IconProps>(function IconScooter(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11 16v-1.5c0-1.89 0-2.83-.59-3.41-.58-.59-1.52-.59-3.41-.59h-.6l-.71.01a4 4 0 0 0-1.26.3M11 16h5m-5 0H2.92a1 1 0 0 1-.92-.92v-.18l.01-.71a4 4 0 0 1 .22-1.03"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9.5 16a3 3 0 1 1-6 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 5h.53c1.2 0 1.8 0 2.29.3.48.3.75.84 1.29 1.91L19 13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m18.14 11 .68-.5c.27-.2.4-.3.49-.42a1 1 0 0 0 .14-.28c.05-.15.05-.31.05-.64 0-.62 0-.93-.13-1.16a1 1 0 0 0-.37-.37c-.23-.13-.54-.13-1.16-.13H16.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 18.83A3 3 0 1 0 16.17 17"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,47 @@ const IconGamepadMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8.5 11v3M7 12.5h3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m2.62 15.12-.54 2.26a2.95 2.95 0 0 0 2.26 3.54c1.38.31 2.8-.34 3.42-1.57l.12-.26a3.4 3.4 0 0 1 3.06-1.85h2.12c1.3 0 2.48.72 3.06 1.85l.12.26a3.06 3.06 0 0 0 3.42 1.57 2.95 2.95 0 0 0 2.26-3.54l-1.09-4.52c-.6-2.55-.91-3.83-1.78-4.67q-.33-.31-.73-.56C17.28 7 15.94 7 13.24 7h-2.48c-2.7 0-4.04 0-5.08.63q-.39.24-.73.56C4.33 8.8 4 9.63 3.63 11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 7V6a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1V3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M18 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

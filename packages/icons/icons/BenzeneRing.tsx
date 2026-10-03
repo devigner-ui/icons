@@ -23,7 +23,54 @@ const IconBenzeneRing = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7.02 6.64c-.99.58-1.48.88-1.75 1.36S5 9.07 5 10.24v3.52c0 1.17 0 1.76.27 2.24s.76.78 1.75 1.36l2.96 1.76c.99.59 1.48.88 2.02.88s1.03-.3 2.02-.88l2.96-1.76c.99-.58 1.48-.88 1.75-1.36.25-.45.27-.99.27-2M9.98 4.88C10.97 4.29 11.46 4 12 4s1.03.3 2.02.88l2.96 1.76c.99.58 1.48.88 1.75 1.36.25.45.27.99.27 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 8 2 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m19 8 3-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m5 16-3 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m12 16.88 4-2.38"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

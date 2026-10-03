@@ -23,7 +23,46 @@ const IconCameraMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="12"
+            cy="13"
+            r="3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M3 13c0-2.8 0-4.21.67-5.22a4 4 0 0 1 1.1-1.1C5.8 6 7.2 6 10 6h4c2.8 0 4.21 0 5.22.67a4 4 0 0 1 1.1 1.1C21 8.8 21 10.2 21 13s0 4.21-.67 5.22a4 4 0 0 1-1.1 1.1C18.2 20 16.8 20 14 20h-4c-2.8 0-4.21 0-5.22-.67a4 4 0 0 1-1.1-1.1 3 3 0 0 1-.5-1.23"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 10h-.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14.5 3.5h-5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

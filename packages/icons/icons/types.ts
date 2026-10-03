@@ -15,8 +15,8 @@
  */
 import type { SVGProps } from "react";
 
-/** Which of the four drawings the component renders. */
-export type IconVariant = "Outline" | "TwoTone" | "Bold" | "Bulk";
+/** Which drawing the component renders. Broken is available where supplied. */
+export type IconVariant = "Outline" | "TwoTone" | "Bold" | "Bulk" | "Broken";
 
 /*
  * Nothing is omitted from SVGProps any more. `fill` and `width` used to be

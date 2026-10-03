@@ -22,7 +22,43 @@ const IconCosmetic = forwardRef<SVGSVGElement, IconProps>(function IconCosmetic(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16.5 16a5.5 5.5 0 1 1 3.86-1.58"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.5 20v-4m0 4h3m-3 0h-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2 11v-.75a.75.75 0 0 0-.75.75zm6 0h.75a.75.75 0 0 0-.75-.75zm.75 6a.75.75 0 0 0-1.5 0zm-1.5-4a.75.75 0 0 0 1.5 0zM2 11.75h6v-1.5H2zM2.75 17v-6h-1.5v6zM5 19.25c-1.24 0-2.25-1-2.25-2.25h-1.5A3.75 3.75 0 0 0 5 20.75zM7.25 17c0 1.24-1 2.25-2.25 2.25v1.5A3.75 3.75 0 0 0 8.75 17zm0-6v2h1.5v-2z"
+            fill="currentColor"
+          />
+          <path
+            d="M3 11h4V5.62a1 1 0 0 0-1.45-.9l-2 1a1 1 0 0 0-.55.9z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -22,7 +22,53 @@ const IconZIPFile = forwardRef<SVGSVGElement, IconProps>(function IconZIPFile(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3 14v-4c0-3.77 0-5.66 1.17-6.83S7.23 2 11 2h2c3.77 0 5.66 0 6.83 1.17.65.65.94 1.53 1.07 2.83m.1 4v4c0 3.77 0 5.66-1.17 6.83S16.77 22 13 22h-2c-3.77 0-5.66 0-6.83-1.17-.65-.65-.94-1.53-1.07-2.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9.5 15.5v-.12c0-.49.4-.88.88-.88h3.24c.49 0 .88.4.88.88v.12a2.5 2.5 0 0 1-5 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9.5 3c0-.47 0-.7.15-.85s.38-.15.85-.15h.5c.47 0 .7 0 .85.15s.15.38.15.85v.5c0 .47 0 .7-.15.85s-.38.15-.85.15h-.5c-.47 0-.7 0-.85-.15s-.15-.38-.15-.85z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M9.5 8c0-.47 0-.7.15-.85s.38-.15.85-.15h.5c.47 0 .7 0 .85.15s.15.38.15.85v.5c0 .47 0 .7-.15.85s-.38.15-.85.15h-.5c-.47 0-.7 0-.85-.15s-.15-.38-.15-.85z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 5.5c0-.47 0-.7.15-.85s.38-.15.85-.15h.5c.47 0 .7 0 .85.15s.15.38.15.85V6c0 .47 0 .7-.15.85s-.38.15-.85.15H13c-.47 0-.7 0-.85-.15S12 6.47 12 6z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 10.5c0-.47 0-.7.15-.85s.38-.15.85-.15h.5c.47 0 .7 0 .85.15s.15.38.15.85v.5c0 .47 0 .7-.15.85s-.38.15-.85.15H13c-.47 0-.7 0-.85-.15S12 11.47 12 11z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

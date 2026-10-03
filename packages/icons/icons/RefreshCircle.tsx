@@ -23,7 +23,35 @@ const IconRefreshCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7.38 11.63h-.75zm0 .93-.56.5a.75.75 0 0 0 1.08.04zm2.14-1.02a.75.75 0 0 0-1.04-1.08zM6.56 10.5a.75.75 0 1 0-1.12 1zM14.93 9a.75.75 0 1 0 1.1-1zm-2.89-2.75a5.4 5.4 0 0 0-5.41 5.38h1.5a3.9 3.9 0 0 1 3.91-3.88zm-5.41 5.38v.93h1.5v-.93zM7.9 13.1l1.62-1.56-1.04-1.08L6.86 12zm.04-1.04L6.56 10.5l-1.12 1 1.38 1.55zm8.1-4.07a5.4 5.4 0 0 0-4-1.74v1.5c1.15 0 2.18.49 2.9 1.26z"
+            fill="currentColor"
+          />
+          <path
+            d="m16.62 11.44.56-.5a.75.75 0 0 0-1.08-.04zm-2.14 1.02a.75.75 0 1 0 1.04 1.08zm2.96 1.04a.75.75 0 0 0 1.12-1zM9.04 15a.75.75 0 0 0-1.09 1.03zm2.9 2.75a5.4 5.4 0 0 0 5.43-5.38h-1.5a3.9 3.9 0 0 1-3.94 3.88zm5.43-5.38v-.93h-1.5v.93zM16.1 10.9l-1.62 1.56 1.04 1.08 1.62-1.55zm-.04 1.04 1.38 1.56 1.12-1-1.38-1.55zm-8.1 4.1a5.5 5.5 0 0 0 3.97 1.71v-1.5A4 4 0 0 1 9.05 15z"
+            fill="currentColor"
+          />
+          <path
+            d="M7 3.34A10 10 0 1 1 3.34 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

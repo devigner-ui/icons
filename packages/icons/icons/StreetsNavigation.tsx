@@ -23,7 +23,38 @@ const IconStreetsNavigation = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M18 16.92c1.14-.1 1.92-.32 2.54-.83a4 4 0 0 0 .55-.55c.91-1.1.91-2.75.91-6.04s0-4.93-.9-6.04a4 4 0 0 0-.56-.55C19.44 2 17.79 2 14.5 2h-5c-3.29 0-4.93 0-6.04.9a4 4 0 0 0-.55.56C2 4.56 2 6.21 2 9.5s0 4.93.9 6.04a4 4 0 0 0 .56.55c.62.5 1.4.73 2.54.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m20.5 15.5-6.5-5M3.5 3l3 2.14m14-1.64-6.5 7m0 0L9.5 7.29"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m15.27 19.2-1.34-2.67C13.1 14.84 12.67 14 12 14s-1.09.84-1.93 2.53L8.73 19.2c-.5 1.02-.77 1.54-.73 1.86.06.46.41.84.87.93.32.06.85-.16 1.9-.6.4-.16.6-.24.8-.28q.43-.09.87 0c.2.04.4.12.78.28 1.06.44 1.59.66 1.9.6.47-.09.82-.47.88-.93.04-.32-.22-.84-.73-1.86Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

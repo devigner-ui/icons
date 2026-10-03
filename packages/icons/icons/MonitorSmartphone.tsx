@@ -23,7 +23,48 @@ const IconMonitorSmartphone = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11 17H8c-2.83 0-4.24 0-5.12-.88S2 13.82 2 11v-1c0-3.77 0-5.66 1.17-6.83A3.5 3.5 0 0 1 5 2.25M22 8.5c0-2.33 0-3.5-.47-4.39a4 4 0 0 0-1.64-1.64C19 2 17.83 2 15.5 2H9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 15c0-1.89 0-2.83.59-3.41C15.17 11 16.1 11 18 11s2.83 0 3.41.59c.59.58.59 1.52.59 3.41v3c0 1.89 0 2.83-.59 3.41-.58.59-1.52.59-3.41.59s-2.83 0-3.41-.59C14 20.83 14 19.9 14 18z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M19 20h-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11 22v.75c.41 0 .75-.34.75-.75zm-3-.75a.75.75 0 0 0 0 1.5zM11.75 17a.75.75 0 0 0-1.5 0zM11 21.25H8v1.5h3zm.75.75v-5h-1.5v5z"
+            fill="currentColor"
+          />
+          <path
+            d="M11 13H2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

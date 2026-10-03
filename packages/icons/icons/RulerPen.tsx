@@ -22,7 +22,39 @@ const IconRulerPen = forwardRef<SVGSVGElement, IconProps>(function IconRulerPen(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 7V6c0-1.89 0-2.83-.59-3.41C20.83 2 19.9 2 18 2h-2c-1.89 0-2.83 0-3.41.59C12 3.17 12 4.1 12 6v12c0 1.89 0 2.83.59 3.41.58.59 1.52.59 3.41.59h2c1.89 0 2.83 0 3.41-.59.59-.58.59-1.52.59-3.41v-7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 12h2m-2-6h2m-2 12h2m-2-3h3m-3-6h3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 6V5a3 3 0 0 1 6 0v1M2 6s1.13 1 3 1 3-1 3-1M2 6v4.55m0 3.77v.87c0 .63 0 .94.04 1.24a5 5 0 0 0 .25 1.06c.1.29.24.57.52 1.13l1.18 2.36.29.57a.8.8 0 0 0 1.44 0l.3-.57 1.17-2.36c.28-.56.42-.84.52-1.13a5 5 0 0 0 .25-1.06c.04-.3.04-.61.04-1.24V6M6.01 20.98H4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -22,7 +22,31 @@ const IconHealth = forwardRef<SVGSVGElement, IconProps>(function IconHealth(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M18.5 9h-2m0 0h-2m2 0V7m0 2v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m8.96 19.38.47-.58zM12 5.58l-.55.5a.75.75 0 0 0 1.1 0zm3.04 13.8.47.58zM12 21v-.75zm-9.35-7.32a.75.75 0 1 0 1.29-.77zm3.89 2.5a.75.75 0 1 0-1.08 1.04zM2.75 9.31c0-2.9 1.27-4.7 2.84-5.32 1.56-.61 3.75-.17 5.86 2.09l1.1-1.03C10.16 2.5 7.35 1.69 5.04 2.6S1.25 5.99 1.25 9.3zm12.76 10.64a31 31 0 0 0 4.7-4.65c1.41-1.79 2.54-3.87 2.54-6h-1.5c0 1.62-.88 3.37-2.22 5.08a29 29 0 0 1-4.46 4.4zm7.24-10.64c0-3.33-1.48-5.81-3.79-6.71-2.3-.9-5.12-.1-7.5 2.45l1.09 1.03c2.11-2.26 4.3-2.7 5.86-2.09s2.84 2.41 2.84 5.32zM8.49 19.96C9.76 21 10.64 21.75 12 21.75v-1.5c-.72 0-1.17-.32-2.57-1.45zm6.08-1.16c-1.4 1.13-1.85 1.45-2.57 1.45v1.5c1.36 0 2.24-.76 3.51-1.79zM3.94 12.9a7 7 0 0 1-1.19-3.58h-1.5c0 1.51.58 3 1.4 4.36zm5.5 5.9a34 34 0 0 1-2.9-2.63l-1.08 1.05a35 35 0 0 0 3.03 2.74z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

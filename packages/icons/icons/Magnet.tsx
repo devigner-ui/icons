@@ -22,7 +22,28 @@ const IconMagnet = forwardRef<SVGSVGElement, IconProps>(function IconMagnet(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17 2h2.5c.83 0 1.5.67 1.5 1.5v2c0 .83-.67 1.5-1.5 1.5H17m0-5h-4q-2.15.02-4 .83M17 2v5m0 0h-4a5 5 0 0 0-4 8m8 2h2.5c.83 0 1.5.67 1.5 1.5v2c0 .83-.67 1.5-1.5 1.5H17m0-5h-4m4 0v5m0 0h-4A10 10 0 0 1 5 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

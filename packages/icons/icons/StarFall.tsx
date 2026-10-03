@@ -22,7 +22,44 @@ const IconStarFall = forwardRef<SVGSVGElement, IconProps>(function IconStarFall(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.61 5.86c-1.36.55-2.05.82-2.13 1.38-.08.57.49 1.05 1.63 2.02l.3.25c.33.27.49.41.58.6.1.19.1.4.13.83l.03.4c.1 1.52.14 2.28.63 2.54.5.26 1.11-.15 2.34-.97l.32-.2c.35-.24.52-.36.72-.39s.4.02.8.14l.37.1c1.43.4 2.14.59 2.52.19.4-.4.2-1.14-.19-2.62m.34-2.3c.78-1.27 1.18-1.9.92-2.42-.25-.51-.98-.56-2.45-.65l-.38-.02c-.42-.03-.63-.04-.8-.14-.19-.1-.32-.26-.59-.6l-.24-.3c-.94-1.19-1.4-1.78-1.95-1.7-.54.1-.8.8-1.32 2.22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7.45 7.24C5.1 8.94 3.32 12.22 4.25 18c.82-2.41 3.28-4.34 6.04-5.27"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10.28 16s.63 1.4 1.41 1.87 2.31.41 2.31.41-1.4.63-1.87 1.41-.41 2.31-.41 2.31-.63-1.4-1.41-1.87S8 19.72 8 19.72s1.4-.63 1.87-1.41.41-2.31.41-2.31Z"
+            stroke="currentColor"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M18.48 15s-.42.93-.94 1.25-1.54.27-1.54.27.93.42 1.25.94.27 1.54.27 1.54.42-.93.94-1.25 1.54-.27 1.54-.27-.93-.42-1.25-.94-.27-1.54-.27-1.54Z"
+            stroke="currentColor"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

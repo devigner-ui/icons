@@ -22,7 +22,45 @@ const IconPaperBin = forwardRef<SVGSVGElement, IconProps>(function IconPaperBin(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M18 2.05c1.37.1 2.22.33 2.79 1 .9 1.03.66 2.64.18 5.84l-1.2 8c-.37 2.44-.55 3.66-1.4 4.38-.84.73-2.07.73-4.54.73h-3.66c-2.47 0-3.7 0-4.54-.73-.85-.72-1.03-1.94-1.4-4.38l-1.2-8c-.48-3.2-.72-4.8.18-5.85S5.73 2 8.97 2H14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M21 6H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M19 19H5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m8 6-4.5 5 7.5 8m3-13L4 16M20 6 7 19m6 0 7.5-8L16 6m-6 0 10 10M4 6l13 13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

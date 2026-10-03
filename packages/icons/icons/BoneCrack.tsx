@@ -23,7 +23,35 @@ const IconBoneCrack = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13.29 5.79c.15.54.17 1.19-.22 1.58l-5.7 5.7c-.4.4-1.04.37-1.58.22-1.01-.28-2.3.1-3.05.85A2.52 2.52 0 0 0 6.3 17.7a2.52 2.52 0 0 0 3.56 3.56m4.28-18.52A2.52 2.52 0 0 1 17.7 6.3a2.52 2.52 0 0 1 3.56 3.56 3.4 3.4 0 0 1-3.05.85c-.54-.15-1.19-.17-1.58.22l-5.7 5.7c-.4.4-.37 1.04-.22 1.58"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10.23 10.23v2.12l2.12-.7v1.41L15 12.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

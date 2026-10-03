@@ -22,7 +22,51 @@ const IconScanner2 = forwardRef<SVGSVGElement, IconProps>(function IconScanner2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 13s1.8-2 6-2 6 2 6 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 22c-3.77 0-5.66 0-6.83-1.17S2 17.77 2 14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 2c3.77 0 5.66 0 6.83 1.17S22 6.23 22 10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 14v1m-8 7c3.77 0 5.66 0 6.83-1.17.65-.65.94-1.53 1.07-2.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 10V9m8-7C6.23 2 4.34 2 3.17 3.17 2.52 3.82 2.23 4.7 2.1 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -22,7 +22,51 @@ const IconPrinter2 = forwardRef<SVGSVGElement, IconProps>(function IconPrinter2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12c0 2.83 0 4.24-.88 5.12-.64.64-1.57.82-3.12.86m-12 0c-1.55-.04-2.48-.22-3.12-.86C2 16.24 2 14.82 2 12s0-4.24.88-5.12S5.18 6 8 6h8c2.83 0 4.24 0 5.12.88q.44.44.63 1.12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 10H6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M19 15H5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17.98 6c-.04-1.55-.22-2.48-.86-3.12C16.24 2 14.82 2 12 2s-4.24 0-5.12.88c-.64.64-.82 1.57-.86 3.12M18 15v1c0 2.83 0 4.24-.88 5.12-.64.64-1.57.82-3.12.86M6 15v1c0 2.83 0 4.24.88 5.12.64.64 1.57.82 3.12.86"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="17"
+            cy="10"
+            r="1"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

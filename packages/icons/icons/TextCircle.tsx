@@ -23,7 +23,31 @@ const IconTextCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11.25 17a.75.75 0 0 0 1.5 0zm4-7.25a.75.75 0 0 0 1.5 0zm-8 0a.75.75 0 0 0 1.5 0zm8.46-2.42.55-.5v0zM9.5 16.25a.75.75 0 0 0 0 1.5zm5.5 1.5a.75.75 0 0 0 0-1.5zm-5-10h2v-1.5h-2zm2 0h2v-1.5h-2zm.75 9.25V7h-1.5v10zm2.5-7.78v.53h1.5v-.53zm-8 0v.53h1.5v-.53zM14 7.75a8 8 0 0 1 1.14.07h.01l1.11-1c-.3-.33-.68-.47-1.05-.52q-.52-.06-1.21-.05zm2.75 1.47q.01-.76-.04-1.3a2 2 0 0 0-.45-1.1l-1.11 1 .02.05.05.22c.03.25.03.59.03 1.13zM10 6.25q-.69-.01-1.2.05c-.38.05-.76.19-1.06.52l1.11 1h.01l.15-.04c.2-.03.5-.03.99-.03zM8.75 9.22c0-.54 0-.88.03-1.13l.05-.22.02-.04-1.11-1c-.3.32-.4.71-.45 1.08q-.05.54-.04 1.31zm.75 8.53H15v-1.5H9.5z"
+            fill="currentColor"
+          />
+          <path
+            d="M7 3.34A10 10 0 1 1 3.34 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

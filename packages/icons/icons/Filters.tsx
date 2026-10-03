@@ -22,7 +22,36 @@ const IconFilters = forwardRef<SVGSVGElement, IconProps>(function IconFilters(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 20.28A6 6 0 1 0 17.5 10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M9 2.8A6 6 0 1 1 6.34 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8 22v-.75zm-6-6h-.75zm.15 3.38a.75.75 0 1 0 1.3-.76zm4.1 1.57a.75.75 0 0 0-.5 1.42zm7-4.95c0 2.9-2.35 5.25-5.25 5.25v1.5A6.75 6.75 0 0 0 14.75 16zm-10.5 0c0-2.45 1.67-4.5 3.94-5.08L6.3 9.46A6.75 6.75 0 0 0 1.25 16zm10.16-1.87q.34.87.34 1.87h1.5q-.01-1.28-.44-2.41zm-9.46 4.5a5 5 0 0 1-.7-2.63h-1.5c0 1.23.33 2.38.9 3.38zM8 21.24q-.92 0-1.75-.3l-.5 1.42q1.06.37 2.25.38z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

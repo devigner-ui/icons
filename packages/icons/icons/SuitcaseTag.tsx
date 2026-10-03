@@ -23,7 +23,50 @@ const IconSuitcaseTag = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16 6c0-1.89 0-2.83-.59-3.41C14.83 2 13.9 2 12 2s-2.83 0-3.41.59C8 3.17 8 4.1 8 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M10 15H6c-.47 0-.7 0-.85.15S5 15.53 5 16v1c0 .47 0 .7.15.85s.38.15.85.15h4c.47 0 .7 0 .85-.15s.15-.38.15-.85v-1c0-.47 0-.7-.15-.85S10.47 15 10 15Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinejoin="round"
+          />
+          <path
+            d="M6 6.5V15m0 6.5v-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 6.5V10m0 11.5V14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 14c0-3.77 0-5.66 1.17-6.83S6.23 6 10 6h4c3.77 0 5.66 0 6.83 1.17.65.65.94 1.53 1.07 2.83m.1 4c0 3.77 0 5.66-1.17 6.83S17.77 22 14 22h-4c-3.77 0-5.66 0-6.83-1.17-.65-.65-.94-1.53-1.07-2.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

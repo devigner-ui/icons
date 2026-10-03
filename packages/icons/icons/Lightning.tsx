@@ -23,7 +23,51 @@ const IconLightning = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17.94 17.64c-.08.76-.25 1.28-.64 1.67-.7.69-1.84.69-4.1.69h-2.4c-2.26 0-3.4 0-4.1-.7-.7-.68-.7-1.8-.7-4.03v-2.54c0-2.23 0-3.35.7-4.04S8.54 8 10.8 8h2.4c2.26 0 3.4 0 4.1.7.7.68.7 1.8.7 4.03v1.18"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 20v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m12 12-1.5 2h3L12 16"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M11 5h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15.5 8V5.5c0-1.4 0-2.1-.34-2.61a2 2 0 0 0-.55-.55C14.11 2 13.41 2 12 2c-1.4 0-2.1 0-2.61.34a2 2 0 0 0-.55.55c-.34.5-.34 1.2-.34 2.61V8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

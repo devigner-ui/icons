@@ -22,7 +22,49 @@ const IconBath = forwardRef<SVGSVGElement, IconProps>(function IconBath(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 20.5q.98 0 2.1-.04l.6-.04A7.2 7.2 0 0 0 21 13.9l.01-.82v-.14a1 1 0 0 0-.94-.94h-.14M4.08 12h-.14a1 1 0 0 0-.94.94v.14l.01.82A7.3 7.3 0 0 0 8 20.15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m6 20-1 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m18 20 1 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 12h12m8 0h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2.25 13a.75.75 0 0 0 1.5 0zM7.6 3.5l.7-.28h0zm.38.95.33.67zM6.36 6.19l.7.28zm4.22-1.81-.3.69zM6.35 8.74l-.7.28a.75.75 0 0 0 1 .41zm5.96-2.56.3.68a.75.75 0 0 0 .4-.96zM3.75 13V4.39h-1.5V13zM5.39 2.75c.66 0 1.27.4 1.51 1.03l1.4-.56a3.1 3.1 0 0 0-2.91-1.97zM3.75 4.39c0-.9.73-1.64 1.64-1.64v-1.5a3.14 3.14 0 0 0-3.14 3.14zm3.15-.61.38.95 1.4-.56-.38-.95zm.14 4.69a2.7 2.7 0 0 1 .02-2l-1.4-.56a4.2 4.2 0 0 0-.01 3.1zm4.97-2.98L6.05 8.05l.6 1.38 5.95-2.57zm-1.73-.42c.62.26 1.09.77 1.33 1.38L13 5.9a4 4 0 0 0-2.14-2.21zm-3.22 1.4c.25-.62.7-1.09 1.25-1.35l-.66-1.35a4 4 0 0 0-1.98 2.14zM8.3 5.12c.6-.3 1.32-.33 1.97-.05l.6-1.38a4 4 0 0 0-3.23.08z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

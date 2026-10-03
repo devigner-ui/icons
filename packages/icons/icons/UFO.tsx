@@ -22,7 +22,63 @@ const IconUFO = forwardRef<SVGSVGElement, IconProps>(function IconUFO(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2.73 10a10 10 0 0 1 4-1.79m-4 5.44c1.62 1.4 5.04 2.35 9 2.35 5.52 0 10-1.87 10-4.17 0-1.17-1.15-2.23-3-2.98q-.9-.37-2-.64m-5 1.79c-3.2 0-4.39-.53-4.8-.82q-.21-.16-.2-.45A4.73 4.73 0 0 1 11.46 4H12a4.73 4.73 0 0 1 4.73 4.73q.01.28-.2.45c-.28.2-.92.5-2.3.68"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 16v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m5.5 15.5-1 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m18.5 15.5 1 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="12"
+            cy="13"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="7"
+            cy="12"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="17"
+            cy="12"
+            r="1"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

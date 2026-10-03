@@ -23,7 +23,31 @@ const IconWineglass = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12.75 15.29a.75.75 0 0 0-1.5 0zm3 6.46a.75.75 0 0 0 0-1.5zm-7.5-1.5a.75.75 0 0 0 0 1.5zM8 3.75a.75.75 0 0 0 0-1.5zm4-1.5a.75.75 0 0 0 0 1.5zm-.75 13.04V21h1.5v-5.71zm4.5 4.96H12v1.5h3.75zm-3.75 0H8.25v1.5H12zm6.25-15.36V8h1.5V4.9zM5.75 8V4.9h-1.5V8zM12 14.25A6.25 6.25 0 0 1 5.75 8h-1.5A7.75 7.75 0 0 0 12 15.75zM18.25 8c0 3.45-2.8 6.25-6.25 6.25v1.5A7.75 7.75 0 0 0 19.75 8zm-1.14-4.25c.63 0 1.14.51 1.14 1.14h1.5a2.64 2.64 0 0 0-2.64-2.64zM6.89 2.25a2.64 2.64 0 0 0-2.64 2.64h1.5c0-.63.51-1.14 1.14-1.14zm0 1.5H8v-1.5H6.9zm5.11 0h5.1v-1.5H12z"
+            fill="currentColor"
+          />
+          <path
+            d="M5.5 9S7.58 8.09 9 8c1.23-.08 2.12.46 3 1m6.5 0s-2.08.91-3.5 1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

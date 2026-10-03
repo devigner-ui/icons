@@ -23,7 +23,69 @@ const IconWiFiRouter = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7 15a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10 15a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M7 11 3 4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m17 11 4-7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 15h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17.17 5.4A5.5 5.5 0 0 0 7 5.4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14.96 6.66a3 3 0 0 0-5.76 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13.08 7a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M13 19H6c-1.89 0-2.83 0-3.41-.59C2 17.83 2 16.9 2 15s0-2.83.59-3.41C3.17 11 4.1 11 6 11h12c1.89 0 2.83 0 3.41.59.59.58.59 1.52.59 3.41s0 2.83-.59 3.41C20.83 19 19.9 19 18 19h-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

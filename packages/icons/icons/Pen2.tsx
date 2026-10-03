@@ -22,7 +22,33 @@ const IconPen2 = forwardRef<SVGSVGElement, IconProps>(function IconPen2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4 22h4m12 0h-8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m13.89 3.66.74-.74a3.15 3.15 0 1 1 4.45 4.45l-.74.74m-4.45-4.45s.1 1.58 1.48 2.97a5 5 0 0 0 2.97 1.48m-4.45-4.45-6.82 6.82c-.46.46-.7.7-.89.95q-.35.45-.6.97c-.14.29-.24.6-.45 1.22l-.87 2.62m14.08-8.13-3.41 3.41M4.26 16.24l-.22.64a.85.85 0 0 0 1.08 1.08l.64-.22 2.62-.87c.62-.2.93-.31 1.22-.45q.52-.25.97-.6c.26-.2.49-.43.95-.9m-5.76 2.82-1.5-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -22,7 +22,58 @@ const IconEyeScan = forwardRef<SVGSVGElement, IconProps>(function IconEyeScan(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 15c0 3.77 0 4.66-1.17 5.83S17.77 22 14 22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 2C6.23 2 4.34 2 3.17 3.17S2 5.23 2 9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 7a8 8 0 0 0-6.1 2.94c-.6.69-.9 1.04-.9 2.06s.3 1.37.9 2.06A8 8 0 0 0 12 17a8 8 0 0 0 6.1-2.94c.6-.69.9-1.04.9-2.06s-.3-1.37-.9-2.06A9 9 0 0 0 16 8.13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M10 22H9m-7-7c0 3.77 0 4.66 1.17 5.83.65.65 1.53.94 2.83 1.07"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 2h1m7 7c0-3.77 0-4.66-1.17-5.83-.65-.65-1.53-.94-2.83-1.07"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

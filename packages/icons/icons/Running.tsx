@@ -22,7 +22,44 @@ const IconRunning = forwardRef<SVGSVGElement, IconProps>(function IconRunning(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="18.5"
+            cy="4.5"
+            r="2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m9 17-1 1.2c-.74.89-1.1 1.33-1.61 1.56-.5.24-1.08.24-2.23.24H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5.8 9.47a.75.75 0 1 0-.73-1.3zm-2.17-.49a.75.75 0 0 0 .74 1.3zm12.12 1.14-.62.42h0zm.06.1.63-.42h0zm-4.84-3.57.08-.74zm-.23-.01-.03.75h0zm-.59.03-.1-.74h0zM21 12.75a.75.75 0 0 0 0-1.5zM8.74 6.27a.75.75 0 0 0 .52 1.4zm-3.67 1.9-1.44.81.74 1.3 1.44-.8zm10.06 2.37.06.1 1.25-.84-.07-.1zm-4.08-4.63-.28-.02-.06 1.5h.18zm8.1 6.84H21v-1.5h-1.86zm-8.38-6.86q-.39-.02-.72.04l.2 1.49q.27-.04.46-.03zm4.42 4.74a4.8 4.8 0 0 0 3.95 2.12v-1.5c-1.09 0-2.1-.54-2.7-1.45zm1.18-.92c-1.17-1.77-2.94-3.56-5.32-3.8l-.16 1.49c1.7.18 3.14 1.49 4.24 3.14zm-7.1-2.03q.52-.2.99-.26l-.2-1.49q-.67.1-1.32.34z"
+            fill="currentColor"
+          />
+          <path
+            d="m14 8.5-2.22 2.78c-.84 1.04-1.26 1.56-1.32 2.13a2 2 0 0 0 .12.95c.2.53.73.94 1.8 1.75.81.61 1.22.92 1.5 1.32a3 3 0 0 1 .37.75c.15.46.15.97.15 1.99V22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

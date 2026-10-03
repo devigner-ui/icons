@@ -22,7 +22,32 @@ const IconPIP2 = forwardRef<SVGSVGElement, IconProps>(function IconPIP2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 11v1c0 3.75 0 5.62.95 6.94a5 5 0 0 0 1.11 1.1C5.38 21 7.25 21 11 21h2c3.75 0 5.62 0 6.94-.95a5 5 0 0 0 1.1-1.11C22 17.62 22 15.75 22 12s0-5.62-.95-6.94a5 5 0 0 0-1.11-1.1C18.62 3 16.75 3 13 3h-2c-3.75 0-5.62 0-6.94.95A4.5 4.5 0 0 0 2.2 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11 14c0-.93 0-1.4.15-1.77a2 2 0 0 1 1.08-1.08C12.6 11 13.07 11 14 11h1c.93 0 1.4 0 1.77.15a2 2 0 0 1 1.08 1.08c.15.37.15.84.15 1.77s0 1.4-.15 1.77a2 2 0 0 1-1.08 1.08c-.37.15-.84.15-1.77.15h-1c-.93 0-1.4 0-1.77-.15a2 2 0 0 1-1.08-1.08C11 15.4 11 14.93 11 14Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

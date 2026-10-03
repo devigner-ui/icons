@@ -23,7 +23,33 @@ const IconAirbudsCaseMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3 13v-2c0-3.75 0-5.62.95-6.94a5 5 0 0 1 1.11-1.1C6.38 2 8.25 2 12 2s5.62 0 6.94.95a5 5 0 0 1 1.1 1.11C21 5.38 21 7.25 21 11v2c0 3.75 0 5.62-.95 6.94a5 5 0 0 1-1.11 1.1C17.62 22 15.75 22 12 22s-5.62 0-6.94-.95a5 5 0 0 1-1.1-1.11A5.5 5.5 0 0 1 3.07 17"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 9h10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

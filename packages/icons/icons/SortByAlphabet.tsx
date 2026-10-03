@@ -23,7 +23,43 @@ const IconSortByAlphabet = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13 7H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 12H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8 17H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11.32 16.7a.75.75 0 1 0 1.36.6zM16.5 7l.68-.3a.75.75 0 0 0-1.36 0zm3.82 10.3a.75.75 0 1 0 1.36-.6zm-.96-3.94.69-.3zm-5.72-.75a.75.75 0 0 0 0 1.5zm-.96 4.7 4.5-10-1.36-.62-4.5 10zm9-.62-1.63-3.63-1.37.61 1.64 3.64zm-1.63-3.63-2.87-6.37-1.36.62 2.86 6.36zm-.69-.45h-5.72v1.5h5.72z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

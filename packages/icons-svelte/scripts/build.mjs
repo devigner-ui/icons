@@ -36,7 +36,7 @@ const names = [];
 
 for (const [name, drawings] of icons) {
   const split = Object.fromEntries(
-    STYLES.map((style) => [style, splitSvg(drawings[style])]),
+    Object.keys(drawings).map((style) => [style, splitSvg(drawings[style])]),
   );
 
   writeFileSync(
@@ -78,7 +78,7 @@ writeFileSync(
     `export type IconStyle = ${STYLES.map((s) => `"${s}"`).join(" | ")};\n\n` +
     `export type IconName = ${names.map((n) => `"${n}"`).join(" | ")};\n\n` +
     `export interface IconProps extends SVGAttributes<SVGSVGElement> {\n` +
-    `  /** Which of the four drawings to render. Defaults to "outline". */\n` +
+    `  /** Which drawing to render. Broken is available where supplied. Defaults to "outline". */\n` +
     `  variant?: IconStyle;\n` +
     `  /** Stroke width, in the drawing's own units. Outline and twotone only. */\n` +
     `  strokeWidth?: string | number | null;\n` +

@@ -23,7 +23,37 @@ const IconGalleryFavourite = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12c0 4.71 0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12q0-1.69.02-3M12 2C7.29 2 4.93 2 3.46 3.46Q2.84 4.1 2.52 5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m2 12.5 1.75-1.53a2.3 2.3 0 0 1 3.14.1l4.3 4.3a2 2 0 0 0 2.56.21l.3-.2a3 3 0 0 1 3.73.22L21 18.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m16.06 8.57.5-.57h0zM18 3.97l-.53.53a.75.75 0 0 0 1.06 0zm1.94 4.6-.5-.57zM18 9.61v-.75h0zM16.55 8c-.48-.43-.95-.9-1.29-1.38a2.3 2.3 0 0 1-.51-1.25h-1.5c0 .78.36 1.51.79 2.12s1 1.17 1.53 1.64zm-1.8-2.63c0-.94.42-1.4.83-1.56.43-.16 1.13-.08 1.89.68l1.06-1.06C17.5 2.39 16.2 2 15.07 2.4c-1.14.42-1.82 1.56-1.82 2.97zm5.68 3.76a10 10 0 0 0 1.53-1.64c.43-.6.79-1.34.79-2.12h-1.5q0 .51-.51 1.25-.53.73-1.3 1.37zm2.32-3.76c0-1.41-.68-2.55-1.82-2.97-1.12-.41-2.42-.02-3.46 1.03l1.06 1.06c.76-.76 1.46-.84 1.89-.68.41.15.83.62.83 1.56zm-7.18 3.76c.76.65 1.36 1.22 2.43 1.22v-1.5c-.42 0-.61-.13-1.45-.86zM19.45 8c-.84.73-1.03.86-1.45.86v1.5c1.07 0 1.67-.57 2.43-1.22z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

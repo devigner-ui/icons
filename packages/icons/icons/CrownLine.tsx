@@ -23,7 +23,33 @@ const IconCrownLine = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21.84 11.13c.18-1.92.27-2.87-.06-3.27a1 1 0 0 0-.67-.37c-.48-.04-1.08.64-2.27 2-.62.7-.93 1.06-1.27 1.11q-.3.04-.57-.09c-.31-.16-.53-.6-.95-1.46l-2.24-4.59C13.01 2.82 12.61 2 12 2s-1.01.82-1.81 2.46L7.95 9.05c-.42.87-.64 1.3-.95 1.46a1 1 0 0 1-.57.1c-.34-.06-.65-.41-1.27-1.12-1.2-1.36-1.79-2.04-2.27-2a1 1 0 0 0-.67.37c-.33.4-.24 1.35-.06 3.27l.23 2.43c.38 4.01.57 6.02 1.75 7.23S7.1 22 10.64 22h2.72c3.54 0 5.32 0 6.5-1.21.91-.93 1.23-2.35 1.5-4.79"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 18h6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

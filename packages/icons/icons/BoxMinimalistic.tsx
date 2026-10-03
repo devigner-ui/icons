@@ -23,7 +23,33 @@ const IconBoxMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21.98 10c-.03-1.31-.16-2.15-.58-2.86-.6-1.01-1.67-1.58-3.82-2.7l-2-1.06C13.82 2.46 12.94 2 12 2s-1.82.46-3.58 1.38l-2 1.05C4.27 5.56 3.2 6.13 2.6 7.14S2 9.42 2 11.94v.12c0 2.52 0 3.79.6 4.8s1.67 1.58 3.82 2.7l2 1.06C10.18 21.54 11.06 22 12 22s1.82-.46 3.58-1.38l2-1.05c2.15-1.13 3.23-1.7 3.82-2.71.42-.71.55-1.55.58-2.86"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M21 7.5 12 12m0 0L3 7.5m9 4.5v9.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

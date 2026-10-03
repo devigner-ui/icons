@@ -23,7 +23,36 @@ const IconMapPointRotate = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m12 20.69.5.56a.75.75 0 0 0 0-1.13zm9.43-6.28a.75.75 0 1 0-.94 1.18zM3.5 15.6a.75.75 0 1 0-.94-1.18zm6.99 3.79.5-.57a.75.75 0 0 0-1.25.57zm0 2.62h-.75a.75.75 0 0 0 1.24.56zm3.92-2.18a.75.75 0 0 0 .16 1.49zm-3.88.07c-2.34-.13-4.37-.6-5.78-1.24a5 5 0 0 1-1.57-1.02c-.33-.34-.44-.64-.44-.88h-1.5c0 .74.35 1.4.86 1.92q.78.79 2.03 1.34c1.63.74 3.85 1.24 6.32 1.38zm9.95-4.3c.58.45.76.85.76 1.16h1.5c0-.95-.57-1.74-1.32-2.34zM2.75 16.75c0-.3.18-.7.76-1.16l-.94-1.18c-.75.6-1.32 1.39-1.32 2.34zm9.74 3.37-1.5-1.3-.98 1.12 1.5 1.31zm-2.74-.75v1.27h1.5v-1.27zm0 1.27V22h1.5v-1.36zm1.24 1.92 1.5-1.3-.98-1.14-1.5 1.32zm10.26-5.81c0 .46-.43 1.11-1.72 1.76-1.23.62-3 1.1-5.1 1.3l.15 1.5c2.21-.22 4.18-.74 5.62-1.46 1.38-.69 2.55-1.72 2.55-3.1z"
+            fill="currentColor"
+          />
+          <path
+            d="M6.75 11.91A11 11 0 0 1 6 8.11C6 4.73 8.69 2 12 2s6 2.73 6 6.1c0 3.35-1.91 7.26-4.9 8.66-.7.32-1.5.32-2.2 0a7 7 0 0 1-2.5-2.01"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

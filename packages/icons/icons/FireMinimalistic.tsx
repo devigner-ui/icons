@@ -23,7 +23,27 @@ const IconFireMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16 20q-1.79.98-4 1c-4.42 0-8-3.36-8-7.5q.01-1.7.4-3.17m14.78 6.5c.52-1 .82-2.13.82-3.33 0-3.74-2.03-6.66-3.44-8.06-.26-.25-.7-.14-.84.2-.75 1.68-2.3 4.12-4.3 4.12-1.22.16-3.1-.9-1.59-6.11.14-.47-.36-.85-.74-.53-1 .81-2.14 2-3.09 3.53"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -23,7 +23,49 @@ const IconFloorLampMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 22h6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 22v-9m0-5v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 8c2.34 0 4.3-1.28 4.85-3.02C17 4.46 16.55 4 16 4H8c-.55 0-1.01.46-.85.98C7.7 6.72 9.66 8 12 8Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 2c1.66 0 3 .9 3 2H9c0-1.1 1.34-2 3-2Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 19v-1.06c0-1.28-.59-2.5-1.6-3.27l-3.88-2.78m0 0a3.1 3.1 0 0 0 .1-3.5c-.3-.48-.96-.4-1.3.05l-2.54 3.24m0 0c-.35.45-.27 1.12.26 1.3a3.05 3.05 0 0 0 3.48-1.09m-3.74-.2c-.89-.71-1.04-2-.34-2.9s1.98-1.05 2.87-.35"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

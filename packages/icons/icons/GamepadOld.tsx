@@ -23,7 +23,58 @@ const IconGamepadOld = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <g clipPath="url(#clip0_1276_7562)">
+            <path
+              d="M8 10v4m-2-2h4"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+            <path
+              d="M16 10.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+              fill="currentColor"
+            />
+            <path
+              d="M18 13.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+              fill="currentColor"
+            />
+            <path
+              d="M12 4V3a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1V0"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+            <path
+              d="M22 12c0 2.8 0 4.2-.55 5.27a5 5 0 0 1-2.18 2.18C18.2 20 16.8 20 14 20h-4c-2.8 0-4.2 0-5.27-.55a5 5 0 0 1-2.19-2.18C2 16.2 2 14.8 2 12s0-4.2.54-5.27a5 5 0 0 1 2.19-2.19C5.8 4 7.2 4 10 4h4c2.8 0 4.2 0 5.27.54a5 5 0 0 1 2.18 2.19q.29.55.4 1.27"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1276_7562">
+              <rect
+                width="24"
+                height="24"
+                fill="currentColor"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

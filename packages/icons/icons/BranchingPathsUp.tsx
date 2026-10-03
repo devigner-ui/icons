@@ -23,7 +23,35 @@ const IconBranchingPathsUp = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11.25 18a.75.75 0 0 0 1.5 0zM18 8l.53.53c.3-.3.3-.77 0-1.06zm-.97-2.03a.75.75 0 1 0-1.06 1.06zm-1.06 3a.75.75 0 1 0 1.06 1.06zM12.75 18v-6h-1.5v6zM16 8.75h2v-1.5h-2zm2.53-1.28-1.5-1.5-1.06 1.06 1.5 1.5zm-1.06 0-1.5 1.5 1.06 1.06 1.5-1.5zM12.75 12c0-1.8 1.46-3.25 3.25-3.25v-1.5A4.75 4.75 0 0 0 11.25 12z"
+            fill="currentColor"
+          />
+          <path
+            d="M11.25 18a.75.75 0 0 0 1.5 0zM6 8l-.53-.53c-.3.3-.3.77 0 1.06zm2.03-.97a.75.75 0 0 0-1.06-1.06zm-1.06 3a.75.75 0 1 0 1.06-1.06zM12.75 18v-6h-1.5v6zM8 7.25H6v1.5h2zM6.53 8.53l1.5-1.5-1.06-1.06-1.5 1.5zm-1.06 0 1.5 1.5 1.06-1.06-1.5-1.5zM12.75 12A4.75 4.75 0 0 0 8 7.25v1.5c1.8 0 3.25 1.46 3.25 3.25z"
+            fill="currentColor"
+          />
+          <path
+            d="M22 12c0 4.71 0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46c.97.98 1.3 2.35 1.4 4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

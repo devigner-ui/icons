@@ -23,7 +23,52 @@ const IconDumbbellLargeMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m8.32 12.2 3.88-3.88m3.1 3.1-3.88 3.88"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m7.14 19.33 1.24 1.24c.9.9 1.36 1.35 1.9 1.42h.38c.55-.07 1-.52 1.9-1.42.91-.9 1.36-1.36 1.43-1.91v-.37c-.07-.55-.52-1-1.42-1.9l-4.95-4.96c-.9-.9-1.36-1.35-1.9-1.42h-.38c-.55.07-1 .52-1.9 1.42-.91.9-1.36 1.36-1.43 1.91v.37c.07.55.52 1 1.42 1.9l.62.63"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m16.86 4.67-1.24-1.24c-.9-.9-1.36-1.35-1.9-1.42h-.38c-.55.07-1 .52-1.9 1.42-.91.9-1.36 1.36-1.43 1.91v.37c.07.55.52 1 1.42 1.9l4.95 4.96c.9.9 1.36 1.35 1.9 1.42h.38c.55-.07 1-.52 1.9-1.42.91-.9 1.36-1.36 1.43-1.91v-.37c-.07-.55-.52-1-1.42-1.9l-.62-.63"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m18.02 2.5 3.1 3.1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m2.5 18.02 3.1 3.1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

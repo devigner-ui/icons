@@ -1,6 +1,6 @@
 # @devigner-ui/icons-vue
 
-8,588 icons for Vue 3: 2,147 symbols, each in outline, twotone, bold and bulk. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn, so the two cannot drift.
+9,717 drawings for Vue 3: 2,147 symbols, each in outline, twotone, bold and bulk; Broken is available on 1,129 matching symbols. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn, so the two cannot drift.
 
 ```bash
 pnpm add @devigner-ui/icons-vue
@@ -25,7 +25,7 @@ Every icon is one module, so a bundler keeps only what you import.
 
 | Prop | Type | Default | What it does |
 | --- | --- | --- | --- |
-| `variant` | `"outline" \| "twotone" \| "bold" \| "bulk"` | `"outline"` | Which of the four drawings to render. |
+| `variant` | `"outline" \| "twotone" \| "bold" \| "bulk" \| "broken"` | `"outline"` | Which drawing to render. Broken is available where supplied. |
 | `strokeWidth` | `string \| number` | `1.5` | Stroke width, in the drawing's own units. Outline and twotone only; bold and bulk are filled forms with no strokes to weigh. |
 
 Everything else (`class`, `style`, `id`, `@click`, `data-*`, the aria attributes) falls through to the `<svg>`.

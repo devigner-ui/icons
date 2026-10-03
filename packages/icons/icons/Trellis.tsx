@@ -22,7 +22,60 @@ const IconTrellis = forwardRef<SVGSVGElement, IconProps>(function IconTrellis(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M19 22v-.5M5 22v-.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 21v-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m2.88 20.12-.53.53h0zM2 16h-.75zm19.12 4.12.53.53zM22 16h.75v0zm-6 4.25H8v1.5h8zm-8 0c-1.44 0-2.44 0-3.2-.1-.73-.1-1.11-.28-1.4-.56l-1.05 1.06c.6.6 1.36.86 2.26.98.88.12 2 .12 3.39.12zM1.25 16c0 1.09.03 1.99.17 2.72.14.76.4 1.4.93 1.93L3.4 19.6a2 2 0 0 1-.52-1.14 17 17 0 0 1-.14-2.45zM16 21.75c1.4 0 2.51 0 3.4-.12s1.65-.38 2.25-.98L20.6 19.6c-.28.28-.66.46-1.4.56-.75.1-1.75.1-3.19.1zM21.25 16c0 1.09-.04 1.86-.14 2.45-.1.57-.28.9-.52 1.14l1.06 1.06c.53-.52.8-1.17.93-1.93.14-.73.16-1.63.17-2.72zM3 15.75h18v-1.5H3zm19.75.25c0-.97-.79-1.75-1.75-1.75v1.5q.23.02.25.25zm-20 0c0-.14.11-.25.25-.25v-1.5c-.96 0-1.75.78-1.75 1.75z"
+            fill="currentColor"
+          />
+          <path
+            d="M20.5 15V6.14c0-.39 0-.58-.02-.72a1.84 1.84 0 0 0-1.54-1.68c-.13-.03-.4-.05-.94-.1-1-.1-2.18-.44-3.23-.83C13.27 2.27 12.53 2 12 2s-1.28.27-2.77.81C8.18 3.2 7 3.54 6 3.64c-.54.05-.81.07-.94.1q-1.36.3-1.54 1.68c-.02.14-.02.33-.02.72V15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M15 18h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 18h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m14.5 11-1 1m0-4-3 3m0-4-1 1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

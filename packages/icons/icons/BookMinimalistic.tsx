@@ -23,7 +23,38 @@ const IconBookMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M19.9 16h-12c-.93 0-1.4 0-1.78.1A3 3 0 0 0 4 18.22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M7 16V2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 22c-2.83 0-4.24 0-5.12-.88S4 18.82 4 16V8c0-2.83 0-4.24.88-5.12S7.18 2 10 2h4c2.83 0 4.24 0 5.12.88S20 5.18 20 8m-6 14c2.83 0 4.24 0 5.12-.88S20 18.82 20 16v-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

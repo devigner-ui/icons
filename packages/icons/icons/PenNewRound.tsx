@@ -23,7 +23,31 @@ const IconPenNewRound = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m17.56 10.33 2.98-2.98.65-.65a2.75 2.75 0 0 0-3.89-3.9l-.65.66m0 0s.08 1.37 1.3 2.59a4.4 4.4 0 0 0 2.6 1.3m-3.9-3.9L10.7 9.43c-.4.4-.6.6-.78.83q-.3.4-.53.85c-.12.25-.2.52-.39 1.06l-.58 1.74m0 0-.37 1.12a.74.74 0 0 0 .94.94l1.12-.37 1.74-.58c.54-.18.8-.27 1.06-.4q.46-.2.85-.52c.22-.17.43-.37.83-.78M10.1 15.6l-1.69-1.7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22.75 12a.75.75 0 0 0-1.5 0zM12 2.75a.75.75 0 0 0 0-1.5zM7.38 20.01a.75.75 0 1 0-.76 1.3zm-4.7-2.63a.75.75 0 1 0 1.3-.76zM21.26 12c0 5.1-4.14 9.25-9.25 9.25v1.5c5.94 0 10.75-4.81 10.75-10.75zM12 1.25A10.75 10.75 0 0 0 1.25 12h1.5c0-5.1 4.14-9.25 9.25-9.25zM6.62 21.31A10.7 10.7 0 0 0 12 22.75v-1.5a9 9 0 0 1-4.62-1.24zM1.25 12c0 1.96.52 3.8 1.44 5.38l1.3-.76A9 9 0 0 1 2.75 12z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

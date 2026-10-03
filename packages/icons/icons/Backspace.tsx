@@ -23,7 +23,33 @@ const IconBackspace = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12c0 3.77 0 5.66-1.2 6.83S17.65 20 13.78 20h-2.64c-2.23 0-3.34 0-4.27-.5s-1.52-1.42-2.7-3.26l-.68-1.06C2.49 13.63 2 12.86 2 12s.5-1.63 1.49-3.18l.68-1.06C5.35 5.92 5.94 5 6.87 4.5S8.91 4 11.14 4h2.64c3.87 0 5.81 0 7.02 1.17.67.65.96 1.53 1.1 2.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m15.5 9.5-5 5m0-5 5 5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

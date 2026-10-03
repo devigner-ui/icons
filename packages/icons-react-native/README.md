@@ -1,6 +1,6 @@
 # @devigner-ui/icons-react-native
 
-8,588 icons for React Native: 2,147 symbols, each in outline, twotone, bold and bulk. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn, so the two cannot drift.
+9,717 drawings for React Native: 2,147 symbols, each in outline, twotone, bold and bulk; Broken is available on 1,129 matching symbols. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn, so the two cannot drift.
 
 ```bash
 pnpm add @devigner-ui/icons-react-native react-native-svg
@@ -27,7 +27,7 @@ import IconAdd from "@devigner-ui/icons-react-native/icons/Add";
 
 | Prop | Type | Default | What it does |
 | --- | --- | --- | --- |
-| `variant` | `"outline" \| "twotone" \| "bold" \| "bulk"` | `"outline"` | Which of the four drawings to render. |
+| `variant` | `"outline" \| "twotone" \| "bold" \| "bulk" \| "broken"` | `"outline"` | Which drawing to render. Broken is available where supplied. |
 | `size` | `number \| string` | `24` | Width and height, in points. |
 | `color` | `string` | inherited | What `currentColor` resolves to. |
 | `strokeWidth` | `number \| string` | `1.5` | Stroke width, in the drawing's own units. Outline and twotone only; bold and bulk are filled forms with no strokes to weigh. |

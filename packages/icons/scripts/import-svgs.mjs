@@ -195,7 +195,7 @@ function selfSecondary(nodes, marked = new Set()) {
 const DUOTONE = `opacity={duotone ? "0.4" : "1"}`;
 
 /** One node as JSX. Membership of `marked` swaps its opacity for the expression. */
-function emitNode(node, marked, indent) {
+export function emitNode(node, marked, indent) {
   const secondary = marked.has(node);
   const pad = " ".repeat(indent);
   const props = [];
@@ -246,7 +246,7 @@ function emitNode(node, marked, indent) {
   return `${pad}<${node.tag}${attrs}${close}>\n${children}\n${pad}</${node.tag}>`;
 }
 
-function emitSvg(viewBox, nodes, marked) {
+export function emitSvg(viewBox, nodes, marked) {
   const body = nodes.map((node) => emitNode(node, marked, 10)).join("\n");
 
   return `        <svg

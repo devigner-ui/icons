@@ -22,7 +22,7 @@ if (!existsSync(bundle)) {
   process.exit(0);
 }
 
-const { IconActivity, IconShoppingCart } = await import(bundle.href);
+const { IconActivity, IconAddCircle, IconShoppingCart } = await import(bundle.href);
 
 let checked = 0;
 function check(what, fn) {
@@ -71,14 +71,14 @@ check("the caller can override the defaults", () => {
   assert.doesNotMatch(out, /aria-hidden="true"/);
 });
 
-check("all four variants are distinct, and strokeWidth weighs the linework", () => {
-  const drawn = ["Outline", "TwoTone", "Bold", "Bulk"].map((variant) =>
-    html(h(IconActivity, { variant })),
+check("all supplied variants are distinct, and strokeWidth weighs the linework", () => {
+  const drawn = ["Outline", "TwoTone", "Bold", "Bulk", "Broken"].map((variant) =>
+    html(h(IconAddCircle, { variant })),
   );
-  assert.equal(new Set(drawn).size, 4, "two variants render the same markup");
-  assert.equal(drawn[0], html(h(IconActivity, {})), "the default is not Outline");
+  assert.equal(new Set(drawn).size, 5, "two variants render the same markup");
+  assert.equal(drawn[0], html(h(IconAddCircle, {})), "the default is not Outline");
   assert.match(drawn[0], /stroke-width="1.5"/, "default stroke width lost");
-  assert.match(html(h(IconActivity, { strokeWidth: 2 })), /stroke-width="2"/);
+  assert.match(html(h(IconAddCircle, { strokeWidth: 2 })), /stroke-width="2"/);
 });
 
 /* The two attribute names the old API had taken over for itself. */

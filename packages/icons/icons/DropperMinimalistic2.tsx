@@ -23,7 +23,50 @@ const IconDropperMinimalistic2 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14 16h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 10.92c0 1.15-.9 2.08-2 2.08s-2-.93-2-2.08c0-.72.78-1.68 1.37-2.3a.86.86 0 0 1 1.26 0c.59.62 1.37 1.58 1.37 2.3Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 21v1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 4a2 2 0 1 0-4 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 8c0-1.89 0-2.83.59-3.41C6.17 4 7.1 4 9 4h6c1.89 0 2.83 0 3.41.59C19 5.17 19 6.1 19 8v7.88c0 .76-.32 1.49-.88 2a9.05 9.05 0 0 1-12.24 0 2.7 2.7 0 0 1-.88-2V12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

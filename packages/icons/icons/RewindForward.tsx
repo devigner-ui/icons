@@ -23,7 +23,33 @@ const IconRewindForward = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11 15.23 4.9 19.7c-1.3.9-2.9-.27-2.9-2.12V15m9-6.23L4.9 4.3C3.6 3.4 2 4.58 2 6.43V11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m17.37 7.7-3.7-2.43c-1.2-.79-2.67.24-2.67 1.85v9.76c0 1.61 1.47 2.64 2.66 1.85l7.42-4.88c1.23-.8 1.23-2.9 0-3.7l-.93-.61"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

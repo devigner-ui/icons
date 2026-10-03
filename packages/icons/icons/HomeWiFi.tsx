@@ -22,7 +22,33 @@ const IconHomeWiFi = forwardRef<SVGSVGElement, IconProps>(function IconHomeWiFi(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 11.68a8.05 8.05 0 0 1 12 0M8 13.84a5.37 5.37 0 0 1 8 0M10 16c1.1-1.2 2.9-1.2 4 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 12.2v1.53c0 3.9 0 5.85-1.17 7.06S17.77 22 14 22h-4c-3.77 0-5.66 0-6.83-1.21S2 17.63 2 13.73V12.2c0-2.28 0-3.43.52-4.38S3.99 6.3 5.88 5.11l2-1.24C9.88 2.62 10.9 2 12 2s2.11.62 4.12 1.87l2 1.24c1.9 1.18 2.84 1.76 3.36 2.71"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,33 @@ const IconHighQuality = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 8v7.62M10.81 8v7.62M6 12h4.81M19 16l-1.93-1.52m-.96 1.14c-.45 0-.67 0-.86-.03-.76-.12-1.36-.6-1.5-1.2-.05-.14-.05-.32-.05-.68v-3.8c0-.36 0-.54.04-.68.15-.6.75-1.08 1.51-1.2.19-.03.41-.03.86-.03s.67 0 .86.03c.76.12 1.36.6 1.51 1.2.04.14.04.32.04.67v3.81c0 .36 0 .54-.04.68-.15.6-.75 1.08-1.51 1.2-.19.03-.41.03-.86.03Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 12c0 4.71 0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46c.97.98 1.3 2.35 1.4 4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

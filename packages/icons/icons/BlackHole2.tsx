@@ -23,7 +23,56 @@ const IconBlackHole2 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M10.14 10.36C13.7 6.82 21.91 15.61 16.52 21"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray="2 2"
+          />
+          <path
+            d="M13.86 13.64C10.3 17.18 2.09 8.39 7.48 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray="2 2"
+          />
+          <path
+            d="M10.36 13.86C6.82 10.3 15.61 2.09 21 7.48"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray="2 2"
+          />
+          <path
+            d="M13.64 10.14C17.18 13.7 8.39 21.91 3 16.52"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray="2 2"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

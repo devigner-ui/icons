@@ -23,7 +23,34 @@ const IconThermometer = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m17.1 10 1.3 1.3m-4.5 1.9 1.3 1.3m-4.51 1.9 1.3 1.3M13.3 5l.82-.82a4.03 4.03 0 1 1 5.7 5.7l-8.94 8.94c-.65.65-1.56.97-2.47.87l-.8-.1c-.6-.06-1.22.15-1.65.58l-.38.39a1.51 1.51 0 1 1-2.14-2.14l.39-.38c.43-.43.64-1.04.57-1.65l-.09-.8c-.1-.91.22-1.82.87-2.47L10.3 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m9 15 6.5-6.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

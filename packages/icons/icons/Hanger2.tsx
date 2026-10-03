@@ -22,7 +22,33 @@ const IconHanger2 = forwardRef<SVGSVGElement, IconProps>(function IconHanger2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.54 3.9c0-1.05.95-1.9 2.12-1.9s2.12.85 2.12 1.9q-.01.77-.49 1.3c-.6.65-1.49 1.3-1.49 2.15v.28m0 0c.73 0 1.47.2 2.08.61l1.06.71M11.8 7.63c-.72 0-1.45.22-2.05.65l-7.1 4.99C1.39 14.17 2.1 16 3.7 16H6m12 0h2.3c1.63 0 2.32-1.87 1.02-2.75L19 11.7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 22h-4c-1.89 0-2.83 0-3.41-.59C6 20.83 6 19.9 6 18s0-2.83.59-3.41C7.17 14 8.1 14 10 14h4c1.89 0 2.83 0 3.41.59.59.58.59 1.52.59 3.41s0 2.83-.59 3.41"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

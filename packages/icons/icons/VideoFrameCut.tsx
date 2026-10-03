@@ -23,7 +23,59 @@ const IconVideoFrameCut = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17 3.5v17"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 2v20"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray="3 3"
+          />
+          <path
+            d="M7 3.5v17"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 8.5h4m14 0h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 15.5h4m14 0h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14.5 3c2.8.02 4.32.17 5.33 1.17C20.89 5.23 20.99 6.9 21 10m-6.5 11c2.8-.02 4.32-.17 5.33-1.17C20.89 18.76 20.99 17.1 21 14M9.5 21c-2.8-.02-4.32-.17-5.33-1.17C3 18.66 3 16.77 3 13v-2c0-3.77 0-5.66 1.17-6.83 1-1 2.54-1.15 5.33-1.17"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

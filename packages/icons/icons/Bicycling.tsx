@@ -23,7 +23,48 @@ const IconBicycling = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="15"
+            cy="4"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx="6"
+            cy="18"
+            r="3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx="18"
+            cy="18"
+            r="3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M18.5 10h-2.03c-1.22 0-1.83 0-2.38-.23-.55-.22-.98-.65-1.85-1.51l-.57-.58c-.79-.78-1.18-1.17-1.64-1.13-.47.05-.78.5-1.42 1.41M12 18l.06-.36c.23-1.47.35-2.2.02-2.8s-1-.9-2.37-1.5l-1.48-.64c-1.03-.45-1.55-.68-1.68-1.13A1 1 0 0 1 6.6 11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

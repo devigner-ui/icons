@@ -23,7 +23,45 @@ const IconGalleryWide = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 13.44c0 3.77 0 5.65-1.17 6.83s-3.06 1.17-6.83 1.17h-4c-3.77 0-5.66 0-6.83-1.17C2 19.09 2 17.2 2 13.44S2 7.78 3.17 6.6 6.23 5.44 10 5.44h4c3.77 0 5.66 0 6.83 1.17.66.66.95 1.56 1.07 2.89"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3.99 6c.11-.93.34-1.57.83-2.06C5.77 3 7.28 3 10.31 3h3.2c3.04 0 4.55 0 5.49.94.49.49.72 1.13.84 2.06"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx="17.5"
+            cy="9.9375"
+            r="1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m2 13.94 1.75-1.53a2.3 2.3 0 0 1 3.14.1l4.3 4.29a2 2 0 0 0 2.56.22l.3-.2a3 3 0 0 1 3.73.22l3.22 2.9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

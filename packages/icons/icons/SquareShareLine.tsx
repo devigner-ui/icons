@@ -23,7 +23,34 @@ const IconSquareShareLine = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 7h-8c-1.82 0-2.91.9-3.32 1.3l-.19.2-.19.18C9.9 9.08 9 10.18 9 12v3m8-3 5-5-5-5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M3.46 20.54C4.93 22 7.3 22 12 22c4.72 0 7.08 0 8.54-1.46C21.78 19.29 21.97 17.4 22 14M3.46 20.54C2 19.07 2 16.7 2 12m1.46 8.54C4.93 22 7.3 22 12 22s7.07 0 8.54-1.46c1.24-1.25 1.43-3.13 1.45-6.54M3.46 20.54C2 19.07 2 16.7 2 12m1.46-8.54C4.71 2.22 6.6 2.03 10 2M2.06 8c.1-2.2.43-3.56 1.4-4.54C4.71 2.22 6.6 2.03 10 2.01"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

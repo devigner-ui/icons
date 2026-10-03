@@ -23,7 +23,55 @@ const IconJarOfPills2 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4 3.5c0-.47 0-.7.08-.88a1 1 0 0 1 .54-.54C4.8 2 5.03 2 5.5 2h9c.47 0 .7 0 .88.08q.38.16.54.54c.08.18.08.41.08.88s0 .7-.08.88a1 1 0 0 1-.54.54c-.18.08-.41.08-.88.08h-9c-.47 0-.7 0-.88-.08a1 1 0 0 1-.54-.54C4 4.2 4 3.97 4 3.5Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M2.5 18h8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10.5 22H6.96c-.57 0-.86 0-1.13-.04a4 4 0 0 1-2.15-1c-.2-.19-.39-.4-.75-.85A4 4 0 0 1 2 17.55V17m16-4.5v-1.6a4 4 0 0 0-1.48-3.1l-2.36-1.9a4 4 0 0 0-1.14-.79C12.69 5 12.34 5 11.64 5H8.4c-.7 0-1.04 0-1.36.11s-.6.33-1.14.77L3.5 7.8A4 4 0 0 0 2 10.92V13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 12v4m-2-2h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14.77 16.77s1 .21 2.12 1.34a5 5 0 0 1 1.34 2.12m1.03-4.5c.96.96.99 2.48.07 3.4l-2.2 2.2a2.4 2.4 0 0 1-3.4-.07 2.4 2.4 0 0 1-.06-3.38l2.2-2.21a2.4 2.4 0 0 1 3.4.07Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M2.5 10h3.75m11.25 0H10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

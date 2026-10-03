@@ -23,7 +23,50 @@ const IconClapperboardOpenPlay = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4 11c-.48-1.8-.72-2.7-.52-3.49a3 3 0 0 1 .78-1.34c.57-.57 1.47-.81 3.28-1.3l7-1.87a8 8 0 0 1 1.3-.29 3 3 0 0 1 2.9 1.67c.12.26.21.6.4 1.27.05.23.08.34.09.44a1 1 0 0 1-.56.96q-.1.05-.42.13z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m14.7 2.94-.64 5.35"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m8.42 4.62-.64 5.35"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 16.5c0-.42-.4-.7-1.2-1.28-.8-.57-1.2-.86-1.5-.65s-.3.78-.3 1.93 0 1.72.3 1.93.7-.08 1.5-.65 1.2-.86 1.2-1.28Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 16c0 2.83 0 4.24-.88 5.12S16.82 22 14 22h-4c-2.83 0-4.24 0-5.12-.88S4 18.82 4 16v-5h12c1.89 0 2.83 0 3.41.59.34.33.48.78.54 1.47"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

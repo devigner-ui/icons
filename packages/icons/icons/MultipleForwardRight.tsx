@@ -23,7 +23,34 @@ const IconMultipleForwardRight = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 10.13a8.6 8.6 0 0 1 5-1.56V6.23c0-.96 0-1.44.3-1.57.29-.14.65.18 1.36.82L16.64 9c1.56 1.4 2.35 2.1 2.35 2.99s-.79 1.6-2.35 2.99l-3.98 3.53c-.71.64-1.07.95-1.37.82-.29-.13-.29-.61-.29-1.57v-2.34c-3.6 0-7.5 1.71-9 4.57 0-2.43.38-4.38 1-5.93"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m15.54 4.5 5.21 4.84a3.9 3.9 0 0 1-.12 5.83l-5.1 4.33"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

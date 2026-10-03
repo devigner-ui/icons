@@ -23,7 +23,33 @@ const IconWaterdrop = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3.45 16A9 9 0 0 1 3 13.2v-.27c0-4.61 2.73-8.77 6.9-10.5a5.4 5.4 0 0 1 4.2 0 11.3 11.3 0 0 1 6.9 10.5v.26A8.7 8.7 0 0 1 12.39 22h-.78c-2.14 0-4.1-.8-5.61-2.13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7.61 10.72c.64-2 2.02-3.63 3.78-4.44"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

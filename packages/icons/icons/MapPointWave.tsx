@@ -23,7 +23,38 @@ const IconMapPointWave = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5.88 12.57A11 11 0 0 1 5 8.51C5 4.91 8.13 2 12 2s7 2.92 7 6.51c0 3.57-2.23 7.74-5.72 9.23-.81.35-1.75.35-2.56 0A8.5 8.5 0 0 1 7.8 15.6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M20.96 15.5q1.02.91 1.04 2c0 .93-.62 1.79-1.68 2.5M3.04 15.5q-1.02.91-1.04 2C2 19.99 6.48 22 12 22c1.65 0 3.21-.18 4.59-.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

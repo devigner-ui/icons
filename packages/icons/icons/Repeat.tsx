@@ -22,7 +22,29 @@ const IconRepeat = forwardRef<SVGSVGElement, IconProps>(function IconRepeat(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.5 19.75a.75.75 0 0 0 0-1.5zM11 5v.75a.75.75 0 0 0 .53-1.28zM9.53 2.47a.75.75 0 0 0-1.06 1.06zM1.25 12a.75.75 0 0 0 1.5 0zm2.62 3.57a.75.75 0 0 0-1.23.86zm5.63 2.68H9v1.5h.5zM9 5.75h2v-1.5H9zm2.53-1.28-2-2-1.06 1.06 2 2zM2.75 12c0-3.45 2.8-6.25 6.25-6.25v-1.5A7.75 7.75 0 0 0 1.25 12zm-.11 4.43c1.4 2 3.73 3.32 6.36 3.32v-1.5c-2.12 0-4-1.06-5.13-2.68z"
+            fill="currentColor"
+          />
+          <path
+            d="M13 19v-.75a.75.75 0 0 0-.53 1.28zm1.47 2.53a.75.75 0 1 0 1.06-1.06zm.03-17.28a.75.75 0 0 0 0 1.5zM22.75 12a.75.75 0 0 0-1.5 0zm-2.62-3.57a.75.75 0 1 0 1.23-.86zM15 18.25h-2v1.5h2zm-2.53 1.28 2 2 1.06-1.06-2-2zM14.5 5.75h.5v-1.5h-.5zM21.25 12c0 3.45-2.8 6.25-6.25 6.25v1.5A7.75 7.75 0 0 0 22.75 12zm.11-4.43A7.7 7.7 0 0 0 15 4.25v1.5c2.12 0 4 1.06 5.13 2.68z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

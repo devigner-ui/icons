@@ -23,7 +23,44 @@ const IconSmartSpeaker = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3 14.05c.65.57 2.49 2.03 7 2.38M21 14c-.6.55-2.36 2.08-6.99 2.43"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15.5 16c-.58-1.75-1.65-2.5-3.5-2.5s-2.92.75-3.5 2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M8 4.41c-.32.28-.5.68-.5 1 0 1.16 1.74 2 4.5 2s4.5-.84 4.5-2q-.01-.49-.5-.91"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M21 12q0 2.62-.29 5.22l-.02.15a4.84 4.84 0 0 1-4.21 4.26l-.9.12-1 .12a25 25 0 0 1-6.15-.12l-1.02-.13a4.7 4.7 0 0 1-4.1-4.14q-.62-5.34 0-10.68l.01-.14a4.8 4.8 0 0 1 3.92-4.2l.21-.04c3-.56 6.1-.56 9.1 0l.32.06a4.7 4.7 0 0 1 3.8 4.07L20.84 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

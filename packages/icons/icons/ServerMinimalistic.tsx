@@ -23,7 +23,56 @@ const IconServerMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14 21H5c-.93 0-1.4 0-1.77-.15a2 2 0 0 1-1.08-1.08C2 19.4 2 18.93 2 18s0-1.4.15-1.77a2 2 0 0 1 1.08-1.08C3.6 15 4.07 15 5 15h14c.93 0 1.4 0 1.77.15a2 2 0 0 1 1.08 1.08c.15.37.15.84.15 1.77s0 1.4-.15 1.77a2 2 0 0 1-1.08 1.08c-.37.15-.84.15-1.77.15h-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 12c0-.93 0-1.4.15-1.77a2 2 0 0 1 1.08-1.08C3.6 9 4.07 9 5 9h14c.93 0 1.4 0 1.77.15a2 2 0 0 1 1.08 1.08c.15.37.15.84.15 1.77s0 1.4-.15 1.77a2 2 0 0 1-1.08 1.08c-.37.15-.84.15-1.77.15H5c-.93 0-1.4 0-1.77-.15a2 2 0 0 1-1.08-1.08C2 13.4 2 12.93 2 12Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M10 3h9c.93 0 1.4 0 1.77.15a2 2 0 0 1 1.08 1.08C22 4.6 22 5.07 22 6s0 1.4-.15 1.77a2 2 0 0 1-1.08 1.08C20.4 9 19.93 9 19 9H5c-.93 0-1.4 0-1.77-.15a2 2 0 0 1-1.08-1.08C2 7.4 2 6.93 2 6s0-1.4.15-1.77a2 2 0 0 1 1.08-1.08C3.6 3 4.07 3 5 3h1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="5"
+            cy="12"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="5"
+            cy="6"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="5"
+            cy="18"
+            r="1"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -23,7 +23,37 @@ const IconArmchair2 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m17.26 13.6 1-2.47c.28-.68 1-1.13 1.81-1.13 1.32 0 2.25 1.15 1.83 2.26l-1.12 3c-.2.53-.3.79-.42 1.01-.53.9-1.5 1.53-2.62 1.7-.28.03-.59.03-1.2.03H6.76a3.6 3.6 0 0 1-3.37-2.24h0l-1.3-3.5C1.68 11.15 2.61 10 3.93 10c.8 0 1.53.45 1.8 1.13l1.1 2.71h0c.1.25.16.37.23.47q.26.37.74.46c.13.03.27.03.57.03h6.98c.57 0 .85 0 1.09-.1q.2-.08.35-.22c.18-.16.28-.4.47-.88Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m17.3 4.67-.52.54v0zm-10.6 0-.51-.54zM12 3.25a.75.75 0 0 0 0 1.5zm-3.88 1.6a.75.75 0 0 0-.24-1.48zM6.75 12V8.57h-1.5V12zm10.5-3.43V12h1.5V8.57zM13.2 4.75c1.15 0 1.94 0 2.54.08.58.07.85.2 1.04.38l1.03-1.08c-.51-.5-1.15-.7-1.88-.79-.71-.1-1.62-.09-2.73-.09zm5.55 3.82c0-1.05 0-1.92-.1-2.61a3 3 0 0 0-.84-1.83L16.78 5.2c.18.18.31.43.39.96.08.56.08 1.3.08 2.4zm-12 0c0-1.1 0-1.84.08-2.4.08-.53.2-.78.39-.96L6.19 4.13c-.52.5-.74 1.12-.84 1.83-.1.69-.1 1.56-.1 2.61zM12 4.75h1.2v-1.5H12zM7.88 3.37c-.65.1-1.22.3-1.7.76L7.23 5.2c.17-.16.42-.29.9-.36z"
+            fill="currentColor"
+          />
+          <path
+            d="M18 20v-2M6 20v-1.33"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

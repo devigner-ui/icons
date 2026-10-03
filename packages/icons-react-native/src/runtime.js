@@ -11,7 +11,7 @@ import Svg, {
 
 /*
  * The one component behind all 1,963 exports. Each generated module hands this
- * its own four drawings as trees of shapes and gets a component back, so the
+ * its own drawings as trees of shapes and gets a component back, so the
  * per-icon modules carry artwork and nothing else.
  *
  * The web packages pass the drawing to the platform as markup and let the

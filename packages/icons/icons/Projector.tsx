@@ -23,7 +23,55 @@ const IconProjector = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M18 6.02c1.55.04 2.48.22 3.12.86.5.49.7 1.14.8 2.12M10 6H8c-2.83 0-4.24 0-5.12.88S2 9.18 2 12s0 4.24.88 5.12S5.18 18 8 18h2m4 0h2c2.83 0 4.24 0 5.12-.88.77-.77.87-1.95.88-4.12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18.33 20.34a.75.75 0 1 0 1.34-.68zm-1-2 1 2 1.34-.68-1-2z"
+            fill="currentColor"
+          />
+          <path
+            d="M5.67 20.34a.75.75 0 1 1-1.34-.68zm1-2-1 2-1.34-.68 1-2z"
+            fill="currentColor"
+          />
+          <circle
+            cx="14"
+            cy="9"
+            r="5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 9a2 2 0 1 0 2-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5.5 9.5V11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

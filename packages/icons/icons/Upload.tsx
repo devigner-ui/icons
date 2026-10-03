@@ -22,7 +22,34 @@ const IconUpload = forwardRef<SVGSVGElement, IconProps>(function IconUpload(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 15V2M9 5.5 12 2l3 3.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8 22h8c2.83 0 4.24 0 5.12-.88S22 18.82 22 16v-1c0-2.83 0-4.24-.88-5.12C20.35 9.1 19.17 9 17 9M7 9c-2.18.01-3.35.11-4.12.88C2 10.76 2 12.18 2 15v1c0 2.83 0 4.24.88 5.12q.44.44 1.12.63"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

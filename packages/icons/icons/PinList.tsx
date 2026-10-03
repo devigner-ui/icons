@@ -22,7 +22,51 @@ const IconPinList = forwardRef<SVGSVGElement, IconProps>(function IconPinList(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13.63 8.22c1.53 1.53 2.3 2.3 2.3 3.13a2 2 0 0 1-.17.79c-.32.76-1.33 1.16-3.34 1.96l-.15.06c-.57.22-.85.34-1.08.52a2 2 0 0 0-.44.5 4 4 0 0 0-.41 1.12c-.26.92-.4 1.38-.67 1.58a1 1 0 0 1-.71.19c-.35-.05-.68-.38-1.35-1.06l-3.13-3.13c-.68-.67-1.01-1-1.06-1.35a1 1 0 0 1 .19-.71c.2-.28.66-.4 1.58-.67.59-.17.88-.25 1.13-.4a2 2 0 0 0 .49-.45c.18-.23.3-.52.52-1.09l.06-.14c.8-2.01 1.2-3.02 1.96-3.34a2 2 0 0 1 .8-.17q.51 0 1.1.44"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m3.35 18.14 2.7-2.7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 8h-5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 12.5h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 17h-1m-8 0h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,39 @@ const IconMinimizeSquare3 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m17 7-5 5m0-3.75V12h3.75"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2 18c0-1.89 0-2.83.59-3.41C3.17 14 4.1 14 6 14s2.83 0 3.41.59c.59.58.59 1.52.59 3.41s0 2.83-.59 3.41C8.83 22 7.9 22 6 22s-2.83 0-3.41-.59C2 20.83 2 19.9 2 18Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 2c4.71 0 7.07 0 8.54 1.46C22 4.93 22 7.3 22 12s0 7.07-1.46 8.54C19.18 21.89 17.06 21.99 13 22M2 11c0-4.06.1-6.18 1.46-7.54.98-.97 2.35-1.3 4.54-1.4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

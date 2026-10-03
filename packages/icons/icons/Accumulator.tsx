@@ -23,7 +23,51 @@ const IconAccumulator = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10 20H8c-2.83 0-4.24 0-5.12-.88S2 16.82 2 14v-2.02c0-1.85 0-2.77.4-3.46a3 3 0 0 1 1.12-1.13C4.2 7 5.12 7 6.98 7h.52a1 1 0 0 0 .72-.45l.11-.22.23-.42a2 2 0 0 1 1.45-.9l.48-.01h3.02l.48.01a2 2 0 0 1 1.45.9l.23.42.11.22a1 1 0 0 0 .72.44l.25.01h.27c1.85 0 2.77 0 3.46.4a3 3 0 0 1 1.13 1.12c.39.69.39 1.6.39 3.46V14c0 2.83 0 4.24-.88 5.12S18.82 20 16 20h-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 7V6c0-.94 0-1.41-.3-1.7C6.42 4 5.95 4 5 4M3 7.5V6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M21 6v2m-4-1V6c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 13.5H6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 13.5h-1.5m0 0H15m1.5 0V12m0 1.5V15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

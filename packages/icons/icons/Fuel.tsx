@@ -22,7 +22,62 @@ const IconFuel = forwardRef<SVGSVGElement, IconProps>(function IconFuel(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 10.23v5.65c0 2.89 0 4.33-.88 5.22-.88.9-2.3.9-5.12.9H8c-2.83 0-4.24 0-5.12-.9S2 18.77 2 15.88v-2.8c0-2.09 0-3.14.55-3.93.56-.8 1.53-1.14 3.47-1.84l8-2.85c3.63-1.3 5.45-1.95 6.72-1.03.68.5 1 1.3 1.14 2.57"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 14c0-1.41 0-2.12.44-2.56S10.59 11 12 11s2.12 0 2.56.44S15 12.59 15 14s0 2.12-.44 2.56S13.41 17 12 17s-2.12 0-2.56-.44S9 15.41 9 14Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m15 11 1-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m9 11-1-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m15 17 1 1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m9 17-1 1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 7.06c0-1.3 0-1.96.34-2.4q.14-.18.3-.32C6.08 4 6.72 4 8 4h.82c.5 0 .76 0 .97.06.56.15 1 .6 1.15 1.18"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

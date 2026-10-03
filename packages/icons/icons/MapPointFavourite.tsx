@@ -23,7 +23,31 @@ const IconMapPointFavourite = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5 15.22c-.65-1.66-1-3.42-1-5.08C4 5.64 7.58 2 12 2s8 3.65 8 8.14c0 4.47-2.55 9.67-6.54 11.53-.93.44-2 .44-2.92 0A10 10 0 0 1 7.19 19"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m11.04 11.52-.45.6h0zm.96-3.8-.53.53c.3.29.77.29 1.06 0zm1.41 4.4a.75.75 0 0 0-.9-1.2zM12 12v-.75h0zm1.9-2.44a.75.75 0 1 0 1.23.88zm-2.4 1.36a8 8 0 0 1-1.23-1.13q-.54-.67-.52-1.03h-1.5c0 .78.43 1.47.87 2a9 9 0 0 0 1.47 1.36zM9.75 8.76c0-.62.28-.89.5-.97.24-.09.7-.07 1.22.46l1.06-1.07c-.82-.81-1.87-1.14-2.8-.8S8.26 7.65 8.26 8.76zm6 0c0-1.11-.55-2.04-1.49-2.38-.92-.34-1.97-.01-2.79.8l1.06 1.07c.53-.53.98-.55 1.22-.46.22.08.5.35.5.97zm-5.16 3.36c.36.28.78.63 1.41.63v-1.5l-.08-.03c-.09-.04-.2-.12-.42-.3zm1.91-1.2-.42.3q-.06.04-.08.03v1.5c.63 0 1.05-.35 1.41-.63zm2.63-.48c.33-.46.62-1.04.62-1.68h-1.5q.01.29-.34.8z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

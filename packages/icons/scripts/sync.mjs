@@ -57,9 +57,9 @@ import type { IconProps, IconVariant } from '../icons/types';
 
 export type IconName = ${iconNames.map(n => `'${n}'`).join(' | ')};
 
-export type IconStyle = 'outline' | 'twotone' | 'bold' | 'bulk';
+export type IconStyle = 'outline' | 'twotone' | 'bold' | 'bulk' | 'broken';
 
-/* The same four drawings the \`variant\` prop names. IconStyle is the lowercase
+/* The lowercase spellings the \`variant\` prop names. IconStyle is the lowercase
    spelling the data files and URLs use; IconVariant is what the prop takes. */
 export type { IconVariant };
 

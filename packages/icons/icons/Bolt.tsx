@@ -22,7 +22,27 @@ const IconBolt = forwardRef<SVGSVGElement, IconProps>(function IconBolt(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15.27 18.23c-1.98 2.68-2.97 4.02-3.9 3.73s-.92-1.92-.92-5.2v-.32c0-1.18 0-1.77-.38-2.15l-.02-.01c-.38-.37-1-.37-2.23-.37-2.22 0-3.33 0-3.7-.67l-.02-.04c-.36-.68.28-1.55 1.57-3.29l3.06-4.14c1.98-2.68 2.97-4.02 3.9-3.73s.92 1.92.92 5.2v.32c0 1.18 0 1.77.38 2.15l.02.01c.38.37 1 .37 2.23.37 2.22 0 3.33 0 3.7.67l.02.04c.36.68-.28 1.55-1.57 3.29"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

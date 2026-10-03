@@ -22,7 +22,43 @@ const IconCartPlus = forwardRef<SVGSVGElement, IconProps>(function IconCartPlus(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7.5 18a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M16.5 18a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M13 13v-2m0 0V9m0 2h2m-2 0h-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m2 3 .26.1c1.3.45 1.95.68 2.33 1.22.37.55.37 1.27.37 2.72v2.72c0 2.94.06 3.91.93 4.83.86.91 2.26.91 5.05.91H12m4.24 0c1.56 0 2.34 0 2.9-.45.55-.45.7-1.21 1.02-2.74l.5-2.43c.34-1.74.52-2.6.07-3.18-.44-.58-1.96-.58-3.64-.58h-6.07m-6.06 0H7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

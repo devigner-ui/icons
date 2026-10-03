@@ -87,19 +87,26 @@ check("a value-less flag does not swallow the next one", () => {
 /* Every style of every icon is free. Bulk was sold on 1,682 of them, so this
    is the assertion that would have caught the old gate coming back by
    accident, and the one that has to change first if anything is sold again. */
-check("every icon is free in all four styles", () => {
+check("every icon has its available free styles", () => {
   const metadata = JSON.parse(
     readFileSync(new URL("../src/metadata.json", import.meta.url), "utf8"),
   );
+  const broken = metadata.icons.filter((icon) => icon.freeStyles.includes("broken"));
   for (const icon of metadata.icons) {
     assert.equal(icon.proStyles.length, 0, `${icon.name} has a Pro style`);
-    assert.equal(icon.freeStyles.length, 4, `${icon.name} is short a style`);
+    assert.equal(icon.freeStyles.length, icon.styles.broken ? 5 : 4, `${icon.name} has the wrong style count`);
   }
 
   const bulk = run("list", "--style", "bulk", "--format", "names")
     .stdout.trim()
     .split("\n");
   assert.equal(bulk.length, metadata.icons.length);
+
+  const brokenNames = run("list", "--style", "broken", "--format", "names")
+    .stdout.trim()
+    .split("\n")
+    .filter(Boolean);
+  assert.equal(brokenNames.length, broken.length);
 });
 
 check("keyword search ranks the obvious answer first", () => {
@@ -289,6 +296,27 @@ check('the build keeps its "use client" directive', () => {
   }
 });
 
+check("the root entries stay modular", () => {
+  const esm = new URL("../dist/index.js", import.meta.url);
+  if (!existsSync(esm)) {
+    console.log("--  dist not built, skipping the root size check");
+    return;
+  }
+  const root = readFileSync(esm, "utf8");
+  const commonjs = readFileSync(new URL("../dist/index.cjs", import.meta.url), "utf8");
+  const expected = JSON.parse(
+    readFileSync(new URL("../src/metadata.json", import.meta.url), "utf8"),
+  ).icons.length;
+  assert.equal((root.match(/^export \{ Icon/gm) ?? []).length, expected);
+  assert.equal((commonjs.match(/^Object\.defineProperty\(exports, "Icon/gm) ?? []).length, expected);
+  assert.match(root, /export \{ IconShoppingCart \} from '\.\/icons\/ShoppingCart\.js'/);
+  assert.doesNotMatch(root, /forwardRef\(/, "ESM root bundled the artwork again");
+  assert.ok(Buffer.byteLength(root) < 1_000_000, "ESM root grew beyond 1 MB");
+  assert.match(commonjs, /get: \(\) => require\("\.\/icons\/ShoppingCart\.cjs"\)/);
+  assert.doesNotMatch(commonjs, /forwardRef\(/, "CommonJS root bundled the artwork again");
+  assert.ok(Buffer.byteLength(commonjs) < 1_000_000, "CommonJS root grew beyond 1 MB");
+});
+
 /*
  * `import { IconShoppingCart } from "@devigner-ui/icons/ShoppingCart"`.
  *
@@ -344,11 +372,12 @@ check("icons are hidden from screen readers unless labelled", () => {
   const missing = [];
   for (const file of sources) {
     const src = readFileSync(new URL(`../icons/${file}`, import.meta.url), "utf8");
+    const expected = src.includes('variant === "Broken"') ? 4 : 3;
     const hidden = (src.match(/\{\.\.\.a11y\}/g) ?? []).length;
     const focusable = (src.match(/focusable="false"/g) ?? []).length;
     const spread = (src.match(/\{\.\.\.rest\}/g) ?? []).length;
     const ref = (src.match(/ref=\{ref\}/g) ?? []).length;
-    if (hidden !== 3 || focusable !== 3 || spread !== 3 || ref !== 3) {
+    if (hidden !== expected || focusable !== expected || spread !== expected || ref !== expected) {
       missing.push(file);
     }
   }
@@ -356,7 +385,7 @@ check("icons are hidden from screen readers unless labelled", () => {
   assert.equal(
     missing.length,
     0,
-    `${missing.length} icons missing a11y/ref/rest on all three drawings: ` +
+    `${missing.length} icons missing a11y/ref/rest on one of their drawings: ` +
       missing.slice(0, 5).join(", "),
   );
 

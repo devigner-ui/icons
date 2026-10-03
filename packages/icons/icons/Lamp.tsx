@@ -22,7 +22,45 @@ const IconLamp = forwardRef<SVGSVGElement, IconProps>(function IconLamp(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 22h6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 22v-7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 2c2.42 0 3.63 0 4.58.57a4 4 0 0 1 .76.58c.79.78 1.09 1.95 1.7 4.3l.08.32c.83 3.19 1.24 4.78.5 5.9l-.25.32C18.47 15 16.82 15 13.53 15h-3.06c-3.3 0-4.94 0-5.84-1l-.24-.33c-.75-1.12-.34-2.71.49-5.9l.08-.33c.61-2.34.91-3.51 1.7-4.29A4 4 0 0 1 8 2.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17.5 15v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

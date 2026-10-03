@@ -23,7 +23,54 @@ const IconEmojiFunnySquare = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8.91 15.93c1.26.32 2.69.32 4.13-.07a8 8 0 0 0 3.6-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <ellipse
+            cx="14.5094"
+            cy="9.77405"
+            rx="1"
+            ry="1.5"
+            transform="rotate(-15 14.5094 9.77405)"
+            fill="currentColor"
+          />
+          <ellipse
+            cx="8.71402"
+            cy="11.3278"
+            rx="1"
+            ry="1.5"
+            transform="rotate(-15 8.71402 11.3278)"
+            fill="currentColor"
+          />
+          <path
+            d="M20.8 9.64c1.1 4.15 1.66 6.22.72 7.86-.94 1.63-3.02 2.19-7.16 3.3s-6.22 1.66-7.86.72c-1.63-.94-2.19-3.02-3.3-7.16S1.54 8.14 2.48 6.5c.94-1.63 3.02-2.19 7.16-3.3s6.22-1.66 7.86-.72c1 .58 1.6 1.6 2.17 3.26"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m13 16 .48.97a1.5 1.5 0 1 0 2.7-1.32l-.47-.93"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

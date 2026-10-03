@@ -23,7 +23,38 @@ const IconStopwatchPlay = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10 2h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13.89 10.93c1.07.88 1.61 1.32 1.61 2.07s-.54 1.19-1.61 2.07a15 15 0 0 1-1.65 1.16c-1.07.66-1.6.98-2.09.62s-.52-1.12-.61-2.63a22 22 0 0 1 0-2.44c.09-1.51.13-2.27.61-2.63s1.02-.04 2.1.62a15 15 0 0 1 1.64 1.16Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M7.5 5.2a9 9 0 1 1-3.3 3.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

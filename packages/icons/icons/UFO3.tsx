@@ -22,7 +22,57 @@ const IconUFO3 = forwardRef<SVGSVGElement, IconProps>(function IconUFO3(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m3.64 20.36 4.12-4.12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m10 22 2.7-2.22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m2 14 2.22-2.7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7.86 4c1.15.09 2.57.64 4.09 1.56M5.27 6.58c.17 2.13 1.9 5.23 4.7 8.02 3.91 3.91 8.4 5.76 10.03 4.13.83-.83.76-2.39-.01-4.23q-.38-.9-.97-1.87m-4.8-2.27c-2.26-2.25-2.73-3.48-2.82-3.97-.03-.18.06-.34.18-.46a4.73 4.73 0 0 1 6.69 0l.38.38a4.73 4.73 0 0 1 0 6.69q-.19.2-.46.18c-.33-.06-1-.3-2.1-1.15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13.03 13.27a1 1 0 1 1-1.42-1.41 1 1 0 0 1 1.42 1.41Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10.2 9.03A1 1 0 1 1 8.79 7.6a1 1 0 0 1 1.41 1.42Z"
+            fill="currentColor"
+          />
+          <path
+            d="M17.27 16.1a1 1 0 1 1-1.41-1.41 1 1 0 0 1 1.41 1.41Z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

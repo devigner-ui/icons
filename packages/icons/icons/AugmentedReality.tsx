@@ -23,7 +23,31 @@ const IconAugmentedReality = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14 8v-.75a.75.75 0 0 0-.75.75zm-.75 8a.75.75 0 0 0 1.5 0zM8.5 8l.72-.22a.75.75 0 0 0-1.44 0zm-1.62 5.2-.72-.22zm-1.6 2.58a.75.75 0 0 0 1.44.44zm5 .44a.75.75 0 0 0 1.44-.44zM14 12h-.75v.75H14zm3.36 4.4a.75.75 0 1 0 1.28-.8zM7.78 7.78l-1.62 5.2 1.43.44 1.63-5.2zm-1.62 5.2-.88 2.8 1.44.44.87-2.8zm1.62-4.76 1.63 5.2 1.43-.44-1.62-5.2zm1.63 5.2.87 2.8 1.44-.44-.88-2.8zm-2.53.53h3.25v-1.5H6.87zM14 8.75h2v-1.5h-2zm.75 3.25V8h-1.5v4zm2.5-2c0 .69-.56 1.25-1.25 1.25v1.5A2.75 2.75 0 0 0 18.75 10zM16 8.75c.69 0 1.25.56 1.25 1.25h1.5A2.75 2.75 0 0 0 16 7.25zM13.25 8v8h1.5V8zM16 11.25h-.5v1.5h.5zm-.5 0H14v1.5h1.5zm-.64 1.15 2.5 4 1.28-.8-2.5-4z"
+            fill="currentColor"
+          />
+          <path
+            d="M22 12c0 4.71 0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46c.97.98 1.3 2.35 1.4 4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

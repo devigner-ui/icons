@@ -22,7 +22,50 @@ const IconDropper3 = forwardRef<SVGSVGElement, IconProps>(function IconDropper3(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M18 16h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 11.42c0 1.15-.9 2.08-2 2.08s-2-.93-2-2.08c0-.72.78-1.68 1.37-2.3a.86.86 0 0 1 1.26 0c.59.62 1.37 1.58 1.37 2.3Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M16 21v1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 10c0-1.89 0-2.83.59-3.41C11.17 6 12.1 6 14 6h4c1.89 0 2.83 0 3.41.59C22 7.17 22 8.1 22 10v6.5c0 .66-.28 1.3-.76 1.73a7.8 7.8 0 0 1-10.48 0 2.3 2.3 0 0 1-.76-1.72V14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 22v-2M18.5 2l-.52.52-.08.08a3 3 0 0 1-1.9.84M16 2v1.44m0 0V6m0-2.56a3 3 0 0 1-2.07-.66l-.08-.07-.03-.03A3 3 0 0 0 11.94 2H8c-2.83 0-4.24 0-5.12.88S2 5.18 2 8v8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

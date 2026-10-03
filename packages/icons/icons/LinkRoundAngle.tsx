@@ -23,7 +23,33 @@ const IconLinkRoundAngle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m12.8 15.8 1.42-1.43a6.08 6.08 0 0 0-8.58-8.6L2.78 8.65A6.08 6.08 0 0 0 6.73 19"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M21.22 15.36A6.08 6.08 0 0 0 17.27 5m1.1 13.22a6.07 6.07 0 1 1-8.6-8.59l1.44-1.43"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

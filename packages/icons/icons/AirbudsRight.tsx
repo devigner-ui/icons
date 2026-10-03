@@ -23,7 +23,49 @@ const IconAirbudsRight = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21 13v6.77A2.35 2.35 0 0 1 18.77 22h-.54A2.35 2.35 0 0 1 16 19.77v-1.1m5 0h-5m0 0V12a1 1 0 0 0-1-1 3 3 0 0 1-3-3V5.34C12 3.5 13.5 2 15.34 2h.1A5.6 5.6 0 0 1 21 7.56V9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 5v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7.5 22A5.5 5.5 0 1 0 2 16.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 5.1A5 5 0 0 0 5.1 9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6 14v-.75a.75.75 0 0 0-.75.75zm-.75 5a.75.75 0 0 0 1.5 0zM6 16.5h-.75v.75H6zm2.36 2.89a.75.75 0 1 0 1.28-.78zM6 14.75h1.5v-1.5H6zm.75 1.75V14h-1.5v2.5zm1.5-1.25c0 .15-.2.5-.75.5v1.5c1.1 0 2.25-.77 2.25-2zm-.75-.5c.55 0 .75.35.75.5h1.5c0-1.23-1.14-2-2.25-2zM5.25 14v5h1.5v-5zm2.25 1.75H6v1.5h1.5zm-.64 1.14 1.5 2.5 1.28-.78-1.5-2.5z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

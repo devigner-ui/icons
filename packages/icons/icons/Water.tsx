@@ -22,7 +22,42 @@ const IconWater = forwardRef<SVGSVGElement, IconProps>(function IconWater(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 19a6.5 6.5 0 0 1-5.13-2.61c-.44-.53-1.28-.52-1.67.04A5 5 0 0 1 2 18.8m20 0a4.8 4.8 0 0 1-3.08-2.18c-.42-.6-1.35-.57-1.81.01q-.6.8-1.5 1.38"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 9c2.5 0 4.08-1.35 5.13-2.61.44-.53 1.28-.52 1.67.04A5 5 0 0 0 22 8.8m-20 0a4.8 4.8 0 0 0 3.08-2.2c.42-.6 1.35-.57 1.81.01q.6.8 1.5 1.38"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M22 13.79a4.8 4.8 0 0 1-3.08-2.18c-.42-.6-1.35-.57-1.81.01A6.2 6.2 0 0 1 12 14a6.5 6.5 0 0 1-5.13-2.61c-.44-.53-1.28-.52-1.67.04A5 5 0 0 1 2 13.8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,52 @@ const IconElectricRefueling = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16 22v-7M3 22v-4m0-4V8c0-2.83 0-4.24.88-5.12S6.18 2 9 2h1c2.83 0 4.24 0 5.12.88S16 5.18 16 8v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9.5 10 8 12.5h3L9.5 15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17 22H2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m19.5 4 1.23.99q.2.14.27.22a3 3 0 0 1 1 2.41V18.5a1.5 1.5 0 0 1-3 0v-.07c0-.79-.64-1.43-1.43-1.43H16"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 8h-1.5c-.83 0-1.5.67-1.5 1.5v2.42c0 .64.41 1.22 1.03 1.42L22 14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

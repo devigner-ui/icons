@@ -23,7 +23,31 @@ const IconMagicStick2 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17.92 8q.02.3.12.52c.13.32.4.56.91 1.04l.48.43c1.84 1.69 2.75 2.53 2.54 3.47-.22.95-1.42 1.37-3.84 2.21l-.62.22c-.69.24-1.03.36-1.3.6-.25.24-.4.58-.71 1.25l-.28.6c-1.08 2.36-1.62 3.53-2.57 3.65s-1.67-.9-3.13-2.93l-.37-.53c-.41-.58-.62-.87-.92-1.04s-.65-.2-1.36-.26l-.65-.06c-2.5-.23-3.76-.35-4.13-1.22s.4-1.92 1.9-4.02l.4-.55c.43-.6.64-.9.72-1.24.08-.35.02-.7-.12-1.41l-.12-.64c-.47-2.5-.7-3.74.02-4.4s1.91-.3 4.3.44l.62.2c.68.2 1.01.3 1.36.26s.66-.23 1.3-.6l.57-.34c2.21-1.31 3.32-1.97 4.13-1.5.5.28.68.86.74 1.84"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17.53 16.47a.75.75 0 1 0-1.06 1.06zm2.94 5.06a.75.75 0 1 0 1.06-1.06zm-4-4 4 4 1.06-1.06-4-4z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

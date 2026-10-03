@@ -22,7 +22,33 @@ const IconLeaf = forwardRef<SVGSVGElement, IconProps>(function IconLeaf(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m12 9 4-4m-4 9.5 3-3M18.5 8l-1.62 1.63M12 19.5l1.88-1.87M19.5 12l-3.75 3.75"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 22c4.42 0 8-3.65 8-8.14 0-4.47-2.55-9.67-6.54-11.53A3.5 3.5 0 0 0 12 2m0 20c-4.42 0-8-3.65-8-8.14 0-1.59.32-3.27.92-4.86M12 22V2m0 0q-.76 0-1.46.33a10.3 10.3 0 0 0-4.04 3.6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

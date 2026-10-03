@@ -104,7 +104,7 @@ function intOpt(flags, aliases, fallback) {
 
 /* ---------- output ---------- */
 
-const STYLES = ["outline", "twotone", "bold", "bulk"];
+const STYLES = ["outline", "twotone", "bold", "bulk", "broken"];
 
 /* The lowercase style names this CLI takes, as the component's `variant`. */
 const STYLE_PROPS = {
@@ -112,6 +112,7 @@ const STYLE_PROPS = {
   twotone: { variant: "TwoTone" },
   bold: { variant: "Bold" },
   bulk: { variant: "Bulk" },
+  broken: { variant: "Broken" },
 };
 
 /** Columns padded to the widest cell. No box drawing, no colour, no NO_COLOR. */
@@ -506,11 +507,11 @@ search
 
 list
   -c, --category <c>  filter by category
-  -s, --style <s>     outline, twotone, bold or bulk
+  -s, --style <s>     outline, twotone, bold, bulk or broken
   -l, --limit <n>     stop after n
 
 copy
-  -s, --style <s>     outline (default), twotone, bold or bulk
+  -s, --style <s>     outline (default), twotone, bold, bulk or broken
   -f, --format <fmt>  tsx (default) or svg
   -o, --out <dir>     write files there instead of printing
       --clipboard     also put it on the clipboard

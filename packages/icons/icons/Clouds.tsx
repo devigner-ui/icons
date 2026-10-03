@@ -22,7 +22,33 @@ const IconClouds = forwardRef<SVGSVGElement, IconProps>(function IconClouds(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12.35c0-2.47-1.6-4.57-3.84-5.34m-9.5 3.23a4.3 4.3 0 0 0-2.37-.71A4.26 4.26 0 0 0 2 13.76 4.26 4.26 0 0 0 6.29 18m8.1-10.97A5.8 5.8 0 0 1 18.15 7M7.12 9.61A5.68 5.68 0 0 1 12.48 2a5.7 5.7 0 0 1 5.68 5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17.05 15.14a4 4 0 0 1 2.45 0m-6.17 2.01a3 3 0 0 0-1.54-.44A2.7 2.7 0 0 0 9 19.35 2.7 2.7 0 0 0 11.79 22h6.5A3.63 3.63 0 0 0 22 18.47a3.55 3.55 0 0 0-2.5-3.34m-7.17 1.63q-.23-.58-.23-1.23A3.63 3.63 0 0 1 15.8 12a3.65 3.65 0 0 1 3.7 3.13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

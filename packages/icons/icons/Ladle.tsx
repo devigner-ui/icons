@@ -22,7 +22,33 @@ const IconLadle = forwardRef<SVGSVGElement, IconProps>(function IconLadle(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 5.68a3.68 3.68 0 0 1 7.37 0M22 14.5v1.18a6.32 6.32 0 0 1-12.63 0V9.16"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16 12c-3.05 0-6.5 1.12-6.5 2.5S12.95 17 16 17s6-1.12 6-2.5c0-.72-.8-1.37-2-1.82"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

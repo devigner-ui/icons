@@ -23,7 +23,38 @@ const IconMusicNote3 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 18a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 12V6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m16.12 10.06-2.64-1.32c-.36-.18-.54-.27-.7-.39a2 2 0 0 1-.74-1.21c-.04-.19-.04-.39-.04-.8 0-.97 0-1.45.12-1.78a2 2 0 0 1 2.11-1.31c.35.04.78.26 1.65.7l2.64 1.3c.36.2.54.28.7.4a2 2 0 0 1 .74 1.21c.04.19.04.4.04.8 0 .97 0 1.46-.12 1.79a2 2 0 0 1-2.11 1.3 6 6 0 0 1-1.65-.7Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

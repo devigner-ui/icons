@@ -22,7 +22,39 @@ const IconStarRing = forwardRef<SVGSVGElement, IconProps>(function IconStarRing(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13.67 15.68c.68 1.07 1.01 1.6.78 2.04s-.87.49-2.15.59l-.34.02c-.36.03-.55.04-.7.13-.17.08-.28.23-.52.52l-.22.26c-.83 1.01-1.25 1.52-1.73 1.45-.47-.06-.7-.66-1.13-1.84l-.12-.31c-.12-.34-.18-.5-.3-.63-.13-.12-.3-.19-.64-.31l-.3-.12c-1.2-.43-1.79-.65-1.85-1.13s.44-.9 1.45-1.73l.27-.22c.29-.23.43-.35.51-.51s.1-.34.13-.71l.03-.33c.1-1.29.15-1.93.58-2.16.44-.23.97.1 2.04.78l.27.17c.3.2.46.29.63.31.18.03.36-.02.71-.12l.33-.1c1.25-.35 1.87-.53 2.2-.2.34.34.16.97-.2 2.22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M21.83 19.98c-.5 1.05-1.97 1.26-3.98.77m3.98-.77c.53-1.13-.21-3.03-1.83-5.13m1.83 5.13c-.63 1.35-2.9 1.32-5.83.17m5.83-.17c.87-1.85-1.66-5.71-5.83-9.2M2.17 6.01c-.53 1.13.21 3.03 1.83 5.13m1.85 2.1C3 10.35 1.46 7.52 2.17 6.02c.5-1.05 1.97-1.26 3.98-.77m-3.98.77C3.07 4.08 7.38 5 12.2 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18.9 3.4c.1.92.48 1.79 1.1 2.46M18.9 3.4c-.94.76-1.23.9-2.4 1.13m2.4-1.13.3-.4m-1.6 4a4.4 4.4 0 0 0-1.1-2.47m0 0-.5-.02"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

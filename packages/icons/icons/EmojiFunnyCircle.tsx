@@ -23,7 +23,54 @@ const IconEmojiFunnyCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8.91 15.93c1.26.32 2.69.32 4.13-.07a8 8 0 0 0 3.6-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <ellipse
+            cx="14.5094"
+            cy="9.77405"
+            rx="1"
+            ry="1.5"
+            transform="rotate(-15 14.5094 9.77405)"
+            fill="currentColor"
+          />
+          <ellipse
+            cx="8.71402"
+            cy="11.3278"
+            rx="1"
+            ry="1.5"
+            transform="rotate(-15 8.71402 11.3278)"
+            fill="currentColor"
+          />
+          <path
+            d="m13 16 .48.97a1.5 1.5 0 1 0 2.7-1.32l-.47-.93"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M4.93 4.93a10 10 0 1 1-2.59 4.49"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

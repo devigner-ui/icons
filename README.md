@@ -7,7 +7,7 @@
 
 **Consistent, free, open-source icons for every framework you build with.**
 
-8,588 icons · 2,147 symbols · 4 styles each · drawn on a 24×24 grid, all free.
+9,717 drawings · 2,147 symbols · 4 core styles, plus Broken on 1,129 symbols · drawn on a 24×24 grid, all free.
 
 [![Website](https://img.shields.io/badge/Website-icons.devigner.cc-16161A?style=flat-square)](https://icons.devigner.cc)
 [![npm](https://img.shields.io/npm/v/@devigner-ui/icons?style=flat-square&label=%40devigner-ui%2Ficons&color=CB3837)](https://www.npmjs.com/package/@devigner-ui/icons)
@@ -26,8 +26,8 @@ Two open icon sets, merged, deduplicated and consistently named, then rebuilt as
 components for five targets from one set of artwork. One design language,
 wherever you work.
 
-- **8,588 icons**: 2,147 symbols
-- **4 drawings each**: outline, twotone, bold and bulk, free on every symbol
+- **9,717 drawings**: 2,147 symbols
+- **Four core drawings each**: outline, twotone, bold and bulk; Broken is free on 1,129 symbols
 - **Five targets**: React, Vue 3, Svelte, React Native and raw SVG
 - **Semantic search data**: one 384-dim vector per symbol, as `embeddings.json`
 - **TypeScript first**: every symbol a typed named export
@@ -61,7 +61,8 @@ React; `size` and `color` on React Native, which has no cascade to inherit from)
 ## Quick start
 
 ```tsx
-import { IconShoppingCart, IconArrowRight } from "@devigner-ui/icons";
+import { IconShoppingCart } from "@devigner-ui/icons/ShoppingCart";
+import { IconArrowRight } from "@devigner-ui/icons/ArrowRight";
 
 function Header() {
   return (
@@ -76,7 +77,7 @@ function Header() {
 
 Strokes are `currentColor`, so colour comes from CSS. Size with `className`;
 there is no `size` prop. The three props of its own are `className`, `variant`
-(`"Outline" | "TwoTone" | "Bold" | "Bulk"`) and `strokeWidth`; everything else
+(`"Outline" | "TwoTone" | "Bold" | "Bulk" | "Broken"`) and `strokeWidth`; everything else
 an `<svg>` takes passes through. See
 [packages/icons/README.md](packages/icons/README.md).
 
@@ -99,7 +100,7 @@ second copy of the artwork, so the two cannot drift apart.
 
 ## Licensing and credits
 
-All four styles of all 2,147 symbols are free, in every package. Bulk used to be
+All four core styles of all 2,147 symbols are free, in every package. Broken is also free on the 1,129 symbols that supply that drawing. Bulk used to be
 sold on 1,682 of them and stripped from the free build; that gate is gone, and
 there is one build now.
 
@@ -138,7 +139,7 @@ Releases go out from `main` through [changesets](.changeset/).
 
 | Path                          | What it is                                                                                         |
 | ----------------------------- | -------------------------------------------------------------------------------------------------- |
-| `packages/icons`              | The React package, and the source of truth. `icons/` holds all four drawings per symbol as `.tsx`. |
+| `packages/icons`              | The React package, and the source of truth. `icons/` holds four core drawings per symbol, with an optional Broken drawing, as `.tsx`. |
 | `packages/icons-vue`          | Vue 3 build, generated from `packages/icons`.                                                      |
 | `packages/icons-svelte`       | Svelte build, generated from `packages/icons`.                                                     |
 | `packages/icons-react-native` | React Native build, generated from `packages/icons`.                                               |

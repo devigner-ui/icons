@@ -22,7 +22,34 @@ const IconPlanet2 = forwardRef<SVGSVGElement, IconProps>(function IconPlanet2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17.67 6.22c2.1-.41 3.65-.26 4.16.54 1.01 1.62-2.57 5.27-8 8.17-5.43 2.89-10.65 3.92-11.66 2.3-.51-.82.16-2.17 1.67-3.68"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray="3.5 2.5"
+          />
+          <path
+            d="M8 5.07A8 8 0 1 1 5.07 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -21,14 +21,16 @@
  *   node scripts/emit-svg.mjs
  */
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 import { createElement as h } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
 export const DIST = new URL("dist/", new URL("../", import.meta.url));
 
-export const STYLES = ["outline", "twotone", "bold", "bulk"];
+export const STYLES = ["outline", "twotone", "bold", "bulk", "broken"];
+const STANDARD_STYLES = STYLES.filter((style) => style !== "broken");
+const ICONS_DIR = new URL("../icons/", import.meta.url);
 
 /** The lowercase names the data files and URLs use, as the component's prop. */
 const VARIANT = {
@@ -36,7 +38,20 @@ const VARIANT = {
   twotone: "TwoTone",
   bold: "Bold",
   bulk: "Bulk",
+  broken: "Broken",
 };
+
+/* Broken is deliberately selective: a component only gains the drawing after
+   import-broken.mjs inserted its branch. Sources remain the authority here so
+   a component cannot be advertised in a generated package without artwork. */
+function brokenIcons() {
+  return new Set(
+    readdirSync(ICONS_DIR)
+      .filter((file) => file.endsWith(".tsx"))
+      .filter((file) => readFileSync(new URL(file, ICONS_DIR), "utf8").includes('variant === "Broken"'))
+      .map((file) => file.slice(0, -4)),
+  );
+}
 
 /*
  * The components are decorative by default, which is right for an icon sitting
@@ -59,6 +74,7 @@ export async function allSvgs(only) {
 
   const mod = await import(bundle.href);
   const wanted = only && new Set(only);
+  const broken = brokenIcons();
   const out = new Map();
 
   for (const [exportName, Icon] of Object.entries(mod)) {
@@ -67,7 +83,7 @@ export async function allSvgs(only) {
     if (wanted && !wanted.has(name)) continue;
 
     const drawings = {};
-    for (const style of STYLES) {
+    for (const style of [...STANDARD_STYLES, ...(broken.has(name) ? ["broken"] : [])]) {
       const markup = forFile(
         renderToStaticMarkup(h(Icon, { variant: VARIANT[style] })),
       );
@@ -137,7 +153,8 @@ async function main() {
     `rendered ${icons.size} icons, metadata.json lists ${meta.icons.length}`,
   );
 
-  console.log(`ok  ${icons.size} icons x ${STYLES.length} styles render clean`);
+  const drawings = [...icons.values()].reduce((total, styles) => total + Object.keys(styles).length, 0);
+  console.log(`ok  ${drawings} drawings across ${icons.size} icons render clean`);
 }
 
 /* Importable by the Vue and Svelte generators; runnable on its own. String

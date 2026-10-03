@@ -23,7 +23,56 @@ const IconPlaylist2 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16 16.43A2.54 2.54 0 0 1 13.5 19a2.54 2.54 0 0 1-2.5-2.57 2.54 2.54 0 0 1 2.5-2.57c1.38 0 2.5 1.15 2.5 2.57Zm0 0V10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m18.68 7.12-1.76.84c-.34.16-.51.24-.64.37a1 1 0 0 0-.22.36c-.06.16-.06.35-.06.73 0 .88 0 1.32.2 1.58a1 1 0 0 0 .62.4c.32.05.71-.14 1.5-.52l1.76-.84c.34-.16.51-.24.64-.37a1 1 0 0 0 .22-.36c.06-.16.06-.35.06-.73 0-.88 0-1.32-.2-1.58a1 1 0 0 0-.62-.4c-.32-.05-.71.14-1.5.52Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 13H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8 17H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 5h7.41M15 5h-1.59"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13 9H6.82M3 9h1.32"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

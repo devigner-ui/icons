@@ -22,7 +22,45 @@ const IconRoute = forwardRef<SVGSVGElement, IconProps>(function IconRoute(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <g clipPath="url(#clip0_1276_6570)">
+            <path
+              d="M19.07 4.93c3.33 3.33 5 5 5 7.07s-1.67 3.74-5 7.07-5 5-7.07 5-3.74-1.67-7.07-5-5-5-5-7.07 1.67-3.74 5-7.07 5-5 7.07-5c1.38 0 2.58.74 4.2 2.2"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+            <path
+              d="M13.33 14 16 11.5 13.33 9M16 11.5h-5.33C9.77 11.5 8 12 8 14"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1276_6570">
+              <rect
+                width="24"
+                height="24"
+                fill="currentColor"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,61 @@ const IconServerSquareCloud = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10 3.75a.75.75 0 0 0 0-1.5zm4-1.5a.75.75 0 0 0 0 1.5zm-1 19.5a.75.75 0 0 0 0-1.5zm-9.83-1.92.53-.53h0zM20.83 4.17l-.53.53v0zm.42 8.83a.75.75 0 0 0 1.5 0zM14 12.75a.75.75 0 0 0 0-1.5zm4-1.5a.75.75 0 0 0 0 1.5zM2.75 13v-1h-1.5v1zm0-1v-1h-1.5v1zM13 20.25h-3v1.5h3zM21.25 11v1h1.5v-1zm-20 2c0 1.86 0 3.34.15 4.49a4.7 4.7 0 0 0 1.24 2.87L3.7 19.3c-.42-.43-.67-1-.81-2.01A36 36 0 0 1 2.75 13zM10 20.25c-1.9 0-3.26 0-4.29-.14-1-.13-1.58-.39-2-.81l-1.07 1.06c.75.75 1.7 1.08 2.87 1.24 1.15.15 2.63.15 4.49.15zm4-16.5a36 36 0 0 1 4.29.14c1 .14 1.58.39 2 .81l1.07-1.06a4.7 4.7 0 0 0-2.87-1.24c-1.15-.15-2.63-.15-4.49-.15zM22.75 11c0-1.86 0-3.34-.15-4.49a4.7 4.7 0 0 0-1.24-2.87L20.3 4.7c.42.43.68 1 .81 2.01.14 1.03.14 2.38.14 4.29zM10 2.25c-1.86 0-3.34 0-4.49.15a4.7 4.7 0 0 0-2.87 1.24L3.7 4.7c.43-.42 1-.67 2.01-.81A36 36 0 0 1 10 3.75zM2.75 11c0-1.9 0-3.26.14-4.29.14-1 .39-1.58.81-2L2.64 3.63A4.7 4.7 0 0 0 1.4 6.51c-.15 1.15-.15 2.63-.15 4.49zm18.5 1v1h1.5v-1zM2 12.75h12v-1.5H2zm16 0h4v-1.5h-4z"
+            fill="currentColor"
+          />
+          <path
+            d="M13.5 7.5H18"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6 17.5v-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6 8.5v-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 17.5v-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 8.5v-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M19.33 16.89a2 2 0 0 1 1.32 0m-3.32 1.2a1.5 1.5 0 0 0-.83-.27c-.83 0-1.5.71-1.5 1.6 0 .87.67 1.58 1.5 1.58H20c1.1 0 2-.95 2-2.12 0-.92-.56-1.71-1.35-2m-3.86.97a2 2 0 0 1-.12-.73c0-1.17.9-2.12 2-2.12 1.03 0 1.87.82 1.98 1.88"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

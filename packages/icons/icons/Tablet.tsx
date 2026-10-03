@@ -22,7 +22,33 @@ const IconTablet = forwardRef<SVGSVGElement, IconProps>(function IconTablet(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 4h-2C6.23 4 4.34 4 3.17 5.17S2 8.23 2 12s0 5.66 1.17 6.83c.94.94 2.35 1.13 4.83 1.16m8-15.98c2.48.03 3.89.22 4.83 1.16C22 6.34 22 8.23 22 12s0 5.66-1.17 6.83S17.77 20 14 20h-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 17H9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

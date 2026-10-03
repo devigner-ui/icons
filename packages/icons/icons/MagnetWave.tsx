@@ -23,7 +23,40 @@ const IconMagnetWave = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14.44 3h2.06c.83 0 1.5.67 1.5 1.5V6c0 .83-.67 1.5-1.5 1.5h-2.06m0-4.5H11c-1.49 0-2.9.36-4.13 1m7.57-1v4.5m0 0h-3.5A4.5 4.5 0 0 0 7.6 15m6.85 1.5h2.06c.83 0 1.5.67 1.5 1.5v1.5c0 .83-.67 1.5-1.5 1.5h-2.06m0-4.5h-3.5m3.5 0V21m0 0H11A9 9 0 0 1 3.52 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M21.5 6S23 7.8 23 12s-1.5 6-1.5 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M19.5 9s.5.9.5 3-.5 3-.5 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -1,7 +1,7 @@
 # @devigner-ui/icons
 
-8,588 open-source icons for React. Every one of the 2,147 symbols carries four separate drawings:
-outline, twotone, bold and bulk, rather than one generated and filtered.
+9,717 open-source drawings for React. Every one of the 2,147 symbols carries four core drawings:
+outline, twotone, bold and bulk; 1,129 symbols also carry a Broken drawing.
 
 Built on [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736)
 and [Iconsax](https://iconsax.io). See [ATTRIBUTION.md](./ATTRIBUTION.md).
@@ -15,7 +15,7 @@ npm install @devigner-ui/icons
 ## Usage
 
 ```tsx
-import { IconShoppingCart } from "@devigner-ui/icons";
+import { IconShoppingCart } from "@devigner-ui/icons/ShoppingCart";
 
 export function CartButton() {
   return (
@@ -30,22 +30,27 @@ export function CartButton() {
 Strokes are `currentColor`, so colour comes from CSS. Size the glyph with
 `className`; the component has no `size` prop.
 
-Every icon is also a module of its own, if you would rather not go through the
-barrel:
+Importing the icon's subpath loads only that icon. It is the best choice for
+dev servers, tests and tools that do not tree-shake:
 
 ```tsx
 import { IconShoppingCart } from "@devigner-ui/icons/ShoppingCart";
 import IconShoppingCart from "@devigner-ui/icons/ShoppingCart"; // same component
 ```
 
-The two imports compile to the same thing under any bundler that tree-shakes,
-and the package is marked `sideEffects: false`, so the barrel does not cost you
-the other 1,962 icons either. The subpath is worth reaching for when something
-in the toolchain does not tree-shake: a Jest transform, a bundler-less
-`node --experimental-strip-types`, or a dev server paying to parse a 5.5 MB
-module on every cold start. It needs TypeScript's `moduleResolution` set to
-`"bundler"` or `"node16"`; the legacy `"node"` setting cannot read subpath
-exports.
+Named imports from the package root still work:
+
+```tsx
+import { IconShoppingCart } from "@devigner-ui/icons";
+```
+
+The ESM root now re-exports individual modules, so production bundlers can
+remove unused icons. The CommonJS root loads icon modules when their exports
+are accessed. Native ESM loaders still traverse the root's full re-export
+graph; use a subpath when startup cost matters. `sideEffects: false` tells
+bundlers these modules may be removed when unused. Subpath types need
+TypeScript's `moduleResolution` set to `"bundler"` or `"node16"`; the legacy
+`"node"` setting cannot read subpath exports.
 
 ## Props
 
@@ -56,7 +61,7 @@ Three props of its own, **plus everything an `<svg>` takes** (`onClick`,
 | Prop | Type | Default | What it does |
 | --- | --- | --- | --- |
 | `className` | `string` | - | Sizes and colours the glyph. |
-| `variant` | `"Outline" \| "TwoTone" \| "Bold" \| "Bulk"` | `"Outline"` | Which of the four drawings to render. |
+| `variant` | `"Outline" \| "TwoTone" \| "Bold" \| "Bulk" \| "Broken"` | `"Outline"` | Which drawing to render. Broken is available where supplied. |
 | `strokeWidth` | `string \| number` | `"1.5"` | Stroke width, in the 24px drawing's own units. Outline and TwoTone only. |
 
 Nothing is omitted from the inherited set any more: `width` and `fill` used to
@@ -97,25 +102,27 @@ UI trigger and anything else that needs to measure or position against it.
 </Tooltip.Trigger>
 ```
 
-## The four styles
+## Styles
 
-`variant` selects between the four drawings:
+`variant` selects between the four core drawings, with Broken available on icons that supply it:
 
 ```tsx
 <IconShoppingCart />                       {/* outline, the default */}
 <IconShoppingCart variant="TwoTone" />
 <IconShoppingCart variant="Bold" />
 <IconShoppingCart variant="Bulk" />
+<IconShoppingCart variant="Broken" />                     {/* where available */}
 ```
 
-**All four styles are free on all 2,147 symbols.** Bulk used to be sold on 1,682
-of them; it is not any more, and this package contains every drawing.
+**All four core styles are free on all 2,147 symbols.** Broken is free on the
+1,129 symbols that supply that drawing. Bulk used to be sold on 1,682 of them;
+it is not any more, and this package contains every drawing.
 
 ```ts
 import metadata from "@devigner-ui/icons/metadata.json";
 
 const cart = metadata.icons.find((i) => i.name === "ShoppingCart");
-cart.freeStyles; // ["outline", "twotone", "bold", "bulk"]
+cart.freeStyles; // ["outline", "twotone", "bold", "bulk", "broken"] when supplied
 cart.proStyles;  // []
 ```
 

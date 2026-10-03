@@ -22,7 +22,39 @@ const IconTagPrice = forwardRef<SVGSVGElement, IconProps>(function IconTagPrice(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15.39 15.39c.59-.59.66-1.46.18-1.95-.5-.48-1.36-.4-1.95.18s-1.45.67-1.94.18c-.5-.49-.41-1.36.17-1.95m3.54 3.54.35.35m-.35-.35c-.4.4-.94.56-1.39.47m-2.5-4.36.35.35m0 0c.34-.33.76-.5 1.15-.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8.6 10.88a2 2 0 1 0-2-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.14 4.73c-1.55-1.55-2.32-2.32-3.32-2.6-1-.3-2.07-.05-4.2.44l-1.23.29c-1.8.4-2.69.62-3.3 1.23s-.82 1.5-1.23 3.3l-.29 1.23c-.49 2.13-.73 3.2-.45 4.2.29 1 1.06 1.77 2.6 3.32l1.84 1.83c2.69 2.69 4.03 4.03 5.7 4.03s3.02-1.34 5.7-4.03c2.7-2.7 4.04-4.04 4.04-5.7 0-1.35-.87-2.48-2.6-4.27"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

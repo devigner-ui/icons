@@ -23,7 +23,60 @@ const IconMusicNotes = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 19.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M22 17.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m22 8-10 4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m14.46 5.16.29.69zm2-.84-.3-.7zm4.65-.98-.42.62h0zm.14 8.66a.75.75 0 0 0 1.5 0zm-8.5 7V8.85h-1.5V19zm2-13.15 2-.84-.58-1.38-2 .84zm8 2.16c0-1.33 0-2.42-.12-3.24-.12-.84-.4-1.58-1.1-2.05l-.84 1.24c.19.13.36.36.46 1.03.1.68.1 1.64.1 3.02zm-6-3c1.27-.53 2.15-.9 2.82-1.07s.94-.1 1.12.02l.83-1.24c-.7-.47-1.5-.44-2.32-.23-.8.2-1.8.62-3.03 1.14zm-4 3.84c0-.66 0-1.1.04-1.44.03-.31.1-.47.17-.59L11.7 6c-.26.4-.36.8-.41 1.26q-.06.66-.05 1.6zm1.42-4.38q-.87.35-1.46.65c-.4.23-.74.49-1 .87l1.25.83c.08-.11.2-.23.48-.38.3-.17.7-.33 1.3-.59zM22.75 12V8.01h-1.5V12z"
+            fill="currentColor"
+          />
+          <path
+            d="M7 11V2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="4.5"
+            cy="10.5"
+            r="2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M10 5c-1.24 0-3-.93-3-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

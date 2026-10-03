@@ -23,7 +23,43 @@ const IconListHeartMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10 16H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 11H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m16.49 16.3.45-.6h0zm1.01-6.2-.54.53a.75.75 0 0 0 1.08 0zm1.01 6.2.44.61h0zm-1.01.51v-.75h0zm-.57-1.1a14 14 0 0 1-2.12-1.9c-.68-.78-1.06-1.5-1.06-2.1h-1.5c0 1.17.7 2.25 1.43 3.09.76.86 1.68 1.6 2.37 2.11zm-3.18-4c0-1.1.5-1.69 1-1.88.52-.19 1.35-.09 2.21.8l1.08-1.05c-1.16-1.18-2.59-1.61-3.81-1.15-1.24.46-1.98 1.72-1.98 3.28zm5.2 5.2c.69-.5 1.6-1.25 2.37-2.11.73-.84 1.43-1.92 1.43-3.09h-1.5q-.02.91-1.06 2.1c-.66.75-1.48 1.42-2.12 1.9zm3.8-5.2c0-1.56-.74-2.82-1.98-3.28-1.22-.46-2.65-.03-3.8 1.15l1.07 1.05c.86-.89 1.69-.99 2.2-.8.52.2 1.01.78 1.01 1.88zm-6.7 5.2c.39.3.83.65 1.45.65v-1.5l-.1-.03-.46-.33zm2.02-1.2-.47.32-.1.03v1.5c.62 0 1.06-.36 1.45-.65z"
+            fill="currentColor"
+          />
+          <path
+            d="M20 6H9.5M3 6h2.25"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

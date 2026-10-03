@@ -22,7 +22,27 @@ const IconRadar = forwardRef<SVGSVGElement, IconProps>(function IconRadar(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.41 21.66q.8.21 1.59.3A10 10 0 1 0 7.09 3.28M12 12 5 6.34c-.43-.35-1.06-.29-1.36.17A10 10 0 0 0 5 19.15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

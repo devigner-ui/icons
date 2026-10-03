@@ -23,7 +23,52 @@ const IconCloudStorm = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 13.35c0 1.94-1 3.66-2.5 4.67m-5.12-10a5.8 5.8 0 0 1 3.78 0m-9.5 3.22a4.3 4.3 0 0 0-2.37-.71A4.26 4.26 0 0 0 2 14.76c0 1.31.6 2.49 1.55 3.26m3.57-7.41A5.68 5.68 0 0 1 12.48 3a5.7 5.7 0 0 1 5.68 5m0 0q1.03.37 1.84 1.05"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m17 19-2 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m15 15.5-2 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m13 20-2 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m6 22.38 4.29-3.69H6L10.29 15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

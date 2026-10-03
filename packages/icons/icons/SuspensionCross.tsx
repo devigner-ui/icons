@@ -23,7 +23,75 @@ const IconSuspensionCross = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21 6.5v-2c0-.46 0-.7-.04-.89a2 2 0 0 0-1.57-1.57C19.19 2 18.96 2 18.5 2s-.7 0-.89.04a2 2 0 0 0-1.57 1.57c-.04.2-.04.43-.04.89v2c0 .46 0 .7.04.89a2 2 0 0 0 1.57 1.57c.2.04.43.04.89.04s.7 0 .89-.04a2 2 0 0 0 1.57-1.57c.04-.2.04-.43.04-.89Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8 19.5v-2c0-.46 0-.7-.04-.89a2 2 0 0 0-1.57-1.57C6.19 15 5.96 15 5.5 15s-.7 0-.89.04a2 2 0 0 0-1.57 1.57c-.04.2-.04.43-.04.89v2c0 .46 0 .7.04.89a2 2 0 0 0 1.57 1.57c.2.04.43.04.89.04s.7 0 .89-.04a2 2 0 0 0 1.57-1.57c.04-.2.04-.43.04-.89Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16 18.5H8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16 5.5H8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 18.5V16m0-10.5V8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m14 10-4 4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m10 10 4 4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 4.5c0-.46 0-.7.04-.89A2 2 0 0 1 4.6 2.04C4.81 2 5.04 2 5.5 2s.7 0 .89.04A2 2 0 0 1 7.96 3.6c.04.2.04.43.04.89v2c0 .46 0 .7-.04.89A2 2 0 0 1 6.4 8.96C6.19 9 5.96 9 5.5 9s-.7 0-.89-.04A2 2 0 0 1 3.04 7.4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M21 19.5c0 .46 0 .7-.04.89a2 2 0 0 1-1.57 1.57c-.2.04-.43.04-.89.04s-.7 0-.89-.04a2 2 0 0 1-1.57-1.57c-.04-.2-.04-.43-.04-.89v-2c0-.46 0-.7.04-.89a2 2 0 0 1 1.57-1.57c.2-.04.43-.04.89-.04s.7 0 .89.04a2 2 0 0 1 1.57 1.57"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

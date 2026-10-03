@@ -22,7 +22,38 @@ const IconArchive = forwardRef<SVGSVGElement, IconProps>(function IconArchive(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 12c0-.47 0-.7.08-.88a1 1 0 0 1 .54-.54c.18-.08.41-.08.88-.08h3c.47 0 .7 0 .88.08q.38.17.54.54c.08.18.08.41.08.88s0 .7-.08.88a1 1 0 0 1-.54.54c-.18.08-.41.08-.88.08h-3c-.47 0-.7 0-.88-.08a1 1 0 0 1-.54-.54C9 12.7 9 12.47 9 12Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M20.5 7v6c0 3.77 0 5.66-1.17 6.83S16.27 21 12.5 21h-1m-8-14v6c0 3.77 0 5.66 1.17 6.83.7.7 1.67.98 3.15 1.1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 3H4c-.94 0-1.41 0-1.7.3C2 3.58 2 4.05 2 5s0 1.41.3 1.7c.29.3.76.3 1.7.3h16c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7s0-1.41-.3-1.7C21.42 3 20.95 3 20 3h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,46 @@ const IconRunningRound = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="18.5"
+            cy="4.5"
+            r="2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M14.4 22v-.96a7 7 0 0 0-2.84-5.55l-.07-.06a2 2 0 0 1-.14-3.02l.07-.07 1.04-.94a2.96 2.96 0 0 0-3.18-4.9l-.53.23M5.44 8.6 4 9.64"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m9 17-.26.31A7.5 7.5 0 0 1 3 20"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16 12a8 8 0 0 0 4 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

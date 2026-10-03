@@ -23,7 +23,71 @@ const IconConfettiMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m13.3 18.3-5.06 1.69c-2.77.92-4.15 1.38-4.88.65s-.27-2.11.65-4.88l1.7-5.07c.76-2.3 1.14-3.44 2.05-3.66.9-.21 1.76.64 3.47 2.36l3.38 3.38c1.71 1.71 2.57 2.57 2.36 3.47"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12.24 18.35s-.76-2.29-.76-3.8.76-3.79.76-3.79m-4.17 8.72s-.65-2.75-.76-4.55c-.2-2.96.76-7.58.76-7.58"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m14.5 10 .15-.71c.15-.73.67-1.32 1.38-1.56s1.22-.83 1.37-1.55l.14-.72"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m17.57 12.25.21.13c.66.38 1.49.3 2.05-.21a1.8 1.8 0 0 1 1.88-.3L22 12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10.54 3a1.4 1.4 0 0 0 .2 1.72l.1.1c.4.4.54.97.38 1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13.56 4.4c.2-.2.3-.3.42-.34a.5.5 0 0 1 .3 0c.12.03.22.14.42.34s.3.3.34.41q.04.15 0 .3c-.04.12-.14.22-.34.42s-.3.3-.42.34a.5.5 0 0 1-.3 0c-.12-.03-.22-.13-.42-.34-.2-.2-.3-.3-.34-.41a.5.5 0 0 1 0-.3c.04-.12.14-.22.34-.42Z"
+            fill="currentColor"
+          />
+          <path
+            d="M19.47 7.47c.24-.25.37-.37.5-.42a.7.7 0 0 1 .5 0c.15.05.27.17.51.42.25.24.37.37.43.5a.7.7 0 0 1 0 .5c-.06.15-.18.27-.43.51-.24.25-.36.37-.5.43a.7.7 0 0 1-.5 0 2 2 0 0 1-.51-.43c-.25-.24-.37-.36-.42-.5a.7.7 0 0 1 0-.5c.05-.14.17-.27.42-.51Z"
+            fill="currentColor"
+          />
+          <path
+            d="M6.93 3.94a.54.54 0 1 1 .76.76.54.54 0 0 1-.76-.76Z"
+            fill="currentColor"
+          />
+          <path
+            d="M19.06 15.31a.54.54 0 1 1 .76.76.54.54 0 0 1-.76-.76Z"
+            fill="currentColor"
+          />
+          <path
+            d="M17.5 9.74a.54.54 0 1 1 .76.76.54.54 0 0 1-.76-.76Z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

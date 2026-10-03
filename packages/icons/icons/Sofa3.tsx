@@ -22,7 +22,39 @@ const IconSofa3 = forwardRef<SVGSVGElement, IconProps>(function IconSofa3(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11 18h9a2 2 0 1 0 0-4H4a2 2 0 1 0 0 4h3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m4.5 14-.07-.3c-1.1-4.35-1.63-6.52-.56-8.02l.21-.28C5.28 4 7.52 4 12 4h2m5.5 10 .07-.3c1.1-4.35 1.63-6.52.56-8.02l-.21-.28A3.5 3.5 0 0 0 18 4.33"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 20v-2M4 20v-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

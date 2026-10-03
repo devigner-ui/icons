@@ -23,7 +23,39 @@ const IconCloudStorage = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12.35a5.7 5.7 0 0 1-4.5 5.52m-8.83-7.63a4.3 4.3 0 0 0-2.38-.71A4.26 4.26 0 0 0 2 13.76 4.26 4.26 0 0 0 6.29 18m8.1-10.97A5.8 5.8 0 0 1 18.15 7M7.12 9.61A5.68 5.68 0 0 1 12.48 2a5.7 5.7 0 0 1 5.68 5m0 0q1.03.37 1.84 1.05"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8.5 17c0-1.41 0-2.12.44-2.56S10.09 14 11.5 14h1c1.41 0 2.12 0 2.56.44s.44 1.15.44 2.56v2c0 1.41 0 2.12-.44 2.56s-1.15.44-2.56.44h-1c-1.41 0-2.12 0-2.56-.44S8.5 20.41 8.5 19z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M11 18h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

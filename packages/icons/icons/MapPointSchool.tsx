@@ -23,7 +23,38 @@ const IconMapPointSchool = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11.22 6.64a2.2 2.2 0 0 1 1.56 0l2.34.85c.5.19.5.83 0 1.02l-2.34.85a2.2 2.2 0 0 1-1.56 0l-2.34-.85c-.5-.19-.5-.83 0-1.02z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M14.5 9v2.7c0 .39-.23.74-.59.88-.51.19-1.27.42-1.91.42s-1.4-.23-1.91-.42a.9.9 0 0 1-.59-.88V9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 15.22c-.65-1.66-1-3.42-1-5.08C4 5.64 7.58 2 12 2s8 3.65 8 8.14c0 4.47-2.55 9.67-6.54 11.53-.93.44-2 .44-2.92 0A10 10 0 0 1 7.19 19"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

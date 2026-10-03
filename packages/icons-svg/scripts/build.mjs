@@ -48,6 +48,7 @@ for (const style of STYLES) {
 
   const symbols = [];
   for (const [name, drawings] of icons) {
+    if (!drawings[style]) continue;
     writeFileSync(path.join(dir, `${name}.svg`), drawings[style]);
     symbols.push(symbolFor(name, drawings[style]));
     files++;

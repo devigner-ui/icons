@@ -22,7 +22,39 @@ const IconCode = forwardRef<SVGSVGElement, IconProps>(function IconCode(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m17 7.83 1.7 1.53c1.54 1.38 2.31 2.08 2.31 2.97s-.77 1.58-2.31 2.97L17 16.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m13.99 5-1 3.7M11.84 13l-1.83 6.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 7.83 5.3 9.36C3.76 10.74 3 11.44 3 12.33s.77 1.58 2.31 2.97L7 16.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

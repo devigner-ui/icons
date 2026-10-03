@@ -23,7 +23,33 @@ const IconTagHorizontal = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13.36 21c2.23 0 3.34 0 4.27-.53.93-.54 1.52-1.51 2.7-3.46l.68-1.13c1-1.64 1.49-2.47 1.49-3.38s-.5-1.74-1.49-3.38L20.33 8c-1.18-1.96-1.77-2.93-2.7-3.47C16.7 4 15.59 4 13.36 4h-2.64Q9.17 4 8 4.02M3.7 5.24C2.5 6.5 2.5 8.5 2.5 12.5s0 6.01 1.2 7.26c1 1.03 2.5 1.2 5.2 1.23"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7.5 8v9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

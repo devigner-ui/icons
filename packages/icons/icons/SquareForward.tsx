@@ -23,7 +23,34 @@ const IconSquareForward = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m16.15 3.43 2.36 2.05c1.62 1.4 2.44 2.1 2.44 3.02s-.82 1.62-2.44 3.02l-2.36 2.05c-.7.61-1.07.92-1.36.79s-.29-.6-.29-1.55v-1.52c-3 0-6.25 1.39-7.5 3.71 0-7.43 4.44-9.29 7.5-9.29V4.2c0-.94 0-1.42.3-1.55.28-.13.64.18 1.35.8Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 22c-4.71 0-7.07 0-8.54-1.46M12 22c4.71 0 7.07 0 8.54-1.46M12 22zh.86m-9.4-1.46C2 19.07 2 16.7 2 12v.05M2 12v.05c0 2.64 0 4.54.26 5.95.2 1.1.57 1.9 1.2 2.54M22 12c0 4.71 0 7.07-1.46 8.54m0 0C19.16 21.9 17 21.99 12.86 22m7.68-1.46c1.24-1.25 1.43-3.13 1.45-6.54M2.06 8c.1-2.2.43-3.56 1.4-4.54C4.93 2 7.3 2 12 2M3.46 3.46C4.71 2.22 6.6 2.03 10 2.01M12.86 22c4.15 0 6.3-.1 7.68-1.46C21.78 19.29 21.97 17.4 22 14M10 2c-3.41.03-5.3.22-6.54 1.46"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

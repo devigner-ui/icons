@@ -22,7 +22,45 @@ const IconAirbuds = forwardRef<SVGSVGElement, IconProps>(function IconAirbuds(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 8.3a3 3 0 0 1-3 3 1 1 0 0 0-1 1V18m-4.5 0v.75a2.25 2.25 0 0 0 4.5 0V18m-4.5 0V7.75a5 5 0 0 1 4.75-4.74l.56-.01h.34a3 3 0 0 1 2.09 1M13.5 18H18"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10.5 18v.75a2.25 2.25 0 0 1-4.5 0V18m4.5 0H6m4.5 0v-4M6 18v-5.7a1 1 0 0 0-1-1 3 3 0 0 1-3-3V5.85A3 3 0 0 1 4.85 3h.9a5 5 0 0 1 4.74 4.75l.01.56V10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M19.5 6v2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M4.5 6v2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

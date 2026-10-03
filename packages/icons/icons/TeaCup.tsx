@@ -22,7 +22,53 @@ const IconTeaCup = forwardRef<SVGSVGElement, IconProps>(function IconTeaCup(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2.72 16.13A5.5 5.5 0 0 0 8.19 21h3.62a5.5 5.5 0 0 0 5.47-4.87l.4-3.43c.05-.43.08-.64.07-.82a2 2 0 0 0-1.65-1.85c-.17-.03-.39-.03-.82-.03H4.72c-.43 0-.65 0-.82.03a2 2 0 0 0-1.65 1.85c-.01.18.02.4.07.82"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 17h2a3 3 0 1 0 0-6h-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M10 2a1.4 1.4 0 0 0 0 2c.55.55.55 1.45 0 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m5 7.5.12-.12c.5-.5.56-1.3.13-1.88a1.44 1.44 0 0 1 .13-1.88l.12-.12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m14.5 7.5.12-.12c.5-.5.56-1.3.13-1.88a1.44 1.44 0 0 1 .13-1.88L15 3.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

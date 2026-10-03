@@ -1,7 +1,7 @@
 <script>
   /*
    * The one component behind all 1,963 icons. Each generated wrapper hands this
-   * its own four drawings, so the per-icon files carry artwork and nothing
+   * its own drawings, so the per-icon files carry artwork and nothing
    * else, which is what keeps them tree-shakeable and what stops 1,963 copies
    * of this logic existing.
    *

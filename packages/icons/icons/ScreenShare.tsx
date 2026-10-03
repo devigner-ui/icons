@@ -23,7 +23,40 @@ const IconScreenShare = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21 16c0 2.83 0 4.24-.88 5.12S17.82 22 15 22h-1c-2.83 0-4.24 0-5.12-.88S8 18.82 8 16V8c0-2.83 0-4.24.88-5.12S11.18 2 14 2h1c2.83 0 4.24 0 5.12.88S21 5.18 21 8v4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8 19.5c-2.36 0-3.54 0-4.27-.73S3 16.86 3 14.5V14m5-9.5c-2.36 0-3.54 0-4.27.73S3 7.14 3 9.5v.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14.5 16V8M12 10.5 14.5 8l2.5 2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

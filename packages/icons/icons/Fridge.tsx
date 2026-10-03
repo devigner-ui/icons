@@ -22,7 +22,51 @@ const IconFridge = forwardRef<SVGSVGElement, IconProps>(function IconFridge(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4 10v3c0 3.77 0 5.66 1.17 6.83S8.23 21 12 21s5.66 0 6.83-1.17S20 16.77 20 13v-3c0-3.77 0-5.66-1.17-6.83S15.77 2 12 2 6.34 2 5.17 3.17C4.52 3.82 4.23 4.7 4.1 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 21v1h-1v-1m-8 0v1H7v-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinejoin="round"
+          />
+          <path
+            d="M20 11.5h-5m-11 0h7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 7v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 14v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

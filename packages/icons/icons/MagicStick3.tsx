@@ -23,7 +23,45 @@ const IconMagicStick3 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13 8.92 7.92 3.84a2.88 2.88 0 1 0-4.08 4.08l12.24 12.24a2.88 2.88 0 0 0 4.08-4.08L17.08 13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m6 10 4-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.1 2.3a.48.48 0 0 1 .9 0l.43 1.1q.08.2.27.28l1.1.43c.4.16.4.74 0 .9l-1.1.43a.5.5 0 0 0-.27.28L17 6.82a.48.48 0 0 1-.9 0l-.43-1.1a.5.5 0 0 0-.27-.28l-1.1-.43a.49.49 0 0 1 0-.9l1.1-.43a.5.5 0 0 0 .27-.28z"
+            stroke="currentColor"
+          />
+          <path
+            d="M19.97 9.13a.48.48 0 0 1 .9 0l.15.4q.08.19.28.27l.4.16c.4.16.4.74 0 .9l-.4.16a.5.5 0 0 0-.28.27l-.15.4a.48.48 0 0 1-.9 0l-.16-.4a.5.5 0 0 0-.27-.27l-.4-.16a.49.49 0 0 1 0-.9l.4-.16a.5.5 0 0 0 .27-.27z"
+            stroke="currentColor"
+          />
+          <path
+            d="M5.13 15.3a.48.48 0 0 1 .9 0l.16.4q.08.2.27.28l.4.16c.4.16.4.74 0 .9l-.4.16a.5.5 0 0 0-.27.27l-.16.4a.48.48 0 0 1-.9 0l-.15-.4a.5.5 0 0 0-.28-.27l-.4-.16a.49.49 0 0 1 0-.9l.4-.16a.5.5 0 0 0 .28-.27z"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

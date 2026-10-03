@@ -23,7 +23,27 @@ const IconTestTubeMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m6.8 11.78 1.28.15a2.2 2.2 0 0 1 1.94 1.95 2.2 2.2 0 0 0 1.32 1.78l1.66.7m3-3.02-3 3.01-3.51 3.53a3.8 3.8 0 0 1-5.38 0 3.83 3.83 0 0 1 0-5.4l10.75-10.8 5.38 5.4-1.81 1.82M21 9.85 14.18 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -22,7 +22,27 @@ const IconFlag2 = forwardRef<SVGSVGElement, IconProps>(function IconFlag2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5 22v-8m0 0 2.47-.5a8.7 8.7 0 0 1 4.92.46c1.7.68 3.56.8 5.33.36l.1-.03a.9.9 0 0 0 .56-1.33l-1.57-2.6c-.34-.57-.5-.86-.55-1.17v-.38c.04-.31.21-.6.55-1.17l1.28-2.13a.73.73 0 0 0-.8-1.08 7.3 7.3 0 0 1-4.48-.3l-.42-.17a8.7 8.7 0 0 0-4.92-.45L5 4m0 10v-3m0-7V2m0 2v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

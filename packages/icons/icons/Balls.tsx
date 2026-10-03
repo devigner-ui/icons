@@ -22,7 +22,61 @@ const IconBalls = forwardRef<SVGSVGElement, IconProps>(function IconBalls(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16.02 8.08c-2.02.2-4.16.8-5.65 2.29s-2.1 3.63-2.3 5.65m7.95-7.94a19 19 0 0 1 3.23-.02 2.9 2.9 0 0 1 2.69 2.7 19 19 0 0 1-.02 3.22m-5.9-5.9 5.9 5.9M8.08 16.02a19 19 0 0 0-.02 3.23 2.9 2.9 0 0 0 2.7 2.69 19 19 0 0 0 3.22-.02c2.02-.2 4.16-.8 5.65-2.29s2.1-3.63 2.3-5.65m-7.95 7.94-5.9-5.9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 8.25a6.5 6.5 0 0 0-5.72-6.2 6.5 6.5 0 1 0-1.12 12.94"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M9.22 2s-.14 2.36 1.35 5.2q.7 1.29 1.43 2.11M3 5.93S4.93 6.97 6.43 9.8 7.78 15 7.78 15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m12.5 17.5 5-5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m15.5 12.5 2 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m12.5 15.5 2 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m14 14 2 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

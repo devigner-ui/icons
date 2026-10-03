@@ -23,7 +23,34 @@ const IconLightbulbBolt = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14.5 19.5h-5m5 0c0-.71 0-1.07.04-1.3.12-.77.14-.82.63-1.42.15-.19.71-.69 1.83-1.7A7.5 7.5 0 0 0 19.07 7M14.5 19.5c0 .93 0 1.4-.2 1.75a1.5 1.5 0 0 1-.55.55c-.35.2-.82.2-1.75.2s-1.4 0-1.75-.2a1.5 1.5 0 0 1-.55-.55c-.2-.35-.2-.82-.2-1.75m0 0c0-.71 0-1.07-.04-1.3-.12-.77-.14-.82-.63-1.42-.15-.19-.71-.69-1.83-1.7A7.5 7.5 0 0 1 15.75 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m12.79 8.5-2.15 3h3l-2.14 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

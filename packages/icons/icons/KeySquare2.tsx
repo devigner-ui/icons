@@ -23,7 +23,33 @@ const IconKeySquare2 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17.26 11.44a4.73 4.73 0 1 0-4.74-4.72c0 1.2.55 2.09.55 2.09l-5.73 5.7c-.26.26-.62.93 0 1.54l.66.66c.26.22.9.53 1.43 0l.78-.77c.77.77 1.65.33 1.98-.1.55-.78-.11-1.55-.11-1.55l.22-.22c1.06 1.06 1.98.44 2.32 0 .55-.76 0-1.53 0-1.53-.23-.44-.67-.44-.11-.99l.66-.66c.53.44 1.61.55 2.1.55Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2 11.99c0 4.72 0 7.08 1.47 8.54C4.93 22 7.29 22 12 22s7.08 0 8.54-1.47c1.13-1.11 1.4-2.73 1.46-5.53M9 2c-2.79.06-4.42.33-5.53 1.45-.98.97-1.3 2.35-1.42 4.55"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

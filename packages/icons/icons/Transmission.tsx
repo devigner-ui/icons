@@ -23,7 +23,68 @@ const IconTransmission = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M6 20a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M14 20a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M14 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M22 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 6v7m0 5v-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M4 18v-7m0-5v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 6v2c0 1.89 0 2.83-.59 3.41-.58.59-1.52.59-3.41.59h-6m-6 0h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 15v-.75a.75.75 0 0 0-.75.75zm-.75 7a.75.75 0 0 0 1.5 0zm4.11.4a.75.75 0 1 0 1.28-.8zM18 15.74h2.29v-1.5H18zm.75 2.75V15h-1.5v3.5zm2.5-1.75c0 .57-.45 1-.96 1v1.5a2.5 2.5 0 0 0 2.46-2.5zm-.96-1c.51 0 .96.43.96 1h1.5c0-1.37-1.09-2.5-2.46-2.5zm0 2h-.43v1.5h.43zm-.43 0H18v1.5h1.86zm-.64 1.14 2.14 3.5 1.28-.78-2.14-3.5zm-1.97-.39V22h1.5v-3.5z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

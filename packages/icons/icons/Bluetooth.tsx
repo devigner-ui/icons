@@ -23,7 +23,40 @@ const IconBluetooth = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16.26 4.66c1.16.82 1.74 1.23 1.74 1.8s-.58.98-1.74 1.8L11 12V5.22c0-1.88 0-2.83.6-3.13.37-.19.79-.07 1.4.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m16.26 19.34-1.73 1.24c-1.55 1.1-2.32 1.64-2.93 1.33-.6-.3-.6-1.25-.6-3.13V12l5.26 3.74c1.16.82 1.74 1.23 1.74 1.8s-.58.98-1.74 1.8Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M5.57 14.89a.75.75 0 1 0 .86 1.22zm.86 1.22 5-3.5-.86-1.22-5 3.5z"
+            fill="currentColor"
+          />
+          <path
+            d="M5.57 9.11a.75.75 0 0 1 .86-1.22zm.86-1.22 5 3.5-.86 1.22-5-3.5z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

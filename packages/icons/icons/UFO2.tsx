@@ -22,7 +22,45 @@ const IconUFO2 = forwardRef<SVGSVGElement, IconProps>(function IconUFO2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2.73 9a10 10 0 0 1 4-1.79m-4 5.44c1.62 1.4 5.04 2.35 9 2.35 5.52 0 10-1.87 10-4.17 0-1.17-1.15-2.23-3-2.98q-.9-.37-2-.64m-5 1.79c-3.2 0-4.39-.53-4.8-.82q-.21-.16-.2-.45A4.73 4.73 0 0 1 11.46 3H12a4.73 4.73 0 0 1 4.73 4.73q.01.28-.2.45c-.28.2-.92.5-2.3.68"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11.73 21v-3m6 2v-3m-12 3v-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12.5 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M7.5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M17.5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,40 @@ const IconMeditationRound = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14.5 4.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m21 17-1.16-.39a3 3 0 0 1-.64-.32l-.1-.07a2.5 2.5 0 0 1-1.1-2.07q0-.54-.11-1.06M3 17l1.16-.39q.34-.11.64-.32l.1-.07A2.5 2.5 0 0 0 6 14.15a5 5 0 0 1 4.12-4.92l.9-.15a8 8 0 0 1 1.97 0l.89.15q.59.1 1.12.33"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m9.5 16-.92 1.23-.3.38a2 2 0 0 1-.74.49l-.47.13-1.8.45A1.68 1.68 0 0 0 5.69 22h.69a8 8 0 0 0 4.74-1.58L13 19m1.5-3 .73.97c.34.46.51.69.73.86q.1.08.21.13c.25.14.52.21 1.08.35l1.47.37a1.68 1.68 0 0 1-.4 3.32h-.94c-.56 0-.85 0-1.12-.02a10 10 0 0 1-2.43-.44c-.27-.08-.53-.18-1.06-.37L11 20.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

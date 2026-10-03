@@ -11,11 +11,9 @@ import path from 'path';
 
 /*
  * `@devigner-ui/icons/Accessibility` is one output file per icon, built from
- * the stubs scripts/sync.mjs generates. Every drawing is self-contained (it
- * imports react and a type, nothing else), so no icon pulls in another and
- * splitting has nothing to share; the cost is a second copy of the artwork
- * beside the barrel bundle, which is what buys a subpath that costs the caller
- * no barrel at all.
+ * the stubs scripts/sync.mjs generates. The root entry is replaced after tsup
+ * with re-exports of those files, so the package no longer publishes a second
+ * copy of every drawing inside a giant barrel bundle.
  */
 const ENTRIES = 'src/entries';
 const iconEntries = fs.existsSync(ENTRIES)
@@ -33,16 +31,14 @@ export default defineConfig({
     ...iconEntries,
   },
   format: ['esm', 'cjs'],
-  /* Only the barrel goes through the declaration bundler. Rolling up 2,142
+  /* Only the root goes through the declaration bundler. Rolling up 2,147
      more entries takes minutes and would emit the same three lines each time,
      so onSuccess writes those by hand below. */
   dts: { entry: 'src/index.ts' },
   splitting: false,
   clean: true,
-  /* Kept for what it does to the barrel: the rollup pass merges the 2,142
-     `import { forwardRef } from "react"` statements esbuild emits, one per
-     bundled module, into one. It is also what silently ate the "use client"
-     banner, which onSuccess writes back below. */
+  /* The rollup pass can drop the "use client" banner, so onSuccess writes it
+     back after all build passes have finished. */
   treeshake: true,
   /* Minification is configured granularly in esbuildOptions below; tsup's own
      `minify: true` wins over the granular flags, so it stays off here. */
@@ -50,13 +46,8 @@ export default defineConfig({
   external: ['react', 'react-dom'],
   onSuccess: async () => {
     /*
-     * "use client", which is `banner` above in every other tsup project. The
-     * banner is handed to esbuild, and `treeshake` then runs that output back
-     * through rollup, which drops the directive as one it does not know; every
-     * file shipped without it, and nothing failed, because a directive is not
-     * part of a module's exports. Every icon is a forwardRef component, so the
-     * consequence was a Next.js App Router server component throwing on the
-     * import. Prepending it here is after both, and is idempotent.
+     * The treeshake pass can drop a configured "use client" banner. Every icon
+     * forwards refs, so prepend the directive after both build passes.
      */
     for (const dir of ['dist', 'dist/icons']) {
       for (const file of fs.readdirSync(path.resolve(dir))) {
@@ -68,14 +59,43 @@ export default defineConfig({
       }
     }
 
-    /* Three lines per icon, all of them predictable, so they are written
-       rather than derived: IconComponentType comes from the barrel's declarations,
-       which keeps one definition of the prop shape in the package. */
+    /* A bundled root is several megabytes and even a named import can retain
+       all its forwardRef calls. ESM consumers get a re-export graph that a
+       bundler can prune at the module boundary. CommonJS consumers get lazy
+       getters, so requiring one named icon does not evaluate every drawing. */
+    const names = Object.keys(iconEntries).map((key) => key.slice('icons/'.length));
+    fs.writeFileSync(
+      path.resolve('dist/index.js'),
+      '"use client";\n' +
+        names.map((name) => `export { Icon${name} } from './icons/${name}.js';`).join('\n') +
+        '\n',
+    );
+    fs.writeFileSync(
+      path.resolve('dist/index.cjs'),
+      '"use client";\nObject.defineProperty(exports, "__esModule", { value: true });\n' +
+        names.map((name) =>
+          `Object.defineProperty(exports, ${JSON.stringify(`Icon${name}`)}, ` +
+          `{ enumerable: true, get: () => require(${JSON.stringify(`./icons/${name}.cjs`)}).Icon${name} });`,
+        ).join('\n') +
+        '\n',
+    );
+
+    /* The subpath declaration must not load the 340 KB all-icons declaration
+       just to discover the SVG prop type. Keep it beside the icon entries. */
+    fs.writeFileSync(
+      path.resolve('dist/icons/types.d.ts'),
+      fs.readFileSync(path.resolve('icons/types.ts'), 'utf8') +
+        '\nimport type { ForwardRefExoticComponent, RefAttributes } from "react";\n' +
+        'export type IconComponentType = ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>;\n',
+    );
+
+    /* Three lines per icon, all of them predictable. Their shared prop type
+       resolves to the small declaration above instead of the all-icons root. */
     for (const key of Object.keys(iconEntries)) {
       const name = key.slice('icons/'.length);
       fs.writeFileSync(
         path.resolve('dist', `${key}.d.ts`),
-        `import type { IconComponentType } from '../index.js';\n` +
+        `import type { IconComponentType } from './types.js';\n` +
           `declare const Icon${name}: IconComponentType;\n` +
           `export { Icon${name}, Icon${name} as default };\n`,
       );
@@ -94,12 +114,8 @@ export default defineConfig({
       ...esbuild.alias,
       '@': './src',
     };
-    /* 2,142 symbols of generated JSX is mostly indentation by weight, so
-       whitespace and syntax are the whole minification win: ~7MB off what npm
-       unpacks. Identifiers stay: renaming 2,142 `var IconFoo =` declarations
-       saves ~20KB, costs the component names in stack traces, and blinds
-       scripts/artwork-check.mjs, which counts those declarations to prove the
-       build kept every drawing. */
+    /* Generated JSX is mostly indentation by weight. Keep component names in
+       stack traces and for scripts/artwork-check.mjs. */
     esbuild.minifyWhitespace = true;
     esbuild.minifySyntax = true;
   },

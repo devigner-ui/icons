@@ -22,7 +22,33 @@ const IconTennis2 = forwardRef<SVGSVGElement, IconProps>(function IconTennis2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13.2 2.07s-1.1 4.1 1.4 8.43 6.6 5.43 6.6 5.43M2.8 8.07s4.1 1.1 6.6 5.43 1.4 8.43 1.4 8.43"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeDasharray="1.5 2"
+          />
+          <path
+            d="M7 3.34A10 10 0 1 1 3.34 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

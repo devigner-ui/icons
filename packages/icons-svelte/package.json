@@ -1,7 +1,7 @@
 {
   "name": "@devigner-ui/icons-svelte",
-  "version": "2.1.0",
-  "description": "8,588 open-source icons for Svelte: 2,147 symbols, each in outline, twotone, bold and bulk. Built on Solar Icon Set and Iconsax.",
+  "version": "2.2.0",
+  "description": "9,717 open-source icons for Svelte: 2,147 symbols, each in outline, twotone, bold and bulk, plus Broken on 1,129 matching symbols. Built on Solar Icon Set and Iconsax.",
   "keywords": [
     "icons",
     "svelte",

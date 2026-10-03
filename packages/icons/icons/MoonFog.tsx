@@ -22,7 +22,54 @@ const IconMoonFog = forwardRef<SVGSVGElement, IconProps>(function IconMoonFog(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8 22h8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M5 19h14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2 16h20"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m21.07 11.86-.64-.4zm-8.93-8.93-.38-.64v0zm8.34 12.77a.75.75 0 0 0 1.38.6zm-18.34.6a.75.75 0 0 0 1.38-.6zM4 7.38a.75.75 0 0 0-1.3-.76zm2.63-4.7a.75.75 0 1 0 .76 1.3zm8.88 11.57A5.75 5.75 0 0 1 9.75 8.5h-1.5c0 4 3.25 7.25 7.25 7.25zm4.93-2.78a5.8 5.8 0 0 1-4.93 2.78v1.5c2.63 0 4.94-1.4 6.2-3.5zM9.75 8.5a5.8 5.8 0 0 1 2.78-4.93l-.77-1.28A7.3 7.3 0 0 0 8.25 8.5zm11.5 3.5q-.01 2-.77 3.7l1.38.6q.87-2 .89-4.3zM3.52 15.7a9 9 0 0 1-.77-3.7h-1.5q.02 2.3.9 4.3zM12 2.75a.4.4 0 0 1-.27-.12.3.3 0 0 1-.08-.15c0-.03 0-.12.1-.19l.78 1.28c.5-.3.67-.86.6-1.3A1.13 1.13 0 0 0 12 1.25zm9.7 9.5c-.06.1-.15.1-.18.1a.3.3 0 0 1-.15-.08.4.4 0 0 1-.12-.27h1.5c0-.72-.57-1.08-1.03-1.14-.43-.06-1 .1-1.3.6zM2.76 12A9 9 0 0 1 4 7.38l-1.3-.76A10.7 10.7 0 0 0 1.25 12zm4.63-8.01A9 9 0 0 1 12 2.75v-1.5c-1.96 0-3.8.52-5.38 1.44z"
+            fill="currentColor"
+          />
+          <path
+            d="M19.9 2.3a.48.48 0 0 0-.9 0l-.43 1.1a.5.5 0 0 1-.27.28l-1.1.43c-.4.16-.4.74 0 .9l1.1.43q.19.08.27.28l.43 1.1c.16.4.74.4.9 0l.43-1.1a.5.5 0 0 1 .27-.28l1.1-.43c.4-.16.4-.74 0-.9l-1.1-.43a.5.5 0 0 1-.27-.28z"
+            stroke="currentColor"
+          />
+          <path
+            d="M16.03 8.13a.48.48 0 0 0-.9 0l-.15.4a.5.5 0 0 1-.28.27l-.4.16c-.4.16-.4.74 0 .9l.4.16q.2.08.28.27l.15.4c.16.41.74.41.9 0l.16-.4a.5.5 0 0 1 .27-.27l.4-.16c.4-.16.4-.74 0-.9l-.4-.16a.5.5 0 0 1-.27-.27z"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

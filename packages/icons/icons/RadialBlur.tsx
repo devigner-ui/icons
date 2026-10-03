@@ -23,7 +23,83 @@ const IconRadialBlur = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15.5 14.25a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"
+            stroke="currentColor"
+          />
+          <path
+            d="M15.5 9.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"
+            stroke="currentColor"
+          />
+          <path
+            d="M11 14.25a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"
+            stroke="currentColor"
+          />
+          <path
+            d="M11 9.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"
+            stroke="currentColor"
+          />
+          <path
+            d="M15 18.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10.5 18.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M15 18.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M15 5.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10.5 18.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10.5 5.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M18.25 9a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z"
+            fill="currentColor"
+          />
+          <path
+            d="M5.75 9a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z"
+            fill="currentColor"
+          />
+          <path
+            d="M18.25 13.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z"
+            fill="currentColor"
+          />
+          <path
+            d="M5.75 13.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z"
+            fill="currentColor"
+          />
+          <path
+            d="M7 3.34A10 10 0 1 1 3.34 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

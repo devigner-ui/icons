@@ -244,6 +244,7 @@ async function generateMetadata() {
       bold: "free",
       bulk: "free",
     };
+    if (content.includes('variant === "Broken"')) styles.broken = "free";
 
     const freeStyles = Object.entries(styles)
       .filter(([_, v]) => v === "free")

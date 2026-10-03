@@ -23,7 +23,38 @@ const IconBookmarkOpened = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12c0-4.71 0-7.07-1.46-8.54C19.07 2 16.7 2 12 2m9.94 14c-.1 2.2-.43 3.56-1.4 4.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54c.98-.97 2.35-1.3 4.54-1.4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 14c0-2.8 0-4.2.54-5.27a5 5 0 0 1 2.19-2.19C5.8 6 7.2 6 10 6h4c2.8 0 4.2 0 5.27.54a5 5 0 0 1 2.18 2.19c.4.78.5 1.73.54 3.27"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 6v4.8c0 .98 0 1.47-.13 1.76a1.5 1.5 0 0 1-1.72.85 5 5 0 0 1-1.47-.97c-.44-.33-.66-.5-.88-.6a2 2 0 0 0-1.6 0c-.22.1-.44.27-.88.6-.77.6-1.16.9-1.47.97a1.5 1.5 0 0 1-1.72-.85C7 12.27 7 11.78 7 10.81V6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

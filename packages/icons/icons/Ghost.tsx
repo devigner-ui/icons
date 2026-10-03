@@ -22,7 +22,38 @@ const IconGhost = forwardRef<SVGSVGElement, IconProps>(function IconGhost(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16 10.5c0 .83-.45 1.5-1 1.5s-1-.67-1-1.5.45-1.5 1-1.5 1 .67 1 1.5Z"
+            fill="currentColor"
+          />
+          <ellipse
+            cx="9"
+            cy="10.5"
+            rx="1"
+            ry="1.5"
+            fill="currentColor"
+          />
+          <path
+            d="M22 12.3C22 6.61 17.52 2 12 2S2 6.61 2 12.3v7.42c0 1.33 1.35 2.19 2.5 1.6a2.8 2.8 0 0 1 2.9.18 2.8 2.8 0 0 0 3.2 0l.36-.24a1.8 1.8 0 0 1 2.08 0l.36.24a2.8 2.8 0 0 0 3.2 0c.87-.6 1.97-.66 2.9-.19 1.15.6 2.5-.26 2.5-1.59v-3.7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

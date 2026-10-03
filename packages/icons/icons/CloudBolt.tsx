@@ -23,7 +23,32 @@ const IconCloudBolt = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12.35a5.7 5.7 0 0 1-4.5 5.52m-8.83-7.63a4.3 4.3 0 0 0-2.38-.71A4.26 4.26 0 0 0 2 13.76 4.26 4.26 0 0 0 6.29 18m8.1-10.97A5.8 5.8 0 0 1 18.15 7M7.12 9.61A5.68 5.68 0 0 1 12.48 2a5.7 5.7 0 0 1 5.68 5m0 0q1.03.37 1.84 1.05"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m9.63 17.45 1.14-1.55c.75-1 1.12-1.5 1.46-1.4.35.1.35.72.35 1.95v.12c0 .44 0 .67.14.8l.01.01c.14.14.38.14.84.14.83 0 1.25 0 1.39.25v.01c.14.26-.1.59-.59 1.24l-1.14 1.55c-.75 1-1.12 1.5-1.46 1.4-.35-.1-.35-.72-.35-1.95v-.12c0-.44 0-.66-.14-.8l-.01-.01c-.14-.14-.38-.14-.84-.14-.83 0-1.25 0-1.39-.25v-.01c-.14-.26.1-.58.59-1.24Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

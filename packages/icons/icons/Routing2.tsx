@@ -22,7 +22,49 @@ const IconRouting2 = forwardRef<SVGSVGElement, IconProps>(function IconRouting2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 5.26C2 3.46 3.57 2 5.5 2S9 3.46 9 5.26c0 1.78-1.12 3.86-2.86 4.61-.4.17-.87.17-1.28 0C3.12 9.12 2 7.04 2 5.26Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M15 17.26c0-1.8 1.57-3.26 3.5-3.26s3.5 1.46 3.5 3.26c0 1.78-1.12 3.86-2.86 4.61-.4.17-.87.17-1.28 0-1.74-.75-2.86-2.83-2.86-4.61Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 4.25a.75.75 0 0 0 0 1.5zM12 19l.53.53c.3-.3.3-.77 0-1.06zm5.2-10.31.4.63zM6.8 15.3l.4.64h0zm4.23 1.66a.75.75 0 0 0-1.06 1.06zm-1.06 3a.75.75 0 1 0 1.06 1.06zm.86-6.34a.75.75 0 1 0-.8-1.26zm2.34-3.26a.75.75 0 1 0 .8 1.26zm2.96-6.12H12v1.5h4.13zm-4.13 14H7.87v1.5H12zm.53.22-1.5-1.5-1.06 1.06 1.5 1.5zm-1.06 0-1.5 1.5 1.06 1.06 1.5-1.5zm-3.6-.22c-1.25 0-1.73-1.63-.67-2.3l-.8-1.27a2.75 2.75 0 0 0 1.47 5.07zm8.26-12.5c1.25 0 1.73 1.63.67 2.3l.8 1.27a2.75 2.75 0 0 0-1.47-5.07zm-6.1 6.62-3.64 2.31.8 1.27 3.64-2.32zm6.77-4.32-3.63 2.32.8 1.26 3.64-2.31z"
+            fill="currentColor"
+          />
+          <path
+            d="M18.5 17.5z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M5.5 5.5z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

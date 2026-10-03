@@ -23,7 +23,44 @@ const IconRemoteControllerMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M19 15V9c0-2.8 0-4.21-.67-5.22a4 4 0 0 0-1.1-1.1C16.2 2 14.8 2 12 2s-4.21 0-5.22.67a4 4 0 0 0-1.1 1.1C5.07 4.67 5 5.85 5 8m13.81 11q-.14.71-.48 1.22a4 4 0 0 1-1.1 1.1C16.2 22 14.8 22 12 22s-4.21 0-5.22-.67a4 4 0 0 1-1.1-1.1C5 19.2 5 17.8 5 15v-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx="12"
+            cy="5"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="12"
+            cy="17"
+            r="1"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

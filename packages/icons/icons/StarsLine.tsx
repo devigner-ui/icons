@@ -23,7 +23,43 @@ const IconStarsLine = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12.55 3.44c-.43-.93-.65-1.4-1.03-1.44-.38-.03-.67.38-1.26 1.2l-.15.22c-.17.23-.25.35-.37.42s-.27.09-.55.12l-.26.03c-1.01.11-1.52.17-1.67.52s.16.76.76 1.59l.16.21c.17.24.26.36.3.5.02.13 0 .27-.06.56l-.05.26c-.19 1-.29 1.5 0 1.75.3.26.77.1 1.73-.21l.25-.08c.28-.1.41-.14.55-.12.14.01.27.08.52.23l.23.13c.9.5 1.34.76 1.67.56s.32-.7.3-1.72V7.9c0-.29 0-.43.05-.56s.16-.23.37-.42l.2-.18c.74-.69 1.1-1.03 1.02-1.4-.08-.38-.57-.54-1.54-.86l-.25-.08a1.4 1.4 0 0 1-.52-.23c-.1-.1-.17-.23-.29-.49z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M11 22c-.33-2.17-.8-7.2 0-10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14.5 22c0-1.13.17-2.52.63-4M22 9.5a15 15 0 0 0-4.93 4.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 13.27s.65.75 1.22.9c.58.15 1.51-.17 1.51-.17s-.75.65-.9 1.22c-.15.58.17 1.51.17 1.51s-.65-.75-1.22-.9c-.58-.15-1.51.17-1.51.17s.75-.65.9-1.22c.15-.58-.17-1.51-.17-1.51Z"
+            stroke="currentColor"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

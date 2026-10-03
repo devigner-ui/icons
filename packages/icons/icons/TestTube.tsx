@@ -22,7 +22,32 @@ const IconTestTube = forwardRef<SVGSVGElement, IconProps>(function IconTestTube(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m19 7.8-.84-.48-8.41-4.83m0 0L8.9 2m.84.5L6.2 8.61M3.95 12.5l-1.3 2.25a4.83 4.83 0 0 0 1.78 6.6 4.86 4.86 0 0 0 6.63-1.77l1.5-2.58 1.63-2.83 1.71-2.95 2.26-3.9m-2.26 3.9-2.56-1.48m.85 4.43-4.2-2.41M12.55 17l-2.61-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 14.92c0 1.15-.9 2.08-2 2.08s-2-.93-2-2.08c0-.72.78-1.68 1.37-2.3a.86.86 0 0 1 1.26 0c.59.62 1.37 1.58 1.37 2.3Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

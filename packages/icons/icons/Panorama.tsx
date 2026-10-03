@@ -22,7 +22,38 @@ const IconPanorama = forwardRef<SVGSVGElement, IconProps>(function IconPanorama(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 5.86c0-.8-.8-1.53-2.12-2.1-1.17-.52-2.38.46-2.38 1.74v3.22M2 5.86c0 1.2 1.79 2.25 4.5 2.86 1.58.36 3.47.56 5.5.56s3.92-.2 5.5-.56C20.21 8.1 22 7.05 22 5.86m0 0V9M2 5.86c0-.8.8-1.53 2.12-2.1 1.17-.52 2.38.46 2.38 1.74v3.22M2 5.86v12.72C2 20.47 6.48 22 12 22s10-1.53 10-3.42V13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M19.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m21 20-2.5-2.15c-.8-.7-2-.76-2.88-.16l-.24.15a1.6 1.6 0 0 1-1.98-.16l-3.32-3.18a1.84 1.84 0 0 0-2.43-.08l-1.36 1.14L2.5 19.1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

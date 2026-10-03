@@ -22,7 +22,56 @@ const IconUSB = forwardRef<SVGSVGElement, IconProps>(function IconUSB(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="12"
+            cy="20"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx="6"
+            cy="6"
+            r="1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M11.25 18a.75.75 0 0 0 1.5 0zM12 2l.62-.42a.75.75 0 0 0-1.24 0zm1.38 3.42a.75.75 0 1 0 1.24-.84zm-4-.84a.75.75 0 0 0 1.24.84zm1.87 1.92a.75.75 0 0 0 1.5 0zm1.5 3.25a.75.75 0 0 0-1.5 0zm-1.37-7.33 2 3 1.24-.84-2-3zm0-.84-2 3 1.24.84 2-3zM12.75 18v-3h-1.5v3zm0-11.5V2h-1.5v4.5zm0 8.5V9.75h-1.5V15z"
+            fill="currentColor"
+          />
+          <path
+            d="M6 7v2.56a2 2 0 0 0 1.37 1.9l3.26 1.08a2 2 0 0 1 1.37 1.9V15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 10v2.56a2 2 0 0 1-1.37 1.9l-3.26 1.08a2 2 0 0 0-1.37 1.9V18"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 9c0-.47 0-.7.15-.85S17.53 8 18 8s.7 0 .85.15.15.38.15.85 0 .7-.15.85-.38.15-.85.15-.7 0-.85-.15S17 9.47 17 9Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

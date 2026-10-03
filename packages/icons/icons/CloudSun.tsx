@@ -22,7 +22,32 @@ const IconCloudSun = forwardRef<SVGSVGElement, IconProps>(function IconCloudSun(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 14.35A5.7 5.7 0 0 1 16.29 20H11m3.38-10.97A5.8 5.8 0 0 1 18.16 9m-9.5 3.23a4.3 4.3 0 0 0-2.37-.71A4.26 4.26 0 0 0 2 15.76 4.26 4.26 0 0 0 6.29 20H7m.12-8.4A5.68 5.68 0 0 1 12.48 4a5.7 5.7 0 0 1 5.68 5.01m0 0q1.03.37 1.84 1.05"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11 4a5 5 0 1 0-6 7.58"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

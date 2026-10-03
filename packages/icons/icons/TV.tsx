@@ -22,7 +22,47 @@ const IconTV = forwardRef<SVGSVGElement, IconProps>(function IconTV(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 14v2c0 2.83 0 4.24.88 5.12S5.18 22 8 22h8c2.83 0 4.24 0 5.12-.88S22 18.82 22 16v-4c0-2.83 0-4.24-.88-5.12S18.82 6 16 6H8c-2.83 0-4.24 0-5.12.88-.64.64-.82 1.57-.86 3.12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m9 2 3 3.5L15 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16 6v4m0 12v-8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 16a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M20 12a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

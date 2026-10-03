@@ -23,7 +23,45 @@ const IconStarFallMinimalistic2 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.23 8.62c-1.97.44-2.95.67-3.18 1.42-.24.75.43 1.54 1.77 3.1l.35.41c.38.45.57.67.66.94.08.28.06.58 0 1.17l-.05.54c-.2 2.1-.3 3.14.3 3.6.62.47 1.54.05 3.38-.8l.48-.22c.52-.24.78-.36 1.06-.36s.54.12 1.06.36l.48.22c1.84.85 2.76 1.27 3.38.8.6-.46.5-1.5.3-3.6m.96-3.06c1.34-1.56 2-2.35 1.77-3.1s-1.21-.98-3.18-1.42l-.51-.12c-.56-.12-.84-.19-1.06-.36s-.37-.43-.66-.94l-.26-.47C15.26 4.9 14.76 4 14 4s-1.26.9-2.28 2.73"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2.09 16a4.7 4.7 0 0 1 4-.87"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2.09 10.5c1-.5 1.29-.44 2-.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m2 5.6.2-.11a8.5 8.5 0 0 1 6.75-1l.21.05"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

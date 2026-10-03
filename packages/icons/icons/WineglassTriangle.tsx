@@ -23,7 +23,27 @@ const IconWineglassTriangle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m12 14.57 8.52-8.7A1.69 1.69 0 0 0 19.3 3H14m-2 11.57-8.52-8.7A1.69 1.69 0 0 1 4.7 3H10m2 11.57V21m0 0h4.24M12 21H7.76M7.47 9.75h9.06"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

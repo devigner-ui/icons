@@ -23,7 +23,50 @@ const IconJarOfPills = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 3.5c0-.47 0-.7.08-.88a1 1 0 0 1 .54-.54C6.8 2 7.03 2 7.5 2h9c.47 0 .7 0 .88.08q.38.16.54.54c.08.18.08.41.08.88s0 .7-.08.88a1 1 0 0 1-.54.54c-.18.08-.41.08-.88.08h-9c-.47 0-.7 0-.88-.08a1 1 0 0 1-.54-.54C6 4.2 6 3.97 6 3.5Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M4.5 18h15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M4.5 10h3.75m11.25 0H12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 10.9a4 4 0 0 0-1.48-3.1l-2.36-1.9a4 4 0 0 0-1.14-.79C14.69 5 14.34 5 13.64 5H10.4c-.7 0-1.04 0-1.36.11s-.6.33-1.14.77L5.5 7.8A4 4 0 0 0 4 10.92v1.58M20 15v2.56a4 4 0 0 1-.91 2.55l-.36.43A4 4 0 0 1 15.64 22H8.96c-.57 0-.86 0-1.13-.04a4 4 0 0 1-2.15-1c-.2-.19-.39-.4-.75-.85A4 4 0 0 1 4 17.55V16.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 12v4m-2-2h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

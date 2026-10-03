@@ -59,7 +59,7 @@ const names = [];
 for (const [name, drawings] of icons) {
   const styles = {};
 
-  for (const style of STYLES) {
+  for (const style of Object.keys(drawings)) {
     const { attrs, inner } = splitSvg(drawings[style]);
 
     /* The parse is only as good as its inverse says it is. */
@@ -100,7 +100,7 @@ writeFileSync(
     `export type IconStyle = ${STYLES.map((s) => `"${s}"`).join(" | ")};\n\n` +
     `export type IconName = ${names.map((n) => `"${n}"`).join(" | ")};\n\n` +
     `export interface IconProps extends SvgProps {\n` +
-    `  /** Which of the four drawings to render. Defaults to "outline". */\n` +
+    `  /** Which drawing to render. Broken is available where supplied. Defaults to "outline". */\n` +
     `  variant?: IconStyle;\n` +
     `  /** Width and height, in points. Defaults to 24. */\n` +
     `  size?: number | string;\n` +

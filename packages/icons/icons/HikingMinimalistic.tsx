@@ -23,7 +23,44 @@ const IconHikingMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="11.5"
+            cy="5.5"
+            r="2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M9 16.5s-.43 1.62-1 2.5c-.6.93-2 2-2 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m10.21 11.9.75.08zm-.07.69-.75-.08zm8.44-2.74-.48-.57h0zm.9.23a.75.75 0 0 0-.96-1.16zm-8.28 4.67-.4.64h0zm.34.21.4-.64h0zm2.72 4.43.74-.06zm-.6 1.68a.75.75 0 1 0 1.49-.14zM13 10.5l-.39.64.05.03zm-3.54 1.33-.07.68 1.5.15.07-.68zm9.6-1.4.42-.35-.96-1.16-.42.36zm-8.25 4.96.33.2.8-1.27-.34-.2zm2.7 4.07.14 1.6 1.5-.13-.15-1.6zm-.85-8.29a5.9 5.9 0 0 0 6.4-.74l-.96-1.15a4.4 4.4 0 0 1-4.76.55zm-1.52 4.43a5.1 5.1 0 0 1 2.37 3.86l1.5-.13a6.6 6.6 0 0 0-3.08-5zm-1.75-3.1a3 3 0 0 0 1.42 2.88l.8-1.27c-.5-.31-.78-.88-.72-1.46zm1.57-.53a1.1 1.1 0 0 1 1.65-.84l.78-1.28a2.6 2.6 0 0 0-3.93 1.97z"
+            fill="currentColor"
+          />
+          <path
+            d="M19 14V7m0 14v-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

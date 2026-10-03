@@ -22,7 +22,70 @@ const IconPodcast = forwardRef<SVGSVGElement, IconProps>(function IconPodcast(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 10a3 3 0 1 1 6 0v3a3 3 0 1 1-6 0z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M13 10h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13 13h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 10h1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 13h1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.95 8.25a.75.75 0 1 0 1.42-.5zm-10.2 5.9V10h-1.5v4.15zm-1.5 0c0 .6-.5 1.1-1.1 1.1v1.5a2.6 2.6 0 0 0 2.6-2.6zm12 0a2.6 2.6 0 0 0 2.6 2.6v-1.5c-.6 0-1.1-.5-1.1-1.1zM12 3.25A6.75 6.75 0 0 0 5.25 10h1.5c0-2.9 2.35-5.25 5.25-5.25zm0 1.5a5.25 5.25 0 0 1 4.95 3.5l1.42-.5A6.75 6.75 0 0 0 12 3.25z"
+            fill="currentColor"
+          />
+          <path
+            d="M2 12a2 2 0 1 1 4 0v2a2 2 0 1 1-4 0z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M18 12a2 2 0 1 1 4 0v2a2 2 0 1 1-4 0z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 16v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

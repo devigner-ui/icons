@@ -23,7 +23,40 @@ const IconBillCheck = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21 7v-.63c0-1.2 0-1.79-.16-2.27-.3-.91-1-1.63-1.88-1.94C18.5 2 17.91 2 16.76 2H7.24c-1.16 0-1.74 0-2.21.16A3 3 0 0 0 3.16 4.1C3 4.58 3 5.18 3 6.37V15m18-4v9.37c0 .86-.98 1.32-1.6.75a.95.95 0 0 0-1.3 0l-.48.44c-.64.59-1.6.59-2.25 0a1.66 1.66 0 0 0-2.24 0c-.65.59-1.61.59-2.26 0a1.66 1.66 0 0 0-2.24 0c-.65.59-1.61.59-2.26 0l-.48-.44a.95.95 0 0 0-1.28 0c-.63.57-1.61.11-1.61-.75V19"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m9.5 10.4 1.43 1.6 3.57-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.5 15.5H9m7.5 0H12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -22,7 +22,27 @@ const IconTextBold = forwardRef<SVGSVGElement, IconProps>(function IconTextBold(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5 12h7a5 5 0 0 0 0-10H7.6A2.6 2.6 0 0 0 5 4.6zm0 0h9a5 5 0 0 1 0 10H7.06A2 2 0 0 1 5 20m0-8v3.97"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

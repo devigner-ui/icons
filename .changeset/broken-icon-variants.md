@@ -6,4 +6,4 @@
 "@devigner-ui/icons-react-native": minor
 ---
 
-Add IconArrowUpDown.
+Add the Broken variant for icons that provide Broken artwork.

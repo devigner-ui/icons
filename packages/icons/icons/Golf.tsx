@@ -22,7 +22,39 @@ const IconGolf = forwardRef<SVGSVGElement, IconProps>(function IconGolf(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16.98 21.54c-1.47.3-3.17.46-4.98.46-5.52 0-10-1.57-10-3.5S6.48 15 12 15s10 1.57 10 3.5q-.02.83-1 1.53"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 18V2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m12 3.5 5.42 2.71C18.98 7 19.76 7.38 19.76 8s-.78 1-2.34 1.79L12 12.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

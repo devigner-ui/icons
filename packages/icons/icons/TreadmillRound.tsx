@@ -23,7 +23,57 @@ const IconTreadmillRound = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="15"
+            cy="4"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M11 16v-1.21a3 3 0 0 0-1-2.12l-.17-.15q-.2-.14-.25-.21a2 2 0 0 1-.13-2.75c.05-.06.1-.12.23-.24l.33-.33a1.9 1.9 0 0 0-2.35-2.96L4.5 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 15.5h.38c1.36 0 2.66-.54 3.62-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12.5 10a4.8 4.8 0 0 0 3 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11.29 22h-8.2a1.09 1.09 0 0 1-.2-2.16l16.17-2.83a2.51 2.51 0 1 1 .43 4.99H15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M18.38 9.91a.75.75 0 1 0 1.48.22zm3.77-2.17a.75.75 0 1 0-.3-1.48zm-2.85 6.13a.75.75 0 0 0-1.48-.22zm.56-3.74a2.9 2.9 0 0 1 2.29-2.4l-.3-1.47a4.4 4.4 0 0 0-3.47 3.65zm-1.12 7.48.56-3.74-1.48-.22-.56 3.74z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

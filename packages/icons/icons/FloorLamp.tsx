@@ -23,7 +23,55 @@ const IconFloorLamp = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 18v-1.06c0-1.28-.59-2.5-1.6-3.27l-3.88-2.78m0 0a3.1 3.1 0 0 0 .1-3.5c-.3-.48-.96-.4-1.3.05l-2.54 3.24m0 0c-.35.45-.27 1.12.26 1.3a3.05 3.05 0 0 0 3.48-1.09m-3.74-.2c-.89-.71-1.04-2-.34-2.9s1.98-1.05 2.87-.35"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 18v-1.06c0-1.28.59-2.5 1.6-3.27l3.88-2.78m0 0a3.1 3.1 0 0 1-.1-3.5c.3-.48.96-.4 1.3.05l2.54 3.24m0 0c.35.45.27 1.12-.26 1.3a3.05 3.05 0 0 1-3.48-1.09m3.74-.2c.89-.71 1.04-2 .34-2.9a2.03 2.03 0 0 0-2.87-.35"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 22h6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 22v-9m0-6v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 7a3 3 0 0 0 2.84-2.02c.18-.52-.29-.98-.84-.98h-4c-.55 0-1.02.46-.84.98A3 3 0 0 0 12 7Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 2a2 2 0 0 1 2 2h-4c0-1.1.9-2 2-2Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

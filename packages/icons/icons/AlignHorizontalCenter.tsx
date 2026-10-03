@@ -23,7 +23,38 @@ const IconAlignHorizontalCenter = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 2v3m0 17v-3m0-5v-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13 5H7.5c-.93 0-1.4 0-1.75.2a1.5 1.5 0 0 0-.55.55C5 6.1 5 6.57 5 7.5s0 1.4.2 1.75q.2.35.55.55c.35.2.82.2 1.75.2h9c.93 0 1.4 0 1.75-.2q.35-.2.55-.55c.2-.35.2-.82.2-1.75s0-1.4-.2-1.75a1.5 1.5 0 0 0-.55-.55c-.28-.16-.64-.2-1.25-.2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 16.5c0-.93 0-1.4.2-1.75q.2-.35.55-.55c.35-.2.82-.2 1.75-.2h5c.93 0 1.4 0 1.75.2q.35.2.55.55c.2.35.2.82.2 1.75s0 1.4-.2 1.75a1.5 1.5 0 0 1-.55.55c-.35.2-.82.2-1.75.2h-5c-.93 0-1.4 0-1.75-.2a1.5 1.5 0 0 1-.55-.55C7 17.9 7 17.43 7 16.5Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

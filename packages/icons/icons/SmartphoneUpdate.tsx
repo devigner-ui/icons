@@ -23,7 +23,48 @@ const IconSmartphoneUpdate = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <g clipPath="url(#clip0_1276_5974)">
+            <path
+              d="M20 10c0-3.77 0-5.66-1.17-6.83C17.77 2.11 16.1 2.01 13 2m7 12c0 3.77 0 5.66-1.17 6.83S15.77 22 12 22s-5.66 0-6.83-1.17S4 17.77 4 14v-3"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+            <path
+              d="M2.73 4h-.75zm0 .8-.55.5a.75.75 0 0 0 1.1 0zm1.28-.3a.75.75 0 1 0-1.1-1zm-1.46-1a.75.75 0 0 0-1.1 1zm7.72-.3.55-.5a.75.75 0 0 0-1.1 0zm-1.28.3a.75.75 0 0 0 1.1 1zm1.46 1a.75.75 0 0 0 1.1-1zM4.58 6.3a.75.75 0 0 0-1.12 1zm3.96-4.47A.75.75 0 0 0 9.71.89zM6.38-.75c-2.5 0-4.4 2.2-4.4 4.75h1.5c0-1.86 1.36-3.25 2.9-3.25zM1.98 4v.8h1.5V4zm1.3 1.3.73-.8-1.1-1-.73.8zm0-1-.73-.8-1.1 1 .73.8zm3.34 4.45c2.5 0 4.4-2.2 4.4-4.75h-1.5c0 1.86-1.36 3.25-2.9 3.25zM11.02 4v-.8h-1.5V4zm-1.3-1.3-.73.8 1.1 1 .73-.8zm0 1 .73.8 1.1-1-.73-.8zM3.46 7.3c.8.89 1.9 1.45 3.16 1.45v-1.5c-.79 0-1.51-.35-2.04-.94zM9.71.9c-.8-1-1.98-1.65-3.33-1.65v1.5c.84 0 1.62.4 2.16 1.08z"
+              fill="currentColor"
+            />
+            <path
+              d="M15 19H9"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1276_5974">
+              <rect
+                width="24"
+                height="24"
+                fill="currentColor"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

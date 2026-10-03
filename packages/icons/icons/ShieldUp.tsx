@@ -22,7 +22,34 @@ const IconShieldUp = forwardRef<SVGSVGElement, IconProps>(function IconShieldUp(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16 11.55 12.6 9a1 1 0 0 0-1.2 0L8 11.55m6 2.5-2-1.5-2 1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M3 10.42c0-3.2 0-4.8.38-5.34S5.26 4.03 8.26 3l.58-.2C10.4 2.27 11.19 2 12 2s1.6.27 3.16.8l.58.2c3 1.03 4.5 1.54 4.88 2.08s.38 2.14.38 5.34v1.57a9.3 9.3 0 0 1-2 5.91M3.2 14c.85 4.3 4.38 6.51 6.7 7.53.72.31 1.08.47 2.1.47s1.38-.16 2.1-.47q.88-.38 1.9-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

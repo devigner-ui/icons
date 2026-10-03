@@ -22,7 +22,39 @@ const IconRouting3 = forwardRef<SVGSVGElement, IconProps>(function IconRouting3(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="5"
+            cy="5"
+            r="3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx="19"
+            cy="19"
+            r="3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M11 4.25a.75.75 0 0 0 0 1.5zM13 19l.53.53c.3-.3.3-.77 0-1.06zm4.2-10.31.4.63zM6.8 15.3l.4.64h0zm5.23 1.66a.75.75 0 0 0-1.06 1.06zm-1.06 3a.75.75 0 0 0 1.06 1.06zm-.57-6.06a.75.75 0 0 0-.8-1.27zm2.8-3.56a.75.75 0 0 0 .8 1.26zm2.93-6.1H11v1.5h5.13zm-3.13 14H7.87v1.5H13zm.53.22-1.5-1.5-1.06 1.06 1.5 1.5zm-1.06 0-1.5 1.5 1.06 1.06 1.5-1.5zm-4.6-.22c-1.25 0-1.73-1.63-.67-2.3l-.8-1.27a2.75 2.75 0 0 0 1.47 5.07zm8.26-12.5c1.25 0 1.73 1.63.67 2.3l.8 1.27a2.75 2.75 0 0 0-1.47-5.07zm-6.53 6.9-3.2 2.04.8 1.27 3.2-2.04zm7.2-4.59-3.6 2.3.8 1.26 3.6-2.29z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

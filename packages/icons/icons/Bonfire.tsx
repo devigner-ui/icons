@@ -22,7 +22,45 @@ const IconBonfire = forwardRef<SVGSVGElement, IconProps>(function IconBonfire(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20 15 4 22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m4 15 5 2.19M20 22l-5.5-2.4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 10c-.2.67-1.08 2-3 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6 8.86C6 13.77 9.73 15 11.6 15c.96 0 2.34-.25 3.58-.96m1.92-1.8c.55-.86.9-1.97.9-3.38 0-3.13-2-5.36-3.81-6.64-.82-.58-1.84.06-1.84 1.04v.23c0 1-.42 2.81-1.61 3.57-.61.38-1.27-.2-1.34-.9l-.06-.58c-.07-.67-.77-1.08-1.32-.67a5 5 0 0 0-1.34 1.46"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

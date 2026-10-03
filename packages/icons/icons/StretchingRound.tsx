@@ -23,7 +23,34 @@ const IconStretchingRound = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="14.5"
+            cy="4.5"
+            r="2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M19 22v-3.95a2.9 2.9 0 0 0-3.37-2.85m-7.68-1.77-.03-.02c-1.04-1-.23-2.62.67-3.27.91-.64 4.76-1.64 4.76 3.3 0 1.69-.48 3.27-1.3 4.6M5 22c1.46 0 2.82-.37 4-1.03"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

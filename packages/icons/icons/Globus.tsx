@@ -22,7 +22,61 @@ const IconGlobus = forwardRef<SVGSVGElement, IconProps>(function IconGlobus(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 9.69c0-3.06-1.33-5.8-3.44-7.69M4 16.56A10.3 10.3 0 0 0 21.06 14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 4.55c.59.56 1.8 2.07 1.93 3.69.13 1.51 1.1 2.74 2.57 2.76.57 0 1.14-.42 1.14-1q0-.29-.08-.54c-.06-.24-.07-.51.06-.8.46-.97 1.36-1.23 2.07-1.77.32-.23.61-.48.74-.68.35-.55.7-1.66.52-2.21"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M19 11c-.22.62-.37 2.25-2.85 2.28 0 0-2.2 0-2.86 1.24a2.8 2.8 0 0 0 0 2.48"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 22v-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 22h-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 22h-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5.94 13.5a7 7 0 1 1 2.56 2.56"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

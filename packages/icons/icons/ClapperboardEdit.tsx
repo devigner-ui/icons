@@ -23,7 +23,48 @@ const IconClapperboardEdit = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10 22c-3.41-.03-5.3-.22-6.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46c.97.98 1.3 2.35 1.4 4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2.5 7.25a.75.75 0 0 0 0 1.5zm19.5 0H2.5v1.5H22z"
+            fill="currentColor"
+          />
+          <path
+            d="M10.5 2.5 7 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 2.5 13.5 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m18.56 13.94.42-.42a1.77 1.77 0 1 1 2.5 2.5l-.42.42m-2.5-2.5s.05.88.84 1.66c.78.79 1.66.84 1.66.84m0 0-3.83 3.83c-.26.26-.39.4-.53.5q-.25.2-.55.34c-.16.08-.34.14-.68.25l-1.12.37-.36.13-.36.12a.48.48 0 0 1-.6-.6l.11-.37.13-.36.37-1.12c.11-.34.17-.52.25-.68q.14-.3.34-.55c.1-.14.24-.27.5-.53l3.83-3.83M14 21.86l-.85-.85"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

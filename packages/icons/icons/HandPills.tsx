@@ -23,7 +23,37 @@ const IconHandPills = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8.8 6.64a2.72 2.72 0 1 1 3.84-3.84l2.56 2.56a2.72 2.72 0 0 1-3.84 3.84z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M14 4s-.23 1.17-1.53 2.47S10 8 10 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M4 21.39h2.26q1.53 0 3.02.3c1.74.36 3.57.4 5.33.12m-.93-3.3q.18 0 .34-.04a5.4 5.4 0 0 0 2.38-1.16l1.8-1.37a1.9 1.9 0 0 1 2.22 0c.58.44.75 1.15.4 1.73-.43.68-1.03 1.55-1.6 2.08m-7.47-1.22a9 9 0 0 0 1.93-.01m0 0a1 1 0 0 0 .42-.24 1.5 1.5 0 0 0 .13-2.14 2 2 0 0 0-.45-.36c-2.8-1.67-7.15-.4-9.78 1.46m9.68 1.28h-.11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

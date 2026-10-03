@@ -23,7 +23,39 @@ const IconLayersMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12s-1 .9-2.98 1.69l-2.8 1.12c-2 .8-2.99 1.19-4.22 1.19s-2.23-.4-4.21-1.2l-2.81-1.1C2.99 12.89 2 12 2 12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 16s1 .9 2.98 1.69l2.8 1.12c2 .8 2.99 1.19 4.22 1.19a8 8 0 0 0 3-.71m4.02-1.6C21.01 16.89 22 16 22 16"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M4.98 6.31C2.99 7.11 2 7.51 2 8c0 .5 1 .9 2.98 1.69l2.8 1.12c2 .8 2.99 1.19 4.22 1.19s2.23-.4 4.21-1.2l2.81-1.11C21.01 8.89 22 8.49 22 8c0-.5-1-.9-2.98-1.69l-2.8-1.12C14.21 4.4 13.22 4 12 4a8 8 0 0 0-3 .71"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

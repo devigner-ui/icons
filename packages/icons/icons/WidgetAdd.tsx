@@ -23,7 +23,43 @@ const IconWidgetAdd = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14.5 6.5h3m0 0h3m-3 0v3m0-3v-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2.55 15.5c.06-.65.2-1.09.54-1.41.58-.59 1.52-.59 3.41-.59s2.83 0 3.41.59c.59.58.59 1.52.59 3.41s0 2.83-.59 3.41c-.58.59-1.52.59-3.41.59s-2.83 0-3.41-.59c-.31-.3-.46-.71-.53-1.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2.5 6.5c0-1.89 0-2.83.59-3.41.58-.59 1.52-.59 3.41-.59s2.83 0 3.41.59c.59.58.59 1.52.59 3.41s0 2.83-.59 3.41c-.58.59-1.52.59-3.41.59s-2.83 0-3.41-.59C2.5 9.33 2.5 8.4 2.5 6.5Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M13.5 17.5c0-1.89 0-2.83.59-3.41.58-.59 1.52-.59 3.41-.59s2.83 0 3.41.59c.59.58.59 1.52.59 3.41s0 2.83-.59 3.41c-.58.59-1.52.59-3.41.59s-2.83 0-3.41-.59c-.59-.58-.59-1.52-.59-3.41Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

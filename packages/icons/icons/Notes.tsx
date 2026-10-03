@@ -22,7 +22,46 @@ const IconNotes = forwardRef<SVGSVGElement, IconProps>(function IconNotes(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m11.78 10 4.83 1.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m11 12.9 2.9.77"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20.31 12.65c-.6 2.25-.9 3.38-1.59 4.11a4 4 0 0 1-2.3 1.21c-.92.12-2.04-.18-4.07-.73-2.25-.6-3.38-.9-4.11-1.59a4 4 0 0 1-1.16-2c-.23-.98.07-2.11.67-4.37l.52-1.93.25-.9c.45-1.67.76-2.59 1.34-3.21a4 4 0 0 1 2.01-1.16c.98-.23 2.1.07 4.36.67s3.39.91 4.12 1.6a4 4 0 0 1 1.16 2c.16.7.05 1.46-.23 2.65"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3.27 16.65c.6 2.25.9 3.38 1.6 4.11a4 4 0 0 0 2 1.16c.98.23 2.1-.07 4.36-.68 2.26-.6 3.39-.9 4.12-1.59a4 4 0 0 0 1.06-1.68M8.51 6.45l-1.16.3c-2.25.6-3.38.91-4.11 1.6a4 4 0 0 0-1.16 2c-.17.7-.06 1.46.23 2.65"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -22,7 +22,52 @@ const IconGlasses = forwardRef<SVGSVGElement, IconProps>(function IconGlasses(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 16a4 4 0 1 1-4-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="6"
+            cy="16"
+            r="4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m14 16.21-.66-.23a4 4 0 0 0-2.68 0l-.66.23"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m2 16 .76-8.4c.12-1.26.18-1.9.55-2.36.37-.47.97-.67 2.17-1.07L6 4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m22 16-.76-8.4c-.12-1.26-.18-1.9-.55-2.36-.37-.47-.97-.67-2.17-1.07L18 4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

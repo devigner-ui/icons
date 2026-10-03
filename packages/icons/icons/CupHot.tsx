@@ -22,7 +22,42 @@ const IconCupHot = forwardRef<SVGSVGElement, IconProps>(function IconCupHot(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3.63 16.4c.17 2.65.26 3.98 1.13 4.8.86.8 2.2.8 4.85.8h.78c2.66 0 3.99 0 4.85-.8.87-.82.96-2.15 1.13-4.8l.35-5.13c.13-2 .2-3-.4-3.64-.59-.63-1.6-.63-3.6-.63H7.28c-2 0-3.01 0-3.6.63-.6.64-.53 1.64-.4 3.64l.06.86"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 17h1a4 4 0 0 0 0-8h-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M10 18.75a.75.75 0 0 0 0-1.5zm3.5-1.5a.75.75 0 0 0 0 1.5zm-3.5 0H4v1.5h6zm6 0h-2.5v1.5H16z"
+            fill="currentColor"
+          />
+          <path
+            d="m6.05 5.06.41-.57a.7.7 0 0 0-.16-1 .7.7 0 0 1-.17-.98l.41-.57m7.51 3.12.41-.57a.7.7 0 0 0-.16-1 .7.7 0 0 1-.17-.98l.41-.57m-4.49 3.12.41-.57a.7.7 0 0 0-.16-1 .7.7 0 0 1-.17-.98l.41-.57"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

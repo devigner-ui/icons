@@ -23,7 +23,34 @@ const IconStarFall2 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.48 6.83c-1.82.68-2.73 1.02-2.84 1.72-.1.71.65 1.32 2.18 2.52l.4.32c.43.34.64.51.77.75.12.23.14.5.18 1.04l.03.5c.12 1.9.19 2.84.84 3.17.66.33 1.48-.19 3.12-1.2l.42-.27c.47-.3.7-.44.97-.48.26-.04.53.03 1.07.17l.5.13c1.89.49 2.84.74 3.35.23.52-.5.26-1.42-.25-3.26m.45-2.88c1.04-1.6 1.57-2.39 1.23-3.03s-1.32-.7-3.27-.8l-.51-.04a3 3 0 0 1-1.07-.17 3 3 0 0 1-.78-.75l-.32-.38c-1.25-1.48-1.87-2.22-2.6-2.1-.73.1-1.07.99-1.77 2.76"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6.6 8.55C3.48 10.7 1.1 14.77 2.33 22c1.1-3.01 4.38-5.43 8.06-6.59"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

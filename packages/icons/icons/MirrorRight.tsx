@@ -23,7 +23,40 @@ const IconMirrorRight = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 21c4.24 0 6.36 0 7.68-1.32S21 16.24 21 12m-9-9c4.24 0 6.36 0 7.68 1.32.82.81 1.13 1.94 1.25 3.68"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13 21H9c-2.83 0-4.24 0-5.12-.88S3 17.82 3 15V9c0-2.83 0-4.24.88-5.12S6.18 3 9 3h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray="2.5 3"
+          />
+          <path
+            d="M12 22V2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

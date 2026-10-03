@@ -23,7 +23,47 @@ const IconGhostSmile = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 15a5 5 0 0 0 6 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <ellipse
+            cx="15"
+            cy="9.5"
+            rx="1"
+            ry="1.5"
+            fill="currentColor"
+          />
+          <ellipse
+            cx="9"
+            cy="9.5"
+            rx="1"
+            ry="1.5"
+            fill="currentColor"
+          />
+          <path
+            d="M22 12.3C22 6.61 17.52 2 12 2S2 6.61 2 12.3v7.42c0 1.33 1.35 2.19 2.5 1.6a2.8 2.8 0 0 1 2.9.18 2.8 2.8 0 0 0 3.2 0l.36-.24a1.8 1.8 0 0 1 2.08 0l.36.24a2.8 2.8 0 0 0 3.2 0c.87-.6 1.97-.66 2.9-.19 1.15.6 2.5-.26 2.5-1.59v-3.7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

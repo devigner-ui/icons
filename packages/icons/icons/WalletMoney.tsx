@@ -23,7 +23,52 @@ const IconWalletMoney = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 10h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M22 12.5v-.57c-.04-.5-.47-.9-1-.93h-2.77C16.45 11 15 12.34 15 14s1.45 3 3.23 3H21c.54-.04.97-.43 1-.93l.01-.57"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="18"
+            cy="14"
+            r="1"
+            fill="currentColor"
+          />
+          <path
+            d="M10 22h3c3.77 0 5.66 0 6.83-1.17.8-.81 1.06-1.96 1.14-3.83m0-6c-.08-1.87-.33-3.02-1.14-3.83C18.66 6 16.77 6 13 6h-3C6.23 6 4.34 6 3.17 7.17S2 10.23 2 14s0 5.66 1.17 6.83c.65.65 1.53.94 2.83 1.07"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m6 6 3.74-2.48c1.05-.7 2.47-.7 3.52 0L17 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

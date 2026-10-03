@@ -23,7 +23,33 @@ const IconLightbulbMinimalistic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10 19.5h4M10.67 22h2.66"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 2.6c-.9-.38-1.93-.6-3-.6-3.87 0-7 2.8-7 6.22v.08c0 2 .87 3.92 2.41 5.38l1.1 1.04q.48.47.49 1.12c0 .64.52 1.16 1.16 1.16h3.68c.64 0 1.16-.52 1.16-1.16 0-.42.18-.83.49-1.12l1.1-1.04A7.5 7.5 0 0 0 19 8.3v-.08q0-1.18-.46-2.22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

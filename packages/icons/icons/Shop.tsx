@@ -22,7 +22,39 @@ const IconShop = forwardRef<SVGSVGElement, IconProps>(function IconShop(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3.5 11v3c0 3.77 0 5.66 1.17 6.83S7.73 22 11.5 22h1c3.77 0 5.66 0 6.83-1.17M20.5 11v3q.01 1.75-.04 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9.5 2h5m-5 0-.65 6.52a3.17 3.17 0 1 0 6.3 0L14.5 2m-5 0H7.42c-.91 0-1.36 0-1.75.1a3 3 0 0 0-1.9 1.55M9.5 2l-.72 7.25a3.06 3.06 0 1 1-6.05-.9L2.8 8m11.7-6h2.08c.91 0 1.36 0 1.75.1a3 3 0 0 1 1.9 1.55c.17.37.26.81.44 1.7l.6 3a3.06 3.06 0 1 1-6.05.9z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9.5 21.5v-3c0-.93 0-1.4.2-1.75q.2-.35.55-.55c.35-.2.82-.2 1.75-.2s1.4 0 1.75.2q.35.2.55.55c.2.35.2.82.2 1.75v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,32 @@ const IconScreencast2 = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20 18.42q.47-.23.83-.6C22 16.67 22 14.78 22 11v-1M4 18.42a3 3 0 0 1-.83-.6C2 16.67 2 14.78 2 11s0-5.66 1.17-6.83S6.23 3 10 3h4c3.77 0 5.66 0 6.83 1.17q.68.69.92 1.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9.95 16.05c.93-.93 1.4-1.4 1.97-1.43h.16c.57.03 1.04.5 1.97 1.43 2.03 2.03 3.04 3.04 2.76 3.91l-.1.22C16.3 21 14.86 21 12 21c-2.87 0-4.3 0-4.72-.82l-.09-.22c-.28-.87.73-1.88 2.76-3.91Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

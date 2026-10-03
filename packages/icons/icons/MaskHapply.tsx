@@ -23,7 +23,45 @@ const IconMaskHapply = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21 7v-.28c0-2.2 0-3.29-.7-3.89-.71-.6-1.8-.41-3.96-.05l-1.05.17a21 21 0 0 1-3.29.41c-.83 0-1.65-.13-3.29-.4l-1.05-.18c-2.16-.36-3.25-.54-3.95.05S3 4.53 3 6.72V12c0 5.49 4.24 8.15 6.9 9.29.72.3 1.08.46 2.1.46s1.38-.16 2.1-.46c2.66-1.14 6.9-3.8 6.9-9.29v-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6.5 9c.3-.58 1.08-1 2-1s1.7.42 2 1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13.5 9c.3-.58 1.08-1 2-1s1.7.42 2 1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8.5 14s1.05 1 3.5 1 3.5-1 3.5-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

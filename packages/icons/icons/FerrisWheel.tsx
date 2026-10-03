@@ -23,7 +23,74 @@ const IconFerrisWheel = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14 11a2 2 0 1 1-2-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20.5 7.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M20.5 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M5.5 7.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M5.5 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 2.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 18.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m18.5 22-3.33-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m10.5 13-5 9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10.56 3.78a3 3 0 0 1 2.88 0l4.79 2.62a3 3 0 0 1 1.56 2.63v4.94a3 3 0 0 1-1.56 2.63l-4.8 2.62a3 3 0 0 1-2.87 0L5.77 16.6a3 3 0 0 1-1.56-2.63V9.03A3 3 0 0 1 5.77 6.4z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

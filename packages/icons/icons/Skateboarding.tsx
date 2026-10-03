@@ -23,7 +23,65 @@ const IconSkateboarding = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m3 17 1.2 1.34a2 2 0 0 0 1.5.66H10m11-2-1.2 1.34a2 2 0 0 1-1.5.66H14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <circle
+            cx="7"
+            cy="21"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="17"
+            cy="21"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="19"
+            cy="4"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M15 16.5v-1.42a3 3 0 0 0-1.5-2.51l-.17-.12a2 2 0 0 1-.19-3.16l.15-.12.45-.36a1.74 1.74 0 0 0-2.01-2.83L8.5 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 15.5h.38c1.36 0 2.66-.54 3.62-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.5 10a8 8 0 0 0 4 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

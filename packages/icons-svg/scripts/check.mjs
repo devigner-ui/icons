@@ -25,15 +25,23 @@ const counts = STYLES.map((style) => {
   return [style, files, dir];
 });
 
-/* Every style draws every symbol, so any disagreement is a lost drawing. */
-const [, first] = counts[0];
-for (const [style, files] of counts) {
+/* The four core styles draw every symbol. Broken is intentionally selective:
+   it must be a non-empty subset of outline, never an outline fallback copied
+   into a misleading fifth directory. */
+const [, outline] = counts.find(([style]) => style === "outline");
+for (const [style, files] of counts.filter(([style]) => style !== "broken")) {
   assert.equal(
     files.length,
-    first.length,
-    `${style} has ${files.length} files, ${counts[0][0]} has ${first.length}`,
+    outline.length,
+    `${style} has ${files.length} files, outline has ${outline.length}`,
   );
 }
+const [, broken] = counts.find(([style]) => style === "broken");
+const outlineNames = new Set(outline.map((file) => file.toLowerCase()));
+assert.ok(
+  broken.every((file) => outlineNames.has(file.toLowerCase())),
+  "Broken emitted an icon that has no outline counterpart",
+);
 
 for (const [style, files, dir] of counts) {
   const svg = readFileSync(path.join(dir, files[0]), "utf8");
@@ -57,5 +65,5 @@ for (const [style, files, dir] of counts) {
 }
 
 console.log(
-  `ok  ${first.length} icons x ${STYLES.length} styles on disk, sprites agree`,
+  `ok  ${outline.length} icons in four core styles, plus ${broken.length} Broken drawings; sprites agree`,
 );

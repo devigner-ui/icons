@@ -23,7 +23,35 @@ const IconDumbbellSmall = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15.5 9v6c0 .46 0 .7.05.89.14.52.54.92 1.06 1.06.2.05.43.05.89.05s.7 0 .89-.05a1.5 1.5 0 0 0 1.06-1.06c.05-.2.05-.43.05-.89V9c0-.46 0-.7-.05-.89a1.5 1.5 0 0 0-1.06-1.06C18.19 7 17.96 7 17.5 7s-.7 0-.89.05a1.5 1.5 0 0 0-1.06 1.06c-.05.2-.05.43-.05.89Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M4.5 9v6c0 .46 0 .7.05.89.14.52.54.92 1.06 1.06.2.05.43.05.89.05s.7 0 .89-.05a1.5 1.5 0 0 0 1.06-1.06c.05-.2.05-.43.05-.89V9c0-.46 0-.7-.05-.89a1.5 1.5 0 0 0-1.06-1.06C7.19 7 6.96 7 6.5 7s-.7 0-.89.05a1.5 1.5 0 0 0-1.06 1.06c-.05.2-.05.43-.05.89Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M2 12h-.75zm20 0h-.75zm-11 .75a.75.75 0 0 0 0-1.5zm3-1.5a.75.75 0 0 0 0 1.5zm-10 2c-.69 0-1.25-.56-1.25-1.25h-1.5A2.75 2.75 0 0 0 4 14.75zm16 1.5A2.75 2.75 0 0 0 22.75 12h-1.5c0 .69-.56 1.25-1.25 1.25zm0-4c.69 0 1.25.56 1.25 1.25h1.5A2.75 2.75 0 0 0 20 9.25zM4 9.25A2.75 2.75 0 0 0 1.25 12h1.5c0-.69.56-1.25 1.25-1.25zm0 1.5h1v-1.5H4zm1 2.5H4v1.5h1zm15 0h-1v1.5h1zm-1-2.5h1v-1.5h-1zm-10 2h2v-1.5H9zm5 0h1v-1.5h-1z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

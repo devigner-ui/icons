@@ -22,7 +22,38 @@ const IconAlignTop = forwardRef<SVGSVGElement, IconProps>(function IconAlignTop(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10 3h12M2 3h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 13v5.5c0 .93 0 1.4.2 1.75q.2.35.55.55c.35.2.82.2 1.75.2s1.4 0 1.75-.2q.35-.2.55-.55c.2-.35.2-.82.2-1.75v-9c0-.93 0-1.4-.2-1.75a1.5 1.5 0 0 0-.55-.55C8.9 7 8.43 7 7.5 7s-1.4 0-1.75.2a1.5 1.5 0 0 0-.55.55C5.04 8.03 5 8.39 5 9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.5 7c-.93 0-1.4 0-1.75.2a1.5 1.5 0 0 0-.55.55c-.2.35-.2.82-.2 1.75v6c0 .93 0 1.4.2 1.75q.2.35.55.55c.35.2.82.2 1.75.2s1.4 0 1.75-.2q.35-.2.55-.55c.2-.35.2-.82.2-1.75v-6c0-.93 0-1.4-.2-1.75a1.5 1.5 0 0 0-.55-.55C17.9 7 17.43 7 16.5 7Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

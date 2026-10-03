@@ -22,7 +22,39 @@ const IconBalloon = forwardRef<SVGSVGElement, IconProps>(function IconBalloon(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8 16.6a6.7 6.7 0 0 0 4 1.4c4.14.03 7.6-3.92 7.56-8.2A7.77 7.77 0 0 0 12 2a7.5 7.5 0 0 0-7.44 7.68q.03 1.74.68 3.32"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15.5 9a3.03 3.03 0 0 0-3-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 20.35c.32 0 .48 0 .6-.02a1.1 1.1 0 0 0 .85-1.4 3 3 0 0 0-.26-.5M12 20.34c-.32 0-.48 0-.6-.02a1.1 1.1 0 0 1-.85-1.4c.03-.1.1-.23.26-.5M12 20.34v2.15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

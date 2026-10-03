@@ -23,7 +23,73 @@ const IconHeartShine = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 2v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 20v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 12h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 12h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m6 18 .34-.34"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17.66 6.34 18 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m18 18-.34-.34"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6.34 6.34 6 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m10.78 15.35-.46.59zm-3.53-3.97a.75.75 0 0 0 1.5 0zM12 9.9l-.54.52a.75.75 0 0 0 1.08 0zm1.22 5.45.46.59zM10.29 14a.75.75 0 0 0-.96 1.15zm-1.54-2.62c0-.72.4-1.28.9-1.51.43-.21 1.1-.2 1.8.55l1.1-1.03c-1.1-1.16-2.43-1.4-3.54-.88a3.2 3.2 0 0 0-1.76 2.87zm1.57 4.56c.2.16.44.36.7.5.25.16.59.31.98.31v-1.5s-.07 0-.22-.1a5 5 0 0 1-.53-.38zm3.36 0c.55-.44 1.33-1 1.93-1.7a4.3 4.3 0 0 0 1.14-2.86h-1.5c0 .76-.3 1.35-.77 1.88-.49.56-1.1 1-1.73 1.5zm3.07-4.56c0-1.26-.7-2.38-1.76-2.87-1.1-.52-2.44-.28-3.53.88l1.08 1.03c.71-.75 1.38-.76 1.82-.55.5.23.89.8.89 1.51zm-4 3.39q-.32.25-.53.39c-.15.09-.21.09-.22.09v1.5c.4 0 .73-.15.98-.3.26-.15.5-.35.7-.51zm-1.5 0L10.3 14l-.96 1.15c.33.28.7.56.99.79z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

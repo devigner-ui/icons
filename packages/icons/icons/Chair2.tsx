@@ -22,7 +22,43 @@ const IconChair2 = forwardRef<SVGSVGElement, IconProps>(function IconChair2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 15.5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1 2 2 0 0 1-2 2H8a2 2 0 0 1-2-2Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M15.79 2.5C15.04 2 14.03 2 12 2s-3.04 0-3.79.5a3 3 0 0 0-.64.56c-.58.69-.7 1.7-.94 3.7l-.1.76c-.24 2.1-.37 3.13.23 3.8.6.68 1.65.68 3.75.68h2.98c2.1 0 3.15 0 3.75-.67.6-.68.47-1.72.22-3.8l-.09-.76"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 12v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 22v-2m0 0v-2.5m0 2.5h.5c1 0 1.69 1.07 2 2M12 20h-.5c-1 0-1.69 1.07-2 2M6 15.5 5 13c-.5-1-1-1.5-3-1.5m16 4 1-2.5c.5-1 1-1.5 3-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,43 @@ const IconCaseRound = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.17 4a3 3 0 0 1 5.66 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 22.25a.75.75 0 0 0 0 1.5zm-7.68-.42.5-.56zm15.36 0-.5-.56zM7.95 23.68a.75.75 0 1 0 .1-1.5zM2.25 13c0 1.87 0 3.83.17 5.47q.11 1.24.42 2.24c.2.65.5 1.26.98 1.68l1-1.12a2.3 2.3 0 0 1-.55-1.01q-.24-.79-.36-1.95A55 55 0 0 1 3.75 13zM12 23.75c2.1 0 3.75 0 5.03-.15a5.5 5.5 0 0 0 3.15-1.21l-1-1.12c-.5.44-1.17.7-2.33.84s-2.71.14-4.85.14zm-3.95-1.56c-1.72-.1-2.62-.38-3.23-.92l-1 1.12c1.02.9 2.36 1.19 4.13 1.3zm12.2-8.8c0 1.83-.01 3.61-.18 5.08q-.12 1.1-.36 1.84-.25.73-.53.96l1 1.12c.46-.41.76-1 .96-1.61q.3-.96.42-2.14c.18-1.57.19-3.44.19-5.25z"
+            fill="currentColor"
+          />
+          <path
+            d="m14.66 15 3-.78M9.34 15l-6-1.57c-.6-.15-.9-.23-1.09-.42l-.1-.11C2 12.69 2 12.42 2 11.88c0-2.13 0-3.2.67-3.92q.2-.2.44-.37C3.93 7 5.16 7 7.6 7h8.78c2.45 0 3.68 0 4.5.59q.24.15.44.37c.67.72.67 1.79.67 3.92 0 .54 0 .8-.15 1.02l-.1.11c-.15.15-.37.23-.75.34"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 13.5h-4a.5.5 0 0 0-.5.5v2.16c0 .2.12.39.31.47l.7.28a4 4 0 0 0 2.98 0l.7-.28a.5.5 0 0 0 .31-.47V14a.5.5 0 0 0-.5-.5Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

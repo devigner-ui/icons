@@ -23,7 +23,42 @@ const IconTranslation = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12a10 10 0 0 1-2.92 7.06M19.14 5q1.29 1.3 2.03 3M5 19.14a9.97 9.97 0 0 1-.06-14.22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M6 11.98c0-1.55.67-2.96 1.76-3.98m8.52.04A5.4 5.4 0 0 1 18 11.98c0 1.55-.67 2.96-1.75 3.98M7.8 16q-.5-.46-.86-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <circle
+            cx="12"
+            cy="12"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
