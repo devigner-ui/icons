@@ -22,7 +22,38 @@ const IconDevices = forwardRef<SVGSVGElement, IconProps>(function IconDevices(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 10c0-3.77 0-5.66-1.17-6.83S17.77 2 14 2 8.34 2 7.17 3.17C6.23 4.11 6.04 5.52 6.01 8M22 14c0 3.77 0 5.66-1.17 6.83S17.77 22 14 22h-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 14.5c0-1.4 0-2.1.34-2.61a2 2 0 0 1 .55-.55C3.39 11 4.09 11 5.5 11c1.4 0 2.1 0 2.61.34a2 2 0 0 1 .55.55c.34.5.34 1.2.34 2.61v4c0 1.4 0 2.1-.34 2.61a2 2 0 0 1-.55.55c-.5.34-1.2.34-2.61.34-1.4 0-2.1 0-2.61-.34a2 2 0 0 1-.55-.55C2 20.61 2 19.91 2 18.5z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M17 19h-5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

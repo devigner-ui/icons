@@ -23,7 +23,31 @@ const IconOvenMitts = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.13 17.03a.75.75 0 1 0 1.05-1.08zm3.37 1.19a.75.75 0 1 0-1.04 1.08zm-2.32-2.26-5.64-5.54-1.05 1.07 5.64 5.54zm3.64 3.53-1.32-1.27-1.04 1.08 1.32 1.27z"
+            fill="currentColor"
+          />
+          <path
+            d="M4.02 16.54C2.67 15.22 2 14.56 2 13.74c0-.53.29-1 .87-1.63.59-.64.89-.96 1.02-1.3s.14-.71.14-1.47L4.07 6C4.03 3.82 5.44 2.03 7.2 2c1.46-.02 2.7 1.15 3.12 2.78m-.96.94.96-.94.47-.46a6.67 6.67 0 0 1 9.28 0 6.3 6.3 0 0 1 0 9.08M17.42 16l-.73.71-3.4 3.32c-1.33 1.31-2 1.97-2.84 1.97s-1.5-.66-2.85-1.97l-1.07-1.05"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

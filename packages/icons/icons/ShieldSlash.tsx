@@ -23,7 +23,49 @@ const IconShieldSlash = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m7.84 20.02 1.59 1.19a4.55 4.55 0 0 0 5.14 0l4.3-3.21a5 5 0 0 0 1.73-3.44V7.12"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3.41 11.04v3.52c0 1.18.78 2.73 1.73 3.44l.2.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m18.98 4.34-.47-.24-4.99-1.87a5 5 0 0 0-3.02 0l-5 1.88a3.5 3.5 0 0 0-2.09 3.01"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22 2 2 22"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,21 +80,21 @@ const IconShieldSlash = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m8.51 20.02 1.59 1.19a4.55 4.55 0 0 0 5.14 0l4.3-3.21a5 5 0 0 0 1.73-3.44V7.12"
+              d="m7.84 20.02 1.59 1.19a4.55 4.55 0 0 0 5.14 0l4.3-3.21a5 5 0 0 0 1.73-3.44V7.12"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="m19.65 4.34-.47-.24-4.99-1.87a5 5 0 0 0-3.02 0l-5 1.88a3.5 3.5 0 0 0-2.09 3.01v7.43c0 1.18.78 2.73 1.73 3.44l.2.15"
+              d="m18.98 4.34-.47-.24-4.99-1.87a5 5 0 0 0-3.02 0l-5 1.88a3.5 3.5 0 0 0-2.09 3.01v7.43c0 1.18.78 2.73 1.73 3.44l.2.15"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="m22.67 2-20 20"
+              d="M22 2 2 22"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -74,16 +116,16 @@ const IconShieldSlash = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M20.03 4.64 6.5 18.17l-1.1-.82a3.3 3.3 0 0 1-1.18-2.37V6.89a3.2 3.2 0 0 1 1.91-2.77l5.5-2.06a3.5 3.5 0 0 1 2.08 0l5.5 2.06q.44.17.82.52"
+              d="M19.36 4.64 5.83 18.17l-1.1-.82a3.3 3.3 0 0 1-1.18-2.37V6.89a3.2 3.2 0 0 1 1.91-2.77l5.5-2.06a3.5 3.5 0 0 1 2.08 0l5.5 2.06q.44.17.82.52"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M21.12 6.89v8.09c0 .82-.53 1.88-1.18 2.37l-5.5 4.11c-.98.72-2.56.72-3.54 0l-2.69-2L21.09 6.58q.03.16.03.31"
+              d="M20.45 6.89v8.09c0 .82-.53 1.88-1.18 2.37l-5.5 4.11c-.98.72-2.56.72-3.54 0l-2.69-2L20.42 6.58q.03.16.03.31"
               fill="currentColor"
             />
             <path
-              d="M22.44 2.23a.77.77 0 0 0-1.09 0L2.9 20.69c-.3.3-.3.79 0 1.09a.76.76 0 0 0 1.08-.01L22.44 3.31a.74.74 0 0 0 0-1.08"
+              d="M21.77 2.23a.77.77 0 0 0-1.09 0L2.23 20.69c-.3.3-.3.79 0 1.09a.76.76 0 0 0 1.08-.01L21.77 3.31a.74.74 0 0 0 0-1.08"
               fill="currentColor"
             />
           </svg>
@@ -101,15 +143,15 @@ const IconShieldSlash = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M20.03 4.64 6.5 18.17l-1.1-.82a3.3 3.3 0 0 1-1.18-2.37V6.89a3.2 3.2 0 0 1 1.91-2.77l5.5-2.06a3.5 3.5 0 0 1 2.08 0l5.5 2.06q.44.17.82.52"
+              d="M19.36 4.64 5.83 18.17l-1.1-.82a3.3 3.3 0 0 1-1.18-2.37V6.89a3.2 3.2 0 0 1 1.91-2.77l5.5-2.06a3.5 3.5 0 0 1 2.08 0l5.5 2.06q.44.17.82.52"
               fill="currentColor"
             />
             <path
-              d="M21.12 14.98c0 .82-.53 1.88-1.18 2.37l-5.5 4.11c-.98.72-2.56.72-3.54 0l-1.76-1.31a1 1 0 0 1-.11-1.51L19.41 8.26a1 1 0 0 1 1.71.71z"
+              d="M20.45 14.98c0 .82-.53 1.88-1.18 2.37l-5.5 4.11c-.98.72-2.56.72-3.54 0l-1.76-1.31a1 1 0 0 1-.11-1.51L18.74 8.26a1 1 0 0 1 1.71.71z"
               fill="currentColor"
             />
             <path
-              d="M22.44 2.23a.77.77 0 0 0-1.09 0L2.9 20.69c-.3.3-.3.79 0 1.09a.76.76 0 0 0 1.08-.01L22.44 3.31a.74.74 0 0 0 0-1.08"
+              d="M21.77 2.23a.77.77 0 0 0-1.09 0L2.23 20.69c-.3.3-.3.79 0 1.09a.76.76 0 0 0 1.08-.01L21.77 3.31a.74.74 0 0 0 0-1.08"
               fill="currentColor"
             />
           </svg>

@@ -23,7 +23,41 @@ const IconTicketSale = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m9 15 6-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15.5 14.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M10.5 9.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M14 4h-4C6.22 4 4.33 4 3.16 5.17 2.28 6.05 2.06 7.33 2 9.5c0 .28.22.5.5.58a2 2 0 0 1 0 3.86c-.28.08-.5.3-.5.58.06 2.16.28 3.44 1.16 4.32M18 4.1c1.3.13 2.19.42 2.84 1.07.88.88 1.1 2.16 1.16 4.32 0 .28-.22.5-.5.58a2 2 0 0 0 0 3.86c.28.08.5.3.5.58-.06 2.16-.28 3.44-1.16 4.32C19.67 20 17.78 20 14 20h-4q-1.75 0-3-.03"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

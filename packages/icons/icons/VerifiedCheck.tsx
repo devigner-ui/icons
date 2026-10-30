@@ -23,7 +23,34 @@ const IconVerifiedCheck = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m8.5 12.5 2 2 5-5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M3.03 13.08a2.5 2.5 0 0 1 0-2.16c.14-.3.38-.58.86-1.14.2-.22.29-.34.37-.46q.27-.41.37-.9c.03-.14.04-.3.07-.59.06-.73.09-1.1.2-1.41a2.5 2.5 0 0 1 1.52-1.53c.3-.1.68-.13 1.41-.2.3-.02.45-.03.59-.06q.49-.1.9-.37c.12-.08.24-.18.46-.37.57-.48.85-.72 1.14-.86a2.5 2.5 0 0 1 2.16 0c.3.14.57.38 1.14.86.22.2.34.29.46.37q.41.27.9.37c.14.03.3.04.59.07.73.06 1.1.08 1.41.2a2.5 2.5 0 0 1 1.53 1.52M4.89 17.58a2.5 2.5 0 0 0 1.53 1.53c.3.1.68.13 1.41.2.3.02.45.03.59.06q.49.1.9.37c.12.08.24.18.46.37.57.48.85.72 1.14.86a2.5 2.5 0 0 0 2.16 0c.3-.14.57-.38 1.14-.86.22-.2.34-.29.46-.37q.41-.27.9-.37c.14-.03.3-.04.59-.07.73-.06 1.1-.09 1.41-.2a2.5 2.5 0 0 0 1.53-1.52c.1-.3.13-.68.2-1.42.02-.29.03-.44.06-.58q.1-.49.37-.9c.08-.13.18-.24.37-.46.48-.57.72-.85.86-1.14a2.5 2.5 0 0 0 0-2.16"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

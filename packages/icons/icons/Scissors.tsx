@@ -22,7 +22,31 @@ const IconScissors = forwardRef<SVGSVGElement, IconProps>(function IconScissors(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16.4 20.5 6 2m16 17a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 21.25a.75.75 0 0 1 0 1.5zM8.75 19v.75h-1.5V19zm-.5 1.87a.75.75 0 0 1-1.3-.74zm9.1-19.24a.75.75 0 0 1 1.3.74zM2.75 19c0 1.24 1 2.25 2.25 2.25v1.5A3.75 3.75 0 0 1 1.25 19zm4.5 0c0-1.24-1-2.25-2.25-2.25v-1.5A3.75 3.75 0 0 1 8.75 19zM5 16.75c-1.24 0-2.25 1-2.25 2.25h-1.5A3.75 3.75 0 0 1 5 15.25zm1.94 3.38 10.4-18.5 1.31.74-10.4 18.5z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -1,0 +1,53 @@
+{
+  "name": "@devigner-ui/icons-mcp",
+  "version": "3.5.0",
+  "description": "MCP server for Devigner Icons: lets AI coding tools search 2,112 icons by meaning and drop them into React, Vue, Svelte, Solid, Angular, React Native or plain SVG.",
+  "keywords": [
+    "icons",
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "claude",
+    "cursor",
+    "svg",
+    "icon-search"
+  ],
+  "license": "MIT AND CC-BY-4.0",
+  "author": "Devigner",
+  "homepage": "https://icons.devigner.cc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigner-ui/icons.git",
+    "directory": "packages/icons-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/devigner-ui/icons/issues"
+  },
+  "type": "module",
+  "files": [
+    "bin",
+    "lib",
+    "ATTRIBUTION.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "prepublishOnly": "pnpm test",
+    "test": "node scripts/check.mjs"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "bin": {
+    "devigner-icons-mcp": "./bin/server.mjs"
+  },
+  "dependencies": {
+    "@devigner-ui/icons": "workspace:^",
+    "@modelcontextprotocol/sdk": "^1.17.0",
+    "zod": "^3.25.0"
+  }
+}

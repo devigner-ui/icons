@@ -23,7 +23,42 @@ const IconCreativeCommonsCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10.88 14.15a2.87 2.87 0 1 1 0-4.3"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M17.88 14.15a2.87 2.87 0 1 1 0-4.3"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +72,7 @@ const IconCreativeCommonsCircle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20"
+              d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -45,7 +80,7 @@ const IconCreativeCommonsCircle = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M11.55 14.15a2.87 2.87 0 1 1 0-4.3"
+              d="M10.88 14.15a2.87 2.87 0 1 1 0-4.3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -53,7 +88,7 @@ const IconCreativeCommonsCircle = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18.55 14.15a2.87 2.87 0 1 1 0-4.3"
+              d="M17.88 14.15a2.87 2.87 0 1 1 0-4.3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -75,15 +110,15 @@ const IconCreativeCommonsCircle = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.67 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20"
+              d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20"
               fill="currentColor"
             />
             <path
-              d="M9.66 15.62a3.62 3.62 0 1 1 2.39-6.34c.31.27.34.75.07 1.06a.76.76 0 0 1-1.06.07 2.12 2.12 0 1 0 0 3.18.76.76 0 0 1 1.06.07c.27.31.24.79-.07 1.06-.67.58-1.52.9-2.39.9"
+              d="M8.99 15.62a3.62 3.62 0 1 1 2.39-6.34c.31.27.34.75.07 1.06a.76.76 0 0 1-1.06.07 2.12 2.12 0 1 0 0 3.18.76.76 0 0 1 1.06.07c.27.31.24.79-.07 1.06-.67.58-1.52.9-2.39.9"
               fill="currentColor"
             />
             <path
-              d="M16.66 15.62a3.62 3.62 0 1 1 2.39-6.34c.31.27.34.75.07 1.06a.76.76 0 0 1-1.06.07 2.12 2.12 0 1 0 0 3.18.76.76 0 0 1 1.06.07c.27.31.24.79-.07 1.06-.67.58-1.52.9-2.39.9"
+              d="M15.99 15.62a3.62 3.62 0 1 1 2.39-6.34c.31.27.34.75.07 1.06a.76.76 0 0 1-1.06.07 2.12 2.12 0 1 0 0 3.18.76.76 0 0 1 1.06.07c.27.31.24.79-.07 1.06-.67.58-1.52.9-2.39.9"
               fill="currentColor"
             />
           </svg>
@@ -101,7 +136,7 @@ const IconCreativeCommonsCircle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M9.66 14.12c.51 0 1.01-.19 1.4-.53a.76.76 0 0 1 1.06.07c.27.31.24.79-.07 1.06a3.62 3.62 0 1 1 0-5.44c.31.27.34.75.07 1.06a.76.76 0 0 1-1.06.07 2.12 2.12 0 1 0-1.4 3.71m7 0c.51 0 1.01-.19 1.4-.53a.76.76 0 0 1 1.06.07c.27.31.24.79-.07 1.06a3.62 3.62 0 1 1 0-5.44c.31.27.34.75.07 1.06a.76.76 0 0 1-1.06.07 2.12 2.12 0 1 0-1.4 3.71"
+              d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M8.99 14.12c.51 0 1.01-.19 1.4-.53a.76.76 0 0 1 1.06.07c.27.31.24.79-.07 1.06a3.62 3.62 0 1 1 0-5.44c.31.27.34.75.07 1.06a.76.76 0 0 1-1.06.07 2.12 2.12 0 1 0-1.4 3.71m7 0c.51 0 1.01-.19 1.4-.53a.76.76 0 0 1 1.06.07c.27.31.24.79-.07 1.06a3.62 3.62 0 1 1 0-5.44c.31.27.34.75.07 1.06a.76.76 0 0 1-1.06.07 2.12 2.12 0 1 0-1.4 3.71"
               fill="currentColor"
             />
           </svg>

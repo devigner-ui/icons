@@ -23,7 +23,27 @@ const IconHourglass = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m12 12-2.96 2.93c-2.92 2.9-4.38 4.34-3.97 5.59q.05.16.13.31C5.8 22 7.87 22 12 22s6.2 0 6.8-1.17q.08-.15.13-.31c.23-.7-.13-1.47-1.01-2.52M12 12l2.96 2.93M12 12l2.96-2.93c2.92-2.9 4.38-4.34 3.97-5.59q-.05-.16-.13-.31C18.2 2 16.13 2 12 2S5.8 2 5.2 3.17q-.08.15-.13.31c-.23.7.13 1.47 1.01 2.52M12 12 9.04 9.07"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

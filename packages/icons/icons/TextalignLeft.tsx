@@ -2,8 +2,8 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconTextalignLeft = forwardRef<SVGSVGElement, IconProps>(
-  function IconTextalignLeft(
+const IconTextAlignLeft = forwardRef<SVGSVGElement, IconProps>(
+  function IconTextAlignLeft(
     { className, variant = "Outline", strokeWidth = "1.5", ...rest },
     ref,
   ) {
@@ -23,7 +23,56 @@ const IconTextalignLeft = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10.05 4.5H21"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3 4.5h2.98"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3 9.5h9.47"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3 14.5h18"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3 19.5h9.47"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,14 +87,14 @@ const IconTextalignLeft = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M3.67 4.5h18"
+              d="M3 4.5h18"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M3.67 9.5h9.47"
+              d="M3 9.5h9.47"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -53,14 +102,14 @@ const IconTextalignLeft = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M3.67 14.5h18"
+              d="M3 14.5h18"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M3.67 19.5h9.47"
+              d="M3 19.5h9.47"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -81,21 +130,21 @@ const IconTextalignLeft = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M21.67 5.25h-18a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M21 5.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M13.14 10.25H3.67a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47a.75.75 0 1 1 0 1.5"
+              d="M12.47 10.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47a.75.75 0 1 1 0 1.5"
               fill="currentColor"
             />
             <path
-              d="M21.67 15.25h-18a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M21 15.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M13.14 20.25H3.67a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47a.75.75 0 1 1 0 1.5"
+              d="M12.47 20.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47a.75.75 0 1 1 0 1.5"
               fill="currentColor"
             />
           </svg>
@@ -113,19 +162,19 @@ const IconTextalignLeft = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M21.67 5.25h-18a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M21 5.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M13.14 10.25H3.67a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47a.75.75 0 1 1 0 1.5"
+              d="M12.47 10.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47a.75.75 0 1 1 0 1.5"
               fill="currentColor"
             />
             <path
-              d="M21.67 15.25h-18a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M21 15.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M13.14 20.25H3.67a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47a.75.75 0 1 1 0 1.5"
+              d="M12.47 20.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47a.75.75 0 1 1 0 1.5"
               fill="currentColor"
             />
           </svg>
@@ -135,4 +184,4 @@ const IconTextalignLeft = forwardRef<SVGSVGElement, IconProps>(
   },
 );
 
-export default IconTextalignLeft;
+export default IconTextAlignLeft;

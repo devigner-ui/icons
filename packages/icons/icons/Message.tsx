@@ -22,7 +22,35 @@ const IconMessage = forwardRef<SVGSVGElement, IconProps>(function IconMessage(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2.33 5.52Q3.41 2 8 2h8q6 0 6 6v5q0 4.47-3.33 5.61m-3.46.43q-.3.1-.51.36l-1.5 2c-.66.88-1.74.88-2.4 0l-1.5-2c-.16-.22-.53-.4-.8-.4H8c-4 0-6-1-6-6V8.99"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8 11h.02Zm4 0h.02Zm4 0h.02Z"
+            stroke="currentColor"
+            strokeWidth={Number(strokeWidth) * 1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -48,7 +76,7 @@ const IconMessage = forwardRef<SVGSVGElement, IconProps>(function IconMessage(
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={Number(strokeWidth) * 1.5}
-            d="M8 11"
+            d="M8 11h.02M12 11h.02M16 11h.02"
             opacity={duotone ? "0.4" : "1"}
           />
         </svg>
@@ -67,19 +95,19 @@ const IconMessage = forwardRef<SVGSVGElement, IconProps>(function IconMessage(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M2.67 12.97V6.99a5 5 0 0 1 5-4.99h10a5 5 0 0 1 5 4.99v6.98a5 5 0 0 1-5 4.98h-1.5c-.31 0-.61.15-.8.4l-1.5 1.99c-.66.88-1.74.88-2.4 0l-1.5-1.99c-.16-.22-.52-.4-.8-.4h-1.5a5 5 0 0 1-5-4.98z"
+            d="M2 12.97V6.99A5 5 0 0 1 7 2h10a5 5 0 0 1 5 4.99v6.98a5 5 0 0 1-5 4.98h-1.5c-.31 0-.61.15-.8.4l-1.5 1.99c-.66.88-1.74.88-2.4 0l-1.5-1.99c-.16-.22-.52-.4-.8-.4H7a5 5 0 0 1-5-4.98z"
             fill="currentColor"
           />
           <path
-            d="M12.67 12a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
+            d="M12 12a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
             fill="currentColor"
           />
           <path
-            d="M16.67 12a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
+            d="M16 12a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
             fill="currentColor"
           />
           <path
-            d="M8.67 12a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
+            d="M8 12a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
             fill="currentColor"
           />
         </svg>
@@ -97,7 +125,7 @@ const IconMessage = forwardRef<SVGSVGElement, IconProps>(function IconMessage(
           {...rest}
         >
           <path
-            d="M17.67 2h-10a5 5 0 0 0-5 4.98v6.98a5 5 0 0 0 5 4.98h1.5c.27 0 .63.18.8.4l1.5 1.99c.66.88 1.74.88 2.4 0l1.5-1.99c.19-.25.49-.4.8-.4h1.5a5 5 0 0 0 5-4.98V6.98a5 5 0 0 0-5-4.98m-9 10a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m4 0a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m4 0a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
+            d="M17 2H7a5 5 0 0 0-5 4.98v6.98a5 5 0 0 0 5 4.98h1.5c.27 0 .63.18.8.4l1.5 1.99c.66.88 1.74.88 2.4 0l1.5-1.99c.19-.25.49-.4.8-.4H17a5 5 0 0 0 5-4.98V6.98A5 5 0 0 0 17 2M8 12a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m4 0a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m4 0a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
             fill="currentColor"
           />
         </svg>

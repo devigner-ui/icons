@@ -1,0 +1,12 @@
+{
+  "name": "@devigner-ui/icons-flutter",
+  "private": true,
+  "description": "Workspace wrapper for the devigner_icons Dart package: generates its icon data and runs its tests. The package itself is published to pub.dev, not npm.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@devigner-ui/icons": "workspace:^"
+  }
+}

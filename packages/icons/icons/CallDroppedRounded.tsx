@@ -23,7 +23,34 @@ const IconCallDroppedRounded = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14.75 4v1c0 1.89 0 2.83.59 3.41.58.59 1.51.59 3.41.59h1.5m-2.5 2 2.5-2-2.5-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M3.75 7.93c-.07 1.91.42 5.15 3.67 8.4q1.18 1.18 2.33 1.9M5.29 4.93c1.4-1.39 3.61-1.2 4.5.39l.65 1.16a2.8 2.8 0 0 1-.58 3.35s-1.11 1.12.91 3.15 3.15.9 3.15.9a2.8 2.8 0 0 1 3.35-.57l1.16.65c1.59.89 1.78 3.1.38 4.5a4.6 4.6 0 0 1-3 1.53 10 10 0 0 1-3.06-.38"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +64,7 @@ const IconCallDroppedRounded = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M15 4v1c0 1.89 0 2.83.59 3.41C16.17 9 17.1 9 19 9h1.5m0 0L18 7m2.5 2L18 11"
+              d="M14.75 4v1c0 1.89 0 2.83.59 3.41.58.59 1.51.59 3.41.59h1.5m0 0-2.5-2m2.5 2-2.5 2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -45,7 +72,7 @@ const IconCallDroppedRounded = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m10.04 5.32.65 1.16a2.8 2.8 0 0 1-.58 3.35s-1.11 1.12.91 3.15 3.15.9 3.15.9a2.8 2.8 0 0 1 3.35-.57l1.16.65c1.59.89 1.78 3.1.38 4.5a4.6 4.6 0 0 1-3 1.53c-1.9.08-5.14-.4-8.4-3.66-3.24-3.25-3.73-6.49-3.65-8.4.04-1.13.7-2.16 1.53-3 1.4-1.39 3.61-1.2 4.5.39"
+              d="m9.79 5.32.65 1.16a2.8 2.8 0 0 1-.58 3.35s-1.11 1.12.91 3.15 3.15.9 3.15.9a2.8 2.8 0 0 1 3.35-.57l1.16.65c1.59.89 1.78 3.1.38 4.5a4.6 4.6 0 0 1-3 1.53c-1.9.08-5.14-.4-8.4-3.66-3.24-3.25-3.73-6.49-3.65-8.4.04-1.13.7-2.16 1.53-3 1.4-1.39 3.61-1.2 4.5.39"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -65,7 +92,7 @@ const IconCallDroppedRounded = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M15 4v1c0 1.89 0 2.83.59 3.41C16.17 9 17.1 9 19 9h1.5m0 0L18 7m2.5 2L18 11"
+              d="M14.33 4.4v1c0 1.89 0 2.83.59 3.41.58.59 1.51.59 3.41.59h1.5m0 0-2.5-2m2.5 2-2.5 2"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -73,7 +100,7 @@ const IconCallDroppedRounded = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m10.04 5.32.65 1.16a2.8 2.8 0 0 1-.58 3.35s-1.11 1.12.91 3.15 3.15.9 3.15.9a2.8 2.8 0 0 1 3.35-.57l1.16.65c1.59.89 1.78 3.1.38 4.5a4.6 4.6 0 0 1-3 1.53c-1.9.08-5.14-.4-8.4-3.66-3.24-3.25-3.73-6.49-3.65-8.4.04-1.13.7-2.16 1.53-3 1.4-1.39 3.61-1.2 4.5.39"
+              d="m9.37 5.72.65 1.16a2.8 2.8 0 0 1-.58 3.35s-1.11 1.12.91 3.15 3.15.9 3.15.9a2.8 2.8 0 0 1 3.35-.57l1.16.65c1.59.89 1.78 3.1.38 4.5a4.6 4.6 0 0 1-3 1.53c-1.9.08-5.14-.4-8.4-3.66-3.24-3.25-3.73-6.49-3.65-8.4.04-1.13.7-2.16 1.53-3 1.4-1.39 3.61-1.2 4.5.39"
               fill="currentColor"
             />
           </svg>
@@ -91,14 +118,14 @@ const IconCallDroppedRounded = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M15 4v1c0 1.89 0 2.83.59 3.41C16.17 9 17.1 9 19 9h1.5m0 0L18 7m2.5 2L18 11"
+              d="M14.33 4.4v1c0 1.89 0 2.83.59 3.41.58.59 1.51.59 3.41.59h1.5m0 0-2.5-2m2.5 2-2.5 2"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
               stroke="currentColor"
             />
             <path
-              d="m10.04 5.32.65 1.16a2.8 2.8 0 0 1-.58 3.35s-1.11 1.12.91 3.15 3.15.9 3.15.9a2.8 2.8 0 0 1 3.35-.57l1.16.65c1.59.89 1.78 3.1.38 4.5a4.6 4.6 0 0 1-3 1.53c-1.9.08-5.14-.4-8.4-3.66-3.24-3.25-3.73-6.49-3.65-8.4.04-1.13.7-2.16 1.53-3 1.4-1.39 3.61-1.2 4.5.39"
+              d="m9.37 5.72.65 1.16a2.8 2.8 0 0 1-.58 3.35s-1.11 1.12.91 3.15 3.15.9 3.15.9a2.8 2.8 0 0 1 3.35-.57l1.16.65c1.59.89 1.78 3.1.38 4.5a4.6 4.6 0 0 1-3 1.53c-1.9.08-5.14-.4-8.4-3.66-3.24-3.25-3.73-6.49-3.65-8.4.04-1.13.7-2.16 1.53-3 1.4-1.39 3.61-1.2 4.5.39"
               fill="currentColor"
             />
           </svg>

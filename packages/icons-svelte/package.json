@@ -1,7 +1,7 @@
 {
   "name": "@devigner-ui/icons-svelte",
-  "version": "2.2.0",
-  "description": "8,588 open-source icons for Svelte: 2,147 symbols, each in outline, twotone, bold and bulk. Built on Solar Icon Set and Iconsax.",
+  "version": "3.5.0",
+  "description": "10,560 open-source icons for Svelte: 2,112 symbols, each in outline, twotone, bold, bulk and broken. Built on Solar Icon Set and Iconsax.",
   "keywords": [
     "icons",
     "svelte",
@@ -15,7 +15,7 @@
   ],
   "license": "MIT AND CC-BY-4.0",
   "author": "Devigner",
-  "homepage": "https://icons.remidevigner.pro",
+  "homepage": "https://icons.devigner.cc",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devigner-ui/icons.git",

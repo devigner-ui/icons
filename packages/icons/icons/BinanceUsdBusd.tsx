@@ -23,7 +23,53 @@ const IconBinanceUsdBusd = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11.4 2.35 6.25 7.5a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l5.15-5.15a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m12.95 8.61-6.7 6.7a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m19.21 10.16-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m4.1 13.84-1.74-1.73a.5.5 0 0 1 0-.71L4.1 9.67c.2-.2.51-.2.71 0l1.73 1.73c.2.2.2.51 0 .71L4.8 13.84a.5.5 0 0 1-.7 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +83,7 @@ const IconBinanceUsdBusd = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.07 2.35 6.92 7.5a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l5.15-5.15a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
+              d="M11.4 2.35 6.25 7.5a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l5.15-5.15a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -46,7 +92,7 @@ const IconBinanceUsdBusd = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m15.97 6.26-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
+              d="m15.3 6.26-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -54,7 +100,7 @@ const IconBinanceUsdBusd = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="m19.88 10.16-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
+              d="m19.21 10.16-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -63,7 +109,7 @@ const IconBinanceUsdBusd = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m4.76 13.84-1.73-1.73a.5.5 0 0 1 0-.71l1.73-1.73c.2-.2.51-.2.71 0L7.2 11.4c.2.2.2.51 0 .71l-1.73 1.73a.5.5 0 0 1-.71 0"
+              d="m4.09 13.84-1.73-1.73a.5.5 0 0 1 0-.71l1.73-1.73c.2-.2.51-.2.71 0l1.73 1.73c.2.2.2.51 0 .71L4.8 13.84a.5.5 0 0 1-.71 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -84,23 +130,23 @@ const IconBinanceUsdBusd = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <path d="M24.67 0h-24v24h24z" fill="none" />
+            <path d="M24 0H0v24h24z" fill="none" />
             <path
-              d="M12.07 2.35 6.93 7.5a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l5.15-5.15a.5.5 0 0 0 0-.71l-1.73-1.73a.53.53 0 0 0-.72 0"
+              d="M11.4 2.35 6.26 7.5a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l5.15-5.15a.5.5 0 0 0 0-.71l-1.73-1.73a.53.53 0 0 0-.72 0"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M15.97 6.26 6.93 15.3a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.72.01"
+              d="M15.3 6.26 6.26 15.3a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.72.01"
               fill="currentColor"
             />
             <path
-              d="m19.88 10.16-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
+              d="m19.21 10.16-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m4.76 13.84-1.73-1.73a.5.5 0 0 1 0-.71l1.73-1.73c.2-.2.51-.2.71 0L7.2 11.4c.2.2.2.51 0 .71l-1.73 1.73a.5.5 0 0 1-.71 0"
+              d="m4.09 13.84-1.73-1.73a.5.5 0 0 1 0-.71l1.73-1.73c.2-.2.51-.2.71 0l1.73 1.73c.2.2.2.51 0 .71L4.8 13.84a.5.5 0 0 1-.71 0"
               fill="currentColor"
             />
           </svg>
@@ -118,19 +164,19 @@ const IconBinanceUsdBusd = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.07 2.35 6.92 7.5a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l5.15-5.15a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
+              d="M11.4 2.35 6.25 7.5a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l5.15-5.15a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
               fill="currentColor"
             />
             <path
-              d="m15.97 6.26-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
+              d="m15.3 6.26-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
               fill="currentColor"
             />
             <path
-              d="m19.88 10.16-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
+              d="m19.21 10.16-9.05 9.05a.5.5 0 0 0 0 .71l1.73 1.73c.2.2.51.2.71 0l9.05-9.05a.5.5 0 0 0 0-.71l-1.73-1.73a.5.5 0 0 0-.71 0"
               fill="currentColor"
             />
             <path
-              d="m4.76 13.84-1.73-1.73a.5.5 0 0 1 0-.71l1.73-1.73c.2-.2.51-.2.71 0L7.2 11.4c.2.2.2.51 0 .71l-1.73 1.73a.5.5 0 0 1-.71 0"
+              d="m4.09 13.84-1.73-1.73a.5.5 0 0 1 0-.71l1.73-1.73c.2-.2.51-.2.71 0l1.73 1.73c.2.2.2.51 0 .71L4.8 13.84a.5.5 0 0 1-.71 0"
               fill="currentColor"
             />
           </svg>

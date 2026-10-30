@@ -22,7 +22,39 @@ const IconQuitPIP = forwardRef<SVGSVGElement, IconProps>(function IconQuitPIP(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13 17c0-1.89 0-2.83.59-3.41C14.17 13 15.1 13 17 13h1c1.89 0 2.83 0 3.41.59.59.58.59 1.52.59 3.41s0 2.83-.59 3.41C20.83 21 19.9 21 18 21h-1c-1.89 0-2.83 0-3.41-.59C13 19.83 13 18.9 13 17Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M10.5 7.5h-3v3m0-3 4 4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M11 21h-1c-3.77 0-5.66 0-6.83-1.17S2 16.77 2 13v-2m20 0c0-3.77 0-5.66-1.17-6.83S17.77 3 14 3h-4C6.23 3 4.34 3 3.17 4.17 2.52 4.82 2.23 5.7 2.1 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

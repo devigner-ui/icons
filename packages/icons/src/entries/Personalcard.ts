@@ -1,1 +1,1 @@
-export { default, default as IconPersonalcard } from '../../icons/Personalcard';
+export { default, default as IconPersonalCard } from '../../icons/PersonalCard';

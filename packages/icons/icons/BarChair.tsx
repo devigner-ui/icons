@@ -22,7 +22,44 @@ const IconBarChair = forwardRef<SVGSVGElement, IconProps>(function IconBarChair(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5.03 6.94a4.2 4.2 0 0 1 3.51-4.62l.4-.07a19 19 0 0 1 6.12 0l.4.07a4.2 4.2 0 0 1 3.5 4.62v.14c-.07.53-.53.92-1.07.92H6.11c-.54 0-1-.4-1.06-.92z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M9 8 6 22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m15 8 .75 3.5M18 22l-1.5-7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.5 17h-9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -76,12 +113,12 @@ const IconBarChair = forwardRef<SVGSVGElement, IconProps>(function IconBarChair(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M5.46 6.73a4 4 0 0 1 3.3-4.42l.37-.07a17 17 0 0 1 5.74 0l.38.07a4 4 0 0 1 3.3 4.42l-.03.14a1 1 0 0 1-.99.88H6.47a1 1 0 0 1-1-.88z"
+            d="M5.46 6.48a4 4 0 0 1 3.3-4.42l.37-.07a17 17 0 0 1 5.74 0l.38.07a4 4 0 0 1 3.3 4.42l-.03.14a1 1 0 0 1-.99.88H6.47a1 1 0 0 1-1-.88z"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M8.23 7.75 5.27 21.6a.75.75 0 0 0 1.46.32l.95-4.4h8.64l.95 4.4a.75.75 0 0 0 1.46-.32L15.77 7.75h-1.52l.02.16L16 16H8l1.73-8.1.02-.16z"
+            d="M8.23 7.5 5.27 21.35a.75.75 0 0 0 1.46.32l.95-4.4h8.64l.95 4.4a.75.75 0 0 0 1.46-.32L15.77 7.5h-1.52l.02.16L16 15.75H8l1.73-8.1.02-.16z"
             fill="currentColor"
           />
         </svg>
@@ -101,7 +138,7 @@ const IconBarChair = forwardRef<SVGSVGElement, IconProps>(function IconBarChair(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M8.75 2.3a4 4 0 0 0-3.29 4.43l.02.14a1 1 0 0 0 .99.88h1.76L5.27 21.6a.75.75 0 1 0 1.46.32l.95-4.4h8.64l.95 4.4a.75.75 0 1 0 1.46-.32L15.77 7.75h1.76a1 1 0 0 0 1-.88l.01-.14a4 4 0 0 0-3.3-4.42l-.37-.07a17 17 0 0 0-5.74 0zm5.5 5.45h-4.5l-.02.16L8 16h8l-1.73-8.1z"
+            d="M8.75 2a4 4 0 0 0-3.29 4.43l.02.14a1 1 0 0 0 .99.88h1.76L5.27 21.3a.75.75 0 1 0 1.46.32l.95-4.4h8.64l.95 4.4a.75.75 0 1 0 1.46-.32L15.77 7.45h1.76a1 1 0 0 0 1-.88l.01-.14a4 4 0 0 0-3.3-4.42l-.37-.07a17 17 0 0 0-5.74 0zm5.5 5.45h-4.5l-.02.16L8 15.7h8l-1.73-8.1z"
             fill="currentColor"
           />
         </svg>

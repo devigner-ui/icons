@@ -22,7 +22,7 @@ const IconCd = forwardRef<SVGSVGElement, IconProps>(function IconCd(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,35 @@ const IconCd = forwardRef<SVGSVGElement, IconProps>(function IconCd(
           {...rest}
         >
           <path
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="M20.14 17.82A9.99 9.99 0 0 0 12 2c-2.13 0-4.1.66-5.72 1.79M3.82 6.25a10 10 0 0 0 13.83 14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 14a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2c0 1.1.9 2 2 2Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,7 +72,7 @@ const IconCd = forwardRef<SVGSVGElement, IconProps>(function IconCd(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+            d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -66,11 +94,11 @@ const IconCd = forwardRef<SVGSVGElement, IconProps>(function IconCd(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             fill="currentColor"
           />
           <path
-            d="M12.67 14.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
+            d="M12 14.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"
             fill="currentColor"
           />
         </svg>
@@ -88,7 +116,7 @@ const IconCd = forwardRef<SVGSVGElement, IconProps>(function IconCd(
           {...rest}
         >
           <path
-            d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 12.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5"
+            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 12.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5"
             fill="currentColor"
           />
         </svg>

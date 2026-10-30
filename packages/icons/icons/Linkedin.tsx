@@ -22,7 +22,42 @@ const IconLinkedin = forwardRef<SVGSVGElement, IconProps>(function IconLinkedin(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22.48 21.74v.15c0 .36-.29.65-.65.65h-3.25a.65.65 0 0 1-.65-.65v-5.96c0-.89.26-3.9-2.32-3.9-2.01 0-2.41 2.06-2.49 2.98v6.88c0 .36-.29.65-.65.65H9.32a.65.65 0 0 1-.65-.65v-9.26m0-3.5v-.06c0-.36.29-.65.65-.65h3.15c.36 0 .65.29.65.65v1.11c.74-1.12 1.85-1.98 4.2-1.98 5.21 0 5.18 4.87 5.18 7.54h-.02v2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.28 4.33a2.88 2.88 0 1 1-5.76 0 2.88 2.88 0 0 1 5.76 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2.89 8.41h3.04q.3 0 .5.21t.21.5v12.71q0 .3-.21.5a.7.7 0 0 1-.5.21H2.89a.7.7 0 0 1-.5-.21.7.7 0 0 1-.21-.5V9.12q0-.3.21-.5a.7.7 0 0 1 .5-.21Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -38,19 +73,19 @@ const IconLinkedin = forwardRef<SVGSVGElement, IconProps>(function IconLinkedin(
           <path
             opacity={duotone ? "0.4" : "1"}
             stroke="currentColor"
-            d="M22.98 16.24v6.15c0 .36-.29.65-.65.65h-3.25a.65.65 0 0 1-.65-.65v-5.96c0-.89.26-3.9-2.32-3.9-2.01 0-2.41 2.06-2.49 2.98v6.88c0 .36-.29.65-.65.65H9.82a.65.65 0 0 1-.65-.65V9.57c0-.36.29-.65.65-.65h3.15c.36 0 .65.29.65.65v1.11c.74-1.12 1.85-1.98 4.2-1.98 5.21 0 5.18 4.87 5.18 7.54Z"
+            d="M22.48 15.74v6.15c0 .36-.29.65-.65.65h-3.25a.65.65 0 0 1-.65-.65v-5.96c0-.89.26-3.9-2.32-3.9-2.01 0-2.41 2.06-2.49 2.98v6.88c0 .36-.29.65-.65.65H9.32a.65.65 0 0 1-.65-.65V9.07c0-.36.29-.65.65-.65h3.15c.36 0 .65.29.65.65v1.11c.74-1.12 1.85-1.98 4.2-1.98 5.21 0 5.18 4.87 5.18 7.54Z"
             strokeLinecap="round"
           />
           <path
             stroke="currentColor"
-            d="M7.78 4.83a2.88 2.88 0 1 1-5.76 0 2.88 2.88 0 0 1 5.76 0"
+            d="M7.28 4.33a2.88 2.88 0 1 1-5.76 0 2.88 2.88 0 0 1 5.76 0"
             strokeLinecap="round"
           />
           <rect
             stroke="currentColor"
             strokeLinecap="round"
-            x="2.68"
-            y="8.91"
+            x="2.18"
+            y="8.41"
             width="4.46"
             height="14.13"
             rx=".71"
@@ -73,16 +108,16 @@ const IconLinkedin = forwardRef<SVGSVGElement, IconProps>(function IconLinkedin(
           <path
             opacity={duotone ? "0.4" : "1"}
             fill="currentColor"
-            d="M22.98 16.24v6.15c0 .36-.29.65-.65.65h-3.25a.65.65 0 0 1-.65-.65v-5.96c0-.89.26-3.9-2.32-3.9-2.01 0-2.41 2.06-2.49 2.98v6.88c0 .36-.29.65-.65.65H9.82a.65.65 0 0 1-.65-.65V9.57c0-.36.29-.65.65-.65h3.15c.36 0 .65.29.65.65v1.11c.74-1.12 1.85-1.98 4.2-1.98 5.21 0 5.18 4.87 5.18 7.54Z"
+            d="M22.48 15.74v6.15c0 .36-.29.65-.65.65h-3.25a.65.65 0 0 1-.65-.65v-5.96c0-.89.26-3.9-2.32-3.9-2.01 0-2.41 2.06-2.49 2.98v6.88c0 .36-.29.65-.65.65H9.32a.65.65 0 0 1-.65-.65V9.07c0-.36.29-.65.65-.65h3.15c.36 0 .65.29.65.65v1.11c.74-1.12 1.85-1.98 4.2-1.98 5.21 0 5.18 4.87 5.18 7.54Z"
           />
           <path
             fill="currentColor"
-            d="M7.78 4.83a2.88 2.88 0 1 1-5.76 0 2.88 2.88 0 0 1 5.76 0"
+            d="M7.28 4.33a2.88 2.88 0 1 1-5.76 0 2.88 2.88 0 0 1 5.76 0"
           />
           <rect
             fill="currentColor"
-            x="2.68"
-            y="8.91"
+            x="2.18"
+            y="8.41"
             width="4.46"
             height="14.13"
             rx=".71"
@@ -104,16 +139,16 @@ const IconLinkedin = forwardRef<SVGSVGElement, IconProps>(function IconLinkedin(
         >
           <path
             fill="currentColor"
-            d="M22.98 16.24v6.15c0 .36-.29.65-.65.65h-3.25a.65.65 0 0 1-.65-.65v-5.96c0-.89.26-3.9-2.32-3.9-2.01 0-2.41 2.06-2.49 2.98v6.88c0 .36-.29.65-.65.65H9.82a.65.65 0 0 1-.65-.65V9.57c0-.36.29-.65.65-.65h3.15c.36 0 .65.29.65.65v1.11c.74-1.12 1.85-1.98 4.2-1.98 5.21 0 5.18 4.87 5.18 7.54Z"
+            d="M22.48 15.74v6.15c0 .36-.29.65-.65.65h-3.25a.65.65 0 0 1-.65-.65v-5.96c0-.89.26-3.9-2.32-3.9-2.01 0-2.41 2.06-2.49 2.98v6.88c0 .36-.29.65-.65.65H9.32a.65.65 0 0 1-.65-.65V9.07c0-.36.29-.65.65-.65h3.15c.36 0 .65.29.65.65v1.11c.74-1.12 1.85-1.98 4.2-1.98 5.21 0 5.18 4.87 5.18 7.54Z"
           />
           <path
             fill="currentColor"
-            d="M7.78 4.83a2.88 2.88 0 1 1-5.76 0 2.88 2.88 0 0 1 5.76 0"
+            d="M7.28 4.33a2.88 2.88 0 1 1-5.76 0 2.88 2.88 0 0 1 5.76 0"
           />
           <rect
             fill="currentColor"
-            x="2.68"
-            y="8.91"
+            x="2.18"
+            y="8.41"
             width="4.46"
             height="14.13"
             rx=".71"

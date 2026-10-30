@@ -1,7 +1,7 @@
 {
   "name": "@devigner-ui/icons",
-  "version": "3.3.0",
-  "description": "8,588 open-source icons for React: 2,147 symbols, each in outline, twotone, bold and bulk. Built on Solar Icon Set and Iconsax.",
+  "version": "3.5.0",
+  "description": "10,560 open-source icons for React: 2,112 symbols, each in outline, twotone, bold, bulk and broken. Built on Solar Icon Set and Iconsax.",
   "keywords": [
     "icons",
     "react",
@@ -16,7 +16,7 @@
   ],
   "license": "MIT AND CC-BY-4.0",
   "author": "Devigner",
-  "homepage": "https://icons.remidevigner.pro",
+  "homepage": "https://icons.devigner.cc",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devigner-ui/icons.git",
@@ -40,8 +40,144 @@
     },
     "./metadata.json": "./dist/metadata.json",
     "./embeddings.json": "./dist/embeddings.json",
+    "./renames.json": "./dist/renames.json",
     "./styles.css": "./dist/styles.css",
     "./package.json": "./package.json",
+    "./3dcube": {
+      "types": "./dist/aliases/3dcube.d.ts",
+      "import": "./dist/aliases/3dcube.js",
+      "require": "./dist/aliases/3dcube.cjs"
+    },
+    "./Additem": {
+      "types": "./dist/aliases/Additem.d.ts",
+      "import": "./dist/aliases/Additem.js",
+      "require": "./dist/aliases/Additem.cjs"
+    },
+    "./CPU": {
+      "types": "./dist/aliases/CPU.d.ts",
+      "import": "./dist/aliases/CPU.js",
+      "require": "./dist/aliases/CPU.cjs"
+    },
+    "./CPUBolt": {
+      "types": "./dist/aliases/CPUBolt.d.ts",
+      "import": "./dist/aliases/CPUBolt.js",
+      "require": "./dist/aliases/CPUBolt.cjs"
+    },
+    "./Convertshape": {
+      "types": "./dist/aliases/Convertshape.d.ts",
+      "import": "./dist/aliases/Convertshape.js",
+      "require": "./dist/aliases/Convertshape.cjs"
+    },
+    "./Firstline": {
+      "types": "./dist/aliases/Firstline.d.ts",
+      "import": "./dist/aliases/Firstline.js",
+      "require": "./dist/aliases/Firstline.cjs"
+    },
+    "./GPS": {
+      "types": "./dist/aliases/GPS.d.ts",
+      "import": "./dist/aliases/GPS.js",
+      "require": "./dist/aliases/GPS.cjs"
+    },
+    "./Happyemoji": {
+      "types": "./dist/aliases/Happyemoji.d.ts",
+      "import": "./dist/aliases/Happyemoji.js",
+      "require": "./dist/aliases/Happyemoji.cjs"
+    },
+    "./HomeWiFi": {
+      "types": "./dist/aliases/HomeWiFi.d.ts",
+      "import": "./dist/aliases/HomeWiFi.js",
+      "require": "./dist/aliases/HomeWiFi.cjs"
+    },
+    "./HomeWiFiAngle": {
+      "types": "./dist/aliases/HomeWiFiAngle.d.ts",
+      "import": "./dist/aliases/HomeWiFiAngle.js",
+      "require": "./dist/aliases/HomeWiFiAngle.cjs"
+    },
+    "./Magicpen": {
+      "types": "./dist/aliases/Magicpen.d.ts",
+      "import": "./dist/aliases/Magicpen.js",
+      "require": "./dist/aliases/Magicpen.cjs"
+    },
+    "./Paintbucket": {
+      "types": "./dist/aliases/Paintbucket.d.ts",
+      "import": "./dist/aliases/Paintbucket.js",
+      "require": "./dist/aliases/Paintbucket.cjs"
+    },
+    "./Personalcard": {
+      "types": "./dist/aliases/Personalcard.d.ts",
+      "import": "./dist/aliases/Personalcard.js",
+      "require": "./dist/aliases/Personalcard.cjs"
+    },
+    "./SIMCard": {
+      "types": "./dist/aliases/SIMCard.d.ts",
+      "import": "./dist/aliases/SIMCard.js",
+      "require": "./dist/aliases/SIMCard.cjs"
+    },
+    "./SIMCards": {
+      "types": "./dist/aliases/SIMCards.d.ts",
+      "import": "./dist/aliases/SIMCards.js",
+      "require": "./dist/aliases/SIMCards.cjs"
+    },
+    "./Screenmirroring": {
+      "types": "./dist/aliases/Screenmirroring.d.ts",
+      "import": "./dist/aliases/Screenmirroring.js",
+      "require": "./dist/aliases/Screenmirroring.cjs"
+    },
+    "./Smallcaps": {
+      "types": "./dist/aliases/Smallcaps.d.ts",
+      "import": "./dist/aliases/Smallcaps.js",
+      "require": "./dist/aliases/Smallcaps.cjs"
+    },
+    "./Stickynote": {
+      "types": "./dist/aliases/Stickynote.d.ts",
+      "import": "./dist/aliases/Stickynote.js",
+      "require": "./dist/aliases/Stickynote.cjs"
+    },
+    "./TextalignCenter": {
+      "types": "./dist/aliases/TextalignCenter.d.ts",
+      "import": "./dist/aliases/TextalignCenter.js",
+      "require": "./dist/aliases/TextalignCenter.cjs"
+    },
+    "./TextalignJustifycenter": {
+      "types": "./dist/aliases/TextalignJustifycenter.d.ts",
+      "import": "./dist/aliases/TextalignJustifycenter.js",
+      "require": "./dist/aliases/TextalignJustifycenter.cjs"
+    },
+    "./TextalignJustifyleft": {
+      "types": "./dist/aliases/TextalignJustifyleft.d.ts",
+      "import": "./dist/aliases/TextalignJustifyleft.js",
+      "require": "./dist/aliases/TextalignJustifyleft.cjs"
+    },
+    "./TextalignJustifyright": {
+      "types": "./dist/aliases/TextalignJustifyright.d.ts",
+      "import": "./dist/aliases/TextalignJustifyright.js",
+      "require": "./dist/aliases/TextalignJustifyright.cjs"
+    },
+    "./TextalignLeft": {
+      "types": "./dist/aliases/TextalignLeft.d.ts",
+      "import": "./dist/aliases/TextalignLeft.js",
+      "require": "./dist/aliases/TextalignLeft.cjs"
+    },
+    "./TextalignRight": {
+      "types": "./dist/aliases/TextalignRight.d.ts",
+      "import": "./dist/aliases/TextalignRight.js",
+      "require": "./dist/aliases/TextalignRight.cjs"
+    },
+    "./WiFiRouter": {
+      "types": "./dist/aliases/WiFiRouter.d.ts",
+      "import": "./dist/aliases/WiFiRouter.js",
+      "require": "./dist/aliases/WiFiRouter.cjs"
+    },
+    "./WiFiRouterRound": {
+      "types": "./dist/aliases/WiFiRouterRound.d.ts",
+      "import": "./dist/aliases/WiFiRouterRound.js",
+      "require": "./dist/aliases/WiFiRouterRound.cjs"
+    },
+    "./ZIPFile": {
+      "types": "./dist/aliases/ZIPFile.d.ts",
+      "import": "./dist/aliases/ZIPFile.js",
+      "require": "./dist/aliases/ZIPFile.cjs"
+    },
     "./*": {
       "types": "./dist/icons/*.d.ts",
       "import": "./dist/icons/*.js",
@@ -55,6 +191,7 @@
   ],
   "scripts": {
     "import:svgs": "node scripts/import-svgs.mjs",
+    "import:broken": "node scripts/import-broken.mjs",
     "sync": "node scripts/sync.mjs",
     "sync:watch": "node scripts/sync.mjs --watch",
     "deduplicate": "node scripts/deduplicate.mjs",
@@ -64,7 +201,7 @@
     "generate:embeddings": "node scripts/generate-embeddings.mjs",
     "build": "pnpm optimize:paths && pnpm sync && pnpm generate:metadata && pnpm generate:embeddings && tsup",
     "prepublishOnly": "pnpm build && pnpm test",
-    "test": "node scripts/artwork-check.mjs && node scripts/surface-check.mjs && node scripts/render-check.mjs && node scripts/emit-svg.mjs && node scripts/import-check.mjs",
+    "test": "node scripts/artwork-check.mjs && node scripts/surface-check.mjs && node scripts/render-check.mjs && node scripts/emit-svg.mjs && node scripts/import-check.mjs && node scripts/rename-check.mjs && node scripts/search-check.mjs",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {

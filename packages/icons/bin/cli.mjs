@@ -16,7 +16,7 @@
  *                         honest: there is no second copy of the artwork here
  *                         to drift away from the one in dist/index.js.
  */
-import { existsSync, readFileSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, mkdirSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import path from "node:path";
 
@@ -24,9 +24,9 @@ const PKG = new URL("../", import.meta.url);
 
 const EXIT = { OK: 0, ERROR: 1, USAGE: 2, NOT_FOUND: 3 };
 
-/** dist is what ships; src is what exists in the repo before a build. */
+/** dist is what ships; src and scripts are what exist in the repo before a build. */
 function readJson(name) {
-  for (const dir of ["dist/", "src/"]) {
+  for (const dir of ["dist/", "src/", "scripts/"]) {
     const url = new URL(dir + name, PKG);
     if (existsSync(url)) return JSON.parse(readFileSync(url, "utf8"));
   }
@@ -104,7 +104,7 @@ function intOpt(flags, aliases, fallback) {
 
 /* ---------- output ---------- */
 
-const STYLES = ["outline", "twotone", "bold", "bulk"];
+const STYLES = ["outline", "twotone", "bold", "bulk", "broken"];
 
 /* The lowercase style names this CLI takes, as the component's `variant`. */
 const STYLE_PROPS = {
@@ -112,6 +112,7 @@ const STYLE_PROPS = {
   twotone: { variant: "TwoTone" },
   bold: { variant: "Bold" },
   bulk: { variant: "Bulk" },
+  broken: { variant: "Broken" },
 };
 
 /** Columns padded to the widest cell. No box drawing, no colour, no NO_COLOR. */
@@ -152,11 +153,19 @@ function emit(text) {
 
 /* ---------- icon lookup ---------- */
 
-/** `Arrow*` matches by shell glob; anything else is an exact, case-insensitive name. */
+/**
+ * `Arrow*` matches by shell glob; anything else is an exact, case-insensitive
+ * name. An icon's former name finds it too, with a note naming what it is
+ * called now, so a name copied from old code still works here.
+ */
 function matchIcons(icons, pattern) {
   if (!pattern.includes("*")) {
     const lower = pattern.toLowerCase();
-    return icons.filter((i) => i.name.toLowerCase() === lower);
+    const exact = icons.filter((i) => i.name.toLowerCase() === lower);
+    if (exact.length) return exact;
+    const renamed = icons.filter((i) => (i.formerly ?? []).some((f) => f.toLowerCase() === lower));
+    for (const icon of renamed) note(`note: ${pattern} was renamed to ${icon.name}`);
+    return renamed;
   }
   const re = new RegExp(
     `^${pattern.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, ".*")}$`,
@@ -192,15 +201,33 @@ async function embedQuery(query) {
  * (generate-embeddings.mjs). The query side is unit length, so the dot product
  * comes back as cosine * 127 and dividing puts it in [-1, 1], which is what
  * --threshold is quoted against.
+ *
+ * Plus up to 0.2 for icons whose name or keywords hold the query's words, the
+ * same nudge the website's aiSearch.ts applies, so both rank alike. The model
+ * alone sends "cog" to crypto logos; the Setting keywords carry it.
  */
-function semanticScores(icons, embeddings, query) {
+function semanticScores(icons, embeddings, query, text) {
+  const terms = text.toLowerCase().match(/[a-z0-9]+/g)?.filter((t) => t.length > 1) ?? [];
   return icons.map((icon) => {
     const vec = embeddings[icon.name];
     if (!vec) return { icon, score: 0 };
     let dot = 0;
     for (let i = 0; i < query.length; i++) dot += query[i] * (vec[i] ?? 0);
-    return { icon, score: dot / 127 };
+    return { icon, score: dot / 127 + nameBoost(icon, terms) };
   });
+}
+
+function nameBoost(icon, terms) {
+  if (terms.length === 0) return 0;
+  const name = icon.displayName.toLowerCase().split(/\s+/);
+  const keywords = new Set(icon.keywords.flatMap((k) => k.toLowerCase().split(/\s+/)));
+  let hit = 0;
+  for (const t of terms) {
+    if (name.some((n) => n === t || n === `${t}s` || t === `${n}s`)) hit += 1;
+    else if (keywords.has(t)) hit += 0.6;
+    else if (t.length > 2 && name.some((n) => n.startsWith(t))) hit += 0.5;
+  }
+  return (0.2 * hit) / terms.length;
 }
 
 /*
@@ -215,6 +242,7 @@ function lexicalScores(icons, query) {
   return icons.map((icon) => {
     const fields = [
       [icon.name.toLowerCase(), 3],
+      [(icon.formerly ?? []).join(" ").toLowerCase(), 3],
       [icon.displayName.toLowerCase(), 2],
       [icon.keywords.join(" ").toLowerCase(), 2],
       [String(icon.usage ?? "").toLowerCase(), 1],
@@ -251,7 +279,7 @@ async function cmdSearch(icons, positional, flags) {
   let ranked;
 
   if (vector) {
-    ranked = semanticScores(pool, readJson("embeddings.json"), vector);
+    ranked = semanticScores(pool, readJson("embeddings.json"), vector, query);
   } else {
     if (flags.keyword !== true) {
       note(
@@ -478,6 +506,95 @@ async function cmdCopy(icons, positional, flags) {
   }
 }
 
+/* ---------- migrate ---------- */
+
+const SOURCE = /\.(?:[cm]?[jt]sx?|vue|svelte|astro|mdx|html)$/;
+const SKIP_DIRS = new Set(["node_modules", ".git", "dist", "build", "out", ".next", ".nuxt", ".svelte-kit", "coverage"]);
+
+function* sourceFiles(dir) {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isDirectory()) {
+      if (!SKIP_DIRS.has(entry.name)) yield* sourceFiles(path.join(dir, entry.name));
+    } else if (SOURCE.test(entry.name)) {
+      yield path.join(dir, entry.name);
+    }
+  }
+}
+
+/*
+ * Rewrites old icon names to current ones across a project, from every batch in
+ * renames.json, expired ones included: this is what someone upgrading after the
+ * aliases are gone reaches for.
+ *
+ * Only spellings that can mean nothing else are rewritten: the component name
+ * (IconBag2), a package subpath (@devigner-ui/icons/Bag2,
+ * @devigner-ui/icons-react-native/icons/Bag2), an SVG file path
+ * (icons-svg/svg/outline/Bag2.svg) and a sprite fragment (#Bag2 in an href).
+ * A bare "Bag2" in a string might be an icon name looked up at runtime or
+ * something else entirely, so those are listed for a person to check instead.
+ */
+function cmdMigrate(positional, flags) {
+  const root = positional[0] ?? ".";
+  if (!existsSync(root)) fail(`no such directory: ${root}`, EXIT.NOT_FOUND);
+  const dry = flags.dry === true || flags["dry-run"] === true;
+
+  const next = new Map();
+  for (const batch of readJson("renames.json").batches) {
+    for (const [from, to] of Object.entries(batch.renames)) next.set(from, to);
+  }
+  const current = (name) => {
+    while (next.has(name)) name = next.get(name);
+    return name;
+  };
+  /* Longest first, so Bag2 never claims the front of a longer old name. */
+  const names = [...next.keys()].sort((a, b) => b.length - a.length).join("|");
+  const rules = [
+    new RegExp(`\\bIcon(${names})\\b`, "g"),
+    new RegExp(`(?<=@devigner-ui/icons(?:-react-native/icons)?/)(${names})(?=["'\`])`, "g"),
+    new RegExp(`(?<=icons-svg/svg/[a-z]+/)(${names})(?=\\.svg)`, "g"),
+    new RegExp(`(?<=href=["'\`][^"'\`]*#)(${names})(?=["'\`])`, "g"),
+  ];
+  const bare = new RegExp(`["'\`](${names})["'\`]`, "g");
+
+  let changed = 0;
+  let edits = 0;
+  const review = [];
+
+  for (const file of sourceFiles(root)) {
+    const before = readFileSync(file, "utf8");
+    let count = 0;
+    const after = rules.reduce(
+      (text, rule) =>
+        text.replace(rule, (match, name) => {
+          count++;
+          return match.replace(name, current(name));
+        }),
+      before,
+    );
+
+    after.split("\n").forEach((line, i) => {
+      for (const m of line.matchAll(bare)) {
+        review.push(`${file}:${i + 1}  "${m[1]}" may be an icon name, now "${current(m[1])}"`);
+      }
+    });
+
+    if (count === 0) continue;
+    changed++;
+    edits += count;
+    if (!dry) writeFileSync(file, after);
+    emit(`${dry ? "would update" : "updated"} ${file} (${count})`);
+  }
+
+  emit(
+    edits === 0
+      ? "No old icon names found."
+      : `${dry ? "Would update" : "Updated"} ${edits} reference${edits === 1 ? "" : "s"} in ${changed} file${changed === 1 ? "" : "s"}.`,
+  );
+  if (review.length) {
+    note(`\nCheck these by hand: they are strings, not imports.\n${review.join("\n")}`);
+  }
+}
+
 /* ---------- entry ---------- */
 
 const HELP = `devigner icons
@@ -491,6 +608,7 @@ Commands
   info <name>         show one icon's metadata
   categories          list categories and their counts
   copy <name>         print an icon as a React snippet or as SVG
+  migrate [dir]       rewrite renamed icons to their current names
 
 Options
   -h, --help          show this
@@ -506,16 +624,23 @@ search
 
 list
   -c, --category <c>  filter by category
-  -s, --style <s>     outline, twotone, bold or bulk
+  -s, --style <s>     outline, twotone, bold, bulk or broken
   -l, --limit <n>     stop after n
 
 copy
-  -s, --style <s>     outline (default), twotone, bold or bulk
+  -s, --style <s>     outline (default), twotone, bold, bulk or broken
   -f, --format <fmt>  tsx (default) or svg
   -o, --out <dir>     write files there instead of printing
       --clipboard     also put it on the clipboard
 
   A name may be a glob: icons copy "Arrow*" --format=svg --out=./arrows
+
+migrate
+      --dry           list what would change without writing
+
+  Rewrites imports, subpaths, SVG paths and sprite ids in the directory
+  (default: the current one), skipping node_modules and build output. Old
+  names in plain strings are listed for you to check rather than changed.
 
 Search ranks against the vectors in embeddings.json. Embedding your query needs
 @xenova/transformers; without it, search falls back to keyword matching.
@@ -534,6 +659,10 @@ async function main() {
     process.stdout.write(HELP);
     process.exit(command ? EXIT.OK : EXIT.USAGE);
   }
+
+  /* Needs no metadata, so it runs first: the one command a project with an
+     old copy of the data on disk still has to be able to use. */
+  if (command === "migrate") return cmdMigrate(rest, flags);
 
   const metadata = readJson("metadata.json");
   const icons = metadata.icons;

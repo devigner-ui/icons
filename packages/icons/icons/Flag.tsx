@@ -22,7 +22,27 @@ const IconFlag = forwardRef<SVGSVGElement, IconProps>(function IconFlag(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5 22v-8m0 0 2.47-.5a8.7 8.7 0 0 1 4.92.46c1.7.68 3.56.8 5.33.36l.22-.05A1.4 1.4 0 0 0 19 12.9V5.54a1.2 1.2 0 0 0-1.5-1.17 8 8 0 0 1-4.9-.33l-.2-.08a8.7 8.7 0 0 0-4.93-.45L5 4m0 10v-3m0-7V2m0 2v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -66,11 +86,11 @@ const IconFlag = forwardRef<SVGSVGElement, IconProps>(function IconFlag(
             opacity={duotone ? "0.4" : "1"}
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M6.5 1.75a.75.75 0 0 0-1.5 0v20a.75.75 0 0 0 1.5 0z"
+            d="M6.1 2a.75.75 0 0 0-1.5 0v20a.75.75 0 0 0 1.5 0z"
             fill="currentColor"
           />
           <path
-            d="m13.35 3.79-.2-.08a8.7 8.7 0 0 0-4.93-.45L6.5 3.6v10l1.72-.34a8.7 8.7 0 0 1 4.92.45c1.7.68 3.56.8 5.33.36l.22-.05a1.4 1.4 0 0 0 1.06-1.37V5.3a1.2 1.2 0 0 0-1.5-1.17 8 8 0 0 1-4.9-.33"
+            d="m12.95 4.04-.2-.08a8.7 8.7 0 0 0-4.93-.45l-1.72.34v10l1.72-.34a8.7 8.7 0 0 1 4.92.45c1.7.68 3.56.8 5.33.36l.22-.05a1.4 1.4 0 0 0 1.06-1.37V5.55a1.2 1.2 0 0 0-1.5-1.17 8 8 0 0 1-4.9-.33"
             fill="currentColor"
           />
         </svg>
@@ -88,7 +108,7 @@ const IconFlag = forwardRef<SVGSVGElement, IconProps>(function IconFlag(
           {...rest}
         >
           <path
-            d="M5.75 1c.41 0 .75.34.75.75V3.6l1.72-.34a8.7 8.7 0 0 1 4.92.45l.2.08a8 8 0 0 0 4.92.33 1.2 1.2 0 0 1 1.49 1.17v7.36c0 .65-.44 1.21-1.06 1.37l-.22.05a8.7 8.7 0 0 1-5.33-.36 8.7 8.7 0 0 0-4.92-.45l-1.72.34v8.15a.75.75 0 0 1-1.5 0v-20c0-.41.34-.75.75-.75"
+            d="M5.35 1.25c.41 0 .75.34.75.75v1.85l1.72-.34a8.7 8.7 0 0 1 4.92.45l.2.08a8 8 0 0 0 4.92.33 1.2 1.2 0 0 1 1.49 1.17v7.36c0 .65-.44 1.21-1.06 1.37l-.22.05a8.7 8.7 0 0 1-5.33-.36 8.7 8.7 0 0 0-4.92-.45l-1.72.34V22a.75.75 0 0 1-1.5 0V2c0-.41.34-.75.75-.75"
             fill="currentColor"
           />
         </svg>

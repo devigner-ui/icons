@@ -23,7 +23,73 @@ const IconVideoRemove = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M1.5 8.5c0-5 2-7 7-7h6c5 0 7 2 7 7v6q0 .34-.02.67l-.14-.17-.03-.04a4.5 4.5 0 0 0-7.16 5.36 4 4 0 0 0 .86 1.02l.16.14q-.32.02-.67.02h-6c-5 0-7-2-7-7v-1.97"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2.02 6.61h18.96"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.02 1.61v4.86"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14.98 1.61v4.41"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22.5 18q0 .54-.13 1.05-.17.68-.52 1.27a4.5 4.5 0 0 1-6.67 1.16h-.01l-.16-.14A4.5 4.5 0 1 1 22.5 18Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m19.2 19.18-2.38-2.38"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M19.18 16.82 16.8 19.2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +103,7 @@ const IconVideoRemove = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M22.67 9v6q0 .34-.02.67l-.14-.17a4.5 4.5 0 0 0-7.19 5.32q.35.58.86 1.02l.16.14q-.32.02-.67.02h-6c-5 0-7-2-7-7V9c0-5 2-7 7-7h6c5 0 7 2 7 7"
+              d="M21.47 8.5v6q0 .34-.02.67l-.14-.17a4.5 4.5 0 0 0-7.19 5.32q.35.58.86 1.02l.16.14q-.32.02-.67.02h-6c-5 0-7-2-7-7v-6c0-5 2-7 7-7h6c5 0 7 2 7 7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -45,21 +111,21 @@ const IconVideoRemove = forwardRef<SVGSVGElement, IconProps>(
             />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M3.19 7.11h18.96"
+                d="M1.99 6.61h18.96"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M9.19 2.11v4.86"
+                d="M7.99 1.61v4.86"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M16.15 2.11v4.41"
+                d="M14.95 1.61v4.41"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
@@ -67,7 +133,7 @@ const IconVideoRemove = forwardRef<SVGSVGElement, IconProps>(
               />
             </g>
             <path
-              d="M23.67 18.5q0 .54-.13 1.05-.17.68-.52 1.27a4.5 4.5 0 0 1-6.67 1.16h-.01l-.16-.14a4.5 4.5 0 1 1 7.49-3.34"
+              d="M22.47 18q0 .54-.13 1.05-.17.68-.52 1.27a4.5 4.5 0 0 1-6.67 1.16h-.01l-.16-.14A4.5 4.5 0 1 1 22.47 18"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -76,7 +142,7 @@ const IconVideoRemove = forwardRef<SVGSVGElement, IconProps>(
             />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="m20.37 19.68-2.38-2.38"
+                d="m19.17 19.18-2.38-2.38"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -84,7 +150,7 @@ const IconVideoRemove = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="m20.35 17.32-2.38 2.38"
+                d="m19.15 16.82-2.38 2.38"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -107,16 +173,16 @@ const IconVideoRemove = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m22.65 15.67-.14-.17a4.5 4.5 0 0 0-7.19 5.32q.35.58.86 1.02l.16.14h.01a4.49 4.49 0 0 0 6.3-6.31m-1.75 4.54a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-.66-.66-.69.69a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l.69-.69-.66-.66a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l.66.66.63-.63a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-.63.63.66.66c.3.29.3.76 0 1.06"
+              d="m21.55 15.17-.14-.17a4.5 4.5 0 0 0-7.19 5.32q.35.58.86 1.02l.16.14h.01a4.49 4.49 0 0 0 6.3-6.31m-1.75 4.54a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-.66-.66-.69.69a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l.69-.69-.66-.66a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l.66.66.63-.63a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-.63.63.66.66c.3.29.3.76 0 1.06"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22.67 7.81v7.89l-.02-.03-.14-.17-.03-.04a4.5 4.5 0 0 0-7.16 5.36 4 4 0 0 0 .86 1.02l.16.14h.01l.03.02h-7.9c-3.64 0-5.81-2.17-5.81-5.81V7.81q0-.77.13-1.45C3.31 3.61 5.34 2.01 8.44 2h8.46c3.1.01 5.13 1.61 5.64 4.36q.13.68.13 1.45"
+              d="M21.57 7.31v7.89l-.02-.03-.14-.17-.03-.04a4.5 4.5 0 0 0-7.16 5.36 4 4 0 0 0 .86 1.02l.16.14h.01l.03.02h-7.9c-3.64 0-5.81-2.17-5.81-5.81V7.31q0-.77.13-1.45c.51-2.75 2.54-4.35 5.64-4.36h8.46c3.1.01 5.13 1.61 5.64 4.36q.13.68.13 1.45"
               fill="currentColor"
             />
             <path
-              d="M22.67 7.81v.05h-20v-.05q0-.77.13-1.45h5.64V2h1.5v4.36h5.46V2h1.5v4.36h5.64q.13.68.13 1.45"
+              d="M21.57 7.31v.05h-20v-.05q0-.77.13-1.45h5.64V1.5h1.5v4.36h5.46V1.5h1.5v4.36h5.64q.13.68.13 1.45"
               fill="currentColor"
             />
           </svg>
@@ -134,23 +200,23 @@ const IconVideoRemove = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m22.65 15.67-.14-.17a4.5 4.5 0 0 0-7.19 5.32q.35.58.86 1.02l.16.14h.01a4.49 4.49 0 0 0 6.3-6.31m-1.75 4.54a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-.66-.66-.69.69a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l.69-.69-.66-.66a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l.66.66.63-.63a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-.63.63.66.66c.3.29.3.76 0 1.06"
+              d="m21.55 15.17-.14-.17a4.5 4.5 0 0 0-7.19 5.32q.35.58.86 1.02l.16.14h.01a4.49 4.49 0 0 0 6.3-6.31m-1.75 4.54a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-.66-.66-.69.69a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l.69-.69-.66-.66a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l.66.66.63-.63a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-.63.63.66.66c.3.29.3.76 0 1.06"
               fill="currentColor"
             />
             <path
-              d="M15.4 5.86V2.5a.5.5 0 0 0-.5-.5h-4.46a.5.5 0 0 0-.5.5v3.36c0 .28.22.5.5.5h4.46a.5.5 0 0 0 .5-.5"
+              d="M14.3 5.36V2a.5.5 0 0 0-.5-.5H9.34a.5.5 0 0 0-.5.5v3.36c0 .28.22.5.5.5h4.46a.5.5 0 0 0 .5-.5"
               fill="currentColor"
             />
             <path
-              d="M7.92 2.02C5.36 2.18 3.61 3.5 2.96 5.7a.5.5 0 0 0 .48.66h4.5a.5.5 0 0 0 .5-.5V2.52a.5.5 0 0 0-.52-.5"
+              d="M6.82 1.52C4.26 1.68 2.51 3 1.86 5.2a.5.5 0 0 0 .48.66h4.5a.5.5 0 0 0 .5-.5V2.02a.5.5 0 0 0-.52-.5"
               fill="currentColor"
             />
             <path
-              d="M17.42 2.01c2.56.16 4.31 1.48 4.96 3.68a.5.5 0 0 1-.48.66h-4.5a.5.5 0 0 1-.5-.5V2.51a.5.5 0 0 1 .52-.5"
+              d="M16.32 1.51c2.56.16 4.31 1.48 4.96 3.68a.5.5 0 0 1-.48.66h-4.5a.5.5 0 0 1-.5-.5V2.01a.5.5 0 0 1 .52-.5"
               fill="currentColor"
             />
             <path
-              d="M22.67 8.36v4.38a.5.5 0 0 1-.72.44 6 6 0 0 0-8.78 5.32c0 .81.32 1.85.72 2.72.16.35-.08.78-.47.78H8.48a5.8 5.8 0 0 1-5.81-5.81V8.36c0-.28.22-.5.5-.5h19c.28 0 .5.22.5.5"
+              d="M21.57 7.86v4.38a.5.5 0 0 1-.72.44A6 6 0 0 0 12.07 18c0 .81.32 1.85.72 2.72.16.35-.08.78-.47.78H7.38a5.8 5.8 0 0 1-5.81-5.81V7.86c0-.28.22-.5.5-.5h19c.28 0 .5.22.5.5"
               fill="currentColor"
             />
           </svg>

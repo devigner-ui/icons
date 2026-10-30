@@ -23,7 +23,45 @@ const IconSmartHome = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12.2v1.53c0 3.9 0 5.85-1.17 7.06S17.77 22 14 22m7.48-14.18c-.52-.95-1.47-1.53-3.36-2.71l-2-1.24C14.12 2.62 13.1 2 12 2s-2.11.62-4.12 1.87l-2 1.24c-1.9 1.18-2.84 1.76-3.36 2.71A5 5 0 0 0 2.03 10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11 22a9 9 0 0 0-9-9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8 22a6 6 0 0 0-6-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 22a3 3 0 0 0-3-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

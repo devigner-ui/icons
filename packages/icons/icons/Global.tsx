@@ -22,7 +22,39 @@ const IconGlobal = forwardRef<SVGSVGElement, IconProps>(function IconGlobal(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7 3.34A10 10 0 1 1 3.34 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14.83 19.07a7 7 0 0 1-1.3 2.17Q12.8 22 12 22t-1.53-.76a7 7 0 0 1-1.3-2.17q-.55-1.41-.87-3.24a24 24 0 0 1 0-7.66q.3-1.83.87-3.24.56-1.4 1.3-2.17Q11.2 2.01 12 2q.8 0 1.53.76.74.76 1.3 2.17.55 1.41.87 3.24a24 24 0 0 1 0 7.66"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 12h8m12 0h-8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

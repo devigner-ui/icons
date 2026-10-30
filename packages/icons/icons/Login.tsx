@@ -22,7 +22,40 @@ const IconLogin = forwardRef<SVGSVGElement, IconProps>(function IconLogin(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8 16c0 2.83 0 4.24.88 5.12.64.64 1.57.82 3.12.86M8 8c0-2.83 0-4.24.88-5.12S11.18 2 14 2h1c2.83 0 4.24 0 5.12.88S21 5.18 21 8v8c0 2.83 0 4.24-.88 5.12-.77.77-1.95.87-4.12.88"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 9.5v5c0 2.36 0 3.54.73 4.27s1.91.73 4.27.73M3.73 5.23C4.46 4.5 5.64 4.5 8 4.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6 12h9m-2.5-2.5L15 12l-2.5 2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

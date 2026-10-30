@@ -22,7 +22,35 @@ const IconSkipNext = forwardRef<SVGSVGElement, IconProps>(function IconSkipNext(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13.04 17.65a39 39 0 0 1-3.73 2.43c-2.86 1.63-4.29 2.45-5.57 1.55s-1.4-2.8-1.63-6.57a48 48 0 0 1 .05-6.98m.37-3.48c.22-1.07.57-1.77 1.21-2.23 1.28-.9 2.71-.08 5.57 1.55q1.12.64 2.1 1.27c.71.47 1.5 1.04 2.29 1.65C16.57 9.03 18 10.13 18 12c0 1.34-.73 2.28-2.19 3.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M22 5v15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -62,14 +90,14 @@ const IconSkipNext = forwardRef<SVGSVGElement, IconProps>(function IconSkipNext(
           {...rest}
         >
           <path
-            d="M13.7 6.84C16.57 9.03 18 10.13 18 12s-1.43 2.97-4.3 5.16a39 39 0 0 1-4.39 2.92c-2.86 1.63-4.29 2.45-5.57 1.55s-1.4-2.8-1.63-6.57a48 48 0 0 1-.01-6.12c.24-3.77.36-5.66 1.64-6.57 1.28-.9 2.71-.08 5.57 1.55q1.13.64 2.1 1.27c.71.47 1.5 1.04 2.29 1.65"
+            d="M13.3 6.84c2.87 2.19 4.3 3.29 4.3 5.16s-1.43 2.97-4.3 5.16a39 39 0 0 1-4.39 2.92c-2.86 1.63-4.29 2.45-5.57 1.55s-1.4-2.8-1.63-6.57a48 48 0 0 1-.01-6.12c.24-3.77.36-5.66 1.64-6.57 1.28-.9 2.71-.08 5.57 1.55q1.13.64 2.1 1.27c.71.47 1.5 1.04 2.29 1.65"
             fill="currentColor"
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M22 4.25c.41 0 .75.34.75.75v15a.75.75 0 0 1-1.5 0V5c0-.41.34-.75.75-.75"
+              d="M21.6 4.25c.41 0 .75.34.75.75v15a.75.75 0 0 1-1.5 0V5c0-.41.34-.75.75-.75"
               fill="currentColor"
             />
           </g>
@@ -88,13 +116,13 @@ const IconSkipNext = forwardRef<SVGSVGElement, IconProps>(function IconSkipNext(
           {...rest}
         >
           <path
-            d="M13.7 6.84C16.57 9.03 18 10.13 18 12s-1.43 2.97-4.3 5.16a39 39 0 0 1-4.39 2.92c-2.86 1.63-4.29 2.45-5.57 1.55s-1.4-2.8-1.63-6.57a48 48 0 0 1-.01-6.12c.24-3.77.36-5.66 1.64-6.57 1.28-.9 2.71-.08 5.57 1.55q1.13.64 2.1 1.27c.71.47 1.5 1.04 2.29 1.65"
+            d="M13.3 6.84c2.87 2.19 4.3 3.29 4.3 5.16s-1.43 2.97-4.3 5.16a39 39 0 0 1-4.39 2.92c-2.86 1.63-4.29 2.45-5.57 1.55s-1.4-2.8-1.63-6.57a48 48 0 0 1-.01-6.12c.24-3.77.36-5.66 1.64-6.57 1.28-.9 2.71-.08 5.57 1.55q1.13.64 2.1 1.27c.71.47 1.5 1.04 2.29 1.65"
             fill="currentColor"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M22 4.25c.41 0 .75.34.75.75v15a.75.75 0 0 1-1.5 0V5c0-.41.34-.75.75-.75"
+            d="M21.6 4.25c.41 0 .75.34.75.75v15a.75.75 0 0 1-1.5 0V5c0-.41.34-.75.75-.75"
             fill="currentColor"
           />
         </svg>

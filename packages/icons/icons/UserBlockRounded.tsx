@@ -23,7 +23,47 @@ const IconUserBlockRounded = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="11"
+            cy="6.5"
+            r="4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m18.95 16.55-3.9 3.9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="17"
+            cy="18.5"
+            r="3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 21.46q-.5.04-1 .04c-3.87 0-7-1.8-7-4q0-.52.22-1m9.28-2.74a12 12 0 0 0-5.5.12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,28 +77,28 @@ const IconUserBlockRounded = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <circle
-              cx="12"
-              cy="6.00049"
+              cx="11"
+              cy="6.5"
               r="4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
-              d="m19.95 16.05-3.9 3.9"
+              d="m18.95 16.55-3.9 3.9"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <circle
-              cx="18"
-              cy="18.0005"
+              cx="17"
+              cy="18.5"
               r="3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M13 20.96q-.5.04-1 .04c-3.87 0-7-1.79-7-4s3.13-4 7-4q1.33.01 2.5.26"
+              d="M12 21.46q-.5.04-1 .04c-3.87 0-7-1.79-7-4s3.13-4 7-4q1.33.01 2.5.26"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -77,16 +117,16 @@ const IconUserBlockRounded = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <circle cx="12" cy="6.00049" r="4" fill="currentColor" />
+            <circle cx="10.6" cy="6" r="4" fill="currentColor" />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M18 15.75a2.25 2.25 0 0 0-2.03 3.22l3-3q-.45-.22-.97-.22m2.03 1.28-3 3q.45.21.97.22a2.25 2.25 0 0 0 2.03-3.22m-5.78.97a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0"
+              d="M16.6 15.75a2.25 2.25 0 0 0-2.03 3.22l3-3q-.45-.22-.97-.22m2.03 1.28-3 3q.45.21.97.22a2.25 2.25 0 0 0 2.03-3.22m-5.78.97a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M17.22 14.33a3.75 3.75 0 0 0-1.97 6.22q-1.48.44-3.25.45c-3.87 0-7-1.79-7-4s3.13-4 7-4a10 10 0 0 1 5.22 1.33"
+              d="M15.82 14.33a3.75 3.75 0 0 0-1.97 6.22q-1.48.44-3.25.45c-3.87 0-7-1.79-7-4s3.13-4 7-4a10 10 0 0 1 5.22 1.33"
               fill="currentColor"
             />
           </svg>
@@ -103,15 +143,15 @@ const IconUserBlockRounded = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <circle cx="12" cy="6.00049" r="4" fill="currentColor" />
+            <circle cx="10.6" cy="6" r="4" fill="currentColor" />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M18 15.75a2.25 2.25 0 0 0-2.03 3.22l3-3q-.45-.22-.97-.22m2.03 1.28-3 3q.45.21.97.22a2.25 2.25 0 0 0 2.03-3.22m-5.78.97a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0"
+              d="M16.6 15.75a2.25 2.25 0 0 0-2.03 3.22l3-3q-.45-.22-.97-.22m2.03 1.28-3 3q.45.21.97.22a2.25 2.25 0 0 0 2.03-3.22m-5.78.97a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0"
               fill="currentColor"
             />
             <path
-              d="M15.33 13.48a5.25 5.25 0 0 0-1.71 7.41q-.78.1-1.62.11c-3.87 0-7-1.79-7-4s3.13-4 7-4c1.2 0 2.34.18 3.33.48"
+              d="M13.93 13.48a5.25 5.25 0 0 0-1.71 7.41q-.78.1-1.62.11c-3.87 0-7-1.79-7-4s3.13-4 7-4c1.2 0 2.34.18 3.33.48"
               fill="currentColor"
             />
           </svg>

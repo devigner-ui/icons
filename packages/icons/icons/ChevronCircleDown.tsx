@@ -23,7 +23,36 @@ const IconChevronCircleDown = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4.87 4.99A10 10 0 1 0 9.98 2.2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.47 10.74 12 14.26l3.53-3.52"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +66,7 @@ const IconChevronCircleDown = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -46,7 +75,7 @@ const IconChevronCircleDown = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m9.14 10.74 3.53 3.52 3.53-3.52"
+              d="M8.47 10.74 12 14.26l3.53-3.52"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -68,11 +97,11 @@ const IconChevronCircleDown = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               fill="currentColor"
             />
             <path
-              d="M12.67 15.01a.7.7 0 0 1-.53-.22l-3.53-3.53a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l3 3 3-3a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-3.53 3.53a.7.7 0 0 1-.53.22"
+              d="M12 15.01a.7.7 0 0 1-.53-.22l-3.53-3.53a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l3 3 3-3a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-3.53 3.53a.7.7 0 0 1-.53.22"
               fill="currentColor"
             />
           </svg>
@@ -90,7 +119,7 @@ const IconChevronCircleDown = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 2c-5.51 0-10 4.49-10 10s4.49 10 10 10 10-4.49 10-10-4.49-10-10-10m4.06 9.27L13.2 14.8a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-3.53-3.53a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l3 3 3-3a.75.75 0 0 1 1.06 0c.29.29.29.76 0 1.06"
+              d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2m4.06 9.27-3.53 3.53a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-3.53-3.53a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l3 3 3-3a.75.75 0 0 1 1.06 0c.29.29.29.76 0 1.06"
               fill="currentColor"
             />
           </svg>

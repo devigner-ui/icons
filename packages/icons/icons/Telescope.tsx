@@ -23,7 +23,40 @@ const IconTelescope = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20.58 8c.85-.48 1.28-.73 1.4-1.14.1-.41-.14-.83-.64-1.68L20.3 3.4c-.5-.84-.75-1.26-1.17-1.37s-.84.13-1.7.61l-3.68 2.1c-.83.47-1.25.7-1.36 1.1-.1.41.14.82.62 1.65l1.12 1.9c.47.8.7 1.2 1.1 1.31s.8-.12 1.61-.58m-4.6-3.94-3.68 2.1c-.83.47-1.25.7-1.36 1.1-.1.41.14.82.62 1.65l.6 1.01c.47.8.7 1.2 1.1 1.31.4.1.8-.12 1.6-.58l3.74-2.12m-7.8-.93-3.64 2.06c-.85.49-1.28.73-1.4 1.15-.1.4.14.83.64 1.67.49.84.74 1.26 1.16 1.37s.84-.13 1.7-.61l3.63-2.07"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m12 12.5 4 9.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 12.5 8 22"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

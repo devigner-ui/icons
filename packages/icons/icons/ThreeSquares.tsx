@@ -23,7 +23,38 @@ const IconThreeSquares = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7 12H6c-1.89 0-2.83 0-3.41.59-.48.47-.57 1.17-.59 2.41m10 2v1c0 1.89 0 2.83-.59 3.41C10.83 22 9.9 22 8 22H6c-1.89 0-2.83 0-3.41-.59-.48-.47-.57-1.17-.59-2.41"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 7h-1c-1.89 0-2.83 0-3.41.59C7 8.17 7 9.1 7 11v2c0 1.89 0 2.83.59 3.41C8.17 17 9.1 17 11 17h2c1.89 0 2.83 0 3.41-.59.59-.58.59-1.52.59-3.41v-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M15 2c-1.24.02-1.94.11-2.41.59C12 3.17 12 4.1 12 6v2c0 1.89 0 2.83.59 3.41.58.59 1.52.59 3.41.59h2c1.89 0 2.83 0 3.41-.59C22 10.83 22 9.9 22 8V6c0-1.89 0-2.83-.59-3.41-.47-.48-1.17-.57-2.41-.59"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

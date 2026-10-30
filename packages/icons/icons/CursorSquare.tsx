@@ -23,7 +23,34 @@ const IconCursorSquare = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m14.86 16.5-2.46-2.46-.75.75c-.77.77-1.16 1.15-1.57 1.06s-.6-.6-.98-1.62l-1.25-3.4c-.76-2.04-1.13-3.06-.6-3.59s1.54-.15 3.58.6l3.4 1.26c1.02.38 1.53.56 1.62.98s-.29.8-1.06 1.57l-.75.75 2.46 2.46c.25.25.38.38.44.52q.12.3 0 .6c-.06.14-.19.27-.44.52s-.38.38-.52.44a.8.8 0 0 1-.6 0 2 2 0 0 1-.52-.44Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M22 12c0 4.71 0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46c.97.98 1.3 2.35 1.4 4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

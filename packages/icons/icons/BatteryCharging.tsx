@@ -23,7 +23,63 @@ const IconBatteryCharging = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20.5 9.5C22 9.5 22 10 22 11v2c0 1 0 1.5-1.5 1.5"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M11.27 12a1 1 0 0 1 .87 1.5L10 16"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m10 8-1.9 2.5a1 1 0 0 0 .87 1.5"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 10c0-4 1-5 5-5"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7 19c-4 0-5-1-5-5"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M13 5c4 0 5 1 5 5v4c0 4-1 5-5 5"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,7 +94,7 @@ const IconBatteryCharging = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M21.17 9.5c1.5 0 1.5.5 1.5 1.5v2c0 1 0 1.5-1.5 1.5"
+              d="M20.5 9.5C22 9.5 22 10 22 11v2c0 1 0 1.5-1.5 1.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -46,21 +102,21 @@ const IconBatteryCharging = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m10.67 8-1.89 2.5a1 1 0 0 0 .86 1.5h2.3a1 1 0 0 1 .87 1.5L10.67 16"
+              d="m10 8-1.89 2.5a1 1 0 0 0 .86 1.5h2.3a1 1 0 0 1 .87 1.5L10 16"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M7.67 19c-4 0-5-1-5-5v-4c0-4 1-5 5-5"
+              d="M7 19c-4 0-5-1-5-5v-4c0-4 1-5 5-5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M13.67 5c4 0 5 1 5 5v4c0 4-1 5-5 5"
+              d="M13 5c4 0 5 1 5 5v4c0 4-1 5-5 5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -82,15 +138,15 @@ const IconBatteryCharging = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M13.6 4.79H8.02c-4.1 0-5.35 1.25-5.35 5.35v3.72c0 4.1 1.25 5.35 5.35 5.35h5.58c4.1 0 5.35-1.25 5.35-5.35v-3.72c0-4.1-1.25-5.35-5.35-5.35"
+              d="M12.93 4.79H7.35C3.25 4.79 2 6.04 2 10.14v3.72c0 4.1 1.25 5.35 5.35 5.35h5.58c4.1 0 5.35-1.25 5.35-5.35v-3.72c0-4.1-1.25-5.35-5.35-5.35"
               fill="currentColor"
             />
             <path
-              d="m21.09 9-.52-.02a.7.7 0 0 0-.7.7v4.65c0 .39.31.7.7.7l.54-.02c1.56-.18 1.56-1.28 1.56-2.08v-1.86c0-.8 0-1.9-1.58-2.07"
+              d="m20.42 9-.52-.02a.7.7 0 0 0-.7.7v4.65c0 .39.31.7.7.7l.54-.02C22 14.83 22 13.73 22 12.93v-1.86c0-.8 0-1.9-1.58-2.07"
               fill="currentColor"
             />
             <path
-              d="M10.68 16.24a1 1 0 0 1-.49-.18.76.76 0 0 1-.08-1.06l1.8-2.11q.01-.04-.02-.09-.03-.06-.11-.06H9.79a1.61 1.61 0 0 1-1.41-2.43l1.71-2.26a.75.75 0 0 1 1.2.9l-1.65 2.19q.03-.04.05.05.03.06.11.06h2.01a1.61 1.61 0 0 1 1.41 2.43l-.08.11-1.87 2.19a.8.8 0 0 1-.59.26"
+              d="M10.01 16.24a1 1 0 0 1-.49-.18.76.76 0 0 1-.08-1.06l1.8-2.11q.01-.04-.02-.09-.03-.06-.11-.06H9.12a1.61 1.61 0 0 1-1.41-2.43l1.71-2.26a.75.75 0 0 1 1.2.9l-1.65 2.19q.03-.04.05.05.03.06.11.06h2.01a1.61 1.61 0 0 1 1.41 2.43l-.08.11-1.87 2.19a.8.8 0 0 1-.59.26"
               fill="currentColor"
             />
           </svg>
@@ -108,11 +164,11 @@ const IconBatteryCharging = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m21.09 9-.52-.02a.7.7 0 0 0-.7.7v4.65c0 .39.31.7.7.7l.54-.02c1.56-.18 1.56-1.28 1.56-2.08v-1.86c0-.8 0-1.9-1.58-2.07"
+              d="m20.42 9-.52-.02a.7.7 0 0 0-.7.7v4.65c0 .39.31.7.7.7l.54-.02C22 14.83 22 13.73 22 12.93v-1.86c0-.8 0-1.9-1.58-2.07"
               fill="currentColor"
             />
             <path
-              d="M13.6 4.79H8.02c-4.1 0-5.35 1.25-5.35 5.35v3.72c0 4.1 1.25 5.35 5.35 5.35h5.58c4.1 0 5.35-1.25 5.35-5.35v-3.72c0-4.1-1.25-5.35-5.35-5.35m-.4 8.89-.08.11-1.87 2.19a.76.76 0 0 1-1.06.08.76.76 0 0 1-.08-1.06l1.8-2.11q.01-.04-.02-.09-.03-.06-.11-.06H9.79a1.61 1.61 0 0 1-1.41-2.43l1.71-2.26a.75.75 0 0 1 1.2.9l-1.65 2.19q.03-.04.05.05.03.06.11.06h2.01c.59 0 1.11.3 1.41.81.27.51.27 1.11-.02 1.62"
+              d="M12.93 4.79H7.35C3.25 4.79 2 6.04 2 10.14v3.72c0 4.1 1.25 5.35 5.35 5.35h5.58c4.1 0 5.35-1.25 5.35-5.35v-3.72c0-4.1-1.25-5.35-5.35-5.35m-.4 8.89-.08.11-1.87 2.19a.76.76 0 0 1-1.06.08.76.76 0 0 1-.08-1.06l1.8-2.11q.01-.04-.02-.09-.03-.06-.11-.06H9.12a1.61 1.61 0 0 1-1.41-2.43l1.71-2.26a.75.75 0 0 1 1.2.9l-1.65 2.19q.03-.04.05.05.03.06.11.06h2.01c.59 0 1.11.3 1.41.81.27.51.27 1.11-.02 1.62"
               fill="currentColor"
             />
           </svg>

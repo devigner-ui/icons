@@ -23,7 +23,33 @@ const IconMedalRibbon = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m7.35 15-.64 2.32c-.62 2.3-.94 3.44-.52 4.07q.23.34.57.51c.66.33 1.66-.2 3.68-1.24.67-.35 1-.53 1.36-.56q.2-.03.4 0c.35.03.69.2 1.36.56 2.02 1.05 3.02 1.57 3.68 1.24q.34-.19.57-.51c.42-.63.1-1.78-.52-4.07L16.65 15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5.5 6.4Q5.01 7.6 5 9a7 7 0 1 0 4.4-6.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

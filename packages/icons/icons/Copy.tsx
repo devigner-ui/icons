@@ -22,7 +22,33 @@ const IconCopy = forwardRef<SVGSVGElement, IconProps>(function IconCopy(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21 10c-.01-2.18-.11-3.35-.88-4.12C19.24 5 17.82 5 15 5h-3c-2.83 0-4.24 0-5.12.88S6 8.18 6 11v5c0 2.83 0 4.24.88 5.12S9.18 22 12 22h3c2.83 0 4.24 0 5.12-.88S21 18.82 21 16v-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 10v6a3 3 0 0 0 3 3M18 5a3 3 0 0 0-3-3h-4C7.23 2 5.34 2 4.17 3.17 3.52 3.82 3.23 4.7 3.1 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

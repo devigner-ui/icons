@@ -22,7 +22,7 @@ const IconGrid3x2 = forwardRef<SVGSVGElement, IconProps>(function IconGrid3x2(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,63 @@ const IconGrid3x2 = forwardRef<SVGSVGElement, IconProps>(function IconGrid3x2(
           {...rest}
         >
           <path
-            d="M9.67 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7h-6c-5 0-7 2-7 7v6c0 5 2 7 7 7"
+            d="M2.52 5.41A10 10 0 0 0 2 9v6c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9q-1.76 0-3.04.34"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 12h20"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.25 12v6"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15.75 22V12"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.25 12V2"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15.75 12V2.54"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,35 +100,35 @@ const IconGrid3x2 = forwardRef<SVGSVGElement, IconProps>(function IconGrid3x2(
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="M2.67 12h20"
+              d="M2 12h20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M8.92 12v9.5"
+              d="M8.25 12v9.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M16.42 22V12"
+              d="M15.75 22V12"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M8.92 12V2"
+              d="M8.25 12V2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M16.42 12V2.54"
+              d="M15.75 12V2.54"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -95,26 +151,26 @@ const IconGrid3x2 = forwardRef<SVGSVGElement, IconProps>(function IconGrid3x2(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M22.67 7.81V12h-6.25V2h.44c3.64 0 5.81 2.17 5.81 5.81"
+            d="M22 7.81V12h-6.25V2h.44C19.83 2 22 4.17 22 7.81"
             fill="currentColor"
           />
           <path
-            d="M22.67 12v4.19c0 3.64-2.17 5.81-5.81 5.81h-.44V12z"
+            d="M22 12v4.19c0 3.64-2.17 5.81-5.81 5.81h-.44V12z"
             fill="currentColor"
           />
           <path
-            d="M8.92 12v10h-.44c-3.64 0-5.81-2.17-5.81-5.81V12z"
+            d="M8.25 12v10h-.44C4.17 22 2 19.83 2 16.19V12z"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M8.48 2C4.84 2 2.67 4.17 2.67 7.81V12h6.25V2z"
+            d="M7.81 2C4.17 2 2 4.17 2 7.81V12h6.25V2z"
             fill="currentColor"
           />
-          <path d="M16.42 2h-7.5v10h7.5z" fill="currentColor" />
+          <path d="M15.75 2h-7.5v10h7.5z" fill="currentColor" />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M16.42 12h-7.5v10h7.5z"
+            d="M15.75 12h-7.5v10h7.5z"
             fill="currentColor"
           />
         </svg>
@@ -132,23 +188,23 @@ const IconGrid3x2 = forwardRef<SVGSVGElement, IconProps>(function IconGrid3x2(
           {...rest}
         >
           <path
-            d="M22.67 7.81v3.44h-5.25V2.03c3.3.2 5.25 2.33 5.25 5.78"
+            d="M22 7.81v3.44h-5.25V2.03c3.3.2 5.25 2.33 5.25 5.78"
             fill="currentColor"
           />
           <path
-            d="M22.67 12.75v3.44c0 3.45-1.95 5.58-5.25 5.78v-9.22z"
+            d="M22 12.75v3.44c0 3.45-1.95 5.58-5.25 5.78v-9.22z"
             fill="currentColor"
           />
           <path
-            d="M7.92 12.75v9.22c-3.3-.2-5.25-2.33-5.25-5.78v-3.44z"
+            d="M7.25 12.75v9.22C3.95 21.77 2 19.64 2 16.19v-3.44z"
             fill="currentColor"
           />
           <path
-            d="M7.92 2.03v9.22H2.67V7.81c0-3.45 1.95-5.58 5.25-5.78"
+            d="M7.25 2.03v9.22H2V7.81c0-3.45 1.95-5.58 5.25-5.78"
             fill="currentColor"
           />
-          <path d="M15.92 2h-6.5v9.25h6.5z" fill="currentColor" />
-          <path d="M15.92 12.75h-6.5V22h6.5z" fill="currentColor" />
+          <path d="M15.25 2h-6.5v9.25h6.5z" fill="currentColor" />
+          <path d="M15.25 12.75h-6.5V22h6.5z" fill="currentColor" />
         </svg>
       )}
     </>

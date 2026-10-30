@@ -22,7 +22,7 @@ const IconFramer = forwardRef<SVGSVGElement, IconProps>(function IconFramer(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,37 @@ const IconFramer = forwardRef<SVGSVGElement, IconProps>(function IconFramer(
           {...rest}
         >
           <path
-            d="m5.67 2 14 14h-14V9h14V2z"
+            d="M5 10.52V9h14V2H5l14 14H5v-.78"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 16v6l-7-6z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m5 2 14 14H5V9h14V2z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -45,7 +75,7 @@ const IconFramer = forwardRef<SVGSVGElement, IconProps>(function IconFramer(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 16v6l-7-6z"
+            d="M12 16v6l-7-6z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -68,16 +98,16 @@ const IconFramer = forwardRef<SVGSVGElement, IconProps>(function IconFramer(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
-            d="M5.17 10.49v5.94c0 .31.14.61.37.81l5.36 4.59c.7.6 1.77.1 1.77-.81v-4.1h4.91c.95 0 1.43-1.15.76-1.83l-5.67-5.67H6.24a1.06 1.06 0 0 0-1.07 1.07"
+            d="M4.5 10.49v5.94c0 .31.14.61.37.81l5.36 4.59c.7.6 1.77.1 1.77-.81v-4.1h4.91c.95 0 1.43-1.15.76-1.83L12 9.42H5.57a1.06 1.06 0 0 0-1.07 1.07"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M19.1 1.91H7.76A1.07 1.07 0 0 0 7 3.74l5.67 5.67h6.43c.59 0 1.07-.48 1.07-1.07V2.98c0-.59-.48-1.07-1.07-1.07"
+            d="M18.43 1.91H7.09a1.07 1.07 0 0 0-.76 1.83L12 9.41h6.43c.59 0 1.07-.48 1.07-1.07V2.98c0-.59-.48-1.07-1.07-1.07"
             fill="currentColor"
           />
         </svg>
@@ -95,11 +125,11 @@ const IconFramer = forwardRef<SVGSVGElement, IconProps>(function IconFramer(
           {...rest}
         >
           <path
-            d="M5.17 10.49v5.94c0 .31.14.61.37.81l5.36 4.59c.7.6 1.77.1 1.77-.81v-4.1h4.91c.95 0 1.43-1.15.76-1.83l-5.67-5.67H6.24a1.06 1.06 0 0 0-1.07 1.07"
+            d="M4.5 10.49v5.94c0 .31.14.61.37.81l5.36 4.59c.7.6 1.77.1 1.77-.81v-4.1h4.91c.95 0 1.43-1.15.76-1.83L12 9.42H5.57a1.06 1.06 0 0 0-1.07 1.07"
             fill="currentColor"
           />
           <path
-            d="M19.1 1.91H7.76A1.07 1.07 0 0 0 7 3.74l5.67 5.67h6.43c.59 0 1.07-.48 1.07-1.07V2.98c0-.59-.48-1.07-1.07-1.07"
+            d="M18.43 1.91H7.09a1.07 1.07 0 0 0-.76 1.83L12 9.41h6.43c.59 0 1.07-.48 1.07-1.07V2.98c0-.59-.48-1.07-1.07-1.07"
             fill="currentColor"
           />
         </svg>

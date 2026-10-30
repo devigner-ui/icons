@@ -23,7 +23,70 @@ const IconVoiceSquare = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 9.86v4.29"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9 8.43v7.14"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 14.99V17"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 7v4.95"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15 8.43v7.14"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18 9.86v4.29"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 12.99V15c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,7 +101,7 @@ const IconVoiceSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M6.67 9.86v4.29"
+              d="M6 9.86v4.29"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -46,7 +109,7 @@ const IconVoiceSquare = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M9.67 8.43v7.14"
+              d="M9 8.43v7.14"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -54,7 +117,7 @@ const IconVoiceSquare = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.67 7v10"
+              d="M12 7v10"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -62,7 +125,7 @@ const IconVoiceSquare = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M15.67 8.43v7.14"
+              d="M15 8.43v7.14"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -70,14 +133,14 @@ const IconVoiceSquare = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18.67 9.86v4.29"
+              d="M18 9.86v4.29"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M9.67 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7h-6c-5 0-7 2-7 7v6c0 5 2 7 7 7"
+              d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -99,27 +162,27 @@ const IconVoiceSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.86 2H8.49C4.85 2 2.68 4.17 2.68 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2"
+              d="M16.19 2H7.82C4.18 2 2.01 4.17 2.01 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2"
               fill="currentColor"
             />
             <path
-              d="M6.67 14.89a.76.76 0 0 1-.75-.75V9.85c0-.41.34-.75.75-.75s.75.34.75.75v4.29c0 .42-.34.75-.75.75"
+              d="M6 14.89a.76.76 0 0 1-.75-.75V9.85c0-.41.34-.75.75-.75s.75.34.75.75v4.29c0 .42-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M9.67 16.32a.76.76 0 0 1-.75-.75V8.43c0-.41.34-.75.75-.75s.75.34.75.75v7.14c0 .42-.34.75-.75.75"
+              d="M9 16.32a.76.76 0 0 1-.75-.75V8.43c0-.41.34-.75.75-.75s.75.34.75.75v7.14c0 .42-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M12.67 17.75a.76.76 0 0 1-.75-.75V7c0-.41.34-.75.75-.75s.75.34.75.75v10c0 .41-.34.75-.75.75"
+              d="M12 17.75a.76.76 0 0 1-.75-.75V7c0-.41.34-.75.75-.75s.75.34.75.75v10c0 .41-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M15.67 16.32a.76.76 0 0 1-.75-.75V8.43c0-.41.34-.75.75-.75s.75.34.75.75v7.14c0 .42-.34.75-.75.75"
+              d="M15 16.32a.76.76 0 0 1-.75-.75V8.43c0-.41.34-.75.75-.75s.75.34.75.75v7.14c0 .42-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M18.67 14.89a.76.76 0 0 1-.75-.75V9.85c0-.41.34-.75.75-.75s.75.34.75.75v4.29c0 .42-.34.75-.75.75"
+              d="M18 14.89a.76.76 0 0 1-.75-.75V9.85c0-.41.34-.75.75-.75s.75.34.75.75v4.29c0 .42-.34.75-.75.75"
               fill="currentColor"
             />
           </svg>
@@ -137,7 +200,7 @@ const IconVoiceSquare = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.86 2H8.48C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.65 2.17 5.82 5.81 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2M7.42 14.14c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V9.86c0-.41.34-.75.75-.75s.75.34.75.75zm3 1.43c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V8.43c0-.41.34-.75.75-.75s.75.34.75.75zm3 1.43c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V7c0-.41.34-.75.75-.75s.75.34.75.75zm3-1.43c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V8.43c0-.41.34-.75.75-.75s.75.34.75.75zm3-1.43c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V9.86c0-.41.34-.75.75-.75s.75.34.75.75z"
+              d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2M6.75 14.14c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V9.86c0-.41.34-.75.75-.75s.75.34.75.75zm3 1.43c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V8.43c0-.41.34-.75.75-.75s.75.34.75.75zm3 1.43c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V7c0-.41.34-.75.75-.75s.75.34.75.75zm3-1.43c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V8.43c0-.41.34-.75.75-.75s.75.34.75.75zm3-1.43c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V9.86c0-.41.34-.75.75-.75s.75.34.75.75z"
               fill="currentColor"
             />
           </svg>

@@ -22,7 +22,51 @@ const IconSignpost = forwardRef<SVGSVGElement, IconProps>(function IconSignpost(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12.75 2a.75.75 0 0 0-1.5 0zm-1.5 0v1h1.5V2z"
+            fill="currentColor"
+          />
+          <path
+            d="M12.75 11a.75.75 0 0 0-1.5 0zm-1.5 0v1h1.5v-1z"
+            fill="currentColor"
+          />
+          <path
+            d="M12.75 20a.75.75 0 0 0-1.5 0zm-1.5 0v2h1.5v-2z"
+            fill="currentColor"
+          />
+          <path
+            d="M3.34 18.61a2 2 0 0 0 .55.55c.5.34 1.2.34 2.61.34h10.8c.65 0 .98 0 1.28-.1a2 2 0 0 0 .39-.17c.27-.16.5-.4.93-.9.85-.94 1.28-1.41 1.38-1.97a2 2 0 0 0 0-.72c-.1-.56-.53-1.03-1.38-1.98a4 4 0 0 0-.93-.9 2 2 0 0 0-.39-.16c-.3-.1-.63-.1-1.28-.1H6.5c-1.4 0-2.1 0-2.61.34a2 2 0 0 0-.55.55c-.25.37-.32.84-.33 1.61"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20.66 9.61a2 2 0 0 1-.55.55c-.5.34-1.2.34-2.6.34H6.7c-.66 0-.99 0-1.3-.1a2 2 0 0 1-.37-.17 4 4 0 0 1-.94-.9c-.85-.94-1.27-1.41-1.38-1.97a2 2 0 0 1 0-.72c.1-.56.53-1.03 1.38-1.98.44-.49.66-.73.94-.9a2 2 0 0 1 .38-.16c.3-.1.63-.1 1.29-.1h10.8c1.4 0 2.1 0 2.6.34a2 2 0 0 1 .55.55c.25.37.32.84.34 1.61"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 22h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

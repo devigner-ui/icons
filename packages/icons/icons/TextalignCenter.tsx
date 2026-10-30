@@ -2,8 +2,8 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconTextalignCenter = forwardRef<SVGSVGElement, IconProps>(
-  function IconTextalignCenter(
+const IconTextAlignCenter = forwardRef<SVGSVGElement, IconProps>(
+  function IconTextAlignCenter(
     { className, variant = "Outline", strokeWidth = "1.5", ...rest },
     ref,
   ) {
@@ -23,7 +23,56 @@ const IconTextalignCenter = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7.26 9.5h9.48"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3 14.5h18"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7.26 19.5h9.48"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M10.05 4.5H21"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3 4.5h2.98"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,14 +87,14 @@ const IconTextalignCenter = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M3.67 4.5h18"
+              d="M3 4.5h18"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M7.93 9.5h9.48"
+              d="M7.26 9.5h9.48"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -53,14 +102,14 @@ const IconTextalignCenter = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M3.67 14.5h18"
+              d="M3 14.5h18"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M7.93 19.5h9.48"
+              d="M7.26 19.5h9.48"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -81,21 +130,21 @@ const IconTextalignCenter = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M21.67 5.25h-18a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M21 5.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M17.41 10.25H7.93a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47c.41 0 .75.34.75.75s-.33.75-.74.75"
+              d="M16.74 10.25H7.26a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47c.41 0 .75.34.75.75s-.33.75-.74.75"
               fill="currentColor"
             />
             <path
-              d="M21.67 15.25h-18a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M21 15.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M17.41 20.25H7.93a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47c.41 0 .75.34.75.75s-.33.75-.74.75"
+              d="M16.74 20.25H7.26a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47c.41 0 .75.34.75.75s-.33.75-.74.75"
               fill="currentColor"
             />
           </svg>
@@ -113,19 +162,19 @@ const IconTextalignCenter = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M21.67 5.25h-18a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M21 5.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M17.41 10.25H7.93a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47c.41 0 .75.34.75.75s-.33.75-.74.75"
+              d="M16.74 10.25H7.26a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47c.41 0 .75.34.75.75s-.33.75-.74.75"
               fill="currentColor"
             />
             <path
-              d="M21.67 15.25h-18a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M21 15.25H3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h18c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M17.41 20.25H7.93a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47c.41 0 .75.34.75.75s-.33.75-.74.75"
+              d="M16.74 20.25H7.26a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h9.47c.41 0 .75.34.75.75s-.33.75-.74.75"
               fill="currentColor"
             />
           </svg>
@@ -135,4 +184,4 @@ const IconTextalignCenter = forwardRef<SVGSVGElement, IconProps>(
   },
 );
 
-export default IconTextalignCenter;
+export default IconTextAlignCenter;

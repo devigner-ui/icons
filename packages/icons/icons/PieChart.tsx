@@ -22,7 +22,32 @@ const IconPieChart = forwardRef<SVGSVGElement, IconProps>(function IconPieChart(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20 15.55A9.21 9.21 0 1 1 2.43 10m6.02-6A9 9 0 0 0 5 5.99"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M21.91 9.95a11.4 11.4 0 0 0-7.86-7.86C12.41 1.63 11 3.05 11 4.76v6.7c0 .85.7 1.54 1.54 1.54h6.7c1.7 0 3.13-1.4 2.67-3.05Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -65,11 +90,11 @@ const IconPieChart = forwardRef<SVGSVGElement, IconProps>(function IconPieChart(
             opacity={duotone ? "0.4" : "1"}
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M9.16 3.78c.13.39-.1.81-.49.94a8.46 8.46 0 1 0 10.61 10.6.75.75 0 0 1 1.44.46 9.96 9.96 0 1 1-12.5-12.5c.4-.12.82.1.94.5"
+            d="M9.56 3.38c.13.39-.1.81-.49.94a8.46 8.46 0 1 0 10.61 10.6.75.75 0 0 1 1.44.46 9.96 9.96 0 1 1-12.5-12.5c.4-.12.82.1.94.5"
             fill="currentColor"
           />
           <path
-            d="M21.91 9.95a11.4 11.4 0 0 0-7.86-7.86C12.41 1.63 11 3.05 11 4.76v6.7c0 .85.7 1.54 1.54 1.54h6.7c1.7 0 3.13-1.4 2.67-3.05"
+            d="M22.31 9.55a11.4 11.4 0 0 0-7.86-7.86c-1.64-.46-3.05.96-3.05 2.67v6.7c0 .85.7 1.54 1.54 1.54h6.7c1.7 0 3.13-1.4 2.67-3.05"
             fill="currentColor"
           />
         </svg>
@@ -89,11 +114,11 @@ const IconPieChart = forwardRef<SVGSVGElement, IconProps>(function IconPieChart(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M9.16 3.78c.13.39-.1.81-.49.94a8.46 8.46 0 1 0 10.61 10.6.75.75 0 0 1 1.44.46 9.96 9.96 0 1 1-12.5-12.5c.4-.12.82.1.94.5"
+            d="M9.56 3.38c.13.39-.1.81-.49.94a8.46 8.46 0 1 0 10.61 10.6.75.75 0 0 1 1.44.46 9.96 9.96 0 1 1-12.5-12.5c.4-.12.82.1.94.5"
             fill="currentColor"
           />
           <path
-            d="M21.91 9.95a11.4 11.4 0 0 0-7.86-7.86C12.41 1.63 11 3.05 11 4.76v6.7c0 .85.7 1.54 1.54 1.54h6.7c1.7 0 3.13-1.4 2.67-3.05"
+            d="M22.31 9.55a11.4 11.4 0 0 0-7.86-7.86c-1.64-.46-3.05.96-3.05 2.67v6.7c0 .85.7 1.54 1.54 1.54h6.7c1.7 0 3.13-1.4 2.67-3.05"
             fill="currentColor"
           />
         </svg>

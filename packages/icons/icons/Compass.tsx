@@ -22,7 +22,32 @@ const IconCompass = forwardRef<SVGSVGElement, IconProps>(function IconCompass(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13.02 14.56c-2.3.92-3.46 1.39-4.12.94a2 2 0 0 1-.4-.4c-.45-.66.02-1.81.94-4.12.2-.5.3-.74.46-.94l.14-.14c.2-.16.44-.26.94-.46 2.3-.92 3.46-1.39 4.12-.94q.24.15.4.4c.45.66-.02 1.81-.94 4.12-.2.5-.3.74-.46.94l-.14.13c-.2.17-.44.27-.94.47Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M7 3.34A10 10 0 1 1 3.34 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

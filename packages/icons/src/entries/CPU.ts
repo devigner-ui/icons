@@ -1,1 +1,1 @@
-export { default, default as IconCPU } from '../../icons/CPU';
+export { default, default as IconCpu } from '../../icons/Cpu';

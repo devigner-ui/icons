@@ -15,15 +15,9 @@ they are real.
 | [Iconsax](https://iconsax.io) | [Vuesax](https://vuesax.com) | 908 | Free for personal and commercial use |
 | [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736) | [480 Design](https://www.figma.com/@480design) | 1,055 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 
-The two are distinguishable in this repository by their coordinate system:
-Iconsax drawings sit in a `0 0 25 24` viewBox, Solar drawings in `0 0 24 24`.
-
-```bash
-# Which set is a given icon from?
-grep -o 'viewBox="[^"]*"' packages/icons/icons/ShoppingCart.tsx | head -1
-# 0 0 25 24  -> Iconsax
-# 0 0 24 24  -> Solar Icon Set
-```
+Every drawing in this repository sits in a `0 0 24 24` viewBox, whichever set
+it came from, so the coordinate system no longer tells the two apart. The
+repository does not record which set a given icon came from.
 
 ## What Solar's CC BY 4.0 requires of you
 
@@ -35,7 +29,7 @@ were made.
 
 A credit line that satisfies it:
 
-> Icons from [Devigner Icons](https://icons.remidevigner.pro), derived from
+> Icons from [Devigner Icons](https://icons.devigner.cc), derived from
 > [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736) by
 > 480 Design, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/),
 > and [Iconsax](https://iconsax.io) by Vuesax. Modified.

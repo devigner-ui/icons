@@ -22,7 +22,40 @@ const IconLogout = forwardRef<SVGSVGElement, IconProps>(function IconLogout(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15 12H6m2-2-2 2 2 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 21.98c-1.55-.04-2.48-.22-3.12-.86C8.1 20.35 8 19.17 8 17m8 5c2.18-.01 3.35-.11 4.12-.88.88-.88.88-2.3.88-5.12V8c0-2.83 0-4.24-.88-5.12S17.82 2 15 2h-1c-2.83 0-4.24 0-5.12.88C8.1 3.65 8 4.82 8 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 9.5v5c0 2.36 0 3.54.73 4.27s1.91.73 4.27.73M3.73 5.23C4.46 4.5 5.64 4.5 8 4.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

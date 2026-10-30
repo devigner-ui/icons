@@ -23,7 +23,39 @@ const IconFlipHorizontal = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 8V5.89c0-1.7 0-2.56.54-2.84s1.24.22 2.62 1.2L6.74 5.4c.62.44.93.66 1.1.98.16.32.16.7.16 1.46v8.34c0 .76 0 1.14-.17 1.46-.16.32-.47.54-1.09.98l-1.58 1.13c-1.38 1-2.08 1.49-2.62 1.2C2 20.68 2 19.83 2 18.12V12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 12V5.89c0-1.7 0-2.56-.54-2.84s-1.24.22-2.62 1.2L17.26 5.4c-.62.44-.93.66-1.1.98-.16.32-.16.7-.16 1.46v8.34c0 .76 0 1.14.17 1.46.16.32.47.54 1.09.98l1.58 1.13c1.38 1 2.08 1.49 2.62 1.2.54-.27.54-1.12.54-2.83v-2.05"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 14v-4m0-4V2m0 20v-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

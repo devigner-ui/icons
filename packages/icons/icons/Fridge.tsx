@@ -22,7 +22,51 @@ const IconFridge = forwardRef<SVGSVGElement, IconProps>(function IconFridge(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4 10v3c0 3.77 0 5.66 1.17 6.83S8.23 21 12 21s5.66 0 6.83-1.17S20 16.77 20 13v-3c0-3.77 0-5.66-1.17-6.83S15.77 2 12 2 6.34 2 5.17 3.17C4.52 3.82 4.23 4.7 4.1 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 21v1h-1v-1m-8 0v1H7v-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinejoin="round"
+          />
+          <path
+            d="M20 11.5h-5m-11 0h7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 7v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 14v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -82,16 +126,16 @@ const IconFridge = forwardRef<SVGSVGElement, IconProps>(function IconFridge(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M4 11.5V13c0 3.77 0 5.66 1.17 6.83q.45.45 1.08.7V22c0 .41.34.75.75.75h1c.41 0 .75-.34.75-.75v-1.05q1.33.06 3.25.05 1.92.01 3.25-.05V22c0 .41.34.75.75.75h1c.41 0 .75-.34.75-.75v-1.47q.62-.25 1.08-.7C20 18.66 20 16.77 20 13v-1.5zm13 1.75c.41 0 .75.34.75.75v2a.75.75 0 0 1-1.5 0v-2c0-.41.34-.75.75-.75"
+            d="M4 11.1v1.5c0 3.77 0 5.66 1.17 6.83q.45.45 1.08.7v1.47c0 .41.34.75.75.75h1c.41 0 .75-.34.75-.75v-1.05q1.33.06 3.25.05 1.92.01 3.25-.05v1.05c0 .41.34.75.75.75h1c.41 0 .75-.34.75-.75v-1.47q.62-.25 1.08-.7C20 18.26 20 16.37 20 12.6v-1.5zm13 1.75c.41 0 .75.34.75.75v2a.75.75 0 0 1-1.5 0v-2c0-.41.34-.75.75-.75"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M4 10c0-3.77 0-5.66 1.17-6.83S8.23 2 12 2s5.66 0 6.83 1.17S20 6.23 20 10v1.5H4z"
+            d="M4 9.6c0-3.77 0-5.66 1.17-6.83S8.23 1.6 12 1.6s5.66 0 6.83 1.17S20 5.83 20 9.6v1.5H4z"
             fill="currentColor"
           />
           <path
-            d="M17.75 7a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0z"
+            d="M17.75 6.6a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0z"
             fill="currentColor"
           />
         </svg>
@@ -111,13 +155,13 @@ const IconFridge = forwardRef<SVGSVGElement, IconProps>(function IconFridge(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M5.17 3.17C4 4.34 4 6.23 4 10v.75h16V10c0-3.77 0-5.66-1.17-6.83S15.77 2 12 2 6.34 2 5.17 3.17M17 6.25c.41 0 .75.34.75.75v2a.75.75 0 0 1-1.5 0V7c0-.41.34-.75.75-.75"
+            d="M5.17 2.77C4 3.94 4 5.83 4 9.6v.75h16V9.6c0-3.77 0-5.66-1.17-6.83S15.77 1.6 12 1.6s-5.66 0-6.83 1.17M17 5.85c.41 0 .75.34.75.75v2a.75.75 0 0 1-1.5 0v-2c0-.41.34-.75.75-.75"
             fill="currentColor"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M4 12.25V13c0 3.77 0 5.66 1.17 6.83q.45.45 1.08.7V22c0 .41.34.75.75.75h1c.41 0 .75-.34.75-.75v-1.05q1.33.06 3.25.05 1.92.01 3.25-.05V22c0 .41.34.75.75.75h1c.41 0 .75-.34.75-.75v-1.47q.62-.25 1.08-.7C20 18.66 20 16.77 20 13v-.75zm13 1c.41 0 .75.34.75.75v2a.75.75 0 0 1-1.5 0v-2c0-.41.34-.75.75-.75"
+            d="M4 11.85v.75c0 3.77 0 5.66 1.17 6.83q.45.45 1.08.7v1.47c0 .41.34.75.75.75h1c.41 0 .75-.34.75-.75v-1.05q1.33.06 3.25.05 1.92.01 3.25-.05v1.05c0 .41.34.75.75.75h1c.41 0 .75-.34.75-.75v-1.47q.62-.25 1.08-.7C20 18.26 20 16.37 20 12.6v-.75zm13 1c.41 0 .75.34.75.75v2a.75.75 0 0 1-1.5 0v-2c0-.41.34-.75.75-.75"
             fill="currentColor"
           />
         </svg>

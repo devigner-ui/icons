@@ -7,8 +7,9 @@ const IconHamburgerMenu = forwardRef<SVGSVGElement, IconProps>(
     { className, variant = "Outline", strokeWidth = "1.5", ...rest },
     ref,
   ) {
-    /* The four drawings are two booleans: filled or stroked, and whether the
-     secondary shapes drop to half tone. */
+    /* One stroked glyph in all four core styles. Bold and Bulk fix the weight
+       at 2, the Text icons' Bold; Bulk keeps TwoTone's half-tone parts. They
+       used to cut the glyph out of a filled square the outline never had. */
     const fill = variant === "Bold" || variant === "Bulk";
     const duotone = variant === "TwoTone" || variant === "Bulk";
 
@@ -23,7 +24,39 @@ const IconHamburgerMenu = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4 7h3m13 0h-9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 17h-3M4 17h9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M4 12h16"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : (
           <svg
             ref={ref}
             className={className}
@@ -39,72 +72,21 @@ const IconHamburgerMenu = forwardRef<SVGSVGElement, IconProps>(
             <path
               d="M20 7H4"
               stroke="currentColor"
-              strokeWidth={strokeWidth}
+              strokeWidth={fill ? "2" : strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
               d="M20 12H4"
               stroke="currentColor"
-              strokeWidth={strokeWidth}
+              strokeWidth={fill ? "2" : strokeWidth}
               strokeLinecap="round"
             />
             <path
               d="M20 17H4"
               stroke="currentColor"
-              strokeWidth={strokeWidth}
+              strokeWidth={fill ? "2" : strokeWidth}
               strokeLinecap="round"
-            />
-          </svg>
-        ) : duotone ? (
-          <svg
-            ref={ref}
-            className={className}
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            focusable="false"
-            {...a11y}
-            {...rest}
-          >
-            <path
-              opacity={duotone ? "0.4" : "1"}
-              d="M12 22c-4.71 0-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46C22 4.93 22 7.3 22 12s0 7.07-1.46 8.54C19.07 22 16.7 22 12 22"
-              fill="currentColor"
-            />
-            <path
-              d="M18.75 8c0 .41-.34.75-.75.75H6a.75.75 0 0 1 0-1.5h12c.41 0 .75.34.75.75"
-              fill="currentColor"
-            />
-            <path
-              d="M18.75 12c0 .41-.34.75-.75.75H6a.75.75 0 0 1 0-1.5h12c.41 0 .75.34.75.75"
-              fill="currentColor"
-            />
-            <path
-              d="M18.75 16c0 .41-.34.75-.75.75H6a.75.75 0 0 1 0-1.5h12c.41 0 .75.34.75.75"
-              fill="currentColor"
-            />
-          </svg>
-        ) : (
-          <svg
-            ref={ref}
-            className={className}
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            focusable="false"
-            {...a11y}
-            {...rest}
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M3.46 20.54C4.93 22 7.3 22 12 22s7.07 0 8.54-1.46C22 19.07 22 16.7 22 12s0-7.07-1.46-8.54C19.07 2 16.7 2 12 2S4.93 2 3.46 3.46C2 4.93 2 7.3 2 12s0 7.07 1.46 8.54M18.75 16c0 .41-.34.75-.75.75H6a.75.75 0 0 1 0-1.5h12c.41 0 .75.34.75.75M18 12.75a.75.75 0 0 0 0-1.5H6a.75.75 0 0 0 0 1.5zM18.75 8c0 .41-.34.75-.75.75H6a.75.75 0 0 1 0-1.5h12c.41 0 .75.34.75.75"
-              fill="currentColor"
             />
           </svg>
         )}

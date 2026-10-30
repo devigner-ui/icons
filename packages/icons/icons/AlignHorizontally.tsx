@@ -23,7 +23,56 @@ const IconAlignHorizontally = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4.75 17.4V6.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v10.8c0 1.5-.64 2.1-2.23 2.1H6.98c-1.59 0-2.23-.6-2.23-2.1Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18.75 15.4V8.6c0-1.5-.64-2.1-2.23-2.1h-1.04c-1.59 0-2.23.6-2.23 2.1v6.8c0 1.5.64 2.1 2.23 2.1"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 12h2.4"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M11 12h2"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22 12h-2.69"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,22 +86,14 @@ const IconAlignHorizontally = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M5.42 17.4V6.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v10.8c0 1.5-.64 2.1-2.23 2.1H7.65c-1.59 0-2.23-.6-2.23-2.1"
+              d="M4.75 17.4V6.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v10.8c0 1.5-.64 2.1-2.23 2.1H6.98c-1.59 0-2.23-.6-2.23-2.1"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M13.92 15.4V8.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v6.8c0 1.5-.64 2.1-2.23 2.1h-1.04c-1.59 0-2.23-.6-2.23-2.1"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              opacity={duotone ? "0.4" : "1"}
-              d="M2.67 12h2.4"
+              d="M13.25 15.4V8.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v6.8c0 1.5-.64 2.1-2.23 2.1h-1.04c-1.59 0-2.23-.6-2.23-2.1"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -60,7 +101,7 @@ const IconAlignHorizontally = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M11.67 12h2"
+              d="M2 12h2.4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -68,7 +109,15 @@ const IconAlignHorizontally = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22.67 12h-2.69"
+              d="M11 12h2"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              opacity={duotone ? "0.4" : "1"}
+              d="M22 12h-2.69"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -89,21 +138,21 @@ const IconAlignHorizontally = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M5.42 17.4V6.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v10.8c0 1.5-.64 2.1-2.23 2.1H7.65c-1.59 0-2.23-.6-2.23-2.1"
+              d="M4.75 17.4V6.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v10.8c0 1.5-.64 2.1-2.23 2.1H6.98c-1.59 0-2.23-.6-2.23-2.1"
               fill="currentColor"
             />
             <path
-              d="M5.42 12.75h-2a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h2z"
+              d="M4.75 12.75h-2A.76.76 0 0 1 2 12c0-.41.34-.75.75-.75h2z"
               fill="currentColor"
             />
-            <path d="M13.92 11.25h-3v1.5h3z" fill="currentColor" />
+            <path d="M13.25 11.25h-3v1.5h3z" fill="currentColor" />
             <path
-              d="M21.92 12.75h-2.5v-1.5h2.5c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M21.25 12.75h-2.5v-1.5h2.5c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M13.92 15.4V8.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v6.8c0 1.5-.64 2.1-2.23 2.1h-1.04c-1.59 0-2.23-.6-2.23-2.1"
+              d="M13.25 15.4V8.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v6.8c0 1.5-.64 2.1-2.23 2.1h-1.04c-1.59 0-2.23-.6-2.23-2.1"
               fill="currentColor"
             />
           </svg>
@@ -121,20 +170,20 @@ const IconAlignHorizontally = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M5.42 17.4V6.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v10.8c0 1.5-.64 2.1-2.23 2.1H7.65c-1.59 0-2.23-.6-2.23-2.1"
+              d="M4.75 17.4V6.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v10.8c0 1.5-.64 2.1-2.23 2.1H6.98c-1.59 0-2.23-.6-2.23-2.1"
               fill="currentColor"
             />
             <path
-              d="M5.42 12.75h-2a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h2z"
+              d="M4.75 12.75h-2A.76.76 0 0 1 2 12c0-.41.34-.75.75-.75h2z"
               fill="currentColor"
             />
-            <path d="M13.92 11.25h-3v1.5h3z" fill="currentColor" />
+            <path d="M13.25 11.25h-3v1.5h3z" fill="currentColor" />
             <path
-              d="M21.92 12.75h-2.5v-1.5h2.5c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M21.25 12.75h-2.5v-1.5h2.5c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M13.92 15.4V8.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v6.8c0 1.5-.64 2.1-2.23 2.1h-1.04c-1.59 0-2.23-.6-2.23-2.1"
+              d="M13.25 15.4V8.6c0-1.5.64-2.1 2.23-2.1h1.04c1.59 0 2.23.6 2.23 2.1v6.8c0 1.5-.64 2.1-2.23 2.1h-1.04c-1.59 0-2.23-.6-2.23-2.1"
               fill="currentColor"
             />
           </svg>

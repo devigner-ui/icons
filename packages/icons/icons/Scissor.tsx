@@ -22,7 +22,7 @@ const IconScissor = forwardRef<SVGSVGElement, IconProps>(function IconScissor(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,14 +36,56 @@ const IconScissor = forwardRef<SVGSVGElement, IconProps>(function IconScissor(
           {...rest}
         >
           <path
-            d="M6.17 10a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
+            d="M5.5 3A3.5 3.5 0 1 1 2 6.5"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9 17.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22 6 8.65 15.98"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22 17.97 8.65 7.98"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5.5 10a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M6.17 21a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
+            d="M5.5 21a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -51,14 +93,14 @@ const IconScissor = forwardRef<SVGSVGElement, IconProps>(function IconScissor(
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="M22.67 6 9.32 15.98"
+              d="M22 6 8.65 15.98"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M22.67 17.97 9.32 7.98"
+              d="M22 17.97 8.65 7.98"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -80,16 +122,16 @@ const IconScissor = forwardRef<SVGSVGElement, IconProps>(function IconScissor(
           {...rest}
         >
           <path
-            d="M6.17 10a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
+            d="M5.12 10a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
             fill="currentColor"
           />
           <path
-            d="M6.17 21a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
+            d="M5.12 21a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m15.92 11.98 7.2-5.38a.75.75 0 0 0-.9-1.2l-7.55 5.65L9.12 6.9a.75.75 0 0 0-.9 1.2l5.2 3.89-5.9 4.42a.75.75 0 0 0 .9 1.2l6.26-4.68 7.55 5.65q.2.15.45.15.36 0 .6-.3a.75.75 0 0 0-.15-1.05z"
+            d="m14.87 11.98 7.2-5.38a.75.75 0 0 0-.9-1.2l-7.55 5.65L8.07 6.9a.75.75 0 0 0-.9 1.2l5.2 3.89-5.9 4.42a.75.75 0 0 0 .9 1.2l6.26-4.68 7.55 5.65q.2.15.45.15.36 0 .6-.3a.75.75 0 0 0-.15-1.05z"
             fill="currentColor"
           />
         </svg>
@@ -107,15 +149,15 @@ const IconScissor = forwardRef<SVGSVGElement, IconProps>(function IconScissor(
           {...rest}
         >
           <path
-            d="M6.17 10a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
+            d="M5.12 10a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
             fill="currentColor"
           />
           <path
-            d="M6.17 21a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
+            d="M5.12 21a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
             fill="currentColor"
           />
           <path
-            d="m15.92 11.98 7.2-5.38a.75.75 0 0 0-.9-1.2l-7.55 5.65-5.55-4.16a.76.76 0 0 0-1.05.15c-.25.33-.18.8.15 1.05l5.2 3.89-5.9 4.42a.75.75 0 0 0 .9 1.2l6.25-4.68 7.55 5.65q.2.15.45.15.36 0 .6-.3a.75.75 0 0 0-.15-1.05z"
+            d="m14.87 11.98 7.2-5.38a.75.75 0 0 0-.9-1.2l-7.55 5.65-5.55-4.16a.76.76 0 0 0-1.05.15c-.25.33-.18.8.15 1.05l5.2 3.89-5.9 4.42a.75.75 0 0 0 .9 1.2l6.25-4.68 7.55 5.65q.2.15.45.15.36 0 .6-.3a.75.75 0 0 0-.15-1.05z"
             fill="currentColor"
           />
         </svg>

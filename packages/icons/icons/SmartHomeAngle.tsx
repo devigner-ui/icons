@@ -23,7 +23,45 @@ const IconSmartHomeAngle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m21.84 12.96-.28 1.94c-.49 3.38-.73 5.08-1.9 6.09-1.08.92-2.6 1-5.46 1m7.66-14.12c-.54-1.12-1.69-1.8-3.99-3.18l-1.38-.82C14.39 2.62 13.35 2 12.2 2s-2.2.62-4.29 1.87l-1.38.82c-2.3 1.37-3.45 2.06-4 3.18-.28.6-.36 1.26-.32 2.13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11.2 22a9 9 0 0 0-9-9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8.2 22a6 6 0 0 0-6-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5.2 22a3 3 0 0 0-3-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -1,1 +1,1 @@
-export { default, default as IconAdditem } from '../../icons/Additem';
+export { default, default as IconAddItem } from '../../icons/AddItem';

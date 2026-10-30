@@ -8,7 +8,7 @@
 - Bill 2
 - Bill Check
 - Bill Cross
-- Bill List
+- Bill ListSort
 - Card
 - Card 2
 - Card Add
@@ -20,17 +20,17 @@
 - Card Remove
 - Card Search
 - Card Send
-- Card Slash
+- Card ForbiddenCircle
 - Card Tick
 - Card Transfer
 - Cardholder
 - Cards
 - Cash Out
 - Coin
-- Dollar
-- Dollar Circle
-- Dollar Minimalistic
-- Dollar Square
+- DollarCircle
+- DollarCircle Circle
+- DollarCircle Minimalistic
+- DollarCircle Square
 - Empty Wallet
 - Empty Wallet Add
 - Empty Wallet Change
@@ -54,7 +54,7 @@
 - Money Time
 - Moneys
 - Percentage Square
-- Personalcard
+- PersonalCard
 - Receipt
 - Receipt 2
 - Receipt Add
@@ -70,7 +70,7 @@
 - Safe 2
 - Safe Circle
 - Safe Square
-- Security Card
+- ShieldBlank Card
 - Strongbox
 - Strongbox 2
 - Transaction Minus
@@ -96,7 +96,7 @@
 - Binance Usd (Busd)
 - Bitcoin (Btc)
 - Bitcoin Card
-- Bitcoin Convert
+- Bitcoin RoundTransferDiagonal
 - Bitcoin Refresh
 - Buy Crypto
 - Cardano (Ada)
@@ -145,7 +145,7 @@
 - Theta (Theta)
 - Thorchain (Rune)
 - Trade
-- Trontron (Trx)
+- TronTrx (Trx)
 - USD Coin (Usdc)
 - Velas (Vlx)
 - Vibe (Vibe)
@@ -158,7 +158,7 @@
 
 - Android
 - Apple
-- Be
+- Behance
 - Blogger
 - Bootstrap
 - Bootsrap
@@ -171,7 +171,7 @@
 - Google
 - Google Play
 - Grammarly
-- Grammerly
+- Grammarly
 - HTML 3
 - HTML 5
 - Html 3
@@ -181,7 +181,7 @@
 - Java Script
 - JavaScript
 - JS
-- Js
+- Nodejs
 - Messenger
 - PayPal
 - Paypal
@@ -217,7 +217,7 @@
 - Chat Round Like
 - Chat Round Line
 - Chat Round Money
-- Chat Round Unread
+- Chat Round CheckSingle
 - Chat Round Video
 - Chat Square
 - Chat Square Arrow
@@ -225,7 +225,7 @@
 - Chat Square Check
 - Chat Square Code
 - Chat Square Like
-- Chat Unread
+- Chat CheckSingle
 - Check Read
 - Device Message
 - Dialog
@@ -246,10 +246,10 @@
 - Inbox In
 - Inbox Line
 - Inbox Out
-- Inbox Unread
+- Inbox CheckSingle
 - Letter
 - Letter Opened
-- Letter Unread
+- Letter CheckSingle
 - Mailbox
 - Message
 - Message 2
@@ -280,9 +280,9 @@
 - Pen 2
 - Pen New Round
 - Pen New Square
-- Plain
-- Plain 2
-- Plain 3
+- PaperPlane
+- PaperPlane 2
+- PaperPlane 3
 - Reply
 - Reply 2
 - SMS
@@ -291,15 +291,15 @@
 - SMS Search
 - SMS Star
 - SMS Tracking
-- Sms
-- Sms Edit
-- Sms Notification
-- Sms Search
-- Sms Star
-- Sms Tracking
+- Mail
+- Mail Edit
+- Mail Notification
+- Mail Search
+- Mail Star
+- Mail Tracking
 - Square Forward
 - Square Share Line
-- Unread
+- CheckSingle
 
 ## Calls & Telephony
 
@@ -322,7 +322,7 @@
 - Call Outgoing Rounded
 - Call Received
 - Call Remove
-- Call Slash
+- Call ForbiddenCircle
 - End Call
 - End Call Rounded
 - Incoming Call
@@ -377,7 +377,7 @@
 - Circle Bottom Up
 - Circle Top Down
 - Circle Top Up
-- Convert
+- RoundTransferDiagonal
 - Double Alt Arrow Down
 - Double Alt Arrow Left
 - Double Alt Arrow Right
@@ -501,7 +501,7 @@
 - Archive Down Minimlistic
 - Archive Minimalistic
 - Archive Minus
-- Archive Slash
+- Archive ForbiddenCircle
 - Archive Tick
 - Archive Up
 - Archive Up Minimlistic
@@ -514,7 +514,7 @@
 - Clipboard Export
 - Clipboard Heart
 - Clipboard Import
-- Clipboard List
+- Clipboard ListSort
 - Clipboard Remove
 - Clipboard Text
 - Clipboard Tick
@@ -559,17 +559,17 @@
 - Note Favorite
 - Note Remove
 - Note Text
-- Notebook
-- Notebook Bookmark
-- Notebook Minimalistic
-- Notebook Square
+- Laptop
+- Laptop Bookmark
+- Laptop Minimalistic
+- Laptop Square
 - Notes
 - Notes Minimalistic
 - Save 2
 - Save Add
 - Save Minus
 - Save Remove
-- Stickynote
+- StickyNote
 - ZIP File
 
 ## Folders & Storage
@@ -589,7 +589,7 @@
 - Folder Minus
 - Folder Open
 - Folder Path Connect
-- Folder Security
+- Folder ShieldBlank
 - Folder With Files
 - Move To Folder
 - Remove Folder
@@ -602,7 +602,7 @@
 - Eraser
 - Eraser Circle
 - Eraser Square
-- Firstline
+- FirstLine
 - Language Circle
 - Language Square
 - Link
@@ -616,14 +616,14 @@
 - Link Round Angle
 - Link Square
 - Paragraph Spacing
-- Pharagraphspacing
+- ParagraphSpacingWide
 - Quote Down
 - Quote Down Circle
 - Quote Down Square
 - Quote Up
 - Quote Up Circle
 - Quote Up Square
-- Smallcaps
+- SmallCaps
 - Text
 - Text Block
 - Text Bold
@@ -651,13 +651,13 @@
 - Textalign Left
 - Textalign Right
 - Translate
-- Translation
-- Translation 2
+- Broadcast
+- Broadcast 2
 
 ## Design, Vectors & Layout
 
 - 3Square
-- Additem
+- AddItem
 - Align Bottom
 - Align Horizonta Spacing
 - Align Horizontal Center
@@ -680,9 +680,9 @@
 - Colorfilter
 - Colors Square
 - Colour Tuneing
-- Component
-- Convertshape
-- Convertshape 2
+- DiamondDivided
+- ConvertShape
+- ConvertShape 2
 - Copy
 - Copy Success
 - Crop
@@ -693,15 +693,15 @@
 - Element 3
 - Element 4
 - Element Equal
-- Element Plus
-- Fatrows
-- Filters
+- Element Add
+- RowsStaggered
+- ColorFilter
 - Flip Horizontal
 - Flip Vertical
 - Format Circle
 - Format Square
 - Forward Item
-- Glass
+- Flask
 - Grid 1
 - Grid 2
 - Grid 3
@@ -720,8 +720,8 @@
 - Magic Stick
 - Magic Stick 2
 - Magic Stick 3
-- Magicpen
-- Main Component
+- MagicPen
+- Main DiamondDivided
 - Mask
 - Mask Happly
 - Mask Sad
@@ -731,7 +731,7 @@
 - Omega Circle
 - Omega Square
 - Paint Roller
-- Paintbucket
+- PaintBucket
 - Palette
 - Palette Round
 - Pallete 2
@@ -745,7 +745,7 @@
 - Pen Tool 2
 - Pipette
 - Radial Blur
-- Recovery Convert
+- Recovery RoundTransferDiagonal
 - Rotate Left
 - Rotate Right
 - Row Horizontal
@@ -776,7 +776,7 @@
 - Camera Add
 - Camera Minimalistic
 - Camera Rotate
-- Camera Slash
+- Camera ForbiddenCircle
 - Camera Square
 - Cassette
 - Cassette 2
@@ -806,7 +806,7 @@
 - Gallery Remove
 - Gallery Round
 - Gallery Send
-- Gallery Slash
+- Gallery ForbiddenCircle
 - Gallery Tick
 - Gallery Wide
 - Image
@@ -816,7 +816,7 @@
 - Microphone 2
 - Microphone 3
 - Microphone Large
-- Microphone Slash
+- Microphone ForbiddenCircle
 - Mini Music Sqaure
 - Mirroring Screen
 - Music
@@ -839,7 +839,7 @@
 - Music Square Remove
 - Music Square Search
 - Musicnote
-- Muted
+- VolumeCross
 - Next
 - Note Square
 - Panorama
@@ -878,7 +878,7 @@
 - Rewind Forward
 - Rewind Forward Circle
 - Screen Share
-- Screenmirroring
+- ScreenMirroring
 - Shuffle
 - Skip Next
 - Skip Previous
@@ -912,7 +912,7 @@
 - Video Octagon
 - Video Play
 - Video Remove
-- Video Slash
+- Video ForbiddenCircle
 - Video Square
 - Video Tick
 - Video Time
@@ -931,7 +931,7 @@
 - Volume Loud
 - Volume Low
 - Volume Mute
-- Volume Slash
+- Volume ForbiddenCircle
 - Volume Small
 - Volume Up
 - Wallpaper
@@ -948,18 +948,18 @@
 - Airbuds Left
 - Airbuds Remove
 - Airbuds Right
-- Airpod
+- AirpodsCase
 - Airpods
-- CPU
-- CPU Bolt
+- Cpu
+- Cpu Bolt
 - Cpu Charge
-- Cpu Setting
+- Cpu SettingsHexagon
 - Devices
 - Diskette
 - Display
-- Driver
-- Driver 2
-- Driver Refresh
+- Drive
+- Drive 2
+- Drive Refresh
 - External Drive
 - Flash Drive
 - Game
@@ -970,11 +970,11 @@
 - Gamepad No Charge
 - Gamepad Old
 - Headphone
-- Headphones
-- Headphones Round
-- Headphones Round Sound
-- Headphones Square
-- Headphones Square Sound
+- Earphones
+- Earphones Round
+- Earphones Round Sound
+- Earphones Square
+- Earphones Square Sound
 - iPhone
 - Keyboard
 - Keyboard Open
@@ -995,7 +995,7 @@
 - Printer
 - Printer 2
 - Printer Minimalistic
-- Printer Slash
+- Printer ForbiddenCircle
 - Projector
 - RAM
 - RAM 2
@@ -1048,7 +1048,7 @@
 - Cloud Connection
 - Cloud Remove
 - Cloud Storage
-- Electricity
+- Plug
 - Home WiFi
 - Home Wifi
 - Home Wifi Angle
@@ -1090,12 +1090,12 @@
 - Hashtag Down
 - Hashtag Square
 - Hashtag Up
-- Hierarchy
-- Hierarchy 2
-- Hierarchy 3
-- Hierarchy Square
-- Hierarchy Square 2
-- Hierarchy Square 3
+- GitBranch
+- GitBranch 2
+- GitBranch 3
+- GitBranch Square
+- GitBranch Square 2
+- GitBranch Square 3
 - Mobile Programming
 - Programming
 - Programming Arrow
@@ -1103,11 +1103,11 @@
 - Screencast
 - Screencast 2
 - Sidebar Code
-- Slash Circle
-- Slash Square
+- ForbiddenCircle Circle
+- ForbiddenCircle Square
 - Structure
 
-## Security & Biometrics
+## ShieldBlank & Biometrics
 
 - Alarm
 - Bomb
@@ -1118,7 +1118,7 @@
 - Eye
 - Eye Closed
 - Eye Scan
-- Eye Slash
+- Eye ForbiddenCircle
 - Face Scan Circle
 - Face Scan Square
 - Finger Cricle
@@ -1140,7 +1140,7 @@
 - Lock Keyhole Unlocked
 - Lock Password
 - Lock Password Unlocked
-- Lock Slash
+- Lock ForbiddenCircle
 - Lock Unlocked
 - Object Scan
 - Password
@@ -1154,10 +1154,10 @@
 - Scanner
 - Scanner 2
 - Scanning
-- Security
-- Security Safe
-- Security Time
-- Security User
+- ShieldBlank
+- ShieldBlank Safe
+- ShieldBlank Time
+- ShieldBlank User
 - Shield
 - Shield Check
 - Shield Cross
@@ -1166,10 +1166,10 @@
 - Shield Minimalistic
 - Shield Minus
 - Shield Network
-- Shield Plus
+- Shield Add
 - Shield Search
-- Shield Security
-- Shield Slash
+- Shield ShieldBlank
+- Shield ForbiddenCircle
 - Shield Star
 - Shield Tick
 - Shield Up
@@ -1194,13 +1194,13 @@
 - Check Square
 - Close Circle
 - Close Square
-- Computing
+- PlusMinus
 - Cursor
 - Cursor Square
 - Danger
 - Danger Circle
 - Danger Square
-- Danger Triangle
+- Danger RhombusNested
 - Feed
 - Filter
 - Filter Add
@@ -1235,8 +1235,8 @@
 - Paper Bin
 - Pin
 - Pin Circle
-- Pin List
-- Plus, Minus
+- Pin ListSort
+- Add, Minus
 - Posts Carousel Horizontal
 - Posts Carousel Vertical
 - Question Circle
@@ -1245,11 +1245,11 @@
 - Revote
 - Scale
 - Scroll
-- Setting
-- Setting 2
-- Setting 3
-- Setting 4
-- Setting 5
+- SettingsHexagon
+- SettingsHexagon 2
+- SettingsHexagon 3
+- SettingsHexagon 4
+- SettingsHexagon 5
 - Settings
 - Settings Minimalistic
 - Share
@@ -1259,7 +1259,7 @@
 - Sidebar Minimalistic
 - Sidebar Right
 - Sidebar Top
-- Siderbar
+- SidebarText
 - Slider
 - Slider Horizontal
 - Slider Minimalistic Horizontal
@@ -1334,8 +1334,8 @@
 - User Minus
 - User Minus Rounded
 - User Octagon
-- User Plus
-- User Plus Rounded
+- User Add
+- User Add Rounded
 - User Remove
 - User Rounded
 - User Search
@@ -1363,7 +1363,7 @@
 - Bag Smile
 - Bag Tick
 - Bag Tick 2
-- Bag Timer
+- Bag Stopwatch
 - Barcode
 - Cart
 - Cart 2
@@ -1377,11 +1377,11 @@
 - Cart Large 3
 - Cart Large 4
 - Cart Large Minimalistic
-- Cart Plus
+- Cart Add
 - Discount Circle
 - Discount Shape
-- Sale
-- Sale Square
+- DiscountShape
+- DiscountShape Square
 - Shop
 - Shop 2
 - Shop Add
@@ -1400,7 +1400,7 @@
 - Ticket 2
 - Ticket Discount
 - Ticket Expired
-- Ticket Sale
+- Ticket DiscountShape
 - Ticket Star
 
 ## Location, Maps & Navigation
@@ -1419,14 +1419,14 @@
 - Global Edit
 - Global Refresh
 - Global Search
-- Globus
-- GPS
-- GPS Slash
+- Globe
+- Gps
+- Gps ForbiddenCircle
 - Location
 - Location Add
 - Location Cross
 - Location Minus
-- Location Slash
+- Location ForbiddenCircle
 - Location Tick
 - Map
 - Map Arrow Down
@@ -1489,9 +1489,9 @@
 - Stopwatch
 - Stopwatch Pause
 - Stopwatch Play
-- Timer
-- Timer Pause
-- Timer Start
+- Stopwatch
+- Stopwatch Pause
+- Stopwatch Start
 - Watch
 - Watch Round
 - Watch Square
@@ -1513,7 +1513,7 @@
 - Cloud Lightning
 - Cloud Minus
 - Cloud Notif
-- Cloud Plus
+- Cloud Add
 - Cloud Rain
 - Cloud Snow
 - Cloud Snowfall
@@ -1535,7 +1535,7 @@
 - Flame
 - Flash
 - Flash Circle
-- Flash Slash
+- Flash ForbiddenCircle
 - Fog
 - Leaf
 - Moon
@@ -1558,7 +1558,7 @@
 
 ## Astronomy & Astrology
 
-- Aquarius
+- Ceres
 - Asteroid
 - Atom
 - Black Hole
@@ -1569,7 +1569,7 @@
 - Gemini 2
 - Infinity
 - Man
-- Men
+- Male
 - Planet
 - Planet 2
 - Planet 3
@@ -1582,8 +1582,8 @@
 - UFO
 - UFO 2
 - UFO 3
-- Woman
-- Women
+- Female
+- Female
 
 ## Healthcare, Medicine & Fitness
 
@@ -1595,8 +1595,8 @@
 - Benzene Ring
 - Bicycling
 - Bicycling Round
-- Body Shape
-- Body Shape Minimalistic
+- Onesie Shape
+- Onesie Shape Minimalistic
 - Bone
 - Bone Broken
 - Bone Crack
@@ -1618,8 +1618,8 @@
 - Golf
 - Hand Pills
 - Health
-- Heart Pulse
-- Heart Pulse 2
+- Heart HealthPulseSquare
+- Heart HealthPulseSquare 2
 - Hiking
 - Hiking Minimalistic
 - Hiking Round
@@ -1629,13 +1629,13 @@
 - Medical Kit
 - Meditation
 - Meditation Round
-- Microscope
+- TelescopeAngled
 - Pill
 - Pills
 - Pills 2
 - Pills 3
-- Pulse
-- Pulse 2
+- HealthPulseSquare
+- HealthPulseSquare 2
 - Rugby
 - Running
 - Running 2
@@ -1684,12 +1684,12 @@
 - Milk
 - Oven Mitts
 - Oven Mitts Minimalistic
-- Plate
+- HangingSign
 - Rolling Pin
 - Tea Cup
 - Whisk
 - Wineglass
-- Wineglass Triangle
+- Wineglass RhombusNested
 
 ## Home, Architecture & Furniture
 
@@ -1711,8 +1711,8 @@
 - Buildings 3
 - Buildings 4
 - Buliding
-- Candle
-- Candle 2
+- CandlestickChart
+- CandlestickChart 2
 - Chair
 - Chair 2
 - Chandelier
@@ -1742,7 +1742,7 @@
 - Lamp
 - Lamp Charge
 - Lamp On
-- Lamp Slash
+- Lamp ForbiddenCircle
 - Lightbulb
 - Lightbulb Bolt
 - Lightbulb Minimalistic
@@ -1758,7 +1758,7 @@
 - Sofa
 - Sofa 2
 - Sofa 3
-- Trellis
+- DressingTable
 - Washing Machine
 - Washing Machine Minimalistic
 
@@ -1784,8 +1784,8 @@
 - Suspension
 - Suspension Bolt
 - Suspension Cross
-- Traffic
-- Traffic Economy
+- CircleGap
+- CircleGap Economy
 - Tram
 - Transmission
 - Transmission Circle
@@ -1815,7 +1815,7 @@
 - Briefcase
 - Brifecase Cross
 - Brifecase Tick
-- Brifecase Timer
+- Brifecase Stopwatch
 - Calculator
 - Calculator Minimalistic
 - Case
@@ -1829,7 +1829,7 @@
 - Passport Minimalistic
 - Square Academic Cap
 - Square Academic Cap 2
-- Teacher
+- GraduationCap
 
 ## Reactions, Badges & Emojis
 
@@ -1853,7 +1853,7 @@
 - Hand Money
 - Hand Shake
 - Hand Stars
-- Happyemoji
+- HappyEmoji
 - Heart
 - Heart Add
 - Heart Angle
@@ -1864,7 +1864,7 @@
 - Heart Remove
 - Heart Search
 - Heart Shine
-- Heart Slash
+- Heart ForbiddenCircle
 - Heart Tick
 - Heart Unlock
 - Hearts
@@ -1901,7 +1901,7 @@
 - Star Ring
 - Star Rings
 - Star Shine
-- Star Slash
+- Star ForbiddenCircle
 - Stars
 - Stars Line
 - Stars Minimalistic
@@ -1948,21 +1948,21 @@
 
 - Checklist
 - Checklist Minimalistic
-- List
-- List Arrow Down
-- List Arrow Down Minimalistic
-- List Arrow Up
-- List Arrow Up Minimalistic
-- List Check
-- List Check Minimalistic
-- List Cross
-- List Cross Minimalistic
-- List Down
-- List Down Minimalistic
-- List Heart
-- List Heart Minimalistic
-- List Up
-- List Up Minimalistic
+- ListSort
+- ListSort Arrow Down
+- ListSort Arrow Down Minimalistic
+- ListSort Arrow Up
+- ListSort Arrow Up Minimalistic
+- ListSort Check
+- ListSort Check Minimalistic
+- ListSort Cross
+- ListSort Cross Minimalistic
+- ListSort Down
+- ListSort Down Minimalistic
+- ListSort Heart
+- ListSort Heart Minimalistic
+- ListSort Up
+- ListSort Up Minimalistic
 - Plaaylist Minimalistic
 - Playlist
 - Playlist 2
@@ -1979,11 +1979,11 @@
 - 3d Cube Scan
 - 3d Rotate
 - 3d Square
-- 3dcube
+- 3dCube
 - 4K
 - Accessibility
 - Balloon
-- Body
+- Onesie
 - Box
 - Box 2
 - Box Add
@@ -2001,8 +2001,8 @@
 - Cd
 - Confetti
 - Confetti Minimalistic
-- Convert 3D Cube
-- Convert 3d Cube
+- RoundTransferDiagonal 3D Cube
+- RoundTransferDiagonal 3d Cube
 - Cosmetic
 - Cup
 - Delivery
@@ -2021,7 +2021,7 @@
 - Hanger 2
 - High Definition
 - High Quality
-- Judge
+- Gavel
 - Lifebuoy
 - Magnet
 - Magnet Wave
@@ -2031,12 +2031,12 @@
 - Paw
 - Perfume
 - Pet
-- Reserve
+- ServiceBell
 - Scissor
 - Scissors
 - Scissors Square
 - Skirt
-- Slash
+- ForbiddenCircle
 - Sledgehammer
 - Special Effects
 - Story
@@ -2046,7 +2046,7 @@
 - T-Shirt
 - T-shirt
 - Tree
-- Triangle
+- RhombusNested
 - Umbrella
 - Unlimited
 - Weigher

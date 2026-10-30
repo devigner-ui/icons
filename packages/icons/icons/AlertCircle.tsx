@@ -23,7 +23,39 @@ const IconAlertCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M20.16 17.78A10 10 0 0 0 6.25 3.82M3.79 6.29a10 10 0 0 0 13.89 13.94"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 7v6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M11 16a1 1 0 1 0 2 0 1 1 0 1 0-2 0z"
+            fill="currentColor"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -23,7 +23,55 @@ const IconHeadphonesRoundSound = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 17v-5c0-1.82-.49-3.53-1.34-5M2 18v-6a10 10 0 0 1 15-8.66"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8 15.19c0-.58 0-.87-.07-1.1a1.5 1.5 0 0 0-1.1-1.06 4 4 0 0 0-1.05.02 6 6 0 0 0-1.82.27A3.1 3.1 0 0 0 2.1 15.4c-.11.42-.11.92-.11 1.93v.18c0 1.03 0 1.55.12 1.98a3 3 0 0 0 1.6 1.95c.38.2.87.27 1.84.43.65.1.97.16 1.23.1.51-.1.94-.48 1.12-1 .09-.25.09-.6.09-1.28z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M16 15.19c0-.58 0-.87.07-1.1.16-.53.58-.93 1.1-1.06.22-.05.5-.03 1.05.02a6 6 0 0 1 1.82.27c.9.34 1.59 1.12 1.85 2.08.11.42.11.92.11 1.93v.18c0 1.03 0 1.55-.12 1.98a3 3 0 0 1-1.6 1.95c-.38.2-.87.27-1.84.43-.65.1-.97.16-1.23.1a1.5 1.5 0 0 1-1.12-1c-.09-.25-.09-.6-.09-1.28z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 6.5v5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 8v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 8v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

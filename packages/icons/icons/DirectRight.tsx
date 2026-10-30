@@ -23,7 +23,28 @@ const IconDirectRight = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7.7 3.07a3.2 3.2 0 0 0-4.35 4.26l1.62 3.24c.45.9.45 1.96 0 2.86l-1.62 3.24a3.2 3.2 0 0 0 4.35 4.26l11.59-6.1a3.2 3.2 0 0 0 0-5.66L12.32 5.5"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +58,7 @@ const IconDirectRight = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M19.96 9.17 8.37 3.07a3.2 3.2 0 0 0-4.35 4.26l1.62 3.24c.45.9.45 1.96 0 2.86l-1.62 3.24a3.2 3.2 0 0 0 4.35 4.26l11.59-6.1a3.2 3.2 0 0 0 0-5.66"
+              d="M19.29 9.17 7.7 3.07a3.2 3.2 0 0 0-4.35 4.26l1.62 3.24c.45.9.45 1.96 0 2.86l-1.62 3.24a3.2 3.2 0 0 0 4.35 4.26l11.59-6.1a3.2 3.2 0 0 0 0-5.66"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -58,12 +79,12 @@ const IconDirectRight = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m3.38 17.02 1.74-3.48c.48-.97.48-2.1 0-3.07L3.38 6.98a3.43 3.43 0 0 1 4.67-4.57l1.54.82a1 1 0 0 1 .48.51l5.69 12.65c.23.52.02 1.13-.48 1.39l-7.24 3.81C5.1 23.15 1.89 20 3.38 17.02"
+              d="m2.71 17.02 1.74-3.48c.48-.97.48-2.1 0-3.07L2.71 6.98a3.43 3.43 0 0 1 4.67-4.57l1.54.82a1 1 0 0 1 .48.51l5.69 12.65c.23.52.02 1.13-.48 1.39l-7.24 3.81C4.43 23.15 1.22 20 2.71 17.02"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m16.98 15.6-3.73-8.28c-.42-.93.58-1.87 1.48-1.39l5.77 3.04a3.43 3.43 0 0 1 0 6.08l-2.04 1.07c-.55.28-1.22.05-1.48-.52"
+              d="m16.31 15.6-3.73-8.28c-.42-.93.58-1.87 1.48-1.39l5.77 3.04a3.43 3.43 0 0 1 0 6.08l-2.04 1.07c-.55.28-1.22.05-1.48-.52"
               fill="currentColor"
             />
           </svg>
@@ -82,11 +103,11 @@ const IconDirectRight = forwardRef<SVGSVGElement, IconProps>(
           >
             <g clipPath="url(#clip0_12_64940)">
               <path
-                d="m3.38 17.02 1.74-3.48c.48-.97.48-2.1 0-3.07L3.38 6.98a3.43 3.43 0 0 1 4.67-4.57l1.54.82a1 1 0 0 1 .48.51l5.69 12.65c.23.52.02 1.13-.48 1.39l-7.24 3.81C5.1 23.15 1.89 20 3.38 17.02"
+                d="m2.71 17.02 1.74-3.48c.48-.97.48-2.1 0-3.07L2.71 6.98a3.43 3.43 0 0 1 4.67-4.57l1.54.82a1 1 0 0 1 .48.51l5.69 12.65c.23.52.02 1.13-.48 1.39l-7.24 3.81C4.43 23.15 1.22 20 2.71 17.02"
                 fill="currentColor"
               />
               <path
-                d="m16.98 15.6-3.73-8.28c-.42-.93.58-1.87 1.48-1.39l5.77 3.04a3.43 3.43 0 0 1 0 6.08l-2.04 1.07c-.55.28-1.22.05-1.48-.52"
+                d="m16.31 15.6-3.73-8.28c-.42-.93.58-1.87 1.48-1.39l5.77 3.04a3.43 3.43 0 0 1 0 6.08l-2.04 1.07c-.55.28-1.22.05-1.48-.52"
                 fill="currentColor"
               />
             </g>
@@ -96,7 +117,6 @@ const IconDirectRight = forwardRef<SVGSVGElement, IconProps>(
                   width="24"
                   height="24"
                   fill="none"
-                  transform="translate(0.669922)"
                 />
               </clipPath>
             </defs>

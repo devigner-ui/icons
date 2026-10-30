@@ -22,7 +22,49 @@ const IconStation = forwardRef<SVGSVGElement, IconProps>(function IconStation(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 9.08a10 10 0 0 1-2.92 7.06m.06-14.06q1.25 1.27 2 2.92M5 16.22A9.97 9.97 0 0 1 4.94 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M6 9.06c0-1.56.67-2.96 1.76-3.98m8.52.04A5.4 5.4 0 0 1 18 9.06c0 1.55-.67 2.96-1.75 3.97m-8.45.05A6 6 0 0 1 6.88 12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <circle
+            cx="12"
+            cy="9.07812"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12.5 11 16 22l-5.5-6.5m1-4.5L8 22l5.5-6.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

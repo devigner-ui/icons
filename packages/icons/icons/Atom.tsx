@@ -22,7 +22,32 @@ const IconAtom = forwardRef<SVGSVGElement, IconProps>(function IconAtom(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7.53 16.47C2.59 11.53.59 5.53 3.06 3.06 5.05 1.06 9.34 1.98 13.5 5m2.96 2.53c4.94 4.94 6.94 10.94 4.47 13.41-1.99 2-6.27 1.08-10.44-1.93M20.94 3.06c2.47 2.47.47 8.47-4.47 13.41S5.53 23.41 3.06 20.94c-2-1.99-1.08-6.28 1.94-10.45q1.1-1.51 2.53-2.96C12.47 2.59 18.47.59 20.94 3.06Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

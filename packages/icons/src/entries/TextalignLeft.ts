@@ -1,1 +1,1 @@
-export { default, default as IconTextalignLeft } from '../../icons/TextalignLeft';
+export { default, default as IconTextAlignLeft } from '../../icons/TextAlignLeft';

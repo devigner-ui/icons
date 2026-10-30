@@ -23,7 +23,27 @@ const IconPhoneRounded = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4 7.93c-.07 1.91.42 5.15 3.67 8.4q1.18 1.18 2.33 1.9M5.54 4.93c1.4-1.39 3.61-1.2 4.5.39l.65 1.16a2.8 2.8 0 0 1-.58 3.35s-1.11 1.12.91 3.15 3.15.9 3.15.9a2.8 2.8 0 0 1 3.35-.57l1.16.65c1.59.89 1.78 3.1.38 4.5a4.6 4.6 0 0 1-3 1.53 10 10 0 0 1-3.06-.38"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,13 +57,13 @@ const IconPhoneRounded = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M5 6.93a4.7 4.7 0 0 1 1.54-3c1.4-1.39 3.61-1.2 4.5.39l.65 1.16a2.8 2.8 0 0 1-.58 3.35m5.96 10.16a4.6 4.6 0 0 0 3-1.53c1.39-1.4 1.2-3.61-.39-4.5l-1.16-.65a2.8 2.8 0 0 0-3.35.58"
+              d="M4 7.93a4.7 4.7 0 0 1 1.54-3c1.4-1.39 3.61-1.2 4.5.39l.65 1.16a2.8 2.8 0 0 1-.58 3.35m5.96 10.16a4.6 4.6 0 0 0 3-1.53c1.39-1.4 1.2-3.61-.39-4.5l-1.16-.65a2.8 2.8 0 0 0-3.35.58"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M5 6.93c-.07 1.91.42 5.15 3.67 8.4s6.49 3.74 8.4 3.66m-1.9-6.1s-1.12 1.11-3.15-.91-.9-3.15-.9-3.15"
+              d="M4 7.93c-.07 1.91.42 5.15 3.67 8.4s6.49 3.74 8.4 3.66m-1.9-6.1s-1.12 1.11-3.15-.91-.9-3.15-.9-3.15"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />

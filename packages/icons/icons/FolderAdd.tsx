@@ -23,7 +23,53 @@ const IconFolderAdd = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12.06 16.5v-5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14.5 14h-5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 13.02V7c0-4 1-5 5-5h1.5c1.5 0 1.83.44 2.4 1.2l1.5 2c.38.5.6.8 1.6.8h3c4 0 5 1 5 5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22 14.99V17c0 4-1 5-5 5H7c-4 0-5-1-5-5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -64,11 +110,11 @@ const IconFolderAdd = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22 13.75v-2.2c0-2.63 0-3.95-.77-4.8l-.22-.23c-.86-.77-2.18-.77-4.8-.77h-.38c-1.16 0-1.73 0-2.27-.15a4 4 0 0 1-.85-.35c-.49-.28-.9-.68-1.71-1.5l-.55-.55a4 4 0 0 0-2.73-1.43c-.19-.02-.38-.02-.77-.02-.88 0-1.32 0-1.7.07A4 4 0 0 0 2.08 5C2 5.38 2 5.8 2 6.7v7.05c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17h4c3.77 0 5.66 0 6.83-1.17S22 17.52 22 13.75"
+              d="M22 14v-2.2c0-2.63 0-3.95-.77-4.8l-.22-.23C20.15 6 18.83 6 16.21 6h-.38c-1.16 0-1.73 0-2.27-.15a4 4 0 0 1-.85-.35c-.49-.28-.9-.68-1.71-1.5l-.55-.55a4 4 0 0 0-2.73-1.43C7.53 2 7.34 2 6.95 2c-.88 0-1.32 0-1.7.07a4 4 0 0 0-3.17 3.18C2 5.63 2 6.05 2 6.95V14c0 3.77 0 5.66 1.17 6.83S6.23 22 10 22h4c3.77 0 5.66 0 6.83-1.17S22 17.77 22 14"
               fill="currentColor"
             />
             <path
-              d="M12 11c.41 0 .75.34.75.75V13H14a.75.75 0 0 1 0 1.5h-1.25v1.25a.75.75 0 0 1-1.5 0V14.5H10a.75.75 0 0 1 0-1.5h1.25v-1.25c0-.41.34-.75.75-.75"
+              d="M12 11.25c.41 0 .75.34.75.75v1.25H14a.75.75 0 0 1 0 1.5h-1.25V16a.75.75 0 0 1-1.5 0v-1.25H10a.75.75 0 0 1 0-1.5h1.25V12c0-.41.34-.75.75-.75"
               fill="currentColor"
             />
           </svg>
@@ -88,7 +134,7 @@ const IconFolderAdd = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2.07 5C2 5.39 2 5.83 2 6.7v7.05c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17h4c3.77 0 5.66 0 6.83-1.17S22 17.52 22 13.75v-2.2c0-2.63 0-3.95-.77-4.8l-.22-.23c-.86-.77-2.18-.77-4.8-.77h-.38c-1.16 0-1.73 0-2.27-.15a4 4 0 0 1-.85-.35c-.49-.28-.9-.68-1.71-1.5l-.55-.55a4 4 0 0 0-2.73-1.43c-.19-.02-.38-.02-.77-.02-.88 0-1.32 0-1.7.07A4 4 0 0 0 2.08 5M12 11c.41 0 .75.34.75.75V13H14a.75.75 0 0 1 0 1.5h-1.25v1.25a.75.75 0 0 1-1.5 0V14.5H10a.75.75 0 0 1 0-1.5h1.25v-1.25c0-.41.34-.75.75-.75"
+              d="M2.07 5.25C2 5.64 2 6.08 2 6.95V14c0 3.77 0 5.66 1.17 6.83S6.23 22 10 22h4c3.77 0 5.66 0 6.83-1.17S22 17.77 22 14v-2.2c0-2.63 0-3.95-.77-4.8l-.22-.23C20.15 6 18.83 6 16.21 6h-.38c-1.16 0-1.73 0-2.27-.15a4 4 0 0 1-.85-.35c-.49-.28-.9-.68-1.71-1.5l-.55-.55a4 4 0 0 0-2.73-1.43C7.53 2 7.34 2 6.95 2c-.88 0-1.32 0-1.7.07a4 4 0 0 0-3.17 3.18m9.92 6c.41 0 .75.34.75.75v1.25H14a.75.75 0 0 1 0 1.5h-1.25V16a.75.75 0 0 1-1.5 0v-1.25H10a.75.75 0 0 1 0-1.5h1.25V12c0-.41.34-.75.75-.75"
               fill="currentColor"
             />
           </svg>

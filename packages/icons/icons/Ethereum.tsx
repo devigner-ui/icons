@@ -22,7 +22,7 @@ const IconEthereum = forwardRef<SVGSVGElement, IconProps>(function IconEthereum(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,53 @@ const IconEthereum = forwardRef<SVGSVGElement, IconProps>(function IconEthereum(
           {...rest}
         >
           <path
-            d="M11.12 3.05 7.39 7.71c-.85 1.06-.55 2.42.66 3.02l3.73 1.87c.49.24 1.29.24 1.78 0l3.73-1.87c1.21-.61 1.51-1.97.66-3.02l-3.73-4.66c-.85-1.07-2.25-1.07-3.1 0"
+            d="M10.45 3.05 6.72 7.71c-.85 1.06-.55 2.42.66 3.02l3.73 1.87c.49.24 1.29.24 1.78 0l3.73-1.87c1.21-.61 1.51-1.97.66-3.02l-3.73-4.66c-.85-1.07-2.25-1.07-3.1 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 2.3v5.26"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7.8 10.71 12 7.56l4.2 3.15"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m7.8 17.73-.8-.98c-1-1.22.33-2.96 1.77-2.32l1.61.72a4 4 0 0 0 3.25 0l1.61-.72c1.44-.64 2.77 1.1 1.77 2.32l-3.46 4.23c-.85 1.04-2.24 1.04-3.1 0"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10.45 3.05 6.72 7.71c-.85 1.06-.55 2.42.66 3.02l3.73 1.87c.49.24 1.29.24 1.78 0l3.73-1.87c1.21-.61 1.51-1.97.66-3.02l-3.73-4.66c-.85-1.07-2.25-1.07-3.1 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -44,7 +90,7 @@ const IconEthereum = forwardRef<SVGSVGElement, IconProps>(function IconEthereum(
             strokeLinejoin="round"
           />
           <path
-            d="M12.67 2.3v5.26"
+            d="M12 2.3v5.26"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -52,7 +98,7 @@ const IconEthereum = forwardRef<SVGSVGElement, IconProps>(function IconEthereum(
             strokeLinejoin="round"
           />
           <path
-            d="m8.47 10.71 4.2-3.15 4.2 3.15"
+            d="M7.8 10.71 12 7.56l4.2 3.15"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -61,7 +107,7 @@ const IconEthereum = forwardRef<SVGSVGElement, IconProps>(function IconEthereum(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m9.44 14.43 1.61.72a4 4 0 0 0 3.25 0l1.61-.72c1.44-.64 2.77 1.1 1.77 2.32l-3.46 4.23c-.85 1.04-2.24 1.04-3.1 0l-3.45-4.23c-1.01-1.22.32-2.96 1.77-2.32"
+            d="m8.77 14.43 1.61.72a4 4 0 0 0 3.25 0l1.61-.72c1.44-.64 2.77 1.1 1.77 2.32l-3.46 4.23c-.85 1.04-2.24 1.04-3.1 0L7 16.75c-1.01-1.22.32-2.96 1.77-2.32"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -82,18 +128,18 @@ const IconEthereum = forwardRef<SVGSVGElement, IconProps>(function IconEthereum(
           {...a11y}
           {...rest}
         >
-          <path d="M24.67 0h-24v24h24z" fill="none" />
+          <path d="M24 0H0v24h24z" fill="none" />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M18.17 11.49q-.16.13-.35.22l-1.09.55-3.07 1.53c-.55.28-1.44.28-1.98 0l-3.07-1.53-1.09-.55q-.18-.1-.35-.22c-1.06-.74-1.25-2.09-.4-3.16l4.17-5.2q.4-.49.89-.7a1.9 1.9 0 0 1 1.67 0q.5.22.89.7l4.17 5.2c.86 1.08.67 2.43-.39 3.16"
+            d="M17.5 11.49q-.16.13-.35.22l-1.09.55-3.07 1.53c-.55.28-1.44.28-1.98 0l-3.07-1.53-1.09-.55q-.18-.1-.35-.22c-1.06-.74-1.25-2.09-.4-3.16l4.17-5.2q.4-.49.89-.7a1.9 1.9 0 0 1 1.67 0q.5.22.89.7l4.17 5.2c.86 1.08.67 2.43-.39 3.16"
             fill="currentColor"
           />
           <path
-            d="M18.17 11.49q-.16.13-.35.22l-1.09.55-4.06-3.05-4.06 3.06-1.09-.55q-.18-.1-.35-.22a.8.8 0 0 1 .31-.48l4.35-3.27V2.44a1.9 1.9 0 0 1 1.67 0v5.31l4.35 3.27a.8.8 0 0 1 .32.47"
+            d="M17.5 11.49q-.16.13-.35.22l-1.09.55L12 9.21l-4.06 3.06-1.09-.55q-.18-.1-.35-.22a.8.8 0 0 1 .31-.48l4.35-3.27V2.44a1.9 1.9 0 0 1 1.67 0v5.31l4.35 3.27a.8.8 0 0 1 .32.47"
             fill="currentColor"
           />
           <path
-            d="m9.44 14.43 1.61.72a4 4 0 0 0 3.25 0l1.61-.72c1.44-.64 2.77 1.1 1.77 2.32l-3.46 4.23c-.85 1.04-2.24 1.04-3.1 0l-3.45-4.23c-1.01-1.22.32-2.96 1.77-2.32"
+            d="m8.77 14.43 1.61.72a4 4 0 0 0 3.25 0l1.61-.72c1.44-.64 2.77 1.1 1.77 2.32l-3.46 4.23c-.85 1.04-2.24 1.04-3.1 0L7 16.75c-1.01-1.22.32-2.96 1.77-2.32"
             fill="currentColor"
           />
         </svg>
@@ -111,19 +157,19 @@ const IconEthereum = forwardRef<SVGSVGElement, IconProps>(function IconEthereum(
           {...rest}
         >
           <path
-            d="m9.44 14.43 1.61.72a4 4 0 0 0 3.25 0l1.61-.72c1.44-.64 2.77 1.1 1.77 2.32l-3.46 4.23c-.85 1.04-2.24 1.04-3.1 0l-3.45-4.23c-1.01-1.22.32-2.96 1.77-2.32"
+            d="m8.77 14.23 1.61.72a4 4 0 0 0 3.25 0l1.61-.72c1.44-.64 2.77 1.1 1.77 2.32l-3.46 4.23c-.85 1.04-2.24 1.04-3.1 0L7 16.55c-1.01-1.22.32-2.96 1.77-2.32"
             fill="currentColor"
           />
           <path
-            d="M9.24 11.67a.5.5 0 0 0 .08.85l2.35 1.17c.55.28 1.44.28 1.98 0L16 12.52a.5.5 0 0 0 .08-.85l-3.11-2.34a.5.5 0 0 0-.6 0z"
+            d="M8.57 11.47a.5.5 0 0 0 .08.85L11 13.49c.55.28 1.44.28 1.98 0l2.35-1.17a.5.5 0 0 0 .08-.85L12.3 9.13a.5.5 0 0 0-.6 0z"
             fill="currentColor"
           />
           <path
-            d="m18.55 8.24-4.17-5.2-.26-.28c-.26-.25-.63-.02-.63.34v4.3q0 .25.2.4l4.15 3.12.18.13c.18.13.43.13.58-.03.7-.76.69-1.86-.05-2.78"
+            d="m17.88 8.04-4.17-5.2-.26-.28c-.26-.25-.63-.02-.63.34v4.3q0 .25.2.4l4.15 3.12.18.13c.18.13.43.13.58-.03.7-.76.69-1.86-.05-2.78"
             fill="currentColor"
           />
           <path
-            d="m6.78 8.33 4.15-5.28.25-.28c.26-.25.63-.03.63.34v4.37a.5.5 0 0 1-.2.4l-4.13 3.17-.17.13c-.18.13-.43.13-.59-.04-.68-.77-.67-1.87.06-2.81"
+            d="m6.11 8.13 4.15-5.28.25-.28c.26-.25.63-.03.63.34v4.37a.5.5 0 0 1-.2.4l-4.13 3.17-.17.13c-.18.13-.43.13-.59-.04-.68-.77-.67-1.87.06-2.81"
             fill="currentColor"
           />
         </svg>

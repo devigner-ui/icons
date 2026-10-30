@@ -23,7 +23,27 @@ const IconSledgehammer = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m18.66 8.29.37-.37c.34-.34.51-.52.61-.7.28-.48.28-1.07 0-1.56-.1-.17-.27-.35-.61-.69s-.52-.51-.7-.61a1.6 1.6 0 0 0-1.56 0 4 4 0 0 0-.69.61l-.37.37M11.3 15.65l-5.53 5.52c-.34.35-.51.52-.69.62-.48.28-1.08.28-1.56 0-.18-.1-.35-.27-.7-.62s-.5-.51-.61-.69a1.6 1.6 0 0 1 0-1.56c.1-.18.27-.35.62-.7l5.52-5.52M18 17.75c-.9.83-1.54 1.24-2.29 1.24-1.07 0-1.94-.87-3.68-2.6l-4.42-4.42c-1.73-1.74-2.6-2.6-2.6-3.68s.87-1.95 2.6-3.69C9.35 2.87 10.21 2 11.3 2c1.07 0 1.94.87 3.68 2.6l4.42 4.42c1.73 1.74 2.6 2.6 2.6 3.68 0 .75-.42 1.4-1.25 2.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -22,7 +22,39 @@ const IconBellBing = forwardRef<SVGSVGElement, IconProps>(function IconBellBing(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 6v4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7.5 19a4.76 4.76 0 0 0 5.22 2.95M16.5 19a4.5 4.5 0 0 1-1.3 1.84"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9.1 2.67A6.5 6.5 0 0 1 12 2a6.9 6.9 0 0 1 6.75 7v.71c0 .85.24 1.67.7 2.38l1.1 1.72a2.8 2.8 0 0 1-1.52 4.21c-4.6 1.3-9.46 1.3-14.06 0a2.8 2.8 0 0 1-1.52-4.21l1.1-1.72c.46-.7.7-1.53.7-2.38v-.7q.01-1.63.65-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

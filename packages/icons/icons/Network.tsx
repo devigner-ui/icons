@@ -22,7 +22,7 @@ const IconNetwork = forwardRef<SVGSVGElement, IconProps>(function IconNetwork(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,28 +36,91 @@ const IconNetwork = forwardRef<SVGSVGElement, IconProps>(function IconNetwork(
           {...rest}
         >
           <path
-            d="M20.67 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+            d="M22 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22 20a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M6 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M6 12h12"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M11 12v5q0 3 3 3h4"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18 4h-4q-3 0-3 3v.98"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M20.67 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+            d="M20 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M20.67 22a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+            d="M20 22a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M4.67 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+            d="M4 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -65,14 +128,14 @@ const IconNetwork = forwardRef<SVGSVGElement, IconProps>(function IconNetwork(
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="M6.67 12h12"
+              d="M6 12h12"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M18.67 4h-4q-3 0-3 3v10q0 3 3 3h4"
+              d="M18 4h-4q-3 0-3 3v10q0 3 3 3h4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -94,24 +157,24 @@ const IconNetwork = forwardRef<SVGSVGElement, IconProps>(function IconNetwork(
           {...rest}
         >
           <path
-            d="M20.67 14.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+            d="M20 14.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
             fill="currentColor"
           />
           <path
-            d="M20.67 6.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+            d="M20 6.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
             fill="currentColor"
           />
           <path
-            d="M20.67 22.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+            d="M20 22.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
             fill="currentColor"
           />
           <path
-            d="M4.67 14.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+            d="M4 14.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M19.67 12.75c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-7.25V7c0-1.58.67-2.25 2.25-2.25h5c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-5c-2.42 0-3.75 1.33-3.75 3.75v4.25H5.67a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h5.25V17c0 2.42 1.33 3.75 3.75 3.75h5c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-5c-1.58 0-2.25-.67-2.25-2.25v-4.25z"
+            d="M19 12.75c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-7.25V7c0-1.58.67-2.25 2.25-2.25h5c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-5c-2.42 0-3.75 1.33-3.75 3.75v4.25H5a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h5.25V17c0 2.42 1.33 3.75 3.75 3.75h5c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-5c-1.58 0-2.25-.67-2.25-2.25v-4.25z"
             fill="currentColor"
           />
         </svg>
@@ -129,23 +192,23 @@ const IconNetwork = forwardRef<SVGSVGElement, IconProps>(function IconNetwork(
           {...rest}
         >
           <path
-            d="M20.67 14.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+            d="M20 14.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
             fill="currentColor"
           />
           <path
-            d="M20.67 6.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+            d="M20 6.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
             fill="currentColor"
           />
           <path
-            d="M20.67 22.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+            d="M20 22.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
             fill="currentColor"
           />
           <path
-            d="M4.67 14.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
+            d="M4 14.25a2.25 2.25 0 1 0 0-4.5 2.25 2.25 0 0 0 0 4.5"
             fill="currentColor"
           />
           <path
-            d="M19.67 12.75c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-7.25V7c0-1.58.67-2.25 2.25-2.25h5c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-5c-2.42 0-3.75 1.33-3.75 3.75v4.25H5.67a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h5.25V17c0 2.42 1.33 3.75 3.75 3.75h5c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-5c-1.58 0-2.25-.67-2.25-2.25v-4.25z"
+            d="M19 12.75c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-7.25V7c0-1.58.67-2.25 2.25-2.25h5c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-5c-2.42 0-3.75 1.33-3.75 3.75v4.25H5a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h5.25V17c0 2.42 1.33 3.75 3.75 3.75h5c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-5c-1.58 0-2.25-.67-2.25-2.25v-4.25z"
             fill="currentColor"
           />
         </svg>

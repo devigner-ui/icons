@@ -23,7 +23,49 @@ const IconListHeart = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m16.52 17.94-.44.6h0zm.98-4.51-.53.53c.3.3.76.3 1.06 0zm.98 4.51-.44-.6zm-.98.48v.75zm-.54-1.08a10 10 0 0 1-1.52-1.37q-.7-.82-.69-1.33h-1.5c0 .9.52 1.7 1.06 2.32.55.63 1.23 1.19 1.77 1.58zm-2.21-2.7c0-.76.34-1.12.66-1.24.34-.12.92-.07 1.56.56l1.06-1.06c-.94-.93-2.1-1.27-3.13-.9s-1.65 1.38-1.65 2.64zm4.17 3.9c.54-.4 1.22-.95 1.77-1.58a3.7 3.7 0 0 0 1.06-2.32h-1.5q0 .52-.69 1.33c-.45.52-1.03 1-1.52 1.37zm2.83-3.9c0-1.26-.62-2.27-1.66-2.65-1.01-.36-2.18-.02-3.12.9l1.06 1.07c.64-.63 1.22-.68 1.56-.56.32.12.66.48.66 1.24zm-5.67 3.9c.37.28.8.63 1.42.63v-1.5l-.1-.03-.44-.3zm1.96-1.2-.44.3q-.08.04-.1.03v1.5c.62 0 1.05-.35 1.42-.63z"
+            fill="currentColor"
+          />
+          <path
+            d="M10 13.6H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 17.6H3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 5.6h10.5m6.5 0h-2.25"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 9.6H9.5M3 9.6h2.25"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,33 +79,33 @@ const IconListHeart = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m16.52 18.34-.44.6zm.98-4.51-.53.53c.3.3.76.3 1.06 0zm.98 4.51-.44-.6zm-.98.48v.75zm-.54-1.08a10 10 0 0 1-1.52-1.37q-.7-.82-.69-1.33h-1.5c0 .9.52 1.7 1.06 2.32.55.63 1.23 1.19 1.77 1.59zm-2.21-2.7c0-.76.34-1.12.66-1.24.34-.12.92-.07 1.56.56l1.06-1.06c-.94-.92-2.1-1.27-3.13-.9s-1.65 1.38-1.65 2.64zm4.17 3.9c.54-.4 1.22-.95 1.77-1.58a3.7 3.7 0 0 0 1.06-2.32h-1.5q0 .52-.69 1.33c-.45.52-1.03 1-1.52 1.37zm2.83-3.9c0-1.26-.62-2.27-1.66-2.65-1.01-.36-2.18-.01-3.12.9l1.06 1.07c.64-.63 1.22-.68 1.56-.56.32.12.66.48.66 1.24zm-5.67 3.9c.37.28.8.63 1.42.63v-1.5l-.1-.03-.44-.3zm1.96-1.2-.44.3q-.08.04-.1.03v1.5c.62 0 1.05-.35 1.42-.62z"
+              d="m16.52 17.94-.44.6zm.98-4.51-.53.53c.3.3.76.3 1.06 0zm.98 4.51-.44-.6zm-.98.48v.75zm-.54-1.08a10 10 0 0 1-1.52-1.37q-.7-.82-.69-1.33h-1.5c0 .9.52 1.7 1.06 2.32.55.63 1.23 1.19 1.77 1.59zm-2.21-2.7c0-.76.34-1.12.66-1.24.34-.12.92-.07 1.56.56l1.06-1.06c-.94-.92-2.1-1.27-3.13-.9s-1.65 1.38-1.65 2.64zm4.17 3.9c.54-.4 1.22-.95 1.77-1.58a3.7 3.7 0 0 0 1.06-2.32h-1.5q0 .52-.69 1.33c-.45.52-1.03 1-1.52 1.37zm2.83-3.9c0-1.26-.62-2.27-1.66-2.65-1.01-.36-2.18-.01-3.12.9l1.06 1.07c.64-.63 1.22-.68 1.56-.56.32.12.66.48.66 1.24zm-5.67 3.9c.37.28.8.63 1.42.63v-1.5l-.1-.03-.44-.3zm1.96-1.2-.44.3q-.08.04-.1.03v1.5c.62 0 1.05-.35 1.42-.62z"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M21 6H3"
+              d="M21 5.6H3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M21 10H3"
+              d="M21 9.6H3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M10 14H3"
+              d="M10 13.6H3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M10 18H3"
+              d="M10 17.6H3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

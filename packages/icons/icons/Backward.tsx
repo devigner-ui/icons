@@ -22,7 +22,35 @@ const IconBackward = forwardRef<SVGSVGElement, IconProps>(function IconBackward(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 8.34v7.32c0 1.5-1.63 2.44-2.93 1.69l-3.17-1.82-3.17-1.83q-.3-.18-.49-.41v-2.56q.2-.23.49-.41l3.17-1.83 3.17-1.82c1.3-.77 2.93.17 2.93 1.67Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9.32 6.65c1.3-.75 2.93.19 2.93 1.69v7.32c0 1.5-1.63 2.44-2.93 1.69l-3.17-1.82-3.17-1.83a1.95 1.95 0 0 1 0-3.38L5.4 8.93"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,14 +65,14 @@ const IconBackward = forwardRef<SVGSVGElement, IconProps>(function IconBackward(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M22.67 8.34v7.32c0 1.5-1.63 2.44-2.93 1.69l-3.17-1.82-3.17-1.83q-.3-.18-.49-.41v-2.56q.2-.23.49-.41l3.17-1.83 3.17-1.82c1.3-.77 2.93.17 2.93 1.67"
+            d="M22 8.34v7.32c0 1.5-1.63 2.44-2.93 1.69l-3.17-1.82-3.17-1.83q-.3-.18-.49-.41v-2.56q.2-.23.49-.41l3.17-1.83 3.17-1.82c1.3-.77 2.93.17 2.93 1.67"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M12.91 8.34v7.32c0 1.5-1.63 2.44-2.93 1.69l-3.17-1.82-3.17-1.83a1.95 1.95 0 0 1 0-3.38l3.17-1.83 3.17-1.82c1.3-.77 2.93.17 2.93 1.67"
+            d="M12.24 8.34v7.32c0 1.5-1.63 2.44-2.93 1.69l-3.17-1.82-3.17-1.83a1.95 1.95 0 0 1 0-3.38l3.17-1.83 3.17-1.82c1.3-.77 2.93.17 2.93 1.67"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -66,11 +94,11 @@ const IconBackward = forwardRef<SVGSVGElement, IconProps>(function IconBackward(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M22.67 8.34v7.32c0 1.5-1.63 2.44-2.93 1.69l-3.17-1.83-3.17-1.83-.49-.28v-2.82l.49-.28 3.17-1.83 3.17-1.83c1.3-.75 2.93.19 2.93 1.69"
+            d="M22 8.34v7.32c0 1.5-1.63 2.44-2.93 1.69l-3.17-1.83-3.17-1.83-.49-.28v-2.82l.49-.28 3.17-1.83 3.17-1.83c1.3-.75 2.93.19 2.93 1.69"
             fill="currentColor"
           />
           <path
-            d="M12.91 8.34v7.32c0 1.5-1.63 2.44-2.92 1.69l-3.18-1.83-3.17-1.83a1.96 1.96 0 0 1 0-3.38l3.17-1.83 3.18-1.83a1.95 1.95 0 0 1 2.92 1.69"
+            d="M12.24 8.34v7.32c0 1.5-1.63 2.44-2.92 1.69l-3.18-1.83-3.17-1.83a1.96 1.96 0 0 1 0-3.38l3.17-1.83 3.18-1.83a1.95 1.95 0 0 1 2.92 1.69"
             fill="currentColor"
           />
         </svg>
@@ -88,11 +116,11 @@ const IconBackward = forwardRef<SVGSVGElement, IconProps>(function IconBackward(
           {...rest}
         >
           <path
-            d="M22.67 8.34v7.32c0 1.5-1.63 2.44-2.93 1.69l-3.17-1.83-3.17-1.83-.49-.28v-2.82l.49-.28 3.17-1.83 3.17-1.83c1.3-.75 2.93.19 2.93 1.69"
+            d="M22 8.34v7.32c0 1.5-1.63 2.44-2.93 1.69l-3.17-1.83-3.17-1.83-.49-.28v-2.82l.49-.28 3.17-1.83 3.17-1.83c1.3-.75 2.93.19 2.93 1.69"
             fill="currentColor"
           />
           <path
-            d="M12.91 8.34v7.32c0 1.5-1.63 2.44-2.92 1.69l-3.18-1.83-3.17-1.83a1.96 1.96 0 0 1 0-3.38l3.17-1.83 3.18-1.83a1.95 1.95 0 0 1 2.92 1.69"
+            d="M12.24 8.34v7.32c0 1.5-1.63 2.44-2.92 1.69l-3.18-1.83-3.17-1.83a1.96 1.96 0 0 1 0-3.38l3.17-1.83 3.18-1.83a1.95 1.95 0 0 1 2.92 1.69"
             fill="currentColor"
           />
         </svg>

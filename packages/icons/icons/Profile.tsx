@@ -22,7 +22,35 @@ const IconProfile = forwardRef<SVGSVGElement, IconProps>(function IconProfile(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10.22 2.28a4.44 4.44 0 1 1 1.74 8.59h-.33a4.43 4.43 0 0 1-3.89-6.24"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8.06 13.96q-.59.26-1.1.6c-2.42 1.62-2.42 4.26 0 5.87 2.75 1.84 7.26 1.84 10.01 0 2.42-1.62 2.42-4.26 0-5.87a9.3 9.3 0 0 0-5.52-1.36"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,14 +65,14 @@ const IconProfile = forwardRef<SVGSVGElement, IconProps>(function IconProfile(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.83 10.87h-.33a4.44 4.44 0 1 1 .33 0"
+            d="M11.96 10.87h-.33a4.44 4.44 0 1 1 .33 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M7.83 14.56c-2.42 1.62-2.42 4.26 0 5.87 2.75 1.84 7.26 1.84 10.01 0 2.42-1.62 2.42-4.26 0-5.87-2.74-1.83-7.25-1.83-10.01 0"
+            d="M6.96 14.56c-2.42 1.62-2.42 4.26 0 5.87 2.75 1.84 7.26 1.84 10.01 0 2.42-1.62 2.42-4.26 0-5.87-2.74-1.83-7.25-1.83-10.01 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -66,11 +94,11 @@ const IconProfile = forwardRef<SVGSVGElement, IconProps>(function IconProfile(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 2a4.75 4.75 0 0 0-.12 9.49h.29A4.74 4.74 0 0 0 12.67 2"
+            d="M12 2a4.75 4.75 0 0 0-.12 9.49h.29A4.74 4.74 0 0 0 12 2"
             fill="currentColor"
           />
           <path
-            d="M17.75 14.15c-2.79-1.86-7.34-1.86-10.15 0-1.27.85-1.97 2-1.97 3.23s.7 2.37 1.96 3.21A9 9 0 0 0 12.67 22c1.84 0 3.68-.47 5.08-1.41 1.26-.85 1.96-1.99 1.96-3.23-.01-1.23-.7-2.37-1.96-3.21"
+            d="M17.08 14.15c-2.79-1.86-7.34-1.86-10.15 0-1.27.85-1.97 2-1.97 3.23s.7 2.37 1.96 3.21A9 9 0 0 0 12 22c1.84 0 3.68-.47 5.08-1.41 1.26-.85 1.96-1.99 1.96-3.23-.01-1.23-.7-2.37-1.96-3.21"
             fill="currentColor"
           />
         </svg>
@@ -88,11 +116,11 @@ const IconProfile = forwardRef<SVGSVGElement, IconProps>(function IconProfile(
           {...rest}
         >
           <path
-            d="M12.67 2a4.75 4.75 0 0 0-.12 9.49h.29A4.74 4.74 0 0 0 12.67 2"
+            d="M12 2a4.75 4.75 0 0 0-.12 9.49h.29A4.74 4.74 0 0 0 12 2"
             fill="currentColor"
           />
           <path
-            d="M17.75 14.15c-2.79-1.86-7.34-1.86-10.15 0-1.27.85-1.97 2-1.97 3.23s.7 2.37 1.96 3.21A9 9 0 0 0 12.67 22c1.84 0 3.68-.47 5.08-1.41 1.26-.85 1.96-1.99 1.96-3.23-.01-1.23-.7-2.37-1.96-3.21"
+            d="M17.08 14.15c-2.79-1.86-7.34-1.86-10.15 0-1.27.85-1.97 2-1.97 3.23s.7 2.37 1.96 3.21A9 9 0 0 0 12 22c1.84 0 3.68-.47 5.08-1.41 1.26-.85 1.96-1.99 1.96-3.23-.01-1.23-.7-2.37-1.96-3.21"
             fill="currentColor"
           />
         </svg>

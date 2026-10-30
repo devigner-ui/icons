@@ -7,8 +7,9 @@ const IconRotateRight = forwardRef<SVGSVGElement, IconProps>(
     { className, variant = "Outline", strokeWidth = "1.5", ...rest },
     ref,
   ) {
-    /* The four drawings are two booleans: filled or stroked, and whether the
-     secondary shapes drop to half tone. */
+    /* One stroked glyph in all four core styles. Bold and Bulk fix the weight
+       at 2, the Text icons' Bold; Bulk keeps TwoTone's half-tone parts. They
+       used to cut the glyph out of a filled square the outline never had. */
     const fill = variant === "Bold" || variant === "Bulk";
     const duotone = variant === "TwoTone" || variant === "Bulk";
 
@@ -23,7 +24,7 @@ const IconRotateRight = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
           <svg
             ref={ref}
             className={className}
@@ -36,51 +37,27 @@ const IconRotateRight = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <path
-              opacity={duotone ? "0.4" : "1"}
-              d="M15.56 5.08c-.87-.26-1.83-.43-2.89-.43a8.67 8.67 0 1 0 7.21 3.86"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M16.8 5.32 13.91 2"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="m16.8 5.32-3.37 2.46"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        ) : duotone ? (
-          <svg
-            ref={ref}
-            className={className}
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            focusable="false"
-            {...a11y}
-            {...rest}
-          >
-            <path
-              opacity={duotone ? "0.4" : "1"}
-              d="M8.48 2h8.37c3.65 0 5.82 2.17 5.82 5.81v8.37c0 3.64-2.17 5.81-5.81 5.81H8.48c-3.64.01-5.81-2.16-5.81-5.8V7.81C2.67 4.17 4.84 2 8.48 2"
-              fill="currentColor"
-            />
-            <path
-              d="M12.67 18.58a5.76 5.76 0 0 1-.19-11.5l-.37-.43a.76.76 0 0 1 .07-1.06.76.76 0 0 1 1.06.07l1.66 1.9.05.06a1 1 0 0 1 .13.32q.03.14-.01.28l-.09.24-.04.06-.16.15-.01.01-1.94 1.42a.76.76 0 0 1-1.05-.16.76.76 0 0 1 .16-1.05l.41-.3a4.26 4.26 0 1 0 3.85 1.88.75.75 0 0 1 .21-1.04.74.74 0 0 1 1.04.21 5.75 5.75 0 0 1-4.78 8.94"
-              fill="currentColor"
-            />
+          <path
+            d="M14.89 4.93c-.87-.26-1.83-.43-2.89-.43a8.66 8.66 0 0 0-8.57 10.03m1.23 3.25a8.68 8.68 0 1 0 14.55-9.42"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m16.13 5.17-2.89-3.32"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m16.13 5.17-3.37 2.46"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
           </svg>
         ) : (
           <svg
@@ -96,8 +73,26 @@ const IconRotateRight = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.86 2H8.48C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.65 2.17 5.82 5.81 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2m-4.19 16.58a5.76 5.76 0 0 1-.19-11.5l-.37-.43a.76.76 0 0 1 .07-1.06.76.76 0 0 1 1.06.07l1.66 1.9.05.06a1 1 0 0 1 .13.32q.03.14-.01.28l-.09.24-.04.06-.16.15-.01.01-1.94 1.42a.76.76 0 0 1-1.05-.16.76.76 0 0 1 .16-1.05l.41-.3a4.26 4.26 0 1 0 3.85 1.88.75.75 0 0 1 .21-1.04.74.74 0 0 1 1.04.21 5.75 5.75 0 0 1-4.78 8.94"
-              fill="currentColor"
+              opacity={duotone ? "0.4" : "1"}
+              d="M14.89 5.08c-.87-.26-1.83-.43-2.89-.43a8.67 8.67 0 1 0 7.21 3.86"
+              stroke="currentColor"
+              strokeWidth={fill ? "2" : strokeWidth}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M16.13 5.32 13.24 2"
+              stroke="currentColor"
+              strokeWidth={fill ? "2" : strokeWidth}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="m16.13 5.32-3.37 2.46"
+              stroke="currentColor"
+              strokeWidth={fill ? "2" : strokeWidth}
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         )}

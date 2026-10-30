@@ -1,5 +1,28 @@
 # @devigner-ui/icons
 
+## 3.5.0
+
+### Minor Changes
+
+- Add eight keyboard-key icons: IconOption (⌥), IconEscape (⎋), IconTab (⇥), IconSpacebar, IconDeleteForward (⌦), IconEject (⏏), IconPageUp (⇞) and IconPageDown (⇟).
+- Rename 654 icons so each name says what it draws: numbered, Alt and Minimalistic variants, misspellings, and names the drawing didn't match. `IconBag2` is now `IconBagStraps`. Every old name keeps working until 4.0.0.
+- Old names are marked `@deprecated`, so editors strike them through, and log one console warning in development naming the replacement.
+- Add `npx @devigner-ui/icons migrate`, a codemod that rewrites component names, package subpaths, SVG paths and sprite ids in any project. `--dry` lists the changes without writing them.
+- Fold 50 icons that drew the same symbol as another into the icon they copied; the old names render that icon until 4.0.0 (`PlusCircle` renders `AddCircle`, `TickSquare` renders `CheckSquare`).
+- Redraw Bold and Bulk for 36 icons (Add, More, Undo, Redo, Sort, Shuffle and 30 more) so every style draws the same shape and Bold only changes the weight.
+- Move eight icons to the category they belong in, such as `CandlestickChart` into business analytics.
+- Ship `renames.json`, the full old-to-new list. `npx @devigner-ui/icons migrate` rewrites old names in a project.
+
+## 3.4.0
+
+### Minor Changes
+
+- 3b4e971: Add the Broken variant for icons that provide Broken artwork.
+
+### Patch Changes
+
+- 3b4e971: Publish modular root exports and lazy CommonJS exports so importing one icon no longer bundles every icon. Keep direct icon declarations independent of the all-icons type file.
+
 ## 3.3.0
 
 ### Minor Changes

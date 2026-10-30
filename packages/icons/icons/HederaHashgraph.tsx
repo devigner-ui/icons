@@ -23,7 +23,60 @@ const IconHederaHashgraph = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8.25 16.5v-9"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15.75 16.5v-9"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.25 10.13h7.5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.25 13.87h7.5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,7 +91,7 @@ const IconHederaHashgraph = forwardRef<SVGSVGElement, IconProps>(
           >
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M8.92 16.5v-9"
+                d="M8.25 16.5v-9"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -46,7 +99,7 @@ const IconHederaHashgraph = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="M16.42 16.5v-9"
+                d="M15.75 16.5v-9"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -54,7 +107,7 @@ const IconHederaHashgraph = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="M8.92 10.13h7.5"
+                d="M8.25 10.13h7.5"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -62,7 +115,7 @@ const IconHederaHashgraph = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="M8.92 13.87h7.5"
+                d="M8.25 13.87h7.5"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -71,7 +124,7 @@ const IconHederaHashgraph = forwardRef<SVGSVGElement, IconProps>(
               />
             </g>
             <path
-              d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"

@@ -22,7 +22,40 @@ const IconDialog = forwardRef<SVGSVGElement, IconProps>(function IconDialog(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14 7.07a8 8 0 0 0-11.17 10.5q.24.43.11.91l-.47 1.78c-.21.77.5 1.48 1.27 1.27l1.78-.47q.47-.11.92.1 1.62.82 3.56.84a8 8 0 0 0 6.93-12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m18 14.5.2-.08q.56-.27 1.15-.13l.48.13a1.3 1.3 0 0 0 1.59-1.6l-.13-.47q-.14-.59.13-1.15A6.5 6.5 0 0 0 21 5.03M9.5 6A6.5 6.5 0 0 1 19 3.02"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6.52 14zm3.49 0zm3.49 0z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,37 @@ const IconOntology = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2.22 6.98V5.2a.5.5 0 0 1 .85-.35L17.9 19.68A9.4 9.4 0 0 1 11.42 22c-5.17-.14-9.2-4.59-9.2-9.76v-1.16"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M6.22 4.3A9.3 9.3 0 0 1 12.65 2c5.13.14 9.12 4.55 9.12 9.68v6.96a.5.5 0 0 1-.85.35z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,7 +68,7 @@ const IconOntology = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18.57 19.68A9.4 9.4 0 0 1 12.09 22c-5.17-.14-9.2-4.59-9.2-9.76V5.21a.5.5 0 0 1 .85-.35z"
+              d="M17.9 19.68A9.4 9.4 0 0 1 11.42 22c-5.17-.14-9.2-4.59-9.2-9.76V5.21a.5.5 0 0 1 .85-.35z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -46,7 +76,7 @@ const IconOntology = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M6.89 4.3A9.3 9.3 0 0 1 13.32 2c5.13.14 9.12 4.55 9.12 9.68v6.96a.5.5 0 0 1-.85.35z"
+              d="M6.22 4.3A9.3 9.3 0 0 1 12.65 2c5.13.14 9.12 4.55 9.12 9.68v6.96a.5.5 0 0 1-.85.35z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -69,16 +99,16 @@ const IconOntology = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M24.67 0h-24v24h24z"
+              d="M24 0H0v24h24z"
               fill="none"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18.57 19.68A9.4 9.4 0 0 1 12.09 22c-5.17-.14-9.2-4.59-9.2-9.76V5.21a.5.5 0 0 1 .85-.35z"
+              d="M17.9 19.68A9.4 9.4 0 0 1 11.42 22c-5.17-.14-9.2-4.59-9.2-9.76V5.21a.5.5 0 0 1 .85-.35z"
               fill="currentColor"
             />
             <path
-              d="M6.89 4.3A9.3 9.3 0 0 1 13.32 2c5.13.14 9.12 4.55 9.12 9.68v6.96a.5.5 0 0 1-.85.35z"
+              d="M6.22 4.3A9.3 9.3 0 0 1 12.65 2c5.13.14 9.12 4.55 9.12 9.68v6.96a.5.5 0 0 1-.85.35z"
               fill="currentColor"
             />
           </svg>
@@ -96,11 +126,11 @@ const IconOntology = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M18.57 19.68A9.4 9.4 0 0 1 12.09 22c-5.17-.14-9.2-4.59-9.2-9.76V5.21a.5.5 0 0 1 .85-.35z"
+              d="M17.9 19.68A9.4 9.4 0 0 1 11.42 22c-5.17-.14-9.2-4.59-9.2-9.76V5.21a.5.5 0 0 1 .85-.35z"
               fill="currentColor"
             />
             <path
-              d="M6.89 4.3A9.3 9.3 0 0 1 13.32 2c5.13.14 9.12 4.55 9.12 9.68v6.96a.5.5 0 0 1-.85.35z"
+              d="M6.22 4.3A9.3 9.3 0 0 1 12.65 2c5.13.14 9.12 4.55 9.12 9.68v6.96a.5.5 0 0 1-.85.35z"
               fill="currentColor"
             />
           </svg>

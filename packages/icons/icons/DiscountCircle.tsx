@@ -23,7 +23,42 @@ const IconDiscountCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M20.14 17.82A9.99 9.99 0 0 0 12 2c-2.13 0-4.1.66-5.72 1.79M3.82 6.25a10 10 0 0 0 13.83 14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m9 15 6-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M9.5 9.5h.02Zm5.99 6h.02Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -56,7 +91,7 @@ const IconDiscountCircle = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
               stroke="currentColor"
               strokeWidth={strokeWidth}
-              d="M9.5 9.5"
+              d="M9.5 9.5h.02m5.97 6h.02"
               opacity={duotone ? "0.4" : "1"}
             />
           </svg>

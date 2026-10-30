@@ -1,1 +1,1 @@
-export { default, default as IconSIMCard } from '../../icons/SIMCard';
+export { default, default as IconSimCard } from '../../icons/SimCard';

@@ -23,7 +23,33 @@ const IconTagHorizontal = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12.86 20.5c2.23 0 3.34 0 4.27-.53.93-.54 1.52-1.51 2.7-3.46l.68-1.13c1-1.64 1.49-2.47 1.49-3.38s-.5-1.74-1.49-3.38l-.68-1.12c-1.18-1.96-1.77-2.93-2.7-3.47-.93-.53-2.04-.53-4.27-.53h-2.64q-1.55 0-2.72.02M3.2 4.74C2 6 2 8 2 12s0 6.01 1.2 7.26c1 1.03 2.5 1.2 5.2 1.23"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 7.5v9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,14 +63,14 @@ const IconTagHorizontal = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M9.72 20h2.64c2.23 0 3.34 0 4.27-.53.93-.54 1.52-1.51 2.7-3.46l.68-1.13c1-1.64 1.49-2.47 1.49-3.38s-.5-1.74-1.49-3.38L19.33 7c-1.18-1.96-1.77-2.93-2.7-3.47C15.7 3 14.59 3 12.36 3H9.72C5.85 3 3.91 3 2.7 4.25 1.5 5.49 1.5 7.49 1.5 11.5s0 6.01 1.2 7.26C3.9 20 5.85 20 9.72 20"
+              d="M10.22 20.5h2.64c2.23 0 3.34 0 4.27-.53.93-.54 1.52-1.51 2.7-3.46l.68-1.13c1-1.64 1.49-2.47 1.49-3.38s-.5-1.74-1.49-3.38l-.68-1.12c-1.18-1.96-1.77-2.93-2.7-3.47-.93-.53-2.04-.53-4.27-.53h-2.64c-3.87 0-5.81 0-7.02 1.25C2 5.99 2 7.99 2 12s0 6.01 1.2 7.26c1.2 1.24 3.15 1.24 7.02 1.24"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M6.5 7v9"
+              d="M7 7.5v9"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

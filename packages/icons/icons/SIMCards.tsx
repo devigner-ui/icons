@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconSIMCards = forwardRef<SVGSVGElement, IconProps>(function IconSIMCards(
+const IconSimCards = forwardRef<SVGSVGElement, IconProps>(function IconSimCards(
   { className, variant = "Outline", strokeWidth = "1.5", ...rest },
   ref,
 ) {
@@ -22,7 +22,38 @@ const IconSIMCards = forwardRef<SVGSVGElement, IconProps>(function IconSIMCards(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 14c0-3.77 0-5.66 1.17-6.83S6.23 6 10 6c1.03 0 2 .41 2.73 1.14l4.13 4.13c.73.72 1.14 1.7 1.14 2.73 0 3.77 0 5.66-1.17 6.83S13.77 22 10 22s-5.66 0-6.83-1.17c-.65-.65-.94-1.53-1.07-2.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 17.9c1.3-.13 2.18-.42 2.83-1.07C22 15.66 22 13.77 22 10c0-1.03-.41-2-1.14-2.73L20.6 7M6.1 6c.13-1.3.42-2.18 1.07-2.83C8.34 2 10.23 2 14 2c1.03 0 2 .41 2.73 1.14l.27.26"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 14H9c-.94 0-1.41 0-1.7.3-.3.29-.3.76-.3 1.7v1c0 .94 0 1.41.3 1.7.29.3.76.3 1.7.3h1m0-5h1c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7v.5M10 14v2.5m0 2.5h1c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7v-.5M10 19v-2.5m0 0h3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -107,4 +138,4 @@ const IconSIMCards = forwardRef<SVGSVGElement, IconProps>(function IconSIMCards(
   );
 });
 
-export default IconSIMCards;
+export default IconSimCards;

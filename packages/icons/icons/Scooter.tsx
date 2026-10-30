@@ -22,7 +22,51 @@ const IconScooter = forwardRef<SVGSVGElement, IconProps>(function IconScooter(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11 16v-1.5c0-1.89 0-2.83-.59-3.41-.58-.59-1.52-.59-3.41-.59h-.6l-.71.01a4 4 0 0 0-1.26.3M11 16h5m-5 0H2.92a1 1 0 0 1-.92-.92v-.18l.01-.71a4 4 0 0 1 .22-1.03"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9.5 16a3 3 0 1 1-6 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 5h.53c1.2 0 1.8 0 2.29.3.48.3.75.84 1.29 1.91L19 13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m18.14 11 .68-.5c.27-.2.4-.3.49-.42a1 1 0 0 0 .14-.28c.05-.15.05-.31.05-.64 0-.62 0-.93-.13-1.16a1 1 0 0 0-.37-.37c-.23-.13-.54-.13-1.16-.13H16.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 18.83A3 3 0 1 0 16.17 17"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -86,16 +130,16 @@ const IconScooter = forwardRef<SVGSVGElement, IconProps>(function IconScooter(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M6.5 19a3 3 0 0 0 3-3h-6a3 3 0 0 0 3 3"
+            d="M6.9 19.4a3 3 0 0 0 3-3h-6a3 3 0 0 0 3 3"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M18.82 10.5 18 11l-1.64-3.5h1.48c.62 0 .93 0 1.16.13a1 1 0 0 1 .37.37c.13.24.13.54.13 1.16 0 .33 0 .5-.05.64a1 1 0 0 1-.14.28c-.1.13-.22.22-.49.42"
+            d="m19.22 10.9-.82.5-1.64-3.5h1.48c.62 0 .93 0 1.16.13a1 1 0 0 1 .37.37c.13.24.13.54.13 1.16 0 .33 0 .5-.05.64a1 1 0 0 1-.14.28c-.1.13-.22.22-.49.42"
             fill="currentColor"
           />
           <path
-            d="M13.86 5.78q-.43-.04-1.33-.03H12a.75.75 0 0 1 0-1.5h.56q.86-.01 1.46.04c.42.05.82.14 1.19.37q.53.35.86.9.31.51.69 1.28l3.15 6.3a3 3 0 1 1-3.82 3.61H2.86a1.75 1.75 0 0 1-1.61-1.83v-.06l.01-.73a4.75 4.75 0 0 1 4.98-4.38h.81q1.35-.02 2.24.08c.63.08 1.2.27 1.65.73.46.45.65 1.02.73 1.65q.1.9.08 2.24v.8h4.34a3 3 0 0 1 2.12-2.15l-2.78-5.55a15 15 0 0 0-.62-1.18 1 1 0 0 0-.39-.43 1 1 0 0 0-.56-.16"
+            d="M14.26 6.18q-.43-.04-1.33-.03h-.53a.75.75 0 0 1 0-1.5h.56q.86-.01 1.46.04c.42.05.82.14 1.19.37q.53.35.86.9.31.51.69 1.28l3.15 6.3a3 3 0 1 1-3.82 3.61H3.26a1.75 1.75 0 0 1-1.61-1.83v-.06l.01-.73a4.75 4.75 0 0 1 4.98-4.38h.81q1.35-.02 2.24.08c.63.08 1.2.27 1.65.73.46.45.65 1.02.73 1.65q.1.9.08 2.24v.8h4.34a3 3 0 0 1 2.12-2.15l-2.78-5.55a15 15 0 0 0-.62-1.18 1 1 0 0 0-.39-.43 1 1 0 0 0-.56-.16"
             fill="currentColor"
           />
         </svg>

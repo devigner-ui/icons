@@ -18,15 +18,16 @@ import { existsSync, mkdtempSync, writeFileSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { allSvgs, STYLES } from "./emit-svg.mjs";
+import { allSvgs } from "./emit-svg.mjs";
 import { emitIcon, readDrawing, retotal } from "./import-svgs.mjs";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 
 /* Two stroked icons, one of them drawn with <circle> rather than <path>, and
    one carrying a <g>/clipPath group. Between them they cover every element the
-   importer has to put back. */
-const SAMPLE = ["Add", "Accessibility", "Additem"];
+   importer has to put back. Not Add: its four styles share one branch now,
+   which is not the importer's shape. */
+const SAMPLE = ["Minus", "Accessibility", "AddItem"];
 
 const bundle = path.join(ROOT, "dist", "index.js");
 if (!existsSync(bundle)) {
@@ -34,10 +35,10 @@ if (!existsSync(bundle)) {
   process.exit(0);
 }
 
-/** The three `<svg>` branches of a component file, in source order. */
+/** The `<svg>` branches of a component file, in source order. */
 function branches(source) {
   const found = source.match(/<svg[\s\S]*?<\/svg>/g) ?? [];
-  assert.equal(found.length, 3, `expected 3 branches, found ${found.length}`);
+  assert.ok(found.length === 3 || found.length === 4, `expected 3 or 4 branches, found ${found.length}`);
   return found;
 }
 
@@ -87,7 +88,7 @@ let checked = 0;
 
 for (const [name, rendered] of drawings) {
   const files = {};
-  for (const style of STYLES) {
+  for (const style of ["outline", "twotone", "bold", "bulk"]) {
     const file = path.join(dir, `${name}-${style}.svg`);
     writeFileSync(file, rendered[style]);
     files[style] = readDrawing(file);
@@ -97,7 +98,9 @@ for (const [name, rendered] of drawings) {
   const source = readFileSync(path.join(ROOT, "icons", `${name}.tsx`), "utf8");
 
   const got = branches(round);
-  const want = branches(source);
+  /* import-svgs owns the four core input styles. A fifth Broken branch is
+     independent artwork, so its presence must not alter that round-trip. */
+  const want = branches(source).slice(-3);
 
   for (let i = 0; i < 3; i++) {
     assert.deepEqual(
@@ -116,7 +119,7 @@ for (const [name, rendered] of drawings) {
   const strokes = (source) => (source.match(/strokeWidth=\{strokeWidth\}/g) ?? []).length;
   assert.equal(
     strokes(round),
-    strokes(source),
+    strokes(want.join("\n")),
     `${name}: the stroke prop reached a different number of shapes`,
   );
   assert.doesNotMatch(round, /#[0-9a-fA-F]{3,8}"/, `${name}: a hex colour survived`);

@@ -22,7 +22,7 @@ const IconDrop = forwardRef<SVGSVGElement, IconProps>(function IconDrop(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,37 @@ const IconDrop = forwardRef<SVGSVGElement, IconProps>(function IconDrop(
           {...rest}
         >
           <path
-            d="M13.28 2.21a1 1 0 0 0-1.22 0c-1.9 1.45-7.51 6.18-7.48 11.69a8.11 8.11 0 0 0 16.2.01c.01-5.43-5.61-10.24-7.5-11.7"
+            d="M3.9 14.1a8.11 8.11 0 0 0 16.2.01c.03-5.43-5.6-10.24-7.49-11.7"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12.61 2.41a1 1 0 0 0-1.22 0C10.01 3.46 6.67 6.24 4.96 9.8"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12.61 2.41a1 1 0 0 0-1.22 0C9.49 3.86 3.88 8.59 3.91 14.1a8.11 8.11 0 0 0 16.2.01c.01-5.43-5.61-10.24-7.5-11.7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -56,12 +86,12 @@ const IconDrop = forwardRef<SVGSVGElement, IconProps>(function IconDrop(
           {...rest}
         >
           <path
-            d="M17.26 7.41 6.98 17.69c-.48.48-1.3.37-1.59-.24a8 8 0 0 1-.82-3.55c-.02-5.52 5.58-10.24 7.48-11.69a1 1 0 0 1 1.23 0c.87.66 2.5 2.03 4.03 3.83.34.4.32 1-.05 1.37"
+            d="M16.59 7.41 6.31 17.69c-.48.48-1.3.37-1.59-.24a8 8 0 0 1-.82-3.55C3.88 8.38 9.48 3.66 11.38 2.21a1 1 0 0 1 1.23 0c.87.66 2.5 2.03 4.03 3.83.34.4.32 1-.05 1.37"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M20.77 13.91a8.1 8.1 0 0 1-12.91 6.51 1 1 0 0 1-.1-1.51L17.83 8.84a1 1 0 0 1 1.58.21 10 10 0 0 1 1.36 4.86"
+            d="M20.1 13.91a8.1 8.1 0 0 1-12.91 6.51 1 1 0 0 1-.1-1.51L17.16 8.84a1 1 0 0 1 1.58.21 10 10 0 0 1 1.36 4.86"
             fill="currentColor"
           />
         </svg>
@@ -79,11 +109,11 @@ const IconDrop = forwardRef<SVGSVGElement, IconProps>(function IconDrop(
           {...rest}
         >
           <path
-            d="M17.26 7.41 6.98 17.69c-.48.48-1.3.37-1.59-.24a8 8 0 0 1-.82-3.55c-.02-5.52 5.58-10.24 7.48-11.69a1 1 0 0 1 1.23 0c.87.66 2.5 2.03 4.03 3.83.34.4.32 1-.05 1.37"
+            d="M16.59 7.41 6.31 17.69c-.48.48-1.3.37-1.59-.24a8 8 0 0 1-.82-3.55C3.88 8.38 9.48 3.66 11.38 2.21a1 1 0 0 1 1.23 0c.87.66 2.5 2.03 4.03 3.83.34.4.32 1-.05 1.37"
             fill="currentColor"
           />
           <path
-            d="M20.77 13.91a8.1 8.1 0 0 1-12.91 6.51 1 1 0 0 1-.1-1.51L17.83 8.84a1 1 0 0 1 1.58.21 10 10 0 0 1 1.36 4.86"
+            d="M20.1 13.91a8.1 8.1 0 0 1-12.91 6.51 1 1 0 0 1-.1-1.51L17.16 8.84a1 1 0 0 1 1.58.21 10 10 0 0 1 1.36 4.86"
             fill="currentColor"
           />
         </svg>

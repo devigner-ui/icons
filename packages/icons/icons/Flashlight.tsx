@@ -23,7 +23,45 @@ const IconFlashlight = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17 2h1c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7v.17c0 .41 0 .61-.08.8-.07.18-.22.33-.5.62l-3.25 3.24c-.58.58-.87.87-1.02 1.23-.15.37-.15.78-.15 1.6V19c0 .93 0 1.4-.15 1.77a2 2 0 0 1-1.08 1.08c-.37.15-.84.15-1.77.15s-1.4 0-1.77-.15a2 2 0 0 1-1.08-1.08C9 20.4 9 19.93 9 19v-7.34c0-.82 0-1.23-.15-1.6a4 4 0 0 0-1.02-1.23L4.59 5.59c-.3-.3-.44-.44-.51-.62C4 4.78 4 4.58 4 4.17V4c0-.94 0-1.41.3-1.7C4.58 2 5.05 2 6 2h7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 10H9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 13v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M4.5 5h15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

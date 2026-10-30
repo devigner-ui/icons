@@ -1,0 +1,4 @@
+.dart_tool/
+build/
+pubspec.lock
+lib/src/icons.g.dart

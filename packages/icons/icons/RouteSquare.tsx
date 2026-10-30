@@ -23,7 +23,35 @@ const IconRouteSquare = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 13.05V15c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m17.35 9.05-2.34 7.54a1.92 1.92 0 0 1-3.66.04l-.7-2.07a1.9 1.9 0 0 0-1.2-1.21l-2.09-.7c-1.77-.59-1.74-3.12.05-3.66l7.54-2.35a1.92 1.92 0 0 1 2.4 2.41Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,14 +66,14 @@ const IconRouteSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m18.02 9.05-2.34 7.54a1.92 1.92 0 0 1-3.66.04l-.7-2.07a1.9 1.9 0 0 0-1.21-1.21l-2.08-.7c-1.77-.59-1.74-3.12.05-3.66l7.54-2.35a1.92 1.92 0 0 1 2.4 2.41"
+              d="m17.35 9.05-2.34 7.54a1.92 1.92 0 0 1-3.66.04l-.7-2.07a1.9 1.9 0 0 0-1.21-1.21l-2.08-.7c-1.77-.59-1.74-3.12.05-3.66l7.54-2.35a1.92 1.92 0 0 1 2.4 2.41"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M9.67 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7h-6c-5 0-7 2-7 7v6c0 5 2 7 7 7"
+              d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -67,11 +95,11 @@ const IconRouteSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.86 2H8.49C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2"
+              d="M16.19 2H7.82C4.17 2 2 4.17 2 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2"
               fill="currentColor"
             />
             <path
-              d="m18.02 9.05-2.34 7.54a1.92 1.92 0 0 1-3.66.04l-.7-2.07a1.9 1.9 0 0 0-1.21-1.21l-2.08-.7c-1.77-.59-1.74-3.12.05-3.66l7.54-2.35a1.92 1.92 0 0 1 2.4 2.41"
+              d="m17.35 9.05-2.34 7.54a1.92 1.92 0 0 1-3.66.04l-.7-2.07a1.9 1.9 0 0 0-1.21-1.21l-2.08-.7c-1.77-.59-1.74-3.12.05-3.66l7.54-2.35a1.92 1.92 0 0 1 2.4 2.41"
               fill="currentColor"
             />
           </svg>
@@ -90,7 +118,7 @@ const IconRouteSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <g clipPath="url(#clip0_12_65008)">
               <path
-                d="M16.86 2H8.48C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.65 2.17 5.82 5.81 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2m1.16 7.05-2.34 7.54a1.92 1.92 0 0 1-3.66.04l-.7-2.07a1.9 1.9 0 0 0-1.21-1.21l-2.08-.7c-1.76-.59-1.74-3.12.05-3.66l7.54-2.35a1.92 1.92 0 0 1 2.4 2.41"
+                d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2m1.16 7.05-2.34 7.54a1.92 1.92 0 0 1-3.66.04l-.7-2.07a1.9 1.9 0 0 0-1.21-1.21l-2.08-.7c-1.76-.59-1.74-3.12.05-3.66l7.54-2.35a1.92 1.92 0 0 1 2.4 2.41"
                 fill="currentColor"
               />
             </g>
@@ -100,7 +128,6 @@ const IconRouteSquare = forwardRef<SVGSVGElement, IconProps>(
                   width="24"
                   height="24"
                   fill="none"
-                  transform="translate(0.669922)"
                 />
               </clipPath>
             </defs>

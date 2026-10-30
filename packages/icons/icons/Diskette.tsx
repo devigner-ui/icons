@@ -22,7 +22,38 @@ const IconDiskette = forwardRef<SVGSVGElement, IconProps>(function IconDiskette(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17 22v-1c0-1.89 0-2.83-.59-3.41C15.83 17 14.9 17 13 17h-2c-1.89 0-2.83 0-3.41.59C7 18.17 7 19.1 7 21v1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M7 8h6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 12c0-4.71 0-7.07 1.46-8.54C4.93 2 7.3 2 12 2c.34 0 .51 0 .69.02a4 4 0 0 1 2.72 1.4l5.17 5.17A4 4 0 0 1 22 12c0 4.71 0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46c-.97-.98-1.3-2.35-1.4-4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

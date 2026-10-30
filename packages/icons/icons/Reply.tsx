@@ -22,7 +22,28 @@ const IconReply = forwardRef<SVGSVGElement, IconProps>(function IconReply(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m9.5 17-5-5 5-5m-5 5H11m3.5 0c1.67 0 5 1 5 5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -74,7 +95,6 @@ const IconReply = forwardRef<SVGSVGElement, IconProps>(function IconReply(
               d="M6.31 11.25h8.19c.95 0 2.37.28 3.56 1.14A5.4 5.4 0 0 1 20.25 17a.75.75 0 0 1-1.5 0c0-1.76-.71-2.78-1.56-3.4a5 5 0 0 0-2.69-.85H6.31L5.56 12z"
               fill="currentColor"
             />
-            <path d="M3.8 11.71" fill="currentColor" />
           </g>
         </svg>
       ) : (

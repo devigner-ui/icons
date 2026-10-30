@@ -23,7 +23,49 @@ const IconSagittarius = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 3h9v9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.03 15.97 3 21"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M21 3 10.91 13.09"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m6.6 6.6 10.8 10.8"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,14 +79,14 @@ const IconSagittarius = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 3h9v9"
+              d="M12 3h9v9"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="m21.67 3-18 18"
+              d="M21 3 3 21"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -52,7 +94,7 @@ const IconSagittarius = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m7.27 6.6 10.8 10.8"
+              d="m6.6 6.6 10.8 10.8"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -73,12 +115,12 @@ const IconSagittarius = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M22.36 2.71a.8.8 0 0 0-.7-.47h-9a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h7.19L3.13 20.46a.75.75 0 0 0 0 1.06q.23.22.53.22t.53-.22L20.91 4.8V12c0 .41.34.75.75.75s.75-.34.75-.75V3a1 1 0 0 0-.05-.29"
+              d="M21.69 2.71a.8.8 0 0 0-.7-.47h-9a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h7.19L2.46 20.46a.75.75 0 0 0 0 1.06q.23.22.53.22t.53-.22L20.24 4.8V12c0 .41.34.75.75.75s.75-.34.75-.75V3a1 1 0 0 0-.05-.29"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18.07 18.15a.7.7 0 0 1-.53-.22L6.74 7.13a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l10.8 10.8c.29.29.29.77 0 1.06a.7.7 0 0 1-.53.22"
+              d="M17.4 18.15a.7.7 0 0 1-.53-.22L6.07 7.13a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l10.8 10.8c.29.29.29.77 0 1.06a.7.7 0 0 1-.53.22"
               fill="currentColor"
             />
           </svg>
@@ -96,11 +138,11 @@ const IconSagittarius = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M22.36 2.71a.8.8 0 0 0-.41-.41 1 1 0 0 0-.28-.05h-9a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h7.19L3.14 20.47a.75.75 0 0 0 0 1.06q.23.22.53.22t.53-.22L20.92 4.81V12c0 .41.34.75.75.75s.75-.34.75-.75V3q0-.15-.06-.29"
+              d="M21.69 2.71a.8.8 0 0 0-.41-.41 1 1 0 0 0-.28-.05h-9a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h7.19L2.47 20.47a.75.75 0 0 0 0 1.06q.23.22.53.22t.53-.22L20.25 4.81V12c0 .41.34.75.75.75s.75-.34.75-.75V3q0-.15-.06-.29"
               fill="currentColor"
             />
             <path
-              d="M18.07 18.15a.7.7 0 0 1-.53-.22L6.74 7.13a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l10.8 10.8c.29.29.29.77 0 1.06a.7.7 0 0 1-.53.22"
+              d="M17.4 18.15a.7.7 0 0 1-.53-.22L6.07 7.13a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l10.8 10.8c.29.29.29.77 0 1.06a.7.7 0 0 1-.53.22"
               fill="currentColor"
             />
           </svg>

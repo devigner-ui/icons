@@ -22,7 +22,47 @@ const IconAlarmAdd = forwardRef<SVGSVGElement, IconProps>(function IconAlarmAdd(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15 13h-3m0 0H9m3 0v-3m0 3v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m3.5 4.5 4-2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m20.5 4.5-4-2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.5 5.2a9 9 0 1 1-3.3 3.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -115,13 +155,13 @@ const IconAlarmAdd = forwardRef<SVGSVGElement, IconProps>(function IconAlarmAdd(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M12 22a9 9 0 1 0 0-18 9 9 0 0 0 0 18m0-12.75c.41 0 .75.34.75.75v2.25H15a.75.75 0 0 1 0 1.5h-2.25V16a.75.75 0 0 1-1.5 0v-2.25H9a.75.75 0 0 1 0-1.5h2.25V10c0-.41.34-.75.75-.75"
+            d="M12 22.4a9 9 0 1 0 0-18 9 9 0 0 0 0 18m0-12.75c.41 0 .75.34.75.75v2.25H15a.75.75 0 0 1 0 1.5h-2.25v2.25a.75.75 0 0 1-1.5 0v-2.25H9a.75.75 0 0 1 0-1.5h2.25V10.4c0-.41.34-.75.75-.75"
             fill="currentColor"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M8.14 1.6c.22.35.1.82-.24 1.04l-4 2.5a.75.75 0 0 1-.8-1.28l4-2.5a.75.75 0 0 1 1.04.24m7.72 0a.75.75 0 0 1 1.04-.24l4 2.5a.75.75 0 0 1-.8 1.28l-4-2.5a.75.75 0 0 1-.24-1.04"
+            d="M8.14 2c.22.35.1.82-.24 1.04l-4 2.5a.75.75 0 0 1-.8-1.28l4-2.5A.75.75 0 0 1 8.14 2m7.72 0a.75.75 0 0 1 1.04-.24l4 2.5a.75.75 0 0 1-.8 1.28l-4-2.5A.75.75 0 0 1 15.86 2"
             fill="currentColor"
           />
         </svg>

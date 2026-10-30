@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { loadRenames, resolver } from "./renames.mjs";
 
 const ICONS_DIR = path.resolve("icons");
 const SRC_DIR = path.resolve("src");
@@ -26,41 +27,24 @@ for (const [name, category] of Object.entries(ICON_CATEGORIES)) {
   }
 }
 
-const SHAPE_SYNONYMS = {
-  circle: ["round", "circular", "ring", "dot", "cycle", "orb", "loop"],
-  square: ["box", "block", "rectangle", "quad", "tile", "grid", "frame"],
-  line: ["stroke", "rule", "bar", "stripe", "dash", "border", "edge"],
-  arrow: ["chevron", "direction", "pointer", "caret", "triangle"],
-  path: ["curve", "trail", "trace", "route", "track", "stroke"],
-  cross: ["x", "close", "cancel", "remove", "delete", "multiply"],
-  check: ["tick", "yes", "confirm", "done", "complete", "verified"],
-  heart: ["love", "favorite", "like", "care"],
-  star: ["favorite", "rating", "review", "sparkle", "shine"],
-  lock: ["secure", "lock", "privacy", "safety", "protected"],
-  mail: ["email", "message", "envelope", "letter", "inbox"],
-  phone: ["call", "telephone", "contact", "mobile", "smartphone"],
-  search: ["find", "magnifier", "explore", "lookup", "scan"],
-  home: ["house", "building", "residence", "dashboard"],
-  user: ["person", "profile", "account", "avatar", "member"],
-  settings: ["gear", "preferences", "configuration", "options", "control"],
-  bell: ["notification", "alert", "alarm", "ring", "reminder"],
-  calendar: ["date", "event", "schedule", "time", "day"],
-  camera: ["photo", "image", "picture", "video", "record"],
-  download: ["save", "import", "receive", "install", "arrow down"],
-  upload: ["export", "send", "share", "publish", "arrow up"],
-  trash: ["delete", "bin", "remove", "discard", "garbage"],
-  edit: ["pencil", "write", "modify", "change", "update", "pen"],
-  add: ["plus", "new", "create", "include", "append", "increase"],
-  minus: ["subtract", "remove", "delete", "decrease", "reduce"],
-  play: ["start", "run", "begin", "video", "music", "media"],
-  pause: ["stop", "break", "wait", "hold", "freeze"],
-  music: ["audio", "sound", "tune", "song", "melody", "note"],
-  document: ["file", "paper", "text", "page", "doc", "report"],
-  folder: ["directory", "file", "storage", "organize", "collection"],
-  alert: ["warning", "danger", "caution", "attention", "error"],
-  info: ["information", "help", "support", "detail", "about"],
-  question: ["help", "faq", "support", "inquiry", "unknown"],
-};
+/*
+ * What people type for a word in an icon's name, from scripts/search-terms.json.
+ * One way only: the name word brings in its synonyms, never the reverse.
+ * Mapping back is what filed UserRemove under "trash" (via "remove") and
+ * TruckTime under "calendar" (via "time"), and those keywords outranked the
+ * real icons in both searches. Keys are singular; "settings" matches "setting".
+ *
+ * `spelling` splits names glued into one word (Wineglass, Videocamera) into
+ * the words people type and the model reads. The export names stay as they
+ * are; only the search words change. Misspelled upstream names were fixed by
+ * renaming them, in scripts/renames.json.
+ *
+ * Words that only describe the drawing (square, minimalistic, left, alt) are
+ * left out on purpose: they say nothing about what the icon means.
+ */
+const { spelling: SPELLING, synonyms: SYNONYMS } = JSON.parse(
+  fs.readFileSync(path.resolve("scripts/search-terms.json"), "utf-8"),
+);
 
 function extractCategory(name) {
   const category = ICON_CATEGORIES[name];
@@ -72,80 +56,28 @@ function extractCategory(name) {
   return category;
 }
 
-function extractKeywords(name, svgContent) {
+/*
+ * Keywords come from the name alone. They used to include what the SVG was
+ * built from too (path, curved, arc, closed, circle...), which put "path" on
+ * every icon and "curved"/"closed" on nearly all. Nobody searches for a closed
+ * path, and words shared by every icon pull every embedding towards the same
+ * point, so the meaning search could barely tell Eye from Moon.
+ */
+function extractKeywords(name) {
+  // Acronyms stay whole: CPUBolt is "cpu bolt", not "c p u bolt".
   const words = name
-    .replace(/([A-Z])/g, " $1")
-    .trim()
-    .toLowerCase()
-    .split(/\s+/)
-    .filter(Boolean);
+    .match(/[A-Z]+(?![a-z])|[A-Z]?[a-z]+|\d+/g)
+    .map((w) => w.toLowerCase());
+  // "Wi Fi", "Full Screen", "Q R": the joined form is what people type.
+  const joined = words.slice(1).map((w, i) => words[i] + w);
+  // Html5, Grid3x3: the number is not part of the word.
+  const bare = words.map((w) => w.replace(/\d+$/, "")).filter((w) => w.length > 1);
+  const fixed = bare.flatMap((w) => SPELLING[w]?.split(" ") ?? []);
 
-  const keywords = new Set(words);
-
-  // Extract SVG elements
-  const elementRegex = /<(\w+)([^>]*)>/gs;
-  let match;
-  const elements = [];
-  while ((match = elementRegex.exec(svgContent)) !== null) {
-    const tag = match[1].toLowerCase();
-    if (
-      [
-        "path",
-        "circle",
-        "rect",
-        "line",
-        "polyline",
-        "polygon",
-        "ellipse",
-      ].includes(tag)
-    ) {
-      elements.push(tag);
-    }
-  }
-
-  const elementCounts = {};
-  elements.forEach((el) => {
-    elementCounts[el] = (elementCounts[el] || 0) + 1;
-  });
-
-  if (elementCounts.circle) {
-    keywords.add("circle");
-    keywords.add("round");
-    if (elementCounts.circle >= 2) keywords.add("multiple circles");
-  }
-  if (elementCounts.rect) {
-    keywords.add("rectangle");
-    keywords.add("square");
-  }
-  if (elementCounts.line) keywords.add("line");
-  if (elementCounts.path) keywords.add("path");
-
-  // Path commands
-  const dRegex = /d="([^"]*)"/g;
-  const commands = new Set();
-  while ((match = dRegex.exec(svgContent)) !== null) {
-    const cmdMatch = match[1].match(/[MLHVCSQTAZ]/gi);
-    if (cmdMatch) cmdMatch.forEach((c) => commands.add(c.toUpperCase()));
-  }
-
-  if (commands.has("C") || commands.has("S")) {
-    keywords.add("curved");
-    keywords.add("smooth");
-  }
-  if (commands.has("A")) {
-    keywords.add("arc");
-    keywords.add("curve");
-  }
-  if (commands.has("Z") || commands.has("z")) {
-    keywords.add("closed");
-  }
-
-  // Shape synonyms
-  for (const [word, synonyms] of Object.entries(SHAPE_SYNONYMS)) {
-    if (words.includes(word)) synonyms.forEach((s) => keywords.add(s));
-    for (const s of synonyms) {
-      if (words.includes(s)) keywords.add(word);
-    }
+  const keywords = new Set([...words, ...bare, ...fixed]);
+  for (const w of [...bare, ...joined, ...fixed]) {
+    const synonyms = SYNONYMS[w] ?? SYNONYMS[w.replace(/s$/, "")];
+    if (synonyms) [w, ...synonyms].forEach((s) => keywords.add(s));
   }
 
   return [...keywords].filter((k) => k.length > 1);
@@ -213,6 +145,18 @@ async function generateMetadata() {
 
   console.log(`Generating metadata for ${files.length} icons...`);
 
+  /* Every name an icon has had, expired renames included: a search for the
+     name someone remembers, or a migration, still lands on the right icon. */
+  const batches = loadRenames();
+  const resolve = resolver(batches);
+  const formerly = new Map();
+  for (const batch of batches) {
+    for (const from of Object.keys(batch.renames)) {
+      const to = resolve(from);
+      formerly.set(to, [...(formerly.get(to) ?? []), from]);
+    }
+  }
+
   const icons = [];
 
   for (const file of files) {
@@ -225,7 +169,7 @@ async function generateMetadata() {
     const allSvgContent = svgBlocks.join("\n");
 
     const category = extractCategory(name);
-    const keywords = extractKeywords(name, allSvgContent);
+    const keywords = extractKeywords(name);
     const pathCount = countPaths(allSvgContent);
 
     /*
@@ -244,6 +188,7 @@ async function generateMetadata() {
       bold: "free",
       bulk: "free",
     };
+    if (content.includes('variant === "Broken"')) styles.broken = "free";
 
     const freeStyles = Object.entries(styles)
       .filter(([_, v]) => v === "free")
@@ -263,6 +208,7 @@ async function generateMetadata() {
       freeStyles,
       proStyles,
       usage: inferUsage(category),
+      formerly: formerly.get(name) ?? [],
     });
   }
 

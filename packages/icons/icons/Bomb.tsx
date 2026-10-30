@@ -22,7 +22,38 @@ const IconBomb = forwardRef<SVGSVGElement, IconProps>(function IconBomb(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5.75 8A7.5 7.5 0 1 1 3 10.75"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m17 7-2 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17.98 2.35a.56.56 0 0 1 1.04 0l.65 1.66q.1.23.32.32l1.66.65c.47.19.47.85 0 1.04l-1.66.65a.6.6 0 0 0-.32.32l-.65 1.66a.56.56 0 0 1-1.04 0l-.65-1.66a.6.6 0 0 0-.32-.32l-1.66-.65a.56.56 0 0 1 0-1.04l1.66-.65a.6.6 0 0 0 .32-.32z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

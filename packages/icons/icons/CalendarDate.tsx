@@ -23,7 +23,58 @@ const IconCalendarDate = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7 3.75v-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 3.75v-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m9 14.25 1.5-1.5v4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M13 15.75v-2a1 1 0 1 1 2 0v2a1 1 0 1 1-2 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M21.5 8.75H10.75M2 8.75h3.88"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 21.75h-4c-3.77 0-5.66 0-6.83-1.17S2 17.52 2 13.75v-2c0-3.77 0-5.66 1.17-6.83S6.23 3.75 10 3.75h4c3.77 0 5.66 0 6.83 1.17S22 7.98 22 11.75v2c0 3.77 0 5.66-1.17 6.83-.65.65-1.53.94-2.83 1.07"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,40 +88,40 @@ const IconCalendarDate = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M2 12c0-3.77 0-5.66 1.17-6.83S6.23 4 10 4h4c3.77 0 5.66 0 6.83 1.17S22 8.23 22 12v2c0 3.77 0 5.66-1.17 6.83S17.77 22 14 22h-4c-3.77 0-5.66 0-6.83-1.17S2 17.77 2 14z"
+              d="M2 11.75c0-3.77 0-5.66 1.17-6.83S6.23 3.75 10 3.75h4c3.77 0 5.66 0 6.83 1.17S22 7.98 22 11.75v2c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-4c-3.77 0-5.66 0-6.83-1.17S2 17.52 2 13.75z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M7 4V2.5"
+              d="M7 3.75v-1.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M17 4V2.5"
+              d="M17 3.75v-1.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M2 9h20"
+              d="M2 8.75h20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
-              d="m9 14.5 1.5-1.5v4"
+              d="m9 14.25 1.5-1.5v4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M13 16v-2a1 1 0 1 1 2 0v2a1 1 0 1 1-2 0"
+              d="M13 15.75v-2a1 1 0 1 1 2 0v2a1 1 0 1 1-2 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -123,13 +174,13 @@ const IconCalendarDate = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M7.75 2.5a.75.75 0 1 0-1.5 0v1.58c-1.44.12-2.38.4-3.08 1.1-.7.69-.98 1.63-1.1 3.07h19.85c-.11-1.44-.4-2.38-1.1-3.08-.69-.7-1.63-.97-3.07-1.09V2.5a.75.75 0 0 0-1.5 0v1.51L14 4h-4l-2.25.01z"
+              d="M7.75 2.65a.75.75 0 1 0-1.5 0v1.58c-1.44.12-2.38.4-3.08 1.1-.7.69-.98 1.63-1.1 3.07h19.85c-.11-1.44-.4-2.38-1.1-3.08-.69-.7-1.63-.97-3.07-1.09V2.65a.75.75 0 0 0-1.5 0v1.51L14 4.15h-4l-2.25.01z"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="m22 12-.01-2.25H2V14c0 3.77 0 5.66 1.17 6.83S6.23 22 10 22h4c3.77 0 5.66 0 6.83-1.17S22 17.77 22 14zm-8 .25c-.97 0-1.75.78-1.75 1.75v2a1.75 1.75 0 1 0 3.5 0v-2c0-.97-.78-1.75-1.75-1.75m0 1.5a.25.25 0 0 0-.25.25v2a.25.25 0 1 0 .5 0v-2a.25.25 0 0 0-.25-.25m-3.21-1.44c.28.11.46.39.46.7V17a.75.75 0 0 1-1.5 0v-2.19l-.22.22a.75.75 0 0 1-1.06-1.06l1.5-1.5a.8.8 0 0 1 .82-.16"
+              d="m22 12.15-.01-2.25H2v4.25c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17h4c3.77 0 5.66 0 6.83-1.17S22 17.92 22 14.15zm-8 .25c-.97 0-1.75.78-1.75 1.75v2a1.75 1.75 0 1 0 3.5 0v-2c0-.97-.78-1.75-1.75-1.75m0 1.5a.25.25 0 0 0-.25.25v2a.25.25 0 1 0 .5 0v-2a.25.25 0 0 0-.25-.25m-3.21-1.44c.28.11.46.39.46.7v3.99a.75.75 0 0 1-1.5 0v-2.19l-.22.22a.75.75 0 0 1-1.06-1.06l1.5-1.5a.8.8 0 0 1 .82-.16"
               fill="currentColor"
             />
           </svg>

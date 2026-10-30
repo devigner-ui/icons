@@ -22,7 +22,7 @@ const IconPrevious = forwardRef<SVGSVGElement, IconProps>(function IconPrevious(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,42 @@ const IconPrevious = forwardRef<SVGSVGElement, IconProps>(function IconPrevious(
           {...rest}
         >
           <path
-            d="M20.91 7.22v9.57A2.56 2.56 0 0 1 17.08 19l-4.15-2.39-4.15-2.4a2.54 2.54 0 0 1 0-4.41l4.15-2.4 4.15-2.39c1.7-.98 3.83.24 3.83 2.21"
+            d="M12.27 7.39 16.42 5c1.7-.98 3.83.24 3.83 2.21v9.57a2.56 2.56 0 0 1-3.83 2.21l-4.15-2.39-4.15-2.4a2.54 2.54 0 0 1 0-4.41"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3.76 18.18V17"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3.76 14V5.82"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20.24 7.22v9.57A2.56 2.56 0 0 1 16.41 19l-4.15-2.39-4.15-2.4a2.54 2.54 0 0 1 0-4.41l4.15-2.4 4.15-2.39c1.7-.98 3.83.24 3.83 2.21"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,7 +79,7 @@ const IconPrevious = forwardRef<SVGSVGElement, IconProps>(function IconPrevious(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M4.43 18.18V5.82"
+            d="M3.76 18.18V5.82"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -66,11 +101,11 @@ const IconPrevious = forwardRef<SVGSVGElement, IconProps>(function IconPrevious(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M20.91 7.22v9.57A2.56 2.56 0 0 1 17.08 19l-4.15-2.39-4.15-2.4a2.54 2.54 0 0 1 0-4.41l4.15-2.4 4.15-2.39c1.7-.98 3.83.24 3.83 2.21"
+            d="M20.66 7.22v9.57A2.56 2.56 0 0 1 16.83 19l-4.15-2.39-4.15-2.4a2.54 2.54 0 0 1 0-4.41l4.15-2.4 4.15-2.39c1.7-.98 3.83.24 3.83 2.21"
             fill="currentColor"
           />
           <path
-            d="M4.43 18.93a.76.76 0 0 1-.75-.75V5.82c0-.41.34-.75.75-.75s.75.34.75.75v12.36c0 .41-.34.75-.75.75"
+            d="M4.18 18.93a.76.76 0 0 1-.75-.75V5.82c0-.41.34-.75.75-.75s.75.34.75.75v12.36c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>
@@ -88,11 +123,11 @@ const IconPrevious = forwardRef<SVGSVGElement, IconProps>(function IconPrevious(
           {...rest}
         >
           <path
-            d="M20.91 7.22v9.57A2.56 2.56 0 0 1 17.08 19l-4.15-2.39-4.15-2.4a2.54 2.54 0 0 1 0-4.41l4.15-2.4 4.15-2.39c1.7-.98 3.83.24 3.83 2.21"
+            d="M20.66 7.22v9.57A2.56 2.56 0 0 1 16.83 19l-4.15-2.39-4.15-2.4a2.54 2.54 0 0 1 0-4.41l4.15-2.4 4.15-2.39c1.7-.98 3.83.24 3.83 2.21"
             fill="currentColor"
           />
           <path
-            d="M4.43 18.93a.76.76 0 0 1-.75-.75V5.82c0-.41.34-.75.75-.75s.75.34.75.75v12.36c0 .41-.34.75-.75.75"
+            d="M4.18 18.93a.76.76 0 0 1-.75-.75V5.82c0-.41.34-.75.75-.75s.75.34.75.75v12.36c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>

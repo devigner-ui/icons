@@ -23,7 +23,44 @@ const IconCelsiusCel = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16.33 15.28a5.42 5.42 0 0 1-9.77-3.29 5.43 5.43 0 0 1 8.71-4.35"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18.59 10.17a1.17 1.17 0 1 1-2.34 0 1.17 1.17 0 0 1 2.34 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,7 +75,7 @@ const IconCelsiusCel = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M17 15.28a5.42 5.42 0 0 1-9.77-3.29 5.43 5.43 0 0 1 8.71-4.35"
+              d="M16.33 15.28a5.42 5.42 0 0 1-9.77-3.29 5.43 5.43 0 0 1 8.71-4.35"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -47,7 +84,7 @@ const IconCelsiusCel = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18.09 11.34a1.17 1.17 0 1 0 0-2.34 1.17 1.17 0 0 0 0 2.34"
+              d="M17.42 11.34a1.17 1.17 0 1 0 0-2.34 1.17 1.17 0 0 0 0 2.34"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -55,7 +92,7 @@ const IconCelsiusCel = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -76,18 +113,18 @@ const IconCelsiusCel = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <path d="M24.67 0h-24v24h24z" fill="none" />
+            <path d="M24 0H0v24h24z" fill="none" />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               fill="currentColor"
             />
             <path
-              d="M12.67 18.19a6.2 6.2 0 1 1 3.72-11.14.75.75 0 0 1-.9 1.2 4.69 4.69 0 1 0 .92 6.58.75.75 0 1 1 1.19.91 6.2 6.2 0 0 1-4.93 2.45"
+              d="M12 18.19a6.2 6.2 0 1 1 3.72-11.14.75.75 0 0 1-.9 1.2 4.69 4.69 0 1 0 .92 6.58.75.75 0 1 1 1.19.91A6.2 6.2 0 0 1 12 18.19"
               fill="currentColor"
             />
             <path
-              d="M18.09 11.34a1.17 1.17 0 1 0 0-2.34 1.17 1.17 0 0 0 0 2.34"
+              d="M17.42 11.34a1.17 1.17 0 1 0 0-2.34 1.17 1.17 0 0 0 0 2.34"
               fill="currentColor"
             />
           </svg>
@@ -105,7 +142,7 @@ const IconCelsiusCel = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m4.93 13.74a6.2 6.2 0 1 1-1.21-8.69.75.75 0 0 1-.9 1.2 4.7 4.7 0 1 0 .92 6.58.75.75 0 1 1 1.19.91m.49-4.4c-.65 0-1.17-.52-1.17-1.17S17.44 9 18.09 9s1.17.52 1.17 1.17-.52 1.17-1.17 1.17"
+              d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m4.93 13.74a6.2 6.2 0 1 1-1.21-8.69.75.75 0 0 1-.9 1.2 4.7 4.7 0 1 0 .92 6.58.75.75 0 1 1 1.19.91m.49-4.4c-.65 0-1.17-.52-1.17-1.17S16.77 9 17.42 9s1.17.52 1.17 1.17-.52 1.17-1.17 1.17"
               fill="currentColor"
             />
           </svg>

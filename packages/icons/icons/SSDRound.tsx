@@ -22,7 +22,51 @@ const IconSSDRound = forwardRef<SVGSVGElement, IconProps>(function IconSSDRound(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 21h6.5a3.6 3.6 0 0 0 3.5-3.7q0-1-.45-1.82a3.5 3.5 0 0 0-3.05-1.9h-13c-1.31 0-2.45.77-3.05 1.9A4 4 0 0 0 2 17.3 3.6 3.6 0 0 0 5.5 21H8m13.55-5.52-1.27-5.18M2.45 15.48 5 5.12C5.5 3.52 6.4 3 7.5 3h9c1.1 0 2 .53 2.5 2.12l.32 1.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 17v1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15.5 17v1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13 17v1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10.5 17v1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

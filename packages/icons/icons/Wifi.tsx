@@ -22,7 +22,63 @@ const IconWifi = forwardRef<SVGSVGElement, IconProps>(function IconWifi(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16.31 10.21q1.46.6 2.78 1.62"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4.91 11.84c2.44-1.89 5.3-2.7 8.1-2.44"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.36 5.28C12.99 4.18 17.9 5.2 22 8.36"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 8.36q1.41-1.08 2.93-1.84"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M6.79 15.49a8.3 8.3 0 0 1 10.4 0"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9.4 19.15a4.2 4.2 0 0 1 5.21 0"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,21 +93,21 @@ const IconWifi = forwardRef<SVGSVGElement, IconProps>(function IconWifi(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M5.58 11.84a11.35 11.35 0 0 1 14.19 0"
+            d="M4.91 11.84a11.35 11.35 0 0 1 14.19 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M2.67 8.36a16 16 0 0 1 20 0"
+            d="M2 8.36a16 16 0 0 1 20 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M7.46 15.49a8.3 8.3 0 0 1 10.41 0"
+            d="M6.79 15.49a8.3 8.3 0 0 1 10.41 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -59,7 +115,7 @@ const IconWifi = forwardRef<SVGSVGElement, IconProps>(function IconWifi(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M10.07 19.15a4.2 4.2 0 0 1 5.21 0"
+            d="M9.4 19.15a4.2 4.2 0 0 1 5.21 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -81,20 +137,20 @@ const IconWifi = forwardRef<SVGSVGElement, IconProps>(function IconWifi(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M19.76 12.59a.7.7 0 0 1-.46-.16 10.6 10.6 0 0 0-13.27 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 12.04 12.04 0 0 1 15.1 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
+            d="M19.09 12.59a.7.7 0 0 1-.46-.16 10.6 10.6 0 0 0-13.27 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 12.04 12.04 0 0 1 15.1 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
             fill="currentColor"
           />
           <path
-            d="M22.67 9.11a.7.7 0 0 1-.46-.16 15.2 15.2 0 0 0-19.08 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 16.7 16.7 0 0 1 20.92 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.6.29"
+            d="M22 9.11a.7.7 0 0 1-.46-.16 15.2 15.2 0 0 0-19.08 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 16.7 16.7 0 0 1 20.92 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.6.29"
             fill="currentColor"
           />
           <path
-            d="M17.88 16.24a.7.7 0 0 1-.46-.16 7.6 7.6 0 0 0-9.5 0 .76.76 0 0 1-1.05-.13A.76.76 0 0 1 7 14.9a9.04 9.04 0 0 1 11.33 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
+            d="M17.21 16.24a.7.7 0 0 1-.46-.16 7.6 7.6 0 0 0-9.5 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 9.04 9.04 0 0 1 11.33 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M15.27 19.9a.7.7 0 0 1-.46-.16 3.4 3.4 0 0 0-4.29 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 4.9 4.9 0 0 1 6.12 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
+            d="M14.6 19.9a.7.7 0 0 1-.46-.16 3.4 3.4 0 0 0-4.29 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 4.9 4.9 0 0 1 6.12 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
             fill="currentColor"
           />
         </svg>
@@ -112,19 +168,19 @@ const IconWifi = forwardRef<SVGSVGElement, IconProps>(function IconWifi(
           {...rest}
         >
           <path
-            d="M19.76 12.59a.7.7 0 0 1-.46-.16 10.6 10.6 0 0 0-13.27 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 12.04 12.04 0 0 1 15.1 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
+            d="M19.09 12.59a.7.7 0 0 1-.46-.16 10.6 10.6 0 0 0-13.27 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 12.04 12.04 0 0 1 15.1 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
             fill="currentColor"
           />
           <path
-            d="M22.67 9.11a.7.7 0 0 1-.46-.16 15.2 15.2 0 0 0-19.08 0 .76.76 0 0 1-1.05-.13.74.74 0 0 1 .13-1.05 16.7 16.7 0 0 1 20.92 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.59.29"
+            d="M22 9.11a.7.7 0 0 1-.46-.16 15.2 15.2 0 0 0-19.08 0 .76.76 0 0 1-1.05-.13.74.74 0 0 1 .13-1.05 16.7 16.7 0 0 1 20.92 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.59.29"
             fill="currentColor"
           />
           <path
-            d="M17.88 16.24a.7.7 0 0 1-.46-.16 7.6 7.6 0 0 0-9.5 0 .76.76 0 0 1-1.05-.13A.76.76 0 0 1 7 14.9a9.04 9.04 0 0 1 11.33 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
+            d="M17.21 16.24a.7.7 0 0 1-.46-.16 7.6 7.6 0 0 0-9.5 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 9.04 9.04 0 0 1 11.33 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
             fill="currentColor"
           />
           <path
-            d="M15.27 19.9a.7.7 0 0 1-.46-.16 3.4 3.4 0 0 0-4.29 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 4.9 4.9 0 0 1 6.12 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
+            d="M14.6 19.9a.7.7 0 0 1-.46-.16 3.4 3.4 0 0 0-4.29 0 .76.76 0 0 1-1.05-.13.76.76 0 0 1 .13-1.05 4.9 4.9 0 0 1 6.12 0c.33.25.39.72.13 1.05a.7.7 0 0 1-.58.29"
             fill="currentColor"
           />
         </svg>

@@ -23,7 +23,62 @@ const IconUSBCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="12"
+            cy="17"
+            r="1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx="8"
+            cy="9"
+            r="1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M11.25 16a.75.75 0 0 0 1.5 0zM12 6l.53-.53a.75.75 0 0 0-1.06 0zm.47 1.53a.75.75 0 1 0 1.06-1.06zm-2-1.06a.75.75 0 0 0 1.06 1.06zm1 .06 1 1 1.06-1.06-1-1zm0-1.06-1 1 1.06 1.06 1-1zM12.75 16v-1.87h-1.5V16zm0-1.87V6h-1.5v8.13z"
+            fill="currentColor"
+          />
+          <path
+            d="M8 10v1.03a2 2 0 0 0 1.4 1.9l1.4.45c.72.22 1.2.88 1.2 1.62"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16 11v1.03a2 2 0 0 1-1.4 1.9l-1.4.45A1.7 1.7 0 0 0 12 16"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 10c0-.47 0-.7.15-.85S15.53 9 16 9s.7 0 .85.15.15.38.15.85 0 .7-.15.85-.38.15-.85.15-.7 0-.85-.15S15 10.47 15 10Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M7 3.34A10 10 0 1 1 3.34 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

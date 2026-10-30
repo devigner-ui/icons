@@ -14,6 +14,10 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+    outputs:
+      # The version of @devigner-ui/icons this run published, or empty. The
+      # gem, pub and NuGet jobs below ship that same version.
+      icons-version: ${{ steps.icons.outputs.version }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,6 +45,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Read the published @devigner-ui/icons version
+        id: icons
+        if: steps.changesets.outputs.published == 'true'
+        env:
+          PUBLISHED: ${{ steps.changesets.outputs.publishedPackages }}
+        run: |
+          node -e '
+            const main = JSON.parse(process.env.PUBLISHED)
+              .find((pkg) => pkg.name === "@devigner-ui/icons");
+            if (main) console.log(`version=${main.version}`);
+          ' >> "$GITHUB_OUTPUT"
 
       # One GitHub release per published package, and the API marks whichever
       # was created last as "Latest" — alphabetical luck, which had icons-svg
@@ -75,3 +91,96 @@ jobs:
 
           echo "Pinning $tag as the latest release."
           gh release edit "$tag" --latest --repo "$GITHUB_REPOSITORY"
+
+  # The packages that live outside npm, released beside @devigner-ui/icons at
+  # its version. Each builds from the same checkout, runs its own tests, then
+  # publishes. They run only when that package was published in this run, so
+  # a version is pushed to each registry once.
+  gem:
+    needs: release
+    if: needs.release.outputs.icons-version != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter "@devigner-ui/icons-rails..." build
+      - run: pnpm --filter @devigner-ui/icons-rails test
+      - name: Publish devigner_icons
+        working-directory: packages/icons-rails
+        env:
+          GEM_HOST_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}
+        run: |
+          grep -q "\"${{ needs.release.outputs.icons-version }}\"" lib/devigner_icons/version.rb
+          gem build devigner_icons.gemspec
+          gem push "devigner_icons-${{ needs.release.outputs.icons-version }}.gem"
+
+  pub:
+    needs: release
+    if: needs.release.outputs.icons-version != ''
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter "@devigner-ui/icons-flutter..." build
+      - run: pnpm --filter @devigner-ui/icons-flutter test
+      - name: Publish devigner_icons
+        working-directory: packages/icons-flutter
+        env:
+          PUB_CREDENTIALS: ${{ secrets.PUB_CREDENTIALS }}
+        run: |
+          grep -q "^version: ${{ needs.release.outputs.icons-version }}$" pubspec.yaml
+          mkdir -p "$HOME/.config/dart"
+          printf '%s' "$PUB_CREDENTIALS" > "$HOME/.config/dart/pub-credentials.json"
+          flutter pub publish --force
+
+  nuget:
+    needs: release
+    if: needs.release.outputs.icons-version != ''
+    runs-on: ubuntu-latest
+    # Trusted publishing: NuGet trusts this workflow's GitHub token and hands
+    # back a short-lived key, so no API key is stored in the repo's secrets.
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter "@devigner-ui/icons-blazor..." build
+      - run: pnpm --filter @devigner-ui/icons-blazor test
+      - name: NuGet login
+        id: nuget
+        uses: NuGet/login@v1
+        with:
+          user: itsremiofficial
+      - name: Publish Devigner.Icons.Blazor
+        working-directory: packages/icons-blazor
+        env:
+          NUGET_API_KEY: ${{ steps.nuget.outputs.NUGET_API_KEY }}
+        run: |
+          dotnet pack src/Devigner.Icons.Blazor -c Release -o out
+          dotnet nuget push "out/Devigner.Icons.Blazor.${{ needs.release.outputs.icons-version }}.nupkg" \
+            --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate

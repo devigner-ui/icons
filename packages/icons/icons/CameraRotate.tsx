@@ -23,7 +23,34 @@ const IconCameraRotate = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m14.52 10.68-.28-.28a3.17 3.17 0 1 0 .9 2.6m-.62-4v1.68L13 11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2 13.36c0-3.06 0-4.6.75-5.7a4 4 0 0 1 1.23-1.2c.72-.47 1.62-.64 3-.7a1.4 1.4 0 0 0 1.35-1.12A2.06 2.06 0 0 1 10.37 3h3.26c1 0 1.84.68 2.04 1.64.13.63.7 1.12 1.35 1.12 1.38.06 2.28.23 3 .7q.73.49 1.23 1.2c.75 1.1.75 2.64.75 5.7s0 4.6-.75 5.7a4 4 0 0 1-1.23 1.2c-1.12.74-2.68.74-5.8.74H9.78c-3.12 0-4.68 0-5.8-.74a4 4 0 0 1-1.23-1.2A3 3 0 0 1 2.28 18"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

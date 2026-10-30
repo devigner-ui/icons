@@ -22,7 +22,34 @@ const IconImport = forwardRef<SVGSVGElement, IconProps>(function IconImport(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 4v10m-3-3 3 3 3-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 20a8 8 0 0 1-8-8m16 0a8 8 0 0 1-3 6.25"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -65,13 +92,13 @@ const IconImport = forwardRef<SVGSVGElement, IconProps>(function IconImport(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M4 12a8 8 0 1 0 16 0z"
+            d="M4 12.4a8 8 0 1 0 16 0z"
             fill="currentColor"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M15.53 10.47a.75.75 0 0 0-1.06 0l-1.72 1.72V4a.75.75 0 0 0-1.5 0v8.19l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3c.3.3.77.3 1.06 0l3-3c.3-.3.3-.77 0-1.06"
+            d="M15.53 10.87a.75.75 0 0 0-1.06 0l-1.72 1.72V4.4a.75.75 0 0 0-1.5 0v8.19l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3c.3.3.77.3 1.06 0l3-3c.3-.3.3-.77 0-1.06"
             fill="currentColor"
           />
         </svg>
@@ -91,11 +118,11 @@ const IconImport = forwardRef<SVGSVGElement, IconProps>(function IconImport(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M15.53 10.47a.75.75 0 0 0-1.06 0l-1.72 1.72V4a.75.75 0 0 0-1.5 0v8.19l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3c.3.3.77.3 1.06 0l3-3c.3-.3.3-.77 0-1.06"
+            d="M15.53 10.87a.75.75 0 0 0-1.06 0l-1.72 1.72V4.4a.75.75 0 0 0-1.5 0v8.19l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3c.3.3.77.3 1.06 0l3-3c.3-.3.3-.77 0-1.06"
             fill="currentColor"
           />
           <path
-            d="M17.75 12c-.45 0-.84.27-1.16.6l-3 3c-.88.87-2.3.87-3.18 0l-3-3c-.32-.33-.71-.6-1.16-.6H4a8 8 0 1 0 16 0z"
+            d="M17.75 12.4c-.45 0-.84.27-1.16.6l-3 3c-.88.87-2.3.87-3.18 0l-3-3c-.32-.33-.71-.6-1.16-.6H4a8 8 0 1 0 16 0z"
             fill="currentColor"
           />
         </svg>

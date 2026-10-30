@@ -23,7 +23,42 @@ const IconVideoLibrary = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M19.56 7c.23-1.3-.77-2.5-2.1-2.5H6.54A2.13 2.13 0 0 0 4.44 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="m17.5 4.5.04-.5a2 2 0 0 0-1.78-1.99l-.5-.01H8.74l-.5.01a2 2 0 0 0-1.78 2l.04.49"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M21.2 16.8c-.36 2.47-.53 3.71-1.43 4.46-.9.74-2.22.74-4.87.74H9.1c-2.65 0-3.97 0-4.87-.74-.9-.75-1.07-1.99-1.42-4.47l-.43-3c-.44-3.16-.67-4.74.28-5.77S5.3 7 8.67 7h6.66c3.37 0 5.06 0 6 1.02.76.81.77 1.97.53 3.98"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14.58 13.62c.56.34.56 1.24 0 1.58l-3.37 2.1c-.54.33-1.21-.1-1.21-.8v-4.18c0-.7.67-1.13 1.21-.8z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

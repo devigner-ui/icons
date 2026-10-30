@@ -23,7 +23,27 @@ const IconPaperclip = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M19.01 13.1a6.3 6.3 0 0 0 0-9.2 7 7 0 0 0-9.6 0M7.9 17.8l7.9-7.55c.95-.9.95-2.37 0-3.28a2.5 2.5 0 0 0-3.43 0l-7.84 7.5a4.3 4.3 0 0 0 0 6.24 4.76 4.76 0 0 0 6.52 0l3.98-3.8M3 10.02l3.2-3.06"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -1,0 +1,12 @@
+{
+  "name": "@devigner-ui/icons-rails",
+  "private": true,
+  "description": "Workspace wrapper for the devigner_icons gem: generates its SVGs and runs its tests. The gem itself is published to RubyGems, not npm.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@devigner-ui/icons": "workspace:^"
+  }
+}

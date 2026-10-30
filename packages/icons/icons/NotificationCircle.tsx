@@ -23,7 +23,42 @@ const IconNotificationCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3.02 16.4a10 10 0 0 0 18.78-6.39"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14.02 2.2A10 10 0 0 0 2 12"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M19 2a3 3 0 1 0 2.82 1.99"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,14 +73,14 @@ const IconNotificationCircle = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M19.67 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+              d="M19 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M14.69 2.2a10 10 0 1 0 7.78 7.81"
+              d="M14.02 2.2a10 10 0 1 0 7.78 7.81"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -66,12 +101,12 @@ const IconNotificationCircle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M19.67 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+              d="M19 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M19.67 9.5a4.5 4.5 0 0 1-3.76-6.95A9.97 9.97 0 0 0 2.67 12c0 5.51 4.49 10 10 10a10.02 10.02 0 0 0 9.45-13.24q-1.07.72-2.45.74"
+              d="M19 9.5a4.5 4.5 0 0 1-3.76-6.95A9.97 9.97 0 0 0 2 12c0 5.51 4.49 10 10 10a10.02 10.02 0 0 0 9.45-13.24q-1.07.72-2.45.74"
               fill="currentColor"
             />
           </svg>
@@ -89,11 +124,11 @@ const IconNotificationCircle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M19.67 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+              d="M19 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
               fill="currentColor"
             />
             <path
-              d="M18.46 9.34a4.5 4.5 0 0 1-3.04-5.83 1 1 0 0 0-.72-1.3 10 10 0 1 0 7.75 7.75 1 1 0 0 0-1.3-.72c-.81.29-1.73.35-2.69.1"
+              d="M17.79 9.34a4.5 4.5 0 0 1-3.04-5.83 1 1 0 0 0-.72-1.3 10 10 0 1 0 7.75 7.75 1 1 0 0 0-1.3-.72c-.81.29-1.73.35-2.69.1"
               fill="currentColor"
             />
           </svg>

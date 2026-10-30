@@ -6,8 +6,9 @@ const IconMore = forwardRef<SVGSVGElement, IconProps>(function IconMore(
   { className, variant = "Outline", strokeWidth = "1.5", ...rest },
   ref,
 ) {
-  /* The four drawings are two booleans: filled or stroked, and whether the
-     secondary shapes drop to half tone. */
+  /* One stroked glyph in all four core styles. Bold and Bulk fix the weight
+     at 2, the Text icons' Bold; Bulk keeps TwoTone's half-tone parts. They
+     used to cut the glyph out of a filled square the outline never had. */
   const fill = variant === "Bold" || variant === "Bulk";
   const duotone = variant === "TwoTone" || variant === "Bulk";
 
@@ -22,7 +23,7 @@ const IconMore = forwardRef<SVGSVGElement, IconProps>(function IconMore(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,51 +37,21 @@ const IconMore = forwardRef<SVGSVGElement, IconProps>(function IconMore(
           {...rest}
         >
           <path
-            d="M5.67 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2"
-            stroke="currentColor"
+            d="M5 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2Z"
             strokeWidth={strokeWidth}
-          />
-          <path
-            d="M19.67 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2"
             stroke="currentColor"
-            strokeWidth={strokeWidth}
           />
           <path
-            opacity={duotone ? "0.4" : "1"}
-            d="M12.67 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2"
+            d="M19 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2Z"
+            strokeWidth={strokeWidth}
             stroke="currentColor"
+          />
+          <path
+            d="M10 12c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2"
             strokeWidth={strokeWidth}
-          />
-        </svg>
-      ) : duotone ? (
-        <svg
-          ref={ref}
-          className={className}
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          {...a11y}
-          {...rest}
-        >
-          <path
-            opacity={duotone ? "0.4" : "1"}
-            d="M16.86 2H8.48C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.65 2.17 5.82 5.81 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2"
-            fill="currentColor"
-          />
-          <path
-            d="M12.67 10.69c-.72 0-1.31.59-1.31 1.31s.59 1.31 1.31 1.31 1.31-.59 1.31-1.31-.59-1.31-1.31-1.31"
-            fill="currentColor"
-          />
-          <path
-            d="M7.67 10.69c-.72 0-1.31.59-1.31 1.31s.59 1.31 1.31 1.31 1.31-.59 1.31-1.31-.59-1.31-1.31-1.31"
-            fill="currentColor"
-          />
-          <path
-            d="M17.67 10.69c-.72 0-1.31.59-1.31 1.31s.59 1.31 1.31 1.31 1.31-.59 1.31-1.31-.59-1.31-1.31-1.31"
-            fill="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
           />
         </svg>
       ) : (
@@ -97,8 +68,20 @@ const IconMore = forwardRef<SVGSVGElement, IconProps>(function IconMore(
           {...rest}
         >
           <path
-            d="M16.86 2H8.48C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.65 2.17 5.82 5.81 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2M7.67 13.31c-.72 0-1.31-.59-1.31-1.31s.59-1.31 1.31-1.31 1.31.59 1.31 1.31-.59 1.31-1.31 1.31m5 0c-.72 0-1.31-.59-1.31-1.31s.59-1.31 1.31-1.31 1.31.59 1.31 1.31-.59 1.31-1.31 1.31m5 0c-.72 0-1.31-.59-1.31-1.31s.59-1.31 1.31-1.31 1.31.59 1.31 1.31-.59 1.31-1.31 1.31"
-            fill="currentColor"
+            d="M5 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2"
+            stroke="currentColor"
+            strokeWidth={fill ? "2" : strokeWidth}
+          />
+          <path
+            d="M19 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2"
+            stroke="currentColor"
+            strokeWidth={fill ? "2" : strokeWidth}
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M12 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2"
+            stroke="currentColor"
+            strokeWidth={fill ? "2" : strokeWidth}
           />
         </svg>
       )}

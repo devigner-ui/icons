@@ -1,7 +1,7 @@
 <script>
   /*
    * The one component behind all 1,963 icons. Each generated wrapper hands this
-   * its own four drawings, so the per-icon files carry artwork and nothing
+   * its own drawings, so the per-icon files carry artwork and nothing
    * else, which is what keeps them tree-shakeable and what stops 1,963 copies
    * of this logic existing.
    *
@@ -17,14 +17,16 @@
    */
   export let drawings;
   export let variant = "outline";
-  /** Stroke width, in the drawing's own units. Outline and twotone only. */
+  /** Stroke width, in the drawing's own units. Outline, twotone and broken. */
   export let strokeWidth = null;
 
   $: drawing = drawings[variant] ?? drawings.outline;
 
-  /* Replaced only when asked for: the default is already baked in at 1.5. */
+  /* Replaced only when asked for: the default is already baked in at 1.5.
+     The style decides, as in @devigner-ui/icons: some Bold drawings are
+     strokes too, at a fixed weight strokeWidth does not move. */
   $: inner =
-    strokeWidth == null
+    strokeWidth == null || !["outline", "twotone", "broken"].includes(variant)
       ? drawing.inner
       : drawing.inner.replace(
           /stroke-width="[^"]*"/g,

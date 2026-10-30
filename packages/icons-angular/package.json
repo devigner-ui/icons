@@ -1,0 +1,71 @@
+{
+  "name": "@devigner-ui/icons-angular",
+  "version": "3.5.0",
+  "description": "10,560 open-source icons for Angular: 2,112 symbols, each in outline, twotone, bold, bulk and broken, with one standalone component. Built on Solar Icon Set and Iconsax.",
+  "keywords": [
+    "icons",
+    "angular",
+    "angular-icons",
+    "svg",
+    "svg-icons",
+    "icon-set",
+    "icon-library",
+    "tree-shaking"
+  ],
+  "license": "MIT AND CC-BY-4.0",
+  "author": "Devigner",
+  "homepage": "https://icons.devigner.cc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigner-ui/icons.git",
+    "directory": "packages/icons-angular"
+  },
+  "bugs": {
+    "url": "https://github.com/devigner-ui/icons/issues"
+  },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "ATTRIBUTION.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "ngc -p tsconfig.json",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "test": "node scripts/check.mjs"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@angular/common": "^20",
+    "@angular/compiler": "^20",
+    "@angular/compiler-cli": "^20",
+    "@angular/core": "^20",
+    "@angular/platform-browser": "^20",
+    "@angular/platform-server": "^20",
+    "rxjs": "^7.8.2",
+    "typescript": "~5.8"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "module": "./dist/index.js",
+  "dependencies": {
+    "@devigner-ui/icons-js": "workspace:^",
+    "tslib": "^2.6.0"
+  }
+}

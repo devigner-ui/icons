@@ -23,7 +23,42 @@ const IconCalendarCheck = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M2 12c0-4.71 0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46C22 4.93 22 7.3 22 12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8.92 6H14c2.8 0 4.2 0 5.27.55a5 5 0 0 1 2.18 2.18C22 9.8 22 11.2 22 14v1.11m-.28 3.48a5 5 0 0 1-2.45 2.87C18.2 22 16.8 22 14 22h-4c-2.8 0-4.2 0-5.27-.54a5 5 0 0 1-2.19-2.19C2 18.2 2 16.8 2 14s0-4.2.54-5.27a5 5 0 0 1 2.91-2.46"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m9.5 14.4 1.43 1.6 3.57-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}

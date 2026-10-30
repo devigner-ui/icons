@@ -23,7 +23,56 @@ const IconGalleryTick = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 6a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 12.97V15c0 5 2 7 7 7h6c5 0 7-2 7-7v-5"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M13 2H9C4 2 2 4 2 9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m16 4.99 1.46 1.46 3.9-3.9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m2.67 18.95 4.93-3.31a2.25 2.25 0 0 1 2.64.14l.33.29c.78.67 2.04.67 2.82 0l4.16-3.57a2.2 2.2 0 0 1 2.82 0L22 13.9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,22 +87,14 @@ const IconGalleryTick = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M9.67 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
+              d="M9 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M13.67 2h-4c-5 0-7 2-7 7v6c0 5 2 7 7 7h6c5 0 7-2 7-7v-5"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              opacity={duotone ? "0.4" : "1"}
-              d="m16.67 4.99 1.46 1.46 3.9-3.9"
+              d="M13 2H9C4 2 2 4 2 9v6c0 5 2 7 7 7h6c5 0 7-2 7-7v-5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -61,7 +102,15 @@ const IconGalleryTick = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m3.34 18.95 4.93-3.31a2.25 2.25 0 0 1 2.64.14l.33.29c.78.67 2.04.67 2.82 0l4.16-3.57a2.2 2.2 0 0 1 2.82 0l1.63 1.4"
+              d="m16 4.99 1.46 1.46 3.9-3.9"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              opacity={duotone ? "0.4" : "1"}
+              d="m2.67 18.95 4.93-3.31a2.25 2.25 0 0 1 2.64.14l.33.29c.78.67 2.04.67 2.82 0l4.16-3.57a2.2 2.2 0 0 1 2.82 0L22 13.9"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -82,20 +131,20 @@ const IconGalleryTick = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M22.67 13.9v2.29c0 3.64-2.17 5.81-5.81 5.81H8.48c-2.55 0-4.4-1.07-5.25-2.97l.1-.08 4.93-3.3c.8-.54 1.93-.48 2.64.14l.34.28c.78.67 2.04.67 2.82 0l4.16-3.57a2.2 2.2 0 0 1 2.82 0z"
+              d="M21.52 14.4v2.29c0 3.64-2.17 5.81-5.81 5.81H7.33c-2.55 0-4.4-1.07-5.25-2.97l.1-.08 4.93-3.3c.8-.54 1.93-.48 2.64.14l.34.28c.78.67 2.04.67 2.82 0L17.07 13a2.2 2.2 0 0 1 2.82 0z"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M21.64 8H18.7c-1.27 0-2.03-.76-2.03-2.03V3.03q0-.6.22-1.03H8.48C4.84 2 2.67 4.17 2.67 7.81v8.38q0 1.64.56 2.84l.11-.08 4.92-3.3c.8-.54 1.93-.48 2.64.14l.34.28c.78.67 2.04.67 2.82 0l4.16-3.57a2.2 2.2 0 0 1 2.82 0l1.63 1.4V7.78q-.43.21-1.03.22"
+              d="M20.49 8.5h-2.94c-1.27 0-2.03-.76-2.03-2.03V3.53q0-.6.22-1.03H7.33c-3.64 0-5.81 2.17-5.81 5.81v8.38q0 1.64.56 2.84l.11-.08 4.92-3.3c.8-.54 1.93-.48 2.64.14l.34.28c.78.67 2.04.67 2.82 0L17.07 13a2.2 2.2 0 0 1 2.82 0l1.63 1.4V8.28q-.43.21-1.03.22"
               fill="currentColor"
             />
             <path
-              d="M9.67 10.38a2.38 2.38 0 1 0 0-4.76 2.38 2.38 0 0 0 0 4.76"
+              d="M8.52 10.88a2.38 2.38 0 1 0 0-4.76 2.38 2.38 0 0 0 0 4.76"
               fill="currentColor"
             />
             <path
-              d="M21.64 1H18.7c-1.27 0-2.03.76-2.03 2.03v2.94c0 1.27.76 2.03 2.03 2.03h2.94c1.27 0 2.03-.76 2.03-2.03V3.03c0-1.27-.76-2.03-2.03-2.03m.66 2.45-2.37 2.77a.5.5 0 0 1-.37.18h-.02a.5.5 0 0 1-.37-.15l-1.1-1.08a.5.5 0 0 1 0-.73c.2-.2.53-.21.73 0l.7.69 2-2.34a.5.5 0 0 1 .73-.06.5.5 0 0 1 .07.72"
+              d="M20.49 1.5h-2.94c-1.27 0-2.03.76-2.03 2.03v2.94c0 1.27.76 2.03 2.03 2.03h2.94c1.27 0 2.03-.76 2.03-2.03V3.53c0-1.27-.76-2.03-2.03-2.03m.66 2.45-2.37 2.77a.5.5 0 0 1-.37.18h-.02a.5.5 0 0 1-.37-.15l-1.1-1.08a.5.5 0 0 1 0-.73c.2-.2.53-.21.73 0l.7.69 2-2.34a.5.5 0 0 1 .73-.06.5.5 0 0 1 .07.72"
               fill="currentColor"
             />
           </svg>
@@ -113,15 +162,15 @@ const IconGalleryTick = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M21.64 1H18.7c-1.27 0-2.03.76-2.03 2.03v2.94c0 1.27.76 2.03 2.03 2.03h2.94c1.27 0 2.03-.76 2.03-2.03V3.03c0-1.27-.76-2.03-2.03-2.03m.66 2.45-2.37 2.77a.5.5 0 0 1-.37.18h-.02a.5.5 0 0 1-.37-.15l-1.1-1.08a.5.5 0 0 1 0-.73c.2-.2.53-.21.73 0l.7.69 2-2.34a.5.5 0 0 1 .73-.06.5.5 0 0 1 .07.72"
+              d="M20.49 1.5h-2.94c-1.27 0-2.03.76-2.03 2.03v2.94c0 1.27.76 2.03 2.03 2.03h2.94c1.27 0 2.03-.76 2.03-2.03V3.53c0-1.27-.76-2.03-2.03-2.03m.66 2.45-2.37 2.77a.5.5 0 0 1-.37.18h-.02a.5.5 0 0 1-.37-.15l-1.1-1.08a.5.5 0 0 1 0-.73c.2-.2.53-.21.73 0l.7.69 2-2.34a.5.5 0 0 1 .73-.06.5.5 0 0 1 .07.72"
               fill="currentColor"
             />
             <path
-              d="M9.67 10.38a2.38 2.38 0 1 0 0-4.76 2.38 2.38 0 0 0 0 4.76"
+              d="M8.52 10.88a2.38 2.38 0 1 0 0-4.76 2.38 2.38 0 0 0 0 4.76"
               fill="currentColor"
             />
             <path
-              d="M21.64 8h-.47v4.61l-.13-.11a2.2 2.2 0 0 0-2.82 0l-4.16 3.57c-.78.67-2.04.67-2.82 0l-.34-.28a2.2 2.2 0 0 0-2.64-.14l-3.74 2.51a5 5 0 0 1-.35-1.97V7.81c0-2.82 1.49-4.31 4.31-4.31h8.19v-.47q0-.6.23-1.03H8.48C4.84 2 2.67 4.17 2.67 7.81v8.38q0 1.64.56 2.84c.86 1.9 2.7 2.97 5.25 2.97h8.38c3.64 0 5.81-2.17 5.81-5.81V7.77q-.43.23-1.03.23"
+              d="M20.49 8.5h-.47v4.61l-.13-.11a2.2 2.2 0 0 0-2.82 0l-4.16 3.57c-.78.67-2.04.67-2.82 0l-.34-.28a2.2 2.2 0 0 0-2.64-.14l-3.74 2.51a5 5 0 0 1-.35-1.97V8.31C3.02 5.49 4.51 4 7.33 4h8.19v-.47q0-.6.23-1.03H7.33c-3.64 0-5.81 2.17-5.81 5.81v8.38q0 1.64.56 2.84c.86 1.9 2.7 2.97 5.25 2.97h8.38c3.64 0 5.81-2.17 5.81-5.81V8.27q-.43.23-1.03.23"
               fill="currentColor"
             />
           </svg>

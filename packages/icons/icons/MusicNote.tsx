@@ -23,7 +23,46 @@ const IconMusicNote = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 18.55a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M21 16.55a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M9 18.55v-11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M20.25 11.05a.75.75 0 0 0 1.5 0zm1.5 0v-5.5h-1.5v5.5z"
+            fill="currentColor"
+          />
+          <path
+            d="m15.74 3.3-4 1.34c-1.32.44-1.98.66-2.36 1.18C9 6.35 9 7.05 9 8.43v3.12l12-4V7.1c0-2.53 0-3.8-.83-4.4s-2.03-.2-4.43.6Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,29 +76,29 @@ const IconMusicNote = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M9 19a3 3 0 1 1-6 0 3 3 0 0 1 6 0"
+              d="M9 18.55a3 3 0 1 1-6 0 3 3 0 0 1 6 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
-              d="M21 17a3 3 0 1 1-6 0 3 3 0 0 1 6 0"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-            />
-            <path
-              opacity={duotone ? "0.4" : "1"}
-              d="M9 19V8"
+              d="M21 16.55a3 3 0 1 1-6 0 3 3 0 0 1 6 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M21 17V6"
+              d="M9 18.55v-11"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
-              d="m15.74 3.75-4 1.34c-1.32.44-1.98.66-2.36 1.18C9 6.8 9 7.5 9 8.88V12l12-4v-.45c0-2.53 0-3.8-.83-4.4s-2.03-.2-4.43.6"
+              opacity={duotone ? "0.4" : "1"}
+              d="M21 16.55v-11"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+            />
+            <path
+              d="m15.74 3.3-4 1.34c-1.32.44-1.98.66-2.36 1.18C9 6.35 9 7.05 9 8.43v3.12l12-4V7.1c0-2.53 0-3.8-.83-4.4s-2.03-.2-4.43.6"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

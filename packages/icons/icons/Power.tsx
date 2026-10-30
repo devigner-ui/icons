@@ -22,7 +22,33 @@ const IconPower = forwardRef<SVGSVGElement, IconProps>(function IconPower(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 2.45v4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8.5 4.15a9 9 0 0 0-3.2 14.3m10.2-14.3A9 9 0 0 1 9 20.95"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,13 +63,13 @@ const IconPower = forwardRef<SVGSVGElement, IconProps>(function IconPower(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12 2v4"
+            d="M12 2.5v4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M8.5 3.7a9 9 0 1 0 7 0"
+            d="M8.5 4.2a9 9 0 1 0 7 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -64,11 +90,11 @@ const IconPower = forwardRef<SVGSVGElement, IconProps>(function IconPower(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M8.8 5.15a.75.75 0 1 0-.6-1.38 9.75 9.75 0 1 0 7.6 0 .75.75 0 1 0-.6 1.38 8.25 8.25 0 1 1-6.4 0"
+            d="M8.8 4.9a.75.75 0 1 0-.6-1.38 9.75 9.75 0 1 0 7.6 0 .75.75 0 1 0-.6 1.38 8.25 8.25 0 1 1-6.4 0"
             fill="currentColor"
           />
           <path
-            d="M12.75 2.75a.75.75 0 0 0-1.5 0v4a.75.75 0 0 0 1.5 0z"
+            d="M12.75 2.5a.75.75 0 0 0-1.5 0v4a.75.75 0 0 0 1.5 0z"
             fill="currentColor"
           />
         </svg>
@@ -85,13 +111,13 @@ const IconPower = forwardRef<SVGSVGElement, IconProps>(function IconPower(
           {...a11y}
           {...rest}
         >
-          <path d="M12 2v4" strokeWidth={strokeWidth} strokeLinecap="round" />
+          <path d="M12 1.75v4" strokeWidth={strokeWidth} strokeLinecap="round" />
           <path
-            d="M12.75 2.75a.75.75 0 0 0-1.5 0v4a.75.75 0 0 0 1.5 0z"
+            d="M12.75 2.5a.75.75 0 0 0-1.5 0v4a.75.75 0 0 0 1.5 0z"
             fill="currentColor"
           />
           <path
-            d="M8.8 5.15a.75.75 0 1 0-.6-1.38 9.75 9.75 0 1 0 7.6 0 .75.75 0 1 0-.6 1.38 8.25 8.25 0 1 1-6.4 0"
+            d="M8.8 4.9a.75.75 0 1 0-.6-1.38 9.75 9.75 0 1 0 7.6 0 .75.75 0 1 0-.6 1.38 8.25 8.25 0 1 1-6.4 0"
             fill="currentColor"
           />
         </svg>

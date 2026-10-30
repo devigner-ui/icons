@@ -23,7 +23,49 @@ const IconSearchStatus = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M14 5h6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M14 8h3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M21 11.5a9.5 9.5 0 0 1-10.72 9.42m-3.31-1.07A9.5 9.5 0 0 1 11.5 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m22 22-2-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,7 +80,7 @@ const IconSearchStatus = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M14.67 5h6"
+              d="M14 5h6"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -46,14 +88,14 @@ const IconSearchStatus = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M14.67 8h3"
+              d="M14 8h3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M21.67 11.5a9.5 9.5 0 1 1-9.5-9.5"
+              d="M21 11.5A9.5 9.5 0 1 1 11.5 2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -61,7 +103,7 @@ const IconSearchStatus = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m22.67 22-2-2"
+              d="m22 22-2-2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -82,20 +124,20 @@ const IconSearchStatus = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M15.17 10.75h-6a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h6c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M14.5 10.75h-6a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h6c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M12.17 13.75h-3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M11.5 13.75h-3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.17 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19"
+              d="M11.5 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19"
               fill="currentColor"
             />
             <path
-              d="M21.97 22a.7.7 0 0 1-.49-.2l-1.86-1.86a.7.7 0 0 1 0-.99.7.7 0 0 1 .99 0l1.86 1.86a.7.7 0 0 1 0 .99.7.7 0 0 1-.5.2"
+              d="M21.3 22a.7.7 0 0 1-.49-.2l-1.86-1.86a.7.7 0 0 1 0-.99.7.7 0 0 1 .99 0l1.86 1.86a.7.7 0 0 1 0 .99.7.7 0 0 1-.5.2"
               fill="currentColor"
             />
           </svg>
@@ -113,11 +155,11 @@ const IconSearchStatus = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.17 2a9.5 9.5 0 1 0 .02 19.02A9.5 9.5 0 0 0 12.17 2m0 11.75h-3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75m3-3h-6a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h6c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M11.5 2a9.5 9.5 0 1 0 .02 19.02A9.5 9.5 0 0 0 11.5 2m0 11.75h-3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75m3-3h-6a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h6c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M21.97 22a.7.7 0 0 1-.49-.2l-1.86-1.86a.7.7 0 0 1 0-1 .7.7 0 0 1 .99 0l1.86 1.87a.7.7 0 0 1 0 .99.7.7 0 0 1-.5.2"
+              d="M21.3 22a.7.7 0 0 1-.49-.2l-1.86-1.86a.7.7 0 0 1 0-1 .7.7 0 0 1 .99 0l1.86 1.87a.7.7 0 0 1 0 .99.7.7 0 0 1-.5.2"
               fill="currentColor"
             />
           </svg>

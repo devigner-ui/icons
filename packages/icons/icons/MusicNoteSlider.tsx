@@ -23,7 +23,56 @@ const IconMusicNoteSlider = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M19 17c-.01 2.18-.11 3.35-.88 4.12-.88.88-2.3.88-5.12.88h-2c-2.83 0-4.24 0-5.12-.88S5 18.82 5 16V8c0-2.83 0-4.24.88-5.12S8.18 2 11 2h2c2.83 0 4.24 0 5.12.88S19 5.18 19 8v5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M19 19.5c.46 0 .7 0 .9-.03a2.5 2.5 0 0 0 2.07-2.08c.03-.2.03-.43.03-.89v-9c0-.46 0-.7-.03-.9a2.5 2.5 0 0 0-2.08-2.07c-.2-.03-.43-.03-.89-.03"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M13 14V8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="11"
+            cy="14"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M15 10a2 2 0 0 1-2-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 19.5c-.46 0-.7 0-.9-.03a2.5 2.5 0 0 1-2.07-2.08C2 17.2 2 16.96 2 16.5v-9c0-.46 0-.7.03-.9a2.5 2.5 0 0 1 2.08-2.07c.2-.03.43-.03.89-.03"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

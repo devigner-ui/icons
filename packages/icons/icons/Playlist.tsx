@@ -22,7 +22,50 @@ const IconPlaylist = forwardRef<SVGSVGElement, IconProps>(function IconPlaylist(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10.75 12.95h-8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10.75 16.95h-8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18.63 13.07c1.65.95 2.48 1.43 2.6 2.12q.05.26 0 .52c-.12.69-.95 1.17-2.6 2.12s-2.49 1.43-3.14 1.2a2 2 0 0 1-.45-.27c-.54-.45-.54-1.4-.54-3.31s0-2.86.54-3.31q.2-.17.45-.26c.65-.24 1.48.23 3.14 1.19Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M2.75 4.95h10.5m6.5 0H17.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M19.75 8.95H9.25m-6.5 0H5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,34 +80,34 @@ const IconPlaylist = forwardRef<SVGSVGElement, IconProps>(function IconPlaylist(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M21 6H3"
+            d="M20.75 4.95h-18"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M21 10H3"
+            d="M20.75 8.95h-18"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M11 14H3"
+            d="M10.75 12.95h-8"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M11 18H3"
+            d="M10.75 16.95h-8"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M18.88 14.12c1.65.95 2.48 1.43 2.6 2.12q.05.26 0 .52c-.12.69-.95 1.17-2.6 2.12s-2.49 1.43-3.14 1.2a2 2 0 0 1-.45-.27c-.54-.45-.54-1.4-.54-3.31 0-1.9 0-2.86.54-3.31q.2-.17.45-.26c.65-.24 1.48.23 3.14 1.19"
+            d="M18.63 13.07c1.65.95 2.48 1.43 2.6 2.12q.05.26 0 .52c-.12.69-.95 1.17-2.6 2.12s-2.49 1.43-3.14 1.2a2 2 0 0 1-.45-.27c-.54-.45-.54-1.4-.54-3.31 0-1.9 0-2.86.54-3.31q.2-.17.45-.26c.65-.24 1.48.23 3.14 1.19"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
@@ -86,12 +129,12 @@ const IconPlaylist = forwardRef<SVGSVGElement, IconProps>(function IconPlaylist(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2.25 6c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3A.75.75 0 0 1 2.25 6m0 4c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75"
+              d="M2.25 5.33c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
           </g>
           <path
-            d="M18.88 14.12c1.65.95 2.48 1.43 2.6 2.12q.05.26 0 .52c-.12.69-.95 1.17-2.6 2.12s-2.49 1.43-3.14 1.2a2 2 0 0 1-.45-.27c-.54-.45-.54-1.4-.54-3.31 0-1.9 0-2.86.54-3.31q.2-.18.45-.26c.65-.24 1.48.23 3.14 1.19"
+            d="M18.88 13.45c1.65.95 2.48 1.43 2.6 2.12q.05.26 0 .52c-.12.69-.95 1.17-2.6 2.12s-2.49 1.43-3.14 1.2a2 2 0 0 1-.45-.27c-.54-.45-.54-1.4-.54-3.31 0-1.9 0-2.86.54-3.31q.2-.18.45-.26c.65-.24 1.48.23 3.14 1.19"
             fill="currentColor"
           />
         </svg>
@@ -111,11 +154,11 @@ const IconPlaylist = forwardRef<SVGSVGElement, IconProps>(function IconPlaylist(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M2.25 6c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3A.75.75 0 0 1 2.25 6m0 4c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75"
+            d="M2.25 5.33c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75"
             fill="currentColor"
           />
           <path
-            d="M18.88 14.12c1.65.95 2.48 1.43 2.6 2.12q.05.26 0 .52c-.12.69-.95 1.17-2.6 2.12s-2.49 1.43-3.14 1.2a2 2 0 0 1-.45-.27c-.54-.45-.54-1.4-.54-3.31 0-1.9 0-2.86.54-3.31q.2-.17.45-.26c.65-.24 1.48.23 3.14 1.19"
+            d="M18.88 13.45c1.65.95 2.48 1.43 2.6 2.12q.05.26 0 .52c-.12.69-.95 1.17-2.6 2.12s-2.49 1.43-3.14 1.2a2 2 0 0 1-.45-.27c-.54-.45-.54-1.4-.54-3.31 0-1.9 0-2.86.54-3.31q.2-.17.45-.26c.65-.24 1.48.23 3.14 1.19"
             fill="currentColor"
           />
         </svg>

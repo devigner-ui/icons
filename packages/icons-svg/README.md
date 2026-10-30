@@ -1,6 +1,6 @@
 # @devigner-ui/icons-svg
 
-The artwork of [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons) as plain SVG files. 2,147 symbols in outline, twotone, bold and bulk: 8,588 drawings, no framework, no build step.
+The artwork of [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons) as plain SVG files. 2,112 symbols in outline, twotone, bold, bulk and broken: 10,560 drawings, no framework, no build step.
 
 Use this when you are not in React: vanilla pages, a CDN `<img>`, a CSS background, a server-side template, a design tool.
 
@@ -26,7 +26,7 @@ In CSS, where you want the icon to follow the box rather than the text:
 }
 ```
 
-Paths are `svg/<style>/<Name>.svg`, where `<style>` is `outline`, `twotone`, `bold` or `bulk`, and `<Name>` is the icon name as it appears on [the site](https://icons.remidevigner.pro): `Add`, `ArrowLeft`, `ShoppingCart`.
+Paths are `svg/<style>/<Name>.svg`, where `<style>` is `outline`, `twotone`, `bold`, `bulk` or `broken`, and `<Name>` is the icon name as it appears on [the site](https://icons.devigner.cc): `Add`, `ArrowLeft`, `ShoppingCart`.
 
 ## Colour and weight
 

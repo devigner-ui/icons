@@ -23,7 +23,68 @@ const IconCalculator = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21 12c0 4.71 0 7.07-1.32 8.54S16.24 22 12 22s-6.36 0-7.68-1.46C3 19.07 3 16.7 3 12s0-7.07 1.32-8.54S7.76 2 12 2s6.36 0 7.68 1.46c.88.98 1.17 2.35 1.27 4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 8c0-.46 0-.7.05-.89a1.5 1.5 0 0 1 1.06-1.06C8.31 6 8.54 6 9 6h6c.46 0 .7 0 .89.05.52.14.92.54 1.06 1.06.05.2.05.43.05.89s0 .7-.05.89a1.5 1.5 0 0 1-1.06 1.06c-.2.05-.43.05-.89.05H9c-.46 0-.7 0-.89-.05a1.5 1.5 0 0 1-1.06-1.06C7 8.69 7 8.46 7 8Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <circle
+            cx="8"
+            cy="13"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="8"
+            cy="17"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="12"
+            cy="13"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="12"
+            cy="17"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="16"
+            cy="13"
+            r="1"
+            fill="currentColor"
+          />
+          <circle
+            cx="16"
+            cy="17"
+            r="1"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

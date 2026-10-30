@@ -1,1 +1,1 @@
-export { default, default as IconHappyemoji } from '../../icons/Happyemoji';
+export { default, default as IconHappyEmoji } from '../../icons/HappyEmoji';

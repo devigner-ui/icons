@@ -23,7 +23,49 @@ const IconHeadphonesSquare = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21 18v-6c0-3.75 0-5.62-.95-6.94a5 5 0 0 0-1.11-1.1C17.62 3 15.75 3 12 3h-2M3 18v-6c0-3.75 0-5.62.95-6.94a5 5 0 0 1 1.11-1.1q.42-.31.94-.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 15.5v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 15.5v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8 13.84c0-.76 0-1.14-.17-1.4q-.14-.21-.35-.33c-.27-.16-.63-.12-1.36-.05-1.24.12-1.85.18-2.3.52q-.33.25-.54.63C3 13.7 3 14.34 3 15.63v1.56c0 1.28 0 1.92.28 2.4q.16.3.4.5c.4.38 1 .5 2.21.74.85.16 1.27.25 1.59.07q.17-.1.3-.26c.22-.28.22-.73.22-1.63z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M16 13.84c0-.76 0-1.14.17-1.4q.14-.21.35-.33c.27-.16.63-.12 1.36-.05 1.24.12 1.85.18 2.3.52q.33.25.54.63c.28.49.28 1.13.28 2.42v1.56c0 1.28 0 1.92-.28 2.4q-.16.3-.4.5c-.4.38-1 .5-2.21.74-.85.16-1.27.25-1.59.07a1 1 0 0 1-.3-.26c-.22-.28-.22-.73-.22-1.63z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

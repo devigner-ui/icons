@@ -22,7 +22,7 @@ const IconLampOn = forwardRef<SVGSVGElement, IconProps>(function IconLampOn(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,35 @@ const IconLampOn = forwardRef<SVGSVGElement, IconProps>(function IconLampOn(
           {...rest}
         >
           <path
-            d="M8.97 18.04v-1.16c-2.3-1.39-4.19-4.1-4.19-6.98a7.92 7.92 0 0 1 14.96-3.64c2.09 4.2-.11 8.66-3.34 10.61v1.16c0 .29.11.96-.96.96H9.93c-1.1.01-.96-.42-.96-.95"
+            d="M19.07 6.27c2.09 4.2-.11 8.66-3.34 10.61v1.16c0 .29.1.96-.96.96H9.26c-1.1 0-.96-.43-.96-.96v-1.16C6 15.49 4.1 12.78 4.1 9.9A7.92 7.92 0 0 1 15.95 3"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.5 22a13 13 0 0 1 7 0"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8.3 18.04v-1.16C6 15.49 4.11 12.78 4.11 9.9a7.92 7.92 0 0 1 14.96-3.64c2.09 4.2-.11 8.66-3.34 10.61v1.16c0 .29.11.96-.96.96H9.26c-1.1.01-.96-.42-.96-.95"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,7 +72,7 @@ const IconLampOn = forwardRef<SVGSVGElement, IconProps>(function IconLampOn(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M9.17 22a13 13 0 0 1 7 0"
+            d="M8.5 22a13 13 0 0 1 7 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -66,11 +94,11 @@ const IconLampOn = forwardRef<SVGSVGElement, IconProps>(function IconLampOn(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M19.88 6.36a8.08 8.08 0 0 0-15.24 3.69c0 2.59 1.55 5.3 3.89 6.87v.83c-.01.28-.02.71.32 1.06s.87.4 1.28.4h5.13q.81 0 1.23-.43c.38-.39.37-.89.36-1.16v-.7c3.1-2.09 5.05-6.5 3.03-10.56"
+            d="M19.21 6.36a8.08 8.08 0 0 0-15.24 3.69c0 2.59 1.55 5.3 3.89 6.87v.83c-.01.28-.02.71.32 1.06s.87.4 1.28.4h5.13q.81 0 1.23-.43c.38-.39.37-.89.36-1.16v-.7c3.1-2.09 5.05-6.5 3.03-10.56"
             fill="currentColor"
           />
           <path
-            d="m15.93 22-.19-.03a11 11 0 0 0-6.13 0 .7.7 0 0 1-.86-.48.7.7 0 0 1 .48-.86c2.26-.64 4.64-.64 6.9 0a.7.7 0 0 1 .48.86.7.7 0 0 1-.68.51"
+            d="m15.26 22-.19-.03a11 11 0 0 0-6.13 0 .7.7 0 0 1-.86-.48.7.7 0 0 1 .48-.86c2.26-.64 4.64-.64 6.9 0a.7.7 0 0 1 .48.86.7.7 0 0 1-.68.51"
             fill="currentColor"
           />
         </svg>
@@ -88,11 +116,11 @@ const IconLampOn = forwardRef<SVGSVGElement, IconProps>(function IconLampOn(
           {...rest}
         >
           <path
-            d="M19.88 6.36a8.08 8.08 0 0 0-15.24 3.69c0 2.59 1.55 5.3 3.89 6.87v.83c-.01.28-.02.71.32 1.06s.87.4 1.28.4h5.13q.81 0 1.23-.43c.38-.39.37-.89.36-1.16v-.7c3.1-2.09 5.05-6.5 3.03-10.56"
+            d="M19.21 6.36a8.08 8.08 0 0 0-15.24 3.69c0 2.59 1.55 5.3 3.89 6.87v.83c-.01.28-.02.71.32 1.06s.87.4 1.28.4h5.13q.81 0 1.23-.43c.38-.39.37-.89.36-1.16v-.7c3.1-2.09 5.05-6.5 3.03-10.56"
             fill="currentColor"
           />
           <path
-            d="m15.93 22-.19-.03a11 11 0 0 0-6.13 0 .7.7 0 0 1-.86-.48.7.7 0 0 1 .48-.86c2.26-.64 4.64-.64 6.9 0a.7.7 0 0 1 .48.86.7.7 0 0 1-.68.51"
+            d="m15.26 22-.19-.03a11 11 0 0 0-6.13 0 .7.7 0 0 1-.86-.48.7.7 0 0 1 .48-.86c2.26-.64 4.64-.64 6.9 0a.7.7 0 0 1 .48.86.7.7 0 0 1-.68.51"
             fill="currentColor"
           />
         </svg>

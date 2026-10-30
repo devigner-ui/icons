@@ -23,7 +23,33 @@ const IconCloudMinus = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 14.35a5.7 5.7 0 0 1-4.5 5.52m-8.83-7.63a4.3 4.3 0 0 0-2.38-.71A4.26 4.26 0 0 0 2 15.76 4.26 4.26 0 0 0 6.29 20m8.1-10.97A5.8 5.8 0 0 1 18.15 9M7.11 11.6A5.68 5.68 0 0 1 12.48 4a5.7 5.7 0 0 1 5.68 5m0 0q1.03.37 1.84 1.05"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 20h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,13 +64,13 @@ const IconCloudMinus = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M6.29 19A4.26 4.26 0 0 1 2 14.76a4.26 4.26 0 0 1 5.12-4.15m7.26-2.58A5.8 5.8 0 0 1 18.16 8M7.12 10.6A5.68 5.68 0 0 1 12.48 3a5.7 5.7 0 0 1 5.68 5M7.12 10.6q.85.16 1.55.63M18.16 8A5.65 5.65 0 0 1 22 13.35a5.7 5.7 0 0 1-4.5 5.52"
+              d="M6.29 20A4.26 4.26 0 0 1 2 15.76a4.26 4.26 0 0 1 5.12-4.15m7.26-2.58A5.8 5.8 0 0 1 18.16 9M7.12 11.6A5.68 5.68 0 0 1 12.48 4a5.7 5.7 0 0 1 5.68 5M7.12 11.6q.85.16 1.55.63M18.16 9A5.65 5.65 0 0 1 22 14.35a5.7 5.7 0 0 1-4.5 5.52"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
-              d="M14 19h-4"
+              d="M14 20h-4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

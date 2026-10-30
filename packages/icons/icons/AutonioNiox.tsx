@@ -23,7 +23,52 @@ const IconAutonioNiox = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m12 5.86-2.57 4.28h5.14z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.57 11.86 6 16.14h5.14z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m15.43 11.86-2.57 4.28H18z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,23 +82,14 @@ const IconAutonioNiox = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m12.67 5.86-2.57 4.28h5.14z"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeMiterlimit="10"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              opacity={duotone ? "0.4" : "1"}
-              d="m9.24 11.86-2.57 4.28h5.14z"
+              d="m12 5.86-2.57 4.28h5.14z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -62,7 +98,16 @@ const IconAutonioNiox = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m16.1 11.86-2.57 4.28h5.14z"
+              d="M8.57 11.86 6 16.14h5.14z"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeMiterlimit="10"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              opacity={duotone ? "0.4" : "1"}
+              d="m15.43 11.86-2.57 4.28H18z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -85,24 +130,24 @@ const IconAutonioNiox = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M24.67 0h-24v24h24z"
+              d="M24 0H0v24h24z"
               fill="none"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               fill="currentColor"
             />
             <path
-              d="m12.46 6.21-2.13 3.55c-.1.17.02.38.21.38h4.26c.19 0 .31-.21.21-.38l-2.13-3.55a.24.24 0 0 0-.42 0"
+              d="M11.79 6.21 9.66 9.76c-.1.17.02.38.21.38h4.26c.19 0 .31-.21.21-.38l-2.13-3.55a.24.24 0 0 0-.42 0"
               fill="currentColor"
             />
             <path
-              d="M9.03 12.21 6.9 15.76c-.1.17.02.38.21.38h4.26c.19 0 .31-.21.21-.38l-2.13-3.55a.24.24 0 0 0-.42 0"
+              d="m8.36 12.21-2.13 3.55c-.1.17.02.38.21.38h4.26c.19 0 .31-.21.21-.38l-2.13-3.55a.24.24 0 0 0-.42 0"
               fill="currentColor"
             />
             <path
-              d="m15.88 12.21-2.13 3.55c-.1.17.02.38.21.38h4.26c.19 0 .31-.21.21-.38l-2.13-3.55c-.08-.16-.32-.16-.42 0"
+              d="m15.21 12.21-2.13 3.55c-.1.17.02.38.21.38h4.26c.19 0 .31-.21.21-.38l-2.13-3.55c-.08-.16-.32-.16-.42 0"
               fill="currentColor"
             />
           </svg>
@@ -120,7 +165,7 @@ const IconAutonioNiox = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m-1.3 14.14H7.11a.25.25 0 0 1-.21-.38l2.13-3.55c.1-.16.33-.16.43 0l2.13 3.55c.1.17-.02.38-.22.38m-.83-6a.25.25 0 0 1-.21-.38l2.13-3.55c.1-.16.33-.16.43 0l2.13 3.55c.1.17-.02.38-.21.38zm7.69 6h-4.26a.25.25 0 0 1-.21-.38l2.13-3.55c.1-.16.33-.16.43 0l2.13 3.55c.09.17-.03.38-.22.38"
+              d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m-1.3 14.14H6.44a.25.25 0 0 1-.21-.38l2.13-3.55c.1-.16.33-.16.43 0l2.13 3.55c.1.17-.02.38-.22.38m-.83-6a.25.25 0 0 1-.21-.38l2.13-3.55c.1-.16.33-.16.43 0l2.13 3.55c.1.17-.02.38-.21.38zm7.69 6H13.3a.25.25 0 0 1-.21-.38l2.13-3.55c.1-.16.33-.16.43 0l2.13 3.55c.09.17-.03.38-.22.38"
               fill="currentColor"
             />
           </svg>

@@ -1,5 +1,24 @@
 # @devigner-ui/icons-vue
 
+## 3.5.0
+
+### Minor Changes
+
+- Add eight keyboard-key icons: IconOption (⌥), IconEscape (⎋), IconTab (⇥), IconSpacebar, IconDeleteForward (⌦), IconEject (⏏), IconPageUp (⇞) and IconPageDown (⇟).
+- Move from 2.x to 3.5.0, so every Devigner Icons package shares one version and releases together. Nothing in the Vue package breaks.
+- Rename 654 icons so each name says what it draws: numbered, Alt and Minimalistic variants, misspellings, and names the drawing didn't match. `IconBag2` is now `IconBagStraps`. Every old name keeps working until 4.0.0.
+- Old names log one console warning in development naming the replacement.
+- Fold 50 icons that drew the same symbol as another into the icon they copied; the old names render that icon until 4.0.0 (`PlusCircle` renders `AddCircle`, `TickSquare` renders `CheckSquare`).
+- Redraw Bold and Bulk for 36 icons (Add, More, Undo, Redo, Sort, Shuffle and 30 more) so every style draws the same shape and Bold only changes the weight.
+- Move eight icons to the category they belong in, such as `CandlestickChart` into business analytics.
+- Ship `renames.json`, the full old-to-new list. `npx @devigner-ui/icons migrate` rewrites old names in a project.
+
+## 2.3.0
+
+### Minor Changes
+
+- 3b4e971: Add the Broken variant for icons that provide Broken artwork.
+
 ## 2.2.0
 
 ### Minor Changes

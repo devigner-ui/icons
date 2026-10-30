@@ -23,7 +23,75 @@ const IconStarShine = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 2v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 20v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 12h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 12h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m6 18 .34-.34"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17.66 6.34 18 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m18 18-.34-.34"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6.34 6.34 6 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15.27 14.63c.12 1.3.19 1.96-.2 2.25-.38.3-.96.03-2.1-.5l-.3-.14c-.33-.15-.5-.23-.67-.23s-.34.08-.66.23l-.3.14c-1.15.53-1.73.8-2.11.5-.39-.3-.32-.94-.2-2.25l.04-.34c.03-.37.05-.56 0-.73s-.17-.31-.41-.6l-.22-.25c-.84-.98-1.26-1.47-1.11-1.94.1-.34.46-.5 1.11-.68m2.44-1.39C11.2 7.57 11.53 7 12 7s.79.57 1.42 1.7l.17.3c.18.32.27.48.4.59.15.1.32.14.67.22l.32.08c1.23.27 1.84.41 2 .88.1.34-.1.7-.52 1.23"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

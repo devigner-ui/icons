@@ -22,7 +22,50 @@ const IconBlogger = forwardRef<SVGSVGElement, IconProps>(function IconBlogger(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 9v6q0 3 3 3h6q3 0 3-3v-3a1 1 0 0 0-1-1 1 1 0 0 1-1-1V9q0-3-3-3H9Q6 6 6 9Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            stroke="currentColor"
+          />
+          <path
+            d="M10 10h2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M10 14h4"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 12.83V15c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,14 +80,14 @@ const IconBlogger = forwardRef<SVGSVGElement, IconProps>(function IconBlogger(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M6.67 9v6q0 3 3 3h6q3 0 3-3v-3a1 1 0 0 0-1-1 1 1 0 0 1-1-1V9q0-3-3-3h-4q-3 0-3 3"
+            d="M6 9v6q0 3 3 3h6q3 0 3-3v-3a1 1 0 0 0-1-1 1 1 0 0 1-1-1V9q0-3-3-3H9Q6 6 6 9"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M10.67 10h2"
+            d="M10 10h2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -53,7 +96,7 @@ const IconBlogger = forwardRef<SVGSVGElement, IconProps>(function IconBlogger(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M10.67 14h4"
+            d="M10 14h4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -61,7 +104,7 @@ const IconBlogger = forwardRef<SVGSVGElement, IconProps>(function IconBlogger(
             strokeLinejoin="round"
           />
           <path
-            d="M15.67 22h-6c-5 0-7-2-7-7V9c0-5 2-7 7-7h6c5 0 7 2 7 7v6c0 5-2 7-7 7"
+            d="M15 22H9c-5 0-7-2-7-7V9c0-5 2-7 7-7h6c5 0 7 2 7 7v6c0 5-2 7-7 7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -83,16 +126,16 @@ const IconBlogger = forwardRef<SVGSVGElement, IconProps>(function IconBlogger(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
-            d="M17.67 11a1 1 0 0 1-1-1V9q0-3-3-3h-4q-3 0-3 3v6q0 3 3 3h6q3 0 3-3v-3a1 1 0 0 0-1-1m-7-1.75h2c.41 0 .75.34.75.75s-.34.75-.75.75h-2a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75m4 5.5h-4a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M17 11a1 1 0 0 1-1-1V9q0-3-3-3H9Q6 6 6 9v6q0 3 3 3h6q3 0 3-3v-3a1 1 0 0 0-1-1m-7-1.75h2c.41 0 .75.34.75.75s-.34.75-.75.75h-2a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75m4 5.5h-4a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M16.86 2H8.49C4.85 2 2.68 4.17 2.68 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2"
+            d="M16.19 2H7.82C4.18 2 2.01 4.17 2.01 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2"
             fill="currentColor"
           />
         </svg>
@@ -110,15 +153,15 @@ const IconBlogger = forwardRef<SVGSVGElement, IconProps>(function IconBlogger(
           {...rest}
         >
           <path
-            d="M14.67 13.25h-4a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h4c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75"
+            d="M14 13.25h-4a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h4c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75"
             fill="currentColor"
           />
           <path
-            d="M10.67 10.75h2c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-2a.76.76 0 0 0-.75.75c0 .41.34.75.75.75"
+            d="M10 10.75h2c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-2a.76.76 0 0 0-.75.75c0 .41.34.75.75.75"
             fill="currentColor"
           />
           <path
-            d="M16.86 2H8.49C4.85 2 2.68 4.17 2.68 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2m1.81 13q0 3-3 3h-6q-3 0-3-3V9q0-3 3-3h4q3 0 3 3v1a1 1 0 0 0 1 1 1 1 0 0 1 1 1z"
+            d="M16.19 2H7.82C4.18 2 2.01 4.17 2.01 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2M18 15q0 3-3 3H9q-3 0-3-3V9q0-3 3-3h4q3 0 3 3v1a1 1 0 0 0 1 1 1 1 0 0 1 1 1z"
             fill="currentColor"
           />
         </svg>

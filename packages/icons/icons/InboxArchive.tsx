@@ -23,7 +23,51 @@ const IconInboxArchive = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4 15h2.3a4 4 0 0 1 1.67.2c.36.16.63.46 1.18 1.05l.04.04c.5.56.76.83 1.1 1l.18.08c.34.13.72.13 1.48.13.71 0 1.07 0 1.4-.12l.18-.07c.31-.15.56-.4 1.07-.9l.23-.24c.58-.58.87-.87 1.23-1.02.37-.15.78-.15 1.6-.15H20"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 15v-1.5c0-.83.67-1.5 1.5-1.5h8.25m2.75 0c.83 0 1.5.67 1.5 1.5V15"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 14v-3.5C5 9.67 5.67 9 6.5 9H10m9 5v-3.5c0-.83-.67-1.5-1.5-1.5H14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5 11V7.5C5 6.67 5.67 6 6.5 6M19 11V7.5c0-.83-.67-1.5-1.5-1.5H9.25"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 12c0 4.71 0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46c.97.98 1.3 2.35 1.4 4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

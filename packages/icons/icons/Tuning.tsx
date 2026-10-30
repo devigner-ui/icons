@@ -22,7 +22,55 @@ const IconTuning = forwardRef<SVGSVGElement, IconProps>(function IconTuning(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14 14.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M4 9.5a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M7 13v5m0 3v1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 11V6m0-3V2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17 22v-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 2v4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -74,25 +122,25 @@ const IconTuning = forwardRef<SVGSVGElement, IconProps>(function IconTuning(
           {...rest}
         >
           <path
-            d="M13.75 14.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0"
+            d="M14 14.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0"
             fill="currentColor"
           />
-          <path d="M3.75 9.5a3 3 0 1 0 6 0 3 3 0 0 0-6 0" fill="currentColor" />
+          <path d="M4 9.5a3 3 0 1 0 6 0 3 3 0 0 0-6 0" fill="currentColor" />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="M7.46 6.58a3 3 0 0 0-1.5.03V2a.75.75 0 0 1 1.5 0z"
+              d="M7.71 6.58a3 3 0 0 0-1.5.03V2a.75.75 0 0 1 1.5 0z"
               fill="currentColor"
             />
             <path
-              d="M5.96 12.4a3 3 0 0 0 1.5.02V22a.75.75 0 0 1-1.5 0z"
+              d="M6.21 12.4a3 3 0 0 0 1.5.02V22a.75.75 0 0 1-1.5 0z"
               fill="currentColor"
             />
             <path
-              d="M15.96 17.4V22a.75.75 0 0 0 1.5 0v-4.58a3 3 0 0 1-1.5-.03"
+              d="M16.21 17.4V22a.75.75 0 0 0 1.5 0v-4.58a3 3 0 0 1-1.5-.03"
               fill="currentColor"
             />
             <path
-              d="M17.46 11.58V2a.75.75 0 0 0-1.5 0v9.6a3 3 0 0 1 1.5-.02"
+              d="M17.71 11.58V2a.75.75 0 0 0-1.5 0v9.6a3 3 0 0 1 1.5-.02"
               fill="currentColor"
             />
           </g>

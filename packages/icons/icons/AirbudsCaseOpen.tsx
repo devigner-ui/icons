@@ -23,7 +23,42 @@ const IconAirbudsCaseOpen = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3.95 19.94a5 5 0 0 0 1.11 1.1C6.38 22 8.25 22 12 22s5.62 0 6.94-.95a5 5 0 0 0 1.1-1.11C21 18.62 21 16.75 21 13v-.17c0-.78 0-1.17-.2-1.44l-.2-.18c-.26-.21-.65-.21-1.43-.21H4.83c-.78 0-1.17 0-1.44.2l-.18.2c-.21.26-.21.65-.21 1.43V13q0 1.75.03 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M3.5 5.94V4.62A2.6 2.6 0 0 1 6.13 2a4.37 4.37 0 0 1 4.37 4.38V11H6.8V9.24a.8.8 0 0 0-.83-.83A2.47 2.47 0 0 1 3.5 5.94Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M20.5 5.94V4.62A2.63 2.63 0 0 0 17.88 2a4.4 4.4 0 0 0-4.38 4.38V11h3.7V9.24c0-.46.37-.83.83-.83 1.36 0 2.47-1.1 2.47-2.47Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M8 11c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

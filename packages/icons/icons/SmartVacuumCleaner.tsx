@@ -23,7 +23,49 @@ const IconSmartVacuumCleaner = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15 9a3 3 0 1 0-3 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16.5 20.74a3 3 0 0 0 4.24-4.24"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M7.5 20.74a3 3 0 0 1-4.24-4.24"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 18v-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M7 3.34A10 10 0 1 1 3.34 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -81,22 +123,22 @@ const IconSmartVacuumCleaner = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m16.44 19.43-1 1.11.56.5a3.74 3.74 0 0 0 6.25-2.79c0-.96-.36-1.84-.95-2.5l-.5-.56-1.12 1z"
+              d="m16.44 19.58-1 1.11.56.5a3.74 3.74 0 0 0 6.25-2.79c0-.96-.36-1.84-.95-2.5l-.5-.56-1.12 1z"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m7.56 19.43 1 1.11-.56.5a3.74 3.74 0 0 1-6.25-2.79c0-.96.36-1.84.95-2.5l.5-.56 1.12 1z"
+              d="m7.56 19.58 1 1.11-.56.5a3.74 3.74 0 0 1-6.25-2.79c0-.96.36-1.84.95-2.5l.5-.56 1.12 1z"
               fill="currentColor"
             />
             <path
-              d="M12 6.5a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5"
+              d="M12 6.65a2.25 2.25 0 1 0 0 4.5 2.25 2.25 0 0 0 0-4.5"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M22 11.75a10 10 0 1 1-20 0 10 10 0 0 1 20 0m-13.75-3a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0m4.5 7a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0z"
+              d="M22 11.9a10 10 0 1 1-20 0 10 10 0 0 1 20 0m-13.75-3a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0m4.5 7a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0z"
               fill="currentColor"
             />
           </svg>

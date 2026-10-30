@@ -23,7 +23,68 @@ const IconTransmission = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M6 20a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M14 20a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M14 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M22 4a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M12 6v7m0 5v-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M4 18v-7m0-5v2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 6v2c0 1.89 0 2.83-.59 3.41-.58.59-1.52.59-3.41.59h-6m-6 0h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18 15v-.75a.75.75 0 0 0-.75.75zm-.75 7a.75.75 0 0 0 1.5 0zm4.11.4a.75.75 0 1 0 1.28-.8zM18 15.74h2.29v-1.5H18zm.75 2.75V15h-1.5v3.5zm2.5-1.75c0 .57-.45 1-.96 1v1.5a2.5 2.5 0 0 0 2.46-2.5zm-.96-1c.51 0 .96.43.96 1h1.5c0-1.37-1.09-2.5-2.46-2.5zm0 2h-.43v1.5h.43zm-.43 0H18v1.5h1.86zm-.64 1.14 2.14 3.5 1.28-.78-2.14-3.5zm-1.97-.39V22h1.5v-3.5z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -85,14 +146,14 @@ const IconTransmission = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M2 4a2 2 0 1 1 2.75 1.86v5.39h6.5v-5.4a2 2 0 1 1 1.5 0v5.4H16c.96 0 1.61 0 2.1-.07.46-.06.65-.17.78-.3s.24-.32.3-.78c.07-.49.07-1.14.07-2.1V5.86a2 2 0 1 1 1.5 0v2.2q.02 1.35-.08 2.23c-.08.63-.27 1.2-.73 1.66s-1.02.64-1.65.72q-.89.1-2.24.08h-3.3v5.4a2 2 0 1 1-1.5 0v-5.4h-6.5v5.4a2 2 0 1 1-1.5 0V5.85A2 2 0 0 1 2 4"
+              d="M1.6 3.6a2 2 0 1 1 2.75 1.86v5.39h6.5v-5.4a2 2 0 1 1 1.5 0v5.4h3.25c.96 0 1.61 0 2.1-.07.46-.06.65-.17.78-.3s.24-.32.3-.78c.07-.49.07-1.14.07-2.1V5.46a2 2 0 1 1 1.5 0v2.2q.02 1.35-.08 2.23c-.08.63-.27 1.2-.73 1.66s-1.02.64-1.65.72q-.89.1-2.24.08h-3.3v5.4a2 2 0 1 1-1.5 0v-5.4h-6.5v5.4a2 2 0 1 1-1.5 0V5.45A2 2 0 0 1 1.6 3.6"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M17.25 15c0-.41.34-.75.75-.75h2.29a2.5 2.5 0 0 1 2.46 2.5 2.5 2.5 0 0 1-1.64 2.36l1.53 2.5a.75.75 0 1 1-1.28.78l-1.92-3.14h-.69V22a.75.75 0 0 1-1.5 0zm1.5 2.75h1.54c.51 0 .96-.43.96-1s-.45-1-.96-1h-1.54z"
+              d="M16.85 14.6c0-.41.34-.75.75-.75h2.29a2.5 2.5 0 0 1 2.46 2.5 2.5 2.5 0 0 1-1.64 2.36l1.53 2.5a.75.75 0 1 1-1.28.78l-1.92-3.14h-.69v2.75a.75.75 0 0 1-1.5 0zm1.5 2.75h1.54c.51 0 .96-.43.96-1s-.45-1-.96-1h-1.54z"
               fill="currentColor"
             />
           </svg>
@@ -110,13 +171,13 @@ const IconTransmission = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M2 4a2 2 0 1 1 2.75 1.86v5.39h6.5v-5.4a2 2 0 1 1 1.5 0v5.4H16c.96 0 1.61 0 2.1-.07.46-.06.65-.17.78-.3s.24-.32.3-.78c.07-.49.07-1.14.07-2.1V5.86a2 2 0 1 1 1.5 0v2.2q.02 1.35-.08 2.23c-.08.63-.27 1.2-.73 1.66s-1.02.64-1.65.72q-.89.1-2.24.08h-3.3v5.4a2 2 0 1 1-1.5 0v-5.4h-6.5v5.4a2 2 0 1 1-1.5 0V5.85A2 2 0 0 1 2 4"
+              d="M1.6 3.6a2 2 0 1 1 2.75 1.86v5.39h6.5v-5.4a2 2 0 1 1 1.5 0v5.4h3.25c.96 0 1.61 0 2.1-.07.46-.06.65-.17.78-.3s.24-.32.3-.78c.07-.49.07-1.14.07-2.1V5.46a2 2 0 1 1 1.5 0v2.2q.02 1.35-.08 2.23c-.08.63-.27 1.2-.73 1.66s-1.02.64-1.65.72q-.89.1-2.24.08h-3.3v5.4a2 2 0 1 1-1.5 0v-5.4h-6.5v5.4a2 2 0 1 1-1.5 0V5.45A2 2 0 0 1 1.6 3.6"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M17.25 15c0-.41.34-.75.75-.75h2.29a2.5 2.5 0 0 1 2.46 2.5 2.5 2.5 0 0 1-1.64 2.36l1.53 2.5a.75.75 0 1 1-1.28.78l-1.92-3.14h-.69V22a.75.75 0 0 1-1.5 0zm1.5 2.75h1.54c.51 0 .96-.43.96-1s-.45-1-.96-1h-1.54z"
+              d="M16.85 14.6c0-.41.34-.75.75-.75h2.29a2.5 2.5 0 0 1 2.46 2.5 2.5 2.5 0 0 1-1.64 2.36l1.53 2.5a.75.75 0 1 1-1.28.78l-1.92-3.14h-.69v2.75a.75.75 0 0 1-1.5 0zm1.5 2.75h1.54c.51 0 .96-.43.96-1s-.45-1-.96-1h-1.54z"
               fill="currentColor"
             />
           </svg>

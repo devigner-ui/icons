@@ -23,7 +23,52 @@ const IconFolderPathConnect = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16.5 7.5h-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 20h-8M2 20h8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 18v-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <circle
+            cx="12"
+            cy="20"
+            r="2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M5 5.22c0-.58 0-.86.05-1.1a2.7 2.7 0 0 1 2.23-2.07C7.54 2 7.85 2 8.46 2l.54.01a3 3 0 0 1 1.91.93l.39.36c.57.53.86.8 1.2.97q.29.15.6.23c.37.1.77.1 1.58.1h.26c1.84 0 2.77 0 3.36.5l.16.15c.44.45.52 1.1.54 2.25m0 3.6c-.03 1.61-.16 2.53-.82 3.14-.82.76-2.14.76-4.78.76h-2.8c-2.64 0-3.96 0-4.78-.76S5 12.25 5 9.8V8.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -23,7 +23,39 @@ const IconSquareAcademicCap = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.78 3.5a5.2 5.2 0 0 1 4.44 0l6.69 3.14c1.45.68 1.45 3.04 0 3.72l-6.7 3.14a5.2 5.2 0 0 1-4.43 0L3.1 10.36c-1.45-.68-1.45-3.04 0-3.72L6 5.27"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 8.5V14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 21c-1.8 0-4.15-1.12-5.61-1.93A2.8 2.8 0 0 1 5 16.63V11.5m14 0v5.13c0 1-.5 1.95-1.39 2.44q-.81.45-1.86.93"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

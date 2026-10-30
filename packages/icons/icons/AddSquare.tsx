@@ -23,7 +23,33 @@ const IconAddSquare = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15 12h-3m0 0H9m3 0V9m0 3v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 12c0 4.71 0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46c.97.98 1.3 2.35 1.4 4.54"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,14 +64,14 @@ const IconAddSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M8.67 12h8"
+                d="M8 12h8"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M12.67 16V8"
+                d="M12 16V8"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
@@ -53,7 +79,7 @@ const IconAddSquare = forwardRef<SVGSVGElement, IconProps>(
               />
             </g>
             <path
-              d="M9.67 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7h-6c-5 0-7 2-7 7v6c0 5 2 7 7 7"
+              d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -75,11 +101,11 @@ const IconAddSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.86 2H8.48C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.65 2.17 5.82 5.81 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2"
+              d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2"
               fill="currentColor"
             />
             <path
-              d="M16.67 11.25h-3.25V8a.76.76 0 0 0-.75-.75.76.76 0 0 0-.75.75v3.25H8.67a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h3.25V16c0 .41.34.75.75.75s.75-.34.75-.75v-3.25h3.25c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75"
+              d="M16 11.25h-3.25V8a.76.76 0 0 0-.75-.75.76.76 0 0 0-.75.75v3.25H8a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h3.25V16c0 .41.34.75.75.75s.75-.34.75-.75v-3.25H16c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75"
               fill="currentColor"
             />
           </svg>
@@ -97,7 +123,7 @@ const IconAddSquare = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.86 2H8.48C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.65 2.17 5.82 5.81 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2m-.19 10.75h-3.25V16c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75v-3.25H8.67a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3.25V8c0-.41.34-.75.75-.75s.75.34.75.75v3.25h3.25c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2M16 12.75h-3.25V16c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75v-3.25H8a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3.25V8c0-.41.34-.75.75-.75s.75.34.75.75v3.25H16c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
           </svg>

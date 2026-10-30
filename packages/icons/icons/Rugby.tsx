@@ -22,7 +22,33 @@ const IconRugby = forwardRef<SVGSVGElement, IconProps>(function IconRugby(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5.38 5.38c-2.13 2.13-3 5.2-3.27 8.08M13.46 2.1c1.67-.16 3.28-.12 4.6-.02a4.14 4.14 0 0 1 3.85 3.84c.1 1.33.14 2.94-.02 4.61M13.46 2.1l8.43 8.43M13.46 2.1c-1.5.14-3.03.44-4.46 1m12.89 7.43c-.28 2.89-1.14 5.95-3.27 8.08M15 20.9c-1.43.55-2.97.85-4.46.99-1.67.16-3.28.12-4.6.02a4.14 4.14 0 0 1-3.85-3.84c-.1-1.33-.14-2.94.02-4.61m8.43 8.43-8.43-8.43"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m15.31 8.69-6.62 6.62m0-2.84 2.84 2.84m-.95-4.73 2.84 2.84m-.95-4.73 2.84 2.84"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

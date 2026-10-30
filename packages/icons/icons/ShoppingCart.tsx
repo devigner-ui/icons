@@ -23,7 +23,61 @@ const IconShoppingCart = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5 13.97A2.8 2.8 0 0 0 7.8 17h10.64c1.44 0 2.7-1.18 2.81-2.61l.54-7.5a2.77 2.77 0 0 0-2.8-3.01H6.06"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2.25 2h1.74c1.08 0 1.93.93 1.84 2l-.5 6.05"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M17.75 20.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9.75 20.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9.25 8h12"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +91,7 @@ const IconShoppingCart = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M2.67 2h1.74c1.08 0 1.93.93 1.84 2l-.83 9.96a2.8 2.8 0 0 0 2.79 3.03h10.65c1.44 0 2.7-1.18 2.81-2.61l.54-7.5a2.77 2.77 0 0 0-2.81-3.01H6.49"
+              d="M2.22 2h1.74c1.08 0 1.93.93 1.84 2l-.83 9.96a2.8 2.8 0 0 0 2.79 3.03h10.65c1.44 0 2.7-1.18 2.81-2.61l.54-7.5a2.77 2.77 0 0 0-2.81-3.01H6.04"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -46,7 +100,7 @@ const IconShoppingCart = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.92 22a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5"
+              d="M16.47 22a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -55,7 +109,7 @@ const IconShoppingCart = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M8.92 22a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5"
+              d="M8.47 22a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -64,7 +118,7 @@ const IconShoppingCart = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M9.67 8h12"
+              d="M9.22 8h12"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -86,20 +140,20 @@ const IconShoppingCart = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.92 22.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5"
+              d="M16.92 22.65a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5"
               fill="currentColor"
             />
             <path
-              d="M8.92 22.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5"
+              d="M8.92 22.65a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m5.51 3.94-.2 2.45a.8.8 0 0 0 .8.86h15.31a.8.8 0 0 0 .8-.74 2.96 2.96 0 0 0-2.99-3.21H6.96q-.15-.67-.61-1.21a2.6 2.6 0 0 0-1.91-.84H2.67a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h1.74q.48.01.81.35.32.36.29.84"
+              d="m5.51 4.09-.2 2.45a.8.8 0 0 0 .8.86h15.31a.8.8 0 0 0 .8-.74 2.96 2.96 0 0 0-2.99-3.21H6.96q-.15-.67-.61-1.21a2.6 2.6 0 0 0-1.91-.84H2.67a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h1.74q.48.01.81.35.32.36.29.84"
               fill="currentColor"
             />
             <path
-              d="M21.18 8.75H5.84a.8.8 0 0 0-.8.73l-.36 4.35A2.93 2.93 0 0 0 7.59 17h11.12a3 3 0 0 0 2.93-2.73l.33-4.67a.8.8 0 0 0-.79-.85"
+              d="M21.18 8.9H5.84a.8.8 0 0 0-.8.73l-.36 4.35a2.93 2.93 0 0 0 2.91 3.17h11.12a3 3 0 0 0 2.93-2.73l.33-4.67a.8.8 0 0 0-.79-.85"
               fill="currentColor"
             />
           </svg>
@@ -117,19 +171,19 @@ const IconShoppingCart = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.92 22.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5"
+              d="M16.92 22.65a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5"
               fill="currentColor"
             />
             <path
-              d="M8.92 22.5a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5"
+              d="M8.92 22.65a1.75 1.75 0 1 0 0-3.5 1.75 1.75 0 0 0 0 3.5"
               fill="currentColor"
             />
             <path
-              d="m5.51 3.94-.2 2.45a.8.8 0 0 0 .8.86h15.31a.8.8 0 0 0 .8-.74 2.96 2.96 0 0 0-2.99-3.21H6.94q-.15-.67-.61-1.21c-.5-.53-1.2-.84-1.92-.84H2.67a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h1.74q.48.01.81.35.32.36.29.84"
+              d="m5.51 4.09-.2 2.45a.8.8 0 0 0 .8.86h15.31a.8.8 0 0 0 .8-.74 2.96 2.96 0 0 0-2.99-3.21H6.94q-.15-.67-.61-1.21c-.5-.53-1.2-.84-1.92-.84H2.67a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h1.74q.48.01.81.35.32.36.29.84"
               fill="currentColor"
             />
             <path
-              d="M21.18 8.75H5.84a.8.8 0 0 0-.8.73l-.36 4.35A2.9 2.9 0 0 0 7.59 17h11.12a3 3 0 0 0 2.93-2.73l.33-4.67a.8.8 0 0 0-.79-.85"
+              d="M21.18 8.9H5.84a.8.8 0 0 0-.8.73l-.36 4.35a2.9 2.9 0 0 0 2.91 3.17h11.12a3 3 0 0 0 2.93-2.73l.33-4.67a.8.8 0 0 0-.79-.85"
               fill="currentColor"
             />
           </svg>

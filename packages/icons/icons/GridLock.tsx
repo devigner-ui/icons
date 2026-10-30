@@ -22,7 +22,7 @@ const IconGridLock = forwardRef<SVGSVGElement, IconProps>(function IconGridLock(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,70 @@ const IconGridLock = forwardRef<SVGSVGElement, IconProps>(function IconGridLock(
           {...rest}
         >
           <path
-            d="M22.67 11V9c0-5-2-7-7-7h-6c-5 0-7 2-7 7v6c0 5 2 7 7 7h1"
+            d="M22 11V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7h1"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M5.03 8.5H22"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2.03 15.5H12"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.51 21.99V2.01"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15.51 11.99V2.01"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15.6 17.2v-.8c0-1.33.4-2.4 2.4-2.4s2.4 1.07 2.4 2.4v.8"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M20 22h-4c-1.6 0-2-.4-2-2v-.8c0-1.6.4-2 2-2h4c1.6 0 2 .4 2 2v.8c0 1.6-.4 2-2 2Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 11V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7h1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,28 +107,28 @@ const IconGridLock = forwardRef<SVGSVGElement, IconProps>(function IconGridLock(
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="M2.7 8.5h19.97"
+              d="M2.03 8.5H22"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M2.7 15.5h9.97"
+              d="M2.03 15.5H12"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M9.18 21.99V2.01"
+              d="M8.51 21.99V2.01"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M16.18 11.99V2.01"
+              d="M15.51 11.99V2.01"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -73,14 +136,14 @@ const IconGridLock = forwardRef<SVGSVGElement, IconProps>(function IconGridLock(
             />
           </g>
           <path
-            d="M16.27 17.2v-.8c0-1.33.4-2.4 2.4-2.4s2.4 1.07 2.4 2.4v.8"
+            d="M15.6 17.2v-.8c0-1.33.4-2.4 2.4-2.4s2.4 1.07 2.4 2.4v.8"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M20.67 22h-4c-1.6 0-2-.4-2-2v-.8c0-1.6.4-2 2-2h4c1.6 0 2 .4 2 2v.8c0 1.6-.4 2-2 2"
+            d="M20 22h-4c-1.6 0-2-.4-2-2v-.8c0-1.6.4-2 2-2h4c1.6 0 2 .4 2 2v.8c0 1.6-.4 2-2 2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -101,33 +164,33 @@ const IconGridLock = forwardRef<SVGSVGElement, IconProps>(function IconGridLock(
           {...rest}
         >
           <path
-            d="M22.2 17.31v-.16q-.01-2.9-2.9-2.9-2.89.01-2.9 2.9v.16c-1.05.26-1.47.98-1.47 2.42v.74c0 1.85.69 2.53 2.53 2.53h3.68c1.85 0 2.53-.69 2.53-2.53v-.74c0-1.43-.42-2.16-1.47-2.42m-2.91-1.68c1.29 0 1.52.49 1.52 1.52v.05h-3.04v-.05c0-1.03.23-1.52 1.52-1.52"
+            d="M21.05 16.64v-.16q-.01-2.9-2.9-2.9-2.89.01-2.9 2.9v.16c-1.05.26-1.47.98-1.47 2.42v.74c0 1.85.69 2.53 2.53 2.53h3.68c1.85 0 2.53-.69 2.53-2.53v-.74c0-1.43-.42-2.16-1.47-2.42m-2.91-1.68c1.29 0 1.52.49 1.52 1.52v.05h-3.04v-.05c0-1.03.23-1.52 1.52-1.52"
             fill="currentColor"
           />
           <path
-            d="M9.06 2.17v6.45H2.6v-.68c0-3.61 2.15-5.76 5.76-5.76z"
+            d="M7.91 1.5v6.45H1.45v-.68c0-3.61 2.15-5.76 5.76-5.76z"
             fill="currentColor"
           />
           <path
-            d="M22.44 7.93c0 .38-.31.68-.68.68h-5.75V2.16h.67a5.8 5.8 0 0 1 5.76 5.77"
+            d="M21.29 7.26c0 .38-.31.68-.68.68h-5.75V1.49h.67a5.8 5.8 0 0 1 5.76 5.77"
             fill="currentColor"
           />
           <path
-            d="M9.06 15.55v5.76c0 .38-.31.68-.68.68h-.01a5.76 5.76 0 0 1-5.76-5.76v-.68z"
-            fill="currentColor"
-          />
-          <path
-            opacity={duotone ? "0.4" : "1"}
-            d="M9.07 8.61H2.61v6.94h6.46z"
-            fill="currentColor"
-          />
-          <path
-            d="M16 8.61v5.94a1 1 0 0 1-1 1H9.06V8.61z"
+            d="M7.91 14.88v5.76c0 .38-.31.68-.68.68h-.01a5.76 5.76 0 0 1-5.76-5.76v-.68z"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M16 2.17H9.06v6.45H16z"
+            d="M7.92 7.94H1.46v6.94h6.46z"
+            fill="currentColor"
+          />
+          <path
+            d="M14.85 7.94v5.94a1 1 0 0 1-1 1H7.91V7.94z"
+            fill="currentColor"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M14.85 1.5H7.91v6.45h6.94z"
             fill="currentColor"
           />
         </svg>
@@ -145,31 +208,31 @@ const IconGridLock = forwardRef<SVGSVGElement, IconProps>(function IconGridLock(
           {...rest}
         >
           <path
-            d="M22.2 17.31v-.16q-.01-2.9-2.9-2.9-2.89.01-2.9 2.9v.16c-1.05.26-1.47.98-1.47 2.42v.74c0 1.85.69 2.53 2.53 2.53h3.68c1.85 0 2.53-.69 2.53-2.53v-.74c0-1.43-.42-2.16-1.47-2.42m-2.91-1.68c1.29 0 1.52.49 1.52 1.52v.05h-3.04v-.05c0-1.03.23-1.52 1.52-1.52"
+            d="M21.05 16.81v-.16q-.01-2.9-2.9-2.9-2.89.01-2.9 2.9v.16c-1.05.26-1.47.98-1.47 2.42v.74c0 1.85.69 2.53 2.53 2.53h3.68c1.85 0 2.53-.69 2.53-2.53v-.74c0-1.43-.42-2.16-1.47-2.42m-2.91-1.68c1.29 0 1.52.49 1.52 1.52v.05h-3.04v-.05c0-1.03.23-1.52 1.52-1.52"
             fill="currentColor"
           />
           <path
-            d="M7.42 2.07c.55-.08 1 .38 1 .94V6.8a1 1 0 0 1-1 1H3.67c-.55 0-1-.45-.94-1a5.1 5.1 0 0 1 4.69-4.73"
+            d="M6.27 1.57c.55-.08 1 .38 1 .94V6.3a1 1 0 0 1-1 1H2.52c-.55 0-1-.45-.94-1a5.1 5.1 0 0 1 4.69-4.73"
             fill="currentColor"
           />
           <path
-            d="M21.6 7.8h-3.68a1 1 0 0 1-1-1V3c0-.55.45-1 1-.93 2.64.34 4.31 2 4.68 4.61a1 1 0 0 1-1 1.12"
+            d="M20.45 7.3h-3.68a1 1 0 0 1-1-1V2.5c0-.55.45-1 1-.93 2.64.34 4.31 2 4.68 4.61a1 1 0 0 1-1 1.12"
             fill="currentColor"
           />
           <path
-            d="M7.42 16.3a1 1 0 0 1 1 1v3.62a1 1 0 0 1-1.13 1 5.06 5.06 0 0 1-4.55-4.61c-.07-.55.39-1.01.94-1.01z"
+            d="M6.27 15.8a1 1 0 0 1 1 1v3.62a1 1 0 0 1-1.13 1 5.06 5.06 0 0 1-4.55-4.61c-.07-.55.39-1.01.94-1.01z"
             fill="currentColor"
           />
           <path
-            d="M8.42 10.3a1 1 0 0 0-1-1H3.67a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.75a1 1 0 0 0 1-1z"
+            d="M7.27 9.8a1 1 0 0 0-1-1H2.52a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.75a1 1 0 0 0 1-1z"
             fill="currentColor"
           />
           <path
-            d="M15.42 10.3a1 1 0 0 0-1-1h-3.5a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1z"
+            d="M14.27 9.8a1 1 0 0 0-1-1h-3.5a1 1 0 0 0-1 1v3.5a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1z"
             fill="currentColor"
           />
           <path
-            d="M15.42 3a1 1 0 0 0-1-1h-3.5a1 1 0 0 0-1 1v3.8a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1z"
+            d="M14.27 2.5a1 1 0 0 0-1-1h-3.5a1 1 0 0 0-1 1v3.8a1 1 0 0 0 1 1h3.5a1 1 0 0 0 1-1z"
             fill="currentColor"
           />
         </svg>

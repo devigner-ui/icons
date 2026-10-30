@@ -22,7 +22,32 @@ const IconHistory = forwardRef<SVGSVGElement, IconProps>(function IconHistory(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 8v4l2.5 2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m5.6 5.6-.53-.53v0zM4.34 6.87h-.75c0 .42.33.75.74.75zm2.54.76a.75.75 0 1 0 0-1.5zm-1.8-3.3a.75.75 0 0 0-1.5 0zM3.75 12a.75.75 0 0 0-1.5 0zm13.13 8.45a.75.75 0 1 0-.76-1.3zm2.27-4.33a.75.75 0 1 0 1.3.76zM5.14 5.07A.75.75 0 1 0 6.2 6.14zm13.72.07a9.75 9.75 0 0 0-13.79-.07l1.06 1.06a8.25 8.25 0 0 1 11.67.07zM5.07 5.07 3.81 6.34 4.87 7.4l1.26-1.27zm-.74 2.55 2.55.01v-1.5H4.35zm.76-.75-.01-2.55h-1.5v2.55zM12 3.75c4.56 0 8.25 3.7 8.25 8.25h1.5A9.75 9.75 0 0 0 12 2.25zm0 16.5A8.25 8.25 0 0 1 3.75 12h-1.5A9.75 9.75 0 0 0 12 21.75zm4.12-1.1a8 8 0 0 1-4.12 1.1v1.5a9.7 9.7 0 0 0 4.88-1.3zM20.25 12c0 1.5-.4 2.91-1.1 4.12l1.3.76a9.7 9.7 0 0 0 1.3-4.88zM6.2 6.14A8.2 8.2 0 0 1 12 3.75v-1.5a9.7 9.7 0 0 0-6.86 2.82z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

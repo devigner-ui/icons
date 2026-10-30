@@ -23,7 +23,45 @@ const IconLetterOpened = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 14c0 3.77 0 5.66-1.17 6.83S17.77 22 14 22h-4c-3.77 0-5.66 0-6.83-1.17S2 17.77 2 14s0-5.66 1.17-6.83C3.82 6.52 4.7 6.23 6 6.1m12 0c1.3.13 2.18.42 2.83 1.07S21.77 8.7 21.9 10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M10 6h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11 9h2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 2c1.7.02 2.65.11 3.27.73C18 3.46 18 4.64 18 7v2.06c0 .46 0 .7-.1.9-.09.2-.27.34-.62.64l-.72.6M10 2c-1.7.02-2.65.11-3.27.73C6 3.46 6 4.64 6 7v2.06c0 .46 0 .7.1.9.09.2.27.34.62.64l1.44 1.2C10 13.33 10.9 14.1 12 14.1c.65 0 1.24-.28 2-.83"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

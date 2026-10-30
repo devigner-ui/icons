@@ -22,7 +22,7 @@ const IconFtxToken = forwardRef<SVGSVGElement, IconProps>(function IconFtxToken(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,53 @@ const IconFtxToken = forwardRef<SVGSVGElement, IconProps>(function IconFtxToken(
           {...rest}
         >
           <path
-            d="M21.67 2h-12a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1"
+            d="M21 2H9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7 17h5v5H7z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 9.5h5v5H2z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M17 14.36h1V9.64H9.5v4.72h3.42"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M21 2H9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -44,7 +90,7 @@ const IconFtxToken = forwardRef<SVGSVGElement, IconProps>(function IconFtxToken(
             strokeLinejoin="round"
           />
           <path
-            d="M12.67 17h-5v5h5z"
+            d="M12 17H7v5h5z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -53,7 +99,7 @@ const IconFtxToken = forwardRef<SVGSVGElement, IconProps>(function IconFtxToken(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M7.67 9.5h-5v5h5z"
+            d="M7 9.5H2v5h5z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -62,7 +108,7 @@ const IconFtxToken = forwardRef<SVGSVGElement, IconProps>(function IconFtxToken(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M18.67 9.64h-8.5v4.72h8.5z"
+            d="M18 9.64H9.5v4.72H18z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -83,23 +129,23 @@ const IconFtxToken = forwardRef<SVGSVGElement, IconProps>(function IconFtxToken(
           {...a11y}
           {...rest}
         >
-          <path d="M24.67 0h-24v24h24z" fill="none" />
+          <path d="M24 0H0v24h24z" fill="none" />
           <path
-            d="M21.67 2h-12a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1"
+            d="M21 2H9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1"
             fill="currentColor"
           />
           <path
-            d="M11.67 17h-3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"
-            fill="currentColor"
-          />
-          <path
-            opacity={duotone ? "0.4" : "1"}
-            d="M6.67 9.5h-3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"
+            d="M11 17H8a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M17.67 9.64h-6.5a1 1 0 0 0-1 1v2.72a1 1 0 0 0 1 1h6.5a1 1 0 0 0 1-1v-2.72a1 1 0 0 0-1-1"
+            d="M6 9.5H3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"
+            fill="currentColor"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M17 9.64h-6.5a1 1 0 0 0-1 1v2.72a1 1 0 0 0 1 1H17a1 1 0 0 0 1-1v-2.72a1 1 0 0 0-1-1"
             fill="currentColor"
           />
         </svg>
@@ -117,19 +163,19 @@ const IconFtxToken = forwardRef<SVGSVGElement, IconProps>(function IconFtxToken(
           {...rest}
         >
           <path
-            d="M21.67 2h-12a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1"
+            d="M21 2H9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1"
             fill="currentColor"
           />
           <path
-            d="M11.67 17h-3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"
+            d="M11 17H8a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"
             fill="currentColor"
           />
           <path
-            d="M6.67 9.5h-3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"
+            d="M6 9.5H3a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1"
             fill="currentColor"
           />
           <path
-            d="M17.67 9.64h-6.5a1 1 0 0 0-1 1v2.72a1 1 0 0 0 1 1h6.5a1 1 0 0 0 1-1v-2.72a1 1 0 0 0-1-1"
+            d="M17 9.64h-6.5a1 1 0 0 0-1 1v2.72a1 1 0 0 0 1 1H17a1 1 0 0 0 1-1v-2.72a1 1 0 0 0-1-1"
             fill="currentColor"
           />
         </svg>

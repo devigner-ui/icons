@@ -23,7 +23,54 @@ const IconStickerSmileCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8.91 15.93a8 8 0 0 0 3.36.1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <ellipse
+            cx="14.5094"
+            cy="9.77405"
+            rx="1"
+            ry="1.5"
+            transform="rotate(-15 14.5094 9.77405)"
+            fill="currentColor"
+          />
+          <ellipse
+            cx="8.71402"
+            cy="11.3278"
+            rx="1"
+            ry="1.5"
+            transform="rotate(-15 8.71402 11.3278)"
+            fill="currentColor"
+          />
+          <path
+            d="M7 3.34A10 10 0 0 1 22 12c0 .65-.3 1.25-.76 1.7l-7.53 7.54c-.46.46-1.06.76-1.71.76A10 10 0 0 1 3.34 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 22c0-2.8 0-4.19.4-5.31a7 7 0 0 1 4.29-4.3C17.8 12 19.2 12 22 12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

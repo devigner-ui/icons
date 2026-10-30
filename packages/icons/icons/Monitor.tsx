@@ -22,7 +22,45 @@ const IconMonitor = forwardRef<SVGSVGElement, IconProps>(function IconMonitor(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5 2.25a3.5 3.5 0 0 0-1.83.92C2 4.34 2 6.23 2 10v1c0 2.83 0 4.24.88 5.12S5.18 17 8 17h8c2.83 0 4.24 0 5.12-.88S22 13.82 22 11v-1c0-3.77 0-5.66-1.17-6.83S17.77 2 14 2H9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M16 22H8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 17v5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 13h-6M2 13h10"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -70,11 +108,11 @@ const IconMonitor = forwardRef<SVGSVGElement, IconProps>(function IconMonitor(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M10 2h4c3.77 0 5.66 0 6.83 1.17S22 6.23 22 10v3H2v-3c0-3.77 0-5.66 1.17-6.83S6.23 2 10 2"
+            d="M10 1.5h4c3.77 0 5.66 0 6.83 1.17S22 5.73 22 9.5v3H2v-3c0-3.77 0-5.66 1.17-6.83S6.23 1.5 10 1.5"
             fill="currentColor"
           />
           <path
-            d="M7.98 17.5c-2.83 0-4.25 0-5.14-.88-.57-.57-.77-1.36-.84-2.62v-1h20v1c-.07 1.26-.27 2.05-.84 2.62-.89.88-2.3.88-5.14.88h-3.27v4h3.27a.75.75 0 1 1 0 1.5H7.98a.75.75 0 1 1 0-1.5h3.27v-4z"
+            d="M7.98 17c-2.83 0-4.25 0-5.14-.88-.57-.57-.77-1.36-.84-2.62v-1h20v1c-.07 1.26-.27 2.05-.84 2.62-.89.88-2.3.88-5.14.88h-3.27v4h3.27a.75.75 0 1 1 0 1.5H7.98a.75.75 0 1 1 0-1.5h3.27v-4z"
             fill="currentColor"
           />
         </svg>
@@ -92,11 +130,11 @@ const IconMonitor = forwardRef<SVGSVGElement, IconProps>(function IconMonitor(
           {...rest}
         >
           <path
-            d="M8 17c-2.83 0-4.24 0-5.12-.88-.57-.57-.77-1.36-.84-2.62h19.92c-.07 1.26-.27 2.05-.84 2.62-.88.88-2.3.88-5.12.88h-3.25v4H16a.75.75 0 0 1 0 1.5H8A.75.75 0 0 1 8 21h3.25v-4z"
+            d="M8 16.75c-2.83 0-4.24 0-5.12-.88-.57-.57-.77-1.36-.84-2.62h19.92c-.07 1.26-.27 2.05-.84 2.62-.88.88-2.3.88-5.12.88h-3.25v4H16a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1 0-1.5h3.25v-4z"
             fill="currentColor"
           />
           <path
-            d="M10 2h4c3.77 0 5.66 0 6.83 1.17S22 6.23 22 10v2.5H2V10c0-3.77 0-5.66 1.17-6.83S6.23 2 10 2"
+            d="M10 1.75h4c3.77 0 5.66 0 6.83 1.17S22 5.98 22 9.75v2.5H2v-2.5c0-3.77 0-5.66 1.17-6.83S6.23 1.75 10 1.75"
             fill="currentColor"
           />
         </svg>

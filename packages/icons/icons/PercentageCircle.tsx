@@ -23,7 +23,49 @@ const IconPercentageCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m8.32 15.27 6.54-6.54"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9.96 9.14a1.23 1.23 0 1 1-2.46 0 1.23 1.23 0 0 1 2.46 0Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M16.5 14.86a1.23 1.23 0 1 1-2.46 0 1.23 1.23 0 0 1 2.46 0Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,7 +80,7 @@ const IconPercentageCircle = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m9 15.27 6.54-6.54"
+              d="m8.33 15.27 6.54-6.54"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -46,7 +88,7 @@ const IconPercentageCircle = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M9.41 10.37a1.23 1.23 0 1 0 0-2.46 1.23 1.23 0 0 0 0 2.46"
+              d="M8.74 10.37a1.23 1.23 0 1 0 0-2.46 1.23 1.23 0 0 0 0 2.46"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -54,14 +96,14 @@ const IconPercentageCircle = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M15.95 16.09a1.23 1.23 0 1 0 0-2.46 1.23 1.23 0 0 0 0 2.46"
+              d="M15.28 16.09a1.23 1.23 0 1 0 0-2.46 1.23 1.23 0 0 0 0 2.46"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M12.68 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12.01 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -83,19 +125,19 @@ const IconPercentageCircle = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.68 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12.01 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               fill="currentColor"
             />
             <path
-              d="M9 16.02a.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l6.55-6.55a.75.75 0 0 1 1.06 0c.3.29.3.77 0 1.06L9.53 15.8a.7.7 0 0 1-.53.22"
+              d="M8.33 16.02a.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l6.55-6.55a.75.75 0 0 1 1.06 0c.3.29.3.77 0 1.06L8.86 15.8a.7.7 0 0 1-.53.22"
               fill="currentColor"
             />
             <path
-              d="M9.41 7.66a1.48 1.48 0 0 0 0 2.96 1.48 1.48 0 0 0 0-2.96"
+              d="M8.74 7.66a1.48 1.48 0 0 0 0 2.96 1.48 1.48 0 0 0 0-2.96"
               fill="currentColor"
             />
             <path
-              d="M15.95 13.39a1.48 1.48 0 0 0 0 2.96 1.48 1.48 0 0 0 0-2.96"
+              d="M15.28 13.39a1.48 1.48 0 0 0 0 2.96 1.48 1.48 0 0 0 0-2.96"
               fill="currentColor"
             />
           </svg>
@@ -113,7 +155,7 @@ const IconPercentageCircle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.69 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M9.42 7.66a1.48 1.48 0 0 1 0 2.96 1.48 1.48 0 0 1 0-2.96m.12 8.14a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l6.55-6.55a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06zm6.42.54a1.48 1.48 0 0 1 0-2.96 1.48 1.48 0 0 1 0 2.96"
+              d="M12.02 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M8.75 7.66a1.48 1.48 0 0 1 0 2.96 1.48 1.48 0 0 1 0-2.96m.12 8.14a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l6.55-6.55a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06zm6.42.54a1.48 1.48 0 0 1 0-2.96 1.48 1.48 0 0 1 0 2.96"
               fill="currentColor"
             />
           </svg>

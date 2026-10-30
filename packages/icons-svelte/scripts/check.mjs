@@ -70,11 +70,14 @@ function check(what, fn) {
   checked++;
 }
 
-const outline = await render("Add", {});
-const bulk = await render("Add", { variant: "bulk" });
-const weighed = await render("Add", { strokeWidth: 2 });
-const labelled = await render("Add", { "aria-label": "Add" });
+const outline = await render("AddCircle", {});
+const bulk = await render("AddCircle", { variant: "bulk" });
+const weighed = await render("AddCircle", { strokeWidth: 2 });
+const labelled = await render("AddCircle", { "aria-label": "Add" });
 const classed = await render("Activity", { class: "h-6 w-6" });
+/* Add draws its Bold with strokes, at a fixed weight. */
+const bold = await render("Add", { variant: "bold" });
+const boldWeighed = await render("Add", { variant: "bold", strokeWidth: 3 });
 
 check("an icon renders an <svg> with its artwork", () => {
   assert.match(outline, /<svg/);
@@ -92,6 +95,10 @@ check("strokeWidth reaches inside the drawing", () => {
   assert.match(outline, /stroke-width="1.5"/);
   assert.match(weighed, /stroke-width="2"/);
   assert.doesNotMatch(weighed, /stroke-width="1.5"/);
+});
+
+check("strokeWidth leaves Bold alone, as in the React package", () => {
+  assert.equal(boldWeighed, bold);
 });
 
 check("an unlabelled icon is hidden from screen readers", () => {
@@ -112,6 +119,32 @@ check("variant and strokeWidth do not leak onto the element", () => {
 
 check("class and other attributes fall through", () => {
   assert.match(classed, /class="h-6 w-6"/);
+});
+
+/* Bag2 was renamed to BagStraps; the old name is a wrapper until the next
+   major. It must compile, render the new icon with the same props, and warn
+   once in development. */
+const aliasProps = { variant: "bold", strokeWidth: 2, class: "h-6" };
+const target = await render("BagStraps", aliasProps);
+writeFileSync(path.join(work, "renamed.js"), readFileSync(new URL("renamed.js", DIST), "utf8"));
+build(
+  "Bag2",
+  readFileSync(new URL("icons/Bag2.svelte", DIST), "utf8")
+    .replace('from "../icons/BagStraps.svelte"', 'from "./BagStraps.svelte"')
+    .replace('from "../renamed.js"', 'from "./renamed.js"'),
+);
+const { default: IconBag2 } = await import(pathToFileURL(path.join(work, "Bag2.js")).href);
+const warnings = [];
+const warn = console.warn;
+console.warn = (message) => warnings.push(message);
+const alias = IconBag2.render(aliasProps).html;
+IconBag2.render({});
+console.warn = warn;
+
+check("a renamed icon's old name renders the new icon and warns once", () => {
+  assert.equal(alias.trim(), target.trim()); // SSR indents a wrapped component
+  assert.equal(warnings.length, 1, "expected one warning across two renders");
+  assert.match(warnings[0], /IconBag2 was renamed to IconBagStraps/);
 });
 
 console.log(`ok  ${checked} checks on the built Svelte components`);

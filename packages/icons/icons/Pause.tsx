@@ -22,7 +22,33 @@ const IconPause = forwardRef<SVGSVGElement, IconProps>(function IconPause(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 18c0 1.89 0 2.83.59 3.41C3.17 22 4.1 22 6 22s2.83 0 3.41-.59C10 20.83 10 19.9 10 18V6c0-1.89 0-2.83-.59-3.41C8.83 2 7.9 2 6 2s-2.83 0-3.41.59C2 3.17 2 4.1 2 6v8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M22 6c0-1.89 0-2.83-.59-3.41C20.83 2 19.9 2 18 2s-2.83 0-3.41.59C14 3.17 14 4.1 14 6v12c0 1.89 0 2.83.59 3.41.58.59 1.52.59 3.41.59s2.83 0 3.41-.59C22 20.83 22 19.9 22 18v-8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -22,7 +22,37 @@ const IconPills = forwardRef<SVGSVGElement, IconProps>(function IconPills(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17.84 6.16s-.43 2.24-2.93 4.75-4.75 2.93-4.75 2.93m11.62-2.8a5.4 5.4 0 0 0-1.37-2.32l-5.13-5.13a5.44 5.44 0 1 0-7.69 7.7l5.13 5.12a5.44 5.44 0 0 0 8.7-1.41"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14.5 6.5 13 5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6.89 10.87a.75.75 0 1 0-.32-1.47zm-1.08 9.9a.75.75 0 1 0-.62 1.37zm-3.95-1.96a.75.75 0 1 0 1.37-.62zM2.75 16a5.25 5.25 0 0 1 4.14-5.13L6.57 9.4A6.75 6.75 0 0 0 1.25 16zm10.39 1.08A5.25 5.25 0 0 1 8 21.25v1.5c3.25 0 5.97-2.3 6.6-5.36zM8 21.25q-1.18 0-2.19-.48l-.62 1.37q1.28.6 2.81.61zm-4.77-3.06q-.46-1-.48-2.19h-1.5q.01 1.52.61 2.81z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

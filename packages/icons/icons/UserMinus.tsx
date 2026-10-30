@@ -23,7 +23,40 @@ const IconUserMinus = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="10.5"
+            cy="6"
+            r="4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M21.5 10h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18.5 18v-.5c0-2.49-3.58-4.5-8-4.5s-8 2.01-8 4.5 0 4.5 8 4.5c2.23 0 3.84-.16 5-.44"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,20 +70,20 @@ const IconUserMinus = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <circle
-              cx="10"
-              cy="6.00049"
+              cx="10.5"
+              cy="6"
               r="4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18 17.5c0 2.49 0 4.5-8 4.5s-8-2.01-8-4.5c0-2.48 3.58-4.5 8-4.5s8 2.02 8 4.5"
+              d="M18.5 17.5c0 2.49 0 4.5-8 4.5s-8-2.01-8-4.5c0-2.48 3.58-4.5 8-4.5s8 2.02 8 4.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
-              d="M21 10h-4"
+              d="M21.5 10h-4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

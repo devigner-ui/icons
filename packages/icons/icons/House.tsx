@@ -22,7 +22,7 @@ const IconHouse = forwardRef<SVGSVGElement, IconProps>(function IconHouse(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,74 @@ const IconHouse = forwardRef<SVGSVGElement, IconProps>(function IconHouse(
           {...rest}
         >
           <path
-            d="M2.67 22h20"
+            d="M2 21.75h20"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3 9.72c0-.61.29-1.19.77-1.57l7-5.45a2 2 0 0 1 2.46 0l7 5.44c.49.38.77.96.77 1.58v12.03"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m2.95 21.75.03-7.97"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M13 16.75h-2c-.83 0-1.5.67-1.5 1.5v3.5h5v-3.5c0-.83-.67-1.5-1.5-1.5Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9.5 13.5h-2a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M16.5 13.5h-2a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m19 6.75-.03-3h-4.4"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 21.75h20"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -44,7 +111,7 @@ const IconHouse = forwardRef<SVGSVGElement, IconProps>(function IconHouse(
             strokeLinejoin="round"
           />
           <path
-            d="m3.62 22 .05-12.03c0-.61.29-1.19.77-1.57l7-5.45a2 2 0 0 1 2.46 0l7 5.44c.49.38.77.96.77 1.58V22"
+            d="M2.95 21.75 3 9.72c0-.61.29-1.19.77-1.57l7-5.45a2 2 0 0 1 2.46 0l7 5.44c.49.38.77.96.77 1.58v12.03"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -52,7 +119,7 @@ const IconHouse = forwardRef<SVGSVGElement, IconProps>(function IconHouse(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M13.67 17h-2c-.83 0-1.5.67-1.5 1.5V22h5v-3.5c0-.83-.67-1.5-1.5-1.5"
+            d="M13 16.75h-2c-.83 0-1.5.67-1.5 1.5v3.5h5v-3.5c0-.83-.67-1.5-1.5-1.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -60,7 +127,7 @@ const IconHouse = forwardRef<SVGSVGElement, IconProps>(function IconHouse(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M10.17 13.75h-2a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1"
+            d="M9.5 13.5h-2a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -68,14 +135,14 @@ const IconHouse = forwardRef<SVGSVGElement, IconProps>(function IconHouse(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M17.17 13.75h-2a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1"
+            d="M16.5 13.5h-2a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
             strokeLinejoin="round"
           />
           <path
-            d="m19.67 7-.03-3h-4.4"
+            d="m19 6.75-.03-3h-4.4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -97,28 +164,28 @@ const IconHouse = forwardRef<SVGSVGElement, IconProps>(function IconHouse(
           {...rest}
         >
           <path
-            d="M22.67 22.75h-20a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h20c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M22 22.08H2a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h20c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M21.67 9.98V22H3.62l.05-12.03c0-.61.28-1.19.77-1.57l7-5.44a2 2 0 0 1 2.46 0L15.24 4l4.43 3.44 1.23.96c.49.38.77.96.77 1.58"
+            d="M21 9.31v12.02H2.95L3 9.3c0-.61.28-1.19.77-1.57l7-5.44a2 2 0 0 1 2.46 0l1.34 1.04L19 6.77l1.23.96c.49.38.77.96.77 1.58"
             fill="currentColor"
           />
           <path
-            d="M13.67 17h-2c-.83 0-1.5.67-1.5 1.5V22h5v-3.5c0-.83-.67-1.5-1.5-1.5"
+            d="M13 16.33h-2c-.83 0-1.5.67-1.5 1.5v3.5h5v-3.5c0-.83-.67-1.5-1.5-1.5"
             fill="currentColor"
           />
           <path
-            d="M10.17 13.75h-2a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1"
+            d="M9.5 13.08h-2a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1"
             fill="currentColor"
           />
           <path
-            d="M17.17 13.75h-2a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1"
+            d="M16.5 13.08h-2a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1"
             fill="currentColor"
           />
           <path
-            d="M19.67 7.44 15.24 4h3.41a1 1 0 0 1 1 .99z"
+            d="m19 6.77-4.43-3.44h3.41a1 1 0 0 1 1 .99z"
             fill="currentColor"
           />
         </svg>
@@ -136,7 +203,7 @@ const IconHouse = forwardRef<SVGSVGElement, IconProps>(function IconHouse(
           {...rest}
         >
           <path
-            d="M22.67 21.25h-1V9.98c0-.62-.28-1.2-.77-1.58l-1.23-.96-.02-2.45a1 1 0 0 0-1-.99h-3.41L13.9 2.96a2 2 0 0 0-2.46 0l-7 5.44c-.49.38-.77.96-.77 1.57l-.05 11.28h-.95a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h20c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75m-15.5-8.5v-1.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1m8 8.5h-5V18.5c0-.83.67-1.5 1.5-1.5h2c.83 0 1.5.67 1.5 1.5zm3-8.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1z"
+            d="M22 20.58h-1V9.31c0-.62-.28-1.2-.77-1.58L19 6.77l-.02-2.45a1 1 0 0 0-1-.99h-3.41l-1.34-1.04a2 2 0 0 0-2.46 0l-7 5.44C3.28 8.11 3 8.69 3 9.3l-.05 11.28H2a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h20c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75m-15.5-8.5v-1.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1m8 8.5h-5v-2.75c0-.83.67-1.5 1.5-1.5h2c.83 0 1.5.67 1.5 1.5zm3-8.5a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1z"
             fill="currentColor"
           />
         </svg>

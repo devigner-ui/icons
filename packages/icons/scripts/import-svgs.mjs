@@ -195,7 +195,7 @@ function selfSecondary(nodes, marked = new Set()) {
 const DUOTONE = `opacity={duotone ? "0.4" : "1"}`;
 
 /** One node as JSX. Membership of `marked` swaps its opacity for the expression. */
-function emitNode(node, marked, indent) {
+export function emitNode(node, marked, indent) {
   const secondary = marked.has(node);
   const pad = " ".repeat(indent);
   const props = [];
@@ -246,7 +246,7 @@ function emitNode(node, marked, indent) {
   return `${pad}<${node.tag}${attrs}${close}>\n${children}\n${pad}</${node.tag}>`;
 }
 
-function emitSvg(viewBox, nodes, marked) {
+export function emitSvg(viewBox, nodes, marked) {
   const body = nodes.map((node) => emitNode(node, marked, 10)).join("\n");
 
   return `        <svg
@@ -448,6 +448,22 @@ const COUNTED = [
   "packages/icons-svelte/package.json",
   "packages/icons-react-native/README.md",
   "packages/icons-react-native/package.json",
+  "packages/icons-solid/README.md",
+  "packages/icons-solid/package.json",
+  "packages/icons-angular/README.md",
+  "packages/icons-angular/package.json",
+  "packages/icons-nuxt/README.md",
+  "packages/icons-nuxt/package.json",
+  "packages/icons-js/README.md",
+  "packages/icons-js/package.json",
+  "packages/icons-mcp/README.md",
+  "packages/icons-mcp/package.json",
+  "packages/icons-rails/README.md",
+  "packages/icons-rails/devigner_icons.gemspec",
+  "packages/icons-flutter/README.md",
+  "packages/icons-flutter/pubspec.yaml",
+  "packages/icons-blazor/README.md",
+  "packages/icons-blazor/src/Devigner.Icons.Blazor/Devigner.Icons.Blazor.csproj",
 ];
 
 const STYLE_COUNT = STYLES.length;
@@ -457,7 +473,7 @@ const thousands = (n) => n.toLocaleString("en-US");
 
 /**
  * Both totals, replaced by value. Exported for the check: it is a string
- * rewrite over eleven files, and the failure mode is a silent no-match.
+ * rewrite over the files above, and the failure mode is a silent no-match.
  */
 export function retotal(text, before, after) {
   return text

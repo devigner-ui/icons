@@ -1,0 +1,63 @@
+{
+  "name": "@devigner-ui/icons-solid",
+  "version": "3.5.0",
+  "description": "10,560 open-source icons for SolidJS: 2,112 symbols, each in outline, twotone, bold, bulk and broken. Built on Solar Icon Set and Iconsax.",
+  "keywords": [
+    "icons",
+    "solid",
+    "solidjs",
+    "solid-icons",
+    "svg",
+    "svg-icons",
+    "icon-set",
+    "icon-library",
+    "tree-shaking"
+  ],
+  "license": "MIT AND CC-BY-4.0",
+  "author": "Devigner",
+  "homepage": "https://icons.devigner.cc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigner-ui/icons.git",
+    "directory": "packages/icons-solid"
+  },
+  "bugs": {
+    "url": "https://github.com/devigner-ui/icons/issues"
+  },
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "solid": "./dist/index.js",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "ATTRIBUTION.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "test": "node scripts/check.mjs"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.6.0"
+  },
+  "devDependencies": {
+    "@devigner-ui/icons": "workspace:^",
+    "solid-js": "^1.9.0"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

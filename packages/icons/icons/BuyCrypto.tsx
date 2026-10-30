@@ -23,7 +23,42 @@ const IconBuyCrypto = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 8.5a6.5 6.5 0 0 1-7.02 6.48 6.5 6.5 0 0 0-5.96-5.96L9 8.5a6.5 6.5 0 1 1 13 0Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4.68 20.76A6.5 6.5 0 1 1 8.5 22"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7.62 14.62 8.5 13l.88 1.62 1.62.88-1.62.88L8.5 18l-.88-1.62L6 15.5z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,14 +73,14 @@ const IconBuyCrypto = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22.67 8.5a6.5 6.5 0 0 1-7.02 6.48 6.5 6.5 0 0 0-5.96-5.96l-.02-.52a6.5 6.5 0 1 1 13 0"
+              d="M22 8.5a6.5 6.5 0 0 1-7.02 6.48 6.5 6.5 0 0 0-5.96-5.96L9 8.5a6.5 6.5 0 1 1 13 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M15.67 15.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
+              d="M15 15.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -53,7 +88,7 @@ const IconBuyCrypto = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M8.29 14.62 9.17 13l.88 1.62 1.62.88-1.62.88L9.17 18l-.88-1.62-1.62-.88z"
+              d="M7.62 14.62 8.5 13l.88 1.62 1.62.88-1.62.88L8.5 18l-.88-1.62L6 15.5z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -74,16 +109,16 @@ const IconBuyCrypto = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M22.67 8.5a6.5 6.5 0 0 1-7.02 6.48 6.5 6.5 0 0 0-5.96-5.96l-.02-.52a6.5 6.5 0 1 1 13 0"
+              d="M22 8.5a6.5 6.5 0 0 1-7.02 6.48 6.5 6.5 0 0 0-5.96-5.96L9 8.5a6.5 6.5 0 1 1 13 0"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M15.67 15.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
+              d="M15 15.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
               fill="currentColor"
             />
             <path
-              d="M8.29 14.62 9.17 13l.88 1.62 1.62.88-1.62.88L9.17 18l-.88-1.62-1.62-.88z"
+              d="M7.62 14.62 8.5 13l.88 1.62 1.62.88-1.62.88L8.5 18l-.88-1.62L6 15.5z"
               fill="currentColor"
             />
           </svg>
@@ -101,11 +136,11 @@ const IconBuyCrypto = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M22.67 8.5a6.5 6.5 0 0 1-5.52 6.42v-.06a8.06 8.06 0 0 0-7.37-7.34h-.03a6.5 6.5 0 0 1 12.92.98"
+              d="M22 8.5a6.5 6.5 0 0 1-5.52 6.42v-.06a8.06 8.06 0 0 0-7.37-7.34h-.03A6.5 6.5 0 0 1 22 8.5"
               fill="currentColor"
             />
             <path
-              d="M15.65 14.98a6.5 6.5 0 1 0-12.98 1.05 6.5 6.5 0 0 0 12.98-1.05m-5.6 1.4L9.17 18l-.88-1.62-1.62-.88 1.62-.88.88-1.62.88 1.62 1.62.88z"
+              d="M14.98 14.98A6.5 6.5 0 1 0 2 16.03a6.5 6.5 0 0 0 12.98-1.05m-5.6 1.4L8.5 18l-.88-1.62L6 15.5l1.62-.88L8.5 13l.88 1.62 1.62.88z"
               fill="currentColor"
             />
           </svg>

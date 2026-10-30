@@ -22,7 +22,60 @@ const IconWanchain = forwardRef<SVGSVGElement, IconProps>(function IconWanchain(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16.5 8.85 12 6.15l-4.5 2.7"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M16.5 11.19V9"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7.5 9v6.15l4.5-2.7 4.5 2.7"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14.25 16.2 12 17.7l-2.25-1.5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,7 +90,7 @@ const IconWanchain = forwardRef<SVGSVGElement, IconProps>(function IconWanchain(
         >
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="m17.17 8.85-4.5-2.7-4.5 2.7"
+              d="M16.5 8.85 12 6.15l-4.5 2.7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -45,7 +98,7 @@ const IconWanchain = forwardRef<SVGSVGElement, IconProps>(function IconWanchain(
               strokeLinejoin="round"
             />
             <path
-              d="M8.17 9v6.15l4.5-2.7 4.5 2.7V9"
+              d="M7.5 9v6.15l4.5-2.7 4.5 2.7V9"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -55,7 +108,7 @@ const IconWanchain = forwardRef<SVGSVGElement, IconProps>(function IconWanchain(
           </g>
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m14.92 16.2-2.25 1.5-2.25-1.5"
+            d="M14.25 16.2 12 17.7l-2.25-1.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -63,7 +116,7 @@ const IconWanchain = forwardRef<SVGSVGElement, IconProps>(function IconWanchain(
             strokeLinejoin="round"
           />
           <path
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -86,20 +139,20 @@ const IconWanchain = forwardRef<SVGSVGElement, IconProps>(function IconWanchain(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             fill="currentColor"
           />
           <path
-            d="M17.17 9.16v3.83a1 1 0 0 1-1.51.86l-2.47-1.48a1 1 0 0 0-1.03 0l-2.47 1.48a1 1 0 0 1-1.51-.86V9.16a1 1 0 0 1 .46-.84l3.5-2.22a1 1 0 0 1 1.07 0l3.5 2.22a1 1 0 0 1 .46.84"
+            d="M16.5 9.16v3.83a1 1 0 0 1-1.51.86l-2.47-1.48a1 1 0 0 0-1.03 0l-2.47 1.48a1 1 0 0 1-1.51-.86V9.16a1 1 0 0 1 .46-.84l3.5-2.22a1 1 0 0 1 1.07 0l3.5 2.22a1 1 0 0 1 .46.84"
             fill="currentColor"
           />
           <path
-            d="M12.67 18.06a1 1 0 0 1-.42-.13L10 16.43a.76.76 0 0 1-.21-1.04.75.75 0 0 1 1.04-.21l1.83 1.22 1.83-1.22a.75.75 0 0 1 1.04.21c.23.34.14.81-.21 1.04l-2.25 1.5a.6.6 0 0 1-.4.13"
+            d="M12 18.06a1 1 0 0 1-.42-.13l-2.25-1.5a.76.76 0 0 1-.21-1.04.75.75 0 0 1 1.04-.21l1.83 1.22 1.83-1.22a.75.75 0 0 1 1.04.21c.23.34.14.81-.21 1.04l-2.25 1.5a.6.6 0 0 1-.4.13"
             fill="currentColor"
           />
         </svg>
@@ -117,7 +170,7 @@ const IconWanchain = forwardRef<SVGSVGElement, IconProps>(function IconWanchain(
           {...rest}
         >
           <path
-            d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m2.67 14.43-2.25 1.5a1 1 0 0 1-.42.13 1 1 0 0 1-.42-.13L10 16.43a.76.76 0 0 1-.21-1.04.75.75 0 0 1 1.04-.21l1.83 1.22 1.83-1.22a.75.75 0 0 1 1.04.21c.24.35.15.81-.19 1.04m1.83-3.44a1 1 0 0 1-1.51.86l-2.47-1.48a1 1 0 0 0-1.03 0l-2.47 1.48a1 1 0 0 1-1.51-.86V9.16a1 1 0 0 1 .46-.84l3.5-2.22a1 1 0 0 1 1.07 0l3.5 2.22c.29.18.46.5.46.84z"
+            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m2.67 14.43-2.25 1.5a1 1 0 0 1-.42.13 1 1 0 0 1-.42-.13l-2.25-1.5a.76.76 0 0 1-.21-1.04.75.75 0 0 1 1.04-.21l1.83 1.22 1.83-1.22a.75.75 0 0 1 1.04.21c.24.35.15.81-.19 1.04m1.83-3.44a1 1 0 0 1-1.51.86l-2.47-1.48a1 1 0 0 0-1.03 0l-2.47 1.48a1 1 0 0 1-1.51-.86V9.16a1 1 0 0 1 .46-.84l3.5-2.22a1 1 0 0 1 1.07 0l3.5 2.22c.29.18.46.5.46.84z"
             fill="currentColor"
           />
         </svg>

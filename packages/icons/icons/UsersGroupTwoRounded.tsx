@@ -23,7 +23,58 @@ const IconUsersGroupTwoRounded = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <circle
+            cx="12"
+            cy="6.5"
+            r="4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M18 9.5c1.66 0 3-1.12 3-2.5s-1.34-2.5-3-2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M6 9.5C4.34 9.5 3 8.38 3 7s1.34-2.5 3-2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M17.2 15.5c.5.59.8 1.27.8 2 0 2.2-2.69 4-6 4s-6-1.8-6-4 2.69-4 6-4a9 9 0 0 1 1 .06"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 19.5c1.75-.38 3-1.36 3-2.5s-1.25-2.12-3-2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M4 19.5c-1.75-.38-3-1.36-3-2.5s1.25-2.12 3-2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,28 +89,28 @@ const IconUsersGroupTwoRounded = forwardRef<SVGSVGElement, IconProps>(
           >
             <circle
               cx="12"
-              cy="6.00049"
+              cy="6.5"
               r="4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18 9c1.66 0 3-1.12 3-2.5S19.66 4 18 4"
+              d="M18 9.5c1.66 0 3-1.12 3-2.5s-1.34-2.5-3-2.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M6 9C4.34 9 3 7.88 3 6.5S4.34 4 6 4"
+              d="M6 9.5C4.34 9.5 3 8.38 3 7s1.34-2.5 3-2.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <ellipse
               cx="12"
-              cy="17.0005"
+              cy="17.5"
               rx="6"
               ry="4"
               stroke="currentColor"
@@ -67,14 +118,14 @@ const IconUsersGroupTwoRounded = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M20 19c1.75-.38 3-1.36 3-2.5s-1.25-2.11-3-2.5"
+              d="M20 19.5c1.75-.38 3-1.36 3-2.5s-1.25-2.11-3-2.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M4 19c-1.75-.38-3-1.36-3-2.5s1.25-2.11 3-2.5"
+              d="M4 19.5c-1.75-.38-3-1.36-3-2.5s1.25-2.11 3-2.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

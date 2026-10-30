@@ -1,1 +1,1 @@
-export { default, default as IconHomeWiFiAngle } from '../../icons/HomeWiFiAngle';
+export { default, default as IconHomeWifiAngle } from '../../icons/HomeWifiAngle';

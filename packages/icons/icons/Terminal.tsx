@@ -22,7 +22,42 @@ const IconTerminal = forwardRef<SVGSVGElement, IconProps>(function IconTerminal(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m7 7 1.23 1.06c.51.44.77.66.77.94s-.26.5-.77.94L7 11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M11 11h3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17.48 20.7a4 4 0 0 0 2.56-1.76C21 17.62 21 15.75 21 12s0-5.62-.95-6.94a5 5 0 0 0-1.11-1.1C17.62 3 15.75 3 12 3s-5.62 0-6.94.95q-.63.46-1.1 1.11-.43.58-.63 1.36m-.32 3.47L3 12c0 3.75 0 5.62.95 6.94q.46.63 1.11 1.1C6.38 21 8.25 21 12 21l2-.01"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

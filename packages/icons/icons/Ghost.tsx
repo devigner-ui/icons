@@ -22,7 +22,38 @@ const IconGhost = forwardRef<SVGSVGElement, IconProps>(function IconGhost(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16 10.5c0 .83-.45 1.5-1 1.5s-1-.67-1-1.5.45-1.5 1-1.5 1 .67 1 1.5Z"
+            fill="currentColor"
+          />
+          <ellipse
+            cx="9"
+            cy="10.5"
+            rx="1"
+            ry="1.5"
+            fill="currentColor"
+          />
+          <path
+            d="M22 12.3C22 6.61 17.52 2 12 2S2 6.61 2 12.3v7.42c0 1.33 1.35 2.19 2.5 1.6a2.8 2.8 0 0 1 2.9.18 2.8 2.8 0 0 0 3.2 0l.36-.24a1.8 1.8 0 0 1 2.08 0l.36.24a2.8 2.8 0 0 0 3.2 0c.87-.6 1.97-.66 2.9-.19 1.15.6 2.5-.26 2.5-1.59v-3.7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -62,15 +93,15 @@ const IconGhost = forwardRef<SVGSVGElement, IconProps>(function IconGhost(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M22 19.2V12a10 10 0 0 0-20 0v7.2a1.73 1.73 0 0 0 2.5 1.55 2.9 2.9 0 0 1 2.9.18 2.9 2.9 0 0 0 3.2 0l.36-.23a1.9 1.9 0 0 1 2.08 0l.36.23a2.9 2.9 0 0 0 3.2 0 2.9 2.9 0 0 1 2.9-.18c1.15.57 2.5-.26 2.5-1.54"
+            d="M22 19.5v-7.2a10 10 0 0 0-20 0v7.2a1.73 1.73 0 0 0 2.5 1.55 2.9 2.9 0 0 1 2.9.18 2.9 2.9 0 0 0 3.2 0l.36-.23a1.9 1.9 0 0 1 2.08 0l.36.23a2.9 2.9 0 0 0 3.2 0 2.9 2.9 0 0 1 2.9-.18c1.15.57 2.5-.26 2.5-1.54"
             fill="currentColor"
           />
           <path
-            d="M15 12c.55 0 1-.67 1-1.5S15.55 9 15 9s-1 .67-1 1.5.45 1.5 1 1.5"
+            d="M15 12.3c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5"
             fill="currentColor"
           />
           <path
-            d="M10 10.5c0 .83-.45 1.5-1 1.5s-1-.67-1-1.5S8.45 9 9 9s1 .67 1 1.5"
+            d="M10 10.8c0 .83-.45 1.5-1 1.5s-1-.67-1-1.5.45-1.5 1-1.5 1 .67 1 1.5"
             fill="currentColor"
           />
         </svg>
@@ -90,7 +121,7 @@ const IconGhost = forwardRef<SVGSVGElement, IconProps>(function IconGhost(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M22 19.2V12a10 10 0 0 0-20 0v7.2a1.73 1.73 0 0 0 2.5 1.55 2.9 2.9 0 0 1 2.9.18 2.9 2.9 0 0 0 3.2 0l.36-.23a1.9 1.9 0 0 1 2.08 0l.36.23a2.9 2.9 0 0 0 3.2 0 2.9 2.9 0 0 1 2.9-.18c1.15.57 2.5-.26 2.5-1.54m-6-8.7c0 .83-.45 1.5-1 1.5s-1-.67-1-1.5.45-1.5 1-1.5 1 .67 1 1.5M9 12c.55 0 1-.67 1-1.5S9.55 9 9 9s-1 .67-1 1.5.45 1.5 1 1.5"
+            d="M22 19.5v-7.2a10 10 0 0 0-20 0v7.2a1.73 1.73 0 0 0 2.5 1.55 2.9 2.9 0 0 1 2.9.18 2.9 2.9 0 0 0 3.2 0l.36-.23a1.9 1.9 0 0 1 2.08 0l.36.23a2.9 2.9 0 0 0 3.2 0 2.9 2.9 0 0 1 2.9-.18c1.15.57 2.5-.26 2.5-1.54m-6-8.7c0 .83-.45 1.5-1 1.5s-1-.67-1-1.5.45-1.5 1-1.5 1 .67 1 1.5M9 12.3c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5"
             fill="currentColor"
           />
         </svg>

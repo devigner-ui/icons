@@ -22,7 +22,32 @@ const IconEye = forwardRef<SVGSVGElement, IconProps>(function IconEye(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 4.46A10 10 0 0 1 12 4c4.18 0 7.03 2.5 8.73 4.7C21.57 9.8 22 10.36 22 12s-.43 2.2-1.27 3.3C19.03 17.5 16.18 20 12 20s-7.03-2.5-8.73-4.7C2.42 14.2 2 13.64 2 12s.42-2.2 1.27-3.3Q4 7.75 5 6.82"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

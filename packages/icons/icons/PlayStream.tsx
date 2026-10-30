@@ -23,7 +23,40 @@ const IconPlayStream = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 12a10 10 0 0 1-2.92 7.06M2 12a10 10 0 0 1 2.94-7.08m14.2.08q1.29 1.3 2.03 3M5 19.14Q3.62 17.78 2.83 16"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M16.28 8.04A5.4 5.4 0 0 1 18 11.98c0 1.55-.67 2.96-1.75 3.98M7.8 16A5.4 5.4 0 0 1 6 11.98c0-1.55.67-2.96 1.76-3.98"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M13.66 10.45c.9.66 1.34.99 1.34 1.55s-.45.9-1.34 1.55a13 13 0 0 1-1.38.87c-.89.5-1.34.74-1.74.47s-.43-.84-.5-1.97a15 15 0 0 1 0-1.84c.07-1.13.1-1.7.5-1.97s.85-.02 1.74.47a12 12 0 0 1 1.38.87Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

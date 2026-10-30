@@ -23,7 +23,56 @@ const IconSortByTime = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M10 7H2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8 12H2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10 17H2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12.46 9.9Q12 10.87 12 12a5 5 0 1 0 2.88-4.53"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17 10v1.85L18 13"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -88,14 +137,14 @@ const IconSortByTime = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M17 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10m.75-7a.75.75 0 0 0-1.5 0v1.85q0 .28.18.49l1 1.15a.75.75 0 1 0 1.14-.98l-.82-.94z"
+              d="M17.4 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10m.75-7a.75.75 0 0 0-1.5 0v1.85q0 .28.18.49l1 1.15a.75.75 0 1 0 1.14-.98l-.82-.94z"
               fill="currentColor"
             />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
-                d="M1.25 7c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H2A.75.75 0 0 1 1.25 7m0 5c0-.41.34-.75.75-.75h6a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m0 5c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75"
+                d="M1.65 7c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5h-8A.75.75 0 0 1 1.65 7m0 5c0-.41.34-.75.75-.75h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75m0 5c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5h-8a.75.75 0 0 1-.75-.75"
                 fill="currentColor"
               />
             </g>
@@ -116,13 +165,13 @@ const IconSortByTime = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M1.25 7c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H2A.75.75 0 0 1 1.25 7m0 5c0-.41.34-.75.75-.75h6a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m0 5c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75"
+              d="M1.65 7c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5h-8A.75.75 0 0 1 1.65 7m0 5c0-.41.34-.75.75-.75h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75m0 5c0-.41.34-.75.75-.75h8a.75.75 0 0 1 0 1.5h-8a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M17 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10m.75-7a.75.75 0 0 0-1.5 0v1.85q0 .28.18.49l1 1.15a.75.75 0 1 0 1.14-.98l-.82-.94z"
+              d="M17.4 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10m.75-7a.75.75 0 0 0-1.5 0v1.85q0 .28.18.49l1 1.15a.75.75 0 1 0 1.14-.98l-.82-.94z"
               fill="currentColor"
             />
           </svg>

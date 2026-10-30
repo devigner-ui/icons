@@ -22,7 +22,7 @@ const IconAndroid = forwardRef<SVGSVGElement, IconProps>(function IconAndroid(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,77 @@ const IconAndroid = forwardRef<SVGSVGElement, IconProps>(function IconAndroid(
           {...rest}
         >
           <path
-            d="M11.67 18v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
+            d="M11 18.3v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15 18.3v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7 11.3c0-1.1.9-2 2-2h6a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-.71"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M5 11.3v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M21 11.3v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M13 18.3h-2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9.6 7.3h4.8c.88 0 1.6-.72 1.6-1.6a4 4 0 1 0-8 0c0 .88.72 1.6 1.6 1.6Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11 18.3v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -44,7 +114,7 @@ const IconAndroid = forwardRef<SVGSVGElement, IconProps>(function IconAndroid(
             strokeLinejoin="round"
           />
           <path
-            d="M15.67 18v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
+            d="M15 18.3v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -52,7 +122,7 @@ const IconAndroid = forwardRef<SVGSVGElement, IconProps>(function IconAndroid(
             strokeLinejoin="round"
           />
           <path
-            d="M17.67 11v5a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-5c0-1.1.9-2 2-2h6a2 2 0 0 1 2 2"
+            d="M17 11.3v5a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-5c0-1.1.9-2 2-2h6a2 2 0 0 1 2 2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -61,7 +131,7 @@ const IconAndroid = forwardRef<SVGSVGElement, IconProps>(function IconAndroid(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M5.67 11v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
+            d="M5 11.3v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -70,7 +140,7 @@ const IconAndroid = forwardRef<SVGSVGElement, IconProps>(function IconAndroid(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M21.67 11v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
+            d="M21 11.3v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -78,7 +148,7 @@ const IconAndroid = forwardRef<SVGSVGElement, IconProps>(function IconAndroid(
             strokeLinejoin="round"
           />
           <path
-            d="M13.67 18h-2"
+            d="M13 18.3h-2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -87,7 +157,7 @@ const IconAndroid = forwardRef<SVGSVGElement, IconProps>(function IconAndroid(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M10.27 7h4.8c.88 0 1.6-.72 1.6-1.6a4 4 0 1 0-8 0c0 .88.72 1.6 1.6 1.6"
+            d="M9.6 7.3h4.8c.88 0 1.6-.72 1.6-1.6a4 4 0 1 0-8 0c0 .88.72 1.6 1.6 1.6"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -110,33 +180,33 @@ const IconAndroid = forwardRef<SVGSVGElement, IconProps>(function IconAndroid(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
-            d="M11.67 18v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
+            d="M11 18v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
             fill="currentColor"
           />
           <path
-            d="M15.67 18v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
-            fill="currentColor"
-          />
-          <path
-            opacity={duotone ? "0.4" : "1"}
-            d="M17.67 11v5a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-5c0-1.1.9-2 2-2h6a2 2 0 0 1 2 2"
-            fill="currentColor"
-          />
-          <path
-            d="M5.67 11v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
-            fill="currentColor"
-          />
-          <path
-            d="M21.67 11v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
+            d="M15 18v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M10.27 7.6h4.8c.88 0 1.6-.72 1.6-1.6a4 4 0 1 0-8 0c0 .88.72 1.6 1.6 1.6"
+            d="M17 11v5a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-5c0-1.1.9-2 2-2h6a2 2 0 0 1 2 2"
+            fill="currentColor"
+          />
+          <path
+            d="M5 11v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
+            fill="currentColor"
+          />
+          <path
+            d="M21 11v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
+            fill="currentColor"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M9.6 7.6h4.8c.88 0 1.6-.72 1.6-1.6a4 4 0 1 0-8 0c0 .88.72 1.6 1.6 1.6"
             fill="currentColor"
           />
         </svg>
@@ -154,27 +224,27 @@ const IconAndroid = forwardRef<SVGSVGElement, IconProps>(function IconAndroid(
           {...rest}
         >
           <path
-            d="M11.67 18v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
+            d="M11 18v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
             fill="currentColor"
           />
           <path
-            d="M15.67 18v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
+            d="M15 18v3a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-3z"
             fill="currentColor"
           />
           <path
-            d="M17.67 11v5a2 2 0 0 1-2 2h-6a2 2 0 0 1-2-2v-5c0-1.1.9-2 2-2h6a2 2 0 0 1 2 2"
+            d="M17 11v5a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-5c0-1.1.9-2 2-2h6a2 2 0 0 1 2 2"
             fill="currentColor"
           />
           <path
-            d="M5.67 11v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
+            d="M5 11v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
             fill="currentColor"
           />
           <path
-            d="M21.67 11v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
+            d="M21 11v4a1 1 0 0 1-1 1 1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1 1 1 0 0 1 1 1"
             fill="currentColor"
           />
           <path
-            d="M10.27 7.6h4.8c.88 0 1.6-.72 1.6-1.6a4 4 0 1 0-8 0c0 .88.72 1.6 1.6 1.6"
+            d="M9.6 7.6h4.8c.88 0 1.6-.72 1.6-1.6a4 4 0 1 0-8 0c0 .88.72 1.6 1.6 1.6"
             fill="currentColor"
           />
         </svg>

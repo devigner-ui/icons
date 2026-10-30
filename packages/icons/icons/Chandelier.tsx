@@ -23,7 +23,44 @@ const IconChandelier = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9 4h6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20.8 10c.66 0 1.2.54 1.2 1.2V13a3 3 0 1 1-6 0v-1.8c0-.66.54-1.2 1.2-1.2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 4v3m0 9.5a3.5 3.5 0 1 0 7 0v-.06m-7 .06a3.5 3.5 0 1 1-7 0v-.06m7 .06V11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M8 10.86a.86.86 0 0 0-.86-.86H2.86a.86.86 0 0 0-.86.86V13a3 3 0 1 0 6 0z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

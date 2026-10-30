@@ -22,7 +22,33 @@ const IconBookmark = forwardRef<SVGSVGElement, IconProps>(function IconBookmark(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3 11.1v5c0 3.09 0 4.64.73 5.31.35.32.8.53 1.27.58.98.11 2.14-.9 4.44-2.94 1.02-.9 1.53-1.36 2.12-1.47q.45-.09.88 0c.59.11 1.1.56 2.12 1.47 2.3 2.03 3.46 3.05 4.44 2.94a2.2 2.2 0 0 0 1.27-.58c.73-.67.73-2.22.73-5.32v-5c0-4.28 0-6.43-1.32-7.76S16.24 2 12 2 5.64 2 4.32 3.33C3.52 4.15 3.2 5.27 3.08 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 6H9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

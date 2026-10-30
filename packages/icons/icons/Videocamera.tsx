@@ -23,7 +23,32 @@ const IconVideocamera = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 11.5v1c0 3.29 0 4.93.9 6.04a4 4 0 0 0 .56.55c1.1.91 2.75.91 6.04.91s4.93 0 6.04-.9a4 4 0 0 0 .55-.56c.91-1.1.91-2.75.91-6.04v-1c0-3.29 0-4.93-.9-6.04a4 4 0 0 0-.56-.55C14.44 4 12.79 4 9.5 4s-4.93 0-6.04.9a4 4 0 0 0-.55.56 4 4 0 0 0-.78 2.04"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m17 9.5.66-.33c1.94-.97 2.92-1.46 3.63-1.02s.71 1.53.71 3.7v.3c0 2.17 0 3.26-.71 3.7s-1.69-.05-3.63-1.02L17 14.5z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

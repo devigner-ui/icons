@@ -23,7 +23,60 @@ const IconArrangeVerticalSquare = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m10.18 17.15-3.04-3.04"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M10.18 6.85v10.3"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m13.82 6.85 3.04 3.04"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M13.82 17.15V6.85"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 14v1c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +90,7 @@ const IconArrangeVerticalSquare = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M9.67 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7h-6c-5 0-7 2-7 7v6c0 5 2 7 7 7"
+              d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -45,7 +98,7 @@ const IconArrangeVerticalSquare = forwardRef<SVGSVGElement, IconProps>(
             />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="m10.85 17.15-3.04-3.04"
+                d="m10.18 17.15-3.04-3.04"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -53,7 +106,7 @@ const IconArrangeVerticalSquare = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="M10.85 6.85v10.3"
+                d="M10.18 6.85v10.3"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -61,7 +114,7 @@ const IconArrangeVerticalSquare = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="m14.49 6.85 3.04 3.04"
+                d="m13.82 6.85 3.04 3.04"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -69,7 +122,7 @@ const IconArrangeVerticalSquare = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="M14.49 17.15V6.85"
+                d="M13.82 17.15V6.85"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -93,15 +146,15 @@ const IconArrangeVerticalSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.86 2H8.49C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2"
+              d="M16.19 2H7.82C4.17 2 2 4.17 2 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2"
               fill="currentColor"
             />
             <path
-              d="M10.85 6.1a.76.76 0 0 0-.75.75v8.5l-1.76-1.76a.75.75 0 0 0-1.06 0 .75.75 0 0 0 0 1.06l3.04 3.04a.8.8 0 0 0 .53.22q.14 0 .29-.06a.8.8 0 0 0 .47-.7V6.85a.76.76 0 0 0-.76-.75"
+              d="M10.18 6.1a.76.76 0 0 0-.75.75v8.5l-1.76-1.76a.75.75 0 0 0-1.06 0 .75.75 0 0 0 0 1.06l3.04 3.04a.8.8 0 0 0 .53.22q.14 0 .29-.06a.8.8 0 0 0 .47-.7V6.85a.76.76 0 0 0-.76-.75"
               fill="currentColor"
             />
             <path
-              d="m18.06 9.36-3.04-3.04a1 1 0 0 0-.24-.16.7.7 0 0 0-.57 0 .8.8 0 0 0-.47.7v10.31c0 .41.34.75.75.75s.75-.34.75-.75v-8.5L17 10.43q.23.22.53.22t.53-.22a.77.77 0 0 0 0-1.07"
+              d="m17.39 9.36-3.04-3.04a1 1 0 0 0-.24-.16.7.7 0 0 0-.57 0 .8.8 0 0 0-.47.7v10.31c0 .41.34.75.75.75s.75-.34.75-.75v-8.5l1.76 1.76q.23.22.53.22t.53-.22a.77.77 0 0 0 0-1.07"
               fill="currentColor"
             />
           </svg>
@@ -119,7 +172,7 @@ const IconArrangeVerticalSquare = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.86 2H8.48C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.65 2.17 5.82 5.81 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2M11.6 17.15q0 .15-.06.29a.8.8 0 0 1-.7.47.8.8 0 0 1-.53-.22l-3.04-3.04a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l1.76 1.76v-8.5c0-.41.34-.75.75-.75s.75.34.75.75zm6.46-6.73a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-1.76-1.76v8.5c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V6.85q0-.14.06-.29a.8.8 0 0 1 .41-.41.7.7 0 0 1 .57 0q.13.06.24.16l3.04 3.04c.29.3.29.77 0 1.07"
+              d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2m-5.26 15.15q0 .15-.06.29a.8.8 0 0 1-.7.47.8.8 0 0 1-.53-.22L6.6 14.65a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l1.76 1.76v-8.5c0-.41.34-.75.75-.75s.75.34.75.75zm6.46-6.73a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-1.76-1.76v8.5c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V6.85q0-.14.06-.29a.8.8 0 0 1 .41-.41.7.7 0 0 1 .57 0q.13.06.24.16l3.04 3.04c.29.3.29.77 0 1.07"
               fill="currentColor"
             />
           </svg>

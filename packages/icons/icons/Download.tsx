@@ -22,7 +22,34 @@ const IconDownload = forwardRef<SVGSVGElement, IconProps>(function IconDownload(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8 22h8c2.83 0 4.24 0 5.12-.88S22 18.82 22 16v-1c0-2.83 0-4.24-.88-5.12C20.35 9.1 19.17 9 17 9M7 9c-2.18.01-3.35.11-4.12.88C2 10.76 2 12.18 2 15v1c0 2.83 0 4.24.88 5.12q.44.44 1.12.63"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M12 2v13m3-3.5L12 15l-3-3.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -65,13 +92,13 @@ const IconDownload = forwardRef<SVGSVGElement, IconProps>(function IconDownload(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M22 16v-1c0-2.83 0-4.24-.88-5.12S18.82 9 16 9H8c-2.83 0-4.24 0-5.12.88S2 12.18 2 15v1c0 2.83 0 4.24.88 5.12S5.18 22 8 22h8c2.83 0 4.24 0 5.12-.88S22 18.82 22 16"
+            d="M22 16.4v-1c0-2.83 0-4.24-.88-5.12S18.82 9.4 16 9.4H8c-2.83 0-4.24 0-5.12.88S2 12.58 2 15.4v1c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h8c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12"
             fill="currentColor"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M12 1.25a.75.75 0 0 0-.75.75v10.97l-1.68-1.96a.75.75 0 1 0-1.14.98l3 3.5a.75.75 0 0 0 1.14 0l3-3.5a.75.75 0 1 0-1.14-.98l-1.68 1.96V2a.75.75 0 0 0-.75-.75"
+            d="M12 1.65a.75.75 0 0 0-.75.75v10.97l-1.68-1.96a.75.75 0 1 0-1.14.98l3 3.5a.75.75 0 0 0 1.14 0l3-3.5a.75.75 0 1 0-1.14-.98l-1.68 1.96V2.4a.75.75 0 0 0-.75-.75"
             fill="currentColor"
           />
         </svg>
@@ -91,11 +118,11 @@ const IconDownload = forwardRef<SVGSVGElement, IconProps>(function IconDownload(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M12 1.25a.75.75 0 0 0-.75.75v10.97l-1.68-1.96a.75.75 0 1 0-1.14.98l3 3.5a.75.75 0 0 0 1.14 0l3-3.5a.75.75 0 1 0-1.14-.98l-1.68 1.96V2a.75.75 0 0 0-.75-.75"
+            d="M12 1.65a.75.75 0 0 0-.75.75v10.97l-1.68-1.96a.75.75 0 1 0-1.14.98l3 3.5a.75.75 0 0 0 1.14 0l3-3.5a.75.75 0 1 0-1.14-.98l-1.68 1.96V2.4a.75.75 0 0 0-.75-.75"
             fill="currentColor"
           />
           <path
-            d="M14.25 9v.38a2.25 2.25 0 0 1 2.46 3.58l-3 3.5a2.25 2.25 0 0 1-3.42 0l-3-3.5a2.25 2.25 0 0 1 2.46-3.58V9H8c-2.83 0-4.24 0-5.12.88S2 12.18 2 15v1c0 2.83 0 4.24.88 5.12S5.18 22 8 22h8c2.83 0 4.24 0 5.12-.88S22 18.82 22 16v-1c0-2.83 0-4.24-.88-5.12S18.82 9 16 9z"
+            d="M14.25 9.4v.38a2.25 2.25 0 0 1 2.46 3.58l-3 3.5a2.25 2.25 0 0 1-3.42 0l-3-3.5a2.25 2.25 0 0 1 2.46-3.58V9.4H8c-2.83 0-4.24 0-5.12.88S2 12.58 2 15.4v1c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h8c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12v-1c0-2.83 0-4.24-.88-5.12S18.82 9.4 16 9.4z"
             fill="currentColor"
           />
         </svg>

@@ -22,7 +22,7 @@ const IconAugurRep = forwardRef<SVGSVGElement, IconProps>(function IconAugurRep(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,14 +36,51 @@ const IconAugurRep = forwardRef<SVGSVGElement, IconProps>(function IconAugurRep(
           {...rest}
         >
           <path
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="m9 11 2.5-5h1l2.5 5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m8 13-1 2 5 3 5-3-1-2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m9.67 11 2.5-5h1l2.5 5"
+            d="m9 11 2.5-5h1l2.5 5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -52,7 +89,7 @@ const IconAugurRep = forwardRef<SVGSVGElement, IconProps>(function IconAugurRep(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m8.67 13-1 2 5 3 5-3-1-2"
+            d="m8 13-1 2 5 3 5-3-1-2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -75,20 +112,20 @@ const IconAugurRep = forwardRef<SVGSVGElement, IconProps>(function IconAugurRep(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             fill="currentColor"
           />
           <path
-            d="M15.67 11.75a.8.8 0 0 1-.67-.41l-2.29-4.59h-.07l-2.29 4.59a.76.76 0 0 1-1.01.34.76.76 0 0 1-.34-1.01l2.5-5a.8.8 0 0 1 .67-.41h1c.28 0 .54.16.67.41l2.5 5c.19.37.04.82-.34 1.01a1 1 0 0 1-.33.07"
+            d="M15 11.75a.8.8 0 0 1-.67-.41l-2.29-4.59h-.07l-2.29 4.59a.76.76 0 0 1-1.01.34.76.76 0 0 1-.34-1.01l2.5-5a.8.8 0 0 1 .67-.41h1c.28 0 .54.16.67.41l2.5 5c.19.37.04.82-.34 1.01a1 1 0 0 1-.33.07"
             fill="currentColor"
           />
           <path
-            d="M12.67 18.75a1 1 0 0 1-.39-.11l-5-3a.75.75 0 0 1-.29-.98l1-2A.76.76 0 0 1 9 12.32c.37.19.52.64.34 1.01l-.69 1.38 4.02 2.41 4.02-2.41-.69-1.38a.75.75 0 0 1 1.35-.67l1 2c.18.35.05.78-.29.98l-5 3a1 1 0 0 1-.39.11"
+            d="M12 18.75a1 1 0 0 1-.39-.11l-5-3a.75.75 0 0 1-.29-.98l1-2a.76.76 0 0 1 1.01-.34c.37.19.52.64.34 1.01l-.69 1.38L12 17.12l4.02-2.41-.69-1.38a.75.75 0 0 1 1.35-.67l1 2c.18.35.05.78-.29.98l-5 3a1 1 0 0 1-.39.11"
             fill="currentColor"
           />
         </svg>
@@ -106,7 +143,7 @@ const IconAugurRep = forwardRef<SVGSVGElement, IconProps>(function IconAugurRep(
           {...rest}
         >
           <path
-            d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M9 10.66l2.5-5a.8.8 0 0 1 .67-.41h1c.28 0 .54.16.67.41l2.5 5c.19.37.04.82-.34 1.01a1 1 0 0 1-.33.08.8.8 0 0 1-.67-.41l-2.29-4.59h-.07l-2.29 4.59A.76.76 0 1 1 9 10.66m9.06 4.98-5 3a1 1 0 0 1-.39.11 1 1 0 0 1-.39-.11l-5-3a.75.75 0 0 1-.29-.98l1-2A.76.76 0 0 1 9 12.32c.37.19.52.64.34 1.01l-.69 1.38 4.02 2.41 4.02-2.41-.69-1.38a.75.75 0 0 1 1.35-.67l1 2c.17.35.04.78-.29.98"
+            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m-3.67 8.66 2.5-5a.8.8 0 0 1 .67-.41h1c.28 0 .54.16.67.41l2.5 5c.19.37.04.82-.34 1.01a1 1 0 0 1-.33.08.8.8 0 0 1-.67-.41l-2.29-4.59h-.07l-2.29 4.59a.76.76 0 1 1-1.35-.68m9.06 4.98-5 3a1 1 0 0 1-.39.11 1 1 0 0 1-.39-.11l-5-3a.75.75 0 0 1-.29-.98l1-2a.76.76 0 0 1 1.01-.34c.37.19.52.64.34 1.01l-.69 1.38L12 17.12l4.02-2.41-.69-1.38a.75.75 0 0 1 1.35-.67l1 2c.17.35.04.78-.29.98"
             fill="currentColor"
           />
         </svg>

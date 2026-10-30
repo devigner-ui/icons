@@ -22,7 +22,7 @@ const IconSlider = forwardRef<SVGSVGElement, IconProps>(function IconSlider(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,49 @@ const IconSlider = forwardRef<SVGSVGElement, IconProps>(function IconSlider(
           {...rest}
         >
           <path
-            d="M15.67 22h-6c-2.5 0-4-1.8-4-4V6c0-2.2 1.5-4 4-4h6c2.5 0 4 1.8 4 4v12c0 2.2-1.5 4-4 4"
+            d="M15 2c2.5 0 4 1.8 4 4v12c0 2.2-1.5 4-4 4H9c-2.5 0-4-1.8-4-4V6c0-2.2 1.5-4 4-4h1.98"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M5 16.01h14"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 4v16"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22 4v16"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15 22H9c-2.5 0-4-1.8-4-4V6c0-2.2 1.5-4 4-4h6c2.5 0 4 1.8 4 4v12c0 2.2-1.5 4-4 4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,7 +86,7 @@ const IconSlider = forwardRef<SVGSVGElement, IconProps>(function IconSlider(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M5.67 16.01h14"
+            d="M5 16.01h14"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -52,7 +94,7 @@ const IconSlider = forwardRef<SVGSVGElement, IconProps>(function IconSlider(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M2.67 4v16"
+            d="M2 4v16"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -60,7 +102,7 @@ const IconSlider = forwardRef<SVGSVGElement, IconProps>(function IconSlider(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M22.67 4v16"
+            d="M22 4v16"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -81,20 +123,20 @@ const IconSlider = forwardRef<SVGSVGElement, IconProps>(function IconSlider(
           {...rest}
         >
           <path
-            d="M19.67 16.01V18c0 2.2-1.5 4-4 4h-6c-2.5 0-4-1.8-4-4v-1.99z"
+            d="M19 16.01V18c0 2.2-1.5 4-4 4H9c-2.5 0-4-1.8-4-4v-1.99z"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M19.67 6v10.01h-14V6c0-2.2 1.5-4 4-4h6c2.5 0 4 1.8 4 4"
+            d="M19 6v10.01H5V6c0-2.2 1.5-4 4-4h6c2.5 0 4 1.8 4 4"
             fill="currentColor"
           />
           <path
-            d="M3.67 20.75a.76.76 0 0 1-.75-.75V4c0-.41.34-.75.75-.75s.75.34.75.75v16c0 .41-.34.75-.75.75"
+            d="M3 20.75a.76.76 0 0 1-.75-.75V4c0-.41.34-.75.75-.75s.75.34.75.75v16c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M21.67 20.75a.76.76 0 0 1-.75-.75V4c0-.41.34-.75.75-.75s.75.34.75.75v16c0 .41-.34.75-.75.75"
+            d="M21 20.75a.76.76 0 0 1-.75-.75V4c0-.41.34-.75.75-.75s.75.34.75.75v16c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>
@@ -112,19 +154,19 @@ const IconSlider = forwardRef<SVGSVGElement, IconProps>(function IconSlider(
           {...rest}
         >
           <path
-            d="M18.67 16.01a1 1 0 0 1 1 1V18c0 2.2-1.5 4-4 4h-6c-2.5 0-4-1.8-4-4v-.99a1 1 0 0 1 1-1z"
+            d="M18 16.01a1 1 0 0 1 1 1V18c0 2.2-1.5 4-4 4H9c-2.5 0-4-1.8-4-4v-.99a1 1 0 0 1 1-1z"
             fill="currentColor"
           />
           <path
-            d="M19.67 6v7.5a1 1 0 0 1-1 1h-12a1 1 0 0 1-1-1V6c0-2.2 1.5-4 4-4h6c2.5 0 4 1.8 4 4"
+            d="M19 6v7.5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6c0-2.2 1.5-4 4-4h6c2.5 0 4 1.8 4 4"
             fill="currentColor"
           />
           <path
-            d="M3.67 20.75a.76.76 0 0 1-.75-.75V4c0-.41.34-.75.75-.75s.75.34.75.75v16c0 .41-.34.75-.75.75"
+            d="M3 20.75a.76.76 0 0 1-.75-.75V4c0-.41.34-.75.75-.75s.75.34.75.75v16c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M21.67 20.75a.76.76 0 0 1-.75-.75V4c0-.41.34-.75.75-.75s.75.34.75.75v16c0 .41-.34.75-.75.75"
+            d="M21 20.75a.76.76 0 0 1-.75-.75V4c0-.41.34-.75.75-.75s.75.34.75.75v16c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>

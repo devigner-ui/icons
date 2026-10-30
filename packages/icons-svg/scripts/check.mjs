@@ -10,6 +10,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { STYLES } from "../../icons/scripts/emit-svg.mjs";
+import { activeRenames } from "../../icons/scripts/renames.mjs";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 
@@ -25,15 +26,23 @@ const counts = STYLES.map((style) => {
   return [style, files, dir];
 });
 
-/* Every style draws every symbol, so any disagreement is a lost drawing. */
-const [, first] = counts[0];
-for (const [style, files] of counts) {
+/* The four core styles draw every symbol. Broken is intentionally selective:
+   it must be a non-empty subset of outline, never an outline fallback copied
+   into a misleading fifth directory. */
+const [, outline] = counts.find(([style]) => style === "outline");
+for (const [style, files] of counts.filter(([style]) => style !== "broken")) {
   assert.equal(
     files.length,
-    first.length,
-    `${style} has ${files.length} files, ${counts[0][0]} has ${first.length}`,
+    outline.length,
+    `${style} has ${files.length} files, outline has ${outline.length}`,
   );
 }
+const [, broken] = counts.find(([style]) => style === "broken");
+const outlineNames = new Set(outline.map((file) => file.toLowerCase()));
+assert.ok(
+  broken.every((file) => outlineNames.has(file.toLowerCase())),
+  "Broken emitted an icon that has no outline counterpart",
+);
 
 for (const [style, files, dir] of counts) {
   const svg = readFileSync(path.join(dir, files[0]), "utf8");
@@ -47,15 +56,25 @@ for (const [style, files, dir] of counts) {
     `${style}/${files[0]} carries JSX attribute names`,
   );
 
+  /* One symbol per file, plus the old names that differ from a current one
+     only in case: those keep a sprite id but no file, since the two files
+     would be one on Windows and macOS. */
+  const idOnly = activeRenames(new URL("../package.json", import.meta.url)).filter(
+    (r) => r.dir === "aliases" && existsSync(path.join(dir, `${r.to}.svg`)),
+  ).length;
   const sprite = readFileSync(path.join(ROOT, "sprite", `${style}.svg`), "utf8");
   const symbols = sprite.match(/<symbol\b/g)?.length ?? 0;
   assert.equal(
     symbols,
-    files.length,
-    `${style} sprite holds ${symbols} symbols for ${files.length} files`,
+    files.length + idOnly,
+    `${style} sprite holds ${symbols} symbols for ${files.length} files and ${idOnly} id-only old names`,
   );
 }
 
+const oldNameFiles = activeRenames(new URL("../package.json", import.meta.url)).filter(
+  (r) => r.dir === "icons",
+).length;
 console.log(
-  `ok  ${first.length} icons x ${STYLES.length} styles on disk, sprites agree`,
+  `ok  ${outline.length - oldNameFiles} icons in four core styles (plus ${oldNameFiles} old-name files), ` +
+    `${broken.length - oldNameFiles} Broken drawings; sprites agree`,
 );

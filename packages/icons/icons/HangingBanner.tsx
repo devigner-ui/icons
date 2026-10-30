@@ -23,7 +23,49 @@ const IconHangingBanner = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M2 2.5h20"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M5.75 2.5H20v10.28c0 1.34 0 2-.27 2.6-.23.5-.63.9-1.37 1.55m-2.64 2.31c-1.73 1.52-2.64 2.27-3.72 2.27-1.13 0-2.07-.82-3.95-2.47l-2-1.75c-1.01-.88-1.51-1.32-1.78-1.91-.27-.6-.27-1.26-.27-2.6V2.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8.5 13.5h7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8.5 8.5h7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,25 +79,25 @@ const IconHangingBanner = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M2 2h20"
+              d="M2 2.5h20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M4 2h16v10.28c0 1.34 0 2-.27 2.6-.27.59-.77 1.03-1.78 1.91l-2 1.75c-1.88 1.65-2.82 2.47-3.95 2.47s-2.07-.82-3.95-2.47l-2-1.75c-1.01-.88-1.51-1.32-1.78-1.91-.27-.6-.27-1.26-.27-2.6z"
+              d="M4 2.5h16v10.28c0 1.34 0 2-.27 2.6-.27.59-.77 1.03-1.78 1.91l-2 1.75c-1.88 1.65-2.82 2.47-3.95 2.47s-2.07-.82-3.95-2.47l-2-1.75c-1.01-.88-1.51-1.32-1.78-1.91-.27-.6-.27-1.26-.27-2.6z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
-              d="M8.5 13h7"
+              d="M8.5 13.5h7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
-              d="M8.5 8h7"
+              d="M8.5 8.5h7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -114,7 +156,7 @@ const IconHangingBanner = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2 1.25a.75.75 0 0 0 0 1.5h2v9.53c0 1.34 0 2 .27 2.6.27.59.77 1.03 1.78 1.91l2 1.75c1.88 1.65 2.82 2.47 3.95 2.47s2.07-.82 3.95-2.47l2-1.75c1-.88 1.51-1.32 1.78-1.91.27-.6.27-1.26.27-2.6V2.75h2a.75.75 0 0 0 0-1.5zm6.5 11a.75.75 0 0 0 0 1.5h7a.75.75 0 1 0 0-1.5zM7.75 8c0-.41.34-.75.75-.75h7a.75.75 0 0 1 0 1.5h-7A.75.75 0 0 1 7.75 8"
+              d="M2 2.15a.75.75 0 0 0 0 1.5h2v9.53c0 1.34 0 2 .27 2.6.27.59.77 1.03 1.78 1.91l2 1.75c1.88 1.65 2.82 2.47 3.95 2.47s2.07-.82 3.95-2.47l2-1.75c1-.88 1.51-1.32 1.78-1.91.27-.6.27-1.26.27-2.6V3.65h2a.75.75 0 0 0 0-1.5zm6.5 11a.75.75 0 0 0 0 1.5h7a.75.75 0 1 0 0-1.5zM7.75 8.9c0-.41.34-.75.75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
           </svg>

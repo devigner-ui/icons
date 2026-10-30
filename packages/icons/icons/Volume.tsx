@@ -22,7 +22,27 @@ const IconVolume = forwardRef<SVGSVGElement, IconProps>(function IconVolume(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5.46 8.58c.28-.53.83-1.05 1.38-1.3C7.44 7 8.13 7 9.5 7c.51 0 .77 0 1.02-.04a3 3 0 0 0 .7-.22c.24-.1.45-.24.88-.52l.22-.14c2.54-1.68 3.81-2.52 4.88-2.16q.3.11.58.3c.92.65 1 2.16 1.13 5.17.05 1.12.09 2.08.09 2.61s-.04 1.49-.09 2.6c-.14 3.02-.2 4.53-1.13 5.18q-.27.18-.58.3c-1.07.36-2.34-.48-4.88-2.16l-.22-.14c-.43-.28-.64-.42-.87-.52a3 3 0 0 0-.71-.22c-.25-.04-.5-.04-1.02-.04-1.37 0-2.06 0-2.66-.28a3.2 3.2 0 0 1-1.38-1.3c-.31-.58-.35-1.18-.43-2.4l-.02-.52"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

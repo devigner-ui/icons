@@ -23,7 +23,43 @@ const IconWirelessCharge = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11.25 22a.75.75 0 0 0 1.5 0zm0-1v1h1.5v-1z"
+            fill="currentColor"
+          />
+          <path
+            d="M12.86 7 10 10h4l-2.86 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M13.5 18v1.5c0 .47 0 .7-.08.88a1 1 0 0 1-.54.54c-.18.08-.41.08-.88.08s-.7 0-.88-.08a1 1 0 0 1-.54-.54c-.08-.18-.08-.41-.08-.88V18"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M4.58 7A8 8 0 1 0 9 2.58"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -99,11 +135,11 @@ const IconWirelessCharge = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M12.06 18A7.85 7.85 0 0 0 20 10.06 8.16 8.16 0 0 0 11.94 2 7.85 7.85 0 0 0 4 9.94 8.16 8.16 0 0 0 12.06 18m1.31-11.54c.3.28.32.76.03 1.06l-1.65 1.73H14a.75.75 0 0 1 .54 1.27l-2.85 3a.75.75 0 0 1-1.1-1.04l1.66-1.73H10a.75.75 0 0 1-.54-1.27l2.85-3a.75.75 0 0 1 1.06-.02"
+              d="M12.06 17.6A7.85 7.85 0 0 0 20 9.66a8.16 8.16 0 0 0-8.06-8.06A7.85 7.85 0 0 0 4 9.54a8.16 8.16 0 0 0 8.06 8.06m1.31-11.54c.3.28.32.76.03 1.06l-1.65 1.73H14a.75.75 0 0 1 .54 1.27l-2.85 3a.75.75 0 0 1-1.1-1.04l1.66-1.73H10a.75.75 0 0 1-.54-1.27l2.85-3a.75.75 0 0 1 1.06-.02"
               fill="currentColor"
             />
             <path
-              d="m11.12 20.92.13.04V22a.75.75 0 0 0 1.5 0v-1.04q.08 0 .13-.04a1 1 0 0 0 .54-.54c.08-.18.08-.41.08-.88v-.6a9 9 0 0 1-3-.05v.65c0 .47 0 .7.08.88q.17.38.54.54"
+              d="m11.12 20.52.13.04v1.04a.75.75 0 0 0 1.5 0v-1.04q.08 0 .13-.04a1 1 0 0 0 .54-.54c.08-.18.08-.41.08-.88v-.6a9 9 0 0 1-3-.05v.65c0 .47 0 .7.08.88q.17.38.54.54"
               fill="currentColor"
             />
           </svg>

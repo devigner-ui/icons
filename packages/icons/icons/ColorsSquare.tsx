@@ -23,7 +23,49 @@ const IconColorsSquare = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M13.2 14.4A3.6 3.6 0 0 1 9.6 18a3.6 3.6 0 0 1-.95-7.07 3.6 3.6 0 0 0 4.3 2.15q.24.6.25 1.32Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15.6 9.6q0 .71-.25 1.33a3.61 3.61 0 1 1 .25-1.33Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18 14.4a3.6 3.6 0 0 1-6 2.68 3.55 3.55 0 0 0 .95-4.01c1.1-.3 1.99-1.1 2.4-2.15A3.6 3.6 0 0 1 18 14.4Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 13.2V15c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,21 +80,21 @@ const IconColorsSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M13.87 14.4a3.6 3.6 0 0 1-3.6 3.6 3.6 3.6 0 0 1-.95-7.07 3.6 3.6 0 0 0 4.3 2.15q.24.6.25 1.32"
+                d="M13.2 14.4A3.6 3.6 0 0 1 9.6 18a3.6 3.6 0 0 1-.95-7.07 3.6 3.6 0 0 0 4.3 2.15q.24.6.25 1.32"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M16.27 9.6q0 .71-.25 1.33a3.61 3.61 0 1 1 .25-1.33"
+                d="M15.6 9.6q0 .71-.25 1.33a3.61 3.61 0 1 1 .25-1.33"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M18.67 14.4a3.6 3.6 0 0 1-6 2.68 3.55 3.55 0 0 0 .95-4.01c1.1-.3 1.99-1.1 2.4-2.15a3.6 3.6 0 0 1 2.65 3.48"
+                d="M18 14.4a3.6 3.6 0 0 1-6 2.68 3.55 3.55 0 0 0 .95-4.01c1.1-.3 1.99-1.1 2.4-2.15A3.6 3.6 0 0 1 18 14.4"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
@@ -60,7 +102,7 @@ const IconColorsSquare = forwardRef<SVGSVGElement, IconProps>(
               />
             </g>
             <path
-              d="M9.67 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7h-6c-5 0-7 2-7 7v6c0 5 2 7 7 7"
+              d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -82,21 +124,21 @@ const IconColorsSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.86 2H8.49C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2"
+              d="M16.19 2H7.82C4.17 2 2 4.17 2 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.6" : "1"}
-              d="M13.87 14.4a3.6 3.6 0 0 1-3.6 3.6 3.6 3.6 0 0 1-.95-7.07 3.6 3.6 0 0 0 4.3 2.15q.24.6.25 1.32"
+              d="M13.2 14.4A3.6 3.6 0 0 1 9.6 18a3.6 3.6 0 0 1-.95-7.07 3.6 3.6 0 0 0 4.3 2.15q.24.6.25 1.32"
               fill="currentColor"
             />
             <path
-              d="M16.27 9.6q0 .71-.25 1.33a3.61 3.61 0 1 1 .25-1.33"
+              d="M15.6 9.6q0 .71-.25 1.33a3.61 3.61 0 1 1 .25-1.33"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18.67 14.4a3.6 3.6 0 0 1-6 2.68 3.55 3.55 0 0 0 .95-4.01c1.1-.3 1.99-1.1 2.4-2.15a3.6 3.6 0 0 1 2.65 3.48"
+              d="M18 14.4a3.6 3.6 0 0 1-6 2.68 3.55 3.55 0 0 0 .95-4.01c1.1-.3 1.99-1.1 2.4-2.15A3.6 3.6 0 0 1 18 14.4"
               fill="currentColor"
             />
           </svg>
@@ -114,7 +156,7 @@ const IconColorsSquare = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.86 2H8.48C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.65 2.17 5.82 5.81 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2m-4.19 4a3.6 3.6 0 1 1 0 7.2 3.6 3.6 0 0 1 0-7.2m-2.4 12a3.6 3.6 0 0 1-2.26-6.4c.24-.2.58-.07.73.2a4.5 4.5 0 0 0 4.65 2.23c.24-.03.48.12.48.36 0 1.06-.46 2.02-1.2 2.68-.64.58-1.48.93-2.4.93m4.8 0q-.53 0-1.01-.14c-.33-.1-.39-.5-.18-.78a4.5 4.5 0 0 0 .84-3.28.3.3 0 0 1 .14-.28c.72-.4 1.33-1 1.73-1.73.15-.26.5-.39.73-.2A3.6 3.6 0 0 1 15.07 18"
+              d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2M12 6a3.6 3.6 0 1 1 0 7.2A3.6 3.6 0 0 1 12 6M9.6 18a3.6 3.6 0 0 1-2.26-6.4c.24-.2.58-.07.73.2a4.5 4.5 0 0 0 4.65 2.23c.24-.03.48.12.48.36 0 1.06-.46 2.02-1.2 2.68-.64.58-1.48.93-2.4.93m4.8 0q-.53 0-1.01-.14c-.33-.1-.39-.5-.18-.78a4.5 4.5 0 0 0 .84-3.28.3.3 0 0 1 .14-.28c.72-.4 1.33-1 1.73-1.73.15-.26.5-.39.73-.2A3.6 3.6 0 0 1 14.4 18"
               fill="currentColor"
             />
           </svg>

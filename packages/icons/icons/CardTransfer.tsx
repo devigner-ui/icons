@@ -23,7 +23,46 @@ const IconCardTransfer = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10 4C6.23 4 4.34 4 3.17 5.17S2 8.23 2 12s0 5.66 1.17 6.83S6.23 20 10 20h1.5M14 4c3.77 0 5.66 0 6.83 1.17C21.89 6.23 21.99 7.9 22 11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15.5 14v6m-2-2 2 2 2-2m2.5 2v-6m-2 2 2-2 2 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10 16H6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 10h5m15 0H11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -87,26 +126,26 @@ const IconCardTransfer = forwardRef<SVGSVGElement, IconProps>(
           >
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="m22 12.82-.4-.41a2.25 2.25 0 0 0-3.2 0l-.8.8a2.25 2.25 0 0 0-4.35.79v1.76a2.25 2.25 0 0 0-1.34 3.83l.4.41H10c-3.77 0-5.66 0-6.83-1.17S2 15.77 2 12v-2h20z"
+                d="m21.6 12.42-.4-.41a2.25 2.25 0 0 0-3.2 0l-.8.8a2.25 2.25 0 0 0-4.35.79v1.76a2.25 2.25 0 0 0-1.34 3.83l.4.41H9.6c-3.77 0-5.66 0-6.83-1.17S1.6 15.37 1.6 11.6v-2h20z"
                 fill="currentColor"
               />
             </g>
             <path
-              d="M5.25 16c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75"
+              d="M4.85 15.6c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
             <path
-              d="M10 4h4c3.79 0 5.68 0 6.85 1.12.85.8 1.08 1.96 1.15 3.88v1H2V9c.07-1.92.3-3.08 1.15-3.88C4.32 4 6.2 4 9.99 4"
+              d="M9.6 3.6h4c3.79 0 5.68 0 6.85 1.12.85.8 1.08 1.96 1.15 3.88v1h-20v-1c.07-1.92.3-3.08 1.15-3.88C3.92 3.6 5.8 3.6 9.59 3.6"
               fill="currentColor"
             />
             <path
-              d="M19.47 13.47c.3-.3.77-.3 1.06 0l2 2a.75.75 0 1 1-1.06 1.06l-.72-.72V20a.75.75 0 0 1-1.5 0v-4.19l-.72.72a.75.75 0 1 1-1.06-1.06z"
+              d="M19.07 13.07c.3-.3.77-.3 1.06 0l2 2a.75.75 0 1 1-1.06 1.06l-.72-.72v4.19a.75.75 0 0 1-1.5 0v-4.19l-.72.72a.75.75 0 1 1-1.06-1.06z"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M15.5 13.25c.41 0 .75.34.75.75v4.19l.72-.72a.75.75 0 1 1 1.06 1.06l-2 2c-.3.3-.77.3-1.06 0l-2-2a.75.75 0 1 1 1.06-1.06l.72.72V14c0-.41.34-.75.75-.75"
+              d="M15.1 12.85c.41 0 .75.34.75.75v4.19l.72-.72a.75.75 0 1 1 1.06 1.06l-2 2c-.3.3-.77.3-1.06 0l-2-2a.75.75 0 1 1 1.06-1.06l.72.72V13.6c0-.41.34-.75.75-.75"
               fill="currentColor"
             />
           </svg>
@@ -124,19 +163,19 @@ const IconCardTransfer = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M10 4h4c3.77 0 5.66 0 6.83 1.17.84.85 1.08 2.06 1.14 4.08H2.03c.06-2.02.3-3.23 1.14-4.08C4.34 4 6.23 4 10 4"
+              d="M9.6 3.6h4c3.77 0 5.66 0 6.83 1.17.84.85 1.08 2.06 1.14 4.08H1.63c.06-2.02.3-3.23 1.14-4.08C3.94 3.6 5.83 3.6 9.6 3.6"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="m22 12.82-.4-.41a2.25 2.25 0 0 0-3.2 0l-.8.8a2.25 2.25 0 0 0-4.35.79v1.76a2.25 2.25 0 0 0-1.34 3.83l.4.41H10c-3.77 0-5.66 0-6.83-1.17S2 15.77 2 12v-1.25h20zM6 15.25a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5z"
+              d="m21.6 12.42-.4-.41a2.25 2.25 0 0 0-3.2 0l-.8.8a2.25 2.25 0 0 0-4.35.79v1.76a2.25 2.25 0 0 0-1.34 3.83l.4.41H9.6c-3.77 0-5.66 0-6.83-1.17S1.6 15.37 1.6 11.6v-1.25h20zm-16 2.43a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5z"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M15.5 13.25c.41 0 .75.34.75.75v4.19l.72-.72a.75.75 0 1 1 1.06 1.06l-2 2c-.3.3-.77.3-1.06 0l-2-2a.75.75 0 1 1 1.06-1.06l.72.72V14c0-.41.34-.75.75-.75m3.97.22c.3-.3.77-.3 1.06 0l2 2a.75.75 0 1 1-1.06 1.06l-.72-.72V20a.75.75 0 0 1-1.5 0v-4.19l-.72.72a.75.75 0 1 1-1.06-1.06z"
+              d="M15.1 12.85c.41 0 .75.34.75.75v4.19l.72-.72a.75.75 0 1 1 1.06 1.06l-2 2c-.3.3-.77.3-1.06 0l-2-2a.75.75 0 1 1 1.06-1.06l.72.72V13.6c0-.41.34-.75.75-.75m3.97.22c.3-.3.77-.3 1.06 0l2 2a.75.75 0 1 1-1.06 1.06l-.72-.72v4.19a.75.75 0 0 1-1.5 0v-4.19l-.72.72a.75.75 0 1 1-1.06-1.06z"
               fill="currentColor"
             />
           </svg>

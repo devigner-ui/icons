@@ -22,7 +22,33 @@ const IconLock = forwardRef<SVGSVGElement, IconProps>(function IconLock(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M6 10V8q0-.5.08-1M18 10V8A6 6 0 0 0 7.5 4.03"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M11 22H8c-2.83 0-4.24 0-5.12-.88S2 18.82 2 16s0-4.24.88-5.12S5.18 10 8 10h8c2.83 0 4.24 0 5.12.88S22 13.18 22 16s0 4.24-.88 5.12-2.3.88-5.12.88h-1"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -63,11 +89,11 @@ const IconLock = forwardRef<SVGSVGElement, IconProps>(function IconLock(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M2 16c0-2.83 0-4.24.88-5.12S5.18 10 8 10h8c2.83 0 4.24 0 5.12.88S22 13.18 22 16s0 4.24-.88 5.12-2.3.88-5.12.88H8c-2.83 0-4.24 0-5.12-.88S2 18.82 2 16"
+            d="M2 16.4c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h8c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12 0 4.24-.88 5.12-2.3.88-5.12.88H8c-2.83 0-4.24 0-5.12-.88S2 19.22 2 16.4"
             fill="currentColor"
           />
           <path
-            d="M6.75 8a5.25 5.25 0 1 1 10.5 0v2q.85 0 1.5.06V8a6.75 6.75 0 0 0-13.5 0v2.06Q5.9 10 6.75 10z"
+            d="M6.75 8.4a5.25 5.25 0 1 1 10.5 0v2q.85 0 1.5.06V8.4a6.75 6.75 0 0 0-13.5 0v2.06q.65-.06 1.5-.06z"
             fill="currentColor"
           />
         </svg>
@@ -87,7 +113,7 @@ const IconLock = forwardRef<SVGSVGElement, IconProps>(function IconLock(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M5.25 10.06V8a6.75 6.75 0 0 1 13.5 0v2.06c1.11.08 1.84.29 2.37.82.88.88.88 2.3.88 5.12s0 4.24-.88 5.12-2.3.88-5.12.88H8c-2.83 0-4.24 0-5.12-.88S2 18.82 2 16s0-4.24.88-5.12c.53-.53 1.26-.74 2.37-.82M6.75 8a5.25 5.25 0 1 1 10.5 0v2H6.75z"
+            d="M5.25 10.46V8.4a6.75 6.75 0 0 1 13.5 0v2.06c1.11.08 1.84.29 2.37.82.88.88.88 2.3.88 5.12s0 4.24-.88 5.12-2.3.88-5.12.88H8c-2.83 0-4.24 0-5.12-.88S2 19.22 2 16.4s0-4.24.88-5.12c.53-.53 1.26-.74 2.37-.82m1.5-2.06a5.25 5.25 0 1 1 10.5 0v2H6.75z"
             fill="currentColor"
           />
         </svg>

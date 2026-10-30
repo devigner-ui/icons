@@ -22,7 +22,70 @@ const IconBandages = forwardRef<SVGSVGElement, IconProps>(function IconBandages(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4.66 2.27a4.1 4.1 0 0 1 4.41.94L20.8 14.93a4.2 4.2 0 0 1 .98 4.3m-2.34 2.47c-1.5.61-3.28.31-4.5-.91L3.21 9.07a4.2 4.2 0 0 1-.95-4.39"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m12 17.86-2.93 2.93a4.14 4.14 0 1 1-5.86-5.86L6.14 12z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m12 6.14 2.93-2.93a4.14 4.14 0 1 1 5.86 5.86L17.86 12z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M15.84 12.87A.79.79 0 1 1 14.73 14a.79.79 0 0 1 1.11-1.12"
+            fill="currentColor"
+          />
+          <path
+            d="M12.13 9.16a.79.79 0 1 0-1.11 1.11.79.79 0 0 0 1.1-1.11"
+            fill="currentColor"
+          />
+          <path
+            d="M13.99 14.73a.79.79 0 1 1-1.12 1.11.79.79 0 0 1 1.12-1.11"
+            fill="currentColor"
+          />
+          <path
+            d="M10.27 11.02a.79.79 0 1 0-1.11 1.1.79.79 0 0 0 1.11-1.1"
+            fill="currentColor"
+          />
+          <path
+            d="M16.77 15.66a.79.79 0 1 1-1.11 1.11.79.79 0 0 1 1.11-1.11"
+            fill="currentColor"
+          />
+          <path
+            d="M9.34 8.23a.79.79 0 1 0-1.1 1.11.79.79 0 0 0 1.1-1.1"
+            fill="currentColor"
+          />
+          <path
+            d="M13.06 11.94a.79.79 0 1 1-1.12 1.12.79.79 0 0 1 1.12-1.12"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -23,7 +23,49 @@ const IconWadOfMoney = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15 5H9c-2.8 0-4.21 0-5.22.67a4 4 0 0 0-1.1 1.1C2 7.8 2 9.2 2 12s0 4.21.67 5.22a4 4 0 0 0 1.1 1.1q.52.35 1.23.49M9 19h6c2.8 0 4.21 0 5.22-.67a4 4 0 0 0 1.1-1.1C22 16.2 22 14.8 22 12s0-4.21-.67-5.22a4 4 0 0 0-1.1-1.1 3 3 0 0 0-1.23-.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M9 9a3 3 0 1 0 0 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M15 9a3 3 0 1 1 0 6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M9 5v14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M15 5v14"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

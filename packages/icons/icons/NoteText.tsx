@@ -22,7 +22,7 @@ const IconNoteText = forwardRef<SVGSVGElement, IconProps>(function IconNoteText(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,61 @@ const IconNoteText = forwardRef<SVGSVGElement, IconProps>(function IconNoteText(
           {...rest}
         >
           <path
-            d="M8.67 2v3"
+            d="M8 2v3"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M16 2v3"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3 8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5V17c0 3-1.5 5-5 5H8c-3.5 0-5-2-5-5v-4.25"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8 11h8"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8 16h4"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8 2v3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -44,7 +98,7 @@ const IconNoteText = forwardRef<SVGSVGElement, IconProps>(function IconNoteText(
             strokeLinejoin="round"
           />
           <path
-            d="M16.67 2v3"
+            d="M16 2v3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -52,7 +106,7 @@ const IconNoteText = forwardRef<SVGSVGElement, IconProps>(function IconNoteText(
             strokeLinejoin="round"
           />
           <path
-            d="M21.67 8.5V17c0 3-1.5 5-5 5h-8c-3.5 0-5-2-5-5V8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5"
+            d="M21 8.5V17c0 3-1.5 5-5 5H8c-3.5 0-5-2-5-5V8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -61,7 +115,7 @@ const IconNoteText = forwardRef<SVGSVGElement, IconProps>(function IconNoteText(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M8.67 11h8"
+            d="M8 11h8"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -70,7 +124,7 @@ const IconNoteText = forwardRef<SVGSVGElement, IconProps>(function IconNoteText(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M8.67 16h4"
+            d="M8 16h4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -92,24 +146,24 @@ const IconNoteText = forwardRef<SVGSVGElement, IconProps>(function IconNoteText(
           {...rest}
         >
           <path
-            d="M8.67 5.75A.76.76 0 0 1 7.92 5V2c0-.41.34-.75.75-.75s.75.34.75.75v3c0 .41-.34.75-.75.75"
+            d="M8 6.15a.76.76 0 0 1-.75-.75v-3c0-.41.34-.75.75-.75s.75.34.75.75v3c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M16.67 5.75a.76.76 0 0 1-.75-.75V2c0-.41.34-.75.75-.75s.75.34.75.75v3c0 .41-.34.75-.75.75"
+            d="M16 6.15a.76.76 0 0 1-.75-.75v-3c0-.41.34-.75.75-.75s.75.34.75.75v3c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M21.67 8.5V17c0 3-1.5 5-5 5h-8c-3.5 0-5-2-5-5V8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5"
+            d="M21 8.9v8.5c0 3-1.5 5-5 5H8c-3.5 0-5-2-5-5V8.9c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5"
             fill="currentColor"
           />
           <path
-            d="M16.67 11.75h-8a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h8c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M16 12.15H8a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h8c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M12.67 16.75h-4a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M12 17.15H8a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>
@@ -127,15 +181,15 @@ const IconNoteText = forwardRef<SVGSVGElement, IconProps>(function IconNoteText(
           {...rest}
         >
           <path
-            d="M9.42 3.5V2a.76.76 0 0 0-.75-.75.76.76 0 0 0-.75.75v1.56q.36-.05.75-.06z"
+            d="M8.75 3.9V2.4A.76.76 0 0 0 8 1.65a.76.76 0 0 0-.75.75v1.56q.36-.05.75-.06z"
             fill="currentColor"
           />
           <path
-            d="M17.42 3.56V2a.76.76 0 0 0-.75-.75.76.76 0 0 0-.75.75v1.5h.75q.39 0 .75.06"
+            d="M16.75 3.96V2.4a.76.76 0 0 0-.75-.75.76.76 0 0 0-.75.75v1.5H16q.39 0 .75.06"
             fill="currentColor"
           />
           <path
-            d="M17.42 3.56V5c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V3.5h-6.5V5c0 .41-.34.75-.75.75A.76.76 0 0 1 7.92 5V3.56c-2.95.27-4.25 2.17-4.25 4.94V17c0 3 1.5 5 5 5h8c3.5 0 5-2 5-5V8.5c0-2.77-1.3-4.67-4.25-4.94m-4.75 13.19h-4a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75m4-5h-8a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h8c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M16.75 3.96V5.4c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V3.9h-6.5v1.5c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V3.96C4.3 4.23 3 6.13 3 8.9v8.5c0 3 1.5 5 5 5h8c3.5 0 5-2 5-5V8.9c0-2.77-1.3-4.67-4.25-4.94M12 17.15H8a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75m4-5H8a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h8c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>

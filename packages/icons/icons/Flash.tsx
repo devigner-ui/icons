@@ -22,7 +22,7 @@ const IconFlash = forwardRef<SVGSVGElement, IconProps>(function IconFlash(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,49 @@ const IconFlash = forwardRef<SVGSVGElement, IconProps>(function IconFlash(
           {...rest}
         >
           <path
-            d="M9.99 13.28h3.09v7.2a1.15 1.15 0 0 0 2.02.76l7.57-8.6c.66-.75.13-1.92-.87-1.92h-3.09v-7.2a1.15 1.15 0 0 0-2.02-.76l-7.57 8.6c-.65.75-.12 1.92.87 1.92"
+            d="m16.97 18.49 5.15-5.85c.66-.75.13-1.92-.87-1.92h-3.09v-7.2a1.15 1.15 0 0 0-2.02-.76l-.13.15m-2.32 2.63-5.12 5.82c-.65.75-.12 1.92.87 1.92h3.09v7.2a1.15 1.15 0 0 0 2.02.76l.11-.12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8.62 4h-7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.62 20h-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M4.62 12h-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.44 13.28h3.09v7.2a1.15 1.15 0 0 0 2.02.76l7.57-8.6c.66-.75.13-1.92-.87-1.92h-3.09v-7.2a1.15 1.15 0 0 0-2.02-.76l-7.57 8.6c-.65.75-.12 1.92.87 1.92"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -45,7 +87,7 @@ const IconFlash = forwardRef<SVGSVGElement, IconProps>(function IconFlash(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M9.17 4h-7"
+            d="M8.62 4h-7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -54,7 +96,7 @@ const IconFlash = forwardRef<SVGSVGElement, IconProps>(function IconFlash(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M8.17 20h-6"
+            d="M7.62 20h-6"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -63,7 +105,7 @@ const IconFlash = forwardRef<SVGSVGElement, IconProps>(function IconFlash(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M5.17 12h-3"
+            d="M4.62 12h-3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -85,22 +127,22 @@ const IconFlash = forwardRef<SVGSVGElement, IconProps>(function IconFlash(
           {...rest}
         >
           <path
-            d="M9.99 13.28h3.09v7.2a1.15 1.15 0 0 0 2.02.76l7.57-8.6c.66-.75.13-1.92-.87-1.92h-3.09v-7.2a1.15 1.15 0 0 0-2.02-.76l-7.57 8.6c-.65.75-.12 1.92.87 1.92"
+            d="M9.79 13.28h3.09v7.2a1.15 1.15 0 0 0 2.02.76l7.57-8.6c.66-.75.13-1.92-.87-1.92h-3.09v-7.2a1.15 1.15 0 0 0-2.02-.76l-7.57 8.6c-.65.75-.12 1.92.87 1.92"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M9.17 4.75h-7A.76.76 0 0 1 1.42 4c0-.41.34-.75.75-.75h7c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M8.97 4.75h-7A.76.76 0 0 1 1.22 4c0-.41.34-.75.75-.75h7c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M8.17 20.75h-6a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h6c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M7.97 20.75h-6a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h6c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M5.17 12.75h-3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M4.97 12.75h-3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>
@@ -118,19 +160,19 @@ const IconFlash = forwardRef<SVGSVGElement, IconProps>(function IconFlash(
           {...rest}
         >
           <path
-            d="M9.99 13.28h3.09v7.2a1.15 1.15 0 0 0 2.02.76l7.57-8.6c.66-.75.13-1.92-.87-1.92h-3.09v-7.2a1.15 1.15 0 0 0-2.02-.76l-7.57 8.6c-.65.75-.12 1.92.87 1.92"
+            d="M9.79 13.28h3.09v7.2a1.15 1.15 0 0 0 2.02.76l7.57-8.6c.66-.75.13-1.92-.87-1.92h-3.09v-7.2a1.15 1.15 0 0 0-2.02-.76l-7.57 8.6c-.65.75-.12 1.92.87 1.92"
             fill="currentColor"
           />
           <path
-            d="M9.17 4.75h-7A.76.76 0 0 1 1.42 4c0-.41.34-.75.75-.75h7c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M8.97 4.75h-7A.76.76 0 0 1 1.22 4c0-.41.34-.75.75-.75h7c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M8.17 20.75h-6a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h6c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M7.97 20.75h-6a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h6c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M5.17 12.75h-3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75"
+            d="M4.97 12.75h-3a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>

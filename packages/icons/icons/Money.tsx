@@ -22,7 +22,7 @@ const IconMoney = forwardRef<SVGSVGElement, IconProps>(function IconMoney(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,53 @@ const IconMoney = forwardRef<SVGSVGElement, IconProps>(function IconMoney(
           {...rest}
         >
           <path
-            d="M17.67 20.5h-10c-3 0-5-1.5-5-5v-7c0-3.5 2-5 5-5h10c3 0 5 1.5 5 5v7c0 3.5-2 5-5 5"
+            d="M2 8.5c0-3.5 2-5 5-5h10c3 0 5 1.5 5 5v7c0 3.5-2 5-5 5H7c-3 0-5-1.5-5-5v-2.97"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15 12a3 3 0 1 0-2.23 2.9"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M5.5 9.5v5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18.5 9.5v5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17 20.5H7c-3 0-5-1.5-5-5v-7c0-3.5 2-5 5-5h10c3 0 5 1.5 5 5v7c0 3.5-2 5-5 5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -44,7 +90,7 @@ const IconMoney = forwardRef<SVGSVGElement, IconProps>(function IconMoney(
             strokeLinejoin="round"
           />
           <path
-            d="M12.67 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+            d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -53,7 +99,7 @@ const IconMoney = forwardRef<SVGSVGElement, IconProps>(function IconMoney(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M6.17 9.5v5"
+            d="M5.5 9.5v5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -62,7 +108,7 @@ const IconMoney = forwardRef<SVGSVGElement, IconProps>(function IconMoney(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M19.17 9.5v5"
+            d="M18.5 9.5v5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -85,16 +131,16 @@ const IconMoney = forwardRef<SVGSVGElement, IconProps>(function IconMoney(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M17.67 20.5h-10c-3 0-5-1.5-5-5v-7c0-3.5 2-5 5-5h10c3 0 5 1.5 5 5v7c0 3.5-2 5-5 5"
+            d="M17 20.5H7c-3 0-5-1.5-5-5v-7c0-3.5 2-5 5-5h10c3 0 5 1.5 5 5v7c0 3.5-2 5-5 5"
             fill="currentColor"
           />
-          <path d="M12.67 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6" fill="currentColor" />
+          <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6" fill="currentColor" />
           <path
-            d="M6.17 15.25a.76.76 0 0 1-.75-.75v-5c0-.41.34-.75.75-.75s.75.34.75.75v5c0 .41-.34.75-.75.75"
+            d="M5.5 15.25a.76.76 0 0 1-.75-.75v-5c0-.41.34-.75.75-.75s.75.34.75.75v5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M19.17 15.25a.76.76 0 0 1-.75-.75v-5c0-.41.34-.75.75-.75s.75.34.75.75v5c0 .41-.34.75-.75.75"
+            d="M18.5 15.25a.76.76 0 0 1-.75-.75v-5c0-.41.34-.75.75-.75s.75.34.75.75v5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>
@@ -112,7 +158,7 @@ const IconMoney = forwardRef<SVGSVGElement, IconProps>(function IconMoney(
           {...rest}
         >
           <path
-            d="M17.67 3.5h-10c-3 0-5 1.5-5 5v7c0 3.5 2 5 5 5h10c3 0 5-1.5 5-5v-7c0-3.5-2-5-5-5m-10.75 11c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75v-5c0-.41.34-.75.75-.75s.75.34.75.75zm5.75.5a3 3 0 1 1 0-6 3 3 0 0 1 0 6m7.25-.5c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75v-5c0-.41.34-.75.75-.75s.75.34.75.75z"
+            d="M17 3.5H7c-3 0-5 1.5-5 5v7c0 3.5 2 5 5 5h10c3 0 5-1.5 5-5v-7c0-3.5-2-5-5-5m-10.75 11c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75v-5c0-.41.34-.75.75-.75s.75.34.75.75zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6m7.25-.5c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75v-5c0-.41.34-.75.75-.75s.75.34.75.75z"
             fill="currentColor"
           />
         </svg>

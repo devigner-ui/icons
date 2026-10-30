@@ -23,7 +23,57 @@ const IconBedsideTable = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M19 22v-1.5M5 22v-1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M13 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M13 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            fill="currentColor"
+          />
+          <path
+            d="M2 14h12m8 0h-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M2 8h20"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M14 2c3.77 0 5.66 0 6.83 1.17S22 6.23 22 10v2c0 3.77 0 5.66-1.17 6.83S17.77 20 14 20h-4c-3.77 0-5.66 0-6.83-1.17S2 15.77 2 12v-2c0-3.77 0-5.66 1.17-6.83S6.23 2 10 2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -83,20 +133,20 @@ const IconBedsideTable = forwardRef<SVGSVGElement, IconProps>(
               opacity={duotone ? "0.4" : "1"}
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2 10V8h20v6H2z"
+              d="M2 9.6v-2h20v6H2z"
               fill="currentColor"
             />
-            <path d="M13 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0" fill="currentColor" />
+            <path d="M13 10.6a1 1 0 1 1-2 0 1 1 0 0 1 2 0" fill="currentColor" />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2.03 7.25c.06-2.02.3-3.23 1.14-4.08C4.34 2 6.23 2 10 2h4c3.77 0 5.66 0 6.83 1.17.84.85 1.08 2.06 1.14 4.08L22 8H2zM12 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              d="M2.03 6.85c.06-2.02.3-3.23 1.14-4.08C4.34 1.6 6.23 1.6 10 1.6h4c3.77 0 5.66 0 6.83 1.17.84.85 1.08 2.06 1.14 4.08l.03.75H2zM12 5.6a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2.03 14.75c.06 2.02.3 3.23 1.14 4.08q.45.45 1.08.7V22a.75.75 0 0 0 1.5 0v-2.13C6.82 20 8.19 20 10 20h4c1.8 0 3.18 0 4.25-.13V22a.75.75 0 1 0 1.5 0v-2.47q.62-.25 1.08-.7c.84-.84 1.08-2.06 1.14-4.08V14H2zM12 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              d="M2.03 14.35c.06 2.02.3 3.23 1.14 4.08q.45.45 1.08.7v2.47a.75.75 0 0 0 1.5 0v-2.13c1.07.13 2.44.13 4.25.13h4c1.8 0 3.18 0 4.25-.13v2.13a.75.75 0 1 0 1.5 0v-2.47q.62-.25 1.08-.7c.84-.84 1.08-2.06 1.14-4.08v-.75H2zM12 17.6a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
               fill="currentColor"
             />
           </svg>
@@ -116,19 +166,19 @@ const IconBedsideTable = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M21.97 7.25H2.03c.06-2.02.3-3.23 1.14-4.08C4.34 2 6.23 2 10 2h4c3.77 0 5.66 0 6.83 1.17.84.85 1.08 2.06 1.14 4.08M13 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+              d="M21.97 6.85H2.03c.06-2.02.3-3.23 1.14-4.08C4.34 1.6 6.23 1.6 10 1.6h4c3.77 0 5.66 0 6.83 1.17.84.85 1.08 2.06 1.14 4.08M13 4.6a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2 10V8.75h20v4.5H2zm10 2a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              d="M2 9.6V8.35h20v4.5H2zm10 2a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M21.97 14.75H2.03c.06 2.02.3 3.23 1.14 4.08q.45.45 1.08.7V22a.75.75 0 0 0 1.5 0v-2.13C6.82 20 8.19 20 10 20h4c1.8 0 3.18 0 4.25-.13V22a.75.75 0 0 0 1.5 0v-2.47q.62-.25 1.08-.7c.84-.84 1.08-2.06 1.14-4.08M13 17a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+              d="M21.97 14.35H2.03c.06 2.02.3 3.23 1.14 4.08q.45.45 1.08.7v2.47a.75.75 0 0 0 1.5 0v-2.13c1.07.13 2.44.13 4.25.13h4c1.8 0 3.18 0 4.25-.13v2.13a.75.75 0 0 0 1.5 0v-2.47q.62-.25 1.08-.7c.84-.84 1.08-2.06 1.14-4.08M13 16.6a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
               fill="currentColor"
             />
           </svg>

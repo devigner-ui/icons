@@ -22,7 +22,7 @@ const IconUserEdit = forwardRef<SVGSVGElement, IconProps>(function IconUserEdit(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,14 +36,58 @@ const IconUserEdit = forwardRef<SVGSVGElement, IconProps>(function IconUserEdit(
           {...rest}
         >
           <path
-            d="M12.67 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10"
+            d="M14.35 3.01A5 5 0 1 0 16.33 7"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18.53 15.74 15 19.28c-.14.14-.27.4-.3.59l-.2 1.35c-.06.49.28.83.77.76l1.35-.19c.19-.03.46-.16.59-.3l3.54-3.54c.6-.61.9-1.32 0-2.22-.9-.89-1.6-.6-2.21.01Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18.03 16.25a3.2 3.2 0 0 0 2.22 2.22"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2.74 22c0-3.87 3.85-7 8.59-7q1.57 0 2.97.43"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11.32 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="m19.88 15.74-3.54 3.54c-.14.14-.27.4-.3.59l-.19 1.35c-.07.49.27.83.76.76l1.35-.19c.19-.03.46-.16.59-.3l3.54-3.54c.61-.61.9-1.32 0-2.22-.89-.89-1.6-.6-2.21.01"
+            d="m18.53 15.74-3.54 3.54c-.14.14-.27.4-.3.59l-.19 1.35c-.07.49.27.83.76.76l1.35-.19c.19-.03.46-.16.59-.3l3.54-3.54c.61-.61.9-1.32 0-2.22-.89-.89-1.6-.6-2.21.01"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -51,7 +95,7 @@ const IconUserEdit = forwardRef<SVGSVGElement, IconProps>(function IconUserEdit(
             strokeLinejoin="round"
           />
           <path
-            d="M19.37 16.25a3.2 3.2 0 0 0 2.22 2.22"
+            d="M18.02 16.25a3.2 3.2 0 0 0 2.22 2.22"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -60,7 +104,7 @@ const IconUserEdit = forwardRef<SVGSVGElement, IconProps>(function IconUserEdit(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M4.08 22c0-3.87 3.85-7 8.59-7q1.57 0 2.97.43"
+            d="M2.73 22c0-3.87 3.85-7 8.59-7q1.57 0 2.97.43"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -81,16 +125,16 @@ const IconUserEdit = forwardRef<SVGSVGElement, IconProps>(function IconUserEdit(
           {...rest}
         >
           <path
-            d="M12.67 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10"
+            d="M11.57 11.75a5 5 0 1 0 0-10 5 5 0 0 0 0 10"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 14.5c-5.01 0-9.09 3.36-9.09 7.5 0 .28.22.5.5.5h17.18a.5.5 0 0 0 .5-.5c0-4.14-4.08-7.5-9.09-7.5"
+            d="M11.57 14.25c-5.01 0-9.09 3.36-9.09 7.5 0 .28.22.5.5.5h17.18a.5.5 0 0 0 .5-.5c0-4.14-4.08-7.5-9.09-7.5"
             fill="currentColor"
           />
           <path
-            d="M22.1 14.74c-.9-.9-1.61-.61-2.22 0l-3.54 3.54c-.14.14-.27.4-.3.59l-.19 1.35c-.07.49.27.83.76.76l1.35-.19c.19-.03.46-.16.59-.3l3.54-3.54c.62-.6.91-1.31.01-2.21"
+            d="M21 14.49c-.9-.9-1.61-.61-2.22 0l-3.54 3.54c-.14.14-.27.4-.3.59l-.19 1.35c-.07.49.27.83.76.76l1.35-.19c.19-.03.46-.16.59-.3l3.54-3.54c.62-.6.91-1.31.01-2.21"
             fill="currentColor"
           />
         </svg>
@@ -108,11 +152,11 @@ const IconUserEdit = forwardRef<SVGSVGElement, IconProps>(function IconUserEdit(
           {...rest}
         >
           <path
-            d="M12.67 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10m2.17 4.51-2.7 2.7c-.1.1-.31.2-.45.23l-1.03.14c-.38.05-.64-.21-.58-.58l.15-1.03a1 1 0 0 1 .23-.45l2.7-2.7c.46-.46 1.01-.68 1.69 0s.45 1.23-.01 1.69"
+            d="M12 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10m2.17 4.51-2.7 2.7c-.1.1-.31.2-.45.23l-1.03.14c-.38.05-.64-.21-.58-.58l.15-1.03a1 1 0 0 1 .23-.45l2.7-2.7c.46-.46 1.01-.68 1.69 0s.45 1.23-.01 1.69"
             fill="currentColor"
           />
           <path
-            d="M12.67 14c-5.01 0-9.09 3.36-9.09 7.5 0 .28.22.5.5.5h17.18a.5.5 0 0 0 .5-.5c0-4.14-4.08-7.5-9.09-7.5"
+            d="M12 14c-5.01 0-9.09 3.36-9.09 7.5 0 .28.22.5.5.5h17.18a.5.5 0 0 0 .5-.5c0-4.14-4.08-7.5-9.09-7.5"
             fill="currentColor"
           />
         </svg>

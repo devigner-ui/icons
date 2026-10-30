@@ -23,7 +23,27 @@ const IconEndCallRounded = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20.92 10.5C19.56 9.04 16.8 7 12 7q-1.74.01-3.13.32M22 13.85c0 2.06-1.78 3.57-3.6 3.05l-1.35-.38a3 3 0 0 1-2.05-2.9s0-1.66-3-1.66-3 1.66-3 1.66c0 1.36-.84 2.55-2.05 2.9l-1.34.38c-1.83.52-3.61-1-3.61-3.05 0-1.24.28-2.48 1.08-3.35a11 11 0 0 1 2.55-1.98"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

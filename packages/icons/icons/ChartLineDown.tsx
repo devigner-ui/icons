@@ -23,7 +23,35 @@ const IconChartLineDown = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M22 22h-9.61m-3.5-.02c-2.72-.07-4.33-.34-5.43-1.44C2 19.07 2 16.7 2 12V2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m19 15-3.12-3.93c-.48-.6-.71-.9-.99-1.05a1.5 1.5 0 0 0-1.35-.02c-.28.13-.54.42-1.04 1s-.75.87-1.04 1c-.43.21-.93.2-1.35-.02a4 4 0 0 1-1-1.05L6 7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}

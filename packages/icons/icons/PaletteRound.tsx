@@ -23,7 +23,41 @@ const IconPaletteRound = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 8V6a4 4 0 1 1 8 0v12a4 4 0 0 1-8 0v-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="m10 8.24 3.31-3.31a4 4 0 1 1 5.66 5.66l-9.66 9.66"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+          <path
+            d="M18 22v-.75zm0-8v.75zm4 4h-.75zm-9 4.75a.75.75 0 0 0 0-1.5zm4-1.5a.75.75 0 0 0 0 1.5zm-1.5-6.5H18v-1.5h-2.5zM21.25 18c0 1.8-1.46 3.25-3.25 3.25v1.5A4.75 4.75 0 0 0 22.75 18zm1.5 0A4.75 4.75 0 0 0 18 13.25v1.5c1.8 0 3.25 1.46 3.25 3.25zM13 21.25H6v1.5h7zm5 0h-1v1.5h1z"
+            fill="currentColor"
+          />
+          <path
+            d="M7 18a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}

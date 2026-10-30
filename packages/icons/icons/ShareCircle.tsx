@@ -23,7 +23,45 @@ const IconShareCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 3a3 3 0 1 0 3 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M5.5 15a3 3 0 1 1-3 3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M18.5 21a3 3 0 1 1 3-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 13a8 8 0 0 0-2.7-6M4 13a8 8 0 0 1 2.7-6M10 20.75a8 8 0 0 0 4 0"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -74,22 +112,22 @@ const IconShareCircle = forwardRef<SVGSVGElement, IconProps>(
           >
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M7.2 7.56a.75.75 0 0 0-.99-1.12A8.7 8.7 0 0 0 3.25 13a.75.75 0 0 0 1.5 0c0-2.17.95-4.1 2.45-5.44"
+                d="M7.2 7.16a.75.75 0 0 0-.99-1.12 8.7 8.7 0 0 0-2.96 6.56.75.75 0 0 0 1.5 0c0-2.17.95-4.1 2.45-5.44"
                 fill="currentColor"
               />
               <path
-                d="M17.79 6.44a.75.75 0 0 0-1 1.12A7.2 7.2 0 0 1 19.26 13a.75.75 0 0 0 1.5 0 8.7 8.7 0 0 0-2.96-6.56"
+                d="M17.79 6.04a.75.75 0 0 0-1 1.12 7.2 7.2 0 0 1 2.47 5.44.75.75 0 0 0 1.5 0 8.7 8.7 0 0 0-2.96-6.56"
                 fill="currentColor"
               />
               <path
-                d="M10.19 20.02a.75.75 0 1 0-.38 1.45 9 9 0 0 0 4.38 0 .75.75 0 1 0-.38-1.45 7 7 0 0 1-3.62 0"
+                d="M10.19 19.62a.75.75 0 1 0-.38 1.45 9 9 0 0 0 4.38 0 .75.75 0 1 0-.38-1.45 7 7 0 0 1-3.62 0"
                 fill="currentColor"
               />
             </g>
-            <path d="M9 6a3 3 0 1 0 6 0 3 3 0 0 0-6 0" fill="currentColor" />
-            <path d="M2.5 18a3 3 0 1 0 6 0 3 3 0 0 0-6 0" fill="currentColor" />
+            <path d="M9 5.6a3 3 0 1 0 6 0 3 3 0 0 0-6 0" fill="currentColor" />
+            <path d="M2.5 17.6a3 3 0 1 0 6 0 3 3 0 0 0-6 0" fill="currentColor" />
             <path
-              d="M18.5 21a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+              d="M18.5 20.6a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
               fill="currentColor"
             />
           </svg>
@@ -106,22 +144,22 @@ const IconShareCircle = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <path d="M9 6a3 3 0 1 0 6 0 3 3 0 0 0-6 0" fill="currentColor" />
-            <path d="M2.5 18a3 3 0 1 0 6 0 3 3 0 0 0-6 0" fill="currentColor" />
+            <path d="M9 5.6a3 3 0 1 0 6 0 3 3 0 0 0-6 0" fill="currentColor" />
+            <path d="M2.5 17.6a3 3 0 1 0 6 0 3 3 0 0 0-6 0" fill="currentColor" />
             <path
-              d="M18.5 21a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
+              d="M18.5 20.6a3 3 0 1 1 0-6 3 3 0 0 1 0 6"
               fill="currentColor"
             />
             <path
-              d="M7.2 7.56a.75.75 0 0 0-.99-1.12A8.7 8.7 0 0 0 3.25 13a.75.75 0 0 0 1.5 0c0-2.17.95-4.1 2.45-5.44"
+              d="M7.2 7.16a.75.75 0 0 0-.99-1.12 8.7 8.7 0 0 0-2.96 6.56.75.75 0 0 0 1.5 0c0-2.17.95-4.1 2.45-5.44"
               fill="currentColor"
             />
             <path
-              d="M17.79 6.44a.75.75 0 0 0-1 1.12A7.2 7.2 0 0 1 19.26 13a.75.75 0 0 0 1.5 0 8.7 8.7 0 0 0-2.96-6.56"
+              d="M17.79 6.04a.75.75 0 0 0-1 1.12 7.2 7.2 0 0 1 2.47 5.44.75.75 0 0 0 1.5 0 8.7 8.7 0 0 0-2.96-6.56"
               fill="currentColor"
             />
             <path
-              d="M10.19 20.02a.75.75 0 1 0-.38 1.45 9 9 0 0 0 4.38 0 .75.75 0 1 0-.38-1.45 7 7 0 0 1-3.62 0"
+              d="M10.19 19.62a.75.75 0 1 0-.38 1.45 9 9 0 0 0 4.38 0 .75.75 0 1 0-.38-1.45 7 7 0 0 1-3.62 0"
               fill="currentColor"
             />
           </svg>
