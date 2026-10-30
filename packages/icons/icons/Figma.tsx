@@ -100,26 +100,26 @@ const IconFigma = forwardRef<SVGSVGElement, IconProps>(function IconFigma(
         >
           <path
             opacity={duotone ? "0.6" : "1"}
-            d="M11.67 2H8.33a3.33 3.33 0 1 0 0 6.67h3.34z"
+            d="M11.97 2H8.63a3.33 3.33 0 1 0 0 6.67h3.34z"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.5" : "1"}
-            d="M11.67 8.67H8.33a3.33 3.33 0 0 0 0 6.66h3.34z"
+            d="M11.97 8.67H8.63a3.33 3.33 0 0 0 0 6.66h3.34z"
             fill="currentColor"
           />
           <path
-            d="M18.33 12a3.33 3.33 0 1 1-6.66 0 3.33 3.33 0 0 1 6.66 0"
+            d="M18.63 12a3.33 3.33 0 1 1-6.66 0 3.33 3.33 0 0 1 6.66 0"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.3" : "1"}
-            d="M8.33 15.33h3.34v3.34a3.33 3.33 0 1 1-3.34-3.34"
+            d="M8.63 15.33h3.34v3.34a3.33 3.33 0 1 1-3.34-3.34"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.7" : "1"}
-            d="M11.67 2H15a3.33 3.33 0 1 1 0 6.67h-3.33z"
+            d="M11.97 2h3.33a3.33 3.33 0 1 1 0 6.67h-3.33z"
             fill="currentColor"
           />
         </svg>

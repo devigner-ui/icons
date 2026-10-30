@@ -22,7 +22,7 @@ const IconTagCross = forwardRef<SVGSVGElement, IconProps>(function IconTagCross(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,46 @@ const IconTagCross = forwardRef<SVGSVGElement, IconProps>(function IconTagCross(
           {...rest}
         >
           <path
-            d="M10.95 20.25h6.72a5 5 0 0 0 5-5v-6.5a5 5 0 0 0-5-5h-6.72c-1.41 0-2.75.59-3.7 1.64L3.72 9.27a4.05 4.05 0 0 0 0 5.46l3.53 3.88a5 5 0 0 0 3.7 1.64"
+            d="M12.92 3.75h-2.64c-1.41 0-2.75.59-3.7 1.64L3.05 9.27a4.05 4.05 0 0 0 0 5.46l3.53 3.88a5 5 0 0 0 3.7 1.64H17a5 5 0 0 0 5-5v-6.5a5 5 0 0 0-5-5"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m16 14.47-4.94-4.94"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m15.21 10.32.8-.79"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m11.06 14.47 2.28-2.29"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10.28 20.25H17a5 5 0 0 0 5-5v-6.5a5 5 0 0 0-5-5h-6.72c-1.41 0-2.75.59-3.7 1.64L3.05 9.27a4.05 4.05 0 0 0 0 5.46l3.53 3.88a5 5 0 0 0 3.7 1.64"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,13 +83,13 @@ const IconTagCross = forwardRef<SVGSVGElement, IconProps>(function IconTagCross(
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="m16.67 14.47-4.94-4.94"
+              d="m16 14.47-4.94-4.94"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
-              d="m11.73 14.47 4.94-4.94"
+              d="M11.06 14.47 16 9.53"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -72,11 +111,11 @@ const IconTagCross = forwardRef<SVGSVGElement, IconProps>(function IconTagCross(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M10.95 20.25h6.72a5 5 0 0 0 5-5v-6.5a5 5 0 0 0-5-5h-6.72c-1.41 0-2.75.59-3.7 1.64L3.72 9.27a4.05 4.05 0 0 0 0 5.46l3.53 3.88a5 5 0 0 0 3.7 1.64"
+            d="M10.28 20.25H17a5 5 0 0 0 5-5v-6.5a5 5 0 0 0-5-5h-6.72c-1.41 0-2.75.59-3.7 1.64L3.05 9.27a4.05 4.05 0 0 0 0 5.46l3.53 3.88a5 5 0 0 0 3.7 1.64"
             fill="currentColor"
           />
           <path
-            d="m15.26 12 1.94-1.94a.75.75 0 0 0 0-1.06.75.75 0 0 0-1.06 0l-1.94 1.94L12.26 9a.75.75 0 0 0-1.06 0 .75.75 0 0 0 0 1.06L13.14 12l-1.94 1.94a.75.75 0 0 0 0 1.06q.23.22.53.22t.53-.22l1.94-1.94L16.14 15q.23.22.53.22t.53-.22a.75.75 0 0 0 0-1.06z"
+            d="m14.59 12 1.94-1.94a.75.75 0 0 0 0-1.06.75.75 0 0 0-1.06 0l-1.94 1.94L11.59 9a.75.75 0 0 0-1.06 0 .75.75 0 0 0 0 1.06L12.47 12l-1.94 1.94a.75.75 0 0 0 0 1.06q.23.22.53.22t.53-.22l1.94-1.94L15.47 15q.23.22.53.22t.53-.22a.75.75 0 0 0 0-1.06z"
             fill="currentColor"
           />
         </svg>
@@ -94,7 +133,7 @@ const IconTagCross = forwardRef<SVGSVGElement, IconProps>(function IconTagCross(
           {...rest}
         >
           <path
-            d="M17.67 3.75h-6.72c-1.41 0-2.75.59-3.7 1.64L3.72 9.27a4.05 4.05 0 0 0 0 5.46l3.53 3.88a5 5 0 0 0 3.7 1.64h6.72a5 5 0 0 0 5-5v-6.5a5 5 0 0 0-5-5m-.47 10.19c.29.29.29.77 0 1.06a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-1.94-1.94L12.26 15a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06L13.14 12l-1.94-1.94a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l1.94 1.94L16.14 9a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06L15.26 12z"
+            d="M17 3.75h-6.72c-1.41 0-2.75.59-3.7 1.64L3.05 9.27a4.05 4.05 0 0 0 0 5.46l3.53 3.88a5 5 0 0 0 3.7 1.64H17a5 5 0 0 0 5-5v-6.5a5 5 0 0 0-5-5m-.47 10.19c.29.29.29.77 0 1.06a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-1.94-1.94L11.59 15a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06L12.47 12l-1.94-1.94a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l1.94 1.94L15.47 9a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06L14.59 12z"
             fill="currentColor"
           />
         </svg>

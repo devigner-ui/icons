@@ -22,7 +22,7 @@ const IconSiacoin = forwardRef<SVGSVGElement, IconProps>(function IconSiacoin(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,53 @@ const IconSiacoin = forwardRef<SVGSVGElement, IconProps>(function IconSiacoin(
           {...rest}
         >
           <path
-            d="M8.64 2.84a10 10 0 1 1-5.15 5.18"
+            d="M16.3 21.03q-1.97.95-4.3.97A10 10 0 0 1 2.82 8.02"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7.97 2.84a10 10 0 0 1 11.97 15.24"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M16 16.25V12a4.25 4.25 0 1 0-4.25 4.25z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M6.5 5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7.97 2.84a10 10 0 1 1-5.15 5.18"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -45,7 +91,7 @@ const IconSiacoin = forwardRef<SVGSVGElement, IconProps>(function IconSiacoin(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M16.67 16.25V12a4.25 4.25 0 1 0-4.25 4.25z"
+            d="M16 16.25V12a4.25 4.25 0 1 0-4.25 4.25z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -54,7 +100,7 @@ const IconSiacoin = forwardRef<SVGSVGElement, IconProps>(function IconSiacoin(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M5.67 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"
+            d="M5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -77,20 +123,20 @@ const IconSiacoin = forwardRef<SVGSVGElement, IconProps>(function IconSiacoin(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24.22 0h-24v24h24z"
             fill="none"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 22.75A10.76 10.76 0 0 1 2.81 7.72a.76.76 0 0 1 .99-.39c.38.17.55.61.39.99a9.25 9.25 0 1 0 4.76-4.79.75.75 0 0 1-.61-1.37q2.06-.9 4.33-.91a10.76 10.76 0 0 1 0 21.5"
+            d="M12.22 22.75A10.76 10.76 0 0 1 2.36 7.72a.76.76 0 0 1 .99-.39c.38.17.55.61.39.99A9.25 9.25 0 1 0 8.5 3.53a.75.75 0 0 1-.61-1.37q2.06-.9 4.33-.91a10.76 10.76 0 0 1 0 21.5"
             fill="currentColor"
           />
           <path
-            d="M16.67 15.25V12a4.25 4.25 0 1 0-4.25 4.25h3.25a1 1 0 0 0 1-1"
+            d="M16.22 15.25V12a4.25 4.25 0 1 0-4.25 4.25h3.25a1 1 0 0 0 1-1"
             fill="currentColor"
           />
           <path
-            d="M5.67 6.88a1.88 1.88 0 1 0 0-3.76 1.88 1.88 0 0 0 0 3.76"
+            d="M5.22 6.88a1.88 1.88 0 1 0 0-3.76 1.88 1.88 0 0 0 0 3.76"
             fill="currentColor"
           />
         </svg>
@@ -108,15 +154,15 @@ const IconSiacoin = forwardRef<SVGSVGElement, IconProps>(function IconSiacoin(
           {...rest}
         >
           <path
-            d="M12.67 22.75A10.76 10.76 0 0 1 2.81 7.72a.76.76 0 0 1 .99-.39c.38.17.55.61.39.99a9.25 9.25 0 1 0 4.77-4.79.75.75 0 0 1-.61-1.37q2.06-.9 4.33-.91a10.76 10.76 0 0 1-.01 21.5"
+            d="M12.22 22.75A10.76 10.76 0 0 1 2.36 7.72a.76.76 0 0 1 .99-.39c.38.17.55.61.39.99a9.25 9.25 0 1 0 4.77-4.79.75.75 0 0 1-.61-1.37q2.06-.9 4.33-.91a10.76 10.76 0 0 1-.01 21.5"
             fill="currentColor"
           />
           <path
-            d="M16.67 15.25V12a4.25 4.25 0 1 0-4.25 4.25h3.25a1 1 0 0 0 1-1"
+            d="M16.22 15.25V12a4.25 4.25 0 1 0-4.25 4.25h3.25a1 1 0 0 0 1-1"
             fill="currentColor"
           />
           <path
-            d="M5.67 6.88a1.88 1.88 0 1 0 0-3.76 1.88 1.88 0 0 0 0 3.76"
+            d="M5.22 6.88a1.88 1.88 0 1 0 0-3.76 1.88 1.88 0 0 0 0 3.76"
             fill="currentColor"
           />
         </svg>

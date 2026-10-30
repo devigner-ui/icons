@@ -92,11 +92,11 @@ const IconForbiddenCircle = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M4.93 4.93a10 10 0 1 0 14.14 14.14A10 10 0 0 0 4.93 4.93"
+              d="M5.08 4.78a10 10 0 1 0 14.14 14.14A10 10 0 0 0 5.08 4.78"
               fill="currentColor"
             />
             <path
-              d="m18.52 4.42-14.1 14.1a10 10 0 0 0 1.06 1.06l14.1-14.1a10 10 0 0 0-1.06-1.06"
+              d="m18.67 4.27-14.1 14.1a10 10 0 0 0 1.06 1.06l14.1-14.1a10 10 0 0 0-1.06-1.06"
               fill="currentColor"
             />
           </svg>

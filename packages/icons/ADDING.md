@@ -83,7 +83,7 @@ ok  ShoppingBasketAdd
 ok  WheelchairUser
 
 100%  ShoppingBasketAdd   shopping-ecommerce   near ShoppingBasketSmile, ShopAdd, ShoppingBasket
- 39%  WheelchairUser      home-furniture       near Chair2, Armchair2, BoneBroken <- check
+ 39%  WheelchairUser      home-furniture       near ChairOffice, ArmchairWide, BoneBroken <- check
 ```
 
 The percentage is how much of the neighbourhood agreed — see
@@ -129,9 +129,15 @@ just overwrites:
 ls packages/icons/icons/Bookmark.tsx
 ```
 
-Two conventions the existing 2,142 follow: the shape leads and the modifier
+Two conventions the existing icons follow: the shape leads and the modifier
 follows (`AlarmAdd`, not `AddAlarm`), and a second drawing of the same thing
-gets a numeric suffix (`AlignLeft2`).
+is named for what sets it apart (`AlignLeftAttached`, `BagStraps`). Never a
+number, `Alt` or `Minimalistic`: `scripts/rename-check.mjs` fails on those.
+
+Renaming an icon that already shipped is a breaking change for anyone who
+imports it, so it is never done by renaming the file alone. Add the old and new
+names to a batch in `scripts/renames.json` and the build keeps the old name
+working as a deprecated alias until that batch's `removeIn` major.
 
 `icons/types.ts` is not an icon — it is the shared prop type. Every `.tsx` in
 that directory is treated as a drawing, so nothing else may live there.

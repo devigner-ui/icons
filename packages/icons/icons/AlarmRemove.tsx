@@ -156,13 +156,13 @@ const IconAlarmRemove = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M12 22a9 9 0 1 0 0-18 9 9 0 0 0 0 18m3-9.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1 0-1.5z"
+              d="M12 22.4a9 9 0 1 0 0-18 9 9 0 0 0 0 18m3-9.75a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1 0-1.5z"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M8.14 1.6c.22.35.1.82-.24 1.04l-4 2.5a.75.75 0 0 1-.8-1.28l4-2.5a.75.75 0 0 1 1.04.24m7.72 0a.75.75 0 0 1 1.04-.24l4 2.5a.75.75 0 1 1-.8 1.28l-4-2.5a.75.75 0 0 1-.24-1.04"
+              d="M8.14 2c.22.35.1.82-.24 1.04l-4 2.5a.75.75 0 0 1-.8-1.28l4-2.5A.75.75 0 0 1 8.14 2m7.72 0a.75.75 0 0 1 1.04-.24l4 2.5a.75.75 0 1 1-.8 1.28l-4-2.5A.75.75 0 0 1 15.86 2"
               fill="currentColor"
             />
           </svg>

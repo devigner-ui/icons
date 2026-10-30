@@ -22,7 +22,70 @@ const IconTask = forwardRef<SVGSVGElement, IconProps>(function IconTask(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M11 19.5h10"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M20 12.5h1"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M11 12.5h5.49"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M11 5.5h10"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m3 5.5 1 1 3-3"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m3 12.5 1 1 3-3"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m3 19.5 1 1 3-3"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,7 +100,7 @@ const IconTask = forwardRef<SVGSVGElement, IconProps>(function IconTask(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M11.67 19.5h10"
+            d="M11 19.5h10"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -45,7 +108,7 @@ const IconTask = forwardRef<SVGSVGElement, IconProps>(function IconTask(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M11.67 12.5h10"
+            d="M11 12.5h10"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -53,28 +116,28 @@ const IconTask = forwardRef<SVGSVGElement, IconProps>(function IconTask(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M11.67 5.5h10"
+            d="M11 5.5h10"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="m3.67 5.5 1 1 3-3"
+            d="m3 5.5 1 1 3-3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="m3.67 12.5 1 1 3-3"
+            d="m3 12.5 1 1 3-3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="m3.67 19.5 1 1 3-3"
+            d="m3 19.5 1 1 3-3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -95,30 +158,30 @@ const IconTask = forwardRef<SVGSVGElement, IconProps>(function IconTask(
           {...rest}
         >
           <path
-            d="M20.67 19.26H11.6a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82h9.07c.45 0 .82.37.82.82 0 .46-.37.82-.82.82"
+            d="M20 19.26h-9.07a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82H20c.45 0 .82.37.82.82 0 .46-.37.82-.82.82"
             fill="currentColor"
           />
           <path
-            d="M20.67 12.97H11.6a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82h9.07c.45 0 .82.37.82.82s-.37.82-.82.82"
+            d="M20 12.97h-9.07a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82H20c.45 0 .82.37.82.82s-.37.82-.82.82"
             fill="currentColor"
           />
           <path
-            d="M20.67 6.67H11.6a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82h9.07c.45 0 .82.37.82.82s-.37.82-.82.82"
-            fill="currentColor"
-          />
-          <path
-            opacity={duotone ? "0.4" : "1"}
-            d="M5.58 8.03A.8.8 0 0 1 5 7.79l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16L6.16 7.79a.8.8 0 0 1-.58.24"
+            d="M20 6.67h-9.07a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82H20c.45 0 .82.37.82.82s-.37.82-.82.82"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M5.58 14.33a.8.8 0 0 1-.58-.24l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16l-2.72 2.72a.8.8 0 0 1-.58.24"
+            d="M4.91 8.03a.8.8 0 0 1-.58-.24l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16L5.49 7.79a.8.8 0 0 1-.58.24"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M5.58 20.33a.8.8 0 0 1-.58-.24l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16l-2.72 2.72a.8.8 0 0 1-.58.24"
+            d="M4.91 14.33a.8.8 0 0 1-.58-.24l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16l-2.72 2.72a.8.8 0 0 1-.58.24"
+            fill="currentColor"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M4.91 20.33a.8.8 0 0 1-.58-.24l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16l-2.72 2.72a.8.8 0 0 1-.58.24"
             fill="currentColor"
           />
         </svg>
@@ -136,27 +199,27 @@ const IconTask = forwardRef<SVGSVGElement, IconProps>(function IconTask(
           {...rest}
         >
           <path
-            d="M20.67 19.26H11.6a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82h9.07c.45 0 .82.37.82.82 0 .46-.37.82-.82.82"
+            d="M20 19.26h-9.07a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82H20c.45 0 .82.37.82.82 0 .46-.37.82-.82.82"
             fill="currentColor"
           />
           <path
-            d="M20.67 12.97H11.6a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82h9.07c.45 0 .82.37.82.82s-.37.82-.82.82"
+            d="M20 12.97h-9.07a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82H20c.45 0 .82.37.82.82s-.37.82-.82.82"
             fill="currentColor"
           />
           <path
-            d="M20.67 6.67H11.6a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82h9.07c.45 0 .82.37.82.82s-.37.82-.82.82"
+            d="M20 6.67h-9.07a.8.8 0 0 1-.82-.82c0-.45.37-.82.82-.82H20c.45 0 .82.37.82.82s-.37.82-.82.82"
             fill="currentColor"
           />
           <path
-            d="M5.58 8.03A.8.8 0 0 1 5 7.79l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16L6.16 7.79a.8.8 0 0 1-.58.24"
+            d="M4.91 8.03a.8.8 0 0 1-.58-.24l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16L5.49 7.79a.8.8 0 0 1-.58.24"
             fill="currentColor"
           />
           <path
-            d="M5.58 14.33a.8.8 0 0 1-.58-.24l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16l-2.72 2.72a.8.8 0 0 1-.58.24"
+            d="M4.91 14.33a.8.8 0 0 1-.58-.24l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16l-2.72 2.72a.8.8 0 0 1-.58.24"
             fill="currentColor"
           />
           <path
-            d="M5.58 20.33a.8.8 0 0 1-.58-.24l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16l-2.72 2.72a.8.8 0 0 1-.58.24"
+            d="M4.91 20.33a.8.8 0 0 1-.58-.24l-.91-.91a.82.82 0 0 1 1.16-1.16l.33.33 2.14-2.14a.82.82 0 0 1 1.16 1.16l-2.72 2.72a.8.8 0 0 1-.58.24"
             fill="currentColor"
           />
         </svg>

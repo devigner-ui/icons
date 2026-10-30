@@ -138,6 +138,7 @@ const IconText = forwardRef<SVGSVGElement, IconProps>(function IconText(
           />
           <path
             d="M7 21h10"
+            stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"

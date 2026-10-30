@@ -1,1 +1,1 @@
-export { default, default as IconStickynote } from '../../icons/Stickynote';
+export { default, default as IconStickyNote } from '../../icons/StickyNote';

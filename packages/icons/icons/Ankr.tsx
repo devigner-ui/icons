@@ -22,7 +22,59 @@ const IconAnkr = forwardRef<SVGSVGElement, IconProps>(function IconAnkr(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M8.99 3.5 12 2l8.89 4.44v3.34"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3.1 9.78V6.44l1.85-.91"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3.1 14.22v3.34L12 22l8.89-4.44v-3.34"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 22v-5.56"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M16.44 12a4.44 4.44 0 1 1-8.88 0 4.44 4.44 0 0 1 8.88 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,7 +89,7 @@ const IconAnkr = forwardRef<SVGSVGElement, IconProps>(function IconAnkr(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M3.78 9.78V6.44L12.67 2l8.89 4.44v3.34"
+            d="M3.11 9.78V6.44L12 2l8.89 4.44v3.34"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -45,7 +97,7 @@ const IconAnkr = forwardRef<SVGSVGElement, IconProps>(function IconAnkr(
             strokeLinejoin="round"
           />
           <path
-            d="M3.78 14.22v3.34L12.67 22l8.89-4.44v-3.34"
+            d="M3.11 14.22v3.34L12 22l8.89-4.44v-3.34"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -53,7 +105,7 @@ const IconAnkr = forwardRef<SVGSVGElement, IconProps>(function IconAnkr(
             strokeLinejoin="round"
           />
           <path
-            d="M12.67 22v-5.56"
+            d="M12 22v-5.56"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -61,7 +113,7 @@ const IconAnkr = forwardRef<SVGSVGElement, IconProps>(function IconAnkr(
             strokeLinejoin="round"
           />
           <path
-            d="M12.67 16.44a4.44 4.44 0 1 0 0-8.88 4.44 4.44 0 0 0 0 8.88"
+            d="M12 16.44a4.44 4.44 0 1 0 0-8.88 4.44 4.44 0 0 0 0 8.88"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -82,20 +134,20 @@ const IconAnkr = forwardRef<SVGSVGElement, IconProps>(function IconAnkr(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
-            d="M21.56 10.53a.76.76 0 0 1-.75-.75V6.91l-8.14-4.07-8.14 4.07v2.87c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V6.44c0-.28.16-.54.42-.67l8.89-4.44a.7.7 0 0 1 .67 0l8.89 4.44c.25.13.42.39.42.67v3.33a.77.77 0 0 1-.76.76"
+            d="M20.89 10.53a.76.76 0 0 1-.75-.75V6.91L12 2.84 3.86 6.91v2.87c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V6.44c0-.28.16-.54.42-.67l8.89-4.44a.7.7 0 0 1 .67 0l8.89 4.44c.25.13.42.39.42.67v3.33a.77.77 0 0 1-.76.76"
             fill="currentColor"
           />
           <path
-            d="M12.67 22.75a1 1 0 0 1-.33-.08l-8.89-4.44a.8.8 0 0 1-.42-.67v-3.33c0-.41.34-.75.75-.75s.75.34.75.75v2.87l8.14 4.07 8.14-4.07v-2.87c0-.41.34-.75.75-.75s.75.34.75.75v3.33c0 .28-.16.54-.42.67L13 22.67a1 1 0 0 1-.33.08"
+            d="M12 22.75a1 1 0 0 1-.33-.08l-8.89-4.44a.8.8 0 0 1-.42-.67v-3.33c0-.41.34-.75.75-.75s.75.34.75.75v2.87L12 21.17l8.14-4.07v-2.87c0-.41.34-.75.75-.75s.75.34.75.75v3.33c0 .28-.16.54-.42.67l-8.89 4.44a1 1 0 0 1-.33.08"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M17.11 12a4.44 4.44 0 1 0-5.17 4.37l-.01.07V22c0 .41.34.75.75.75s.75-.34.75-.75v-5.56l-.01-.07A4.4 4.4 0 0 0 17.11 12"
+            d="M16.44 12a4.44 4.44 0 1 0-5.17 4.37l-.01.07V22c0 .41.34.75.75.75s.75-.34.75-.75v-5.56l-.01-.07A4.4 4.4 0 0 0 16.44 12"
             fill="currentColor"
           />
         </svg>
@@ -113,15 +165,15 @@ const IconAnkr = forwardRef<SVGSVGElement, IconProps>(function IconAnkr(
           {...rest}
         >
           <path
-            d="M21.56 10.53a.76.76 0 0 1-.75-.75V6.91l-8.14-4.07-8.14 4.07v2.87c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V6.45c0-.28.16-.54.42-.67l8.89-4.44a.7.7 0 0 1 .67 0l8.89 4.44c.25.13.42.39.42.67v3.33a.77.77 0 0 1-.76.75"
+            d="M20.89 10.53a.76.76 0 0 1-.75-.75V6.91L12 2.84 3.86 6.91v2.87c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V6.45c0-.28.16-.54.42-.67l8.89-4.44a.7.7 0 0 1 .67 0l8.89 4.44c.25.13.42.39.42.67v3.33a.77.77 0 0 1-.76.75"
             fill="currentColor"
           />
           <path
-            d="M12.67 22.75a1 1 0 0 1-.33-.08l-8.89-4.44a.8.8 0 0 1-.42-.67v-3.33c0-.41.34-.75.75-.75s.75.34.75.75v2.87l8.14 4.07 8.14-4.07v-2.87c0-.41.34-.75.75-.75s.75.34.75.75v3.33c0 .28-.16.54-.42.67L13 22.67a1 1 0 0 1-.33.08"
+            d="M12 22.75a1 1 0 0 1-.33-.08l-8.89-4.44a.8.8 0 0 1-.42-.67v-3.33c0-.41.34-.75.75-.75s.75.34.75.75v2.87L12 21.17l8.14-4.07v-2.87c0-.41.34-.75.75-.75s.75.34.75.75v3.33c0 .28-.16.54-.42.67l-8.89 4.44a1 1 0 0 1-.33.08"
             fill="currentColor"
           />
           <path
-            d="M17.11 12a4.44 4.44 0 1 0-5.17 4.37l-.01.07V22c0 .41.34.75.75.75s.75-.34.75-.75v-5.56l-.01-.07A4.4 4.4 0 0 0 17.11 12"
+            d="M16.44 12a4.44 4.44 0 1 0-5.17 4.37l-.01.07V22c0 .41.34.75.75.75s.75-.34.75-.75v-5.56l-.01-.07A4.4 4.4 0 0 0 16.44 12"
             fill="currentColor"
           />
         </svg>

@@ -1,1 +1,1 @@
-export { default, default as IconSmallcaps } from '../../icons/Smallcaps';
+export { default, default as IconSmallCaps } from '../../icons/SmallCaps';

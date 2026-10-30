@@ -22,7 +22,7 @@ const IconMilk = forwardRef<SVGSVGElement, IconProps>(function IconMilk(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,49 @@ const IconMilk = forwardRef<SVGSVGElement, IconProps>(function IconMilk(
           {...rest}
         >
           <path
-            d="M18.67 15v4a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3v-5.02l3.89.02q1.1 0 2.11.5t2.12.5z"
+            d="m6 13.98 3.89.02q1.1 0 2.11.5t2.12.5H18v4a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-1.01"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18 10.83V15h-3.88Q13 15 12 14.5a5 5 0 0 0-2.11-.5L6 13.98v-3.15c0-.46.26-1.09.59-1.42l2.12-2.12a1 1 0 0 0 .29-.7V5h6v1.59a1 1 0 0 0 .29.7l2.12 2.12c.33.33.59.96.59 1.42Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18 16v-1"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14.5 5h-5A1.5 1.5 0 0 1 8 3.5C8 2.68 8.67 2 9.5 2h5c.83 0 1.5.68 1.5 1.5S15.33 5 14.5 5Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M18 15v4a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-5.02l3.89.02q1.1 0 2.11.5t2.12.5z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,28 +86,28 @@ const IconMilk = forwardRef<SVGSVGElement, IconProps>(function IconMilk(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M18.67 10.83V15h-3.88q-1.12 0-2.12-.5a5 5 0 0 0-2.11-.5l-3.89-.02v-3.15c0-.46.26-1.09.59-1.42l2.12-2.12a1 1 0 0 0 .29-.7V5h6v1.59a1 1 0 0 0 .29.7l2.12 2.12c.33.33.59.96.59 1.42"
+            d="M18 10.83V15h-3.88Q13 15 12 14.5a5 5 0 0 0-2.11-.5L6 13.98v-3.15c0-.46.26-1.09.59-1.42l2.12-2.12a1 1 0 0 0 .29-.7V5h6v1.59a1 1 0 0 0 .29.7l2.12 2.12c.33.33.59.96.59 1.42"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M18.67 16v-1"
+            d="M18 16v-1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M6.67 14.98v-1"
+            d="M6 14.98v-1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M15.17 5h-5a1.5 1.5 0 0 1-1.5-1.5c0-.82.67-1.5 1.5-1.5h5c.83 0 1.5.68 1.5 1.5S16 5 15.17 5"
+            d="M14.5 5h-5A1.5 1.5 0 0 1 8 3.5C8 2.68 8.67 2 9.5 2h5c.83 0 1.5.68 1.5 1.5S15.33 5 14.5 5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -86,16 +128,16 @@ const IconMilk = forwardRef<SVGSVGElement, IconProps>(function IconMilk(
           {...rest}
         >
           <path
-            d="M18.67 15v4a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3v-5.02l3.89.02q1.1 0 2.11.5t2.12.5z"
+            d="M18 15v4a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-5.02l3.89.02q1.1 0 2.11.5t2.12.5z"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M18.67 10.83V15h-3.88q-1.12 0-2.12-.5a5 5 0 0 0-2.11-.5l-3.89-.02v-3.15c0-.46.26-1.09.59-1.42l2.12-2.12a1 1 0 0 0 .29-.7V4.91q.24.09.5.09h5q.27 0 .5-.09v1.68a1 1 0 0 0 .29.7l2.12 2.12c.33.33.59.96.59 1.42"
+            d="M18 10.83V15h-3.88Q13 15 12 14.5a5 5 0 0 0-2.11-.5L6 13.98v-3.15c0-.46.26-1.09.59-1.42l2.12-2.12a1 1 0 0 0 .29-.7V4.91q.24.09.5.09h5q.27 0 .5-.09v1.68a1 1 0 0 0 .29.7l2.12 2.12c.33.33.59.96.59 1.42"
             fill="currentColor"
           />
           <path
-            d="M15.17 2h-5a1.5 1.5 0 1 0 0 3h5q.27 0 .5-.09a1.5 1.5 0 0 0-.5-2.91"
+            d="M14.5 2h-5a1.5 1.5 0 1 0 0 3h5q.27 0 .5-.09A1.5 1.5 0 0 0 14.5 2"
             fill="currentColor"
           />
         </svg>
@@ -113,11 +155,11 @@ const IconMilk = forwardRef<SVGSVGElement, IconProps>(function IconMilk(
           {...rest}
         >
           <path
-            d="M18.67 16v3a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3v-4.01a1 1 0 0 1 1.01-1l2.88.01q1.05 0 2 .45c.69.32 1.42.55 2.19.55h2.92a1 1 0 0 1 1 1"
+            d="M18 16v3a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4.01a1 1 0 0 1 1.01-1l2.88.01q1.05 0 2 .45c.69.32 1.42.55 2.19.55H17a1 1 0 0 1 1 1"
             fill="currentColor"
           />
           <path
-            d="m18.08 9.41-2.12-2.12a1 1 0 0 1-.29-.7V4.91a1.5 1.5 0 0 0-.5-2.91h-5a1.5 1.5 0 0 0-.5 2.91v1.68q0 .4-.29.7L7.26 9.41c-.32.32-.59.97-.59 1.42v.65a1 1 0 0 0 .99 1l2.91.02c.98 0 1.97.24 2.85.7q.65.32 1.37.3h2.88a1 1 0 0 0 1-1v-1.67c0-.45-.27-1.1-.59-1.42"
+            d="m17.41 9.41-2.12-2.12a1 1 0 0 1-.29-.7V4.91A1.5 1.5 0 0 0 14.5 2h-5A1.5 1.5 0 0 0 9 4.91v1.68q0 .4-.29.7L6.59 9.41c-.32.32-.59.97-.59 1.42v.65a1 1 0 0 0 .99 1l2.91.02c.98 0 1.97.24 2.85.7q.65.32 1.37.3H17a1 1 0 0 0 1-1v-1.67c0-.45-.27-1.1-.59-1.42"
             fill="currentColor"
           />
         </svg>

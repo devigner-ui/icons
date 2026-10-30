@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsTrimmable>true</IsTrimmable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <PackageId>Devigner.Icons.Blazor</PackageId>
+    <Version>3.5.0</Version>
+    <Authors>Devigner</Authors>
+    <Description>10,560 open-source icons for Blazor: 2,112 symbols, each in outline, twotone, bold, bulk and broken. Built on Solar Icon Set and Iconsax.</Description>
+    <PackageTags>icons;blazor;svg;svg-icons;icon-set</PackageTags>
+    <PackageProjectUrl>https://icons.devigner.cc</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/devigner-ui/icons</RepositoryUrl>
+    <PackageLicenseExpression>MIT AND CC-BY-4.0</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <None Include="../../ATTRIBUTION.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+</Project>

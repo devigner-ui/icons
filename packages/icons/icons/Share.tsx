@@ -36,31 +36,31 @@ const IconShare = forwardRef<SVGSVGElement, IconProps>(function IconShare(
           {...rest}
         >
           <path
-            d="M4 12a2.5 2.5 0 1 0 2.5-2.5"
+            d="M4.5 12A2.5 2.5 0 1 0 7 9.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M14 6.5 9 10"
+            d="m14.5 6.5-5 3.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M14 17.5 9 14"
+            d="m14.5 17.5-5-3.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M16.5 21a2.5 2.5 0 1 0-2.5-2.5"
+            d="M17 21a2.5 2.5 0 1 0-2.5-2.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M18.67 6.75a2.5 2.5 0 1 1-.92-3.42"
+            d="M19.17 6.75a2.5 2.5 0 1 1-.92-3.42"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -80,31 +80,31 @@ const IconShare = forwardRef<SVGSVGElement, IconProps>(function IconShare(
           {...rest}
         >
           <path
-            d="M9 11.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"
+            d="M9.5 11.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M14.32 16.8 9 13.3"
+            d="M14.82 16.8 9.5 13.3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M14.42 6.84 9.1 10.35"
+            d="M14.92 6.84 9.6 10.35"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M19 18.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"
+            d="M19.5 18.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="M19 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"
+            d="M19.5 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />

@@ -1,1 +1,1 @@
-export { default, default as IconMagicpen } from '../../icons/Magicpen';
+export { default, default as IconMagicPen } from '../../icons/MagicPen';

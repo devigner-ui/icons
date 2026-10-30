@@ -23,7 +23,44 @@ const IconMessageMinus = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 8q0-6-6-6H8Q2 2 2 8v13a1 1 0 0 0 1 1h13q6 0 6-6v-4"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14.5 12h1"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M8.5 12H12"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +74,7 @@ const IconMessageMinus = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.67 2h-8q-6 0-6 6v13a1 1 0 0 0 1 1h13q6 0 6-6V8q0-6-6-6"
+              d="M16 2H8Q2 2 2 8v13a1 1 0 0 0 1 1h13q6 0 6-6V8q0-6-6-6"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -45,7 +82,7 @@ const IconMessageMinus = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M9.17 12h7"
+              d="M8.5 12h7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -68,11 +105,11 @@ const IconMessageMinus = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.67 2h-8q-6 0-6 6v13a1 1 0 0 0 1 1h13q6 0 6-6V8q0-6-6-6"
+              d="M16 2H8Q2 2 2 8v13a1 1 0 0 0 1 1h13q6 0 6-6V8q0-6-6-6"
               fill="currentColor"
             />
             <path
-              d="M16.17 11.25h-7a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h7c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75"
+              d="M15.5 11.25h-7a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h7c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75"
               fill="currentColor"
             />
           </svg>
@@ -90,7 +127,7 @@ const IconMessageMinus = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.67 2h-8q-6 0-6 6v13a1 1 0 0 0 1 1h13q6 0 6-6V8q0-6-6-6m-.5 10.75h-7a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h7c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M16 2H8Q2 2 2 8v13a1 1 0 0 0 1 1h13q6 0 6-6V8q0-6-6-6m-.5 10.75h-7a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h7c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
           </svg>

@@ -22,7 +22,7 @@ const IconWeight = forwardRef<SVGSVGElement, IconProps>(function IconWeight(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,35 @@ const IconWeight = forwardRef<SVGSVGElement, IconProps>(function IconWeight(
           {...rest}
         >
           <path
-            d="M10.67 22h4c5 0 7-2 7-7V9c0-5-2-7-7-7h-4c-5 0-7 2-7 7v6c0 5 2 7 7 7"
+            d="M17.46 21.53C19.95 20.68 21 18.63 21 15V9c0-5-2-7-7-7h-3.95m-3.46.46C4.07 3.3 3 5.35 3 9v6c0 5 2 7 7 7h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17.25 8.29a7.9 7.9 0 0 0-10.5 0l2.18 3.5a4.6 4.6 0 0 1 6.14 0z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10 22h4c5 0 7-2 7-7V9c0-5-2-7-7-7h-4C5 2 3 4 3 9v6c0 5 2 7 7 7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,7 +72,7 @@ const IconWeight = forwardRef<SVGSVGElement, IconProps>(function IconWeight(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M17.92 8.29a7.9 7.9 0 0 0-10.5 0l2.18 3.5a4.6 4.6 0 0 1 6.14 0z"
+            d="M17.25 8.29a7.9 7.9 0 0 0-10.5 0l2.18 3.5a4.6 4.6 0 0 1 6.14 0z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -66,11 +94,11 @@ const IconWeight = forwardRef<SVGSVGElement, IconProps>(function IconWeight(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M8.67 22h8c3 0 5-2 5-5V7c0-3-2-5-5-5h-8c-3 0-5 2-5 5v10c0 3 2 5 5 5"
+            d="M8 22h8c3 0 5-2 5-5V7c0-3-2-5-5-5H8C5 2 3 4 3 7v10c0 3 2 5 5 5"
             fill="currentColor"
           />
           <path
-            d="M18.17 8a8.27 8.27 0 0 0-11 0 .4.4 0 0 0-.07.48l2.18 3.5q.1.14.26.17.17.02.3-.09a4.24 4.24 0 0 1 5.64 0q.11.09.25.09h.05a.4.4 0 0 0 .26-.17l2.18-3.5c.12-.15.09-.35-.05-.48"
+            d="M17.5 8a8.27 8.27 0 0 0-11 0 .4.4 0 0 0-.07.48l2.18 3.5q.1.14.26.17.17.02.3-.09a4.24 4.24 0 0 1 5.64 0q.11.09.25.09h.05a.4.4 0 0 0 .26-.17l2.18-3.5c.12-.15.09-.35-.05-.48"
             fill="currentColor"
           />
         </svg>
@@ -88,7 +116,7 @@ const IconWeight = forwardRef<SVGSVGElement, IconProps>(function IconWeight(
           {...rest}
         >
           <path
-            d="M16.67 2h-8c-3 0-5 2-5 5v10c0 3 2 5 5 5h8c3 0 5-2 5-5V7c0-3-2-5-5-5m1.57 6.48-2.18 3.5a.4.4 0 0 1-.26.17h-.05a.4.4 0 0 1-.25-.09 4.24 4.24 0 0 0-5.64 0 .37.37 0 0 1-.56-.08l-2.18-3.5c-.12-.15-.09-.35.05-.48a8.27 8.27 0 0 1 11 0c.14.13.17.33.07.48"
+            d="M16 2H8C5 2 3 4 3 7v10c0 3 2 5 5 5h8c3 0 5-2 5-5V7c0-3-2-5-5-5m1.57 6.48-2.18 3.5a.4.4 0 0 1-.26.17h-.05a.4.4 0 0 1-.25-.09 4.24 4.24 0 0 0-5.64 0 .37.37 0 0 1-.56-.08l-2.18-3.5c-.12-.15-.09-.35.05-.48a8.27 8.27 0 0 1 11 0c.14.13.17.33.07.48"
             fill="currentColor"
           />
         </svg>

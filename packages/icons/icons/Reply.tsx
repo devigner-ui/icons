@@ -95,7 +95,6 @@ const IconReply = forwardRef<SVGSVGElement, IconProps>(function IconReply(
               d="M6.31 11.25h8.19c.95 0 2.37.28 3.56 1.14A5.4 5.4 0 0 1 20.25 17a.75.75 0 0 1-1.5 0c0-1.76-.71-2.78-1.56-3.4a5 5 0 0 0-2.69-.85H6.31L5.56 12z"
               fill="currentColor"
             />
-            <path d="M3.8 11.71" fill="currentColor" />
           </g>
         </svg>
       ) : (

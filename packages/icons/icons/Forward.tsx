@@ -36,7 +36,14 @@ const IconForward = forwardRef<SVGSVGElement, IconProps>(function IconForward(
           {...rest}
         >
           <path
-            d="M8 10.13a8.6 8.6 0 0 1 5-1.56V6.23c0-.96 0-1.44.3-1.57.29-.14.65.18 1.36.82L18.64 9c1.57 1.4 2.35 2.1 2.35 2.99s-.78 1.6-2.35 2.99l-3.98 3.53c-.71.64-1.07.95-1.36.82s-.3-.61-.3-1.57v-2.34c-3.6 0-7.5 1.71-9 4.57 0-2.43.38-4.38 1-5.93"
+            d="m14.5 7 5 5-5 5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M19.5 12h-5.49m-3.5 0H9.5c-1.67 0-5 1-5 5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -95,7 +102,6 @@ const IconForward = forwardRef<SVGSVGElement, IconProps>(function IconForward(
               d="M17.69 11.25H9.5c-.95 0-2.37.28-3.56 1.14A5.4 5.4 0 0 0 3.75 17a.75.75 0 0 0 1.5 0c0-1.76.71-2.78 1.56-3.4a5 5 0 0 1 2.69-.85h8.19l.75-.75z"
               fill="currentColor"
             />
-            <path d="M20.2 11.71" fill="currentColor" />
           </g>
         </svg>
       ) : (

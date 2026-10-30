@@ -22,7 +22,7 @@ const IconSlack = forwardRef<SVGSVGElement, IconProps>(function IconSlack(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,85 @@ const IconSlack = forwardRef<SVGSVGElement, IconProps>(function IconSlack(
           {...rest}
         >
           <path
-            d="M15.21 2.26c-1.03 0-1.86.83-1.86 1.86v4.64a1.86 1.86 0 1 0 3.72 0V4.12c0-1.03-.83-1.86-1.86-1.86"
+            d="M14.54 2.26c-1.03 0-1.86.83-1.86 1.86v4.64a1.86 1.86 0 1 0 3.72 0V4.12c0-1.03-.83-1.86-1.86-1.86Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18.62 10.62h1.57a1.57 1.57 0 1 0 0-3.14c-.87 0-1.57.7-1.57 1.57z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3.86 7.37a1.86 1.86 0 1 0 0 3.72H8.5a1.86 1.86 0 1 0 0-3.72h-.75"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M10.36 5.13V3.56a1.57 1.57 0 1 0-3.14 0c0 .87.7 1.57 1.57 1.57z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9.43 21.77c1.03 0 1.86-.83 1.86-1.86v-4.64a1.86 1.86 0 1 0-3.72 0v4.64c0 1.02.83 1.86 1.86 1.86Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M5.36 13.41H3.8a1.57 1.57 0 1 0 0 3.14c.87 0 1.57-.7 1.57-1.57z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M21.97 14.8c0-1.03-.83-1.86-1.86-1.86h-4.64a1.86 1.86 0 1 0 0 3.72h4.64c1.03 0 1.86-.83 1.86-1.86Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M13.6 18.84v1.57a1.57 1.57 0 1 0 3.15 0c0-.87-.7-1.57-1.57-1.57z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M14.54 2.26c-1.03 0-1.86.83-1.86 1.86v4.64a1.86 1.86 0 1 0 3.72 0V4.12c0-1.03-.83-1.86-1.86-1.86"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -45,7 +123,7 @@ const IconSlack = forwardRef<SVGSVGElement, IconProps>(function IconSlack(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M19.29 10.62h1.57a1.57 1.57 0 1 0 0-3.14c-.87 0-1.57.7-1.57 1.57z"
+            d="M18.62 10.62h1.57a1.57 1.57 0 1 0 0-3.14c-.87 0-1.57.7-1.57 1.57z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -53,24 +131,7 @@ const IconSlack = forwardRef<SVGSVGElement, IconProps>(function IconSlack(
             strokeLinejoin="round"
           />
           <path
-            d="M2.67 9.23c0 1.03.83 1.86 1.86 1.86h4.64a1.86 1.86 0 1 0 0-3.72H4.53c-1.03 0-1.86.83-1.86 1.86"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeMiterlimit="10"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            opacity={duotone ? "0.4" : "1"}
-            d="M11.03 5.13V3.56a1.57 1.57 0 1 0-3.14 0c0 .87.7 1.57 1.57 1.57z"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeMiterlimit="10"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M10.1 21.77c1.03 0 1.86-.83 1.86-1.86v-4.64a1.86 1.86 0 1 0-3.72 0v4.64c0 1.02.83 1.86 1.86 1.86"
+            d="M2 9.23c0 1.03.83 1.86 1.86 1.86H8.5a1.86 1.86 0 1 0 0-3.72H3.86C2.83 7.37 2 8.2 2 9.23"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -79,7 +140,7 @@ const IconSlack = forwardRef<SVGSVGElement, IconProps>(function IconSlack(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M6.03 13.41H4.46a1.57 1.57 0 1 0 0 3.14c.87 0 1.57-.7 1.57-1.57z"
+            d="M10.36 5.13V3.56a1.57 1.57 0 1 0-3.14 0c0 .87.7 1.57 1.57 1.57z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -87,7 +148,7 @@ const IconSlack = forwardRef<SVGSVGElement, IconProps>(function IconSlack(
             strokeLinejoin="round"
           />
           <path
-            d="M22.64 14.8c0-1.03-.83-1.86-1.86-1.86h-4.64a1.86 1.86 0 1 0 0 3.72h4.64c1.03 0 1.86-.83 1.86-1.86"
+            d="M9.43 21.77c1.03 0 1.86-.83 1.86-1.86v-4.64a1.86 1.86 0 1 0-3.72 0v4.64c0 1.02.83 1.86 1.86 1.86"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -96,7 +157,24 @@ const IconSlack = forwardRef<SVGSVGElement, IconProps>(function IconSlack(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M14.28 18.84v1.57a1.57 1.57 0 1 0 3.14 0c0-.87-.7-1.57-1.57-1.57z"
+            d="M5.36 13.41H3.79a1.57 1.57 0 1 0 0 3.14c.87 0 1.57-.7 1.57-1.57z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M21.97 14.8c0-1.03-.83-1.86-1.86-1.86h-4.64a1.86 1.86 0 1 0 0 3.72h4.64c1.03 0 1.86-.83 1.86-1.86"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M13.61 18.84v1.57a1.57 1.57 0 1 0 3.14 0c0-.87-.7-1.57-1.57-1.57z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -119,43 +197,43 @@ const IconSlack = forwardRef<SVGSVGElement, IconProps>(function IconSlack(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
-            d="M15.21 1.88c-1.23 0-2.23 1-2.23 2.23v4.64a2.23 2.23 0 0 0 4.46 0V4.11c0-1.22-1-2.23-2.23-2.23"
+            d="M14.54 1.88c-1.23 0-2.23 1-2.23 2.23v4.64a2.23 2.23 0 0 0 4.46 0V4.11c0-1.22-1-2.23-2.23-2.23"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M20.85 7.11c-1.07 0-1.94.87-1.94 1.94v1.57c0 .21.17.38.38.38h1.57a1.94 1.94 0 1 0-.01-3.89"
+            d="M20.18 7.11c-1.07 0-1.94.87-1.94 1.94v1.57c0 .21.17.38.38.38h1.57a1.94 1.94 0 1 0-.01-3.89"
             fill="currentColor"
           />
           <path
-            d="M9.17 6.99H4.53a2.23 2.23 0 0 0 0 4.46h4.64a2.23 2.23 0 0 0 0-4.46"
-            fill="currentColor"
-          />
-          <path
-            opacity={duotone ? "0.4" : "1"}
-            d="M9.46 1.62a1.94 1.94 0 0 0 0 3.88h1.57c.21 0 .38-.17.38-.38V3.55a1.96 1.96 0 0 0-1.95-1.93"
-            fill="currentColor"
-          />
-          <path
-            d="M10.1 13.03c-1.23 0-2.23 1-2.23 2.23v4.64a2.23 2.23 0 0 0 4.46 0v-4.64c0-1.23-1-2.23-2.23-2.23"
+            d="M8.5 6.99H3.86a2.23 2.23 0 0 0 0 4.46H8.5a2.23 2.23 0 0 0 0-4.46"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M6.03 13.03H4.46a1.94 1.94 0 1 0 1.94 1.94V13.4c0-.2-.17-.37-.37-.37"
+            d="M8.79 1.62a1.94 1.94 0 0 0 0 3.88h1.57c.21 0 .38-.17.38-.38V3.55a1.96 1.96 0 0 0-1.95-1.93"
             fill="currentColor"
           />
           <path
-            d="M20.78 12.57h-4.64a2.23 2.23 0 0 0 0 4.46h4.64a2.23 2.23 0 0 0 0-4.46"
+            d="M9.43 13.03c-1.23 0-2.23 1-2.23 2.23v4.64a2.23 2.23 0 0 0 4.46 0v-4.64c0-1.23-1-2.23-2.23-2.23"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M15.85 18.47h-1.57a.4.4 0 0 0-.38.38v1.57a1.94 1.94 0 1 0 1.95-1.95"
+            d="M5.36 13.03H3.79a1.94 1.94 0 1 0 1.94 1.94V13.4c0-.2-.17-.37-.37-.37"
+            fill="currentColor"
+          />
+          <path
+            d="M20.11 12.57h-4.64a2.23 2.23 0 0 0 0 4.46h4.64a2.23 2.23 0 0 0 0-4.46"
+            fill="currentColor"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M15.18 18.47h-1.57a.4.4 0 0 0-.38.38v1.57a1.94 1.94 0 1 0 1.95-1.95"
             fill="currentColor"
           />
         </svg>
@@ -173,35 +251,35 @@ const IconSlack = forwardRef<SVGSVGElement, IconProps>(function IconSlack(
           {...rest}
         >
           <path
-            d="M15.21 1.88c-1.23 0-2.23 1-2.23 2.23v4.64a2.23 2.23 0 0 0 4.46 0V4.11c0-1.22-1-2.23-2.23-2.23"
+            d="M14.54 1.88c-1.23 0-2.23 1-2.23 2.23v4.64a2.23 2.23 0 0 0 4.46 0V4.11c0-1.22-1-2.23-2.23-2.23"
             fill="currentColor"
           />
           <path
-            d="M20.85 7.11c-1.07 0-1.94.87-1.94 1.94v1.57c0 .21.17.38.38.38h1.57a1.94 1.94 0 1 0-.01-3.89"
+            d="M20.18 7.11c-1.07 0-1.94.87-1.94 1.94v1.57c0 .21.17.38.38.38h1.57a1.94 1.94 0 1 0-.01-3.89"
             fill="currentColor"
           />
           <path
-            d="M9.17 6.99H4.53a2.23 2.23 0 0 0 0 4.46h4.64a2.23 2.23 0 0 0 0-4.46"
+            d="M8.5 6.99H3.86a2.23 2.23 0 0 0 0 4.46H8.5a2.23 2.23 0 0 0 0-4.46"
             fill="currentColor"
           />
           <path
-            d="M9.46 1.62a1.94 1.94 0 0 0 0 3.88h1.57c.21 0 .38-.17.38-.38V3.55a1.96 1.96 0 0 0-1.95-1.93"
+            d="M8.79 1.62a1.94 1.94 0 0 0 0 3.88h1.57c.21 0 .38-.17.38-.38V3.55a1.96 1.96 0 0 0-1.95-1.93"
             fill="currentColor"
           />
           <path
-            d="M10.1 13.03c-1.23 0-2.23 1-2.23 2.23v4.64a2.23 2.23 0 0 0 4.46 0v-4.64c0-1.23-1-2.23-2.23-2.23"
+            d="M9.43 13.03c-1.23 0-2.23 1-2.23 2.23v4.64a2.23 2.23 0 0 0 4.46 0v-4.64c0-1.23-1-2.23-2.23-2.23"
             fill="currentColor"
           />
           <path
-            d="M6.03 13.03H4.46a1.94 1.94 0 1 0 1.94 1.94V13.4c0-.2-.17-.37-.37-.37"
+            d="M5.36 13.03H3.79a1.94 1.94 0 1 0 1.94 1.94V13.4c0-.2-.17-.37-.37-.37"
             fill="currentColor"
           />
           <path
-            d="M20.78 12.57h-4.64a2.23 2.23 0 0 0 0 4.46h4.64a2.23 2.23 0 0 0 0-4.46"
+            d="M20.11 12.57h-4.64a2.23 2.23 0 0 0 0 4.46h4.64a2.23 2.23 0 0 0 0-4.46"
             fill="currentColor"
           />
           <path
-            d="M15.85 18.47h-1.57a.4.4 0 0 0-.38.38v1.57a1.94 1.94 0 1 0 1.95-1.95"
+            d="M15.18 18.47h-1.57a.4.4 0 0 0-.38.38v1.57a1.94 1.94 0 1 0 1.95-1.95"
             fill="currentColor"
           />
         </svg>

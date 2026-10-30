@@ -37,26 +37,26 @@ const IconUsersGroupRounded = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <circle
-            cx="9"
-            cy="6"
+            cx="9.5"
+            cy="6.5"
             r="4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="M15 9a3 3 0 1 0 0-6"
+            d="M15.5 9.5a3 3 0 1 0 0-6"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M5.89 20.58Q7.32 21 9 21c3.87 0 7-1.8 7-4s-3.13-4-7-4-7 1.8-7 4q0 .52.22 1"
+            d="M6.39 21.08q1.43.42 3.11.42c3.87 0 7-1.8 7-4s-3.13-4-7-4-7 1.8-7 4q0 .52.22 1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M18 14c1.75.38 3 1.36 3 2.5 0 1.03-1.01 1.92-2.5 2.37"
+            d="M18.5 14.5c1.75.38 3 1.36 3 2.5 0 1.03-1.01 1.92-2.5 2.37"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -76,21 +76,21 @@ const IconUsersGroupRounded = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <circle
-              cx="9"
-              cy="6.00049"
+              cx="9.5"
+              cy="6.5"
               r="4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.5 4.34a3 3 0 1 1 0 3.32"
+              d="M13 4.84a3 3 0 1 1 0 3.32"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <ellipse
-              cx="9"
-              cy="17.0005"
+              cx="9.5"
+              cy="17.5"
               rx="7"
               ry="4"
               stroke="currentColor"
@@ -98,7 +98,7 @@ const IconUsersGroupRounded = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18 14c1.75.39 3 1.36 3 2.5 0 1.03-1.01 1.92-2.5 2.37"
+              d="M18.5 14.5c1.75.39 3 1.36 3 2.5 0 1.03-1.01 1.92-2.5 2.37"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -119,23 +119,23 @@ const IconUsersGroupRounded = forwardRef<SVGSVGElement, IconProps>(
           >
             <circle
               opacity={duotone ? "0.4" : "1"}
-              cx="15"
-              cy="6.00049"
+              cx="15.5"
+              cy="6.5"
               r="3"
               fill="currentColor"
             />
             <ellipse
               opacity={duotone ? "0.4" : "1"}
-              cx="16"
-              cy="17.0005"
+              cx="16.5"
+              cy="17.5"
               rx="5"
               ry="3"
               fill="currentColor"
             />
-            <circle cx="9.00098" cy="6.00049" r="4" fill="currentColor" />
+            <circle cx="9.5" cy="6.5" r="4" fill="currentColor" />
             <ellipse
-              cx="9.00098"
-              cy="17.0015"
+              cx="9.5"
+              cy="17.5"
               rx="7"
               ry="4"
               fill="currentColor"
@@ -154,20 +154,20 @@ const IconUsersGroupRounded = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <circle cx="9.00098" cy="6.00049" r="4" fill="currentColor" />
+            <circle cx="9.5" cy="6.5" r="4" fill="currentColor" />
             <ellipse
-              cx="9.00098"
-              cy="17.0015"
+              cx="9.5"
+              cy="17.5"
               rx="7"
               ry="4"
               fill="currentColor"
             />
             <path
-              d="M21 17c0 1.66-2.04 3-4.52 3a4.4 4.4 0 0 0 1.23-3c0-1.2-.5-2.2-1.23-3 2.48 0 4.52 1.34 4.52 3"
+              d="M21.5 17.5c0 1.66-2.04 3-4.52 3a4.4 4.4 0 0 0 1.23-3c0-1.2-.5-2.2-1.23-3 2.48 0 4.52 1.34 4.52 3"
               fill="currentColor"
             />
             <path
-              d="M18 6a3 3 0 0 1-4.03 2.82 5.7 5.7 0 0 0 0-5.64A3 3 0 0 1 18 6"
+              d="M18.5 6.5a3 3 0 0 1-4.03 2.82 5.7 5.7 0 0 0 0-5.64A3 3 0 0 1 18.5 6.5"
               fill="currentColor"
             />
           </svg>

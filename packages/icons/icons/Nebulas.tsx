@@ -22,7 +22,52 @@ const IconNebulas = forwardRef<SVGSVGElement, IconProps>(function IconNebulas(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m12 5.25-2.5 8 5-2.5z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14.08 10.96 18 12.25l-4.5 2.5-.4-.13L6 12.25l4-2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m13 15.25-1 3-2.5-4.68"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,7 +82,7 @@ const IconNebulas = forwardRef<SVGSVGElement, IconProps>(function IconNebulas(
         >
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="m12.67 5.25-2.5 8 5-2.5z"
+              d="m12 5.25-2.5 8 5-2.5z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -45,7 +90,7 @@ const IconNebulas = forwardRef<SVGSVGElement, IconProps>(function IconNebulas(
               strokeLinejoin="round"
             />
             <path
-              d="m14.75 10.96 3.92 1.29-4.5 2.5-.4-.13-7.1-2.37 4-2"
+              d="M14.08 10.96 18 12.25l-4.5 2.5-.4-.13L6 12.25l4-2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -53,7 +98,7 @@ const IconNebulas = forwardRef<SVGSVGElement, IconProps>(function IconNebulas(
               strokeLinejoin="round"
             />
             <path
-              d="m13.67 15.25-1 3-2.5-4.68"
+              d="m13 15.25-1 3-2.5-4.68"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -62,7 +107,7 @@ const IconNebulas = forwardRef<SVGSVGElement, IconProps>(function IconNebulas(
             />
           </g>
           <path
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -85,29 +130,29 @@ const IconNebulas = forwardRef<SVGSVGElement, IconProps>(function IconNebulas(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             fill="currentColor"
           />
           <path
-            d="m15.17 10.75-.41.21h-.01l-4.68 2.42 1.07-3.34 3.08-1.39z"
+            d="m14.5 10.75-.41.21h-.01L9.4 13.38l1.07-3.34 3.08-1.39z"
             fill="currentColor"
           />
-          <path d="m14.22 8.65-3.08 1.39 1.53-4.79z" fill="currentColor" />
+          <path d="m13.55 8.65-3.08 1.39L12 5.25z" fill="currentColor" />
           <path
-            d="m11.14 10.04-1.07 3.34-3.4-1.13 2.18-1.09 1.82-.91z"
-            fill="currentColor"
-          />
-          <path
-            d="m18.67 12.25-4.5 2.5-.31-.1-.09-.03-3.7-1.24 4.68-2.42h.01z"
+            d="M10.47 10.04 9.4 13.38 6 12.25l2.18-1.09 1.82-.91z"
             fill="currentColor"
           />
           <path
-            d="m13.86 14.65-.19.6-1 3-2.5-4.68-.1-.19 3.7 1.24z"
+            d="m18 12.25-4.5 2.5-.31-.1-.09-.03-3.7-1.24 4.68-2.42h.01z"
+            fill="currentColor"
+          />
+          <path
+            d="m13.19 14.65-.19.6-1 3-2.5-4.68-.1-.19 3.7 1.24z"
             fill="currentColor"
           />
         </svg>
@@ -125,7 +170,7 @@ const IconNebulas = forwardRef<SVGSVGElement, IconProps>(function IconNebulas(
           {...rest}
         >
           <path
-            d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1.5 12.75-.31-.1-.19.6-1 3-2.5-4.68-.1-.19-3.4-1.13 2.18-1.09 1.82-.91.47-.21 1.53-4.79 1.55 3.4.95 2.1-.41.21 3.91 1.29z"
+            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1.5 12.75-.31-.1-.19.6-1 3-2.5-4.68-.1-.19L6 12.25l2.18-1.09 1.82-.91.47-.21L12 5.25l1.55 3.4.95 2.1-.41.21L18 12.25z"
             fill="currentColor"
           />
         </svg>

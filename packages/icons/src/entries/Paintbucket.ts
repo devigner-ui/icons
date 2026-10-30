@@ -1,1 +1,1 @@
-export { default, default as IconPaintbucket } from '../../icons/Paintbucket';
+export { default, default as IconPaintBucket } from '../../icons/PaintBucket';

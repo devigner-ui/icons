@@ -1,12 +1,9 @@
 # @devigner-ui/icons
 
-9,717 open-source drawings for React. Every one of the 2,147 symbols carries four core drawings:
-outline, twotone, bold and bulk; 1,129 symbols also carry a Broken drawing.
+10,560 open-source drawings for React. Every one of the 2,112 symbols carries five drawings:
+outline, twotone, bold, bulk and broken.
 
-Built on [Solar Icon Set](https://www.figma.com/community/file/1166831539721848736)
-and [Iconsax](https://iconsax.io). See [ATTRIBUTION.md](./ATTRIBUTION.md).
-
-[icons.remidevigner.pro](https://icons.remidevigner.pro) · free and open source
+[icons.devigner.cc](https://icons.devigner.cc) · free and open source
 
 ```bash
 npm install @devigner-ui/icons
@@ -61,8 +58,8 @@ Three props of its own, **plus everything an `<svg>` takes** (`onClick`,
 | Prop | Type | Default | What it does |
 | --- | --- | --- | --- |
 | `className` | `string` | - | Sizes and colours the glyph. |
-| `variant` | `"Outline" \| "TwoTone" \| "Bold" \| "Bulk" \| "Broken"` | `"Outline"` | Which drawing to render. Broken is available where supplied. |
-| `strokeWidth` | `string \| number` | `"1.5"` | Stroke width, in the 24px drawing's own units. Outline and TwoTone only. |
+| `variant` | `"Outline" \| "TwoTone" \| "Bold" \| "Bulk" \| "Broken"` | `"Outline"` | Which drawing to render. Every icon has all five. |
+| `strokeWidth` | `string \| number` | `"1.5"` | Stroke width, in the 24px drawing's own units. Outline, TwoTone and Broken; Bold and Bulk keep their own weight. |
 
 Nothing is omitted from the inherited set any more: `width` and `fill` used to
 be taken over for stroke width and which drawing, and are the element's own
@@ -104,19 +101,18 @@ UI trigger and anything else that needs to measure or position against it.
 
 ## Styles
 
-`variant` selects between the four core drawings, with Broken available on icons that supply it:
+`variant` selects one of the five drawings:
 
 ```tsx
 <IconShoppingCart />                       {/* outline, the default */}
 <IconShoppingCart variant="TwoTone" />
 <IconShoppingCart variant="Bold" />
 <IconShoppingCart variant="Bulk" />
-<IconShoppingCart variant="Broken" />                     {/* where available */}
+<IconShoppingCart variant="Broken" />
 ```
 
-**All four core styles are free on all 2,147 symbols.** Broken is free on the
-1,129 symbols that supply that drawing. Bulk used to be sold on 1,682 of them;
-it is not any more, and this package contains every drawing.
+**All five styles are free on all 2,112 symbols**, and this package contains
+every drawing.
 
 ```ts
 import metadata from "@devigner-ui/icons/metadata.json";
@@ -140,14 +136,33 @@ npx @devigner-ui/icons info ShoppingCart
 without it, search falls back to keyword matching and says so. `--keyword` asks
 for that directly and skips the model load.
 
+## Renamed icons
+
+3.5.0 named variants for what they draw (`IconBag2` is now
+`IconBagStraps`), corrected names the drawing didn't match (`IconNotebook`
+is now `IconLaptop`), fixed spelling and capitalisation (`IconMagnifer` is
+now `IconMagnifier`), and pointed 50 duplicate icons at the icon they
+copied (`IconPlusCircle` renders `IconAddCircle`): 654 names in all. The
+old names keep working until 4.0.0: your editor marks
+them deprecated, and development builds log the new name once. To update a
+project in one step:
+
+```bash
+npx @devigner-ui/icons migrate --dry   # list what would change
+npx @devigner-ui/icons migrate
+```
+
+Every rename is listed in `@devigner-ui/icons/renames.json`. See
+[Renamed icons](https://icons.devigner.cc/docs/guide/renamed-icons/).
+
 ## Package
 
 - **No runtime dependencies.** React 18 or newer as a peer.
 - **Tree shakeable.** `sideEffects: false`; you ship only what you import.
 - **Typed.** `IconName`, `IconStyle`, `IconProps` and `IconComponentType` are
-  exported; `IconName` is a literal union of all 2,147 symbol names.
-- ESM and CJS builds, plus `./metadata.json`, `./embeddings.json` and
-  `./styles.css` subpath exports.
+  exported; `IconName` is a literal union of all 2,112 symbol names.
+- ESM and CJS builds, plus `./metadata.json`, `./embeddings.json`,
+  `./renames.json` and `./styles.css` subpath exports.
 
 `embeddings.json` holds one 384-dimension vector per icon, produced with
 `Xenova/all-MiniLM-L6-v2`, for ranking icons against a description.

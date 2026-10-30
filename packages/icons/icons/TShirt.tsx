@@ -22,7 +22,28 @@ const IconTShirt = forwardRef<SVGSVGElement, IconProps>(function IconTShirt(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M18.22 15.29V10.3c0-.69 0-1.03.13-1.33.14-.3.38-.52.88-.97l.18-.17C20.47 6.88 21 6.41 21 5.72c0-.7-.46-1.13-1.4-2l-.42-.35c-.47-.38-1.14-.8-1.65-1.1a2 2 0 0 0-1.56-.2l-.5.13a1.6 1.6 0 0 0-.94.7 2.97 2.97 0 0 1-5.06 0 1.6 1.6 0 0 0-.95-.7l-.49-.13a2 2 0 0 0-1.56.2q-1.1.65-2.07 1.47C3.46 4.59 3 5.03 3 5.72q0 .28.12.53m2.41 2.52q.08.1.12.2c.13.3.13.64.13 1.33v7.97c0 1.32 0 1.98.45 2.54.44.56.98.66 2.05.86 2.46.44 4.98.44 7.44 0 1.07-.2 1.6-.3 2.05-.86.39-.48.44-1.03.45-2.02"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

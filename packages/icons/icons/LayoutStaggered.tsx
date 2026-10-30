@@ -23,7 +23,49 @@ const IconLayoutStaggered = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 2v20"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 9.5h10"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 14.5h10"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3.96 3.32C2.6 4.43 2 6.27 2 9v6c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +79,7 @@ const IconLayoutStaggered = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M9.67 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7h-6c-5 0-7 2-7 7v6c0 5 2 7 7 7"
+              d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -45,21 +87,21 @@ const IconLayoutStaggered = forwardRef<SVGSVGElement, IconProps>(
             />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M12.67 2v20"
+                d="M12 2v20"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M2.67 9.5h10"
+                d="M2 9.5h10"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M12.67 14.5h10"
+                d="M12 14.5h10"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
@@ -82,21 +124,21 @@ const IconLayoutStaggered = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22.67 7.81v6.69h-10V2h4.19c3.64 0 5.81 2.17 5.81 5.81"
+              d="M22 7.81v6.69H12V2h4.19C19.83 2 22 4.17 22 7.81"
               fill="currentColor"
             />
             <path
-              d="M12.67 9.5V22H8.48c-3.64 0-5.81-2.17-5.81-5.81V9.5z"
-              fill="currentColor"
-            />
-            <path
-              opacity={duotone ? "0.6" : "1"}
-              d="M12.67 2v7.5h-10V7.81C2.67 4.17 4.84 2 8.48 2z"
+              d="M12 9.5V22H7.81C4.17 22 2 19.83 2 16.19V9.5z"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.6" : "1"}
-              d="M22.67 14.5v1.69c0 3.64-2.17 5.81-5.81 5.81h-4.19v-7.5z"
+              d="M12 2v7.5H2V7.81C2 4.17 4.17 2 7.81 2z"
+              fill="currentColor"
+            />
+            <path
+              opacity={duotone ? "0.6" : "1"}
+              d="M22 14.5v1.69c0 3.64-2.17 5.81-5.81 5.81H12v-7.5z"
               fill="currentColor"
             />
           </svg>
@@ -114,19 +156,19 @@ const IconLayoutStaggered = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.86 2h-3.44v11.75h9.25V7.81C22.67 4.17 20.5 2 16.86 2"
+              d="M16.19 2h-3.44v11.75H22V7.81C22 4.17 19.83 2 16.19 2"
               fill="currentColor"
             />
             <path
-              d="M2.67 10.25v5.94c0 3.64 2.17 5.81 5.81 5.81h3.44V10.25z"
+              d="M2 10.25v5.94C2 19.83 4.17 22 7.81 22h3.44V10.25z"
               fill="currentColor"
             />
             <path
-              d="M11.92 2v6.75H2.67v-.94C2.67 4.17 4.84 2 8.48 2z"
+              d="M11.25 2v6.75H2v-.94C2 4.17 4.17 2 7.81 2z"
               fill="currentColor"
             />
             <path
-              d="M22.67 15.25v.94c0 3.64-2.17 5.81-5.81 5.81h-3.44v-6.75z"
+              d="M22 15.25v.94c0 3.64-2.17 5.81-5.81 5.81h-3.44v-6.75z"
               fill="currentColor"
             />
           </svg>

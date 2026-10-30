@@ -1,6 +1,7 @@
 import { defineConfig } from 'tsup';
 import fs from 'fs';
 import path from 'path';
+import { activeRenames } from './scripts/renames.mjs';
 
 /*
  * There is no build-time gate any more. Bulk used to be stripped from 1,682
@@ -28,10 +29,12 @@ const iconEntries = fs.existsSync(ENTRIES)
 export default defineConfig({
   entry: {
     index: 'src/index.ts',
+    /* Shared by every deprecated alias written in onSuccess below. */
+    renamed: 'icons/renamed.ts',
     ...iconEntries,
   },
   format: ['esm', 'cjs'],
-  /* Only the root goes through the declaration bundler. Rolling up 2,147
+  /* Only the root goes through the declaration bundler. Rolling up 2,112
      more entries takes minutes and would emit the same three lines each time,
      so onSuccess writes those by hand below. */
   dts: { entry: 'src/index.ts' },
@@ -63,19 +66,55 @@ export default defineConfig({
        all its forwardRef calls. ESM consumers get a re-export graph that a
        bundler can prune at the module boundary. CommonJS consumers get lazy
        getters, so requiring one named icon does not evaluate every drawing. */
-    const names = Object.keys(iconEntries).map((key) => key.slice('icons/'.length));
+    /*
+     * Old names from scripts/renames.json that are still inside their
+     * deprecation window. Each is a few lines that wrap the renamed icon's own
+     * module, never a bundle of its drawing, and each carries the @deprecated
+     * note that makes editors strike it through. They join the same root
+     * re-exports and the same subpath pattern, so `@devigner-ui/icons/Bag2`
+     * keeps resolving until the batch's removeIn major, when activeRenames()
+     * stops returning it and the next build simply leaves it out.
+     */
+    const renames = activeRenames();
+    fs.mkdirSync(path.resolve('dist/aliases'), { recursive: true });
+    for (const { from, to, dir, message } of renames) {
+      const doc = `/** @deprecated ${message} */\n`;
+      fs.writeFileSync(
+        path.resolve('dist', dir, `${from}.js`),
+        `"use client";\nimport { Icon${to} } from '../icons/${to}.js';\nimport { renamed } from '../renamed.js';\n` +
+          `${doc}export const Icon${from} = /* #__PURE__ */ renamed(Icon${to}, ${JSON.stringify(from)}, ${JSON.stringify(message)});\n` +
+          `export default Icon${from};\n`,
+      );
+      fs.writeFileSync(
+        path.resolve('dist', dir, `${from}.cjs`),
+        `"use client";\nObject.defineProperty(exports, "__esModule", { value: true });\n` +
+          `const Icon${from} = require('../renamed.cjs').renamed(require('../icons/${to}.cjs').Icon${to}, ${JSON.stringify(from)}, ${JSON.stringify(message)});\n` +
+          `exports.Icon${from} = Icon${from};\nexports.default = Icon${from};\n`,
+      );
+      fs.writeFileSync(
+        path.resolve('dist', dir, `${from}.d.ts`),
+        `import type { IconComponentType } from '../icons/types.js';\n` +
+          `${doc}declare const Icon${from}: IconComponentType;\n` +
+          `export { Icon${from}, Icon${from} as default };\n`,
+      );
+    }
+
+    const modules = [
+      ...Object.keys(iconEntries).map((key) => [key.slice('icons/'.length), 'icons']),
+      ...renames.map((r) => [r.from, r.dir]),
+    ];
     fs.writeFileSync(
       path.resolve('dist/index.js'),
       '"use client";\n' +
-        names.map((name) => `export { Icon${name} } from './icons/${name}.js';`).join('\n') +
+        modules.map(([name, dir]) => `export { Icon${name} } from './${dir}/${name}.js';`).join('\n') +
         '\n',
     );
     fs.writeFileSync(
       path.resolve('dist/index.cjs'),
       '"use client";\nObject.defineProperty(exports, "__esModule", { value: true });\n' +
-        names.map((name) =>
+        modules.map(([name, dir]) =>
           `Object.defineProperty(exports, ${JSON.stringify(`Icon${name}`)}, ` +
-          `{ enumerable: true, get: () => require(${JSON.stringify(`./icons/${name}.cjs`)}).Icon${name} });`,
+          `{ enumerable: true, get: () => require(${JSON.stringify(`./${dir}/${name}.cjs`)}).Icon${name} });`,
         ).join('\n') +
         '\n',
     );
@@ -108,6 +147,11 @@ export default defineConfig({
         console.log(`Copied ${file} to dist/`);
       }
     }
+
+    /* Every rename ever made, expired batches included: the migrate command
+       and anyone's own tooling read old names from it long after the aliases
+       are gone. */
+    fs.copyFileSync(path.resolve('scripts/renames.json'), path.resolve('dist/renames.json'));
   },
   esbuildOptions(esbuild) {
     esbuild.alias = {

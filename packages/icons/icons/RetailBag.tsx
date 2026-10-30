@@ -23,7 +23,56 @@ const IconRetailBag = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M5.03 7.21C6.04 7 7.44 7 9.42 7h5.16c3.43 0 5.14 0 6.04 1.11.9 1.12.54 2.8-.18 6.15l-.11.53m-.76 3.41c-.28 1.04-.56 1.69-1.11 2.13-.82.67-1.99.67-4.31.67h-4.3c-2.32 0-3.49 0-4.31-.67-.83-.66-1.07-1.8-1.56-4.07l-.42-2c-.46-2.16-.78-3.62-.7-4.69"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M3 11h18"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10 14h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m18 9-3-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m6 9 3-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -89,17 +138,17 @@ const IconRetailBag = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M3.05 11.75q.19 1.06.5 2.5l.43 2c.5 2.28.73 3.42 1.56 4.08.82.67 1.99.67 4.31.67h4.3c2.32 0 3.49 0 4.31-.67.83-.66 1.07-1.8 1.56-4.07l.43-2q.31-1.45.5-2.5z"
+              d="M3.05 12.15q.19 1.06.5 2.5l.43 2c.5 2.28.73 3.42 1.56 4.08.82.67 1.99.67 4.31.67h4.3c2.32 0 3.49 0 4.31-.67.83-.66 1.07-1.8 1.56-4.07l.43-2q.31-1.45.5-2.5z"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M9.25 14c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75"
+              d="M9.25 14.4c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
             <path
-              d="M8.33 2.67a.75.75 0 0 1 1.34.67L7.84 7h8.32l-1.83-3.67a.75.75 0 0 1 1.34-.67l2.2 4.4c1.36.1 2.2.37 2.75 1.04.44.54.58 1.21.53 2.14H21l.15.01q-.05.65-.2 1.5H3.06q-.15-.85-.2-1.5H3h-.15c-.05-.94.1-1.6.53-2.15.55-.67 1.4-.94 2.75-1.04z"
+              d="M8.33 3.07a.75.75 0 0 1 1.34.67L7.84 7.4h8.32l-1.83-3.67a.75.75 0 0 1 1.34-.67l2.2 4.4c1.36.1 2.2.37 2.75 1.04.44.54.58 1.21.53 2.14H21l.15.01q-.05.65-.2 1.5H3.06q-.15-.85-.2-1.5H3h-.15c-.05-.94.1-1.6.53-2.15.55-.67 1.4-.94 2.75-1.04z"
               fill="currentColor"
             />
           </svg>
@@ -117,13 +166,13 @@ const IconRetailBag = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M14.66 2.33a.75.75 0 0 1 1.01.34l2.2 4.4c1.36.1 2.2.37 2.75 1.04.44.54.58 1.21.53 2.14H2.85c-.05-.93.1-1.6.53-2.14.55-.67 1.4-.94 2.75-1.04l2.2-4.4a.75.75 0 0 1 1.34.67L7.84 7h8.32l-1.83-3.67a.75.75 0 0 1 .33-1.01"
+              d="M14.66 2.73a.75.75 0 0 1 1.01.34l2.2 4.4c1.36.1 2.2.37 2.75 1.04.44.54.58 1.21.53 2.14H2.85c-.05-.93.1-1.6.53-2.14.55-.67 1.4-.94 2.75-1.04l2.2-4.4a.75.75 0 0 1 1.34.67L7.84 7.4h8.32l-1.83-3.67a.75.75 0 0 1 .33-1.01"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M3.56 14.26q-.32-1.45-.51-2.5h17.9q-.19 1.05-.5 2.5l-.43 2c-.5 2.27-.73 3.4-1.56 4.07-.82.67-1.99.67-4.31.67h-4.3c-2.32 0-3.49 0-4.31-.67-.83-.66-1.07-1.8-1.56-4.07zm6.44-1a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5z"
+              d="M3.56 14.66q-.32-1.45-.51-2.5h17.9q-.19 1.05-.5 2.5l-.43 2c-.5 2.27-.73 3.4-1.56 4.07-.82.67-1.99.67-4.31.67h-4.3c-2.32 0-3.49 0-4.31-.67-.83-.66-1.07-1.8-1.56-4.07zm6.44-1a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5z"
               fill="currentColor"
             />
           </svg>

@@ -22,7 +22,42 @@ const IconIPhone = forwardRef<SVGSVGElement, IconProps>(function IconIPhone(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M4.2 5.26c.16-.91.45-1.57.97-2.09C6.34 2 8.23 2 12 2s5.66 0 6.83 1.17S20 6.23 20 10v4c0 3.77 0 5.66-1.17 6.83-.51.51-1.16.8-2.04.96M13.3 22H12c-3.77 0-5.66 0-6.83-1.17S4 17.77 4 14V8.75"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M15 19H9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m16.75 2.38-.09.12c-.75 1.14-1.13 1.7-1.68 2.05l-.34.18C14.04 5 13.36 5 12 5s-2.04 0-2.64-.27l-.34-.18c-.55-.34-.93-.91-1.68-2.05l-.09-.12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

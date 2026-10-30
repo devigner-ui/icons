@@ -22,7 +22,45 @@ const IconTwitch = forwardRef<SVGSVGElement, IconProps>(function IconTwitch(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2.5 7V5l2-3h17v12l-5 5h-5l-2 3h-3v-3h-4v-7.39"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9 7h2v6H9z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14 7h2v6h-2z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -38,7 +76,7 @@ const IconTwitch = forwardRef<SVGSVGElement, IconProps>(function IconTwitch(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M5.17 2h17v12l-5 5h-5l-2 3h-3v-3h-4V5z"
+            d="M4.5 2h17v12l-5 5h-5l-2 3h-3v-3h-4V5z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -47,7 +85,7 @@ const IconTwitch = forwardRef<SVGSVGElement, IconProps>(function IconTwitch(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M11.67 7h-2v6h2z"
+            d="M11 7H9v6h2z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -56,7 +94,7 @@ const IconTwitch = forwardRef<SVGSVGElement, IconProps>(function IconTwitch(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M16.67 7h-2v6h2z"
+            d="M16 7h-2v6h2z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -79,26 +117,26 @@ const IconTwitch = forwardRef<SVGSVGElement, IconProps>(function IconTwitch(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M5.71 2h15.46a1 1 0 0 1 1 1v10.59q-.01.41-.29.71l-4.41 4.41a1 1 0 0 1-.71.29h-4.05a1 1 0 0 0-.83.45l-1.41 2.11a1 1 0 0 1-.83.45H8.18a1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1h-2a1 1 0 0 1-1-1V5.31q0-.3.17-.55l1.54-2.3A1 1 0 0 1 5.71 2"
+            d="M5.04 2H20.5a1 1 0 0 1 1 1v10.59q-.01.41-.29.71l-4.41 4.41a1 1 0 0 1-.71.29h-4.05a1 1 0 0 0-.83.45L9.8 21.56a1 1 0 0 1-.83.45H7.51a1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1h-2a1 1 0 0 1-1-1V5.31q0-.3.17-.55l1.54-2.3A1 1 0 0 1 5.04 2"
             fill="currentColor"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M9.17 7.14v5.71c0 .32.26.57.57.57h1.14c.32 0 .57-.26.57-.57V7.14a.57.57 0 0 0-.57-.57H9.74a.6.6 0 0 0-.57.57"
+            d="M8.5 7.14v5.71c0 .32.26.57.57.57h1.14c.32 0 .57-.26.57-.57V7.14a.57.57 0 0 0-.57-.57H9.07a.6.6 0 0 0-.57.57"
             fill="currentColor"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M14.88 7.14v5.71c0 .32.26.57.57.57h1.14c.32 0 .57-.26.57-.57V7.14a.57.57 0 0 0-.57-.57h-1.14a.6.6 0 0 0-.57.57"
+            d="M14.21 7.14v5.71c0 .32.26.57.57.57h1.14c.32 0 .57-.26.57-.57V7.14a.57.57 0 0 0-.57-.57h-1.14a.6.6 0 0 0-.57.57"
             fill="currentColor"
           />
         </svg>
@@ -118,7 +156,7 @@ const IconTwitch = forwardRef<SVGSVGElement, IconProps>(function IconTwitch(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M21.17 2H5.71a1 1 0 0 0-.83.45l-1.54 2.3a1 1 0 0 0-.17.55V18a1 1 0 0 0 1 1h2a1 1 0 0 1 1 1v1a1 1 0 0 0 1 1h1.46a1 1 0 0 0 .83-.45l1.41-2.11a1 1 0 0 1 .83-.45h4.05q.41-.01.71-.29l4.41-4.41a1 1 0 0 0 .29-.71V3a1 1 0 0 0-.99-1m-9.71 10.86c0 .32-.26.57-.57.57H9.75a.57.57 0 0 1-.57-.57V7.15c0-.32.26-.57.57-.57h1.14c.32 0 .57.26.57.57zm5.71 0c0 .32-.26.57-.57.57h-1.14a.57.57 0 0 1-.57-.57V7.15c0-.32.26-.57.57-.57h1.14c.32 0 .57.26.57.57z"
+            d="M20.5 2H5.04a1 1 0 0 0-.83.45l-1.54 2.3a1 1 0 0 0-.17.55V18a1 1 0 0 0 1 1h2a1 1 0 0 1 1 1v1a1 1 0 0 0 1 1h1.46a1 1 0 0 0 .83-.45l1.41-2.11a1 1 0 0 1 .83-.45h4.05q.41-.01.71-.29l4.41-4.41a1 1 0 0 0 .29-.71V3a1 1 0 0 0-.99-1m-9.71 10.86c0 .32-.26.57-.57.57H9.08a.57.57 0 0 1-.57-.57V7.15c0-.32.26-.57.57-.57h1.14c.32 0 .57.26.57.57zm5.71 0c0 .32-.26.57-.57.57h-1.14a.57.57 0 0 1-.57-.57V7.15c0-.32.26-.57.57-.57h1.14c.32 0 .57.26.57.57z"
             fill="currentColor"
           />
         </svg>

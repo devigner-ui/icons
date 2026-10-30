@@ -23,7 +23,45 @@ const IconEthereumClassic = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m6.9 9.1 4.77-2.12a.8.8 0 0 1 .65 0l4.77 2.12c.42.19.81-.32.52-.68l-5-6.11a.77.77 0 0 0-1.24 0l-5 6.11c-.28.36.11.87.53.68Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m6.9 14.9 4.78 2.12q.33.14.65 0l4.78-2.12c.42-.19.81.32.52.68l-5 6.11a.77.77 0 0 1-1.24 0l-5-6.11c-.3-.36.08-.87.51-.68Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m16.01 12.62 1.23-.62L12 9.38 6.76 12 12 14.62l.8-.4"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +75,7 @@ const IconEthereumClassic = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m7.57 9.1 4.77-2.12a.8.8 0 0 1 .65 0l4.77 2.12c.42.19.81-.32.52-.68l-5-6.11a.77.77 0 0 0-1.24 0l-5 6.11c-.28.36.11.87.53.68"
+              d="m6.9 9.1 4.77-2.12a.8.8 0 0 1 .65 0l4.77 2.12c.42.19.81-.32.52-.68l-5-6.11a.77.77 0 0 0-1.24 0l-5 6.11c-.28.36.11.87.53.68"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -45,7 +83,7 @@ const IconEthereumClassic = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="m7.57 14.9 4.78 2.12q.33.14.65 0l4.78-2.12c.42-.19.81.32.52.68l-5 6.11a.77.77 0 0 1-1.24 0l-5-6.11c-.3-.36.08-.87.51-.68"
+              d="m6.9 14.9 4.78 2.12q.33.14.65 0l4.78-2.12c.42-.19.81.32.52.68l-5 6.11a.77.77 0 0 1-1.24 0l-5-6.11c-.3-.36.08-.87.51-.68"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -54,7 +92,7 @@ const IconEthereumClassic = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.67 9.38 7.43 12l5.24 2.62L17.91 12z"
+              d="M12 9.38 6.76 12 12 14.62 17.24 12z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -75,19 +113,19 @@ const IconEthereumClassic = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <path d="M24.67 0h-24v24h24z" fill="none" />
+            <path d="M24 0H0v24h24z" fill="none" />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m7.57 9.1 4.77-2.12a.8.8 0 0 1 .65 0l4.78 2.12c.42.19.81-.32.52-.68l-5-6.11a.77.77 0 0 0-1.24 0l-5 6.11c-.29.36.1.87.52.68"
+              d="m6.9 9.1 4.77-2.12a.8.8 0 0 1 .65 0L17.1 9.1c.42.19.81-.32.52-.68l-5-6.11a.77.77 0 0 0-1.24 0l-5 6.11c-.29.36.1.87.52.68"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m7.57 14.9 4.78 2.12q.33.14.65 0l4.78-2.12c.42-.19.81.32.52.68l-5 6.11a.77.77 0 0 1-1.24 0l-5-6.11c-.3-.36.08-.87.51-.68"
+              d="m6.9 14.9 4.78 2.12q.33.14.65 0l4.78-2.12c.42-.19.81.32.52.68l-5 6.11a.77.77 0 0 1-1.24 0l-5-6.11c-.3-.36.08-.87.51-.68"
               fill="currentColor"
             />
             <path
-              d="m12.45 9.49-4.13 2.06a.5.5 0 0 0 0 .89l4.13 2.06a.5.5 0 0 0 .45 0l4.13-2.06a.5.5 0 0 0 0-.89L12.9 9.49a.5.5 0 0 0-.45 0"
+              d="m11.78 9.49-4.13 2.06a.5.5 0 0 0 0 .89l4.13 2.06a.5.5 0 0 0 .45 0l4.13-2.06a.5.5 0 0 0 0-.89l-4.13-2.06a.5.5 0 0 0-.45 0"
               fill="currentColor"
             />
           </svg>
@@ -105,15 +143,15 @@ const IconEthereumClassic = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m7.57 9.1 4.77-2.12a.8.8 0 0 1 .65 0l4.77 2.12c.42.19.81-.32.52-.68l-5-6.11a.77.77 0 0 0-1.24 0l-5 6.11c-.28.36.11.87.53.68"
+              d="m6.9 9.1 4.77-2.12a.8.8 0 0 1 .65 0l4.77 2.12c.42.19.81-.32.52-.68l-5-6.11a.77.77 0 0 0-1.24 0l-5 6.11c-.28.36.11.87.53.68"
               fill="currentColor"
             />
             <path
-              d="m7.57 14.9 4.78 2.12q.33.14.65 0l4.78-2.12c.42-.19.81.32.52.68l-5 6.11a.77.77 0 0 1-1.24 0l-5-6.11c-.3-.36.08-.87.51-.68"
+              d="m6.9 14.9 4.78 2.12q.33.14.65 0l4.78-2.12c.42-.19.81.32.52.68l-5 6.11a.77.77 0 0 1-1.24 0l-5-6.11c-.3-.36.08-.87.51-.68"
               fill="currentColor"
             />
             <path
-              d="m12.45 9.49-4.13 2.06a.5.5 0 0 0 0 .89l4.13 2.06a.5.5 0 0 0 .45 0l4.13-2.06a.5.5 0 0 0 0-.89L12.9 9.49a.5.5 0 0 0-.45 0"
+              d="m11.78 9.49-4.13 2.06a.5.5 0 0 0 0 .89l4.13 2.06a.5.5 0 0 0 .45 0l4.13-2.06a.5.5 0 0 0 0-.89l-4.13-2.06a.5.5 0 0 0-.45 0"
               fill="currentColor"
             />
           </svg>

@@ -1,1 +1,1 @@
-export { default, default as IconConvertshape } from '../../icons/Convertshape';
+export { default, default as IconConvertShape } from '../../icons/ConvertShape';

@@ -22,7 +22,7 @@ const IconTrade = forwardRef<SVGSVGElement, IconProps>(function IconTrade(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,14 +36,56 @@ const IconTrade = forwardRef<SVGSVGElement, IconProps>(function IconTrade(
           {...rest}
         >
           <path
-            d="M22.67 8.5a6.5 6.5 0 0 1-7.02 6.48 6.5 6.5 0 0 0-5.96-5.96l-.02-.52a6.5 6.5 0 1 1 13 0"
+            d="M22 8.5a6.5 6.5 0 0 1-7.02 6.48 6.5 6.5 0 0 0-5.96-5.96L9 8.5a6.5 6.5 0 1 1 13 0Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4.68 20.76A6.5 6.5 0 1 1 8.5 22"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M5.59 2H3a1 1 0 0 0-1 1v2.59a1 1 0 0 0 1.71.71L6.3 3.71A1 1 0 0 0 5.59 2Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M18.41 22H21a1 1 0 0 0 1-1v-2.59a1 1 0 0 0-1.71-.71l-2.59 2.59a1 1 0 0 0 .71 1.71Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 8.5a6.5 6.5 0 0 1-7.02 6.48 6.5 6.5 0 0 0-5.96-5.96L9 8.5a6.5 6.5 0 1 1 13 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M15.67 15.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
+            d="M15 15.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -51,7 +93,7 @@ const IconTrade = forwardRef<SVGSVGElement, IconProps>(function IconTrade(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M6.26 2H3.67a1 1 0 0 0-1 1v2.59a1 1 0 0 0 1.71.71l2.59-2.59A1 1 0 0 0 6.26 2"
+            d="M5.59 2H3a1 1 0 0 0-1 1v2.59a1 1 0 0 0 1.71.71L6.3 3.71A1 1 0 0 0 5.59 2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -59,7 +101,7 @@ const IconTrade = forwardRef<SVGSVGElement, IconProps>(function IconTrade(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M19.08 22h2.59a1 1 0 0 0 1-1v-2.59a1 1 0 0 0-1.71-.71l-2.59 2.59a1 1 0 0 0 .71 1.71"
+            d="M18.41 22H21a1 1 0 0 0 1-1v-2.59a1 1 0 0 0-1.71-.71l-2.59 2.59a1 1 0 0 0 .71 1.71"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -80,20 +122,20 @@ const IconTrade = forwardRef<SVGSVGElement, IconProps>(function IconTrade(
           {...rest}
         >
           <path
-            d="M15.67 15.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
+            d="M15 15.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M22.67 8.5a6.5 6.5 0 0 1-7.02 6.48 6.5 6.5 0 0 0-5.96-5.96l-.02-.52a6.5 6.5 0 1 1 13 0"
+            d="M22 8.5a6.5 6.5 0 0 1-7.02 6.48 6.5 6.5 0 0 0-5.96-5.96L9 8.5a6.5 6.5 0 1 1 13 0"
             fill="currentColor"
           />
           <path
-            d="M6.26 2H3.67a1 1 0 0 0-1 1v2.59a1 1 0 0 0 1.71.71l2.59-2.59A1 1 0 0 0 6.26 2"
+            d="M5.59 2H3a1 1 0 0 0-1 1v2.59a1 1 0 0 0 1.71.71L6.3 3.71A1 1 0 0 0 5.59 2"
             fill="currentColor"
           />
           <path
-            d="M19.08 22h2.59a1 1 0 0 0 1-1v-2.59a1 1 0 0 0-1.71-.71l-2.59 2.59a1 1 0 0 0 .71 1.71"
+            d="M18.41 22H21a1 1 0 0 0 1-1v-2.59a1 1 0 0 0-1.71-.71l-2.59 2.59a1 1 0 0 0 .71 1.71"
             fill="currentColor"
           />
         </svg>
@@ -111,19 +153,19 @@ const IconTrade = forwardRef<SVGSVGElement, IconProps>(function IconTrade(
           {...rest}
         >
           <path
-            d="M15.67 15.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
+            d="M15 15.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"
             fill="currentColor"
           />
           <path
-            d="M22.67 8.5a6.5 6.5 0 0 1-5.52 6.42v-.06a8.06 8.06 0 0 0-7.37-7.34h-.03a6.5 6.5 0 0 1 12.92.98"
+            d="M22 8.5a6.5 6.5 0 0 1-5.52 6.42v-.06a8.06 8.06 0 0 0-7.37-7.34h-.03A6.5 6.5 0 0 1 22 8.5"
             fill="currentColor"
           />
           <path
-            d="M6.26 2H3.67a1 1 0 0 0-1 1v2.59a1 1 0 0 0 1.71.71l2.59-2.59A1 1 0 0 0 6.26 2"
+            d="M5.59 2H3a1 1 0 0 0-1 1v2.59a1 1 0 0 0 1.71.71L6.3 3.71A1 1 0 0 0 5.59 2"
             fill="currentColor"
           />
           <path
-            d="M19.08 22h2.59a1 1 0 0 0 1-1v-2.59a1 1 0 0 0-1.71-.71l-2.59 2.59a1 1 0 0 0 .71 1.71"
+            d="M18.41 22H21a1 1 0 0 0 1-1v-2.59a1 1 0 0 0-1.71-.71l-2.59 2.59a1 1 0 0 0 .71 1.71"
             fill="currentColor"
           />
         </svg>

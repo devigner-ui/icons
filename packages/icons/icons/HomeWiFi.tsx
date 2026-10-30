@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconHomeWiFi = forwardRef<SVGSVGElement, IconProps>(function IconHomeWiFi(
+const IconHomeWifi = forwardRef<SVGSVGElement, IconProps>(function IconHomeWifi(
   { className, variant = "Outline", strokeWidth = "1.5", ...rest },
   ref,
 ) {
@@ -130,4 +130,4 @@ const IconHomeWiFi = forwardRef<SVGSVGElement, IconProps>(function IconHomeWiFi(
   );
 });
 
-export default IconHomeWiFi;
+export default IconHomeWifi;

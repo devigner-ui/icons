@@ -37,7 +37,7 @@ const IconUndoLeftRound = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <path
-            d="M4 7h11a5 5 0 0 1 0 10m-8-7L4 7l3-3m1 13h3"
+            d="M4 8.5h11a5 5 0 0 1 0 10m-8-7-3-3 3-3m1 13h3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -58,7 +58,7 @@ const IconUndoLeftRound = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M7 4 4 7l3 3"
+              d="m7 5.5-3 3 3 3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -66,7 +66,7 @@ const IconUndoLeftRound = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M4 7h11a5 5 0 0 1 0 10H8"
+              d="M4 8.5h11a5 5 0 0 1 0 10H8"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -88,12 +88,12 @@ const IconUndoLeftRound = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M7.53 3.47a.75.75 0 0 0-1.06 0l-3 3c-.3.3-.3.77 0 1.06l3 3a.75.75 0 1 0 1.06-1.06L5.06 7l2.47-2.47c.3-.3.3-.77 0-1.06"
+              d="M7.53 4.97a.75.75 0 0 0-1.06 0l-3 3c-.3.3-.3.77 0 1.06l3 3a.75.75 0 1 0 1.06-1.06L5.06 8.5l2.47-2.47c.3-.3.3-.77 0-1.06"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M5.81 6.25H15a5.75 5.75 0 0 1 0 11.5H8a.75.75 0 0 1 0-1.5h7a4.25 4.25 0 0 0 0-8.5H5.81L5.06 7z"
+              d="M5.81 7.75H15a5.75 5.75 0 0 1 0 11.5H8a.75.75 0 0 1 0-1.5h7a4.25 4.25 0 0 0 0-8.5H5.81l-.75-.75z"
               fill="currentColor"
             />
           </svg>
@@ -113,7 +113,7 @@ const IconUndoLeftRound = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M7.53 3.47c.3.3.3.77 0 1.06L5.81 6.25H15a5.75 5.75 0 0 1 0 11.5H8a.75.75 0 0 1 0-1.5h7a4.25 4.25 0 0 0 0-8.5H5.81l1.72 1.72a.75.75 0 1 1-1.06 1.06l-3-3a.75.75 0 0 1 0-1.06l3-3c.3-.3.77-.3 1.06 0"
+              d="M7.53 4.97c.3.3.3.77 0 1.06L5.81 7.75H15a5.75 5.75 0 0 1 0 11.5H8a.75.75 0 0 1 0-1.5h7a4.25 4.25 0 0 0 0-8.5H5.81l1.72 1.72a.75.75 0 1 1-1.06 1.06l-3-3a.75.75 0 0 1 0-1.06l3-3c.3-.3.77-.3 1.06 0"
               fill="currentColor"
             />
           </svg>

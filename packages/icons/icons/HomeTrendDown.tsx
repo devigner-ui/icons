@@ -23,7 +23,49 @@ const IconHomeTrendDown = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 10.5c0-1.21-.81-2.76-1.8-3.45l-6.18-4.33a4.5 4.5 0 0 0-5 .12l-5.39 4.2C2.73 7.74 2 9.23 2 10.36v7.41a4.23 4.23 0 0 0 4.21 4.22h11.58c2.32 0 4.21-1.9 4.21-4.21v-3.1"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m11.17 14-.47.7-3.2-3.2"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m16.5 16.5-1.51-1.51L14 14"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14.5 16.5h2v-2"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +79,7 @@ const IconHomeTrendDown = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M9.69 2.84 4.3 7.04c-.9.7-1.63 2.19-1.63 3.32v7.41a4.23 4.23 0 0 0 4.21 4.22h11.58c2.32 0 4.21-1.9 4.21-4.21V10.5c0-1.21-.81-2.76-1.8-3.45l-6.18-4.33a4.5 4.5 0 0 0-5 .12"
+              d="m9.02 2.84-5.39 4.2C2.73 7.74 2 9.23 2 10.36v7.41a4.23 4.23 0 0 0 4.21 4.22h11.58c2.32 0 4.21-1.9 4.21-4.21V10.5c0-1.21-.81-2.76-1.8-3.45l-6.18-4.33a4.5 4.5 0 0 0-5 .12"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -45,14 +87,14 @@ const IconHomeTrendDown = forwardRef<SVGSVGElement, IconProps>(
             />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="m17.17 16.5-4.2-4.2-1.6 2.4-3.2-3.2"
+                d="m16.5 16.5-4.2-4.2-1.6 2.4-3.2-3.2"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M15.17 16.5h2v-2"
+                d="M14.5 16.5h2v-2"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
@@ -75,11 +117,11 @@ const IconHomeTrendDown = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m20.71 6.82-5.76-4.03a4.85 4.85 0 0 0-5.49.13L4.45 6.83a5.2 5.2 0 0 0-1.79 3.64v6.9A4.63 4.63 0 0 0 7.28 22h10.78a4.6 4.6 0 0 0 4.62-4.62V10.6a5.1 5.1 0 0 0-1.97-3.78"
+              d="m20.04 6.82-5.76-4.03a4.85 4.85 0 0 0-5.49.13L3.78 6.83a5.2 5.2 0 0 0-1.79 3.64v6.9A4.63 4.63 0 0 0 6.61 22h10.78a4.6 4.6 0 0 0 4.62-4.62V10.6a5.1 5.1 0 0 0-1.97-3.78"
               fill="currentColor"
             />
             <path
-              d="M17.55 14.33a.7.7 0 0 0-.7-.7.7.7 0 0 0-.7.7v.18l-2.72-2.72a.7.7 0 0 0-.56-.2.7.7 0 0 0-.51.31l-1.02 1.52-2.38-2.38a.7.7 0 0 0-.99 0 .7.7 0 0 0 0 .99l2.98 2.98q.24.23.56.2t.51-.31l1.02-1.52 2.11 2.11h-.18a.7.7 0 0 0-.7.7c0 .39.31.7.7.7h1.86q.13 0 .27-.05a.7.7 0 0 0 .38-.38l.05-.27v-1.86z"
+              d="M16.88 14.33a.7.7 0 0 0-.7-.7.7.7 0 0 0-.7.7v.18l-2.72-2.72a.7.7 0 0 0-.56-.2.7.7 0 0 0-.51.31l-1.02 1.52-2.38-2.38a.7.7 0 0 0-.99 0 .7.7 0 0 0 0 .99l2.98 2.98q.24.23.56.2t.51-.31l1.02-1.52 2.11 2.11h-.18a.7.7 0 0 0-.7.7c0 .39.31.7.7.7h1.86q.13 0 .27-.05a.7.7 0 0 0 .38-.38l.05-.27v-1.86z"
               fill="currentColor"
             />
           </svg>
@@ -97,7 +139,7 @@ const IconHomeTrendDown = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m20.71 6.82-5.76-4.03a4.85 4.85 0 0 0-5.49.13L4.45 6.83a5.2 5.2 0 0 0-1.79 3.64v6.9A4.63 4.63 0 0 0 7.28 22h10.78a4.6 4.6 0 0 0 4.62-4.62V10.6a5.1 5.1 0 0 0-1.97-3.78m-3.16 9.37q0 .14-.05.27a.7.7 0 0 1-.38.38l-.27.05h-1.86a.7.7 0 0 1-.7-.7c0-.39.31-.7.7-.7h.18l-2.11-2.11-1.02 1.52a.7.7 0 0 1-.51.31.7.7 0 0 1-.56-.2l-2.98-2.98a.7.7 0 0 1 0-.99.7.7 0 0 1 .99 0l2.38 2.38 1.02-1.52q.19-.27.51-.31.33-.03.56.2l2.72 2.72v-.18c0-.39.31-.7.7-.7s.7.31.7.7v1.86z"
+              d="m20.04 6.82-5.76-4.03a4.85 4.85 0 0 0-5.49.13L3.78 6.83a5.2 5.2 0 0 0-1.79 3.64v6.9A4.63 4.63 0 0 0 6.61 22h10.78a4.6 4.6 0 0 0 4.62-4.62V10.6a5.1 5.1 0 0 0-1.97-3.78m-3.16 9.37q0 .14-.05.27a.7.7 0 0 1-.38.38l-.27.05h-1.86a.7.7 0 0 1-.7-.7c0-.39.31-.7.7-.7h.18l-2.11-2.11-1.02 1.52a.7.7 0 0 1-.51.31.7.7 0 0 1-.56-.2l-2.98-2.98a.7.7 0 0 1 0-.99.7.7 0 0 1 .99 0l2.38 2.38 1.02-1.52q.19-.27.51-.31.33-.03.56.2l2.72 2.72v-.18c0-.39.31-.7.7-.7s.7.31.7.7v1.86z"
               fill="currentColor"
             />
           </svg>

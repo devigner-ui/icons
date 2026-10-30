@@ -24,32 +24,34 @@ const IconRewindForward = forwardRef<SVGSVGElement, IconProps>(
     return (
       <>
         {variant === "Broken" ? (
-        <svg
-          ref={ref}
-          className={className}
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          {...a11y}
-          {...rest}
-        >
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
           <path
-            d="M11 15.23 4.9 19.7c-1.3.9-2.9-.27-2.9-2.12V15m9-6.23L4.9 4.3C3.6 3.4 2 4.58 2 6.43V11"
+            d="M17.94 7.96q.7.45 1.37.94C21.11 10.22 22 10.88 22 12s-.9 1.78-2.69 3.1q-1.32.96-2.74 1.75c-1.79.98-2.68 1.47-3.48.93-.8-.55-.88-1.68-1.02-3.95a28 28 0 0 1 0-3.66c.14-2.27.22-3.4 1.02-3.95.5-.33 1.03-.27 1.79.05"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
-            d="m17.37 7.7-3.7-2.43c-1.2-.79-2.67.24-2.67 1.85v9.76c0 1.61 1.47 2.64 2.66 1.85l7.42-4.88c1.23-.8 1.23-2.9 0-3.7l-.93-.61"
+            d="M11.9 8.39a35 35 0 0 0-3.7-2.05C5.76 5.2 4.55 4.63 3.46 5.26 2.4 5.9 2.3 7.22 2.1 9.86Q2.01 11 2 12t.1 2.14c.19 2.64.29 3.97 1.37 4.6 1.09.63 2.3.06 4.72-1.08a35 35 0 0 0 3.72-2.05"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
-        </svg>
-      ) : !fill ? (
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -96,7 +96,6 @@ const IconArrowToTopRight = forwardRef<SVGSVGElement, IconProps>(
                 d="M11.25 14.5c0 .95.28 2.37 1.14 3.56A5.4 5.4 0 0 0 17 20.25a.75.75 0 0 0 0-1.5c-1.76 0-2.78-.71-3.4-1.56a5 5 0 0 1-.85-2.69V6.31L12 5.56l-.75.75z"
                 fill="currentColor"
               />
-              <path d="M11.8 3.78" fill="currentColor" />
             </g>
           </svg>
         ) : (

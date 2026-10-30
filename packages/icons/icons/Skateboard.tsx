@@ -105,13 +105,13 @@ const IconSkateboard = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <path d="M9 15a2 2 0 1 1-4 0 2 2 0 0 1 4 0" fill="currentColor" />
-            <path d="M19 15a2 2 0 1 1-4 0 2 2 0 0 1 4 0" fill="currentColor" />
+            <path d="M9 15.4a2 2 0 1 1-4 0 2 2 0 0 1 4 0" fill="currentColor" />
+            <path d="M19 15.4a2 2 0 1 1-4 0 2 2 0 0 1 4 0" fill="currentColor" />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
                 fillRule="evenodd"
                 clipRule="evenodd"
-                d="M1.58 6.38a.75.75 0 0 1 1.04.2l.82 1.22c.6.9 1.61 1.45 2.7 1.45h11.72c1.09 0 2.1-.54 2.7-1.45l.82-1.22a.75.75 0 0 1 1.24.84l-.8 1.22a4.8 4.8 0 0 1-3.96 2.11H6.14c-1.59 0-3.07-.8-3.95-2.11l-.81-1.22a.75.75 0 0 1 .2-1.04"
+                d="M1.58 6.78a.75.75 0 0 1 1.04.2l.82 1.22c.6.9 1.61 1.45 2.7 1.45h11.72c1.09 0 2.1-.54 2.7-1.45l.82-1.22a.75.75 0 0 1 1.24.84l-.8 1.22a4.8 4.8 0 0 1-3.96 2.11H6.14c-1.59 0-3.07-.8-3.95-2.11l-.81-1.22a.75.75 0 0 1 .2-1.04"
                 fill="currentColor"
               />
             </g>
@@ -132,11 +132,11 @@ const IconSkateboard = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M1.58 6.38a.75.75 0 0 1 1.04.2l.82 1.22c.6.9 1.61 1.45 2.7 1.45h11.72c1.09 0 2.1-.54 2.7-1.45l.82-1.22a.75.75 0 0 1 1.24.84l-.8 1.22a4.8 4.8 0 0 1-3.96 2.11H6.14c-1.59 0-3.07-.8-3.95-2.11l-.81-1.22a.75.75 0 0 1 .2-1.04"
+              d="M1.58 6.78a.75.75 0 0 1 1.04.2l.82 1.22c.6.9 1.61 1.45 2.7 1.45h11.72c1.09 0 2.1-.54 2.7-1.45l.82-1.22a.75.75 0 0 1 1.24.84l-.8 1.22a4.8 4.8 0 0 1-3.96 2.11H6.14c-1.59 0-3.07-.8-3.95-2.11l-.81-1.22a.75.75 0 0 1 .2-1.04"
               fill="currentColor"
             />
-            <path d="M9 15a2 2 0 1 1-4 0 2 2 0 0 1 4 0" fill="currentColor" />
-            <path d="M19 15a2 2 0 1 1-4 0 2 2 0 0 1 4 0" fill="currentColor" />
+            <path d="M9 15.4a2 2 0 1 1-4 0 2 2 0 0 1 4 0" fill="currentColor" />
+            <path d="M19 15.4a2 2 0 1 1-4 0 2 2 0 0 1 4 0" fill="currentColor" />
           </svg>
         )}
       </>

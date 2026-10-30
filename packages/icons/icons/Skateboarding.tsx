@@ -37,7 +37,7 @@ const IconSkateboarding = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <path
-            d="m3 17 1.2 1.34a2 2 0 0 0 1.5.66H10m11-2-1.2 1.34a2 2 0 0 1-1.5.66H14"
+            d="m3 17.4 1.2 1.34a2 2 0 0 0 1.5.66H10m11-2-1.2 1.34a2 2 0 0 1-1.5.66H14"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -45,37 +45,37 @@ const IconSkateboarding = forwardRef<SVGSVGElement, IconProps>(
           />
           <circle
             cx="7"
-            cy="21"
+            cy="21.4"
             r="1"
             fill="currentColor"
           />
           <circle
             cx="17"
-            cy="21"
+            cy="21.4"
             r="1"
             fill="currentColor"
           />
           <circle
             cx="19"
-            cy="4"
+            cy="4.4"
             r="2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="M15 16.5v-1.42a3 3 0 0 0-1.5-2.51l-.17-.12a2 2 0 0 1-.19-3.16l.15-.12.45-.36a1.74 1.74 0 0 0-2.01-2.83L8.5 8"
+            d="M15 16.9v-1.42a3 3 0 0 0-1.5-2.51l-.17-.12a2 2 0 0 1-.19-3.16l.15-.12.45-.36a1.74 1.74 0 0 0-2.01-2.83L8.5 8.4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M7 15.5h.38c1.36 0 2.66-.54 3.62-1.5"
+            d="M7 15.9h.38c1.36 0 2.66-.54 3.62-1.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M16.5 10a8 8 0 0 0 4 0"
+            d="M16.5 10.4a8 8 0 0 0 4 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -95,7 +95,7 @@ const IconSkateboarding = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m3 17 1.2 1.34a2 2 0 0 0 1.5.66h12.6a2 2 0 0 0 1.5-.66L21 17"
+              d="m3 17.4 1.2 1.34a2 2 0 0 0 1.5.66h12.6a2 2 0 0 0 1.5-.66L21 17.4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -104,40 +104,40 @@ const IconSkateboarding = forwardRef<SVGSVGElement, IconProps>(
             <circle
               opacity={duotone ? "0.4" : "1"}
               cx="7"
-              cy="21.0005"
+              cy="21.4"
               r="1"
               fill="currentColor"
             />
             <circle
               opacity={duotone ? "0.4" : "1"}
               cx="17"
-              cy="21.0005"
+              cy="21.4"
               r="1"
               fill="currentColor"
             />
             <circle
               cx="19"
-              cy="4.00049"
+              cy="4.4"
               r="2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
-              d="M15 16.5v-1.42a3 3 0 0 0-1.5-2.51l-.17-.12a2 2 0 0 1-.19-3.16l.15-.12.45-.36a1.74 1.74 0 0 0-2.01-2.83L8.5 8"
+              d="M15 16.9v-1.42a3 3 0 0 0-1.5-2.51l-.17-.12a2 2 0 0 1-.19-3.16l.15-.12.45-.36a1.74 1.74 0 0 0-2.01-2.83L8.5 8.4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M7 15.5h.38c1.36 0 2.66-.54 3.62-1.5"
+              d="M7 15.9h.38c1.36 0 2.66-.54 3.62-1.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.5 10a8 8 0 0 0 4 0"
+              d="M16.5 10.4a8 8 0 0 0 4 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

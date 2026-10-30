@@ -22,7 +22,7 @@ const IconDiamond = forwardRef<SVGSVGElement, IconProps>(function IconDiamond(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,28 @@ const IconDiamond = forwardRef<SVGSVGElement, IconProps>(function IconDiamond(
           {...rest}
         >
           <path
-            d="m21.62 14.55-6.39 6.39a3.63 3.63 0 0 1-5.11 0l-6.39-6.39a3.63 3.63 0 0 1 0-5.11l6.39-6.39c1.4-1.4 3.7-1.4 5.11 0l6.39 6.39a3.63 3.63 0 0 1 0 5.11"
+            d="m6.74 18.24-3.68-3.68a3.63 3.63 0 0 1 0-5.11l6.39-6.39c1.4-1.4 3.7-1.4 5.11 0l6.39 6.39c1.4 1.4 1.4 3.7 0 5.11l-6.39 6.39a3.63 3.63 0 0 1-5.11 0"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m20.95 14.55-6.39 6.39a3.63 3.63 0 0 1-5.11 0l-6.39-6.39a3.63 3.63 0 0 1 0-5.11l6.39-6.39c1.4-1.4 3.7-1.4 5.11 0l6.39 6.39a3.63 3.63 0 0 1 0 5.11"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -57,7 +78,7 @@ const IconDiamond = forwardRef<SVGSVGElement, IconProps>(function IconDiamond(
           {...rest}
         >
           <path
-            d="m21.62 14.55-6.39 6.39a3.63 3.63 0 0 1-5.11 0l-6.39-6.39a3.63 3.63 0 0 1 0-5.11l6.39-6.39c1.4-1.4 3.7-1.4 5.11 0l6.39 6.39a3.63 3.63 0 0 1 0 5.11"
+            d="m20.95 14.55-6.39 6.39a3.63 3.63 0 0 1-5.11 0l-6.39-6.39a3.63 3.63 0 0 1 0-5.11l6.39-6.39c1.4-1.4 3.7-1.4 5.11 0l6.39 6.39a3.63 3.63 0 0 1 0 5.11"
             fill="currentColor"
           />
         </svg>
@@ -75,7 +96,7 @@ const IconDiamond = forwardRef<SVGSVGElement, IconProps>(function IconDiamond(
           {...rest}
         >
           <path
-            d="m21.62 14.55-6.39 6.39a3.63 3.63 0 0 1-5.11 0l-6.39-6.39a3.63 3.63 0 0 1 0-5.11l6.39-6.39c1.4-1.4 3.7-1.4 5.11 0l6.39 6.39a3.63 3.63 0 0 1 0 5.11"
+            d="m20.95 14.55-6.39 6.39a3.63 3.63 0 0 1-5.11 0l-6.39-6.39a3.63 3.63 0 0 1 0-5.11l6.39-6.39c1.4-1.4 3.7-1.4 5.11 0l6.39 6.39a3.63 3.63 0 0 1 0 5.11"
             fill="currentColor"
           />
         </svg>

@@ -1,0 +1,61 @@
+{
+  "name": "@devigner-ui/icons-nuxt",
+  "version": "3.5.0",
+  "description": "Nuxt module for Devigner Icons: all 2,112 icons auto-imported as Vue components, in outline, twotone, bold, bulk and broken. Built on Solar Icon Set and Iconsax.",
+  "keywords": [
+    "icons",
+    "nuxt",
+    "nuxt-module",
+    "vue",
+    "svg",
+    "svg-icons",
+    "icon-set",
+    "icon-library"
+  ],
+  "license": "MIT AND CC-BY-4.0",
+  "author": "Devigner",
+  "homepage": "https://icons.devigner.cc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigner-ui/icons.git",
+    "directory": "packages/icons-nuxt"
+  },
+  "bugs": {
+    "url": "https://github.com/devigner-ui/icons/issues"
+  },
+  "type": "module",
+  "types": "./dist/module.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/module.d.mts",
+      "import": "./dist/module.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "ATTRIBUTION.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "test": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@nuxt/schema": "^4"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "main": "./dist/module.mjs",
+  "dependencies": {
+    "@devigner-ui/icons-vue": "workspace:^",
+    "@nuxt/kit": "^3.13.0 || ^4.0.0"
+  }
+}

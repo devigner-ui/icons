@@ -1,1 +1,1 @@
-export { default, default as IconZIPFile } from '../../icons/ZIPFile';
+export { default, default as IconZipFile } from '../../icons/ZipFile';

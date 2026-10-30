@@ -23,7 +23,69 @@ const IconClipboardExport = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3 10c0-4.56 1.67-5.8 5-5.98"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14 22H9c-5 0-6-2-6-6v-2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M16 4.02c3.33.18 5 1.41 5 5.98v5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M11 2h-.96c-1 0-2 0-2 2s1 2 2 2h4c2 0 2-1 2-2 0-2-1-2-2-2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15 19v-3h3"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m21 22-5.96-5.96"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +99,7 @@ const IconClipboardExport = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M10.67 6h4c2 0 2-1 2-2 0-2-1-2-2-2h-4c-1 0-2 0-2 2s1 2 2 2"
+              d="M10 6h4c2 0 2-1 2-2 0-2-1-2-2-2h-4C9 2 8 2 8 4s1 2 2 2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -45,7 +107,7 @@ const IconClipboardExport = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M14.67 22h-5c-5 0-6-2-6-6v-6c0-4.56 1.67-5.8 5-5.98"
+              d="M14 22H9c-5 0-6-2-6-6v-6c0-4.56 1.67-5.8 5-5.98"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -53,7 +115,7 @@ const IconClipboardExport = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M16.67 4.02c3.33.18 5 1.41 5 5.98v5"
+              d="M16 4.02c3.33.18 5 1.41 5 5.98v5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -62,7 +124,7 @@ const IconClipboardExport = forwardRef<SVGSVGElement, IconProps>(
             />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M15.67 19v-3h3"
+                d="M15 19v-3h3"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -70,7 +132,7 @@ const IconClipboardExport = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="m21.67 22-5.96-5.96"
+                d="m21 22-5.96-5.96"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -94,15 +156,15 @@ const IconClipboardExport = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.91 3.65H8.43a4.47 4.47 0 0 0-4.47 4.47v9.41A4.5 4.5 0 0 0 8.43 22h8.47a4.47 4.47 0 0 0 4.47-4.47V8.12c.01-2.47-2-4.47-4.46-4.47"
+              d="M16.24 3.65H7.76a4.47 4.47 0 0 0-4.47 4.47v9.41A4.5 4.5 0 0 0 7.76 22h8.47a4.47 4.47 0 0 0 4.47-4.47V8.12c.01-2.47-2-4.47-4.46-4.47"
               fill="currentColor"
             />
             <path
-              d="M15.02 2h-4.7c-1.04 0-1.89.84-1.89 1.88v.94c0 1.04.84 1.88 1.88 1.88h4.71c1.04 0 1.88-.84 1.88-1.88v-.94A1.87 1.87 0 0 0 15.02 2"
+              d="M14.35 2h-4.7c-1.04 0-1.89.84-1.89 1.88v.94c0 1.04.84 1.88 1.88 1.88h4.71c1.04 0 1.88-.84 1.88-1.88v-.94A1.87 1.87 0 0 0 14.35 2"
               fill="currentColor"
             />
             <path
-              d="m16.2 16.47-4.72-4.72h1.19c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75h-3a.76.76 0 0 0-.75.75v3c0 .41.34.75.75.75s.75-.34.75-.75v-1.19l4.72 4.72q.23.22.53.22t.53-.22a.75.75 0 0 0 0-1.06"
+              d="m15.53 16.47-4.72-4.72H12c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75H9a.76.76 0 0 0-.75.75v3c0 .41.34.75.75.75s.75-.34.75-.75v-1.19l4.72 4.72q.23.22.53.22t.53-.22a.75.75 0 0 0 0-1.06"
               fill="currentColor"
             />
           </svg>
@@ -120,11 +182,11 @@ const IconClipboardExport = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M15.02 2h-4.7c-1.04 0-1.89.84-1.89 1.88v.94c0 1.04.84 1.88 1.88 1.88h4.71c1.04 0 1.88-.84 1.88-1.88v-.94A1.87 1.87 0 0 0 15.02 2"
+              d="M14.35 2h-4.7c-1.04 0-1.89.84-1.89 1.88v.94c0 1.04.84 1.88 1.88 1.88h4.71c1.04 0 1.88-.84 1.88-1.88v-.94A1.87 1.87 0 0 0 14.35 2"
               fill="currentColor"
             />
             <path
-              d="M17.91 4.82a2.9 2.9 0 0 1-2.89 2.89h-4.7a2.9 2.9 0 0 1-2.89-2.89c0-.56-.6-.91-1.1-.65a4.5 4.5 0 0 0-2.37 3.95v9.41A4.5 4.5 0 0 0 8.43 22h8.48a4.5 4.5 0 0 0 4.47-4.47V8.12c0-1.71-.96-3.2-2.37-3.95a.75.75 0 0 0-1.1.65M16.2 17.53a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-4.72-4.72V14c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75v-3c0-.41.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75h-1.19l4.72 4.72c.29.29.29.77 0 1.06"
+              d="M17.24 4.82a2.9 2.9 0 0 1-2.89 2.89h-4.7a2.9 2.9 0 0 1-2.89-2.89c0-.56-.6-.91-1.1-.65a4.5 4.5 0 0 0-2.37 3.95v9.41A4.5 4.5 0 0 0 7.76 22h8.48a4.5 4.5 0 0 0 4.47-4.47V8.12c0-1.71-.96-3.2-2.37-3.95a.75.75 0 0 0-1.1.65m-1.71 12.71a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-4.72-4.72V14c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75v-3c0-.41.34-.75.75-.75h3c.41 0 .75.34.75.75s-.34.75-.75.75h-1.19l4.72 4.72c.29.29.29.77 0 1.06"
               fill="currentColor"
             />
           </svg>

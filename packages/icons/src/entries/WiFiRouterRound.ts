@@ -1,1 +1,1 @@
-export { default, default as IconWiFiRouterRound } from '../../icons/WiFiRouterRound';
+export { default, default as IconWifiRouterRound } from '../../icons/WifiRouterRound';

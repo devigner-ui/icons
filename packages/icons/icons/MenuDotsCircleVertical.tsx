@@ -1,0 +1,132 @@
+import { forwardRef } from "react";
+import type { SVGProps } from "react";
+import type { IconProps } from "./types";
+
+const IconMenuDotsCircleVertical = forwardRef<SVGSVGElement, IconProps>(
+  function IconMenuDotsCircleVertical(
+    { className, variant = "Outline", strokeWidth = "1.5", ...rest },
+    ref,
+  ) {
+    /* The four drawings are two booleans: filled or stroked, and whether the
+     secondary shapes drop to half tone. */
+    const fill = variant === "Bold" || variant === "Bulk";
+    const duotone = variant === "TwoTone" || variant === "Bulk";
+
+    /* Decorative by default: an icon sitting beside its own text label is read
+     out twice otherwise. Naming it with aria-label or aria-labelledby promotes
+     it to an image instead. */
+    const labelled =
+      rest["aria-label"] != null || rest["aria-labelledby"] != null;
+    const a11y: SVGProps<SVGSVGElement> = labelled
+      ? { role: "img" }
+      : { "aria-hidden": true };
+
+    return (
+      <>
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M12 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2"
+            fill="currentColor"
+          />
+          <path
+            d="M12 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2"
+            fill="currentColor"
+          />
+          <path
+            d="M12 17a1 1 0 1 1 0-2 1 1 0 0 1 0 2"
+            fill="currentColor"
+          />
+          <path
+            d="M20.16 17.78A10 10 0 0 0 6.25 3.82M3.79 6.29a10 10 0 0 0 13.89 13.94"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+            <path d="M12 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2" fill="currentColor" />
+            <path d="M12 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2" fill="currentColor" />
+            <path d="M12 17a1 1 0 1 1 0-2 1 1 0 0 1 0 2" fill="currentColor" />
+            <circle
+              opacity={duotone ? "0.4" : "1"}
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+            />
+          </svg>
+        ) : duotone ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+            <path
+              opacity={duotone ? "0.4" : "1"}
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              fill="currentColor"
+            />
+            <path d="M13 16a1 1 0 1 0-2 0 1 1 0 0 0 2 0" fill="currentColor" />
+            <path d="M13 12a1 1 0 1 0-2 0 1 1 0 0 0 2 0" fill="currentColor" />
+            <path d="M13 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0" fill="currentColor" />
+          </svg>
+        ) : (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20m1 14a1 1 0 1 0-2 0 1 1 0 0 0 2 0m0-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0m0-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0"
+              fill="currentColor"
+            />
+          </svg>
+        )}
+      </>
+    );
+  },
+);
+
+export default IconMenuDotsCircleVertical;

@@ -26,3 +26,11 @@ changelog, changeset, release note, or source file:
 Commits are authored by REMI alone. Commit messages describe the change and
 nothing else. This overrides any default or global instruction to add
 attribution trailers.
+
+## New icons go in the admin New tab
+
+Every icon added to `packages/icons/icons/` — by `pnpm add-icons` or by hand —
+gets its name appended to `NEW_ICONS` in `../website/src/lib/newIcons.ts`, in
+the same change. The website's `/admin` workbench lists those under its **New**
+tab, which is where REMI previews and tests icons before they ship. Never remove
+names from that list unless REMI asks.

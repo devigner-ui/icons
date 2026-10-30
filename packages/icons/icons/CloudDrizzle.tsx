@@ -23,7 +23,85 @@ const IconCloudDrizzle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="m9.97 19-2 2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m13.97 19-2 2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m13.97 15-2 2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m9.97 15-2 2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 2.98c-3.99-.34-8.34 3.11-6.38 8.58"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M16.61 19a5.3 5.3 0 0 0 3.62-1.39c3.27-2.86 1.52-8.6-2.79-9.14a7 7 0 0 0-1.48-3.45"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7.28 11.97a4 4 0 0 0-1.71-.4c-4.66.33-4.65 7.11 0 7.44"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15.82 8.89q.79-.4 1.66-.41"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +115,7 @@ const IconCloudDrizzle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M17.28 20a5.3 5.3 0 0 0 3.62-1.39c3.27-2.86 1.52-8.6-2.79-9.14C16.57.13 3.1 3.67 6.29 12.56"
+              d="M16.61 19a5.3 5.3 0 0 0 3.62-1.39c3.27-2.86 1.52-8.6-2.79-9.14C15.9-.87 2.43 2.67 5.62 11.56"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -45,7 +123,7 @@ const IconCloudDrizzle = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M7.95 12.97a4 4 0 0 0-1.71-.4c-4.66.33-4.65 7.11 0 7.44"
+              d="M7.28 11.97a4 4 0 0 0-1.71-.4c-4.66.33-4.65 7.11 0 7.44"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -53,16 +131,7 @@ const IconCloudDrizzle = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M16.49 9.89q.79-.4 1.66-.41"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeMiterlimit="10"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              opacity={duotone ? "0.4" : "1"}
-              d="m10.64 20-2 2"
+              d="M15.82 8.89q.79-.4 1.66-.41"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -71,7 +140,7 @@ const IconCloudDrizzle = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m14.64 20-2 2"
+              d="m9.97 19-2 2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -80,7 +149,7 @@ const IconCloudDrizzle = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m14.64 16-2 2"
+              d="m13.97 19-2 2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -89,7 +158,16 @@ const IconCloudDrizzle = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m10.64 16-2 2"
+              d="m13.97 15-2 2"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeMiterlimit="10"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              opacity={duotone ? "0.4" : "1"}
+              d="m9.97 15-2 2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -112,11 +190,11 @@ const IconCloudDrizzle = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22.41 11.74a5.5 5.5 0 0 0-4.04-3.87c-.56-2.5-2.1-4.29-4.28-4.97a6.9 6.9 0 0 0-6.87 1.79 6.3 6.3 0 0 0-1.44 6.11 4.1 4.1 0 0 0-3.11 4.06 4.1 4.1 0 0 0 3.97 4.18h2.53v-2.63c0-1.27.76-2.03 2.03-2.03h2.94c1.27 0 2.03.76 2.03 2.03v2.63h.85c1.42 0 2.78-.53 3.82-1.48a5.5 5.5 0 0 0 1.57-5.82"
+              d="M21.74 11.74a5.5 5.5 0 0 0-4.04-3.87c-.56-2.5-2.1-4.29-4.28-4.97a6.9 6.9 0 0 0-6.87 1.79 6.3 6.3 0 0 0-1.44 6.11A4.1 4.1 0 0 0 2 14.86a4.1 4.1 0 0 0 3.97 4.18H8.5v-2.63c0-1.27.76-2.03 2.03-2.03h2.94c1.27 0 2.03.76 2.03 2.03v2.63h.85c1.42 0 2.78-.53 3.82-1.48a5.5 5.5 0 0 0 1.57-5.82"
               fill="currentColor"
             />
             <path
-              d="M14.14 14.39H11.2c-1.27 0-2.03.76-2.03 2.03v2.94c0 1.27.76 2.03 2.03 2.03h2.94c1.27 0 2.03-.76 2.03-2.03v-2.94c0-1.27-.76-2.03-2.03-2.03m-1.76 4.45-1.24 1.23a.5.5 0 0 1-.32.14.5.5 0 0 1-.33-.14.46.46 0 0 1 0-.65l1.23-1.24a.47.47 0 0 1 .66 0c.18.18.18.48 0 .66m0-2.48-1.24 1.24a.5.5 0 0 1-.32.14.47.47 0 0 1-.33-.8l1.23-1.23a.47.47 0 0 1 .66 0c.18.18.18.47 0 .65m2.47 2.48-1.23 1.23a.5.5 0 0 1-.33.14.5.5 0 0 1-.33-.14.46.46 0 0 1 0-.65l1.24-1.24a.46.46 0 0 1 .65 0c.18.18.18.48 0 .66m0-2.48-1.23 1.24a.5.5 0 0 1-.33.14.47.47 0 0 1-.33-.8l1.24-1.23a.46.46 0 1 1 .65.65"
+              d="M13.47 14.39h-2.94c-1.27 0-2.03.76-2.03 2.03v2.94c0 1.27.76 2.03 2.03 2.03h2.94c1.27 0 2.03-.76 2.03-2.03v-2.94c0-1.27-.76-2.03-2.03-2.03m-1.76 4.45-1.24 1.23a.5.5 0 0 1-.32.14.5.5 0 0 1-.33-.14.46.46 0 0 1 0-.65l1.23-1.24a.47.47 0 0 1 .66 0c.18.18.18.48 0 .66m0-2.48-1.24 1.24a.5.5 0 0 1-.32.14.47.47 0 0 1-.33-.8l1.23-1.23a.47.47 0 0 1 .66 0c.18.18.18.47 0 .65m2.47 2.48-1.23 1.23a.5.5 0 0 1-.33.14.5.5 0 0 1-.33-.14.46.46 0 0 1 0-.65l1.24-1.24a.46.46 0 0 1 .65 0c.18.18.18.48 0 .66m0-2.48-1.23 1.24a.5.5 0 0 1-.33.14.47.47 0 0 1-.33-.8l1.24-1.23a.46.46 0 1 1 .65.65"
               fill="currentColor"
             />
           </svg>
@@ -134,11 +212,11 @@ const IconCloudDrizzle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M20.84 17.57q-.8.73-1.8 1.11a1 1 0 0 1-1.37-.94v-1.32a3.53 3.53 0 0 0-3.53-3.53H11.2a3.53 3.53 0 0 0-3.53 3.53V18a1 1 0 0 1-1 1h-.45a4.1 4.1 0 0 1-3.55-4.14c0-1.68.98-3.54 3.11-4.06a6.3 6.3 0 0 1 1.43-6.11 6.9 6.9 0 0 1 6.87-1.79c2.19.67 3.73 2.47 4.28 4.97a5.5 5.5 0 0 1 4.05 3.87 5.5 5.5 0 0 1-1.57 5.83"
+              d="M20.17 17.57q-.8.73-1.8 1.11a1 1 0 0 1-1.37-.94v-1.32a3.53 3.53 0 0 0-3.53-3.53h-2.94A3.53 3.53 0 0 0 7 16.42V18a1 1 0 0 1-1 1h-.45A4.1 4.1 0 0 1 2 14.86c0-1.68.98-3.54 3.11-4.06a6.3 6.3 0 0 1 1.43-6.11 6.9 6.9 0 0 1 6.87-1.79c2.19.67 3.73 2.47 4.28 4.97a5.5 5.5 0 0 1 4.05 3.87 5.5 5.5 0 0 1-1.57 5.83"
               fill="currentColor"
             />
             <path
-              d="M14.14 14.39H11.2c-1.27 0-2.03.76-2.03 2.03v2.94c0 1.27.76 2.03 2.03 2.03h2.94c1.27 0 2.03-.76 2.03-2.03v-2.94c0-1.27-.76-2.03-2.03-2.03m-1.76 4.45-1.24 1.23a.5.5 0 0 1-.32.14.5.5 0 0 1-.33-.14.46.46 0 0 1 0-.65l1.23-1.24a.47.47 0 0 1 .66 0c.18.18.18.48 0 .66m0-2.48-1.24 1.24a.5.5 0 0 1-.32.14.47.47 0 0 1-.33-.8l1.23-1.23a.47.47 0 0 1 .66 0c.18.18.18.47 0 .65m2.47 2.48-1.23 1.23a.5.5 0 0 1-.33.14.5.5 0 0 1-.33-.14.46.46 0 0 1 0-.65l1.24-1.24a.46.46 0 0 1 .65 0c.18.18.18.48 0 .66m0-2.48-1.23 1.24a.5.5 0 0 1-.33.14.47.47 0 0 1-.33-.8l1.24-1.23a.46.46 0 1 1 .65.65"
+              d="M13.47 14.39h-2.94c-1.27 0-2.03.76-2.03 2.03v2.94c0 1.27.76 2.03 2.03 2.03h2.94c1.27 0 2.03-.76 2.03-2.03v-2.94c0-1.27-.76-2.03-2.03-2.03m-1.76 4.45-1.24 1.23a.5.5 0 0 1-.32.14.5.5 0 0 1-.33-.14.46.46 0 0 1 0-.65l1.23-1.24a.47.47 0 0 1 .66 0c.18.18.18.48 0 .66m0-2.48-1.24 1.24a.5.5 0 0 1-.32.14.47.47 0 0 1-.33-.8l1.23-1.23a.47.47 0 0 1 .66 0c.18.18.18.47 0 .65m2.47 2.48-1.23 1.23a.5.5 0 0 1-.33.14.5.5 0 0 1-.33-.14.46.46 0 0 1 0-.65l1.24-1.24a.46.46 0 0 1 .65 0c.18.18.18.48 0 .66m0-2.48-1.23 1.24a.5.5 0 0 1-.33.14.47.47 0 0 1-.33-.8l1.24-1.23a.46.46 0 1 1 .65.65"
               fill="currentColor"
             />
           </svg>

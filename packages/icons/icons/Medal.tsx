@@ -22,7 +22,7 @@ const IconMedal = forwardRef<SVGSVGElement, IconProps>(function IconMedal(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,35 @@ const IconMedal = forwardRef<SVGSVGElement, IconProps>(function IconMedal(
           {...rest}
         >
           <path
-            d="M12.67 15a6.63 6.63 0 0 0 6.75-6.5c0-3.59-3.02-6.5-6.75-6.5a6.63 6.63 0 0 0-6.75 6.5c0 3.59 3.02 6.5 6.75 6.5"
+            d="M16.5 3.66a6.4 6.4 0 0 1 2.25 4.84c0 3.59-3.02 6.5-6.75 6.5a6.63 6.63 0 0 1-6.75-6.5C5.25 4.91 8.27 2 12 2"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m7.52 13.52-.01 7.38c0 .9.63 1.34 1.41.97l2.68-1.27c.22-.11.59-.11.81 0l2.69 1.27c.77.36 1.41-.07 1.41-.97v-7.56"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 15a6.63 6.63 0 0 0 6.75-6.5C18.75 4.91 15.73 2 12 2a6.63 6.63 0 0 0-6.75 6.5c0 3.59 3.02 6.5 6.75 6.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,7 +72,7 @@ const IconMedal = forwardRef<SVGSVGElement, IconProps>(function IconMedal(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m8.19 13.52-.01 7.38c0 .9.63 1.34 1.41.97l2.68-1.27c.22-.11.59-.11.81 0l2.69 1.27c.77.36 1.41-.07 1.41-.97v-7.56"
+            d="m7.52 13.52-.01 7.38c0 .9.63 1.34 1.41.97l2.68-1.27c.22-.11.59-.11.81 0l2.69 1.27c.77.36 1.41-.07 1.41-.97v-7.56"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -65,12 +93,12 @@ const IconMedal = forwardRef<SVGSVGElement, IconProps>(function IconMedal(
           {...rest}
         >
           <path
-            d="M12.67 15a6.63 6.63 0 0 0 6.75-6.5c0-3.59-3.02-6.5-6.75-6.5a6.63 6.63 0 0 0-6.75 6.5c0 3.59 3.02 6.5 6.75 6.5"
+            d="M12 15a6.63 6.63 0 0 0 6.75-6.5C18.75 4.91 15.73 2 12 2a6.63 6.63 0 0 0-6.75 6.5c0 3.59 3.02 6.5 6.75 6.5"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m8.19 13.52-.01 7.38c0 .9.63 1.34 1.41.97l2.68-1.27c.22-.11.59-.11.81 0l2.69 1.27c.77.36 1.41-.07 1.41-.97v-7.56"
+            d="m7.52 13.52-.01 7.38c0 .9.63 1.34 1.41.97l2.68-1.27c.22-.11.59-.11.81 0l2.69 1.27c.77.36 1.41-.07 1.41-.97v-7.56"
             fill="currentColor"
           />
         </svg>
@@ -88,11 +116,11 @@ const IconMedal = forwardRef<SVGSVGElement, IconProps>(function IconMedal(
           {...rest}
         >
           <path
-            d="M12.67 15a6.63 6.63 0 0 0 6.75-6.5c0-3.59-3.02-6.5-6.75-6.5a6.63 6.63 0 0 0-6.75 6.5c0 3.59 3.02 6.5 6.75 6.5"
+            d="M12 15a6.63 6.63 0 0 0 6.75-6.5C18.75 4.91 15.73 2 12 2a6.63 6.63 0 0 0-6.75 6.5c0 3.59 3.02 6.5 6.75 6.5"
             fill="currentColor"
           />
           <path
-            d="M16.46 15.61c.33-.17.71.08.71.45v4.85c0 .9-.63 1.34-1.41.97l-2.68-1.27c-.23-.1-.59-.1-.82 0l-2.68 1.27c-.78.36-1.41-.08-1.41-.98l.02-4.84a.5.5 0 0 1 .71-.45q1.71.87 3.77.89 2.06-.02 3.79-.89"
+            d="M15.79 15.61c.33-.17.71.08.71.45v4.85c0 .9-.63 1.34-1.41.97l-2.68-1.27c-.23-.1-.59-.1-.82 0l-2.68 1.27c-.78.36-1.41-.08-1.41-.98l.02-4.84a.5.5 0 0 1 .71-.45q1.71.87 3.77.89 2.06-.02 3.79-.89"
             fill="currentColor"
           />
         </svg>

@@ -13,6 +13,10 @@
  * free), so the stripping is gone and what is left is the half that was always
  * the useful one: proving the drawings survived the build.
  *
+ * The exception is a glyph that is one stroked drawing in every core style,
+ * with Bold and Bulk at a fixed weight (`strokeWidth={fill ? ...}`): one
+ * branch serves all four.
+ *
  *   node scripts/artwork-check.mjs
  */
 import { readFileSync, readdirSync, existsSync } from "node:fs";
@@ -23,10 +27,10 @@ const ROOT = path.resolve(fileURLToPath(new URL("..", import.meta.url)));
 const ICONS_DIR = path.join(ROOT, "icons");
 
 const STANDARD_BRANCHES = 3;
-const BROKEN_BRANCHES = 4;
 
 function expectedBranches(source) {
-  return source.includes('variant === "Broken"') ? BROKEN_BRANCHES : STANDARD_BRANCHES;
+  const core = source.includes("strokeWidth={fill ? ") ? 1 : STANDARD_BRANCHES;
+  return source.includes('variant === "Broken"') ? core + 1 : core;
 }
 
 function check() {
@@ -39,7 +43,7 @@ function check() {
     const svgs = source.match(/<svg/g);
     const found = svgs?.length ?? 0;
     const expected = expectedBranches(source);
-    if (expected === BROKEN_BRANCHES) broken++;
+    if (source.includes('variant === "Broken"')) broken++;
     if (found !== expected) {
       throw new Error(`${file}: expected ${expected} svgs, found ${found}`);
     }

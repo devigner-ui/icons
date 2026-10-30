@@ -23,7 +23,49 @@ const IconLayoutCircles = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M5.24 2.7q.6-.2 1.26-.2a4 4 0 1 1-3.72 2.53"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M16.24 13.7q.6-.2 1.26-.2a4 4 0 1 1-3.72 2.53"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M21.5 6.5a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10.5 17.5a4 4 0 1 0-8 0 4 4 0 0 0 8 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}

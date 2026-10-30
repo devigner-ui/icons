@@ -22,7 +22,119 @@ const IconTownHall = forwardRef<SVGSVGElement, IconProps>(function IconTownHall(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 22H2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17 22V6c0-1.89 0-2.83-.59-3.41-.47-.48-1.17-.57-2.42-.59m-3.5 0c-1.55.01-2.37.06-2.9.59C7 3.17 7 4.1 7 6v16"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M21 22V8.5c0-1.4 0-2.1-.34-2.61q-.22-.33-.55-.55C19.61 5 18.91 5 17.5 5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M3 22V8.5c0-1.4 0-2.1.34-2.61q.22-.33.55-.55C4.39 5 5.09 5 6.5 5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 22v-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10 12h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M5.5 11H7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M5.5 14H7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17 11h1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17 14h1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M5.5 8H7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M17 8h1.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10 15h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10 7c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -144,17 +256,17 @@ const IconTownHall = forwardRef<SVGSVGElement, IconProps>(function IconTownHall(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M10.75 2h2c1.89 0 2.83 0 3.41.59.59.58.59 1.52.59 3.41v15.25h5a.75.75 0 0 1 0 1.5h-20a.75.75 0 0 1 0-1.5h5V6c0-1.89 0-2.83.59-3.41C7.92 2 8.86 2 10.75 2M9 12c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4A.75.75 0 0 1 9 12m0 3c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4A.75.75 0 0 1 9 15m2.75 3.25c.41 0 .75.34.75.75v2.25H11V19c0-.41.34-.75.75-.75M9.25 7a2.75 2.75 0 1 1 5.5 0 2.75 2.75 0 0 1-5.5 0"
+            d="M11 1.6h2c1.89 0 2.83 0 3.41.59.59.58.59 1.52.59 3.41v15.25h5a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1 0-1.5h5V5.6c0-1.89 0-2.83.59-3.41.58-.59 1.52-.59 3.41-.59m-1.75 10c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75m0 3c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75M12 17.85c.41 0 .75.34.75.75v2.25h-1.5V18.6c0-.41.34-.75.75-.75M9.5 6.6a2.75 2.75 0 1 1 5.5 0 2.75 2.75 0 0 1-5.5 0"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M10.75 7a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
+            d="M11 6.6a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M20.91 5.89c.34.5.34 1.2.34 2.61v12.75h.5a.75.75 0 0 1 0 1.5h-20a.75.75 0 0 1 0-1.5h.5V8.5c0-1.4 0-2.1.34-2.61a2 2 0 0 1 .55-.55C3.58 5.04 5.68 5 6.76 5v2.25H4.24a.75.75 0 1 0 0 1.5h2.5v1.5h-2.5a.75.75 0 0 0 0 1.5h2.5v1.5h-2.5a.75.75 0 0 0 0 1.5h2.5v6.5h10v-6.5h2.5a.75.75 0 0 0 0-1.5h-2.5v-1.5h2.5a.75.75 0 0 0 0-1.5h-2.5v-1.5h2.5a.75.75 0 0 0 0-1.5h-2.5V5c1.08 0 3.17.04 3.61.34a2 2 0 0 1 .55.55"
+            d="M21.16 5.49c.34.5.34 1.2.34 2.61v12.75h.5a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1 0-1.5h.5V8.1c0-1.4 0-2.1.34-2.61a2 2 0 0 1 .55-.55c.44-.3 2.54-.34 3.62-.34v2.25H4.49a.75.75 0 1 0 0 1.5h2.5v1.5h-2.5a.75.75 0 0 0 0 1.5h2.5v1.5h-2.5a.75.75 0 0 0 0 1.5h2.5v6.5h10v-6.5h2.5a.75.75 0 0 0 0-1.5h-2.5v-1.5h2.5a.75.75 0 0 0 0-1.5h-2.5v-1.5h2.5a.75.75 0 0 0 0-1.5h-2.5V4.6c1.08 0 3.17.04 3.61.34a2 2 0 0 1 .55.55"
             fill="currentColor"
           />
         </svg>
@@ -174,7 +286,7 @@ const IconTownHall = forwardRef<SVGSVGElement, IconProps>(function IconTownHall(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M20.91 5.89c.34.5.34 1.2.34 2.61v12.75h.5a.75.75 0 0 1 0 1.5h-20a.75.75 0 0 1 0-1.5h.5V8.5c0-1.4 0-2.1.34-2.61a2 2 0 0 1 .55-.55C3.58 5.04 4.17 5 5.25 5v2.25h-1a.75.75 0 0 0 0 1.5h1v1.5h-1a.75.75 0 0 0 0 1.5h1v1.5h-1a.75.75 0 0 0 0 1.5h1v6.5h1.5V6c0-1.89 0-2.83.59-3.41C7.92 2 8.86 2 10.75 2h2c1.89 0 2.83 0 3.41.59.59.58.59 1.52.59 3.41v15.25h1.5v-6.5h1a.75.75 0 0 0 0-1.5h-1v-1.5h1a.75.75 0 0 0 0-1.5h-1v-1.5h1a.75.75 0 0 0 0-1.5h-1V5.01c1.08 0 1.67.03 2.11.33a2 2 0 0 1 .55.55M12.5 19a.75.75 0 0 0-1.5 0v2.25h1.5zM9 15c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4A.75.75 0 0 1 9 15m.75-3.75a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5zM9.25 7a2.75 2.75 0 1 1 5.5 0 2.75 2.75 0 0 1-5.5 0m1.5 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
+            d="M21.16 5.49c.34.5.34 1.2.34 2.61v12.75h.5a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1 0-1.5h.5V8.1c0-1.4 0-2.1.34-2.61a2 2 0 0 1 .55-.55c.44-.3 1.03-.34 2.11-.34v2.25h-1a.75.75 0 0 0 0 1.5h1v1.5h-1a.75.75 0 0 0 0 1.5h1v1.5h-1a.75.75 0 0 0 0 1.5h1v6.5H7V5.6c0-1.89 0-2.83.59-3.41.58-.59 1.52-.59 3.41-.59h2c1.89 0 2.83 0 3.41.59.59.58.59 1.52.59 3.41v15.25h1.5v-6.5h1a.75.75 0 0 0 0-1.5h-1v-1.5h1a.75.75 0 0 0 0-1.5h-1v-1.5h1a.75.75 0 0 0 0-1.5h-1V4.61c1.08 0 1.67.03 2.11.33a2 2 0 0 1 .55.55M12.75 18.6a.75.75 0 0 0-1.5 0v2.25h1.5zm-3.5-4c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75m.75-3.75a.75.75 0 0 0 0 1.5h4a.75.75 0 0 0 0-1.5zM9.5 6.6a2.75 2.75 0 1 1 5.5 0 2.75 2.75 0 0 1-5.5 0m1.5 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
             fill="currentColor"
           />
         </svg>

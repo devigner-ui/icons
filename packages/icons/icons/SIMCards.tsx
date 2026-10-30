@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconSIMCards = forwardRef<SVGSVGElement, IconProps>(function IconSIMCards(
+const IconSimCards = forwardRef<SVGSVGElement, IconProps>(function IconSimCards(
   { className, variant = "Outline", strokeWidth = "1.5", ...rest },
   ref,
 ) {
@@ -138,4 +138,4 @@ const IconSIMCards = forwardRef<SVGSVGElement, IconProps>(function IconSIMCards(
   );
 });
 
-export default IconSIMCards;
+export default IconSimCards;

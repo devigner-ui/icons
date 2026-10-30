@@ -1,1 +1,1 @@
-export { default, default as Icon3dcube } from '../../icons/3dcube';
+export { default, default as Icon3dCube } from '../../icons/3dCube';

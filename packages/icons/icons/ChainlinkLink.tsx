@@ -23,7 +23,29 @@ const IconChainlinkLink = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3 12.66v3.16c0 .65.46 1.43 1.03 1.75l7 3.89c.53.3 1.41.3 1.94 0l7-3.89A2.2 2.2 0 0 0 21 15.82V8.18c0-.65-.46-1.43-1.03-1.75l-7-3.89a2.2 2.2 0 0 0-1.94 0l-7 3.89A2.2 2.2 0 0 0 3 8.18"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +59,7 @@ const IconChainlinkLink = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M3.67 8.18v7.65c0 .65.46 1.43 1.03 1.75l7 3.89c.53.3 1.41.3 1.94 0l7-3.89a2.2 2.2 0 0 0 1.03-1.75V8.18c0-.65-.46-1.43-1.03-1.75l-7-3.89a2.2 2.2 0 0 0-1.94 0l-7 3.89a2.2 2.2 0 0 0-1.03 1.75"
+              d="M3 8.18v7.65c0 .65.46 1.43 1.03 1.75l7 3.89c.53.3 1.41.3 1.94 0l7-3.89A2.2 2.2 0 0 0 21 15.83V8.18c0-.65-.46-1.43-1.03-1.75l-7-3.89a2.2 2.2 0 0 0-1.94 0l-7 3.89A2.2 2.2 0 0 0 3 8.18"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -58,9 +80,9 @@ const IconChainlinkLink = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <path d="M24.67 0h-24v24h24z" fill="none" />
+            <path d="M24 0H0v24h24z" fill="none" />
             <path
-              d="M3.67 8.18v7.65c0 .65.46 1.43 1.03 1.75l7 3.89c.53.3 1.41.3 1.94 0l7-3.89a2.2 2.2 0 0 0 1.03-1.75V8.18c0-.65-.46-1.43-1.03-1.75l-7-3.89a2.2 2.2 0 0 0-1.94 0l-7 3.89a2.2 2.2 0 0 0-1.03 1.75"
+              d="M3 8.18v7.65c0 .65.46 1.43 1.03 1.75l7 3.89c.53.3 1.41.3 1.94 0l7-3.89A2.2 2.2 0 0 0 21 15.83V8.18c0-.65-.46-1.43-1.03-1.75l-7-3.89a2.2 2.2 0 0 0-1.94 0l-7 3.89A2.2 2.2 0 0 0 3 8.18"
               fill="currentColor"
             />
           </svg>
@@ -78,7 +100,7 @@ const IconChainlinkLink = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M3.67 8.18v7.65c0 .65.46 1.43 1.03 1.75l7 3.89c.53.3 1.41.3 1.94 0l7-3.89a2.2 2.2 0 0 0 1.03-1.75V8.18c0-.65-.46-1.43-1.03-1.75l-7-3.89a2.2 2.2 0 0 0-1.94 0l-7 3.89a2.2 2.2 0 0 0-1.03 1.75"
+              d="M3 8.18v7.65c0 .65.46 1.43 1.03 1.75l7 3.89c.53.3 1.41.3 1.94 0l7-3.89A2.2 2.2 0 0 0 21 15.83V8.18c0-.65-.46-1.43-1.03-1.75l-7-3.89a2.2 2.2 0 0 0-1.94 0l-7 3.89A2.2 2.2 0 0 0 3 8.18"
               fill="currentColor"
             />
           </svg>

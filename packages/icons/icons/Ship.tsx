@@ -22,7 +22,7 @@ const IconShip = forwardRef<SVGSVGElement, IconProps>(function IconShip(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,14 +36,56 @@ const IconShip = forwardRef<SVGSVGElement, IconProps>(function IconShip(
           {...rest}
         >
           <path
-            d="M21.09 12.37a2.1 2.1 0 0 1 1.21 2.29l-.41 1.86A6.74 6.74 0 0 1 15.05 22h-4.76a6.74 6.74 0 0 1-6.84-5.48l-.41-1.86c-.2-.91.34-1.94 1.21-2.29l1.42-.57 5.51-2.21a4 4 0 0 1 2.98 0l5.51 2.21z"
+            d="M5.11 20.46a7 7 0 0 1-2.33-3.94l-.41-1.86c-.2-.91.34-1.94 1.21-2.29L5 11.8l5.51-2.21a4 4 0 0 1 2.98 0L19 11.8l1.42.57a2.1 2.1 0 0 1 1.21 2.29l-.41 1.86A6.74 6.74 0 0 1 14.38 22H9.62"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 22V10"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M19 8v3.8l-5.51-2.21a4 4 0 0 0-2.98 0L5 11.8V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M14.5 5h-5V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20.42 12.37a2.1 2.1 0 0 1 1.21 2.29l-.41 1.86A6.74 6.74 0 0 1 14.38 22H9.62a6.74 6.74 0 0 1-6.84-5.48l-.41-1.86c-.2-.91.34-1.94 1.21-2.29L5 11.8l5.51-2.21a4 4 0 0 1 2.98 0L19 11.8z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M12.67 22V10"
+            d="M12 22V10"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -51,14 +93,14 @@ const IconShip = forwardRef<SVGSVGElement, IconProps>(function IconShip(
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="M19.67 8v3.8l-5.51-2.21a4 4 0 0 0-2.98 0L5.67 11.8V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3"
+              d="M19 8v3.8l-5.51-2.21a4 4 0 0 0-2.98 0L5 11.8V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M15.17 5h-5V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1z"
+              d="M14.5 5h-5V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -80,16 +122,16 @@ const IconShip = forwardRef<SVGSVGElement, IconProps>(function IconShip(
           {...rest}
         >
           <path
-            d="m22.3 14.66-.41 1.86A6.74 6.74 0 0 1 15.05 22h-4.76a6.74 6.74 0 0 1-6.84-5.48l-.41-1.86c-.2-.91.34-1.94 1.21-2.29l1.42-.57 5.51-2.21a4 4 0 0 1 2.98 0l5.51 2.21 1.42.57a2.1 2.1 0 0 1 1.21 2.29"
+            d="m21.63 14.66-.41 1.86A6.74 6.74 0 0 1 14.38 22H9.62a6.74 6.74 0 0 1-6.84-5.48l-.41-1.86c-.2-.91.34-1.94 1.21-2.29L5 11.8l5.51-2.21a4 4 0 0 1 2.98 0L19 11.8l1.42.57a2.1 2.1 0 0 1 1.21 2.29"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M19.67 8v3.8l-5.51-2.21a4 4 0 0 0-2.98 0L5.67 11.8V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3"
+            d="M19 8v3.8l-5.51-2.21a4 4 0 0 0-2.98 0L5 11.8V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3"
             fill="currentColor"
           />
           <path
-            d="M15.17 5h-5V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1z"
+            d="M14.5 5h-5V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1z"
             fill="currentColor"
           />
         </svg>
@@ -107,15 +149,15 @@ const IconShip = forwardRef<SVGSVGElement, IconProps>(function IconShip(
           {...rest}
         >
           <path
-            d="m22.3 14.66-.41 1.86A6.74 6.74 0 0 1 15.05 22h-4.76a6.74 6.74 0 0 1-6.84-5.48l-.41-1.86c-.2-.91.34-1.94 1.21-2.29l1.42-.57 5.51-2.21a4 4 0 0 1 2.98 0l5.51 2.21 1.42.57a2.1 2.1 0 0 1 1.21 2.29"
+            d="m21.63 14.66-.41 1.86A6.74 6.74 0 0 1 14.38 22H9.62a6.74 6.74 0 0 1-6.84-5.48l-.41-1.86c-.2-.91.34-1.94 1.21-2.29L5 11.8l5.51-2.21a4 4 0 0 1 2.98 0L19 11.8l1.42.57a2.1 2.1 0 0 1 1.21 2.29"
             fill="currentColor"
           />
           <path
-            d="M19.67 8v1.44a.5.5 0 0 1-.69.46l-4.27-1.71a5.6 5.6 0 0 0-4.09.01L6.36 9.91a.5.5 0 0 1-.69-.46V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3"
+            d="M19 8v1.44a.5.5 0 0 1-.69.46l-4.27-1.71a5.6 5.6 0 0 0-4.09.01L5.69 9.91A.5.5 0 0 1 5 9.45V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3"
             fill="currentColor"
           />
           <path
-            d="M15.17 5h-5V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1z"
+            d="M14.5 5h-5V3a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1z"
             fill="currentColor"
           />
         </svg>

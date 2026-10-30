@@ -22,7 +22,7 @@ const IconKanban = forwardRef<SVGSVGElement, IconProps>(function IconKanban(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,35 @@ const IconKanban = forwardRef<SVGSVGElement, IconProps>(function IconKanban(
           {...rest}
         >
           <path
-            d="M11.17 19.9V4.1c0-1.5-.64-2.1-2.23-2.1H4.9c-1.59 0-2.23.6-2.23 2.1v15.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
+            d="M10.5 16.33V4.1c0-1.5-.64-2.1-2.23-2.1H4.23C2.64 2 2 2.6 2 4.1v.03m0 3.5V19.9c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1v-.07"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M22 12.9V4.1c0-1.5-.64-2.1-2.23-2.1h-4.04c-1.59 0-2.23.6-2.23 2.1v8.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M10.5 19.9V4.1c0-1.5-.64-2.1-2.23-2.1H4.23C2.64 2 2 2.6 2 4.1v15.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,7 +72,7 @@ const IconKanban = forwardRef<SVGSVGElement, IconProps>(function IconKanban(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M22.67 12.9V4.1c0-1.5-.64-2.1-2.23-2.1H16.4c-1.59 0-2.23.6-2.23 2.1v8.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
+            d="M22 12.9V4.1c0-1.5-.64-2.1-2.23-2.1h-4.04c-1.59 0-2.23.6-2.23 2.1v8.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -65,12 +93,12 @@ const IconKanban = forwardRef<SVGSVGElement, IconProps>(function IconKanban(
           {...rest}
         >
           <path
-            d="M11.17 19.9V4.1c0-1.5-.64-2.1-2.23-2.1H4.9c-1.59 0-2.23.6-2.23 2.1v15.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
+            d="M10.5 19.9V4.1c0-1.5-.64-2.1-2.23-2.1H4.23C2.64 2 2 2.6 2 4.1v15.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M22.67 12.9V4.1c0-1.5-.64-2.1-2.23-2.1H16.4c-1.59 0-2.23.6-2.23 2.1v8.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
+            d="M22 12.9V4.1c0-1.5-.64-2.1-2.23-2.1h-4.04c-1.59 0-2.23.6-2.23 2.1v8.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
             fill="currentColor"
           />
         </svg>
@@ -88,11 +116,11 @@ const IconKanban = forwardRef<SVGSVGElement, IconProps>(function IconKanban(
           {...rest}
         >
           <path
-            d="M11.17 19.9V4.1c0-1.5-.64-2.1-2.23-2.1H4.9c-1.59 0-2.23.6-2.23 2.1v15.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
+            d="M10.5 19.9V4.1c0-1.5-.64-2.1-2.23-2.1H4.23C2.64 2 2 2.6 2 4.1v15.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
             fill="currentColor"
           />
           <path
-            d="M22.67 12.9V4.1c0-1.5-.64-2.1-2.23-2.1H16.4c-1.59 0-2.23.6-2.23 2.1v8.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
+            d="M22 12.9V4.1c0-1.5-.64-2.1-2.23-2.1h-4.04c-1.59 0-2.23.6-2.23 2.1v8.8c0 1.5.64 2.1 2.23 2.1h4.04c1.59 0 2.23-.6 2.23-2.1"
             fill="currentColor"
           />
         </svg>

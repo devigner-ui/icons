@@ -22,7 +22,7 @@ const IconSolana = forwardRef<SVGSVGElement, IconProps>(function IconSolana(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,20 +36,54 @@ const IconSolana = forwardRef<SVGSVGElement, IconProps>(function IconSolana(
           {...rest}
         >
           <path
-            d="M20.67 3.5H6.17c-.31 0-.61.15-.8.4l-1.5 2a1 1 0 0 0 .8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
+            d="M20 3.5H5.5c-.31 0-.61.15-.8.4l-1.5 2A1 1 0 0 0 4 7.5h14.5c.3 0 .6-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            stroke="currentColor"
+          />
+          <path
+            d="M6.94 14H5.5c-.31 0-.61-.15-.8-.4l-1.5-2A1 1 0 0 1 4 10h14.5c.3 0 .6.15.8.4l1.5 2A1 1 0 0 1 20 14h-8.64"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M20 16.5H5.5c-.31 0-.61.15-.8.4l-1.5 2a1 1 0 0 0 .8 1.6h14.5c.3 0 .6-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20 3.5H5.5c-.31 0-.61.15-.8.4l-1.5 2A1 1 0 0 0 4 7.5h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M4.67 10h14.5c.31 0 .61.15.8.4l1.5 2a1 1 0 0 1-.8 1.6H6.17c-.31 0-.61-.15-.8-.4l-1.5-2a1 1 0 0 1 .8-1.6"
+            d="M4 10h14.5c.31 0 .61.15.8.4l1.5 2A1 1 0 0 1 20 14H5.5c-.31 0-.61-.15-.8-.4l-1.5-2A1 1 0 0 1 4 10"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
           />
           <path
-            d="M20.67 16.5H6.17c-.31 0-.61.15-.8.4l-1.5 2a1 1 0 0 0 .8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
+            d="M20 16.5H5.5c-.31 0-.61.15-.8.4l-1.5 2a1 1 0 0 0 .8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -68,18 +102,18 @@ const IconSolana = forwardRef<SVGSVGElement, IconProps>(function IconSolana(
           {...a11y}
           {...rest}
         >
-          <path d="M24.67 0h-24v24h24z" fill="none" />
+          <path d="M24 0H0v24h24z" fill="none" />
           <path
-            d="M20.67 3.5H6.17c-.31 0-.61.15-.8.4l-1.5 2a1 1 0 0 0 .8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
+            d="M20 3.5H5.5c-.31 0-.61.15-.8.4l-1.5 2A1 1 0 0 0 4 7.5h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M4.67 10h14.5c.31 0 .61.15.8.4l1.5 2a1 1 0 0 1-.8 1.6H6.17c-.31 0-.61-.15-.8-.4l-1.5-2a1 1 0 0 1 .8-1.6"
+            d="M4 10h14.5c.31 0 .61.15.8.4l1.5 2A1 1 0 0 1 20 14H5.5c-.31 0-.61-.15-.8-.4l-1.5-2A1 1 0 0 1 4 10"
             fill="currentColor"
           />
           <path
-            d="M20.67 16.5H6.17c-.31 0-.61.15-.8.4l-1.5 2a1 1 0 0 0 .8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
+            d="M20 16.5H5.5c-.31 0-.61.15-.8.4l-1.5 2a1 1 0 0 0 .8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
             fill="currentColor"
           />
         </svg>
@@ -97,15 +131,15 @@ const IconSolana = forwardRef<SVGSVGElement, IconProps>(function IconSolana(
           {...rest}
         >
           <path
-            d="M20.67 3.5H6.17c-.31 0-.61.15-.8.4l-1.5 2a1 1 0 0 0 .8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
+            d="M20 3.5H5.5c-.31 0-.61.15-.8.4l-1.5 2A1 1 0 0 0 4 7.5h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
             fill="currentColor"
           />
           <path
-            d="M4.67 10h14.5c.31 0 .61.15.8.4l1.5 2a1 1 0 0 1-.8 1.6H6.17c-.31 0-.61-.15-.8-.4l-1.5-2a1 1 0 0 1 .8-1.6"
+            d="M4 10h14.5c.31 0 .61.15.8.4l1.5 2A1 1 0 0 1 20 14H5.5c-.31 0-.61-.15-.8-.4l-1.5-2A1 1 0 0 1 4 10"
             fill="currentColor"
           />
           <path
-            d="M20.67 16.5H6.17c-.31 0-.61.15-.8.4l-1.5 2a1 1 0 0 0 .8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
+            d="M20 16.5H5.5c-.31 0-.61.15-.8.4l-1.5 2a1 1 0 0 0 .8 1.6h14.5c.31 0 .61-.15.8-.4l1.5-2a1 1 0 0 0-.8-1.6"
             fill="currentColor"
           />
         </svg>

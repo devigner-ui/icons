@@ -36,10 +36,11 @@ const IconPlay = forwardRef<SVGSVGElement, IconProps>(function IconPlay(
           {...rest}
         >
           <path
-            d="M3 12v6.97c0 2.3 2.53 3.77 4.6 2.64l3.2-1.74M3 8V5.03c0-2.3 2.53-3.77 4.6-2.64l12.8 6.96a3 3 0 0 1 0 5.3L14 18.13"
+            d="M15.71 17.46a41 41 0 0 1-4.48 2.62C8 21.71 6.4 22.53 4.96 21.63c-1.45-.9-1.58-2.8-1.84-6.57A52 52 0 0 1 3 12c0-.94.05-1.99.12-3.06l.04-.63m.38-3.48c.25-1.2.64-1.97 1.42-2.46C6.4 1.47 8 2.3 11.23 3.92q1.27.63 2.35 1.27c.81.47 1.7 1.04 2.58 1.65C19.4 9.03 21 10.13 21 12c0 1.32-.8 2.26-2.41 3.47"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ) : !fill ? (

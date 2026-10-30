@@ -23,7 +23,61 @@ const IconMessageRemove = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M9.5 17.5q0 .48-.12.93-.14.61-.46 1.13a3.97 3.97 0 0 1-6.84 0A4 4 0 1 1 9.5 17.5Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m6.57 18.54-2.12-2.11"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m6.55 16.46-2.12 2.11"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9 10.5h7"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22.5 11.54v1.89a5 5 0 0 1-1.38 3.63 5 5 0 0 1-3.62 1.37v2.13a1 1 0 0 1-1.55.84l-4.45-2.97H9.38q.12-.45.12-.93a4 4 0 0 0-4-4 4 4 0 0 0-2.87 1.21q-.13-.6-.13-1.28v-6c0-3 2-5 5-5h10c3 0 5 2 5 5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,7 +92,7 @@ const IconMessageRemove = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22.67 7.43v6a5 5 0 0 1-1.38 3.63 5 5 0 0 1-3.62 1.37v2.13a1 1 0 0 1-1.55.84l-4.45-2.97H9.55q.12-.45.12-.93a4 4 0 0 0-4-4 4 4 0 0 0-2.87 1.21q-.13-.6-.13-1.28v-6c0-3 2-5 5-5h10c3 0 5 2 5 5"
+              d="M22.47 7.43v6a5 5 0 0 1-1.38 3.63 5 5 0 0 1-3.62 1.37v2.13a1 1 0 0 1-1.55.84l-4.45-2.97H9.35q.12-.45.12-.93a4 4 0 0 0-4-4 4 4 0 0 0-2.87 1.21q-.13-.6-.13-1.28v-6c0-3 2-5 5-5h10c3 0 5 2 5 5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -46,7 +100,7 @@ const IconMessageRemove = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M9.67 17.5q0 .48-.12.93-.14.61-.46 1.13a3.97 3.97 0 0 1-6.84 0 4 4 0 1 1 7.42-2.06"
+              d="M9.47 17.5q0 .48-.12.93-.14.61-.46 1.13a3.97 3.97 0 0 1-6.84 0 4 4 0 1 1 7.42-2.06"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -54,7 +108,7 @@ const IconMessageRemove = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="m6.74 18.54-2.12-2.11"
+              d="m6.54 18.54-2.12-2.11"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -62,7 +116,7 @@ const IconMessageRemove = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M6.72 16.46 4.6 18.57"
+              d="M6.52 16.46 4.4 18.57"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -70,7 +124,7 @@ const IconMessageRemove = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M9.17 10.5h7"
+              d="M8.97 10.5h7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"

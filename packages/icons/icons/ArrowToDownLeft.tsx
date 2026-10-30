@@ -96,7 +96,6 @@ const IconArrowToDownLeft = forwardRef<SVGSVGElement, IconProps>(
                 d="M12.75 9.5c0-.95-.28-2.37-1.14-3.56A5.4 5.4 0 0 0 7 3.75a.75.75 0 0 0 0 1.5c1.76 0 2.78.71 3.4 1.56.63.89.85 1.98.85 2.69v8.19l.75.75.75-.75z"
                 fill="currentColor"
               />
-              <path d="M12.2 20.22" fill="currentColor" />
             </g>
           </svg>
         ) : (

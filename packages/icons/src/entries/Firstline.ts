@@ -1,1 +1,1 @@
-export { default, default as IconFirstline } from '../../icons/Firstline';
+export { default, default as IconFirstLine } from '../../icons/FirstLine';

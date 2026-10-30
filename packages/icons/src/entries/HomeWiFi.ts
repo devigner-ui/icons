@@ -1,1 +1,1 @@
-export { default, default as IconHomeWiFi } from '../../icons/HomeWiFi';
+export { default, default as IconHomeWifi } from '../../icons/HomeWifi';

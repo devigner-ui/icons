@@ -1,1 +1,1 @@
-export { default, default as IconGPS } from '../../icons/GPS';
+export { default, default as IconGps } from '../../icons/Gps';

@@ -56,7 +56,7 @@ const IconRecord = forwardRef<SVGSVGElement, IconProps>(function IconRecord(
           {...rest}
         >
           <path
-            d="M12.67 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18"
+            d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -78,12 +78,12 @@ const IconRecord = forwardRef<SVGSVGElement, IconProps>(function IconRecord(
           {...rest}
         >
           <path
-            d="m20.79 8.13-1.42.85-13.94 8.36a9 9 0 1 1 15.36-9.21"
+            d="m20.12 8.13-1.42.85-13.94 8.36a9 9 0 1 1 15.36-9.21"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M21.67 12a9 9 0 0 1-15.33 6.39l.09-.05 13.94-8.36.93-.55q.36 1.23.37 2.57"
+            d="M21 12a9 9 0 0 1-15.33 6.39l.09-.05L19.7 9.98l.93-.55q.36 1.23.37 2.57"
             fill="currentColor"
           />
         </svg>
@@ -101,11 +101,11 @@ const IconRecord = forwardRef<SVGSVGElement, IconProps>(function IconRecord(
           {...rest}
         >
           <path
-            d="M20.3 7.24a1 1 0 0 1-.34 1.39l-.59.35-13.11 7.86a1 1 0 0 1-1.39-.36 9 9 0 0 1 6.49-13.39 9 9 0 0 1 8.94 4.15"
+            d="M19.63 7.24a1 1 0 0 1-.34 1.39l-.59.35-13.11 7.86a1 1 0 0 1-1.39-.36 9 9 0 0 1 6.49-13.39 9 9 0 0 1 8.94 4.15"
             fill="currentColor"
           />
           <path
-            d="M21.56 13.43A9.1 9.1 0 0 1 12.81 21a9 9 0 0 1-5.12-1.51c-.62-.41-.6-1.33.04-1.71l12.41-7.29a1 1 0 0 1 1.51.81q.08 1.05-.09 2.13"
+            d="M20.89 13.43A9.1 9.1 0 0 1 12.14 21a9 9 0 0 1-5.12-1.51c-.62-.41-.6-1.33.04-1.71l12.41-7.29a1 1 0 0 1 1.51.81q.08 1.05-.09 2.13"
             fill="currentColor"
           />
         </svg>

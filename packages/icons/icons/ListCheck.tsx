@@ -37,32 +37,32 @@ const IconListCheck = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <path
-            d="m14 16 2.1 2.5 3.9-5"
+            d="m14.5 15.75 2.1 2.5 3.9-5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M10 14H3"
+            d="M10.5 13.75h-7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M10 18H3"
+            d="M10.5 17.75h-7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M3 6h10.5M20 6h-2.25"
+            d="M3.5 5.75H14m6.5 0h-2.25"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M20 10H9.5M3 10h2.25"
+            d="M20.5 9.75H10m-6.5 0h2.25"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -82,7 +82,7 @@ const IconListCheck = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m14 16 2.1 2.5 3.9-5"
+              d="m14 15.75 2.1 2.5 3.9-5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -90,28 +90,28 @@ const IconListCheck = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M21 6H3"
+              d="M21 5.75H3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M21 10H3"
+              d="M21 9.75H3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M10 14H3"
+              d="M10 13.75H3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M10 18H3"
+              d="M10 17.75H3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -134,11 +134,11 @@ const IconListCheck = forwardRef<SVGSVGElement, IconProps>(
               opacity={duotone ? "0.4" : "1"}
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2 5.75c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5h-18A.75.75 0 0 1 2 5.75m0 4c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5h-18A.75.75 0 0 1 2 9.75m0 4c0-.41.34-.75.75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75"
+              d="M2.25 5.75c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h7a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h7a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
             <path
-              d="M20.21 12.66c.33.25.39.72.13 1.05l-3.9 5a.75.75 0 0 1-1.16.02l-2.1-2.5a.75.75 0 0 1 1.14-.96l1.5 1.79 3.34-4.27a.75.75 0 0 1 1.05-.13"
+              d="M20.46 12.66c.33.25.39.72.13 1.05l-3.9 5a.75.75 0 0 1-1.16.02l-2.1-2.5a.75.75 0 0 1 1.14-.96l1.5 1.79 3.34-4.27a.75.75 0 0 1 1.05-.13"
               fill="currentColor"
             />
           </svg>
@@ -158,7 +158,7 @@ const IconListCheck = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2 5.75c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5h-18A.75.75 0 0 1 2 5.75m0 4c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5h-18A.75.75 0 0 1 2 9.75m18.21 2.9c.33.26.39.73.13 1.06l-3.9 5a.75.75 0 0 1-1.16.02l-2.1-2.5a.75.75 0 1 1 1.14-.96l1.5 1.79 3.34-4.27a.75.75 0 0 1 1.05-.13M2 13.76c0-.41.34-.75.75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h7a.75.75 0 0 1 0 1.5h-7a.75.75 0 0 1-.75-.75"
+              d="M2.25 5.75c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m18.21 2.9c.33.26.39.73.13 1.06l-3.9 5a.75.75 0 0 1-1.16.02l-2.1-2.5a.75.75 0 1 1 1.14-.96l1.5 1.79 3.34-4.27a.75.75 0 0 1 1.05-.13m-18.21 1.1c0-.41.34-.75.75-.75h7a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 4c0-.41.34-.75.75-.75h7a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
           </svg>

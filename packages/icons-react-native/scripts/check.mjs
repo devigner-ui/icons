@@ -72,11 +72,23 @@ async function load(name) {
   return (await import(pathToFileURL(file).href)).default;
 }
 
+const IconAddCircle = await load("AddCircle");
 const IconAdd = await load("Add");
 const IconActivity = await load("Activity");
-/* Additem is one of the 51 drawings with <defs> and a <clipPath>, so it is the
+/* AddItem is one of the 51 drawings with <defs> and a <clipPath>, so it is the
    one that proves nesting survived the parse. */
-const IconAdditem = await load("Additem");
+const IconAddItem = await load("AddItem");
+
+/* Bag2 was renamed to BagStraps; the old name wraps the new component until
+   the next major. Loaded beside its target so the relative import resolves. */
+const IconBagStraps = await load("BagStraps");
+writeFileSync(
+  path.join(work, "Bag2.js"),
+  readFileSync(path.join(DIST, "icons", "Bag2.js"), "utf8")
+    .replace('"../runtime.js"', '"./runtime.js"')
+    .replace('"../icons/BagStraps.js"', '"./BagStraps.js"'),
+);
+const IconBag2 = (await import(pathToFileURL(path.join(work, "Bag2.js")).href)).default;
 
 /** Every element in the tree, root first. */
 function walk(element, out = []) {
@@ -101,14 +113,17 @@ function check(what, fn) {
   checked++;
 }
 
-const outline = IconAdd({});
-const bulk = IconAdd({ variant: "bulk" });
-const weighed = IconAdd({ strokeWidth: 2 });
-const bulkWeighed = IconAdd({ variant: "bulk", strokeWidth: 2 });
-const labelled = IconAdd({ accessibilityLabel: "Add" });
+const outline = IconAddCircle({});
+const bulk = IconAddCircle({ variant: "bulk" });
+const weighed = IconAddCircle({ strokeWidth: 2 });
+const bulkWeighed = IconAddCircle({ variant: "bulk", strokeWidth: 2 });
+const labelled = IconAddCircle({ accessibilityLabel: "Add" });
 const sized = IconActivity({ size: 32 });
 const coloured = IconActivity({ color: "#f00" });
-const nested = IconAdditem({});
+const nested = IconAddItem({});
+/* Add draws its Bold with strokes, at a fixed weight. */
+const bold = IconAdd({ variant: "bold" });
+const boldWeighed = IconAdd({ variant: "bold", strokeWidth: 3 });
 
 check("an icon builds an Svg with shapes inside it", () => {
   assert.equal(outline.type, "Svg");
@@ -124,6 +139,11 @@ check("the four drawings are actually different", () => {
   );
   assert.ok(propsOf(bulk, "Path").some((p) => p.fill === "currentColor"));
   assert.ok(propsOf(outline, "Path").some((p) => p.stroke === "currentColor"));
+});
+
+check("strokeWidth leaves Bold alone, as in the React package", () => {
+  assert.deepEqual(propsOf(boldWeighed, "Path"), propsOf(bold, "Path"));
+  assert.ok(propsOf(bold, "Path").some((p) => p.strokeWidth != null), "Add Bold has no strokes to test");
 });
 
 check("props are camelCase, as react-native-svg wants them", () => {
@@ -182,6 +202,27 @@ check("naming an icon promotes it to an image", () => {
 check("variant and size do not leak onto the element", () => {
   assert.equal(bulk.props.variant, undefined, "variant landed on the Svg");
   assert.equal(sized.props.size, undefined, "size landed on the Svg");
+});
+
+check("a renamed icon's old name renders the new one and warns once in development", () => {
+  const warnings = [];
+  const warn = console.warn;
+  console.warn = (message) => warnings.push(message);
+  try {
+    globalThis.__DEV__ = false;
+    IconBag2({});
+    assert.equal(warnings.length, 0, "warned in a release build");
+    globalThis.__DEV__ = true;
+    const element = IconBag2({ variant: "bold", size: 32 });
+    IconBag2({});
+    assert.equal(element.type, IconBagStraps, "Bag2 does not render BagStraps");
+    assert.deepEqual(element.props, { variant: "bold", size: 32 });
+    assert.equal(warnings.length, 1, "expected one warning across two renders");
+    assert.match(warnings[0], /IconBag2 was renamed to IconBagStraps/);
+  } finally {
+    console.warn = warn;
+    delete globalThis.__DEV__;
+  }
 });
 
 console.log(`ok  ${checked} checks on the built React Native components`);

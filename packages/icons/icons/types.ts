@@ -15,7 +15,7 @@
  */
 import type { SVGProps } from "react";
 
-/** Which drawing the component renders. Broken is available where supplied. */
+/** Which drawing the component renders. Every icon has all five. */
 export type IconVariant = "Outline" | "TwoTone" | "Bold" | "Bulk" | "Broken";
 
 /*

@@ -22,7 +22,7 @@ const IconDash = forwardRef<SVGSVGElement, IconProps>(function IconDash(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,37 @@ const IconDash = forwardRef<SVGSVGElement, IconProps>(function IconDash(
           {...rest}
         >
           <path
-            d="M7.79 3.5h8.88c4 0 6 2.5 6 6V12c0 5-3 8.5-8.5 8.5H4.61l1.06-4.25h7.44c3.56 0 5.31-2.25 5.31-5.31v-.19c0-1.75-.75-3-3-3H6.73z"
+            d="M6 20.5H3.95L5 16.25h7.44c3.56 0 5.31-2.25 5.31-5.31v-.19c0-1.75-.75-3-3-3h-8.7L7.13 3.5H16c4 0 6 2.5 6 6V12c0 5-3 8.5-8.5 8.5h-2.56"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M11.5 10.5H4.31a2 2 0 0 0-1.94 1.51L2 13.5h7.19a2 2 0 0 0 1.94-1.51z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7.12 3.5H16c4 0 6 2.5 6 6V12c0 5-3 8.5-8.5 8.5H3.94L5 16.25h7.44c3.56 0 5.31-2.25 5.31-5.31v-.19c0-1.75-.75-3-3-3H6.06z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -45,7 +75,7 @@ const IconDash = forwardRef<SVGSVGElement, IconProps>(function IconDash(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.17 10.5H4.98a2 2 0 0 0-1.94 1.51l-.37 1.49h7.19a2 2 0 0 0 1.94-1.51z"
+            d="M11.5 10.5H4.31a2 2 0 0 0-1.94 1.51L2 13.5h7.19a2 2 0 0 0 1.94-1.51z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -66,14 +96,14 @@ const IconDash = forwardRef<SVGSVGElement, IconProps>(function IconDash(
           {...a11y}
           {...rest}
         >
-          <path d="M24.67 0h-24v24h24z" fill="none" />
+          <path d="M24 0H0v24h24z" fill="none" />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M7.79 3.5h8.88c4 0 6 2.5 6 6V12c0 5-3 8.5-8.5 8.5H4.61l1.06-4.25h7.44c3.56 0 5.31-2.25 5.31-5.31v-.19c0-1.75-.75-3-3-3H6.73z"
+            d="M7.12 3.5H16c4 0 6 2.5 6 6V12c0 5-3 8.5-8.5 8.5H3.94L5 16.25h7.44c3.56 0 5.31-2.25 5.31-5.31v-.19c0-1.75-.75-3-3-3H6.06z"
             fill="currentColor"
           />
           <path
-            d="M13.08 10.23H5.37c-1.08 0-2.02.74-2.29 1.78l-.25 1.02c-.09.37.19.73.57.73h7.71c1.08 0 2.02-.74 2.29-1.78l.25-1.02a.6.6 0 0 0-.57-.73"
+            d="M12.41 10.23H4.7c-1.08 0-2.02.74-2.29 1.78l-.25 1.02c-.09.37.19.73.57.73h7.71c1.08 0 2.02-.74 2.29-1.78l.25-1.02a.6.6 0 0 0-.57-.73"
             fill="currentColor"
           />
         </svg>
@@ -91,11 +121,11 @@ const IconDash = forwardRef<SVGSVGElement, IconProps>(function IconDash(
           {...rest}
         >
           <path
-            d="M7.79 3.5h8.88c4 0 6 2.5 6 6V12c0 5-3 8.5-8.5 8.5H4.61l1.06-4.25h7.44c3.56 0 5.31-2.25 5.31-5.31v-.19c0-1.75-.75-3-3-3H6.73z"
+            d="M7.12 3.5H16c4 0 6 2.5 6 6V12c0 5-3 8.5-8.5 8.5H3.94L5 16.25h7.44c3.56 0 5.31-2.25 5.31-5.31v-.19c0-1.75-.75-3-3-3H6.06z"
             fill="currentColor"
           />
           <path
-            d="M13.08 10.23H5.37c-1.08 0-2.02.74-2.29 1.78l-.25 1.02c-.09.37.19.73.57.73h7.71c1.08 0 2.02-.74 2.29-1.78l.25-1.02a.6.6 0 0 0-.57-.73"
+            d="M12.41 10.23H4.7c-1.08 0-2.02.74-2.29 1.78l-.25 1.02c-.09.37.19.73.57.73h7.71c1.08 0 2.02-.74 2.29-1.78l.25-1.02a.6.6 0 0 0-.57-.73"
             fill="currentColor"
           />
         </svg>

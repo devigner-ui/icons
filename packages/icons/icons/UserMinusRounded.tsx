@@ -37,20 +37,20 @@ const IconUserMinusRounded = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <circle
-            cx="12"
-            cy="6"
+            cx="11.33"
+            cy="6.5"
             r="4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="M20.41 18.5H17.6"
+            d="M19.74 19h-2.81"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M12 13c2.6 0 4.88.82 6.09 2.02m-2.5 5.42c-1.05.35-2.28.56-3.59.56-3.87 0-7-1.8-7-4 0-1.36 1.19-2.56 3-3.28"
+            d="M11.33 13.5c2.6 0 4.88.82 6.09 2.02m-2.5 5.42c-1.05.35-2.28.56-3.59.56-3.87 0-7-1.8-7-4 0-1.36 1.19-2.56 3-3.28"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -70,21 +70,21 @@ const IconUserMinusRounded = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <circle
-              cx="12"
-              cy="6.00049"
+              cx="11.33"
+              cy="6.5"
               r="4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M15.58 20.44c-1.04.35-2.27.56-3.58.56-3.87 0-7-1.79-7-4s3.13-4 7-4c2.6 0 4.88.82 6.09 2.02"
+              d="M14.91 20.94c-1.04.35-2.27.56-3.58.56-3.87 0-7-1.79-7-4s3.13-4 7-4c2.6 0 4.88.82 6.09 2.02"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
-              d="M20.41 18.5H17.6"
+              d="M19.74 19h-2.81"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -103,16 +103,16 @@ const IconUserMinusRounded = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <circle cx="12" cy="6.00049" r="4" fill="currentColor" />
+            <circle cx="11.5" cy="6" r="4" fill="currentColor" />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M13.51 21.49c.52.51 1.34.51 2.99.51s2.47 0 2.99-.51c.51-.51.51-1.34.51-2.99s0-2.47-.51-2.99c-.52-.5-1.34-.5-2.99-.5s-2.47 0-2.99.5c-.51.52-.51 1.34-.51 2.99s0 2.48.51 2.99m2.4-3.57h-.97a.58.58 0 1 0 0 1.16h3.12a.58.58 0 1 0 0-1.16z"
+              d="M13.01 21.49c.52.51 1.34.51 2.99.51s2.47 0 2.99-.51c.51-.51.51-1.34.51-2.99s0-2.47-.51-2.99c-.52-.5-1.34-.5-2.99-.5s-2.47 0-2.99.5c-.51.52-.51 1.34-.51 2.99s0 2.48.51 2.99m2.4-3.57h-.97a.58.58 0 1 0 0 1.16h3.12a.58.58 0 1 0 0-1.16z"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18.1 15.03q-.63-.04-1.6-.03c-1.65 0-2.47 0-2.99.51-.51.52-.51 1.34-.51 2.99 0 1.17 0 1.92.18 2.44Q12.61 21 12 21c-3.87 0-7-1.79-7-4s3.13-4 7-4c2.61 0 4.9.82 6.1 2.03"
+              d="M17.6 15.03q-.63-.04-1.6-.03c-1.65 0-2.47 0-2.99.51-.51.52-.51 1.34-.51 2.99 0 1.17 0 1.92.18 2.44q-.57.06-1.18.06c-3.87 0-7-1.79-7-4s3.13-4 7-4c2.61 0 4.9.82 6.1 2.03"
               fill="currentColor"
             />
           </svg>
@@ -129,15 +129,15 @@ const IconUserMinusRounded = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <circle cx="12" cy="6.00049" r="4" fill="currentColor" />
+            <circle cx="10.9" cy="6.5" r="4" fill="currentColor" />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M16.84 18.5c0-.41.33-.75.75-.75h2.82a.75.75 0 0 1 0 1.5H17.6a.75.75 0 0 1-.75-.75"
+              d="M15.74 19c0-.41.33-.75.75-.75h2.82a.75.75 0 0 1 0 1.5H16.5a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
             <path
-              d="M18.88 16.25h-1.3a2.25 2.25 0 0 0-1.44 3.98c-1.16.48-2.59.77-4.14.77-3.87 0-7-1.79-7-4s3.13-4 7-4c3.42 0 6.26 1.4 6.88 3.25"
+              d="M17.78 16.75h-1.3a2.25 2.25 0 0 0-1.44 3.98c-1.16.48-2.59.77-4.14.77-3.87 0-7-1.79-7-4s3.13-4 7-4c3.42 0 6.26 1.4 6.88 3.25"
               fill="currentColor"
             />
           </svg>

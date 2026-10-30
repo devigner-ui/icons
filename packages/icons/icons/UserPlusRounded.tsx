@@ -37,20 +37,20 @@ const IconUserPlusRounded = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <circle
-            cx="12"
-            cy="6"
+            cx="11.33"
+            cy="6.5"
             r="4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="M20.41 18.5H19m0 0h-1.41m1.41 0v-1.41m0 1.41v1.41"
+            d="M19.74 19h-1.41m0 0h-1.41m1.41 0v-1.41m0 1.41v1.41"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M12 13c2.6 0 4.88.82 6.09 2.02m-2.5 5.42c-1.05.35-2.28.56-3.59.56-3.87 0-7-1.8-7-4 0-1.36 1.19-2.56 3-3.28"
+            d="M11.33 13.5c2.6 0 4.88.82 6.09 2.02m-2.5 5.42c-1.05.35-2.28.56-3.59.56-3.87 0-7-1.8-7-4 0-1.36 1.19-2.56 3-3.28"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -70,21 +70,21 @@ const IconUserPlusRounded = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <circle
-              cx="12"
-              cy="6.00049"
+              cx="11.33"
+              cy="6.5"
               r="4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M15.58 20.44c-1.04.35-2.27.56-3.58.56-3.87 0-7-1.79-7-4s3.13-4 7-4c2.6 0 4.88.82 6.09 2.02"
+              d="M14.91 20.94c-1.04.35-2.27.56-3.58.56-3.87 0-7-1.79-7-4s3.13-4 7-4c2.6 0 4.88.82 6.09 2.02"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
-              d="M20.41 18.5H19m0 0h-1.41m1.41 0v-1.41m0 1.41v1.41"
+              d="M19.74 19h-1.41m0 0h-1.41m1.41 0v-1.41m0 1.41v1.41"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -103,16 +103,16 @@ const IconUserPlusRounded = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <circle cx="12" cy="6.00049" r="4" fill="currentColor" />
+            <circle cx="11.5" cy="6" r="4" fill="currentColor" />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18.1 15.03q-.63-.04-1.6-.03c-1.65 0-2.47 0-2.99.51-.51.52-.51 1.34-.51 2.99 0 1.17 0 1.92.18 2.44Q12.61 21 12 21c-3.87 0-7-1.79-7-4s3.13-4 7-4c2.61 0 4.9.82 6.1 2.03"
+              d="M17.6 15.03q-.63-.04-1.6-.03c-1.65 0-2.47 0-2.99.51-.51.52-.51 1.34-.51 2.99 0 1.17 0 1.92.18 2.44q-.57.06-1.18.06c-3.87 0-7-1.79-7-4s3.13-4 7-4c2.61 0 4.9.82 6.1 2.03"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M16.5 22c-1.65 0-2.47 0-2.99-.51-.51-.51-.51-1.34-.51-2.99s0-2.47.51-2.99c.52-.5 1.34-.5 2.99-.5s2.47 0 2.99.5c.51.52.51 1.34.51 2.99s0 2.48-.51 2.99c-.52.51-1.34.51-2.99.51m.58-5.06a.58.58 0 1 0-1.16 0v.98h-.98a.58.58 0 1 0 0 1.16h.98v.98a.58.58 0 1 0 1.16 0v-.98h.98a.58.58 0 1 0 0-1.16h-.98z"
+              d="M16 22c-1.65 0-2.47 0-2.99-.51-.51-.51-.51-1.34-.51-2.99s0-2.47.51-2.99c.52-.5 1.34-.5 2.99-.5s2.47 0 2.99.5c.51.52.51 1.34.51 2.99s0 2.48-.51 2.99c-.52.51-1.34.51-2.99.51m.58-5.06a.58.58 0 1 0-1.16 0v.98h-.98a.58.58 0 1 0 0 1.16h.98v.98a.58.58 0 1 0 1.16 0v-.98h.98a.58.58 0 1 0 0-1.16h-.98z"
               fill="currentColor"
             />
           </svg>
@@ -129,15 +129,15 @@ const IconUserPlusRounded = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <circle cx="12" cy="6.00049" r="4" fill="currentColor" />
+            <circle cx="10.9" cy="6.5" r="4" fill="currentColor" />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M19 16.34c.41 0 .75.33.75.75v.66h.66a.75.75 0 0 1 0 1.5h-.66v.66a.75.75 0 0 1-1.5 0v-.66h-.66a.75.75 0 0 1 0-1.5h.66v-.66c0-.42.34-.75.75-.75"
+              d="M17.9 16.84c.41 0 .75.33.75.75v.66h.66a.75.75 0 0 1 0 1.5h-.66v.66a.75.75 0 0 1-1.5 0v-.66h-.66a.75.75 0 0 1 0-1.5h.66v-.66c0-.42.34-.75.75-.75"
               fill="currentColor"
             />
             <path
-              d="M16.14 20.23c-1.16.48-2.59.77-4.14.77-3.87 0-7-1.79-7-4s3.13-4 7-4c2.61 0 4.89.82 6.09 2.03-.57.25-1.02.74-1.22 1.34a2.25 2.25 0 0 0-.73 3.86"
+              d="M15.04 20.73c-1.16.48-2.59.77-4.14.77-3.87 0-7-1.79-7-4s3.13-4 7-4c2.61 0 4.89.82 6.09 2.03-.57.25-1.02.74-1.22 1.34a2.25 2.25 0 0 0-.73 3.86"
               fill="currentColor"
             />
           </svg>

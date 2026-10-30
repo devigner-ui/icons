@@ -22,7 +22,7 @@ const IconStellar = forwardRef<SVGSVGElement, IconProps>(function IconStellar(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,61 @@ const IconStellar = forwardRef<SVGSVGElement, IconProps>(function IconStellar(
           {...rest}
         >
           <path
-            d="M17.03 4.99a8.25 8.25 0 0 0-12.32 9.2"
+            d="M16.36 4.99a8.25 8.25 0 0 0-12.32 9.2"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7.62 18.99A8.25 8.25 0 0 0 19.9 9.64"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M13.93 9.44 22 5"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m2 16 8.05-4.43"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m22 8.5-20 11"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M16.36 4.99a8.25 8.25 0 0 0-12.32 9.2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -44,7 +98,7 @@ const IconStellar = forwardRef<SVGSVGElement, IconProps>(function IconStellar(
             strokeLinejoin="round"
           />
           <path
-            d="m2.67 16 20-11"
+            d="M2 16 22 5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -53,7 +107,7 @@ const IconStellar = forwardRef<SVGSVGElement, IconProps>(function IconStellar(
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="M8.29 18.99a8.25 8.25 0 0 0 12.29-9.35"
+              d="M7.62 18.99a8.25 8.25 0 0 0 12.29-9.35"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -61,7 +115,7 @@ const IconStellar = forwardRef<SVGSVGElement, IconProps>(function IconStellar(
               strokeLinejoin="round"
             />
             <path
-              d="m22.67 8.5-20 11"
+              d="m22 8.5-20 11"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -83,14 +137,14 @@ const IconStellar = forwardRef<SVGSVGElement, IconProps>(function IconStellar(
           {...a11y}
           {...rest}
         >
-          <path d="M24.67 0h-24v24h24z" fill="none" />
+          <path d="M24 0H0v24h24z" fill="none" />
           <path
-            d="M23.33 4.64a.76.76 0 0 0-1.02-.3L5.37 13.66q-.19-.82-.2-1.66a7.5 7.5 0 0 1 11.46-6.37.75.75 0 1 0 .79-1.27A9.01 9.01 0 0 0 3.99 14.39l.01.02-1.69.93a.75.75 0 1 0 .72 1.32l20-11c.36-.2.5-.66.3-1.02"
+            d="M22.66 4.64a.76.76 0 0 0-1.02-.3L4.7 13.66q-.19-.82-.2-1.66a7.5 7.5 0 0 1 11.46-6.37.75.75 0 1 0 .79-1.27A9.01 9.01 0 0 0 3.32 14.39l.01.02-1.69.93a.75.75 0 1 0 .72 1.32l20-11c.36-.2.5-.66.3-1.02"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M23.33 8.14a.76.76 0 0 0-1.02-.3L20.2 9l-.1.06-17.79 9.78a.75.75 0 1 0 .72 1.32l17.03-9.37q.1.6.11 1.21a7.5 7.5 0 0 1-11.48 6.36.75.75 0 0 0-1.03.24.74.74 0 0 0 .24 1.03A9.01 9.01 0 0 0 21.68 12q-.02-1-.24-1.96l1.6-.88c.35-.2.49-.66.29-1.02"
+            d="M22.66 8.14a.76.76 0 0 0-1.02-.3L19.53 9l-.1.06-17.79 9.78a.75.75 0 1 0 .72 1.32l17.03-9.37q.1.6.11 1.21a7.5 7.5 0 0 1-11.48 6.36.75.75 0 0 0-1.03.24.74.74 0 0 0 .24 1.03A9.01 9.01 0 0 0 21.01 12q-.02-1-.24-1.96l1.6-.88c.35-.2.49-.66.29-1.02"
             fill="currentColor"
           />
         </svg>
@@ -108,11 +162,11 @@ const IconStellar = forwardRef<SVGSVGElement, IconProps>(function IconStellar(
           {...rest}
         >
           <path
-            d="M23.33 4.64a.76.76 0 0 0-1.02-.3L5.37 13.66q-.19-.82-.2-1.66a7.5 7.5 0 0 1 11.46-6.37.75.75 0 1 0 .79-1.27A9.01 9.01 0 0 0 3.99 14.39l.01.02-1.69.93a.75.75 0 1 0 .72 1.32l20-11c.36-.2.5-.66.3-1.02"
+            d="M22.66 4.64a.76.76 0 0 0-1.02-.3L4.7 13.66q-.19-.82-.2-1.66a7.5 7.5 0 0 1 11.46-6.37.75.75 0 1 0 .79-1.27A9.01 9.01 0 0 0 3.32 14.39l.01.02-1.69.93a.75.75 0 1 0 .72 1.32l20-11c.36-.2.5-.66.3-1.02"
             fill="currentColor"
           />
           <path
-            d="M23.33 8.14a.76.76 0 0 0-1.02-.3L20.2 9l-.1.06-17.79 9.78a.75.75 0 1 0 .72 1.32l17.03-9.37q.1.6.11 1.21a7.5 7.5 0 0 1-11.48 6.36.75.75 0 0 0-1.03.24.74.74 0 0 0 .24 1.03A9.01 9.01 0 0 0 21.68 12q-.02-1-.24-1.96l1.6-.88c.35-.2.49-.66.29-1.02"
+            d="M22.66 8.14a.76.76 0 0 0-1.02-.3L19.53 9l-.1.06-17.79 9.78a.75.75 0 1 0 .72 1.32l17.03-9.37q.1.6.11 1.21a7.5 7.5 0 0 1-11.48 6.36.75.75 0 0 0-1.03.24.74.74 0 0 0 .24 1.03A9.01 9.01 0 0 0 21.01 12q-.02-1-.24-1.96l1.6-.88c.35-.2.49-.66.29-1.02"
             fill="currentColor"
           />
         </svg>

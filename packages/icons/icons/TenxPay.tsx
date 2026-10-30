@@ -22,7 +22,36 @@ const IconTenxPay = forwardRef<SVGSVGElement, IconProps>(function IconTenxPay(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 12 8.75 8.75 5.5 12l3.25 3.25 6.5-6.5L18.5 12l-3.25 3.25z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,7 +66,7 @@ const IconTenxPay = forwardRef<SVGSVGElement, IconProps>(function IconTenxPay(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 12 9.42 8.75 6.17 12l3.25 3.25 6.5-6.5L19.17 12l-3.25 3.25z"
+            d="M12 12 8.75 8.75 5.5 12l3.25 3.25 6.5-6.5L18.5 12l-3.25 3.25z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -45,7 +74,7 @@ const IconTenxPay = forwardRef<SVGSVGElement, IconProps>(function IconTenxPay(
             strokeLinejoin="round"
           />
           <path
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -66,16 +95,16 @@ const IconTenxPay = forwardRef<SVGSVGElement, IconProps>(function IconTenxPay(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             fill="currentColor"
           />
           <path
-            d="m12.67 12-2.54-2.54a1 1 0 0 0-1.41 0L6.88 11.3a1 1 0 0 0 0 1.41l1.84 1.84a1 1 0 0 0 1.41 0l5.09-5.09a1 1 0 0 1 1.41 0l1.84 1.84a1 1 0 0 1 0 1.41l-1.84 1.84a1 1 0 0 1-1.41 0z"
+            d="M12 12 9.46 9.46a1 1 0 0 0-1.41 0L6.21 11.3a1 1 0 0 0 0 1.41l1.84 1.84a1 1 0 0 0 1.41 0l5.09-5.09a1 1 0 0 1 1.41 0l1.84 1.84a1 1 0 0 1 0 1.41l-1.84 1.84a1 1 0 0 1-1.41 0z"
             fill="currentColor"
           />
         </svg>
@@ -93,7 +122,7 @@ const IconTenxPay = forwardRef<SVGSVGElement, IconProps>(function IconTenxPay(
           {...rest}
         >
           <path
-            d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m5.79 10.71-1.84 1.84a1 1 0 0 1-1.41 0L12.67 12l-2.54 2.54a1 1 0 0 1-1.41 0L6.88 12.7a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0L12.67 12l2.54-2.54a1 1 0 0 1 1.41 0l1.84 1.84a1 1 0 0 1 0 1.41"
+            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m5.79 10.71-1.84 1.84a1 1 0 0 1-1.41 0L12 12l-2.54 2.54a1 1 0 0 1-1.41 0L6.21 12.7a1 1 0 0 1 0-1.41l1.84-1.84a1 1 0 0 1 1.41 0L12 12l2.54-2.54a1 1 0 0 1 1.41 0l1.84 1.84a1 1 0 0 1 0 1.41"
             fill="currentColor"
           />
         </svg>

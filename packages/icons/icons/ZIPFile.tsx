@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconZIPFile = forwardRef<SVGSVGElement, IconProps>(function IconZIPFile(
+const IconZipFile = forwardRef<SVGSVGElement, IconProps>(function IconZipFile(
   { className, variant = "Outline", strokeWidth = "1.5", ...rest },
   ref,
 ) {
@@ -166,4 +166,4 @@ const IconZIPFile = forwardRef<SVGSVGElement, IconProps>(function IconZIPFile(
   );
 });
 
-export default IconZIPFile;
+export default IconZipFile;

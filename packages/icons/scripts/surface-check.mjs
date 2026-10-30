@@ -14,6 +14,7 @@ import { existsSync, readFileSync, rmSync, readdirSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { activeRenames } from "./renames.mjs";
 
 const CLI = fileURLToPath(new URL("../bin/cli.mjs", import.meta.url));
 
@@ -263,8 +264,8 @@ if (!existsSync(declarations)) {
     const metadata = JSON.parse(
       readFileSync(new URL("../src/metadata.json", import.meta.url), "utf8"),
     );
-    // One per icon, plus the exported IconComponentType alias.
-    assert.equal(forwarding, metadata.icons.length + 1);
+    // One per icon, one per deprecated old name, plus the IconComponentType alias.
+    assert.equal(forwarding, metadata.icons.length + activeRenames().length + 1);
   });
 }
 
@@ -304,9 +305,10 @@ check("the root entries stay modular", () => {
   }
   const root = readFileSync(esm, "utf8");
   const commonjs = readFileSync(new URL("../dist/index.cjs", import.meta.url), "utf8");
-  const expected = JSON.parse(
-    readFileSync(new URL("../src/metadata.json", import.meta.url), "utf8"),
-  ).icons.length;
+  /* Every icon, plus the deprecated old names, which are re-exports too. */
+  const expected =
+    JSON.parse(readFileSync(new URL("../src/metadata.json", import.meta.url), "utf8")).icons.length +
+    activeRenames().length;
   assert.equal((root.match(/^export \{ Icon/gm) ?? []).length, expected);
   assert.equal((commonjs.match(/^Object\.defineProperty\(exports, "Icon/gm) ?? []).length, expected);
   assert.match(root, /export \{ IconShoppingCart \} from '\.\/icons\/ShoppingCart\.js'/);
@@ -372,7 +374,8 @@ check("icons are hidden from screen readers unless labelled", () => {
   const missing = [];
   for (const file of sources) {
     const src = readFileSync(new URL(`../icons/${file}`, import.meta.url), "utf8");
-    const expected = src.includes('variant === "Broken"') ? 4 : 3;
+    /* Every drawing; artwork-check.mjs owns how many there should be. */
+    const expected = (src.match(/<svg/g) ?? []).length;
     const hidden = (src.match(/\{\.\.\.a11y\}/g) ?? []).length;
     const focusable = (src.match(/focusable="false"/g) ?? []).length;
     const spread = (src.match(/\{\.\.\.rest\}/g) ?? []).length;

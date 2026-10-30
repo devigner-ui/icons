@@ -36,30 +36,32 @@ const IconBed = forwardRef<SVGSVGElement, IconProps>(function IconBed(
           {...rest}
         >
           <path
-            d="M19 20v-1.5M5 20v-1.5"
+            d="M2 6v12"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
-            d="M2 15c0-.93 0-1.4.15-1.77a2 2 0 0 1 1.08-1.08C3.6 12 4.07 12 5 12h14c.93 0 1.4 0 1.77.15a2 2 0 0 1 1.08 1.08c.15.37.15.84.15 1.77s0 1.4-.15 1.77a2 2 0 0 1-1.08 1.08c-.37.15-.84.15-1.77.15H5c-.93 0-1.4 0-1.77-.15a2 2 0 0 1-1.08-1.08C2 16.4 2 15.93 2 15Z"
+            d="M22 18v-2.36c0-2 0-2.99-.28-3.8a5 5 0 0 0-3.07-3.06c-.8-.28-1.8-.28-3.8-.28q-.77-.06-1.51.11c-.58.2-1.03.65-1.23 1.23-.11.32-.11.72-.11 1.52V16"
             stroke="currentColor"
             strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
-            d="M21 12c0-3.77 0-5.66-1.17-6.83S16.77 4 13 4h-2C7.23 4 5.34 4 4.17 5.17S3 8.23 3 12"
+            d="M2 16h6.25m3.5 0H22"
             stroke="currentColor"
             strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
-            d="M18.5 12v-1.5c0-1.89 0-2.83-.59-3.41-.58-.59-1.52-.59-3.41-.59h-5c-1.89 0-2.83 0-3.41.59-.59.58-.59 1.52-.59 3.41V12"
+            d="M9.5 11a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
-          />
-          <path
-            d="M12 7v5"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ) : !fill ? (

@@ -23,7 +23,42 @@ const IconTextBlock = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 12.94V15c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7 8.89a11.2 11.2 0 0 1 10 0"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 16.3V7.93"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +72,7 @@ const IconTextBlock = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M9.67 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7h-6c-5 0-7 2-7 7v6c0 5 2 7 7 7"
+              d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -45,14 +80,14 @@ const IconTextBlock = forwardRef<SVGSVGElement, IconProps>(
             />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M7.67 8.89a11.2 11.2 0 0 1 10 0"
+                d="M7 8.89a11.2 11.2 0 0 1 10 0"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M12.67 16.3V7.93"
+                d="M12 16.3V7.93"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
@@ -75,11 +110,11 @@ const IconTextBlock = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.86 2H8.48c-3.64 0-5.8 2.17-5.8 5.81v8.37c0 3.65 2.16 5.82 5.8 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2"
+              d="M16.19 2H7.81c-3.64 0-5.8 2.17-5.8 5.81v8.37c0 3.65 2.16 5.82 5.8 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2"
               fill="currentColor"
             />
             <path
-              d="M18.01 8.21a12 12 0 0 0-10.67 0 .75.75 0 0 0 .33 1.42q.17 0 .34-.08 1.87-.9 3.91-1.05v7.79c0 .41.34.75.75.75s.75-.34.75-.75V8.5c1.35.1 2.68.44 3.91 1.05.37.18.82.04 1.01-.34a.74.74 0 0 0-.33-1"
+              d="M17.34 8.21a12 12 0 0 0-10.67 0A.75.75 0 0 0 7 9.63q.17 0 .34-.08 1.87-.9 3.91-1.05v7.79c0 .41.34.75.75.75s.75-.34.75-.75V8.5c1.35.1 2.68.44 3.91 1.05.37.18.82.04 1.01-.34a.74.74 0 0 0-.33-1"
               fill="currentColor"
             />
           </svg>
@@ -97,7 +132,7 @@ const IconTextBlock = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.86 2H8.48c-3.64 0-5.8 2.17-5.8 5.81v8.37c0 3.65 2.16 5.82 5.8 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2m1.48 7.22a.76.76 0 0 1-1 .34 10 10 0 0 0-3.92-1.06v7.79c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V8.5c-1.35.1-2.68.44-3.9 1.06a1 1 0 0 1-.35.07.75.75 0 0 1-.34-1.42 12 12 0 0 1 10.67 0c.38.19.53.64.34 1.01"
+              d="M16.19 2H7.81c-3.64 0-5.8 2.17-5.8 5.81v8.37c0 3.65 2.16 5.82 5.8 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2m1.48 7.22a.76.76 0 0 1-1 .34 10 10 0 0 0-3.92-1.06v7.79c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V8.5c-1.35.1-2.68.44-3.9 1.06a1 1 0 0 1-.35.07.75.75 0 0 1-.34-1.42 12 12 0 0 1 10.67 0c.38.19.53.64.34 1.01"
               fill="currentColor"
             />
           </svg>

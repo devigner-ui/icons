@@ -23,7 +23,69 @@ const IconCloudRemove = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5.54 11.12c-4.68.33-4.68 7.14 0 7.47h1.92"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M17.47 8c4.33.55 6.08 6.32 2.8 9.19a5.3 5.3 0 0 1-3.64 1.4h-.1"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M5.59 11.12C3.06 4.09 10.92.38 15.13 3.7"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m12.97 17.61-2.11-2.11"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m12.95 15.52-2.12 2.12"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M17 16.53a4.7 4.7 0 0 1-.73 2.57 4.96 4.96 0 0 1-8.81-.51A5 5 0 1 1 17 16.53Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +99,7 @@ const IconCloudRemove = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="m13.64 17.61-2.11-2.11"
+              d="m12.97 17.61-2.11-2.11"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -45,7 +107,7 @@ const IconCloudRemove = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="m13.62 15.52-2.12 2.12"
+              d="m12.95 15.52-2.12 2.12"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -54,7 +116,7 @@ const IconCloudRemove = forwardRef<SVGSVGElement, IconProps>(
             />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M6.21 11.12c-4.68.33-4.68 7.14 0 7.47h1.92"
+                d="M5.54 11.12c-4.68.33-4.68 7.14 0 7.47h1.92"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -62,7 +124,7 @@ const IconCloudRemove = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="M6.26 11.12C3.05 2.19 16.59-1.38 18.14 8c4.33.55 6.08 6.32 2.8 9.19a5.3 5.3 0 0 1-3.64 1.4h-.09"
+                d="M5.59 11.12C2.38 2.19 15.92-1.38 17.47 8c4.33.55 6.08 6.32 2.8 9.19a5.3 5.3 0 0 1-3.64 1.4h-.09"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -71,7 +133,7 @@ const IconCloudRemove = forwardRef<SVGSVGElement, IconProps>(
               />
             </g>
             <path
-              d="M17.67 16.53a4.7 4.7 0 0 1-.73 2.57 4.96 4.96 0 0 1-8.81-.51 5 5 0 1 1 9.54-2.06"
+              d="M17 16.53a4.7 4.7 0 0 1-.73 2.57 4.96 4.96 0 0 1-8.81-.51A5 5 0 1 1 17 16.53"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -94,11 +156,11 @@ const IconCloudRemove = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M20.94 17.19a5.3 5.3 0 0 1-3.64 1.4h-.09q.45-.94.46-2.06a5 5 0 1 0-9.54 2.06H6.21c-4.68-.33-4.68-7.14 0-7.47h.05C3.05 2.19 16.59-1.38 18.14 8c4.33.55 6.08 6.32 2.8 9.19"
+              d="M20.27 17.19a5.3 5.3 0 0 1-3.64 1.4h-.09q.45-.94.46-2.06a5 5 0 1 0-9.54 2.06H5.54c-4.68-.33-4.68-7.14 0-7.47h.05C2.38 2.19 15.92-1.38 17.47 8c4.33.55 6.08 6.32 2.8 9.19"
               fill="currentColor"
             />
             <path
-              d="M12.67 11.53a5 5 0 1 0 0 10 5 5 0 0 0 0-10m1.5 6.61a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-.53-.53-.55.55a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l.55-.55-.53-.53a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l.53.53.5-.5a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-.5.5.53.53c.29.3.29.77 0 1.06"
+              d="M12 11.53a5 5 0 1 0 0 10 5 5 0 0 0 0-10m1.5 6.61a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-.53-.53-.55.55a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l.55-.55-.53-.53a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l.53.53.5-.5a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-.5.5.53.53c.29.3.29.77 0 1.06"
               fill="currentColor"
             />
           </svg>
@@ -116,11 +178,11 @@ const IconCloudRemove = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 11.53a5 5 0 1 0 0 10 5 5 0 0 0 0-10m1.5 6.61a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-.53-.53-.55.55a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l.55-.55-.53-.53a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l.53.53.5-.5a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-.5.5.53.53c.29.3.29.77 0 1.06"
+              d="M12 11.53a5 5 0 1 0 0 10 5 5 0 0 0 0-10m1.5 6.61a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-.53-.53-.55.55a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l.55-.55-.53-.53a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l.53.53.5-.5a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-.5.5.53.53c.29.3.29.77 0 1.06"
               fill="currentColor"
             />
             <path
-              d="M20.87 17.29q-.54.48-1.17.81c-.36.18-.72-.17-.66-.57q.06-.43.06-.9c0-3.58-2.92-6.5-6.5-6.5a6.5 6.5 0 0 0-6.36 7.83c.07.35-.2.7-.55.61-3.95-.96-3.97-7.04.45-7.36h.05C2.98 2.29 16.52-1.28 18.07 8.1c4.33.55 6.08 6.32 2.8 9.19"
+              d="M20.2 17.29q-.54.48-1.17.81c-.36.18-.72-.17-.66-.57q.06-.43.06-.9c0-3.58-2.92-6.5-6.5-6.5a6.5 6.5 0 0 0-6.36 7.83c.07.35-.2.7-.55.61-3.95-.96-3.97-7.04.45-7.36h.05C2.31 2.29 15.85-1.28 17.4 8.1c4.33.55 6.08 6.32 2.8 9.19"
               fill="currentColor"
             />
           </svg>

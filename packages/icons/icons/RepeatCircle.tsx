@@ -23,7 +23,60 @@ const IconRepeatCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M7.5 8.34h7.4c.89 0 1.6.72 1.6 1.6v1.77"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M9.19 6.66 7.5 8.34l1.69 1.69"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M16.5 15.66H9.1a1.6 1.6 0 0 1-1.6-1.6v-1.77"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m14.81 17.34 1.69-1.68-1.69-1.69"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,7 +91,7 @@ const IconRepeatCircle = forwardRef<SVGSVGElement, IconProps>(
           >
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M8.17 8.34h7.4c.89 0 1.6.72 1.6 1.6v1.77"
+                d="M7.5 8.34h7.4c.89 0 1.6.72 1.6 1.6v1.77"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -46,7 +99,7 @@ const IconRepeatCircle = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="M9.86 6.66 8.17 8.34l1.69 1.69"
+                d="M9.19 6.66 7.5 8.34l1.69 1.69"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -54,7 +107,7 @@ const IconRepeatCircle = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="M17.17 15.66h-7.4a1.6 1.6 0 0 1-1.6-1.6v-1.77"
+                d="M16.5 15.66H9.1a1.6 1.6 0 0 1-1.6-1.6v-1.77"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -62,7 +115,7 @@ const IconRepeatCircle = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="m15.48 17.34 1.69-1.68-1.69-1.69"
+                d="m14.81 17.34 1.69-1.68-1.69-1.69"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeMiterlimit="10"
@@ -71,7 +124,7 @@ const IconRepeatCircle = forwardRef<SVGSVGElement, IconProps>(
               />
             </g>
             <path
-              d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -94,15 +147,15 @@ const IconRepeatCircle = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               fill="currentColor"
             />
             <path
-              d="M15.57 7.59H9.98l.41-.41a.75.75 0 0 0 0-1.06.75.75 0 0 0-1.06 0L7.64 7.81a1 1 0 0 0-.16.24.7.7 0 0 0 0 .57q.06.13.16.24l1.69 1.69q.23.22.53.22t.53-.22a.75.75 0 0 0 0-1.06l-.41-.41h5.59c.47 0 .85.38.85.85v1.77c0 .41.34.75.75.75s.75-.34.75-.75V9.93a2.36 2.36 0 0 0-2.35-2.34"
+              d="M14.9 7.59H9.31l.41-.41a.75.75 0 0 0 0-1.06.75.75 0 0 0-1.06 0L6.97 7.81a1 1 0 0 0-.16.24.7.7 0 0 0 0 .57q.06.13.16.24l1.69 1.69q.23.22.53.22t.53-.22a.75.75 0 0 0 0-1.06l-.41-.41h5.59c.47 0 .85.38.85.85v1.77c0 .41.34.75.75.75s.75-.34.75-.75V9.93a2.36 2.36 0 0 0-2.35-2.34"
               fill="currentColor"
             />
             <path
-              d="M17.86 15.37a1 1 0 0 0-.16-.24l-1.69-1.69a.75.75 0 0 0-1.06 0 .75.75 0 0 0 0 1.06l.41.41H9.77a.85.85 0 0 1-.85-.85v-1.77a.76.76 0 0 0-.75-.75.76.76 0 0 0-.75.75v1.77c0 1.3 1.06 2.35 2.35 2.35h5.59l-.41.41a.75.75 0 0 0 0 1.06q.23.22.53.22t.53-.22l1.69-1.69a1 1 0 0 0 .16-.24.7.7 0 0 0 0-.58"
+              d="M17.19 15.37a1 1 0 0 0-.16-.24l-1.69-1.69a.75.75 0 0 0-1.06 0 .75.75 0 0 0 0 1.06l.41.41H9.1a.85.85 0 0 1-.85-.85v-1.77a.76.76 0 0 0-.75-.75.76.76 0 0 0-.75.75v1.77c0 1.3 1.06 2.35 2.35 2.35h5.59l-.41.41a.75.75 0 0 0 0 1.06q.23.22.53.22t.53-.22l1.69-1.69a1 1 0 0 0 .16-.24.7.7 0 0 0 0-.58"
               fill="currentColor"
             />
           </svg>
@@ -120,7 +173,7 @@ const IconRepeatCircle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m5.19 13.94a1 1 0 0 1-.16.24l-1.69 1.69a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l.41-.41H9.77a2.35 2.35 0 0 1-2.35-2.35v-1.77c0-.41.34-.75.75-.75s.75.34.75.75v1.77c0 .47.38.85.85.85h5.59l-.41-.41a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l1.69 1.69q.1.1.16.24.12.3 0 .58m.06-4.22c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V9.95a.85.85 0 0 0-.85-.85H9.98l.41.4c.29.29.29.77 0 1.06a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22L7.64 8.87a1 1 0 0 1-.16-.24.7.7 0 0 1 0-.57 1 1 0 0 1 .16-.25l1.69-1.69a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-.41.41h5.59c1.3 0 2.35 1.06 2.35 2.35z"
+              d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m5.19 13.94a1 1 0 0 1-.16.24l-1.69 1.69a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22.75.75 0 0 1 0-1.06l.41-.41H9.1a2.35 2.35 0 0 1-2.35-2.35v-1.77c0-.41.34-.75.75-.75s.75.34.75.75v1.77c0 .47.38.85.85.85h5.59l-.41-.41a.75.75 0 0 1 0-1.06.75.75 0 0 1 1.06 0l1.69 1.69q.1.1.16.24.12.3 0 .58m.06-4.22c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V9.95a.85.85 0 0 0-.85-.85H9.31l.41.4c.29.29.29.77 0 1.06a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22L6.97 8.87a1 1 0 0 1-.16-.24.7.7 0 0 1 0-.57 1 1 0 0 1 .16-.25l1.69-1.69a.75.75 0 0 1 1.06 0c.29.29.29.77 0 1.06l-.41.41h5.59c1.3 0 2.35 1.06 2.35 2.35z"
               fill="currentColor"
             />
           </svg>

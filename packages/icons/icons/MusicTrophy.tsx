@@ -23,7 +23,84 @@ const IconMusicTrophy = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M10.63 2.03a30 30 0 0 1 5.75.32c1.14.19 1.7.28 2.18.87s.45 1.22.4 2.49c-.1 2.43-.43 5.19-1.6 7.24m-2.45 2.42q-1.2.62-2.91.63c-5.76 0-6.78-5.74-6.96-10.3-.05-1.26-.08-1.9.4-2.48.41-.49.88-.64 1.71-.79"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M13 10.5V5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10 10.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M15 7a2 2 0 0 1-2-2"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m19 5 .95.32c.99.33 1.48.5 1.77.88.28.4.28.92.28 1.96v.07c0 .87 0 1.3-.2 1.65s-.6.56-1.34.98L17.5 12.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m5 5-.95.32c-.99.33-1.48.5-1.77.88C2 6.6 2 7.12 2 8.16v.07c0 .87 0 1.3.2 1.65s.6.56 1.34.98L6.5 12.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 16v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M15.5 22h-7l.34-1.7a1 1 0 0 1 .98-.8h4.36a1 1 0 0 1 .98.8z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M18 22H6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -109,36 +186,36 @@ const IconMusicTrophy = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12 16c-5.76 0-6.78-5.74-6.96-10.3-.05-1.26-.08-1.9.4-2.48s1.04-.68 2.18-.87C8.75 2.15 10.22 2 12 2s3.25.16 4.38.35c1.14.19 1.7.28 2.18.87s.45 1.22.4 2.49C18.78 10.26 17.76 16 12 16"
+              d="M12 15.6c-5.76 0-6.78-5.74-6.96-10.3-.05-1.26-.08-1.9.4-2.48s1.04-.68 2.18-.87c1.13-.2 2.6-.35 4.38-.35s3.25.16 4.38.35c1.14.19 1.7.28 2.18.87s.45 1.22.4 2.49C18.78 9.86 17.76 15.6 12 15.6"
               fill="currentColor"
             />
             <path
-              d="m17.64 12.42 2.82-1.56c.75-.42 1.13-.63 1.33-.98S22 9.1 22 8.23v-.07c0-1.04 0-1.56-.28-1.96s-.78-.55-1.77-.88L19 5l-.02.08-.02.63c-.09 2.22-.38 4.73-1.32 6.71"
+              d="m17.64 12.02 2.82-1.56c.75-.42 1.13-.63 1.33-.98S22 8.7 22 7.83v-.07c0-1.04 0-1.56-.28-1.96s-.78-.55-1.77-.88L19 4.6l-.02.08-.02.63c-.09 2.22-.38 4.73-1.32 6.71"
               fill="currentColor"
             />
             <path
-              d="M5.04 5.7c.09 2.23.38 4.74 1.32 6.72l-2.82-1.56c-.75-.42-1.13-.63-1.33-.98S2 9.1 2 8.23v-.07c0-1.04 0-1.56.28-1.96s.78-.55 1.77-.88L5 5l.02.09z"
+              d="M5.04 5.3c.09 2.23.38 4.74 1.32 6.72l-2.82-1.56c-.75-.42-1.13-.63-1.33-.98S2 8.7 2 7.83v-.07c0-1.04 0-1.56.28-1.96s.78-.55 1.77-.88L5 4.6l.02.09z"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M5.25 22c0-.41.34-.75.75-.75h12a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75"
+              d="M5.25 21.6c0-.41.34-.75.75-.75h12a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M15.46 21.25H8.54l.3-1.75a1 1 0 0 1 .98-.8h4.36a1 1 0 0 1 .98.8z"
+              d="M15.46 20.85H8.54l.3-1.75a1 1 0 0 1 .98-.8h4.36a1 1 0 0 1 .98.8z"
               fill="currentColor"
             />
             <path
-              d="M12 16q-.38 0-.75-.03v2.73h1.5v-2.73q-.36.03-.75.03"
+              d="M12 15.6q-.38 0-.75-.03v2.73h1.5v-2.73q-.36.03-.75.03"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M13 4.25c.41 0 .75.34.75.75 0 .69.56 1.25 1.25 1.25a.75.75 0 0 1 0 1.5q-.68 0-1.25-.3v3.05a2.25 2.25 0 1 1-1.5-2.12V5c0-.41.34-.75.75-.75m-1.5 5.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5"
+              d="M13 3.85c.41 0 .75.34.75.75 0 .69.56 1.25 1.25 1.25a.75.75 0 0 1 0 1.5q-.68 0-1.25-.3v3.05a2.25 2.25 0 1 1-1.5-2.12V4.6c0-.41.34-.75.75-.75m-1.5 5.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5"
               fill="currentColor"
             />
           </svg>
@@ -156,21 +233,21 @@ const IconMusicTrophy = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M11.32 11.27a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              d="M11.32 10.87a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M12 2c1.78 0 3.25.16 4.38.35 1.14.19 1.7.28 2.18.87s.45 1.22.4 2.49c-.17 4.34-1.11 9.78-6.21 10.26v3.53h1.43a1 1 0 0 1 .98.8l.19.95H18a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1 0-1.5h2.65l.19-.95a1 1 0 0 1 .98-.8h1.43v-3.53c-5.1-.48-6.04-5.92-6.21-10.26-.05-1.27-.08-1.9.4-2.49s1.04-.68 2.18-.87C8.75 2.15 10.22 2 12 2m1.5 2.75a.75.75 0 0 0-1.5 0v3.38a2.25 2.25 0 1 0 1.5 2.12V7.2q.57.3 1.25.3a.75.75 0 0 0 0-1.5c-.69 0-1.25-.56-1.25-1.25"
+              d="M12 1.6c1.78 0 3.25.16 4.38.35 1.14.19 1.7.28 2.18.87s.45 1.22.4 2.49c-.17 4.34-1.11 9.78-6.21 10.26v3.53h1.43a1 1 0 0 1 .98.8l.19.95H18a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1 0-1.5h2.65l.19-.95a1 1 0 0 1 .98-.8h1.43v-3.53c-5.1-.48-6.04-5.92-6.21-10.26-.05-1.27-.08-1.9.4-2.49s1.04-.68 2.18-.87c1.13-.2 2.6-.35 4.38-.35m1.5 2.75a.75.75 0 0 0-1.5 0v3.38a2.25 2.25 0 1 0 1.5 2.12V6.8q.57.3 1.25.3a.75.75 0 0 0 0-1.5c-.69 0-1.25-.56-1.25-1.25"
               fill="currentColor"
             />
             <path
-              d="M2 8.16v.07c0 .87 0 1.3.2 1.65s.6.56 1.34.98l.8.44a23 23 0 0 1-.8-5.75l-.01-.06c-.65.23-1.02.4-1.25.71C2 6.6 2 7.12 2 8.16"
+              d="M2 7.76v.07c0 .87 0 1.3.2 1.65s.6.56 1.34.98l.8.44a23 23 0 0 1-.8-5.75l-.01-.06c-.65.23-1.02.4-1.25.71C2 6.2 2 6.72 2 7.76"
               fill="currentColor"
             />
             <path
-              d="M22 8.16v.07c0 .87 0 1.3-.2 1.65s-.6.56-1.34.98l-.8.44c.55-1.85.73-3.84.8-5.53v-.23l.01-.05c.65.23 1.02.4 1.25.71.28.4.28.92.28 1.96"
+              d="M22 7.76v.07c0 .87 0 1.3-.2 1.65s-.6.56-1.34.98l-.8.44c.55-1.85.73-3.84.8-5.53v-.23l.01-.05c.65.23 1.02.4 1.25.71.28.4.28.92.28 1.96"
               fill="currentColor"
             />
           </svg>

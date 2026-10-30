@@ -23,7 +23,65 @@ const IconConvertCard = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 5.56h10"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15.65 10.5h-1.43c-1.78 0-2.22-.44-2.22-2.2V4.2c0-1.76.44-2.2 2.22-2.2h5.56C21.56 2 22 2.44 22 4.2v4.11c0 1.76-.44 2.2-2.22 2.2"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 17.06h10"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M5.5 22H4.22C2.44 22 2 21.56 2 19.8v-4.1c0-1.76.44-2.2 2.22-2.2h5.56c1.78 0 2.22.44 2.22 2.2v4.11c0 1.76-.44 2.2-2.22 2.2"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M22 15a7 7 0 0 1-7 7l1.05-1.75"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 9a7 7 0 0 1 7-7L7.95 3.75"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +95,7 @@ const IconConvertCard = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 5.56h10"
+              d="M12 5.56h10"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -45,14 +103,14 @@ const IconConvertCard = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M14.89 2h5.56c1.78 0 2.22.44 2.22 2.2v4.11c0 1.76-.44 2.2-2.22 2.2h-5.56c-1.78 0-2.22-.44-2.22-2.2V4.2c0-1.76.44-2.2 2.22-2.2"
+              d="M14.22 2h5.56C21.56 2 22 2.44 22 4.2v4.11c0 1.76-.44 2.2-2.22 2.2h-5.56c-1.78 0-2.22-.44-2.22-2.2V4.2c0-1.76.44-2.2 2.22-2.2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M2.67 17.06h10"
+              d="M2 17.06h10"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -60,7 +118,7 @@ const IconConvertCard = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M4.89 13.5h5.56c1.78 0 2.22.44 2.22 2.2v4.11c0 1.76-.44 2.2-2.22 2.2H4.89c-1.78 0-2.22-.44-2.22-2.2V15.7c0-1.76.44-2.2 2.22-2.2"
+              d="M4.22 13.5h5.56c1.78 0 2.22.44 2.22 2.2v4.11c0 1.76-.44 2.2-2.22 2.2H4.22c-1.78 0-2.22-.44-2.22-2.2V15.7c0-1.76.44-2.2 2.22-2.2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -68,7 +126,7 @@ const IconConvertCard = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22.67 15a7 7 0 0 1-7 7l1.05-1.75"
+              d="M22 15a7 7 0 0 1-7 7l1.05-1.75"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -76,7 +134,7 @@ const IconConvertCard = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M2.67 9a7 7 0 0 1 7-7L8.62 3.75"
+              d="M2 9a7 7 0 0 1 7-7L7.95 3.75"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -100,32 +158,32 @@ const IconConvertCard = forwardRef<SVGSVGElement, IconProps>(
               opacity={duotone ? "0.4" : "1"}
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M22.67 14.25c.41 0 .75.34.75.75a7.74 7.74 0 0 1-7.75 7.75.75.75 0 0 1-.64-1.14l1.05-1.75a.75.75 0 1 1 1.28.78l-.27.45A6.25 6.25 0 0 0 21.92 15c0-.41.34-.75.75-.75"
+              d="M22 14.25c.41 0 .75.34.75.75A7.74 7.74 0 0 1 15 22.75a.75.75 0 0 1-.64-1.14l1.05-1.75a.75.75 0 1 1 1.28.78l-.27.45A6.25 6.25 0 0 0 21.25 15c0-.41.34-.75.75-.75"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M8.25 2.91A6.25 6.25 0 0 0 3.42 9a.75.75 0 1 1-1.5 0 7.74 7.74 0 0 1 7.75-7.75.75.75 0 0 1 .64 1.14L9.26 4.14a.75.75 0 0 1-1.28-.78z"
+              d="M7.58 2.91A6.25 6.25 0 0 0 2.75 9a.75.75 0 1 1-1.5 0A7.74 7.74 0 0 1 9 1.25a.75.75 0 0 1 .64 1.14L8.59 4.14a.75.75 0 0 1-1.28-.78z"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.67 15.7v.61h-10v-.61c0-1.76.44-2.2 2.22-2.2h5.56c1.78 0 2.22.44 2.22 2.2"
+              d="M12 15.7v.61H2v-.61c0-1.76.44-2.2 2.22-2.2h5.56c1.78 0 2.22.44 2.22 2.2"
               fill="currentColor"
             />
             <path
-              d="M2.67 16.31v3.49c0 1.76.44 2.2 2.22 2.2h5.56c1.78 0 2.22-.44 2.22-2.2v-3.49z"
+              d="M2 16.31v3.49c0 1.76.44 2.2 2.22 2.2h5.56c1.78 0 2.22-.44 2.22-2.2v-3.49z"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22.67 4.2v.61h-10V4.2c0-1.76.44-2.2 2.22-2.2h5.56c1.78 0 2.22.44 2.22 2.2"
+              d="M22 4.2v.61H12V4.2c0-1.76.44-2.2 2.22-2.2h5.56C21.56 2 22 2.44 22 4.2"
               fill="currentColor"
             />
             <path
-              d="M12.67 4.81V8.3c0 1.76.44 2.2 2.22 2.2h5.56c1.78 0 2.22-.44 2.22-2.2V4.81z"
+              d="M12 4.81V8.3c0 1.76.44 2.2 2.22 2.2h5.56c1.78 0 2.22-.44 2.22-2.2V4.81z"
               fill="currentColor"
             />
           </svg>
@@ -143,31 +201,33 @@ const IconConvertCard = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M22.67 15a7 7 0 0 1-7 7l1.05-1.75"
+              d="M22 15a7 7 0 0 1-7 7l1.05-1.75"
+              stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M2.67 9a7 7 0 0 1 7-7L8.62 3.75"
+              d="M2 9a7 7 0 0 1 7-7L7.95 3.75"
+              stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M22.67 4.2v.11a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V4.2c0-1.76.44-2.2 2.22-2.2h5.56c1.78 0 2.22.44 2.22 2.2"
+              d="M22 4.2v.11a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V4.2c0-1.76.44-2.2 2.22-2.2h5.56C21.56 2 22 2.44 22 4.2"
               fill="currentColor"
             />
             <path
-              d="M13.17 5.81a.5.5 0 0 0-.5.5V8.3c0 1.76.44 2.2 2.22 2.2h5.56c1.78 0 2.22-.44 2.22-2.2V6.31a.5.5 0 0 0-.5-.5z"
+              d="M12.5 5.81a.5.5 0 0 0-.5.5V8.3c0 1.76.44 2.2 2.22 2.2h5.56c1.78 0 2.22-.44 2.22-2.2V6.31a.5.5 0 0 0-.5-.5z"
               fill="currentColor"
             />
             <path
-              d="M12.67 15.7v.11a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-.11c0-1.76.44-2.2 2.22-2.2h5.56c1.78 0 2.22.44 2.22 2.2"
+              d="M12 15.7v.11a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-.11c0-1.76.44-2.2 2.22-2.2h5.56c1.78 0 2.22.44 2.22 2.2"
               fill="currentColor"
             />
             <path
-              d="M3.17 17.31a.5.5 0 0 0-.5.5v1.99c0 1.76.44 2.2 2.22 2.2h5.56c1.78 0 2.22-.44 2.22-2.2v-1.99a.5.5 0 0 0-.5-.5z"
+              d="M2.5 17.31a.5.5 0 0 0-.5.5v1.99c0 1.76.44 2.2 2.22 2.2h5.56c1.78 0 2.22-.44 2.22-2.2v-1.99a.5.5 0 0 0-.5-.5z"
               fill="currentColor"
             />
           </svg>

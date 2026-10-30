@@ -25,8 +25,9 @@ const ROOT = fileURLToPath(new URL("..", import.meta.url));
 
 /* Two stroked icons, one of them drawn with <circle> rather than <path>, and
    one carrying a <g>/clipPath group. Between them they cover every element the
-   importer has to put back. */
-const SAMPLE = ["Add", "Accessibility", "Additem"];
+   importer has to put back. Not Add: its four styles share one branch now,
+   which is not the importer's shape. */
+const SAMPLE = ["Minus", "Accessibility", "AddItem"];
 
 const bundle = path.join(ROOT, "dist", "index.js");
 if (!existsSync(bundle)) {

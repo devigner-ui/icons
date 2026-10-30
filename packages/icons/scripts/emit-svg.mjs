@@ -25,6 +25,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 import { createElement as h } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { activeRenames } from "./renames.mjs";
 
 export const DIST = new URL("dist/", new URL("../", import.meta.url));
 
@@ -75,11 +76,16 @@ export async function allSvgs(only) {
   const mod = await import(bundle.href);
   const wanted = only && new Set(only);
   const broken = brokenIcons();
+  /* Deprecated aliases are exported beside the icons they point at. They are
+     names, not drawings: every package builds its own alias from the new one,
+     so rendering them here would ship each drawing twice. */
+  const aliases = new Set(activeRenames().map((r) => r.from));
   const out = new Map();
 
   for (const [exportName, Icon] of Object.entries(mod)) {
     if (!exportName.startsWith("Icon") || typeof Icon !== "object") continue;
     const name = exportName.slice(4);
+    if (aliases.has(name)) continue;
     if (wanted && !wanted.has(name)) continue;
 
     const drawings = {};

@@ -22,7 +22,7 @@ const IconMenu = forwardRef<SVGSVGElement, IconProps>(function IconMenu(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,49 @@ const IconMenu = forwardRef<SVGSVGElement, IconProps>(function IconMenu(
           {...rest}
         >
           <path
-            d="M18.21 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92"
+            d="M15.08 5.76v.09a2.46 2.46 0 1 0 2.46-2.46l-.27.01"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M6.46 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M15.08 18.06v.09a2.46 2.46 0 1 0 2.46-2.46l-.27.01"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M6.46 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M17.54 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -45,7 +87,7 @@ const IconMenu = forwardRef<SVGSVGElement, IconProps>(function IconMenu(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M7.13 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92"
+            d="M6.46 8.31a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -54,7 +96,7 @@ const IconMenu = forwardRef<SVGSVGElement, IconProps>(function IconMenu(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M18.21 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92"
+            d="M17.54 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -62,7 +104,7 @@ const IconMenu = forwardRef<SVGSVGElement, IconProps>(function IconMenu(
             strokeLinejoin="round"
           />
           <path
-            d="M7.13 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92"
+            d="M6.46 20.61a2.46 2.46 0 1 0 0-4.92 2.46 2.46 0 0 0 0 4.92"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -85,20 +127,20 @@ const IconMenu = forwardRef<SVGSVGElement, IconProps>(function IconMenu(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M18.21 8.81a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
+            d="M17.54 8.81a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
             fill="currentColor"
           />
           <path
-            d="M7.13 8.81a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
+            d="M6.46 8.81a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
             fill="currentColor"
           />
           <path
-            d="M18.21 21.11a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
+            d="M17.54 21.11a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M7.13 21.11a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
+            d="M6.46 21.11a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
             fill="currentColor"
           />
         </svg>
@@ -116,19 +158,19 @@ const IconMenu = forwardRef<SVGSVGElement, IconProps>(function IconMenu(
           {...rest}
         >
           <path
-            d="M18.21 8.81a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
+            d="M17.54 8.81a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
             fill="currentColor"
           />
           <path
-            d="M7.13 8.81a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
+            d="M6.46 8.81a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
             fill="currentColor"
           />
           <path
-            d="M18.21 21.11a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
+            d="M17.54 21.11a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
             fill="currentColor"
           />
           <path
-            d="M7.13 21.11a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
+            d="M6.46 21.11a2.96 2.96 0 1 0 0-5.92 2.96 2.96 0 0 0 0 5.92"
             fill="currentColor"
           />
         </svg>

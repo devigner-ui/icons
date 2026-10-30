@@ -1,1 +1,1 @@
-export { default, default as IconScreenmirroring } from '../../icons/Screenmirroring';
+export { default, default as IconScreenMirroring } from '../../icons/ScreenMirroring';

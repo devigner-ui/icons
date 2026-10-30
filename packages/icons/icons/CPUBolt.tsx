@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconCPUBolt = forwardRef<SVGSVGElement, IconProps>(function IconCPUBolt(
+const IconCpuBolt = forwardRef<SVGSVGElement, IconProps>(function IconCpuBolt(
   { className, variant = "Outline", strokeWidth = "1.5", ...rest },
   ref,
 ) {
@@ -302,4 +302,4 @@ const IconCPUBolt = forwardRef<SVGSVGElement, IconProps>(function IconCPUBolt(
   );
 });
 
-export default IconCPUBolt;
+export default IconCpuBolt;

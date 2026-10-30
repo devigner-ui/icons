@@ -23,7 +23,52 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 16.53a4.8 4.8 0 1 1-1.31-3.29v.01A4.8 4.8 0 0 1 22 16.53Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m18.48 17.87-2.53-2.54"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m18.45 15.36-2.53 2.54"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7.56 2.43c1.81 0 3.43.88 4.44 2.23a5.55 5.55 0 0 1 10 3.36c0 1.97-.51 3.71-1.31 5.22a4.8 4.8 0 0 0-7.06 6.49q-.56.26-1.01.41c-.34.12-.9.12-1.24 0C8.48 19.15 2 15.02 2 8.02c0-1.55.62-2.95 1.63-3.96"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +82,7 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M22.67 17.2a4.8 4.8 0 1 1-1.31-3.29v.01a4.8 4.8 0 0 1 1.31 3.28"
+              d="M22 16.53a4.8 4.8 0 1 1-1.31-3.29v.01A4.8 4.8 0 0 1 22 16.53"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -45,7 +90,7 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="M19.15 18.54 16.62 16"
+              d="m18.48 17.87-2.53-2.54"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -53,7 +98,7 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="m19.12 16.03-2.53 2.54"
+              d="m18.45 15.36-2.53 2.54"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -62,7 +107,7 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22.67 8.69c0 1.97-.51 3.71-1.31 5.22a4.8 4.8 0 0 0-7.06 6.49q-.56.26-1.01.41c-.34.12-.9.12-1.24 0-2.9-.99-9.38-5.12-9.38-12.12a5.55 5.55 0 0 1 10-3.36 5.55 5.55 0 0 1 10 3.36"
+              d="M22 8.02c0 1.97-.51 3.71-1.31 5.22a4.8 4.8 0 0 0-7.06 6.49q-.56.26-1.01.41c-.34.12-.9.12-1.24 0C8.48 19.15 2 15.02 2 8.02a5.55 5.55 0 0 1 10-3.36 5.55 5.55 0 0 1 10 3.36"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

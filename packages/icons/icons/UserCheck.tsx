@@ -130,13 +130,13 @@ const IconUserCheck = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <path d="M15 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0" fill="currentColor" />
+            <path d="M14.6 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0" fill="currentColor" />
             <path
-              d="M19 17.5c0 2.49 0 4.5-8 4.5s-8-2.01-8-4.5c0-2.48 3.58-4.5 8-4.5s8 2.02 8 4.5"
+              d="M18.6 17.5c0 2.49 0 4.5-8 4.5s-8-2.01-8-4.5c0-2.48 3.58-4.5 8-4.5s8 2.02 8 4.5"
               fill="currentColor"
             />
             <path
-              d="M21.56 9a.75.75 0 0 0-1.12-1l-2.17 2.44-.77-.7a.75.75 0 1 0-1 1.12l1.33 1.2A.75.75 0 0 0 18.9 12z"
+              d="M21.16 9a.75.75 0 0 0-1.12-1l-2.17 2.44-.77-.7a.75.75 0 1 0-1 1.12l1.33 1.2A.75.75 0 0 0 18.5 12z"
               fill="currentColor"
             />
           </svg>

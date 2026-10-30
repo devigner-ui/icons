@@ -23,7 +23,42 @@ const IconBellSnooze = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M5.95 5.48A7 7 0 0 0 5 9v.7c0 .85-.25 1.68-.72 2.38L3.13 13.8a2.77 2.77 0 0 0 1.58 4.21c4.77 1.3 9.81 1.3 14.58 0a2.8 2.8 0 0 0 1.86-1.7q.21-.55.18-1.13m-1.59-3.07-.02-.03A4.3 4.3 0 0 1 19 9.7V9A7 7 0 0 0 8.38 3.01"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M10 9h4l-4 4h4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.5 19c.66 1.75 2.42 3 4.5 3a4.8 4.8 0 0 0 4.5-3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}

@@ -37,32 +37,32 @@ const IconAirbudsLeft = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <path
-            d="M2 13v6.77A2.35 2.35 0 0 0 4.5 22h.27A2.35 2.35 0 0 0 7 19.77v-1.1m-5 0h5m0 0V12a1 1 0 0 1 1-1 3 3 0 0 0 3-3V5.34C11 3.5 9.5 2 7.66 2h-.1A5.6 5.6 0 0 0 2 7.56V9"
+            d="M2.5 13v6.77A2.35 2.35 0 0 0 5 22h.27a2.35 2.35 0 0 0 2.23-2.23v-1.1m-5 0h5m0 0V12a1 1 0 0 1 1-1 3 3 0 0 0 3-3V5.34C11.5 3.5 10 2 8.16 2h-.1A5.6 5.6 0 0 0 2.5 7.56V9"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M8 5v3"
+            d="M8.5 5v3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M15.5 11a5.5 5.5 0 1 0 5.5 5.5"
+            d="M16 11a5.5 5.5 0 1 0 5.5 5.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M14 14v5h3"
+            d="M14.5 14v5h3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M14 5.1A5 5 0 0 1 17.9 9"
+            d="M14.5 5.1A5 5 0 0 1 18.4 9"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -82,13 +82,13 @@ const IconAirbudsLeft = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M2 18.67v.83a2.5 2.5 0 0 0 5 0v-.83m-5 0V7.56A5.6 5.6 0 0 1 7.56 2h.1A3.35 3.35 0 0 1 11 5.34V8a3 3 0 0 1-3 3 1 1 0 0 0-1 1v6.67m-5 0h5"
+              d="M2.5 18.67v.83a2.5 2.5 0 0 0 5 0v-.83m-5 0V7.56A5.6 5.6 0 0 1 8.06 2h.1a3.35 3.35 0 0 1 3.34 3.34V8a3 3 0 0 1-3 3 1 1 0 0 0-1 1v6.67m-5 0h5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M8 5v3"
+              d="M8.5 5v3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -98,12 +98,12 @@ const IconAirbudsLeft = forwardRef<SVGSVGElement, IconProps>(
               cx="5.5"
               cy="5.5"
               r="5.5"
-              transform="matrix(-1 0 0 1 21 11)"
+              transform="translate(0.5 0) matrix(-1 0 0 1 21 11)"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
-              d="M14 14v5h3"
+              d="M14.5 14v5h3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -111,7 +111,7 @@ const IconAirbudsLeft = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M14 5.1A5 5 0 0 1 17.9 9"
+              d="M14.5 5.1A5 5 0 0 1 18.4 9"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

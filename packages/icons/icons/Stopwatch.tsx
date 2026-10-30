@@ -104,17 +104,17 @@ const IconStopwatch = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12 23a9 9 0 1 0 0-18 9 9 0 0 0 0 18"
+              d="M12 22.5a9 9 0 1 0 0-18 9 9 0 0 0 0 18"
               fill="currentColor"
             />
             <path
-              d="M12 9.25c.41 0 .75.34.75.75v4a.75.75 0 0 1-1.5 0v-4c0-.41.34-.75.75-.75"
+              d="M12 8.75c.41 0 .75.34.75.75v4a.75.75 0 0 1-1.5 0v-4c0-.41.34-.75.75-.75"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M9.25 2.75c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75"
+              d="M9.25 2.25c0-.41.34-.75.75-.75h4A.75.75 0 0 1 14 3h-4a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
           </svg>
@@ -134,13 +134,13 @@ const IconStopwatch = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M12 22a9 9 0 1 0 0-18 9 9 0 0 0 0 18m0-13.75c.41 0 .75.34.75.75v4a.75.75 0 0 1-1.5 0V9c0-.41.34-.75.75-.75"
+              d="M12 22.4a9 9 0 1 0 0-18 9 9 0 0 0 0 18m0-13.75c.41 0 .75.34.75.75v4a.75.75 0 0 1-1.5 0v-4c0-.41.34-.75.75-.75"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M9.25 2c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4A.75.75 0 0 1 9.25 2"
+              d="M9.25 2.4c0-.41.34-.75.75-.75h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75"
               fill="currentColor"
             />
           </svg>

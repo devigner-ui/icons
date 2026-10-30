@@ -37,23 +37,23 @@ const IconWatchRound = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <path
-            d="m17 6.5-.3-1.37c-.34-1.5-.5-2.25-1.05-2.69S14.33 2 12.79 2h-1.58c-1.54 0-2.3 0-2.86.44-.55.44-.71 1.2-1.05 2.7L7 6.5"
+            d="m16.85 6.5-.3-1.37c-.34-1.5-.5-2.25-1.05-2.69S14.18 2 12.64 2h-1.58c-1.54 0-2.3 0-2.86.44-.55.44-.71 1.2-1.05 2.7l-.3 1.36"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="m17 17.5-.3 1.37c-.34 1.5-.5 2.25-1.05 2.69s-1.32.44-2.86.44h-1.58c-1.54 0-2.3 0-2.86-.44-.55-.44-.71-1.2-1.05-2.7L7 17.5"
+            d="m16.85 17.5-.3 1.37c-.34 1.5-.5 2.25-1.05 2.69s-1.32.44-2.86.44h-1.58c-1.54 0-2.3 0-2.86-.44-.55-.44-.71-1.2-1.05-2.7l-.3-1.36"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="M4.75 10.06a7.5 7.5 0 1 1 0 3.88"
+            d="M4.6 10.06a7.5 7.5 0 1 1 0 3.88"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M12 8.92V12l2 1.92"
+            d="M11.85 8.92V12l2 1.92"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"

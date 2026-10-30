@@ -105,7 +105,6 @@ const IconBluetoothSquare = forwardRef<SVGSVGElement, IconProps>(
               d="M3.46 3.46C2 4.93 2 7.3 2 12s0 7.07 1.46 8.54C4.93 22 7.3 22 12 22s7.07 0 8.54-1.46C22 19.07 22 16.7 22 12s0-7.07-1.46-8.54C19.07 2 16.7 2 12 2S4.93 2 3.46 3.46"
               fill="currentColor"
             />
-            <path d="M12.45 16.77" fill="currentColor" />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -130,7 +129,6 @@ const IconBluetoothSquare = forwardRef<SVGSVGElement, IconProps>(
               d="M11.75 16v-2.5l1.73 1.3.27.2-.27.2-1.33 1-.4.3z"
               fill="currentColor"
             />
-            <path d="M11.8 16.96" fill="currentColor" />
             <path
               d="M11.75 8v2.5l1.73-1.3.27-.2-.27-.2-1.33-1-.4-.3z"
               fill="currentColor"

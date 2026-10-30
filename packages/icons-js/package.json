@@ -1,0 +1,61 @@
+{
+  "name": "@devigner-ui/icons-js",
+  "version": "3.5.0",
+  "description": "10,560 open-source icons for plain JavaScript: 2,112 symbols, each in outline, twotone, bold, bulk and broken, as SVG strings or elements. Built on Solar Icon Set and Iconsax.",
+  "keywords": [
+    "icons",
+    "javascript",
+    "vanilla-js",
+    "svg",
+    "svg-icons",
+    "icon-set",
+    "icon-library",
+    "tree-shaking"
+  ],
+  "license": "MIT AND CC-BY-4.0",
+  "author": "Devigner",
+  "homepage": "https://icons.devigner.cc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigner-ui/icons.git",
+    "directory": "packages/icons-js"
+  },
+  "bugs": {
+    "url": "https://github.com/devigner-ui/icons/issues"
+  },
+  "type": "module",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/icons/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "ATTRIBUTION.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "test": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@devigner-ui/icons": "workspace:^"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

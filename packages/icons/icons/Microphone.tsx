@@ -37,30 +37,30 @@ const IconMicrophone = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <path
-            d="M7 8a5 5 0 0 1 10 0v3a5 5 0 0 1-10 0z"
+            d="M7 7.5a5 5 0 0 1 10 0v3a5 5 0 0 1-10 0z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="M13 8h4"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-          <path
-            d="M13 11h4"
+            d="M13 7.5h4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M12 19v3"
+            d="M13 10.5h4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M20.75 10a.75.75 0 0 0-1.5 0zm-16 0a.75.75 0 0 0-1.5 0zm10.76 7.34a.75.75 0 1 0 .73 1.32zM19.25 10v1h1.5v-1zm-14.5 1v-1h-1.5v1zM12 18.25C8 18.25 4.75 15 4.75 11h-1.5A8.75 8.75 0 0 0 12 19.75zM19.25 11c0 2.73-1.5 5.1-3.74 6.34l.73 1.32A8.8 8.8 0 0 0 20.75 11z"
+            d="M12 18.5v3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20.75 9.5a.75.75 0 0 0-1.5 0zm-16 0a.75.75 0 0 0-1.5 0zm10.76 7.34a.75.75 0 1 0 .73 1.32zm3.74-7.34v1h1.5v-1zm-14.5 1v-1h-1.5v1zM12 17.75c-4 0-7.25-3.25-7.25-7.25h-1.5A8.75 8.75 0 0 0 12 19.25zm7.25-7.25c0 2.73-1.5 5.1-3.74 6.34l.73 1.32a8.8 8.8 0 0 0 4.51-7.66z"
             fill="currentColor"
           />
         </svg>
@@ -78,27 +78,27 @@ const IconMicrophone = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M7 8a5 5 0 0 1 10 0v3a5 5 0 0 1-10 0z"
+              d="M7 7.5a5 5 0 0 1 10 0v3a5 5 0 0 1-10 0z"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M13 8h4"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeLinecap="round"
-            />
-            <path
-              opacity={duotone ? "0.4" : "1"}
-              d="M13 11h4"
+              d="M13 7.5h4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M20 10v1a8 8 0 0 1-8 8m-8-9v1a8 8 0 0 0 8 8m0 0v3"
+              d="M13 10.5h4"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+            <path
+              opacity={duotone ? "0.4" : "1"}
+              d="M20 9.5v1a8 8 0 0 1-8 8m-8-9v1a8 8 0 0 0 8 8m0 0v3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -120,20 +120,20 @@ const IconMicrophone = forwardRef<SVGSVGElement, IconProps>(
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M4 9c.41 0 .75.34.75.75v1a7.25 7.25 0 1 0 14.5 0v-1a.75.75 0 0 1 1.5 0v1a8.75 8.75 0 0 1-8 8.72v2.28a.75.75 0 0 1-1.5 0v-2.28a8.75 8.75 0 0 1-8-8.72v-1c0-.41.34-.75.75-.75"
+              d="M4 8.75c.41 0 .75.34.75.75v1a7.25 7.25 0 1 0 14.5 0v-1a.75.75 0 0 1 1.5 0v1a8.75 8.75 0 0 1-8 8.72v2.28a.75.75 0 0 1-1.5 0v-2.28a8.75 8.75 0 0 1-8-8.72v-1c0-.41.34-.75.75-.75"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12 2a5.75 5.75 0 0 0-5.75 5.75v3a5.75 5.75 0 0 0 11.45.75H13a.75.75 0 0 1 0-1.5h4.75V8.5H13A.75.75 0 0 1 13 7h4.7A5.75 5.75 0 0 0 12 2"
+              d="M12 1.75A5.75 5.75 0 0 0 6.25 7.5v3a5.75 5.75 0 0 0 11.45.75H13a.75.75 0 0 1 0-1.5h4.75v-1.5H13a.75.75 0 0 1 0-1.5h4.7a5.75 5.75 0 0 0-5.7-5"
               fill="currentColor"
             />
             <path
-              d="M12.25 10.75c0 .41.34.75.75.75h4.7l.05-1.5H13a.75.75 0 0 0-.75.75"
+              d="M12.25 10.5c0 .41.34.75.75.75h4.7l.05-1.5H13a.75.75 0 0 0-.75.75"
               fill="currentColor"
             />
             <path
-              d="M12.25 7.75c0 .41.34.75.75.75h4.75L17.7 7H13a.75.75 0 0 0-.75.75"
+              d="M12.25 7.5c0 .41.34.75.75.75h4.75l-.05-1.5H13a.75.75 0 0 0-.75.75"
               fill="currentColor"
             />
           </svg>
@@ -151,13 +151,13 @@ const IconMicrophone = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12 2a5.75 5.75 0 0 0-5.75 5.75v3a5.75 5.75 0 0 0 11.45.75H13a.75.75 0 0 1 0-1.5h4.75V8.5H13A.75.75 0 0 1 13 7h4.7A5.75 5.75 0 0 0 12 2"
+              d="M12 1.75A5.75 5.75 0 0 0 6.25 7.5v3a5.75 5.75 0 0 0 11.45.75H13a.75.75 0 0 1 0-1.5h4.75v-1.5H13a.75.75 0 0 1 0-1.5h4.7a5.75 5.75 0 0 0-5.7-5"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M4 9c.41 0 .75.34.75.75v1a7.25 7.25 0 1 0 14.5 0v-1a.75.75 0 0 1 1.5 0v1a8.75 8.75 0 0 1-8 8.72v2.28a.75.75 0 0 1-1.5 0v-2.28a8.75 8.75 0 0 1-8-8.72v-1c0-.41.34-.75.75-.75"
+              d="M4 8.75c.41 0 .75.34.75.75v1a7.25 7.25 0 1 0 14.5 0v-1a.75.75 0 0 1 1.5 0v1a8.75 8.75 0 0 1-8 8.72v2.28a.75.75 0 0 1-1.5 0v-2.28a8.75 8.75 0 0 1-8-8.72v-1c0-.41.34-.75.75-.75"
               fill="currentColor"
             />
           </svg>

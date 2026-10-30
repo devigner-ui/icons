@@ -36,13 +36,13 @@ const IconLadle = forwardRef<SVGSVGElement, IconProps>(function IconLadle(
           {...rest}
         >
           <path
-            d="M2 5.68a3.68 3.68 0 0 1 7.37 0M22 14.5v1.18a6.32 6.32 0 0 1-12.63 0V9.16"
+            d="M2 5.83a3.68 3.68 0 0 1 7.37 0M22 14.65v1.18a6.32 6.32 0 0 1-12.63 0V9.31"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M16 12c-3.05 0-6.5 1.12-6.5 2.5S12.95 17 16 17s6-1.12 6-2.5c0-.72-.8-1.37-2-1.82"
+            d="M16 12.15c-3.05 0-6.5 1.12-6.5 2.5s3.45 2.5 6.5 2.5 6-1.12 6-2.5c0-.72-.8-1.37-2-1.82"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -63,13 +63,13 @@ const IconLadle = forwardRef<SVGSVGElement, IconProps>(function IconLadle(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M2 5.68a3.68 3.68 0 0 1 7.37 0V15"
+            d="M2 5.83a3.68 3.68 0 0 1 7.37 0v9.32"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M22 14.5v1.18a6.32 6.32 0 0 1-12.63 0v-1.05M22 14.5c0 1.38-2.95 2.5-6 2.5s-6.63-.99-6.63-2.37M22 14.5c0-1.38-2.95-2.5-6-2.5s-6.63 1.25-6.63 2.63"
+            d="M22 14.65v1.18a6.32 6.32 0 0 1-12.63 0v-1.05M22 14.65c0 1.38-2.95 2.5-6 2.5s-6.63-.99-6.63-2.37M22 14.65c0-1.38-2.95-2.5-6-2.5s-6.63 1.25-6.63 2.63"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
@@ -89,15 +89,15 @@ const IconLadle = forwardRef<SVGSVGElement, IconProps>(function IconLadle(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M16 17c3.05 0 6-1.12 6-2.5S19.05 12 16 12s-6.63 1.12-6.63 2.5S12.95 17 16 17"
+            d="M16 17.35c3.05 0 6-1.12 6-2.5s-2.95-2.5-6-2.5-6.63 1.12-6.63 2.5 3.58 2.5 6.63 2.5"
             fill="currentColor"
           />
           <path
-            d="M6.43 2.5A2.93 2.93 0 0 0 3.5 5.43a.75.75 0 1 1-1.5 0 4.43 4.43 0 0 1 8.87 0V13c-.9.41-1.49.93-1.5 1.48V5.43A2.93 2.93 0 0 0 6.43 2.5"
+            d="M6.43 2.85A2.93 2.93 0 0 0 3.5 5.78a.75.75 0 1 1-1.5 0 4.43 4.43 0 0 1 8.87 0v7.57c-.9.41-1.49.93-1.5 1.48V5.78a2.93 2.93 0 0 0-2.94-2.93"
             fill="currentColor"
           />
           <path
-            d="M9.37 14.52q.02.48.56.91C11.05 16.35 13.68 17 16 17c3.05 0 6-1.12 6-2.5v1.18a6.32 6.32 0 1 1-12.63 0V14.5z"
+            d="M9.37 14.87q.02.48.56.91c1.12.92 3.75 1.57 6.07 1.57 3.05 0 6-1.12 6-2.5v1.18a6.32 6.32 0 1 1-12.63 0v-1.18z"
             fill="currentColor"
           />
         </svg>

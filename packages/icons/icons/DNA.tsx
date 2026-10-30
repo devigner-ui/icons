@@ -36,46 +36,53 @@ const IconDNA = forwardRef<SVGSVGElement, IconProps>(function IconDNA(
           {...rest}
         >
           <path
-            d="m11.85 12.15.2.07c3.26 1.12 7.18.05 9.95-2.72m-10.15 2.65-.56-.19c-3.04-1.05-6.7-.05-9.29 2.54m9.85-2.35-.07-.2C10.66 8.7 11.73 4.77 14.5 2m-2.65 10.15.19.56c1.05 3.04.05 6.7-2.54 9.29"
+            d="m11.85 12.15.2.07q1.17.4 2.42.43m3.43-.55A11 11 0 0 0 22 9.5m-10.15 2.65-.56-.19c-3.04-1.05-6.7-.05-9.29 2.54m9.85-2.35-.07-.2C10.66 8.7 11.73 4.77 14.5 2m-2.65 10.15.19.56c1.05 3.04.05 6.7-2.54 9.29"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
-            d="m10 15 1.84 1.92m-5.08-5.08L8 13.08"
+            d="m6.76 11.84 5.08 5.08"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
-            d="M11.84 6.76 14 9m2 2 .92.84"
+            d="m11.84 6.76 5.08 5.08"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="m4 13 3.5 3.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="m19.78 10.9-3.5-3.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="m9.3 18.2 1.6 1.58"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M14.59 5.59 13 4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ) : !fill ? (

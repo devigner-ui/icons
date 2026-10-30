@@ -28,6 +28,9 @@ const TAGS = {
   clipPath: ClipPath,
 };
 
+/** The styles strokeWidth reaches. */
+const WEIGHED = new Set(["outline", "twotone", "broken"]);
+
 function element(node, key, strokeWidth) {
   /*
    * Weighed only where there is linework to weigh. Setting strokeWidth on a
@@ -44,6 +47,26 @@ function element(node, key, strokeWidth) {
     { key, ...props },
     node.children?.map((child, i) => element(child, i, strokeWidth)),
   );
+}
+
+/*
+ * An old icon name, kept working after a rename: the new component under the
+ * old name, plus one console warning in development. scripts/build.mjs writes
+ * one per entry in @devigner-ui/icons' scripts/renames.json.
+ *
+ * __DEV__ is React Native's own flag, defined by Metro; it is false in a
+ * release bundle, so the warning never reaches a shipped app.
+ */
+const warned = new Set();
+
+export function renamed(Component, from, message) {
+  return function Alias(props) {
+    if (typeof __DEV__ !== "undefined" && __DEV__ && !warned.has(from)) {
+      warned.add(from);
+      console.warn(`[@devigner-ui/icons-react-native] ${message}`);
+    }
+    return h(Component, props);
+  };
 }
 
 export function icon(drawings) {
@@ -84,7 +107,11 @@ export function icon(drawings) {
             }),
         ...rest,
       },
-      drawing.tree.map((node, i) => element(node, i, strokeWidth)),
+      /* Only the linework styles take strokeWidth, as in @devigner-ui/icons:
+         some Bold drawings are strokes too, at a fixed weight. */
+      drawing.tree.map((node, i) =>
+        element(node, i, WEIGHED.has(variant) ? strokeWidth : undefined),
+      ),
     );
   };
 }

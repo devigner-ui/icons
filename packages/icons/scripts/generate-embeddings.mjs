@@ -56,26 +56,19 @@ async function generateEmbeddings() {
   console.log(`\nSaved embeddings to ${outputPath}`);
 }
 
+/*
+ * Only what tells this icon apart. Mean pooling averages every token, so text
+ * shared by many icons drags them together: the styles line (identical on all
+ * of them) and the usage string (one per category, written twice) used to be
+ * most of the tokens, and close names ranked by category rather than meaning.
+ * Measured on 86 queries, this form ranks a relevant icon first more often.
+ */
 function buildRichText(icon) {
-  const parts = [
-    icon.displayName,
-    // The printable name rather than the slug: "Calls & Telephony" is words
-    // the sentence model knows, "calls-telephony" is one it has to guess at.
-    icon.categoryLabel ?? icon.category,
-    ...icon.keywords,
-    icon.usage,
-    `icon for ${icon.usage}`,
-    `${icon.displayName.toLowerCase()} ${(
-      icon.categoryLabel ?? icon.category
-    ).toLowerCase()} icon`,
-  ];
-  
-  // Add style-specific context
-  const freeStyles = icon.freeStyles.join(', ');
-  const proStyles = icon.proStyles.join(', ');
-  parts.push(`available styles: ${freeStyles}${proStyles ? ', pro: ' + proStyles : ''}`);
-  
-  return parts.join(' ');
+  // The printable category rather than the slug: "Calls & Telephony" is words
+  // the sentence model knows, "calls-telephony" is one it has to guess at.
+  return `${icon.displayName} icon. ${icon.keywords.join(', ')}. ${
+    icon.categoryLabel ?? icon.category
+  }.`;
 }
 
 function quantizeToInt8(float32Array) {

@@ -37,20 +37,20 @@ const IconUserCross = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <circle
-            cx="10"
+            cx="10.8"
             cy="6"
             r="4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="M20.41 11.41 19 10m0 0-1.41-1.41M19 10l1.41-1.41M19 10l-1.41 1.41"
+            d="M21.21 11.41 19.8 10m0 0-1.41-1.41M19.8 10l1.41-1.41M19.8 10l-1.41 1.41"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M18 18v-.5c0-2.49-3.58-4.5-8-4.5s-8 2.01-8 4.5S2 22 10 22c2.23 0 3.84-.16 5-.44"
+            d="M18.8 18v-.5c0-2.49-3.58-4.5-8-4.5s-8 2.01-8 4.5 0 4.5 8 4.5c2.23 0 3.84-.16 5-.44"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -70,20 +70,20 @@ const IconUserCross = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <circle
-              cx="10"
-              cy="6.00049"
+              cx="10.8"
+              cy="6"
               r="4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18 17.5c0 2.49 0 4.5-8 4.5s-8-2.01-8-4.5c0-2.48 3.58-4.5 8-4.5s8 2.02 8 4.5"
+              d="M18.8 17.5c0 2.49 0 4.5-8 4.5s-8-2.01-8-4.5c0-2.48 3.58-4.5 8-4.5s8 2.02 8 4.5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
-              d="M20.41 11.41 19 10m0 0-1.41-1.41M19 10l1.41-1.41M19 10l-1.41 1.41"
+              d="M21.21 11.41 19.8 10m0 0-1.41-1.41M19.8 10l1.41-1.41M19.8 10l-1.41 1.41"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -128,13 +128,13 @@ const IconUserCross = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <path d="M14 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0" fill="currentColor" />
+            <path d="M14.4 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0" fill="currentColor" />
             <path
-              d="M18 17.5c0 2.49 0 4.5-8 4.5s-8-2.01-8-4.5c0-2.48 3.58-4.5 8-4.5s8 2.02 8 4.5"
+              d="M18.4 17.5c0 2.49 0 4.5-8 4.5s-8-2.01-8-4.5c0-2.48 3.58-4.5 8-4.5s8 2.02 8 4.5"
               fill="currentColor"
             />
             <path
-              d="M20.94 9.12a.75.75 0 1 0-1.06-1.06l-.88.88-.88-.88a.75.75 0 0 0-1.06 1.06l.88.88-.88.88a.75.75 0 0 0 1.06 1.07l.88-.89.88.89a.75.75 0 0 0 1.06-1.07l-.88-.88z"
+              d="M21.34 9.12a.75.75 0 1 0-1.06-1.06l-.88.88-.88-.88a.75.75 0 0 0-1.06 1.06l.88.88-.88.88a.75.75 0 0 0 1.06 1.07l.88-.89.88.89a.75.75 0 0 0 1.06-1.07l-.88-.88z"
               fill="currentColor"
             />
           </svg>

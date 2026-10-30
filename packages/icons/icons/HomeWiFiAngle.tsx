@@ -2,8 +2,8 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconHomeWiFiAngle = forwardRef<SVGSVGElement, IconProps>(
-  function IconHomeWiFiAngle(
+const IconHomeWifiAngle = forwardRef<SVGSVGElement, IconProps>(
+  function IconHomeWifiAngle(
     { className, variant = "Outline", strokeWidth = "1.5", ...rest },
     ref,
   ) {
@@ -37,13 +37,13 @@ const IconHomeWiFiAngle = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <path
-            d="m21.64 12.96-.28 1.94c-.49 3.38-.73 5.08-1.9 6.09C18.27 22 16.55 22 13.1 22h-2.22c-3.44 0-5.17 0-6.34-1.01-1.18-1.01-1.42-2.7-1.9-6.1l-.29-1.93C1.98 10.32 1.8 9 2.34 7.87s1.69-1.8 3.99-3.18l1.38-.82C9.81 2.62 10.85 2 12 2s2.2.62 4.29 1.87l1.38.82c2.3 1.37 3.45 2.06 4 3.18"
+            d="m21.79 12.96-.28 1.94c-.49 3.38-.73 5.08-1.9 6.09C18.42 22 16.7 22 13.25 22h-2.22c-3.44 0-5.17 0-6.34-1.01-1.18-1.01-1.42-2.7-1.9-6.1l-.29-1.93c-.37-2.64-.55-3.96-.01-5.09s1.69-1.8 3.99-3.18l1.38-.82C9.96 2.62 11 2 12.15 2s2.2.62 4.29 1.87l1.38.82c2.3 1.37 3.45 2.06 4 3.18"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M6 11.68a8.05 8.05 0 0 1 12 0M8 13.84a5.37 5.37 0 0 1 8 0M10 16c1.1-1.2 2.9-1.2 4 0"
+            d="M6.15 11.68a8.05 8.05 0 0 1 12 0m-10 2.16a5.37 5.37 0 0 1 8 0m-6 2.16c1.1-1.2 2.9-1.2 4 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -132,4 +132,4 @@ const IconHomeWiFiAngle = forwardRef<SVGSVGElement, IconProps>(
   },
 );
 
-export default IconHomeWiFiAngle;
+export default IconHomeWifiAngle;

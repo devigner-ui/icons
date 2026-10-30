@@ -23,7 +23,35 @@ const IconMoreCircle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M20.13 17.8A10 10 0 0 0 22 12c0-5.5-4.5-10-10-10-2.13 0-4.1.67-5.73 1.82M3.81 6.28A10 10 0 0 0 2 12c0 5.5 4.5 10 10 10a10 10 0 0 0 5.64-1.76"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8 12h.02Zm4 0h.02Zm4 0h.02Z"
+            stroke="currentColor"
+            strokeWidth={Number(strokeWidth) * 1.5}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -49,7 +77,7 @@ const IconMoreCircle = forwardRef<SVGSVGElement, IconProps>(
               strokeWidth={Number(strokeWidth) * 1.5}
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M8 12"
+              d="M8 12h.02M12 12h.02M16 12h.02"
             />
           </svg>
         ) : duotone ? (
@@ -67,19 +95,19 @@ const IconMoreCircle = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               fill="currentColor"
             />
             <path
-              d="M12.67 13a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
+              d="M12 13a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
               fill="currentColor"
             />
             <path
-              d="M16.67 13a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
+              d="M16 13a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
               fill="currentColor"
             />
             <path
-              d="M8.67 13a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
+              d="M8 13a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
               fill="currentColor"
             />
           </svg>
@@ -97,7 +125,7 @@ const IconMoreCircle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 2c-5.51 0-10 4.49-10 10s4.49 10 10 10 10-4.49 10-10-4.49-10-10-10m-4 11a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m4 0a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m4 0a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
+              d="M12 2C6.49 2 2 6.49 2 12s4.49 10 10 10 10-4.49 10-10S17.51 2 12 2M8 13a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m4 0a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m4 0a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
               fill="currentColor"
             />
           </svg>

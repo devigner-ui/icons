@@ -36,16 +36,53 @@ const IconHome = forwardRef<SVGSVGElement, IconProps>(function IconHome(
           {...rest}
         >
           <path
-            d="M22 12.2v1.53c0 3.9 0 5.85-1.17 7.06S17.77 22 14 22h-4c-3.77 0-5.66 0-6.83-1.21S2 17.63 2 13.73V12.2c0-2.28 0-3.43.52-4.38S3.99 6.3 5.88 5.11l2-1.24C9.88 2.62 10.9 2 12 2s2.11.62 4.12 1.87l2 1.24c1.9 1.18 2.84 1.76 3.36 2.71"
+            d="M22 21.5h-6.25m-3.5 0H2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
-            d="M15 18H9"
+            d="M2 10.5 10.13 4a3 3 0 0 1 3.74 0L22 10.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M15.5 5V3c0-.28.22-.5.5-.5h2.5c.28 0 .5.22.5.5v5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M4 21.5V9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M20 21.5V9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M15 21.5v-5c0-1.41 0-2.12-.44-2.56s-1.15-.44-2.56-.44-2.12 0-2.56.44S9 15.09 9 16.5v5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M14 9a2 2 0 0 1-2 2 2 2 0 0 1-2-2c0-1.1.9-2 2-2a2 2 0 0 1 2 2Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       ) : !fill ? (
@@ -62,45 +99,45 @@ const IconHome = forwardRef<SVGSVGElement, IconProps>(function IconHome(
           {...rest}
         >
           <path
-            d="M22 22H2"
+            d="M22 21.5H2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="m2 11 8.13-6.5a3 3 0 0 1 3.74 0L22 11"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-          <path
-            opacity={duotone ? "0.4" : "1"}
-            d="M15.5 5.5v-2c0-.28.22-.5.5-.5h2.5c.28 0 .5.22.5.5v5"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-          <path
-            d="M4 22V9.5"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-          <path
-            d="M20 22V9.5"
+            d="M2 10.5 10.13 4a3 3 0 0 1 3.74 0L22 10.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M15 22v-5c0-1.41 0-2.12-.44-2.56S13.41 14 12 14s-2.12 0-2.56.44S9 15.59 9 17v5"
+            d="M15.5 5V3c0-.28.22-.5.5-.5h2.5c.28 0 .5.22.5.5v5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M4 21.5V9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            d="M20 21.5V9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M15 21.5v-5c0-1.41 0-2.12-.44-2.56s-1.15-.44-2.56-.44-2.12 0-2.56.44S9 15.09 9 16.5v5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M14 9.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
+            d="M14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
@@ -121,31 +158,31 @@ const IconHome = forwardRef<SVGSVGElement, IconProps>(function IconHome(
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="m21.53 11.59-.78-.63v10.29H22a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1 0-1.5h1.25V10.96l-.78.63a.75.75 0 0 1-.94-1.18l8.13-6.5a3.75 3.75 0 0 1 4.68 0l8.13 6.5a.75.75 0 1 1-.94 1.18M12 6.75a2.75 2.75 0 1 0 0 5.5 2.75 2.75 0 0 0 0-5.5m1.75 6.56q-.7-.08-1.7-.06h-.1q-1-.01-1.7.06c-.49.07-.96.22-1.34.6s-.53.85-.6 1.34a14 14 0 0 0-.06 1.7v4.3h7.5v-4.42q.02-.93-.06-1.58a2.3 2.3 0 0 0-.6-1.34 2.2 2.2 0 0 0-1.34-.6"
+            d="m21.53 10.69-.78-.63v10.29H22a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1 0-1.5h1.25V10.06l-.78.63a.75.75 0 0 1-.94-1.18l8.13-6.5a3.75 3.75 0 0 1 4.68 0l8.13 6.5a.75.75 0 1 1-.94 1.18M12 5.85a2.75 2.75 0 1 0 0 5.5 2.75 2.75 0 0 0 0-5.5m1.75 6.56q-.7-.08-1.7-.06h-.1q-1-.01-1.7.06c-.49.07-.96.22-1.34.6s-.53.85-.6 1.34a14 14 0 0 0-.06 1.7v4.3h7.5v-4.42q.02-.93-.06-1.58a2.3 2.3 0 0 0-.6-1.34 2.2 2.2 0 0 0-1.34-.6"
             fill="currentColor"
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M10.75 9.5a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
+              d="M10.75 8.6a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M10.75 9.5a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
+              d="M10.75 8.6a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
               fill="currentColor"
             />
           </g>
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.05 13.25q1-.02 1.7.06c.49.07.96.22 1.34.6s.53.85.6 1.34q.07.65.06 1.58v4.42h-7.5v-4.3q-.02-1 .06-1.7c.07-.49.22-.96.6-1.34s.85-.53 1.34-.6q.7-.07 1.7-.06z"
+            d="M12.05 12.35q1-.02 1.7.06c.49.07.96.22 1.34.6s.53.85.6 1.34q.07.65.06 1.58v4.42h-7.5v-4.3q-.02-1 .06-1.7c.07-.49.22-.96.6-1.34s.85-.53 1.34-.6q.7-.07 1.7-.06z"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M16 3h2.5c.28 0 .5.22.5.5v4.14l-3.5-2.8V3.5c0-.28.22-.5.5-.5"
+            d="M16 2.1h2.5c.28 0 .5.22.5.5v4.14l-3.5-2.8V2.6c0-.28.22-.5.5-.5"
             fill="currentColor"
           />
         </svg>
@@ -163,25 +200,25 @@ const IconHome = forwardRef<SVGSVGElement, IconProps>(function IconHome(
           {...rest}
         >
           <path
-            d="M18.5 3H16a.5.5 0 0 0-.5.5v.06l3.5 2.8V3.5a.5.5 0 0 0-.5-.5"
+            d="M18.5 2.1H16a.5.5 0 0 0-.5.5v.06l3.5 2.8V2.6a.5.5 0 0 0-.5-.5"
             fill="currentColor"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M10.75 9.5a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
+            d="M10.75 8.6a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
             fill="currentColor"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="m20.75 10.96.78.63a.75.75 0 0 0 .94-1.18l-8.13-6.5a3.75 3.75 0 0 0-4.68 0l-8.13 6.5a.75.75 0 0 0 .94 1.18l.78-.63v10.29H2a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5h-1.25zM9.25 9.5a2.75 2.75 0 1 1 5.5 0 2.75 2.75 0 0 1-5.5 0m2.8 3.75q1-.02 1.7.06c.49.07.96.22 1.34.6s.53.85.6 1.34q.07.65.06 1.58v4.42h-1.5V17c0-.73 0-1.2-.05-1.55-.04-.32-.11-.42-.17-.48s-.16-.13-.48-.17c-.35-.05-.82-.05-1.55-.05s-1.2 0-1.55.05c-.32.04-.42.11-.48.17s-.13.16-.17.48c-.05.35-.05.82-.05 1.55v4.25h-1.5v-4.3q-.02-1 .06-1.7c.07-.49.22-.96.6-1.34s.85-.53 1.34-.6q.7-.07 1.7-.06z"
+            d="m20.75 10.06.78.63a.75.75 0 0 0 .94-1.18l-8.13-6.5a3.75 3.75 0 0 0-4.68 0l-8.13 6.5a.75.75 0 0 0 .94 1.18l.78-.63v10.29H2a.75.75 0 0 0 0 1.5h20a.75.75 0 0 0 0-1.5h-1.25zM9.25 8.6a2.75 2.75 0 1 1 5.5 0 2.75 2.75 0 0 1-5.5 0m2.8 3.75q1-.02 1.7.06c.49.07.96.22 1.34.6s.53.85.6 1.34q.07.65.06 1.58v4.42h-1.5V16.1c0-.73 0-1.2-.05-1.55-.04-.32-.11-.42-.17-.48s-.16-.13-.48-.17c-.35-.05-.82-.05-1.55-.05s-1.2 0-1.55.05c-.32.04-.42.11-.48.17s-.13.16-.17.48c-.05.35-.05.82-.05 1.55v4.25h-1.5v-4.3q-.02-1 .06-1.7c.07-.49.22-.96.6-1.34s.85-.53 1.34-.6q.7-.07 1.7-.06z"
             fill="currentColor"
           />
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M10.75 9.5a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
+            d="M10.75 8.6a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0"
             fill="currentColor"
           />
         </svg>

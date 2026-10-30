@@ -1,1 +1,1 @@
-export { default, default as IconTextalignCenter } from '../../icons/TextalignCenter';
+export { default, default as IconTextAlignCenter } from '../../icons/TextAlignCenter';

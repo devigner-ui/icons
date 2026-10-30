@@ -38,13 +38,13 @@ const IconUserRounded = forwardRef<SVGSVGElement, IconProps>(
         >
           <circle
             cx="12"
-            cy="6"
+            cy="6.5"
             r="4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="M15 20.62c-.9.24-1.93.38-3 .38-3.87 0-7-1.8-7-4s3.13-4 7-4 7 1.8 7 4q0 .52-.22 1"
+            d="M15 21.12c-.9.24-1.93.38-3 .38-3.87 0-7-1.8-7-4s3.13-4 7-4 7 1.8 7 4q0 .52-.22 1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -65,7 +65,7 @@ const IconUserRounded = forwardRef<SVGSVGElement, IconProps>(
           >
             <circle
               cx="12"
-              cy="6.00049"
+              cy="6.5"
               r="4"
               stroke="currentColor"
               strokeWidth={strokeWidth}
@@ -73,7 +73,7 @@ const IconUserRounded = forwardRef<SVGSVGElement, IconProps>(
             <ellipse
               opacity={duotone ? "0.4" : "1"}
               cx="12"
-              cy="17.0005"
+              cy="17.5"
               rx="7"
               ry="4"
               stroke="currentColor"
@@ -93,11 +93,11 @@ const IconUserRounded = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <circle cx="12" cy="6.00049" r="4" fill="currentColor" />
+            <circle cx="12" cy="6.5" r="4" fill="currentColor" />
             <ellipse
               opacity={duotone ? "0.4" : "1"}
               cx="12"
-              cy="17.0005"
+              cy="17.5"
               rx="7"
               ry="4"
               fill="currentColor"
@@ -116,8 +116,8 @@ const IconUserRounded = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
-            <circle cx="12" cy="6.00049" r="4" fill="currentColor" />
-            <ellipse cx="12" cy="17.0005" rx="7" ry="4" fill="currentColor" />
+            <circle cx="12" cy="6.5" r="4" fill="currentColor" />
+            <ellipse cx="12" cy="17.5" rx="7" ry="4" fill="currentColor" />
           </svg>
         )}
       </>

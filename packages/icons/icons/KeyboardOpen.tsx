@@ -23,7 +23,63 @@ const IconKeyboardOpen = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2 7.26c0-3.56.75-4.86 3.52-5.17q.77-.1 1.75-.09h9.47q.97 0 1.75.09c2.77.31 3.52 1.61 3.52 5.17v6.32c0 3.56-.75 4.86-3.52 5.17q-.77.1-1.75.09H7.27q-.97 0-1.75-.09C2.75 18.44 2 17.14 2 13.58V11.1"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M13.58 8.32h3.68"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M6.74 14.11h10.53"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7 22h10"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M7.2 8.3z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M10.5 8.3z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -37,7 +93,7 @@ const IconKeyboardOpen = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M7.93 2h9.47q.97 0 1.75.09c2.77.31 3.52 1.61 3.52 5.17v6.32c0 3.56-.75 4.86-3.52 5.17q-.77.1-1.75.09H7.93q-.97 0-1.75-.09c-2.77-.31-3.52-1.61-3.52-5.17V7.26c0-3.56.75-4.86 3.52-5.17q.78-.1 1.75-.09"
+              d="M7.26 2h9.47q.97 0 1.75.09C21.25 2.4 22 3.7 22 7.26v6.32c0 3.56-.75 4.86-3.52 5.17q-.77.1-1.75.09H7.26q-.97 0-1.75-.09c-2.77-.31-3.52-1.61-3.52-5.17V7.26c0-3.56.75-4.86 3.52-5.17q.78-.1 1.75-.09"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -45,7 +101,7 @@ const IconKeyboardOpen = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M14.25 8.32h3.68"
+              d="M13.58 8.32h3.68"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -53,7 +109,7 @@ const IconKeyboardOpen = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M7.41 14.11h10.53"
+              d="M6.74 14.11h10.53"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -61,7 +117,7 @@ const IconKeyboardOpen = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M7.67 22h10"
+              d="M7 22h10"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -69,7 +125,7 @@ const IconKeyboardOpen = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M7.86 8.3"
+              d="M7.19 8.3h.02"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -77,7 +133,7 @@ const IconKeyboardOpen = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M11.16 8.3"
+              d="M10.49 8.3h.02"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -98,28 +154,28 @@ const IconKeyboardOpen = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M17.67 22.75h-10a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h10c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M17 22.35H7a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h10c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M18.67 19h-12a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4"
+              d="M18 18.6H6a4 4 0 0 1-4-4v-9a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4"
               fill="currentColor"
             />
             <path
-              d="M17.93 9.07h-3.68a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3.68a.75.75 0 1 1 0 1.5"
+              d="M17.26 8.67h-3.68a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3.68a.75.75 0 1 1 0 1.5"
               fill="currentColor"
             />
             <path
-              d="M10.67 9.32a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
+              d="M10 8.92a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"
               fill="currentColor"
             />
             <path
-              d="M7.52 9.32a1 1 0 0 1-1-1 1 1 0 0 1 1-1h.01a1 1 0 0 1 1 1c0 .55-.46 1-1.01 1"
+              d="M6.85 8.92a1 1 0 0 1-1-1 1 1 0 0 1 1-1h.01a1 1 0 0 1 1 1c0 .55-.46 1-1.01 1"
               fill="currentColor"
             />
             <path
-              d="M17.93 14.86H7.42a.76.76 0 0 1-.76-.75c0-.41.33-.75.74-.75h10.53a.75.75 0 1 1 0 1.5"
+              d="M17.26 14.46H6.75a.76.76 0 0 1-.76-.75c0-.41.33-.75.74-.75h10.53a.75.75 0 1 1 0 1.5"
               fill="currentColor"
             />
           </svg>
@@ -137,11 +193,11 @@ const IconKeyboardOpen = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M17.67 22.75h-10a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h10c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M17 22.35H7a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h10c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
             <path
-              d="M18.67 2h-12a4 4 0 0 0-4 4v9a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4V6a4 4 0 0 0-4-4m-8.01 5.32a1 1 0 0 1 1.01 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 .99-1m-3.15 0a1 1 0 0 1 1.01 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1c0-.55.43-1 .99-1m10.42 7.54H7.43a.76.76 0 0 1-.76-.75c0-.41.33-.75.74-.75h10.53c.41 0 .75.34.75.75s-.34.75-.76.75m0-5.79h-3.68a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3.68a.75.75 0 1 1 0 1.5"
+              d="M18 1.6H6a4 4 0 0 0-4 4v9a4 4 0 0 0 4 4h12a4 4 0 0 0 4-4v-9a4 4 0 0 0-4-4M9.99 6.92a1 1 0 0 1 1.01 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 .99-1m-3.15 0a1 1 0 0 1 1.01 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1c0-.55.43-1 .99-1m10.42 7.54H6.76a.76.76 0 0 1-.76-.75c0-.41.33-.75.74-.75h10.53c.41 0 .75.34.75.75s-.34.75-.76.75m0-5.79h-3.68a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h3.68a.75.75 0 1 1 0 1.5"
               fill="currentColor"
             />
           </svg>

@@ -23,7 +23,42 @@ const IconCopySuccess = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 6.9C22 3.4 20.6 2 17.1 2h-4.2C9.4 2 8 3.4 8 6.9V8h3.1c3.5 0 4.9 1.4 4.9 4.9V16h1.1c3.5 0 4.9-1.4 4.9-4.9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M2 17.1C2 20.6 3.4 22 6.9 22h4.2c3.5 0 4.9-1.4 4.9-4.9v-4.2C16 9.4 14.6 8 11.1 8H6.9C3.4 8 2 9.4 2 12.9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m6.08 15 1.95 1.95 3.89-3.9"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,21 +73,21 @@ const IconCopySuccess = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M22.67 11.1V6.9c0-3.5-1.4-4.9-4.9-4.9h-4.2c-3.5 0-4.9 1.4-4.9 4.9V8h3.1c3.5 0 4.9 1.4 4.9 4.9V16h1.1c3.5 0 4.9-1.4 4.9-4.9"
+              d="M22 11.1V6.9C22 3.4 20.6 2 17.1 2h-4.2C9.4 2 8 3.4 8 6.9V8h3.1c3.5 0 4.9 1.4 4.9 4.9V16h1.1c3.5 0 4.9-1.4 4.9-4.9"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M16.67 17.1v-4.2c0-3.5-1.4-4.9-4.9-4.9h-4.2c-3.5 0-4.9 1.4-4.9 4.9v4.2c0 3.5 1.4 4.9 4.9 4.9h4.2c3.5 0 4.9-1.4 4.9-4.9"
+              d="M16 17.1v-4.2C16 9.4 14.6 8 11.1 8H6.9C3.4 8 2 9.4 2 12.9v4.2C2 20.6 3.4 22 6.9 22h4.2c3.5 0 4.9-1.4 4.9-4.9"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="m6.75 15 1.95 1.95 3.89-3.9"
+              d="m6.08 15 1.95 1.95 3.89-3.9"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -74,11 +109,11 @@ const IconCopySuccess = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M17.77 2h-4.2c-3.45 0-4.85 1.37-4.89 4.75h3.09c4.2 0 6.15 1.95 6.15 6.15v3.09c3.38-.04 4.75-1.44 4.75-4.89V6.9c0-3.5-1.4-4.9-4.9-4.9"
+              d="M17.1 2h-4.2C9.45 2 8.05 3.37 8.01 6.75h3.09c4.2 0 6.15 1.95 6.15 6.15v3.09c3.38-.04 4.75-1.44 4.75-4.89V6.9C22 3.4 20.6 2 17.1 2"
               fill="currentColor"
             />
             <path
-              d="M11.77 8h-4.2c-3.5 0-4.9 1.4-4.9 4.9v4.2c0 3.5 1.4 4.9 4.9 4.9h4.2c3.5 0 4.9-1.4 4.9-4.9v-4.2c0-3.5-1.4-4.9-4.9-4.9m1.19 5.65-3.71 3.71a.7.7 0 0 1-.51.21.7.7 0 0 1-.51-.21L6.37 15.5a.7.7 0 0 1 0-1.01.7.7 0 0 1 1.01 0l1.35 1.35 3.21-3.21a.7.7 0 0 1 1.01 0c.28.28.29.74.01 1.02"
+              d="M11.1 8H6.9C3.4 8 2 9.4 2 12.9v4.2C2 20.6 3.4 22 6.9 22h4.2c3.5 0 4.9-1.4 4.9-4.9v-4.2C16 9.4 14.6 8 11.1 8m1.19 5.65-3.71 3.71a.7.7 0 0 1-.51.21.7.7 0 0 1-.51-.21L5.7 15.5a.7.7 0 0 1 0-1.01.7.7 0 0 1 1.01 0l1.35 1.35 3.21-3.21a.7.7 0 0 1 1.01 0c.28.28.29.74.01 1.02"
               fill="currentColor"
             />
           </svg>
@@ -96,11 +131,11 @@ const IconCopySuccess = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M17.77 2h-4.2c-3.08 0-4.53 1.1-4.83 3.74-.06.55.4 1.01.95 1.01h2.08c4.2 0 6.15 1.95 6.15 6.15v2.08c0 .55.46 1.01 1.01.95 2.65-.3 3.74-1.75 3.74-4.83V6.9c0-3.5-1.4-4.9-4.9-4.9"
+              d="M17.1 2h-4.2C9.82 2 8.37 3.1 8.07 5.74c-.06.55.4 1.01.95 1.01h2.08c4.2 0 6.15 1.95 6.15 6.15v2.08c0 .55.46 1.01 1.01.95 2.65-.3 3.74-1.75 3.74-4.83V6.9C22 3.4 20.6 2 17.1 2"
               fill="currentColor"
             />
             <path
-              d="M11.77 8h-4.2c-3.5 0-4.9 1.4-4.9 4.9v4.2c0 3.5 1.4 4.9 4.9 4.9h4.2c3.5 0 4.9-1.4 4.9-4.9v-4.2c0-3.5-1.4-4.9-4.9-4.9m1.19 5.65-3.71 3.71a.7.7 0 0 1-.51.21.7.7 0 0 1-.51-.21L6.37 15.5a.7.7 0 0 1 0-1.01.7.7 0 0 1 1.01 0l1.35 1.35 3.21-3.21a.7.7 0 0 1 1.01 0c.28.28.29.74.01 1.02"
+              d="M11.1 8H6.9C3.4 8 2 9.4 2 12.9v4.2C2 20.6 3.4 22 6.9 22h4.2c3.5 0 4.9-1.4 4.9-4.9v-4.2C16 9.4 14.6 8 11.1 8m1.19 5.65-3.71 3.71a.7.7 0 0 1-.51.21.7.7 0 0 1-.51-.21L5.7 15.5a.7.7 0 0 1 0-1.01.7.7 0 0 1 1.01 0l1.35 1.35 3.21-3.21a.7.7 0 0 1 1.01 0c.28.28.29.74.01 1.02"
               fill="currentColor"
             />
           </svg>

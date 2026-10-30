@@ -22,7 +22,7 @@ const IconMask = forwardRef<SVGSVGElement, IconProps>(function IconMask(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,56 @@ const IconMask = forwardRef<SVGSVGElement, IconProps>(function IconMask(
           {...rest}
         >
           <path
-            d="M12.67 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+            d="M17 12a5 5 0 0 1-5 5V7a5 5 0 0 1 3.42 1.35"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 7v10a5 5 0 0 1 0-10Z"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 22v-5"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M12 7V2"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M4 6a10 10 0 1 0 3.97-3.15"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,28 +93,28 @@ const IconMask = forwardRef<SVGSVGElement, IconProps>(function IconMask(
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="M17.67 12a5 5 0 0 1-5 5V7a5 5 0 0 1 5 5"
+              d="M17 12a5 5 0 0 1-5 5V7a5 5 0 0 1 5 5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M12.67 7v10a5 5 0 0 1 0-10"
+              d="M12 7v10a5 5 0 0 1 0-10"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M12.67 22v-5"
+              d="M12 22v-5"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M12.67 7V2"
+              d="M12 7V2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -88,10 +137,10 @@ const IconMask = forwardRef<SVGSVGElement, IconProps>(function IconMask(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10"
+            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10"
             fill="currentColor"
           />
-          <path d="M12.67 7v10a5 5 0 0 1 0-10" fill="currentColor" />
+          <path d="M12 7v10a5 5 0 0 1 0-10" fill="currentColor" />
         </svg>
       ) : (
         <svg
@@ -107,10 +156,10 @@ const IconMask = forwardRef<SVGSVGElement, IconProps>(function IconMask(
           {...rest}
         >
           <path
-            d="M12.67 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10"
+            d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10"
             fill="currentColor"
           />
-          <path d="M12.67 7v10a5 5 0 0 1 0-10" fill="currentColor" />
+          <path d="M12 7v10a5 5 0 0 1 0-10" fill="currentColor" />
         </svg>
       )}
     </>

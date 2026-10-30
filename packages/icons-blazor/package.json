@@ -1,0 +1,12 @@
+{
+  "name": "@devigner-ui/icons-blazor",
+  "private": true,
+  "description": "Workspace wrapper for the Devigner.Icons.Blazor NuGet package: generates its icon data and runs its checks. The package itself is published to NuGet, not npm.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "@devigner-ui/icons": "workspace:^"
+  }
+}

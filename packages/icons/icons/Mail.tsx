@@ -22,7 +22,35 @@ const IconMail = forwardRef<SVGSVGElement, IconProps>(function IconMail(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2.2 7.26c.16-.91.45-1.57.97-2.09C4.34 4 6.23 4 10 4h4c3.77 0 5.66 0 6.83 1.17S22 8.23 22 12s0 5.66-1.17 6.83c-.51.51-1.16.8-2.04.96M15.3 20H10c-3.77 0-5.66 0-6.83-1.17S2 15.77 2 12v-1.25"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m6 8 2.16 1.8C10 11.33 10.9 12.1 12 12.1s2-.77 3.84-2.3L18 8"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

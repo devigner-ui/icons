@@ -24,79 +24,79 @@ const IconBlackHole = forwardRef<SVGSVGElement, IconProps>(
     return (
       <>
         {variant === "Broken" ? (
-        <svg
-          ref={ref}
-          className={className}
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          {...a11y}
-          {...rest}
-        >
-          <circle
-            cx="12"
-            cy="12"
-            r="2"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-          />
-          <path
-            d="M12 10c5 0 4.6 12-3 12"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-          <path
-            d="M12.31 14c-5 0-4.6-12 3-12"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-          <path
-            d="M10.63 10.7c3.54-3.54 11.74 5.23 6.37 10.6"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeDasharray="2 2"
-          />
-          <path
-            d="M13.68 13.3C10.14 16.84 1.94 8.07 7.32 2.7"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeDasharray="2 2"
-          />
-          <path
-            d="M10.85 13.52C7.32 10 16.08 1.8 21.45 7.16"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeDasharray="2 2"
-          />
-          <path
-            d="M13.46 10.48C17 14 8.23 22.2 2.86 16.84"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeDasharray="2 2"
-          />
-          <path
-            d="M10 12.31c0-5 12-4.6 12 3"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-          <path
-            d="M14 12c0 5-12 4.6-12-3"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-        </svg>
-      ) : !fill ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+            <circle
+              cx="12"
+              cy="12"
+              r="2"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+            />
+            <path
+              d="M12 10c5 0 4.6 12-3 12"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+            <path
+              d="M12.31 14c-5 0-4.6-12 3-12"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+            <path
+              d="M10.63 10.7c3.54-3.54 11.74 5.23 6.37 10.6"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+              strokeDasharray="2 2"
+            />
+            <path
+              d="M13.68 13.3C10.14 16.84 1.94 8.07 7.32 2.7"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+              strokeDasharray="2 2"
+            />
+            <path
+              d="M10.85 13.52C7.32 10 16.08 1.8 21.45 7.16"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+              strokeDasharray="2 2"
+            />
+            <path
+              d="M13.46 10.48C17 14 8.23 22.2 2.86 16.84"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+              strokeDasharray="2 2"
+            />
+            <path
+              d="M10 12.31c0-5 12-4.6 12 3"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+            <path
+              d="M14 12c0 5-12 4.6-12-3"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}

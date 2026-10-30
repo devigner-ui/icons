@@ -22,7 +22,35 @@ const IconCelo = forwardRef<SVGSVGElement, IconProps>(function IconCelo(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M22 9A7 7 0 1 1 8 9a7 7 0 0 1 14 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            stroke="currentColor"
+          />
+          <path
+            d="M5.09 9.2a7 7 0 1 1-2.79 3.77"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}
@@ -37,13 +65,13 @@ const IconCelo = forwardRef<SVGSVGElement, IconProps>(function IconCelo(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M15.67 16a7 7 0 1 0 0-14 7 7 0 0 0 0 14"
+            d="M15 16a7 7 0 1 0 0-14 7 7 0 0 0 0 14"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
           />
           <path
-            d="M9.67 22a7 7 0 1 0 0-14 7 7 0 0 0 0 14"
+            d="M9 22A7 7 0 1 0 9 8a7 7 0 0 0 0 14"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -64,16 +92,16 @@ const IconCelo = forwardRef<SVGSVGElement, IconProps>(function IconCelo(
         >
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M24.67 0h-24v24h24z"
+            d="M24 0H0v24h24z"
             fill="none"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M15.67 16a7 7 0 1 0 0-14 7 7 0 0 0 0 14"
+            d="M15 16a7 7 0 1 0 0-14 7 7 0 0 0 0 14"
             fill="currentColor"
           />
           <path
-            d="M9.67 22a7 7 0 1 0 0-14 7 7 0 0 0 0 14"
+            d="M9 22A7 7 0 1 0 9 8a7 7 0 0 0 0 14"
             fill="currentColor"
           />
         </svg>
@@ -91,11 +119,11 @@ const IconCelo = forwardRef<SVGSVGElement, IconProps>(function IconCelo(
           {...rest}
         >
           <path
-            d="M9.67 22a7 7 0 1 0 0-14 7 7 0 0 0 0 14"
+            d="M9 22A7 7 0 1 0 9 8a7 7 0 0 0 0 14"
             fill="currentColor"
           />
           <path
-            d="M22.67 9a7 7 0 0 1-3.86 6.25c-.31.16-.66-.09-.69-.43a8.96 8.96 0 0 0-8.27-8.27c-.35-.03-.59-.38-.43-.69A7 7 0 0 1 22.67 9"
+            d="M22 9a7 7 0 0 1-3.86 6.25c-.31.16-.66-.09-.69-.43a8.96 8.96 0 0 0-8.27-8.27c-.35-.03-.59-.38-.43-.69A7 7 0 0 1 22 9"
             fill="currentColor"
           />
         </svg>

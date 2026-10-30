@@ -22,7 +22,49 @@ const IconModules = forwardRef<SVGSVGElement, IconProps>(function IconModules(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M5.24 2.7q.6-.2 1.26-.2a4 4 0 0 1 4 4v2.67c0 .3 0 .46-.03.59-.1.34-.37.61-.71.7-.13.04-.28.04-.6.04H6.5a4 4 0 0 1-3.72-5.47"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M13.5 14.83c0-.3 0-.46.03-.59.1-.34.37-.61.71-.7.13-.04.28-.04.6-.04h2.66a4 4 0 1 1-4 4z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M2.5 17.5a4 4 0 0 1 4-4h2.4c.56 0 .84 0 1.05.11q.29.15.44.44c.11.21.11.49.11 1.05v2.4a4 4 0 1 1-8 0Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M13.5 6.5a4 4 0 1 1 4 4h-3.11a1 1 0 0 1-.88-.89l-.01-.25V9"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

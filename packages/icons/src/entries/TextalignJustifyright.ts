@@ -1,1 +1,1 @@
-export { default, default as IconTextalignJustifyright } from '../../icons/TextalignJustifyright';
+export { default, default as IconTextAlignJustifyRight } from '../../icons/TextAlignJustifyRight';

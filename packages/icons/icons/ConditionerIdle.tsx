@@ -23,7 +23,49 @@ const IconConditionerIdle = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M2.08 8c.09-.97.31-1.63.8-2.12C3.76 5 5.18 5 8 5h8c2.83 0 4.24 0 5.12.88S22 8.18 22 11v1.23m-.2 3.49a3.7 3.7 0 0 1-.97 2.11C19.66 19 17.77 19 14 19h-4c-3.77 0-5.66 0-6.83-1.17S2 14.77 2 11"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M18 18.5c0-1.4 0-2.1-.34-2.61q-.22-.33-.55-.55c-.5-.34-1.2-.34-2.61-.34h-5c-1.4 0-2.1 0-2.61.34q-.33.22-.55.55C6 16.39 6 17.09 6 18.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M6 11.5h12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M6 9h12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}

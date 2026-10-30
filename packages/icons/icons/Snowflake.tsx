@@ -24,38 +24,34 @@ const IconSnowflake = forwardRef<SVGSVGElement, IconProps>(
     return (
       <>
         {variant === "Broken" ? (
-        <svg
-          ref={ref}
-          className={className}
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          {...a11y}
-          {...rest}
-        >
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
           <path
-            d="M12 2v16m0 4v-4m0 0 3 3m-3-3-3 3m6-18-3 3-3-3"
+            d="M12 2v4.65m0 3.5V18m0 4v-4m0 0 3 3m-3-3-3 3m6-18-3 3-3-3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
-            d="M3.34 7 6.8 9m0 0 10.4 6M6.8 9 5.7 4.9M6.8 9l-4.1 1.1M17.2 15l3.46 2m-3.46-2 4.1-1.1M17.2 15l1.1 4.1"
+            d="M3.34 7 6.8 9m0 0 5.2 3M6.8 9 5.7 4.9M6.8 9l-4.1 1.1M12 12l5.2 3M12 12l5.2-3M12 12l-5.2 3m10.4 0 3.46 2m-3.46-2 4.1-1.1M17.2 15l1.1 4.1M20.65 7 17.2 9m0 0 1.1-4.1M17.2 9l4.1 1.1M6.8 15l-3.46 2m3.46-2-4.1-1.1M6.8 15l-1.1 4.1"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
-          <path
-            d="M20.66 7 17.2 9m0 0L6.8 15m10.4-6 1.1-4.1M17.2 9l4.1 1.1M6.8 15l-3.46 2m3.46-2-4.1-1.1M6.8 15l-1.1 4.1"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-        </svg>
-      ) : !fill ? (
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}

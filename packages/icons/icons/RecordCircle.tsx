@@ -24,42 +24,34 @@ const IconRecordCircle = forwardRef<SVGSVGElement, IconProps>(
     return (
       <>
         {variant === "Broken" ? (
-        <svg
-          ref={ref}
-          className={className}
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          focusable="false"
-          {...a11y}
-          {...rest}
-        >
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
           <path
-            d="M18.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-          />
-          <path
-            d="M10.5 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-          />
-          <path
-            d="M8 14.5h8"
+            d="M20.11 17.82A9.99 9.99 0 0 0 11.97 2c-2.13 0-4.1.66-5.72 1.79M3.79 6.25a10 10 0 0 0 13.83 14"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
-            d="M7 3.34A10 10 0 1 1 3.34 7"
+            d="M12 16.23a4.23 4.23 0 1 0 .01-8.45 4.23 4.23 0 0 0-.01 8.45Z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
           />
-        </svg>
-      ) : !fill ? (
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -73,7 +65,7 @@ const IconRecordCircle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.64 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M11.97 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -81,7 +73,7 @@ const IconRecordCircle = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.67 16.23a4.23 4.23 0 1 0 0-8.46 4.23 4.23 0 0 0 0 8.46"
+              d="M12 16.23a4.23 4.23 0 1 0 0-8.46 4.23 4.23 0 0 0 0 8.46"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -104,11 +96,11 @@ const IconRecordCircle = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.64 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
+              d="M11.97 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20"
               fill="currentColor"
             />
             <path
-              d="M12.67 16.23a4.23 4.23 0 1 0 0-8.46 4.23 4.23 0 0 0 0 8.46"
+              d="M12 16.23a4.23 4.23 0 1 0 0-8.46 4.23 4.23 0 0 0 0 8.46"
               fill="currentColor"
             />
           </svg>
@@ -126,7 +118,7 @@ const IconRecordCircle = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.64 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m.03 14.23a4.23 4.23 0 1 1-.01-8.45 4.23 4.23 0 0 1 .01 8.45"
+              d="M11.97 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20M12 16.23a4.23 4.23 0 1 1-.01-8.45 4.23 4.23 0 0 1 .01 8.45"
               fill="currentColor"
             />
           </svg>

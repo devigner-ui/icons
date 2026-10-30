@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconGPS = forwardRef<SVGSVGElement, IconProps>(function IconGPS(
+const IconGps = forwardRef<SVGSVGElement, IconProps>(function IconGps(
   { className, variant = "Outline", strokeWidth = "1.5", ...rest },
   ref,
 ) {
@@ -193,4 +193,4 @@ const IconGPS = forwardRef<SVGSVGElement, IconProps>(function IconGPS(
   );
 });
 
-export default IconGPS;
+export default IconGps;

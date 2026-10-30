@@ -22,7 +22,7 @@ const IconSound = forwardRef<SVGSVGElement, IconProps>(function IconSound(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,56 @@ const IconSound = forwardRef<SVGSVGElement, IconProps>(function IconSound(
           {...rest}
         >
           <path
-            d="M3.67 8.25v7.5"
+            d="M3 8.25v7.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.5 5.75v12.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M12 3.25V8.5m0 3.5v8.75"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M16.5 5.75v12.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M21 8.25v7.5"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3 8.25v7.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,14 +93,14 @@ const IconSound = forwardRef<SVGSVGElement, IconProps>(function IconSound(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M8.17 5.75v12.5"
+            d="M7.5 5.75v12.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M12.67 3.25v17.5"
+            d="M12 3.25v17.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -59,14 +108,14 @@ const IconSound = forwardRef<SVGSVGElement, IconProps>(function IconSound(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M17.17 5.75v12.5"
+            d="M16.5 5.75v12.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M21.67 8.25v7.5"
+            d="M21 8.25v7.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -87,25 +136,25 @@ const IconSound = forwardRef<SVGSVGElement, IconProps>(function IconSound(
           {...rest}
         >
           <path
-            d="M3.67 16.5a.76.76 0 0 1-.75-.75v-7.5c0-.41.34-.75.75-.75s.75.34.75.75v7.5c0 .41-.34.75-.75.75"
+            d="M3 16.5a.76.76 0 0 1-.75-.75v-7.5c0-.41.34-.75.75-.75s.75.34.75.75v7.5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M8.17 19a.76.76 0 0 1-.75-.75V5.75c0-.41.34-.75.75-.75s.75.34.75.75v12.5c0 .41-.34.75-.75.75"
+            d="M7.5 19a.76.76 0 0 1-.75-.75V5.75c0-.41.34-.75.75-.75s.75.34.75.75v12.5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M12.67 21.5a.76.76 0 0 1-.75-.75V3.25c0-.41.34-.75.75-.75s.75.34.75.75v17.5c0 .41-.34.75-.75.75"
+            d="M12 21.5a.76.76 0 0 1-.75-.75V3.25c0-.41.34-.75.75-.75s.75.34.75.75v17.5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M17.17 19a.76.76 0 0 1-.75-.75V5.75c0-.41.34-.75.75-.75s.75.34.75.75v12.5c0 .41-.34.75-.75.75"
+            d="M16.5 19a.76.76 0 0 1-.75-.75V5.75c0-.41.34-.75.75-.75s.75.34.75.75v12.5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M21.67 16.5a.76.76 0 0 1-.75-.75v-7.5c0-.41.34-.75.75-.75s.75.34.75.75v7.5c0 .41-.34.75-.75.75"
+            d="M21 16.5a.76.76 0 0 1-.75-.75v-7.5c0-.41.34-.75.75-.75s.75.34.75.75v7.5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>
@@ -123,23 +172,23 @@ const IconSound = forwardRef<SVGSVGElement, IconProps>(function IconSound(
           {...rest}
         >
           <path
-            d="M3.67 16.5a.76.76 0 0 1-.75-.75v-7.5c0-.41.34-.75.75-.75s.75.34.75.75v7.5c0 .41-.34.75-.75.75"
+            d="M3 16.5a.76.76 0 0 1-.75-.75v-7.5c0-.41.34-.75.75-.75s.75.34.75.75v7.5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M8.17 19a.76.76 0 0 1-.75-.75V5.75c0-.41.34-.75.75-.75s.75.34.75.75v12.5c0 .41-.34.75-.75.75"
+            d="M7.5 19a.76.76 0 0 1-.75-.75V5.75c0-.41.34-.75.75-.75s.75.34.75.75v12.5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M12.67 21.5a.76.76 0 0 1-.75-.75V3.25c0-.41.34-.75.75-.75s.75.34.75.75v17.5c0 .41-.34.75-.75.75"
+            d="M12 21.5a.76.76 0 0 1-.75-.75V3.25c0-.41.34-.75.75-.75s.75.34.75.75v17.5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M17.17 19a.76.76 0 0 1-.75-.75V5.75c0-.41.34-.75.75-.75s.75.34.75.75v12.5c0 .41-.34.75-.75.75"
+            d="M16.5 19a.76.76 0 0 1-.75-.75V5.75c0-.41.34-.75.75-.75s.75.34.75.75v12.5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
           <path
-            d="M21.67 16.5a.76.76 0 0 1-.75-.75v-7.5c0-.41.34-.75.75-.75s.75.34.75.75v7.5c0 .41-.34.75-.75.75"
+            d="M21 16.5a.76.76 0 0 1-.75-.75v-7.5c0-.41.34-.75.75-.75s.75.34.75.75v7.5c0 .41-.34.75-.75.75"
             fill="currentColor"
           />
         </svg>

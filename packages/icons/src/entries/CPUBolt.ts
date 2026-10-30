@@ -1,1 +1,1 @@
-export { default, default as IconCPUBolt } from '../../icons/CPUBolt';
+export { default, default as IconCpuBolt } from '../../icons/CpuBolt';

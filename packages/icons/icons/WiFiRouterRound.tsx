@@ -2,8 +2,8 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconWiFiRouterRound = forwardRef<SVGSVGElement, IconProps>(
-  function IconWiFiRouterRound(
+const IconWifiRouterRound = forwardRef<SVGSVGElement, IconProps>(
+  function IconWifiRouterRound(
     { className, variant = "Outline", strokeWidth = "1.5", ...rest },
     ref,
   ) {
@@ -148,41 +148,41 @@ const IconWiFiRouterRound = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M7 14a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5"
+              d="M6.8 13.7a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2 14.75a5 5 0 0 1 5-5h10a5 5 0 1 1 0 10H7a5 5 0 0 1-5-5m2.75 0a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0M12 14a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5z"
+              d="M1.8 14.45a5 5 0 0 1 5-5h10a5 5 0 1 1 0 10h-10a5 5 0 0 1-5-5m2.75 0a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0m7.25-.75a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5z"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m5.47 19.51-1.11 1.85a.75.75 0 1 0 1.28.78l1.43-2.39H7a5 5 0 0 1-1.53-.24"
+              d="m5.27 19.21-1.11 1.85a.75.75 0 1 0 1.28.78l1.43-2.39H6.8a5 5 0 0 1-1.53-.24"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="m16.93 19.75 1.43 2.39a.75.75 0 0 0 1.28-.78l-1.1-1.85a5 5 0 0 1-1.54.24z"
-              fill="currentColor"
-            />
-            <path
-              opacity={duotone ? "0.4" : "1"}
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M16.5 3.5a4.75 4.75 0 0 0-4.4 2.93.75.75 0 1 1-1.38-.57 6.25 6.25 0 0 1 11.56 0 .75.75 0 0 1-1.39.57A4.8 4.8 0 0 0 16.5 3.5"
+              d="m16.73 19.45 1.43 2.39a.75.75 0 0 0 1.28-.78l-1.1-1.85a5 5 0 0 1-1.54.24z"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M16.5 6c-1.02 0-1.89.68-2.16 1.62a.75.75 0 0 1-1.44-.42 3.75 3.75 0 0 1 7.2 0 .75.75 0 1 1-1.44.42A2.25 2.25 0 0 0 16.5 6"
+              d="M16.3 3.2a4.75 4.75 0 0 0-4.4 2.93.75.75 0 1 1-1.38-.57 6.25 6.25 0 0 1 11.56 0 .75.75 0 0 1-1.39.57A4.8 4.8 0 0 0 16.3 3.2"
               fill="currentColor"
             />
             <path
-              d="M17.5 7.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+              opacity={duotone ? "0.4" : "1"}
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M16.3 5.7c-1.02 0-1.89.68-2.16 1.62a.75.75 0 0 1-1.44-.42 3.75 3.75 0 0 1 7.2 0 .75.75 0 1 1-1.44.42A2.25 2.25 0 0 0 16.3 5.7"
+              fill="currentColor"
+            />
+            <path
+              d="M17.3 7.45a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
               fill="currentColor"
             />
           </svg>
@@ -200,25 +200,25 @@ const IconWiFiRouterRound = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.5 3.5a4.75 4.75 0 0 0-4.4 2.93.75.75 0 1 1-1.38-.57 6.25 6.25 0 0 1 11.56 0 .75.75 0 0 1-1.39.57A4.8 4.8 0 0 0 16.5 3.5"
+              d="M16.3 3.2a4.75 4.75 0 0 0-4.4 2.93.75.75 0 1 1-1.38-.57 6.25 6.25 0 0 1 11.56 0 .75.75 0 0 1-1.39.57A4.8 4.8 0 0 0 16.3 3.2"
               fill="currentColor"
             />
             <path
-              d="M16.5 6c-1.02 0-1.89.68-2.16 1.62a.75.75 0 0 1-1.44-.42 3.75 3.75 0 0 1 7.2 0 .75.75 0 1 1-1.44.42A2.25 2.25 0 0 0 16.5 6"
+              d="M16.3 5.7c-1.02 0-1.89.68-2.16 1.62a.75.75 0 0 1-1.44-.42 3.75 3.75 0 0 1 7.2 0 .75.75 0 1 1-1.44.42A2.25 2.25 0 0 0 16.3 5.7"
               fill="currentColor"
             />
             <path
-              d="M16.5 8.75a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
+              d="M16.3 8.45a1 1 0 1 0 0-2 1 1 0 0 0 0 2"
               fill="currentColor"
             />
             <path
-              d="M7 14a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5"
+              d="M6.8 13.7a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M2 14.75a5 5 0 0 1 5-5h10a5 5 0 0 1 1.53 9.76l1.11 1.85a.75.75 0 0 1-1.28.78l-1.43-2.39H7.07l-1.43 2.39a.75.75 0 1 1-1.28-.78l1.1-1.85A5 5 0 0 1 2 14.75m2.75 0a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0M12 14a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5z"
+              d="M1.8 14.45a5 5 0 0 1 5-5h10a5 5 0 0 1 1.53 9.76l1.11 1.85a.75.75 0 0 1-1.28.78l-1.43-2.39H6.87l-1.43 2.39a.75.75 0 1 1-1.28-.78l1.1-1.85a5 5 0 0 1-3.46-4.76m2.75 0a2.25 2.25 0 1 1 4.5 0 2.25 2.25 0 0 1-4.5 0m7.25-.75a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5z"
               fill="currentColor"
             />
           </svg>
@@ -228,4 +228,4 @@ const IconWiFiRouterRound = forwardRef<SVGSVGElement, IconProps>(
   },
 );
 
-export default IconWiFiRouterRound;
+export default IconWifiRouterRound;

@@ -22,7 +22,7 @@ const IconBubble = forwardRef<SVGSVGElement, IconProps>(function IconBubble(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,21 +36,57 @@ const IconBubble = forwardRef<SVGSVGElement, IconProps>(function IconBubble(
           {...rest}
         >
           <path
-            d="M16.26 12.26a5.13 5.13 0 1 0 0-10.26 5.13 5.13 0 0 0 0 10.26"
+            d="M15.6 12.26a5.13 5.13 0 1 0-3.86-1.75"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M3.28 16.36a3.08 3.08 0 1 0 3.08-3.08"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M19.18 19.44a2.56 2.56 0 1 1-5.12 0 2.56 2.56 0 0 1 5.12 0Z"
+            strokeWidth={strokeWidth}
+            strokeMiterlimit="10"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M15.59 12.26a5.13 5.13 0 1 0 0-10.26 5.13 5.13 0 0 0 0 10.26"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M7.03 19.44a3.08 3.08 0 1 0 0-6.16 3.08 3.08 0 0 0 0 6.16"
+            d="M6.36 19.44a3.08 3.08 0 1 0 0-6.16 3.08 3.08 0 0 0 0 6.16"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M17.29 22a2.56 2.56 0 1 0 0-5.12 2.56 2.56 0 0 0 0 5.12"
+            d="M16.62 22a2.56 2.56 0 1 0 0-5.12 2.56 2.56 0 0 0 0 5.12"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
@@ -70,17 +106,17 @@ const IconBubble = forwardRef<SVGSVGElement, IconProps>(function IconBubble(
           {...rest}
         >
           <path
-            d="M16.26 1.75a5.38 5.38 0 1 0 0 10.76 5.38 5.38 0 0 0 0-10.76"
+            d="M15.59 1.75a5.38 5.38 0 1 0 0 10.76 5.38 5.38 0 0 0 0-10.76"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M7.03 13.03a3.34 3.34 0 1 0 .01 6.67 3.34 3.34 0 0 0-.01-6.67"
+            d="M6.36 13.03a3.34 3.34 0 1 0 .01 6.67 3.34 3.34 0 0 0-.01-6.67"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M17.29 16.62a2.81 2.81 0 1 0 0 5.62 2.81 2.81 0 0 0 0-5.62"
+            d="M16.62 16.62a2.81 2.81 0 1 0 0 5.62 2.81 2.81 0 0 0 0-5.62"
             fill="currentColor"
           />
         </svg>
@@ -98,15 +134,15 @@ const IconBubble = forwardRef<SVGSVGElement, IconProps>(function IconBubble(
           {...rest}
         >
           <path
-            d="M16.26 1.75a5.38 5.38 0 1 0 0 10.76 5.38 5.38 0 0 0 0-10.76"
+            d="M15.59 1.75a5.38 5.38 0 1 0 0 10.76 5.38 5.38 0 0 0 0-10.76"
             fill="currentColor"
           />
           <path
-            d="M7.03 13.03a3.34 3.34 0 1 0 .01 6.67 3.34 3.34 0 0 0-.01-6.67"
+            d="M6.36 13.03a3.34 3.34 0 1 0 .01 6.67 3.34 3.34 0 0 0-.01-6.67"
             fill="currentColor"
           />
           <path
-            d="M17.29 16.62a2.81 2.81 0 1 0 0 5.62 2.81 2.81 0 0 0 0-5.62"
+            d="M16.62 16.62a2.81 2.81 0 1 0 0 5.62 2.81 2.81 0 0 0 0-5.62"
             fill="currentColor"
           />
         </svg>

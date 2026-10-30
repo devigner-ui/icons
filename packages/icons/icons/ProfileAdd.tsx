@@ -23,7 +23,49 @@ const IconProfileAdd = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M18.5 19.5h-4"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M16.5 21.5v-4"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M11.99 21.81a9 9 0 0 1-5.01-1.38c-2.42-1.62-2.42-4.26 0-5.87 2.75-1.84 7.26-1.84 10 0"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M15.68 3.96A4.44 4.44 0 1 1 12 2"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -38,14 +80,14 @@ const IconProfileAdd = forwardRef<SVGSVGElement, IconProps>(
           >
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="M19.17 19.5h-4"
+                d="M18.67 19.5h-4"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M17.17 21.5v-4"
+                d="M16.67 21.5v-4"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
@@ -54,14 +96,14 @@ const IconProfileAdd = forwardRef<SVGSVGElement, IconProps>(
             </g>
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M12.83 10.87h-.33a4.43 4.43 0 1 1 4.6-4.43c0 2.4-1.9 4.35-4.27 4.43"
+              d="M12.33 10.87H12a4.43 4.43 0 1 1 4.6-4.43c0 2.4-1.9 4.35-4.27 4.43"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M12.66 21.81a9 9 0 0 1-5.01-1.38c-2.42-1.62-2.42-4.26 0-5.87 2.75-1.84 7.26-1.84 10.01 0"
+              d="M12.16 21.81a9 9 0 0 1-5.01-1.38c-2.42-1.62-2.42-4.26 0-5.87 2.75-1.84 7.26-1.84 10.01 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -82,16 +124,16 @@ const IconProfileAdd = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 2a4.75 4.75 0 0 0-.12 9.49h.29A4.74 4.74 0 0 0 12.67 2"
+              d="M12 2a4.75 4.75 0 0 0-.12 9.49h.29A4.74 4.74 0 0 0 12 2"
               fill="currentColor"
             />
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M17.75 14.15c-2.79-1.86-7.34-1.86-10.15 0-1.27.85-1.97 2-1.97 3.23s.7 2.37 1.96 3.21A9 9 0 0 0 12.67 22c1.84 0 3.68-.47 5.08-1.41 1.26-.85 1.96-1.99 1.96-3.23-.01-1.23-.7-2.37-1.96-3.21"
+              d="M17.08 14.15c-2.79-1.86-7.34-1.86-10.15 0-1.27.85-1.97 2-1.97 3.23s.7 2.37 1.96 3.21A9 9 0 0 0 12 22c1.84 0 3.68-.47 5.08-1.41 1.26-.85 1.96-1.99 1.96-3.23-.01-1.23-.7-2.37-1.96-3.21"
               fill="currentColor"
             />
             <path
-              d="M14.67 16.63h-1.25v-1.25a.76.76 0 0 0-.75-.75.76.76 0 0 0-.75.75v1.25h-1.25a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h1.25v1.25c0 .41.34.75.75.75s.75-.34.75-.75v-1.25h1.25c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75"
+              d="M14 16.63h-1.25v-1.25a.76.76 0 0 0-.75-.75.76.76 0 0 0-.75.75v1.25H10a.76.76 0 0 0-.75.75c0 .41.34.75.75.75h1.25v1.25c0 .41.34.75.75.75s.75-.34.75-.75v-1.25H14c.41 0 .75-.34.75-.75a.76.76 0 0 0-.75-.75"
               fill="currentColor"
             />
           </svg>
@@ -109,11 +151,11 @@ const IconProfileAdd = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M12.67 2a4.75 4.75 0 0 0-.12 9.49h.29A4.74 4.74 0 0 0 12.67 2"
+              d="M12 2a4.75 4.75 0 0 0-.12 9.49h.29A4.74 4.74 0 0 0 12 2"
               fill="currentColor"
             />
             <path
-              d="M17.75 14.15c-2.79-1.86-7.34-1.86-10.15 0-1.27.85-1.97 2-1.97 3.23s.7 2.37 1.96 3.21A9 9 0 0 0 12.67 22c1.84 0 3.68-.47 5.08-1.41 1.26-.85 1.96-1.99 1.96-3.23-.01-1.23-.7-2.37-1.96-3.21m-3.08 3.98h-1.25v1.25c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75v-1.25h-1.25a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h1.25v-1.25c0-.41.34-.75.75-.75s.75.34.75.75v1.25h1.25c.41 0 .75.34.75.75s-.34.75-.75.75"
+              d="M17.08 14.15c-2.79-1.86-7.34-1.86-10.15 0-1.27.85-1.97 2-1.97 3.23s.7 2.37 1.96 3.21A9 9 0 0 0 12 22c1.84 0 3.68-.47 5.08-1.41 1.26-.85 1.96-1.99 1.96-3.23-.01-1.23-.7-2.37-1.96-3.21M14 18.13h-1.25v1.25c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75v-1.25H10a.76.76 0 0 1-.75-.75c0-.41.34-.75.75-.75h1.25v-1.25c0-.41.34-.75.75-.75s.75.34.75.75v1.25H14c.41 0 .75.34.75.75s-.34.75-.75.75"
               fill="currentColor"
             />
           </svg>

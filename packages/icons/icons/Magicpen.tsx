@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
-const IconMagicpen = forwardRef<SVGSVGElement, IconProps>(function IconMagicpen(
+const IconMagicPen = forwardRef<SVGSVGElement, IconProps>(function IconMagicPen(
   { className, variant = "Outline", strokeWidth = "1.5", ...rest },
   ref,
 ) {
@@ -22,7 +22,7 @@ const IconMagicpen = forwardRef<SVGSVGElement, IconProps>(function IconMagicpen(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
         <svg
           ref={ref}
           className={className}
@@ -36,7 +36,53 @@ const IconMagicpen = forwardRef<SVGSVGElement, IconProps>(function IconMagicpen(
           {...rest}
         >
           <path
-            d="M4.17 20.5c.83.83 2.17.83 3 0l13-13a2.12 2.12 0 1 0-3-3l-13 13a2.1 2.1 0 0 0 0 3"
+            d="M17.18 10.32 19.7 7.8a2.12 2.12 0 1 0-3-3l-13 13a2.12 2.12 0 1 0 3 3l8-8"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m18.21 9.29-3-3"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m9.76 3.8.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5 1.5.44"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m4.7 8.74 1.5-.44-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="m18.64 14.8-.44-1.5 1.5.44 1.5-.44-.44 1.5.44 1.5-1.5-.44"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M3.67 20.8c.83.83 2.17.83 3 0l13-13a2.12 2.12 0 1 0-3-3l-13 13a2.1 2.1 0 0 0 0 3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -44,7 +90,7 @@ const IconMagicpen = forwardRef<SVGSVGElement, IconProps>(function IconMagicpen(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m18.68 8.99-3-3"
+            d="m18.18 9.29-3-3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -52,21 +98,21 @@ const IconMagicpen = forwardRef<SVGSVGElement, IconProps>(function IconMagicpen(
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m9.17 2.44 1.5-.44-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5L7.67 2z"
+            d="m8.67 2.74 1.5-.44-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5z"
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M5.17 8.44 6.67 8l-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5L3.67 8z"
+            d="m4.67 8.74 1.5-.44-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5z"
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m20.17 13.44 1.5-.44-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5z"
+            d="m19.67 13.74 1.5-.44-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5z"
             stroke="currentColor"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -86,24 +132,24 @@ const IconMagicpen = forwardRef<SVGSVGElement, IconProps>(function IconMagicpen(
           {...rest}
         >
           <path
-            d="m20.17 7.5-1.49 1.49-3-3 1.49-1.49a2 2 0 0 1 1.5-.62 2.12 2.12 0 0 1 1.5 3.62"
+            d="m19.5 8.1-1.49 1.49-3-3L16.5 5.1a2 2 0 0 1 1.5-.62 2.12 2.12 0 0 1 1.5 3.62"
             fill="currentColor"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M18.68 8.99 7.17 20.5a2.12 2.12 0 1 1-3-3L15.68 5.99z"
+            d="M18.01 9.59 6.5 21.1a2.12 2.12 0 1 1-3-3L15.01 6.59z"
             fill="currentColor"
           />
           <path
-            d="m10.62 3.5.41-1.39a.4.4 0 0 0-.09-.37.4.4 0 0 0-.38-.1l-1.4.41-1.38-.41a.4.4 0 0 0-.37.09q-.15.16-.1.37l.4 1.4-.4 1.39q-.05.2.09.37.16.15.37.09l1.4-.4 1.39.41.1.02a.4.4 0 0 0 .28-.11q.15-.16.09-.37z"
+            d="m9.95 4.1.41-1.39a.4.4 0 0 0-.09-.37.4.4 0 0 0-.38-.1l-1.4.41-1.38-.41a.4.4 0 0 0-.37.09q-.15.16-.1.37l.4 1.4-.4 1.39q-.05.2.09.37.16.15.37.09l1.4-.4 1.39.41.1.02a.4.4 0 0 0 .28-.11q.15-.16.09-.37z"
             fill="currentColor"
           />
           <path
-            d="m6.62 9.5.4-1.39a.4.4 0 0 0-.08-.37.4.4 0 0 0-.37-.09l-1.4.4-1.4-.41a.4.4 0 0 0-.36.09q-.15.16-.1.37l.4 1.4-.4 1.39q-.05.2.09.37.16.15.37.09l1.39-.41 1.39.41.1.01a.4.4 0 0 0 .28-.11q.15-.16.09-.37z"
+            d="m5.95 10.1.4-1.39a.4.4 0 0 0-.08-.37.4.4 0 0 0-.37-.09l-1.4.4-1.4-.41a.4.4 0 0 0-.36.09q-.15.16-.1.37l.4 1.4-.4 1.39q-.05.2.09.37.16.15.37.09l1.39-.41 1.39.41.1.01a.4.4 0 0 0 .28-.11q.15-.16.09-.37z"
             fill="currentColor"
           />
           <path
-            d="m21.62 14.5.41-1.39a.4.4 0 0 0-.09-.37.4.4 0 0 0-.37-.09l-1.39.41-1.39-.41a.4.4 0 0 0-.37.09q-.15.16-.09.37l.41 1.39-.41 1.39q-.05.2.09.37.16.15.37.09l1.39-.41 1.39.41.11.01a.4.4 0 0 0 .27-.11q.15-.16.09-.37z"
+            d="m20.95 15.1.41-1.39a.4.4 0 0 0-.09-.37.4.4 0 0 0-.37-.09l-1.39.41-1.39-.41a.4.4 0 0 0-.37.09q-.15.16-.09.37l.41 1.39-.41 1.39q-.05.2.09.37.16.15.37.09l1.39-.41 1.39.41.11.01a.4.4 0 0 0 .27-.11q.15-.16.09-.37z"
             fill="currentColor"
           />
         </svg>
@@ -121,23 +167,23 @@ const IconMagicpen = forwardRef<SVGSVGElement, IconProps>(function IconMagicpen(
           {...rest}
         >
           <path
-            d="m20.17 7.5-1.49 1.49-3-3 1.49-1.49a2 2 0 0 1 1.5-.62 2.12 2.12 0 0 1 1.5 3.62"
+            d="m19.5 8.1-1.49 1.49-3-3L16.5 5.1a2 2 0 0 1 1.5-.62 2.12 2.12 0 0 1 1.5 3.62"
             fill="currentColor"
           />
           <path
-            d="M17.98 9.7 7.17 20.5a2.12 2.12 0 1 1-3-3L14.98 6.7z"
+            d="M17.31 10.3 6.5 21.1a2.12 2.12 0 1 1-3-3L14.31 7.3z"
             fill="currentColor"
           />
           <path
-            d="m10.62 3.5.41-1.39a.4.4 0 0 0-.09-.37.4.4 0 0 0-.38-.1l-1.4.41-1.38-.41a.4.4 0 0 0-.37.09q-.15.16-.1.37l.4 1.4-.4 1.39q-.05.2.09.37.16.15.37.09l1.4-.4 1.39.41.1.02a.4.4 0 0 0 .28-.11q.15-.16.09-.37z"
+            d="m9.95 4.1.41-1.39a.4.4 0 0 0-.09-.37.4.4 0 0 0-.38-.1l-1.4.41-1.38-.41a.4.4 0 0 0-.37.09q-.15.16-.1.37l.4 1.4-.4 1.39q-.05.2.09.37.16.15.37.09l1.4-.4 1.39.41.1.02a.4.4 0 0 0 .28-.11q.15-.16.09-.37z"
             fill="currentColor"
           />
           <path
-            d="m6.62 9.5.4-1.39a.4.4 0 0 0-.08-.37.4.4 0 0 0-.37-.09l-1.4.4-1.4-.41a.4.4 0 0 0-.36.09q-.15.16-.1.37l.4 1.4-.4 1.39q-.05.2.09.37.16.15.37.09l1.39-.41 1.39.41.1.01a.4.4 0 0 0 .28-.11q.15-.16.09-.37z"
+            d="m5.95 10.1.4-1.39a.4.4 0 0 0-.08-.37.4.4 0 0 0-.37-.09l-1.4.4-1.4-.41a.4.4 0 0 0-.36.09q-.15.16-.1.37l.4 1.4-.4 1.39q-.05.2.09.37.16.15.37.09l1.39-.41 1.39.41.1.01a.4.4 0 0 0 .28-.11q.15-.16.09-.37z"
             fill="currentColor"
           />
           <path
-            d="m21.62 14.5.41-1.39a.4.4 0 0 0-.09-.37.4.4 0 0 0-.37-.09l-1.39.41-1.39-.41a.4.4 0 0 0-.37.09q-.15.16-.09.37l.41 1.39-.41 1.39q-.05.2.09.37.16.15.37.09l1.39-.41 1.39.41.11.01a.4.4 0 0 0 .27-.11q.15-.16.09-.37z"
+            d="m20.95 15.1.41-1.39a.4.4 0 0 0-.09-.37.4.4 0 0 0-.37-.09l-1.39.41-1.39-.41a.4.4 0 0 0-.37.09q-.15.16-.09.37l.41 1.39-.41 1.39q-.05.2.09.37.16.15.37.09l1.39-.41 1.39.41.11.01a.4.4 0 0 0 .27-.11q.15-.16.09-.37z"
             fill="currentColor"
           />
         </svg>
@@ -146,4 +192,4 @@ const IconMagicpen = forwardRef<SVGSVGElement, IconProps>(function IconMagicpen(
   );
 });
 
-export default IconMagicpen;
+export default IconMagicPen;

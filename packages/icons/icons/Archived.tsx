@@ -22,7 +22,42 @@ const IconArchived = forwardRef<SVGSVGElement, IconProps>(function IconArchived(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M20.5 7v6c0 3.77 0 5.66-1.17 6.83S16.27 21 12.5 21h-1c-3.77 0-5.66 0-6.83-1.17S3.5 16.77 3.5 13V7"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7.21 3H20c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7s0 1.41-.3 1.7c-.29.3-.76.3-1.7.3H4c-.94 0-1.41 0-1.7-.3C2 6.42 2 5.95 2 5c0-.94 0-1.41.3-1.7.25-.27.65-.3 1.41-.3"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m9.5 13.4 1.43 1.6 3.57-4"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

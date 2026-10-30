@@ -37,23 +37,32 @@ const IconSendSquare = forwardRef<SVGSVGElement, IconProps>(
           {...rest}
         >
           <path
-            d="M17 12h-7m3-3-3 3 3 3"
-            stroke="currentColor"
+            d="M2 13.05V15c0 5 2 7 7 7h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
+            stroke="currentColor"
           />
           <path
-            d="M7 16V8"
-            stroke="currentColor"
+            d="m9 9.51 3-3 3 3"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
           />
           <path
-            d="M22 12c0 4.71 0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12s0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46c.97.98 1.3 2.35 1.4 4.54"
-            stroke="currentColor"
+            d="M12 6.51v8"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
+          />
+          <path
+            d="M6 16.51c3.89 1.3 8.11 1.3 12 0"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
           />
         </svg>
       ) : !fill ? (
@@ -70,7 +79,7 @@ const IconSendSquare = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M9.67 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7h-6c-5 0-7 2-7 7v6c0 5 2 7 7 7"
+              d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -78,14 +87,14 @@ const IconSendSquare = forwardRef<SVGSVGElement, IconProps>(
             />
             <g opacity={duotone ? "0.4" : "1"}>
               <path
-                d="m9.67 9.51 3-3 3 3"
+                d="m9 9.51 3-3 3 3"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
-                d="M12.67 6.51v8"
+                d="M12 6.51v8"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"
@@ -94,7 +103,7 @@ const IconSendSquare = forwardRef<SVGSVGElement, IconProps>(
             </g>
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M6.67 16.51c3.89 1.3 8.11 1.3 12 0"
+              d="M6 16.51c3.89 1.3 8.11 1.3 12 0"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
@@ -116,25 +125,25 @@ const IconSendSquare = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M16.86 2H8.49C4.85 2 2.68 4.17 2.68 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2"
+              d="M16.19 2H7.82C4.18 2 2.01 4.17 2.01 7.81v8.37c0 3.64 2.17 5.81 5.81 5.81h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M12.14 5.98c.3-.3.77-.3 1.06 0l3 3a.75.75 0 0 1-1.06 1.06l-2.47-2.47-2.47 2.47a.75.75 0 0 1-1.06-1.06z"
+              d="M11.47 5.98c.3-.3.77-.3 1.06 0l3 3a.75.75 0 0 1-1.06 1.06L12 7.57l-2.47 2.47a.75.75 0 0 1-1.06-1.06z"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M12.67 5.76c.41 0 .75.34.75.75v8a.75.75 0 0 1-1.5 0v-8c0-.41.34-.75.75-.75"
+              d="M12 5.76c.41 0 .75.34.75.75v8a.75.75 0 0 1-1.5 0v-8c0-.41.34-.75.75-.75"
               fill="currentColor"
             />
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              d="M5.96 16.27c.13-.4.55-.6.95-.47a18.2 18.2 0 0 0 11.52 0 .75.75 0 0 1 .48 1.42 19.7 19.7 0 0 1-12.48 0 .75.75 0 0 1-.47-.95"
+              d="M5.29 16.27c.13-.4.55-.6.95-.47a18.2 18.2 0 0 0 11.52 0 .75.75 0 0 1 .48 1.42 19.7 19.7 0 0 1-12.48 0 .75.75 0 0 1-.47-.95"
               fill="currentColor"
             />
           </svg>
@@ -152,7 +161,7 @@ const IconSendSquare = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              d="M16.86 2H8.48C4.84 2 2.67 4.17 2.67 7.81v8.37c0 3.65 2.17 5.82 5.81 5.82h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22.67 4.17 20.5 2 16.86 2M9.14 8.98l3-3a1 1 0 0 1 .24-.16.7.7 0 0 1 .57 0q.13.06.24.16l3 3c.29.29.29.77 0 1.06a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-1.72-1.72v6.19c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V8.32l-1.72 1.72a.75.75 0 0 1-1.06 0 .75.75 0 0 1 .01-1.06m9.77 8.24a19.7 19.7 0 0 1-12.48 0 .75.75 0 0 1-.47-.95.75.75 0 0 1 .95-.47 18.3 18.3 0 0 0 11.53 0c.39-.13.82.08.95.47.12.4-.09.82-.48.95"
+              d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2M8.47 8.98l3-3a1 1 0 0 1 .24-.16.7.7 0 0 1 .57 0q.13.06.24.16l3 3c.29.29.29.77 0 1.06a.7.7 0 0 1-.53.22.7.7 0 0 1-.53-.22l-1.72-1.72v6.19c0 .41-.34.75-.75.75a.76.76 0 0 1-.75-.75V8.32l-1.72 1.72a.75.75 0 0 1-1.06 0 .75.75 0 0 1 .01-1.06m9.77 8.24a19.7 19.7 0 0 1-12.48 0 .75.75 0 0 1-.47-.95.75.75 0 0 1 .95-.47 18.3 18.3 0 0 0 11.53 0c.39-.13.82.08.95.47.12.4-.09.82-.48.95"
               fill="currentColor"
             />
           </svg>

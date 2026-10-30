@@ -1,7 +1,7 @@
 {
   "name": "@devigner-ui/icons-svg",
-  "version": "2.3.0",
-  "description": "9,717 raw SVG files for @devigner-ui/icons: 2,147 symbols in outline, twotone, bold and bulk, plus Broken on 1,129 matching symbols. No framework, no build step, CDN-ready.",
+  "version": "3.5.0",
+  "description": "10,560 raw SVG files for @devigner-ui/icons: 2,112 symbols in outline, twotone, bold, bulk and broken. No framework, no build step, CDN-ready.",
   "keywords": [
     "icons",
     "svg",
@@ -13,7 +13,7 @@
   ],
   "license": "MIT AND CC-BY-4.0",
   "author": "Devigner",
-  "homepage": "https://icons.remidevigner.pro",
+  "homepage": "https://icons.devigner.cc",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devigner-ui/icons.git",
@@ -26,11 +26,13 @@
   "exports": {
     "./svg/*": "./svg/*",
     "./sprite/*": "./sprite/*",
+    "./renames.json": "./renames.json",
     "./package.json": "./package.json"
   },
   "files": [
     "svg",
     "sprite",
+    "renames.json",
     "ATTRIBUTION.md",
     "CHANGELOG.md"
   ],

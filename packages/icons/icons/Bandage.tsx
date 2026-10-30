@@ -22,7 +22,51 @@ const IconBandage = forwardRef<SVGSVGElement, IconProps>(function IconBandage(
 
   return (
     <>
-      {!fill ? (
+      {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M2.56 5a5.4 5.4 0 0 0 1.02 6.24l9.19 9.18a5.4 5.4 0 0 0 6.26.92m2.39-2.48a5.4 5.4 0 0 0-1-6.09l-9.19-9.19a5.4 5.4 0 0 0-6.24-1.01"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m12.77 20.42 7.65-7.65m-9.19-9.19-7.65 7.66"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8.46 12.71a1 1 0 1 0 1.42-1.42 1 1 0 1 0-1.42 1.42z"
+            fill="currentColor"
+          />
+          <path
+            d="M11.29 15.54a1 1 0 1 0 1.42-1.42 1 1 0 1 0-1.42 1.42z"
+            fill="currentColor"
+          />
+          <path
+            d="M11.29 9.88a1 1 0 1 0 1.42-1.42 1 1 0 1 0-1.42 1.42z"
+            fill="currentColor"
+          />
+          <path
+            d="M14.12 12.71a1 1 0 1 0 1.42-1.42 1 1 0 1 0-1.42 1.42z"
+            fill="currentColor"
+          />
+        </svg>
+      ) : !fill ? (
         <svg
           ref={ref}
           className={className}

@@ -38,27 +38,27 @@ const IconBicycling = forwardRef<SVGSVGElement, IconProps>(
         >
           <circle
             cx="15"
-            cy="4"
+            cy="4.5"
             r="2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <circle
             cx="6"
-            cy="18"
+            cy="18.5"
             r="3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <circle
             cx="18"
-            cy="18"
+            cy="18.5"
             r="3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
-            d="M18.5 10h-2.03c-1.22 0-1.83 0-2.38-.23-.55-.22-.98-.65-1.85-1.51l-.57-.58c-.79-.78-1.18-1.17-1.64-1.13-.47.05-.78.5-1.42 1.41M12 18l.06-.36c.23-1.47.35-2.2.02-2.8s-1-.9-2.37-1.5l-1.48-.64c-1.03-.45-1.55-.68-1.68-1.13A1 1 0 0 1 6.6 11"
+            d="M18.5 10.5h-2.03c-1.22 0-1.83 0-2.38-.23-.55-.22-.98-.65-1.85-1.51l-.57-.58c-.79-.78-1.18-1.17-1.64-1.13-.47.05-.78.5-1.42 1.41M12 18.5l.06-.36c.23-1.47.35-2.2.02-2.8s-1-.9-2.37-1.5l-1.48-.64c-1.03-.45-1.55-.68-1.68-1.13a1 1 0 0 1 .05-.57"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -79,7 +79,7 @@ const IconBicycling = forwardRef<SVGSVGElement, IconProps>(
           >
             <circle
               cx="15"
-              cy="4.00049"
+              cy="4.5"
               r="2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
@@ -87,7 +87,7 @@ const IconBicycling = forwardRef<SVGSVGElement, IconProps>(
             <circle
               opacity={duotone ? "0.4" : "1"}
               cx="6"
-              cy="18.0005"
+              cy="18.5"
               r="3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
@@ -95,13 +95,13 @@ const IconBicycling = forwardRef<SVGSVGElement, IconProps>(
             <circle
               opacity={duotone ? "0.4" : "1"}
               cx="18"
-              cy="18.0005"
+              cy="18.5"
               r="3"
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
             <path
-              d="M18.5 10h-2.03c-1.22 0-1.83 0-2.38-.23-.55-.22-.98-.65-1.85-1.51l-.57-.58c-.79-.78-1.18-1.17-1.64-1.13-.47.05-.78.5-1.42 1.41L7.4 9.73c-.64.92-.97 1.39-.84 1.84s.65.68 1.68 1.13l1.48.65c1.36.59 2.04.89 2.37 1.49s.21 1.33-.02 2.8L12 18"
+              d="M18.5 10.5h-2.03c-1.22 0-1.83 0-2.38-.23-.55-.22-.98-.65-1.85-1.51l-.57-.58c-.79-.78-1.18-1.17-1.64-1.13-.47.05-.78.5-1.42 1.41L7.4 10.23c-.64.92-.97 1.39-.84 1.84s.65.68 1.68 1.13l1.48.65c1.36.59 2.04.89 2.37 1.49s.21 1.33-.02 2.8l-.07.36"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

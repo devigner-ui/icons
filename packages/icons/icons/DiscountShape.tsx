@@ -23,7 +23,42 @@ const IconDiscountShape = forwardRef<SVGSVGElement, IconProps>(
 
     return (
       <>
-        {!fill ? (
+        {variant === "Broken" ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+          <path
+            d="M8.82 4.34q.31-.13.52-.33l1.52-1.52a1.6 1.6 0 0 1 2.26 0l1.52 1.52c.26.26.77.47 1.13.47h2.15c.88 0 1.6.72 1.6 1.6v2.15c0 .36.21.87.47 1.13l1.52 1.52a1.6 1.6 0 0 1 0 2.26l-1.52 1.52c-.26.26-.47.77-.47 1.13v2.15c0 .64-.38 1.19-.92 1.45m-3.45.3q-.3.12-.51.32l-1.52 1.52a1.6 1.6 0 0 1-2.26 0l-1.52-1.52a2 2 0 0 0-1.13-.47H6.06a1.6 1.6 0 0 1-1.6-1.6v-2.15c0-.37-.21-.88-.47-1.13l-1.52-1.52a1.6 1.6 0 0 1 0-2.26l1.52-1.52c.26-.26.47-.77.47-1.13V6.08c0-.63.37-1.18.91-1.44"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="m9 15 6-6"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M9.5 9.5h.02Zm5.99 6h.02Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          </svg>
+        ) : !fill ? (
           <svg
             ref={ref}
             className={className}
@@ -56,7 +91,7 @@ const IconDiscountShape = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
               stroke="currentColor"
               strokeWidth={strokeWidth}
-              d="M9.5 9.5"
+              d="M9.5 9.5h.02m5.97 6h.02"
             />
           </svg>
         ) : duotone ? (

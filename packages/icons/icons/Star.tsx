@@ -36,10 +36,11 @@ const IconStar = forwardRef<SVGSVGElement, IconProps>(function IconStar(
           {...rest}
         >
           <path
-            d="M12 20v-2.4m0-11.2V4m8 8h-2.4M6.4 12H4m13.66-5.66-1.7 1.7m-7.92 7.92-1.7 1.7m0-11.32 1.7 1.7m7.92 7.92 1.7 1.7"
-            stroke="currentColor"
+            d="M20.1 8.61c2.04.34 2.52 1.82 1.05 3.28l-2.48 2.48a2.2 2.2 0 0 0-.52 1.81l.71 3.07c.56 2.43-.73 3.37-2.88 2.1L13 19.58a2.2 2.2 0 0 0-1.98 0l-2.99 1.77c-2.14 1.27-3.44.32-2.88-2.1l.71-3.07c.13-.58-.1-1.39-.52-1.81l-2.48-2.48c-1.46-1.46-1-2.94 1.04-3.28l3.2-.53a2.2 2.2 0 0 0 1.4-1.05l1.76-3.52c.95-1.91 2.51-1.91 3.47 0l1.76 3.52q.16.33.5.59"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
+            strokeLinejoin="round"
+            stroke="currentColor"
           />
         </svg>
       ) : !fill ? (

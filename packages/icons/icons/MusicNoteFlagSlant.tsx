@@ -1,0 +1,123 @@
+import { forwardRef } from "react";
+import type { SVGProps } from "react";
+import type { IconProps } from "./types";
+
+const IconMusicNoteFlagSlant = forwardRef<SVGSVGElement, IconProps>(
+  function IconMusicNoteFlagSlant(
+    { className, variant = "Outline", strokeWidth = "1.5", ...rest },
+    ref,
+  ) {
+    /* The four drawings are two booleans: filled or stroked, and whether the
+     secondary shapes drop to half tone. */
+    const fill = variant === "Bold" || variant === "Bulk";
+    const duotone = variant === "TwoTone" || variant === "Bulk";
+
+    /* Decorative by default: an icon sitting beside its own text label is read
+     out twice otherwise. Naming it with aria-label or aria-labelledby promotes
+     it to an image instead. */
+    const labelled =
+      rest["aria-label"] != null || rest["aria-labelledby"] != null;
+    const a11y: SVGProps<SVGSVGElement> = labelled
+      ? { role: "img" }
+      : { "aria-hidden": true };
+
+    return (
+      <>
+        {variant === "Broken" ? (
+        <svg
+          ref={ref}
+          className={className}
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          focusable="false"
+          {...a11y}
+          {...rest}
+        >
+          <path
+            d="M12.11 19.71a.75.75 0 1 0-1.3-.76zm-.65-4.38-.64.38zm.54 1-.67.34a.75.75 0 0 0 1.42-.34zm.75-9a.75.75 0 0 0-1.5 0zM8 20.58a3.25 3.25 0 0 1-3.25-3.25h-1.5A4.75 4.75 0 0 0 8 22.08zm-3.25-3.25c0-1.8 1.46-3.25 3.25-3.25v-1.5a4.75 4.75 0 0 0-4.75 4.75zm6.07 1.62A3.3 3.3 0 0 1 8 20.58v1.5c1.76 0 3.3-.96 4.11-2.37zM8 14.08c1.2 0 2.25.65 2.82 1.63l1.3-.76A4.8 4.8 0 0 0 8 12.58zm2.82 1.63.46.85.04.08.01.03q0 0 0 0t0 0 0 0 0 0 0 0l.67-.34.67-.34q0 0 0 0t0 0 0 0 0 0l-.02-.04-.04-.08-.5-.92zm1.93.62v-9h-1.5v9z"
+            fill="currentColor"
+          />
+          <path
+            d="m16.12 3.27-2.64 1.32c-.36.18-.54.27-.7.39a2 2 0 0 0-.74 1.21c-.04.19-.04.4-.04.8 0 .97 0 1.46.12 1.79a2 2 0 0 0 2.11 1.3c.35-.04.78-.26 1.65-.7l2.64-1.3c.36-.19.54-.28.7-.4a2 2 0 0 0 .74-1.21c.04-.19.04-.39.04-.8 0-.97 0-1.45-.12-1.78a2 2 0 0 0-2.11-1.31c-.35.04-.78.26-1.65.7Z"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+        </svg>
+      ) : !fill ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+            <path
+              d="M12 17.33a4 4 0 1 1-8 0 4 4 0 0 1 8 0"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+            />
+            <path
+              opacity={duotone ? "0.4" : "1"}
+              d="M12 17.33v-10"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+            />
+            <path
+              d="m16.12 3.27-2.64 1.32c-.36.18-.54.27-.7.39a2 2 0 0 0-.74 1.21c-.04.19-.04.39-.04.8 0 .97 0 1.46.12 1.79a2 2 0 0 0 2.11 1.3c.35-.04.78-.26 1.65-.7l2.64-1.3c.36-.2.54-.28.7-.4a2 2 0 0 0 .74-1.21c.04-.19.04-.39.04-.8 0-.97 0-1.45-.12-1.78a2 2 0 0 0-2.11-1.31c-.35.04-.78.26-1.65.7"
+              stroke="currentColor"
+              strokeWidth={strokeWidth}
+              strokeLinecap="round"
+            />
+          </svg>
+        ) : duotone ? (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+            <path
+              d="M19.85 4.2a2.5 2.5 0 0 0-2.66-1.68 3 3 0 0 0-.77.24q-.37.17-.95.47L13 4.5q-.42.2-.7.4c-.49.39-.82.95-.94 1.57q-.06.35-.05.82v6.51a4.3 4.3 0 0 0-2.97-1.2A4.4 4.4 0 0 0 4 17.04a4.4 4.4 0 0 0 4.34 4.46c2.4 0 4.35-2 4.35-4.45v-6.37q.65.35 1.43.27.38-.06.77-.24l.95-.47 2.48-1.27q.41-.2.7-.41c.48-.39.82-.94.94-1.56.04-.25.04-.5.04-.83V6.1l-.01-1.08a3 3 0 0 0-.14-.82"
+              fill="currentColor"
+            />
+          </svg>
+        ) : (
+          <svg
+            ref={ref}
+            className={className}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            focusable="false"
+            {...a11y}
+            {...rest}
+          >
+            <path
+              d="M19.85 4.2a2.5 2.5 0 0 0-2.66-1.68 3 3 0 0 0-.77.24q-.37.17-.95.47L13 4.5q-.42.2-.7.4c-.49.39-.82.95-.94 1.57q-.06.35-.05.82v6.51a4.3 4.3 0 0 0-2.97-1.2A4.4 4.4 0 0 0 4 17.04a4.4 4.4 0 0 0 4.34 4.46c2.4 0 4.35-2 4.35-4.45v-6.37q.65.35 1.43.27.38-.06.77-.24l.95-.47 2.48-1.27q.41-.2.7-.41c.48-.39.82-.94.94-1.56.04-.25.04-.5.04-.83V6.1l-.01-1.08a3 3 0 0 0-.14-.82"
+              fill="currentColor"
+            />
+          </svg>
+        )}
+      </>
+    );
+  },
+);
+
+export default IconMusicNoteFlagSlant;
