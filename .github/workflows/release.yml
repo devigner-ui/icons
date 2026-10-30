@@ -3,6 +3,13 @@ name: Release
 on:
   push:
     branches: [main]
+  # Ships the gem, pub and NuGet packages for a version npm already has, for
+  # when the run that published it stopped before reaching them.
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "@devigner-ui/icons version to ship to RubyGems, pub.dev and NuGet"
+        required: true
 
 # One release at a time; a second push waits rather than racing the first.
 concurrency: release
@@ -16,8 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       # The version of @devigner-ui/icons this run published, or empty. The
-      # gem, pub and NuGet jobs below ship that same version.
-      icons-version: ${{ steps.icons.outputs.version }}
+      # gem, pub and NuGet jobs below ship that same version. A manual run
+      # names it instead.
+      icons-version: ${{ inputs.version || steps.icons.outputs.version }}
     steps:
       - uses: actions/checkout@v4
         with:
