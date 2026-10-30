@@ -60,6 +60,9 @@ package. Plain JavaScript gets SVG strings and elements, and the SVG package
 covers everything else: CDN links, CSS and templates. The MCP server lets AI
 coding tools search the set.
 
+Designing in Figma? The [Devigner Icons plugin](https://www.figma.com/community/plugin/1698044371858563028)
+inserts any icon as an editable vector, in any of the five styles.
+
 The non-React packages are generated from the **built React components**, not
 re-parsed from source and not redrawn, so they cannot drift apart. Props are
 spelled the way each framework spells them (`variant="bulk"` lowercase outside
