@@ -1,6 +1,6 @@
 name: devigner_icons
 description: 12,480 open-source icons for Flutter. 2,496 symbols, each in outline, twotone, bold, bulk and broken. Built on Solar Icon Set and Iconsax.
-version: 3.7.0
+version: 3.7.1
 homepage: https://icons.devigner.cc
 repository: https://github.com/devigner-ui/icons/tree/main/packages/icons-flutter
 issue_tracker: https://github.com/devigner-ui/icons/issues

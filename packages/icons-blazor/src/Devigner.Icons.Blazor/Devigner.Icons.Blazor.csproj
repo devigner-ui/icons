@@ -8,7 +8,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
     <PackageId>Devigner.Icons.Blazor</PackageId>
-    <Version>3.7.0</Version>
+    <Version>3.7.1</Version>
     <Authors>Devigner</Authors>
     <Description>12,480 open-source icons for Blazor: 2,496 symbols, each in outline, twotone, bold, bulk and broken. Built on Solar Icon Set and Iconsax.</Description>
     <PackageTags>icons;blazor;svg;svg-icons;icon-set</PackageTags>

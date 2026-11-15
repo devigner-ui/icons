@@ -1,6 +1,6 @@
 {
   "name": "@devigner-ui/icons-nuxt",
-  "version": "3.7.0",
+  "version": "3.7.1",
   "description": "Nuxt module for Devigner Icons: all 2,496 icons auto-imported as Vue components, in outline, twotone, bold, bulk and broken. Built on Solar Icon Set and Iconsax.",
   "keywords": [
     "icons",
