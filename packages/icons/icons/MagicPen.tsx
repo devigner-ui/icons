@@ -50,19 +50,19 @@ const IconMagicPen = forwardRef<SVGSVGElement, IconProps>(function IconMagicPen(
             stroke="currentColor"
           />
           <path
-            d="m9.76 3.8.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5 1.5.44"
+            d="m8.67 2.74 1.5-.44-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5z"
             strokeLinecap="round"
             strokeLinejoin="round"
             stroke="currentColor"
           />
           <path
-            d="m4.7 8.74 1.5-.44-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5z"
+            d="m4.67 8.74 1.5-.44-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5z"
             strokeLinecap="round"
             strokeLinejoin="round"
             stroke="currentColor"
           />
           <path
-            d="m18.64 14.8-.44-1.5 1.5.44 1.5-.44-.44 1.5.44 1.5-1.5-.44"
+            d="m19.67 13.74 1.5-.44-.44 1.5.44 1.5-1.5-.44-1.5.44.44-1.5-.44-1.5z"
             strokeLinecap="round"
             strokeLinejoin="round"
             stroke="currentColor"

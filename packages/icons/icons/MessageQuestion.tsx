@@ -85,7 +85,7 @@ const IconMessageQuestion = forwardRef<SVGSVGElement, IconProps>(
               strokeWidth={strokeWidth}
               strokeLinecap="round"
               strokeLinejoin="round"
-              d="M12 11.36v-.21c0-.68.42-1.04.84-1.33.41-.28.82-.64.82-1.3a1.66 1.66 0 1 0-3.32 0M12 13.75"
+              d="M12 11.36v-.21c0-.68.42-1.04.84-1.33.41-.28.82-.64.82-1.3a1.66 1.66 0 1 0-3.32 0M12 13.85z"
               opacity={duotone ? "0.4" : "1"}
             />
           </svg>

@@ -19,7 +19,8 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { allSvgs } from "./emit-svg.mjs";
-import { emitIcon, readDrawing, retotal } from "./import-svgs.mjs";
+import { emitIcon, readDrawing } from "./import-svgs.mjs";
+import { retotal } from "./counts.mjs";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 
@@ -67,12 +68,12 @@ function halfToned(branch) {
  * fixture: both totals move, and the release history beside them does not.
  */
 {
-  const before = `8,568 open-source icons for React: 2,142 symbols, each in
+  const before = `10,710 open-source icons for React: 2,142 symbols, each in
 outline, twotone, bold and bulk. Re-imported the whole set from source: 2,142
-symbols / 8,568 drawings, up from 1,963 / 7,852. Bulk used to be sold on 1,682.`;
+symbols / 10,710 drawings, up from 1,963 / 7,852. Bulk used to be sold on 1,682.`;
   const after = retotal(before, 2142, 2200);
 
-  assert.match(after, /8,800 open-source icons/, "the drawing total did not move");
+  assert.match(after, /11,000 open-source icons/, "the drawing total did not move");
   assert.match(after, /2,200 symbols, each in/, "the symbol total did not move");
   assert.match(after, /up from 1,963 \/ 7,852/, "an unrelated number moved");
   assert.match(after, /sold on 1,682/, "an unrelated number moved");

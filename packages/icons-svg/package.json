@@ -1,7 +1,7 @@
 {
   "name": "@devigner-ui/icons-svg",
-  "version": "3.5.0",
-  "description": "10,560 raw SVG files for @devigner-ui/icons: 2,112 symbols in outline, twotone, bold, bulk and broken. No framework, no build step, CDN-ready.",
+  "version": "3.7.0",
+  "description": "12,480 raw SVG files for @devigner-ui/icons: 2,496 symbols in outline, twotone, bold, bulk and broken. No framework, no build step, CDN-ready.",
   "keywords": [
     "icons",
     "svg",

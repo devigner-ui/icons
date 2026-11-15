@@ -81,6 +81,57 @@ check("all supplied variants are distinct, and strokeWidth weighs the linework",
   assert.match(html(h(IconAddCircle, { strokeWidth: 2 })), /stroke-width="2"/);
 });
 
+/*
+ * `@devigner-ui/icons/bold` and its four siblings carry one drawing each. They
+ * have to draw exactly what the `variant` prop draws: for an icon compiled to
+ * data (AddCircle), for one whose mask takes its id from useId()
+ * (AiJavascript), and for one that kept its component because it does
+ * arithmetic on the stroke width (Information). A stray `variant` must not
+ * reach the <svg>.
+ */
+for (const [style, variant] of [
+  ["outline", "Outline"],
+  ["twotone", "TwoTone"],
+  ["bold", "Bold"],
+  ["bulk", "Bulk"],
+  ["broken", "Broken"],
+]) {
+  const root = await import(new URL(`../dist/${style}.js`, import.meta.url).href);
+  const all = await import(bundle.href); // cached: the import at the top of the file
+  check(`the ${style} entry draws what variant="${variant}" draws`, () => {
+    for (const name of ["IconAddCircle", "IconAiJavascript", "IconInformation"]) {
+      for (const props of [{}, { strokeWidth: 2, className: "x" }]) {
+        assert.equal(html(h(root[name], props)), html(h(all[name], { variant, ...props })), name);
+      }
+      assert.equal(html(h(root[name], { variant: "Bold" })), html(h(all[name], { variant })), name);
+    }
+  });
+}
+
+/*
+ * dist/node/: the roots as single files, which is what plain Node resolves the
+ * package to. Same names, same drawings as the modular roots a bundler gets,
+ * or a server render and the page that hydrates it disagree.
+ */
+{
+  const all = await import(bundle.href);
+  const node = await import(new URL("../dist/node/index.mjs", import.meta.url).href);
+  const bold = await import(new URL("../dist/bold.js", import.meta.url).href);
+  const nodeBold = await import(new URL("../dist/node/bold.mjs", import.meta.url).href);
+  check("the Node entries export and draw what the modular roots do", () => {
+    assert.deepEqual(Object.keys(node).sort(), Object.keys(all).sort(), "root exports differ");
+    assert.deepEqual(Object.keys(nodeBold).sort(), Object.keys(bold).sort(), "bold exports differ");
+    for (const name of ["IconAddCircle", "IconAiJavascript", "IconInformation", "IconPlus"]) {
+      for (const variant of ["Outline", "TwoTone", "Bold", "Bulk", "Broken"]) {
+        assert.equal(html(h(node[name], { variant })), html(h(all[name], { variant })), `${name} ${variant}`);
+      }
+      if (name !== "IconPlus") {
+        assert.equal(html(h(nodeBold[name], {})), html(h(bold[name], {})), `${name} bold`);
+      }
+    }
+  });
+}
+
 /* The two attribute names the old API had taken over for itself. */
 check("width and fill reach the element", () => {
   const out = html(h(IconActivity, { width: 32, height: 32, fill: "red" }));

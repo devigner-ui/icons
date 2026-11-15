@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useId } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
@@ -20,6 +20,10 @@ const IconBlur = forwardRef<SVGSVGElement, IconProps>(function IconBlur(
     ? { role: "img" }
     : { "aria-hidden": true };
 
+  /* The spine and ribs stay inside the drop in every style but Bold, which
+     draws them as gaps instead. */
+  const clip = useId();
+
   return (
     <>
       {variant === "Broken" ? (
@@ -35,6 +39,9 @@ const IconBlur = forwardRef<SVGSVGElement, IconProps>(function IconBlur(
           {...a11y}
           {...rest}
         >
+          <clipPath id={clip}>
+            <path d="M12.61 2.21a1 1 0 0 0-1.22 0C9.49 3.66 3.88 8.39 3.91 13.9a8.11 8.11 0 0 0 16.2.01c.01-5.43-5.61-10.24-7.5-11.7z" />
+          </clipPath>
           <path
             d="M3.9 13.9a8.11 8.11 0 0 0 16.2.01c.03-5.43-5.6-10.24-7.49-11.7"
             strokeWidth={strokeWidth}
@@ -52,6 +59,7 @@ const IconBlur = forwardRef<SVGSVGElement, IconProps>(function IconBlur(
             stroke="currentColor"
           />
           <path
+            clipPath={`url(#${clip})`}
             d="M12 2v20"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -59,6 +67,7 @@ const IconBlur = forwardRef<SVGSVGElement, IconProps>(function IconBlur(
             stroke="currentColor"
           />
           <path
+            clipPath={`url(#${clip})`}
             d="m12 18.96 7.7-3.74"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -66,6 +75,7 @@ const IconBlur = forwardRef<SVGSVGElement, IconProps>(function IconBlur(
             stroke="currentColor"
           />
           <path
+            clipPath={`url(#${clip})`}
             d="m12 13.96 7.37-3.58"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -73,6 +83,7 @@ const IconBlur = forwardRef<SVGSVGElement, IconProps>(function IconBlur(
             stroke="currentColor"
           />
           <path
+            clipPath={`url(#${clip})`}
             d="m12 8.96 5.03-2.45"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -93,13 +104,16 @@ const IconBlur = forwardRef<SVGSVGElement, IconProps>(function IconBlur(
           {...a11y}
           {...rest}
         >
+          <clipPath id={clip}>
+            <path d="M12.61 2.21a1 1 0 0 0-1.22 0C9.49 3.66 3.88 8.39 3.91 13.9a8.11 8.11 0 0 0 16.2.01c.01-5.43-5.61-10.24-7.5-11.7z" />
+          </clipPath>
           <path
             d="M12.61 2.21a1 1 0 0 0-1.22 0C9.49 3.66 3.88 8.39 3.91 13.9a8.11 8.11 0 0 0 16.2.01c.01-5.43-5.61-10.24-7.5-11.7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
           />
-          <g opacity={duotone ? "0.4" : "1"}>
+          <g opacity={duotone ? "0.4" : "1"} clipPath={`url(#${clip})`}>
             <path
               d="M12 2v20"
               stroke="currentColor"
@@ -143,12 +157,16 @@ const IconBlur = forwardRef<SVGSVGElement, IconProps>(function IconBlur(
           {...a11y}
           {...rest}
         >
+          <clipPath id={clip}>
+            <path d="M12.61 2.21a1 1 0 0 0-1.22 0C9.49 3.66 3.88 8.39 3.91 13.9a8.11 8.11 0 0 0 16.2.01c.01-5.43-5.61-10.24-7.5-11.7z" />
+          </clipPath>
           <path
             opacity={duotone ? "0.4" : "1"}
             d="M12.61 2.21a1 1 0 0 0-1.22 0C9.49 3.66 3.88 8.39 3.91 13.9a8.11 8.11 0 0 0 16.2.01c.01-5.43-5.61-10.24-7.5-11.7"
             fill="currentColor"
           />
           <path
+            clipPath={`url(#${clip})`}
             d="M20.09 14.2a8 8 0 0 1-.27 1.79l-7.07 3.44v2.54a9 9 0 0 1-1.5 0V2.31l.13-.1a1 1 0 0 1 1.23 0l.14.11v5.44l3.78-1.84q.49.57.95 1.18l-.13.09-4.6 2.24v3.33l6.29-3.06.02-.01q.33.67.56 1.39l-6.87 3.35v3.33l6.62-3.22z"
             fill="currentColor"
           />

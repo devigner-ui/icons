@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useId } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
@@ -19,6 +19,9 @@ const IconPulseAcross = forwardRef<SVGSVGElement, IconProps>(function IconPulseA
   const a11y: SVGProps<SVGSVGElement> = labelled
     ? { role: "img" }
     : { "aria-hidden": true };
+
+  /* TwoTone trims the solid pulse to the inside of the dimmed frame. */
+  const cut = useId();
 
   return (
     <>
@@ -61,7 +64,13 @@ const IconPulseAcross = forwardRef<SVGSVGElement, IconProps>(function IconPulseA
           {...a11y}
           {...rest}
         >
+          {duotone && (
+            <mask id={cut} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+              <path d="M2 12c0-4.71 0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46C22 4.93 22 7.3 22 12s0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12" fill="white" stroke="black" strokeWidth={strokeWidth} />
+            </mask>
+          )}
           <path
+            mask={duotone ? `url(#${cut})` : undefined}
             d="M2 15h3c.63 0 .95 0 1.23.12s.5.35.94.81l1.14 1.2c.39.4.58.6.81.59s.4-.24.73-.7l3.63-5c.34-.47.5-.7.75-.72.24 0 .43.2.81.64l1.78 2.04c.44.5.66.75.96.89.29.13.63.13 1.3.13H22"
             stroke="currentColor"
             strokeWidth={strokeWidth}

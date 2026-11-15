@@ -117,7 +117,7 @@ const IconIllustrator = forwardRef<SVGSVGElement, IconProps>(
                 strokeLinejoin="round"
               />
               <path
-                d="M16.14 8.03h.02m-6.43 3.33h.02"
+                d="M16.14 8.03h.02"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"

@@ -43,14 +43,14 @@ const IconAiSearch = forwardRef<SVGSVGElement, IconProps>(function IconAiSearch(
             strokeLinejoin="round"
           />
           <path
-            d="M18 11.5a7 7 0 1 1-7-7"
+            d="M18 11.5a7 7 0 0 1-13.91 1.09m0-2.18A7 7 0 0 1 11 4.5"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
-            d="M17.31 6.35q.37.16.99.39L19 7l-.7.26c-.91.34-1.37.5-1.7.84s-.5.79-.84 1.7l-.26.7-.26-.7c-.34-.91-.5-1.37-.84-1.7s-.79-.5-1.7-.84L12 7l.7-.26c.91-.34 1.37-.5 1.7-.84s.5-.79.84-1.7l.26-.7"
+            d="m15.5 3.5.26.7c.34.91.5 1.37.84 1.7s.79.5 1.7.84L19 7l-.7.26c-.91.34-1.37.5-1.7.84s-.5.79-.84 1.7l-.26.7-.26-.7c-.34-.91-.5-1.37-.84-1.7s-.79-.5-1.7-.84L12 7l.7-.26c.91-.34 1.37-.5 1.7-.84s.5-.79.84-1.7z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -71,6 +71,7 @@ const IconAiSearch = forwardRef<SVGSVGElement, IconProps>(function IconAiSearch(
           {...rest}
         >
           <path
+            opacity={duotone ? "0.4" : "1"}
             d="m16 16.5 4 4"
             stroke="currentColor"
             strokeWidth={strokeWidth}
@@ -78,7 +79,6 @@ const IconAiSearch = forwardRef<SVGSVGElement, IconProps>(function IconAiSearch(
             strokeLinejoin="round"
           />
           <path
-            opacity={duotone ? "0.4" : "1"}
             d="M18 11.5a7 7 0 1 1-7-7"
             stroke="currentColor"
             strokeWidth={strokeWidth}

@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useId } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
@@ -19,6 +19,8 @@ const IconUFOBeams = forwardRef<SVGSVGElement, IconProps>(function IconUFOBeams(
   const a11y: SVGProps<SVGSVGElement> = labelled
     ? { role: "img" }
     : { "aria-hidden": true };
+
+  const cut = useId();
 
   return (
     <>
@@ -73,10 +75,24 @@ const IconUFOBeams = forwardRef<SVGSVGElement, IconProps>(function IconUFOBeams(
           {...a11y}
           {...rest}
         >
+          {duotone && (
+            /* TwoTone cuts the ring along the dome's edge, so the white ring
+               stops where the dimmed dome begins, at any width. */
+            <mask id={cut} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+              <rect width="24" height="24" fill="white" />
+              <path
+                d="M7 7.73A4.73 4.73 0 0 1 11.73 3h.54A4.73 4.73 0 0 1 17 7.73q.01.28-.2.45c-.41.29-1.61.82-4.8.82s-4.39-.53-4.8-.82q-.21-.16-.2-.45"
+                fill="black"
+                stroke="black"
+                strokeWidth={strokeWidth}
+              />
+            </mask>
+          )}
           <path
             d="M17 7.21c2.99.72 5 2.07 5 3.62 0 2.3-4.48 4.17-10 4.17S2 13.13 2 10.83c0-1.55 2.01-2.9 5-3.62"
             stroke="currentColor"
             strokeWidth={strokeWidth}
+            mask={duotone ? `url(#${cut})` : undefined}
           />
           <path
             opacity={duotone ? "0.4" : "1"}

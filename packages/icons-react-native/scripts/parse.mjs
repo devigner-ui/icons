@@ -11,7 +11,7 @@
  * so there are no comments, no CDATA, no entities, no text nodes and no
  * unquoted attributes. Everything it does not expect, it throws on rather than
  * guessing, and roundTrips() below rebuilds the markup from the tree and
- * compares, which is what proves the parse across all 8,568 drawings.
+ * compares, which is what proves the parse across every drawing in the set.
  */
 import assert from "node:assert/strict";
 

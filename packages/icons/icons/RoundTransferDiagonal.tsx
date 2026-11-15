@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useId } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
@@ -20,6 +20,9 @@ const IconRoundTransferDiagonal = forwardRef<SVGSVGElement, IconProps>(
     const a11y: SVGProps<SVGSVGElement> = labelled
       ? { role: "img" }
       : { "aria-hidden": true };
+
+    /* TwoTone trims the solid arrows to the inside of the dimmed ring. */
+    const cut = useId();
 
     return (
       <>
@@ -78,20 +81,25 @@ const IconRoundTransferDiagonal = forwardRef<SVGSVGElement, IconProps>(
               stroke="currentColor"
               strokeWidth={strokeWidth}
             />
-            <path
-              d="m6.5 4 7.38 8V7.5"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M17.38 19.88 9.88 12v4.5"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
+            <mask id={cut} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+              <circle cx="12" cy="12" r="10" fill="white" stroke="black" strokeWidth={strokeWidth} />
+            </mask>
+            <g mask={duotone ? `url(#${cut})` : undefined}>
+              <path
+                d="m6.5 4 7.38 8V7.5"
+                stroke="currentColor"
+                strokeWidth={strokeWidth}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M17.38 19.88 9.88 12v4.5"
+                stroke="currentColor"
+                strokeWidth={strokeWidth}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </g>
           </svg>
         ) : duotone ? (
           <svg

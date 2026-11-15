@@ -109,7 +109,7 @@ const IconLayoutSplit = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              opacity={duotone ? "0.4" : "1"}
+              opacity="0.7"
               d="M22 7.81V12H9V2h7.19C19.83 2 22 4.17 22 7.81"
               fill="currentColor"
             />

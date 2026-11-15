@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { loadRenames, resolver } from "./renames.mjs";
+import { syncCounts, thousands } from "./counts.mjs";
 
 const ICONS_DIR = path.resolve("icons");
 const SRC_DIR = path.resolve("src");
@@ -17,13 +18,31 @@ const SRC_DIR = path.resolve("src");
  * icon nobody has filed yet, and the run says so and exits — the map covering
  * every drawing is the property worth keeping.
  */
-const { categories: CATEGORY_LABELS, icons: ICON_CATEGORIES } = JSON.parse(
+const {
+  categories: CATEGORY_LABELS,
+  icons: ICON_CATEGORIES,
+  also: ALSO_IN = {},
+} = JSON.parse(
   fs.readFileSync(path.resolve("scripts/icon-categories.json"), "utf-8"),
 );
 
 for (const [name, category] of Object.entries(ICON_CATEGORIES)) {
   if (!CATEGORY_LABELS[category]) {
     throw new Error(`${name} is filed under ${category}, which has no label.`);
+  }
+}
+
+/* `also` lists the further sheets an icon is shown on, beside the one it is
+   filed under: a brand mark like Siri belongs with the logos and with the AI
+   set. The filed category stays the only one in its URL. */
+for (const [name, extra] of Object.entries(ALSO_IN)) {
+  if (!ICON_CATEGORIES[name]) {
+    throw new Error(`${name} is listed under also but has no category.`);
+  }
+  for (const category of extra) {
+    if (!CATEGORY_LABELS[category]) {
+      throw new Error(`${name} is also shown under ${category}, which has no label.`);
+    }
   }
 }
 
@@ -101,6 +120,7 @@ function inferUsage(category) {
   const usageMap = {
     "arrows-direction":
       "navigation, pagination, steppers, import/export, fullscreen",
+    "artificial-intelligence": "assistants, generation, chatbots, models, automation",
     "astronomy-astrology": "space, science, launch screens, horoscopes",
     "brands-logos": "logos, integrations, payment methods, social links",
     "business-analytics": "charts, reports, dashboards, kpis, analytics",
@@ -202,6 +222,7 @@ async function generateMetadata() {
       displayName,
       category,
       categoryLabel: CATEGORY_LABELS[category],
+      alsoIn: ALSO_IN[name] ?? [],
       keywords,
       pathCount,
       styles,
@@ -228,6 +249,11 @@ async function generateMetadata() {
     JSON.stringify(output, null, 2),
   );
   console.log(`Generated metadata.json with ${icons.length} icons`);
+
+  /* The READMEs and package descriptions follow the set, so nobody types a total. */
+  const { stated, touched } = syncCounts(icons.length);
+  if (touched.length)
+    console.log(`Totals ${thousands(stated)} -> ${thousands(icons.length)} in ${touched.join(", ")}`);
 
   // Print category distribution
   const catCounts = {};

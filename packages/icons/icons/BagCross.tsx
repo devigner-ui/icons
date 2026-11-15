@@ -36,19 +36,19 @@ const IconBagCross = forwardRef<SVGSVGElement, IconProps>(function IconBagCross(
           {...rest}
         >
           <path
-            d="m14 12-4 4m0-4 4 4"
+            d="m15 11.4-6 6m0-6 6 6"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M9 6V5a3 3 0 1 1 6 0v1"
+            d="M9 7.15V5.4a3 3 0 1 1 6 0v1.75"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M20.22 12.53c-.58-3.13-.87-4.69-1.99-5.6C17.13 6 15.53 6 12.36 6h-.72c-3.18 0-4.76 0-5.87.92s-1.4 2.48-2 5.6c-.82 4.4-1.23 6.59-.03 8.03C4.94 22 7.17 22 11.64 22h.72c4.47 0 6.7 0 7.9-1.45.7-.83.85-1.92.7-3.55"
+            d="M19.93 15.44c.6 3.2.85 4.52.17 5.35-.68.82-2.02.86-5.34.86H9.23c-3.32 0-4.66-.04-5.34-.86-.68-.83-.43-2.15.17-5.35l.76-4c.43-2.3.64-3.24 1.25-3.76.62-.53 1.6-.53 3.9-.53h4.06c2.3 0 3.28 0 3.9.53.6.52.82 1.47 1.25 3.76l.15.8"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -68,20 +68,20 @@ const IconBagCross = forwardRef<SVGSVGElement, IconProps>(function IconBagCross(
           {...rest}
         >
           <path
-            d="M3.74 20.56C4.94 22 7.17 22 11.64 22h.72c4.47 0 6.7 0 7.9-1.45m-16.52 0c-1.2-1.44-.79-3.63.04-8.02.58-3.12.87-4.69 1.99-5.6m14.49 13.63c1.2-1.45.79-3.64-.04-8.03-.58-3.12-.87-4.69-1.99-5.6m0-.01C17.13 6 15.53 6 12.36 6h-.72c-3.18 0-4.76 0-5.87.92m0 0"
+            d="M4.82 11.44c.43-2.3.64-3.24 1.25-3.76.62-.53 1.6-.53 3.9-.53h4.06c2.3 0 3.28 0 3.9.53.6.52.82 1.47 1.25 3.76l.75 4c.6 3.2.85 4.52.17 5.35-.68.82-2.02.86-5.34.86H9.23c-3.32 0-4.66-.04-5.34-.86-.68-.83-.43-2.15.17-5.35z"
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m14 12-4 4m0-4 4 4"
+            d="m15 11.4-6 6m0-6 6 6"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M9 6V5a3 3 0 1 1 6 0v1"
+            d="M9 7.15V5.4a3 3 0 1 1 6 0v1.75"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"

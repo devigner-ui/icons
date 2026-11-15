@@ -32,7 +32,11 @@ const counts = new Map();
 for (const icon of icons) {
   for (const k of new Set(icon.keywords)) counts.set(k, (counts.get(k) ?? 0) + 1);
 }
+/* "ai" and its synonyms name a whole category (every Ai* icon carries them), not the drawing. */
+const { synonyms } = JSON.parse(readFileSync(new URL("./search-terms.json", import.meta.url), "utf8"));
+const EXEMPT = new Set(["ai", ...synonyms.ai]);
 for (const [k, n] of counts) {
+  if (EXEMPT.has(k)) continue;
   assert.ok(n <= icons.length / 10, `"${k}" is a keyword on ${n} of ${icons.length} icons`);
 }
 console.log(`ok  no keyword on more than a tenth of ${icons.length} icons`);

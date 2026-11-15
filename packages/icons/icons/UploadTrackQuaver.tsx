@@ -108,13 +108,13 @@ const IconUploadTrackQuaver = forwardRef<SVGSVGElement, IconProps>(
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-            <circle
+            {/* Open around the arrow, as the Broken style is. */}
+            <path
               opacity={duotone ? "0.4" : "1"}
-              cx="12"
-              cy="12"
-              r="10"
+              d="M14 21.8q-.98.2-2 .2a10 10 0 1 1 10-10q0 1.02-.2 2"
               stroke="currentColor"
               strokeWidth={strokeWidth}
+              strokeLinecap="round"
             />
           </svg>
         ) : duotone ? (

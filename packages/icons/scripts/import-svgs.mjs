@@ -10,8 +10,8 @@
  *   node scripts/import-svgs.mjs [--from <dir>] [--force]
  *
  * Nothing here parses XML by hand. The tokenizer is the React Native package's,
- * which already turns rendered SVG into a tree and is proven against all 8,568
- * drawings; svgo (a devDependency here since optimize-paths) strips the
+ * which already turns rendered SVG into a tree and is proven against every
+ * drawing; svgo (a devDependency here since optimize-paths) strips the
  * comments and processing instructions a design tool exports, which is the only
  * difference between a Figma file and React's output.
  *
@@ -38,6 +38,7 @@ import {
   cosineSimilarity,
   dequantizeInt8,
 } from "./generate-embeddings.mjs";
+import { STYLE_COUNT, syncCounts, thousands } from "./counts.mjs";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const ICONS_DIR = path.join(ROOT, "icons");
@@ -426,91 +427,6 @@ function fileCategories(assigned) {
 }
 
 /*
- * The totals in prose. Every published description and README states them, and
- * nothing derives them, so they go stale the moment the set grows — which is
- * this script's own doing.
- *
- * Only the two numbers that moved are replaced, by their old value, and only in
- * these files. The CHANGELOGs say "2,142 symbols / 8,568 drawings, up from
- * 1,963 / 7,852", which is a fact about a past release and has to stay wrong
- * forever; the script comments quoting 2,142 are prose about an old bug. Both
- * would be corrupted by a blanket search and replace.
- */
-const COUNTED = [
-  "README.md",
-  "packages/icons/README.md",
-  "packages/icons/package.json",
-  "packages/icons-svg/README.md",
-  "packages/icons-svg/package.json",
-  "packages/icons-vue/README.md",
-  "packages/icons-vue/package.json",
-  "packages/icons-svelte/README.md",
-  "packages/icons-svelte/package.json",
-  "packages/icons-react-native/README.md",
-  "packages/icons-react-native/package.json",
-  "packages/icons-solid/README.md",
-  "packages/icons-solid/package.json",
-  "packages/icons-angular/README.md",
-  "packages/icons-angular/package.json",
-  "packages/icons-nuxt/README.md",
-  "packages/icons-nuxt/package.json",
-  "packages/icons-js/README.md",
-  "packages/icons-js/package.json",
-  "packages/icons-mcp/README.md",
-  "packages/icons-mcp/package.json",
-  "packages/icons-rails/README.md",
-  "packages/icons-rails/devigner_icons.gemspec",
-  "packages/icons-flutter/README.md",
-  "packages/icons-flutter/pubspec.yaml",
-  "packages/icons-blazor/README.md",
-  "packages/icons-blazor/src/Devigner.Icons.Blazor/Devigner.Icons.Blazor.csproj",
-];
-
-const STYLE_COUNT = STYLES.length;
-
-/** `2,142` and `8,568` as this repo writes them. */
-const thousands = (n) => n.toLocaleString("en-US");
-
-/**
- * Both totals, replaced by value. Exported for the check: it is a string
- * rewrite over the files above, and the failure mode is a silent no-match.
- */
-export function retotal(text, before, after) {
-  return text
-    .replaceAll(thousands(before * STYLE_COUNT), thousands(after * STYLE_COUNT))
-    .replaceAll(thousands(before), thousands(after));
-}
-
-/*
- * The total the package currently claims, which is not the same as "what it was
- * before this run": an icon added by hand leaves every README a symbol behind,
- * and subtracting what was just imported would then look for a number that
- * appears nowhere and quietly change nothing. Reading the stated figure makes
- * the rewrite self-healing instead.
- */
-function statedTotal(repoRoot) {
-  const manifest = path.join(repoRoot, "packages", "icons", "package.json");
-  const match = /([\d,]+) symbols/.exec(readFileSync(manifest, "utf8"));
-  assert.ok(match, "packages/icons/package.json states no symbol total");
-  return Number(match[1].replace(/,/g, ""));
-}
-
-function updateCounts(repoRoot, before, after) {
-  const touched = [];
-  for (const file of COUNTED) {
-    const full = path.join(repoRoot, file);
-    if (!existsSync(full)) continue;
-    const text = readFileSync(full, "utf8");
-    const next = retotal(text, before, after);
-    if (next !== text) {
-      writeFileSync(full, next);
-      touched.push(file);
-    }
-  }
-  return touched;
-}
-
-/*
  * The changeset, so the release workflow has something to version.
  *
  * New icons are additive, which is a minor, and every package that renders the
@@ -676,8 +592,7 @@ async function main() {
   }
 
   const repoRoot = path.join(ROOT, "..", "..");
-  const stated = statedTotal(repoRoot);
-  const touched = updateCounts(repoRoot, stated, symbols);
+  const { stated, touched } = syncCounts(symbols);
   console.log(
     `\n${thousands(symbols)} symbols / ${thousands(symbols * STYLE_COUNT)} drawings ` +
       `in ${touched.length} file${touched.length === 1 ? "" : "s"}` +

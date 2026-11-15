@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useId } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
@@ -20,6 +20,8 @@ const IconStickerSmileCircleDots = forwardRef<SVGSVGElement, IconProps>(
     const a11y: SVGProps<SVGSVGElement> = labelled
       ? { role: "img" }
       : { "aria-hidden": true };
+
+    const cut = useId();
 
     return (
       <>
@@ -83,24 +85,44 @@ const IconStickerSmileCircleDots = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M2 12a10 10 0 0 0 10 10c.65 0 1.25-.3 1.7-.76l7.54-7.53c.46-.46.76-1.06.76-1.71a10 10 0 0 0-20 0"
+              /* TwoTone dims the peel's curve with the outline, as one shape. */
+              d={
+                duotone
+                  ? "M2 12a10 10 0 0 0 10 10c.65 0 1.25-.3 1.7-.76l7.54-7.53c.46-.46.76-1.06.76-1.71a10 10 0 0 0-20 0M12 22c0-2.8 0-4.19.4-5.31a7 7 0 0 1 4.29-4.3C17.8 12 19.2 12 22 12"
+                  : "M2 12a10 10 0 0 0 10 10c.65 0 1.25-.3 1.7-.76l7.54-7.53c.46-.46.76-1.06.76-1.71a10 10 0 0 0-20 0"
+              }
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinejoin="round"
             />
+            {duotone && (
+              /* TwoTone cuts the smile along the peel's edge, so the white
+                 line stops where the dimmed curve begins, at any width. */
+              <mask id={cut} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                <rect width="24" height="24" fill="white" />
+                <path
+                  d="M12 22c0-2.8 0-4.19.4-5.31a7 7 0 0 1 4.29-4.3C17.8 12 19.2 12 22 12"
+                  stroke="black"
+                  strokeWidth={strokeWidth}
+                />
+              </mask>
+            )}
             <path
               d="M12 17a5 5 0 0 1-3-1"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"
+              mask={duotone ? `url(#${cut})` : undefined}
             />
             <ellipse cx="15" cy="10.5" rx="1" ry="1.5" fill="currentColor" />
             <ellipse cx="9" cy="10.5" rx="1" ry="1.5" fill="currentColor" />
-            <path
-              d="M12 22c0-2.8 0-4.19.4-5.31a7 7 0 0 1 4.29-4.3C17.8 12 19.2 12 22 12"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-            />
+            {!duotone && (
+              <path
+                d="M12 22c0-2.8 0-4.19.4-5.31a7 7 0 0 1 4.29-4.3C17.8 12 19.2 12 22 12"
+                stroke="currentColor"
+                strokeWidth={strokeWidth}
+              />
+            )}
           </svg>
         ) : duotone ? (
           <svg

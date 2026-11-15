@@ -1,6 +1,6 @@
 # devigner_icons
 
-10,560 drawings for Rails and any Ruby app: 2,112 symbols, each in outline, twotone, bold, bulk and broken, as inline SVG. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn. No dependencies.
+12,480 drawings for Rails and any Ruby app: 2,496 symbols, each in outline, twotone, bold, bulk and broken, as inline SVG. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn. No dependencies.
 
 ```bash
 bundle add devigner_icons
@@ -34,6 +34,17 @@ Icons render `aria-hidden="true"` by default, because an icon beside its own lab
 ```erb
 <%= devigner_icon "Add", aria_label: "Add item" %>
 ```
+
+## Sponsors
+
+<a href="https://icons.devigner.cc/docs/guide/sponsors/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://sponsors.devigner.cc/sponsors.svg?theme=dark">
+    <img alt="Featured sponsors of Devigner Icons" src="https://sponsors.devigner.cc/sponsors.svg?theme=light">
+  </picture>
+</a>
+
+Devigner Icons is free. [Become a sponsor](https://icons.devigner.cc/docs/guide/sponsors/) to show your logo here.
 
 ## Licence
 

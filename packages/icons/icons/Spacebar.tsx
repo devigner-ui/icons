@@ -36,7 +36,7 @@ const IconSpacebar = forwardRef<SVGSVGElement, IconProps>(function IconSpacebar(
           {...rest}
         >
           <path
-            d="M22 11.5V14a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3h10"
+            d="M17.5 7H19a3 3 0 0 1 3 3v4a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3h10"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"

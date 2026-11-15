@@ -10,6 +10,7 @@ packages/icons/icons/<Name>.tsx     ← the only file you edit
         ├─ scripts/sync.mjs             barrel export + types
         ├─ scripts/generate-metadata    category and keywords
         ├─ tsup                         dist/index.js
+        ├─ scripts/compile-icons        dist/icons/ as data, dist/<style>/
         │
         └─ dist/ ──┬─ packages/icons-svg, -vue, -svelte, -react-native
                    └─ website/public/svgs + icons.json
@@ -93,7 +94,7 @@ pnpm --filter=@devigner-ui/icons test
 
 | Check | What it proves |
 | --- | --- |
-| `artwork-check` | every source has three branches, and the bundle kept all three per component |
+| `artwork-check` | every source has three branches, and every icon is still in the build. The build itself counts the branches, and ships the compiled form of an icon only if every style renders the same as the component you wrote; otherwise that icon ships as written |
 | `surface-check` | the CLI and the exported types still match what the docs claim |
 | `render-check` | the built component actually renders the props it declares |
 | `emit-svg` | JSX turns into valid SVG for all four variants |

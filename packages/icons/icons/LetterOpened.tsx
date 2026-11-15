@@ -55,7 +55,7 @@ const IconLetterOpened = forwardRef<SVGSVGElement, IconProps>(
             strokeLinecap="round"
           />
           <path
-            d="M14 2c1.7.02 2.65.11 3.27.73C18 3.46 18 4.64 18 7v2.06c0 .46 0 .7-.1.9-.09.2-.27.34-.62.64l-.72.6M10 2c-1.7.02-2.65.11-3.27.73C6 3.46 6 4.64 6 7v2.06c0 .46 0 .7.1.9.09.2.27.34.62.64l1.44 1.2C10 13.33 10.9 14.1 12 14.1c.65 0 1.24-.28 2-.83"
+            d="m8.16 11.8-.72-.6c-.7-.59-1.06-.89-1.25-1.29S6 9.05 6 8.13V7c0-2.36 0-3.54.73-4.27S8.64 2 11 2h2c2.36 0 3.54 0 4.27.73S18 4.64 18 7v1.13c0 .92 0 1.38-.19 1.78s-.54.7-1.25 1.29l-.72.6C14 13.33 13.1 14.1 12 14.1s-2-.77-3.84-2.3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -94,12 +94,6 @@ const IconLetterOpened = forwardRef<SVGSVGElement, IconProps>(
             />
             <path
               d="m8.16 11.8-.72-.6c-.7-.59-1.06-.89-1.25-1.29S6 9.05 6 8.13V7c0-2.36 0-3.54.73-4.27S8.64 2 11 2h2c2.36 0 3.54 0 4.27.73S18 4.64 18 7v1.13c0 .92 0 1.38-.19 1.78s-.54.7-1.25 1.29l-.72.6C14 13.33 13.1 14.1 12 14.1s-2-.77-3.84-2.3"
-              stroke="currentColor"
-              strokeWidth={strokeWidth}
-              strokeLinecap="round"
-            />
-            <path
-              d="m6 10 2.16 1.8C10 13.33 10.9 14.1 12 14.1s2-.77 3.84-2.3L18 10"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeLinecap="round"

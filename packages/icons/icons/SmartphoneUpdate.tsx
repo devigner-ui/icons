@@ -115,15 +115,7 @@ const IconSmartphoneUpdate = forwardRef<SVGSVGElement, IconProps>(
               />
               <path
                 opacity={duotone ? "0.4" : "1"}
-                d="m10.54 5 .73-.8c0 1.12-.05 2.17-.69 3.13a3.46 3.46 0 0 1-5.56.49"
-                stroke="currentColor"
-                strokeWidth={strokeWidth}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                opacity={duotone ? "0.4" : "1"}
-                d="m12 5-.73-.8"
+                d="m10.54 5 .73-.8.73.8m-.73-.8c0 1.12-.05 2.17-.69 3.13a3.46 3.46 0 0 1-5.56.49"
                 stroke="currentColor"
                 strokeWidth={strokeWidth}
                 strokeLinecap="round"

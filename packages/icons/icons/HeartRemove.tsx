@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useId } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
@@ -20,6 +20,10 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
     const a11y: SVGProps<SVGSVGElement> = labelled
       ? { role: "img" }
       : { "aria-hidden": true };
+
+    /* Bold and Bulk cut the cross out of the disc; Bold also cuts the heart
+       around the disc with an even gap. */
+    const cut = useId();
 
     return (
       <>
@@ -45,7 +49,7 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
             stroke="currentColor"
           />
           <path
-            d="m18.48 17.87-2.53-2.54"
+            d="m15.94 15.27 2.53 2.53"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
             strokeLinecap="round"
@@ -53,7 +57,7 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
             stroke="currentColor"
           />
           <path
-            d="m18.45 15.36-2.53 2.54"
+            d="m18.47 15.27-2.53 2.53"
             strokeWidth={strokeWidth}
             strokeMiterlimit="10"
             strokeLinecap="round"
@@ -90,7 +94,7 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="m18.48 17.87-2.53-2.54"
+              d="m15.94 15.27 2.53 2.53"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -98,7 +102,7 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
               strokeLinejoin="round"
             />
             <path
-              d="m18.45 15.36-2.53 2.54"
+              d="m18.47 15.27-2.53 2.53"
               stroke="currentColor"
               strokeWidth={strokeWidth}
               strokeMiterlimit="10"
@@ -132,9 +136,14 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
               d="M22 8.69a11 11 0 0 1-1.32 5.21 4.8 4.8 0 0 0-7.05 6.5q-.56.26-1.01.41c-.34.12-.9.12-1.24 0C8.97 19.99 4.1 17 2.52 12A11 11 0 0 1 2 8.69a5.55 5.55 0 0 1 10-3.36 5.6 5.6 0 0 1 4.44-2.23C19.51 3.1 22 5.6 22 8.69"
               opacity={duotone ? "0.4" : "1"}
             />
+            <mask id={`${cut}x`} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                <rect width="24" height="24" fill="white" />
+                <path d="m15.94 15.27 2.53 2.53m0-2.53-2.53 2.53" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </mask>
             <path
               fill="currentColor"
-              d="m20.69 13.92-.01-.01v-.01a4.8 4.8 0 1 0 .01.02m-1.68 5.15q-.23.21-.53.22c-.3.01-.38-.08-.53-.22l-.74-.74-.76.77a.8.8 0 0 1-.53.22 1 1 0 0 1-.28-.06 1 1 0 0 1-.25-.16.74.74 0 0 1 0-1.06l.76-.77-.73-.74a.74.74 0 0 1 0-1.06.75.75 0 0 1 1.06 0l.73.74.71-.71a.75.75 0 0 1 1.06 0q.25.27.21.61a.7.7 0 0 1-.21.45l-.71.71.74.74c.3.29.3.76 0 1.06"
+              d="M17.2 10.98a5.55 5.55 0 1 0 0 11.1 5.55 5.55 0 0 0 0-11.1z"
+              mask={`url(#${cut}x)`}
             />
           </svg>
         ) : (
@@ -150,13 +159,23 @@ const IconHeartRemove = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
+            <mask id={`${cut}x`} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                <rect width="24" height="24" fill="white" />
+                <path d="m15.94 15.27 2.53 2.53m0-2.53-2.53 2.53" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </mask>
             <path
               fill="currentColor"
-              d="m20.69 13.92-.01-.01v-.01a4.8 4.8 0 1 0 .01.02m-1.68 5.15q-.23.22-.53.22c-.3 0-.38-.08-.53-.22l-.74-.74-.76.77a.8.8 0 0 1-.53.22 1 1 0 0 1-.28-.06 1 1 0 0 1-.25-.16.74.74 0 0 1 0-1.06l.76-.77-.73-.74a.74.74 0 0 1 0-1.06.75.75 0 0 1 1.06 0l.73.74.71-.71a.75.75 0 0 1 1.06 0q.25.27.21.6a.7.7 0 0 1-.21.46l-.71.7.74.75c.3.29.3.76 0 1.06"
+              d="M17.2 10.98a5.55 5.55 0 1 0 0 11.1 5.55 5.55 0 0 0 0-11.1z"
+              mask={`url(#${cut}x)`}
             />
+            <mask id={cut} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                <rect width="24" height="24" fill="white" />
+                <circle cx="17.2" cy="16.53" r="6.3" fill="black" />
+              </mask>
             <path
               fill="currentColor"
-              d="M22 8.73q-.01 1.78-.52 3.31c-.06.21-.31.27-.49.14a6.4 6.4 0 0 0-3.79-1.24 6.3 6.3 0 0 0-5.49 9.38c.16.28-.03.64-.33.53-2.41-.82-7.28-3.81-8.86-8.81A11 11 0 0 1 2 8.73a5.55 5.55 0 0 1 10-3.36 5.6 5.6 0 0 1 4.44-2.23c3.07 0 5.56 2.5 5.56 5.59"
+              d="M22 8.69a11 11 0 0 1-1.32 5.21 4.8 4.8 0 0 0-7.05 6.5q-.56.26-1.01.41c-.34.12-.9.12-1.24 0C8.97 19.99 4.1 17 2.52 12A11 11 0 0 1 2 8.69a5.55 5.55 0 0 1 10-3.36 5.6 5.6 0 0 1 4.44-2.23C19.51 3.1 22 5.6 22 8.69"
+              mask={`url(#${cut})`}
             />
           </svg>
         )}
