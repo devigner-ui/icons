@@ -34,10 +34,7 @@ Icons render `aria-hidden="true"` by default, because an icon beside its own lab
 ## Sponsors
 
 <a href="https://icons.devigner.cc/docs/guide/sponsors/">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://sponsors.devigner.cc/sponsors.svg?theme=dark">
-    <img alt="Featured sponsors of Devigner Icons" src="https://sponsors.devigner.cc/sponsors.svg?theme=light">
-  </picture>
+  <img alt="Featured sponsors of Devigner Icons" src="https://sponsors.devigner.cc/sponsors.svg?theme=both" />
 </a>
 
 Devigner Icons is free. [Become a sponsor](https://icons.devigner.cc/docs/guide/sponsors/) to show your logo here.
