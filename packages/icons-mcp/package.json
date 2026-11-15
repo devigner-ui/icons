@@ -1,6 +1,6 @@
 {
   "name": "@devigner-ui/icons-mcp",
-  "version": "3.7.0",
+  "version": "3.7.1",
   "description": "MCP server for Devigner Icons: lets AI coding tools search 2,496 icons by meaning and drop them into React, Vue, Svelte, Solid, Angular, React Native or plain SVG.",
   "keywords": [
     "icons",

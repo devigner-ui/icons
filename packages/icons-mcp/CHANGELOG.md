@@ -1,5 +1,13 @@
 # @devigner-ui/icons-mcp
 
+## 3.7.1
+
+### Patch Changes
+
+- The README header now reads well in light and dark themes on both GitHub and npm, and its downloads badge shows installs across every package, the same number as the website.
+- Updated dependencies
+  - @devigner-ui/icons@3.7.1
+
 ## 3.7.0
 
 ### Minor Changes
