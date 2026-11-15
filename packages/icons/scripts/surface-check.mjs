@@ -365,6 +365,72 @@ check("every icon resolves as its own subpath", () => {
   assert.match(sample, /\bas default\b/, "the subpath lost its default export");
 });
 
+/*
+ * `import { IconShoppingCart } from "@devigner-ui/icons/bold"`, and
+ * `@devigner-ui/icons/bold/ShoppingCart`. Same promise as the pattern above,
+ * five times over: an exports entry for each style, and a file behind it for
+ * every icon. scripts/compile-icons.mjs writes them.
+ */
+check("every icon resolves under every style", () => {
+  const { exports } = JSON.parse(
+    readFileSync(new URL("../package.json", import.meta.url), "utf8"),
+  );
+  const names = readdirSync(new URL("../icons", import.meta.url))
+    .filter((f) => f.endsWith(".tsx"))
+    .map((f) => f.slice(0, -4));
+  const built = existsSync(new URL("../dist/outline", import.meta.url));
+  if (!built) console.log("--  dist not built, skipping the style files");
+
+  for (const style of ["outline", "twotone", "bold", "bulk", "broken"]) {
+    assert.equal(exports[`./${style}`]?.import, `./dist/${style}.js`);
+    assert.equal(exports[`./${style}`]?.require, `./dist/${style}.cjs`);
+    assert.equal(exports[`./${style}/*`]?.import, `./dist/${style}/*.js`);
+    assert.equal(exports[`./${style}/*`]?.require, `./dist/${style}/*.cjs`);
+    if (!built) continue;
+
+    const missing = names.filter((name) =>
+      [".js", ".cjs"].some((ext) => !existsSync(new URL(`../dist/${style}/${name}${ext}`, import.meta.url))),
+    );
+    assert.equal(missing.length, 0, `${missing.length} icons have no ${style} build: ${missing.slice(0, 5).join(", ")}`);
+
+    const root = readFileSync(new URL(`../dist/${style}.js`, import.meta.url), "utf8");
+    assert.equal((root.match(/^export \{ Icon/gm) ?? []).length, names.length);
+    assert.doesNotMatch(root, /forwardRef\(|one\(/, `the ${style} root bundled the artwork`);
+  }
+});
+
+/*
+ * The single-file roots in dist/node/ are for plain Node, which has no bundler
+ * to prune the modular ones and would otherwise load over 5,000 files. Which
+ * file a tool gets is decided by key order: it takes the first condition it
+ * knows. Bundlers know "module", Node does not, so "module" has to come before
+ * "node" or every bundler would ship all 2,496 icons. It did, in a test build
+ * that put them the other way round.
+ */
+check('plain Node gets the single-file roots, bundlers never do', () => {
+  const { exports } = JSON.parse(
+    readFileSync(new URL("../package.json", import.meta.url), "utf8"),
+  );
+  for (const [key, file] of [
+    [".", "index"],
+    ...["outline", "twotone", "bold", "bulk", "broken"].map((s) => [`./${s}`, s]),
+  ]) {
+    const order = Object.keys(exports[key]);
+    assert.ok(order.indexOf("module") >= 0, `${key} has no "module" condition`);
+    assert.ok(order.indexOf("module") < order.indexOf("node"), `${key}: "module" must come before "node"`);
+    assert.ok(order.indexOf("node") < order.indexOf("import"), `${key}: "node" must come before "import"`);
+    assert.equal(exports[key].module, exports[key].import, `${key}: bundlers get a different file than "import"`);
+    assert.equal(exports[key].node.import, `./dist/node/${file}.mjs`);
+    assert.equal(exports[key].node.require, exports[key].require, `${key}: require() should stay lazy`);
+    if (existsSync(new URL("../dist/node", import.meta.url))) {
+      assert.ok(
+        existsSync(new URL(`../${exports[key].node.import.slice(2)}`, import.meta.url)),
+        `${exports[key].node.import} is missing`,
+      );
+    }
+  }
+});
+
 /* Decorative unless named. An icon next to its own text label is announced
    twice otherwise, and none of these carried any aria at all before. */
 check("icons are hidden from screen readers unless labelled", () => {

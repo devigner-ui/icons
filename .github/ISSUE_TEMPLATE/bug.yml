@@ -1,0 +1,24 @@
+name: Bug report
+description: Something on the site, in the package, or in an icon is wrong
+labels: [bug]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: The page URL, or the icon name and style.
+      placeholder: https://icons.devigner.cc/category/arrows-direction/ArrowLeft/ - outline
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Browser or package version
+      placeholder: Firefox 141, or @devigner-ui/icons 3.6.0

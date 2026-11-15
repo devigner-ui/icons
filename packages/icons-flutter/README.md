@@ -1,6 +1,6 @@
 # devigner_icons
 
-10,560 drawings for Flutter: 2,112 symbols, each in outline, twotone, bold, bulk and broken. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn. Drawn with [flutter_svg](https://pub.dev/packages/flutter_svg).
+12,480 drawings for Flutter: 2,496 symbols, each in outline, twotone, bold, bulk and broken. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn. Drawn with [flutter_svg](https://pub.dev/packages/flutter_svg).
 
 ```bash
 flutter pub add devigner_icons
@@ -39,6 +39,17 @@ Names are the icon's name in lower camel case: `BagStraps` is `bagStraps`. A nam
 ## Accessibility
 
 Without a `semanticLabel` an icon is left out of the semantics tree, because an icon beside its own label is otherwise read out twice. With one, it is announced as an image.
+
+## Sponsors
+
+<a href="https://icons.devigner.cc/docs/guide/sponsors/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://sponsors.devigner.cc/sponsors.svg?theme=dark">
+    <img alt="Featured sponsors of Devigner Icons" src="https://sponsors.devigner.cc/sponsors.svg?theme=light">
+  </picture>
+</a>
+
+Devigner Icons is free. [Become a sponsor](https://icons.devigner.cc/docs/guide/sponsors/) to show your logo here.
 
 ## Licence
 

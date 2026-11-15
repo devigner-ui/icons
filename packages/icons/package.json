@@ -1,7 +1,7 @@
 {
   "name": "@devigner-ui/icons",
-  "version": "3.5.0",
-  "description": "10,560 open-source icons for React: 2,112 symbols, each in outline, twotone, bold, bulk and broken. Built on Solar Icon Set and Iconsax.",
+  "version": "3.7.0",
+  "description": "12,480 open-source icons for React: 2,496 symbols, each in outline, twotone, bold, bulk and broken. Built on Solar Icon Set and Iconsax.",
   "keywords": [
     "icons",
     "react",
@@ -35,6 +35,11 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "module": "./dist/index.js",
+      "node": {
+        "import": "./dist/node/index.mjs",
+        "require": "./dist/index.cjs"
+      },
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
@@ -43,6 +48,81 @@
     "./renames.json": "./dist/renames.json",
     "./styles.css": "./dist/styles.css",
     "./package.json": "./package.json",
+    "./outline": {
+      "types": "./dist/styles.d.ts",
+      "module": "./dist/outline.js",
+      "node": {
+        "import": "./dist/node/outline.mjs",
+        "require": "./dist/outline.cjs"
+      },
+      "import": "./dist/outline.js",
+      "require": "./dist/outline.cjs"
+    },
+    "./outline/*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/outline/*.js",
+      "require": "./dist/outline/*.cjs"
+    },
+    "./twotone": {
+      "types": "./dist/styles.d.ts",
+      "module": "./dist/twotone.js",
+      "node": {
+        "import": "./dist/node/twotone.mjs",
+        "require": "./dist/twotone.cjs"
+      },
+      "import": "./dist/twotone.js",
+      "require": "./dist/twotone.cjs"
+    },
+    "./twotone/*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/twotone/*.js",
+      "require": "./dist/twotone/*.cjs"
+    },
+    "./bold": {
+      "types": "./dist/styles.d.ts",
+      "module": "./dist/bold.js",
+      "node": {
+        "import": "./dist/node/bold.mjs",
+        "require": "./dist/bold.cjs"
+      },
+      "import": "./dist/bold.js",
+      "require": "./dist/bold.cjs"
+    },
+    "./bold/*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/bold/*.js",
+      "require": "./dist/bold/*.cjs"
+    },
+    "./bulk": {
+      "types": "./dist/styles.d.ts",
+      "module": "./dist/bulk.js",
+      "node": {
+        "import": "./dist/node/bulk.mjs",
+        "require": "./dist/bulk.cjs"
+      },
+      "import": "./dist/bulk.js",
+      "require": "./dist/bulk.cjs"
+    },
+    "./bulk/*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/bulk/*.js",
+      "require": "./dist/bulk/*.cjs"
+    },
+    "./broken": {
+      "types": "./dist/styles.d.ts",
+      "module": "./dist/broken.js",
+      "node": {
+        "import": "./dist/node/broken.mjs",
+        "require": "./dist/broken.cjs"
+      },
+      "import": "./dist/broken.js",
+      "require": "./dist/broken.cjs"
+    },
+    "./broken/*": {
+      "types": "./dist/icons/*.d.ts",
+      "import": "./dist/broken/*.js",
+      "require": "./dist/broken/*.cjs"
+    },
     "./3dcube": {
       "types": "./dist/aliases/3dcube.d.ts",
       "import": "./dist/aliases/3dcube.js",

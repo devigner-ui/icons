@@ -34,3 +34,7 @@ gets its name appended to `NEW_ICONS` in `../website/src/lib/newIcons.ts`, in
 the same change. The website's `/admin` workbench lists those under its **New**
 tab, which is where REMI previews and tests icons before they ship. Never remove
 names from that list unless REMI asks.
+
+## Sponsors
+
+Sponsors are shared across remifybot.com, ui.devigner.cc and icons.devigner.cc, and run by the sponsor service in `../sponsors`. Before you touch anything sponsor-related here (the Sponsors block in each README, which embeds `sponsors.svg`), read `../sponsors/GUIDE.md` and follow it. It says where every sponsor spot is, what each tier promises, and which four places must change together. When you change how sponsors work here, update that guide in the same change.

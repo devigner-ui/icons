@@ -35,11 +35,21 @@ const IconBaseball = forwardRef<SVGSVGElement, IconProps>(function IconBaseball(
           {...a11y}
           {...rest}
         >
+          {/* Dashes sit where Bold and Bulk cut their stitches; the two seams are
+               each other turned half a turn, so the second runs the pattern backwards. */}
           <path
-            d="M13.2 2.07s-1.1 4.1 1.4 8.43 6.6 5.43 6.6 5.43M2.8 8.07s4.1 1.1 6.6 5.43 1.4 8.43 1.4 8.43"
+            d="M13.2 2.07s-1.1 4.1 1.4 8.43 6.6 5.43 6.6 5.43"
             stroke="currentColor"
             strokeWidth={strokeWidth}
-            strokeDasharray="1.5 2"
+            strokeLinecap="round"
+            strokeDasharray="0.94 2.49 1.88 2.49 1.88 2.48 1.89 2.85 2"
+          />
+          <path
+            d="M2.8 8.07s4.1 1.1 6.6 5.43 1.4 8.43 1.4 8.43"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray="0.57 2.85 1.89 2.48 1.88 2.49 1.88 2.49 2"
           />
           <path
             d="M7 3.34A10 10 0 1 1 3.34 7"
@@ -66,12 +76,23 @@ const IconBaseball = forwardRef<SVGSVGElement, IconProps>(function IconBaseball(
             stroke="currentColor"
             strokeWidth={strokeWidth}
           />
+          {/* Dashes sit where Bold and Bulk cut their stitches; the two seams are
+               each other turned half a turn, so the second runs the pattern backwards. */}
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="M13.2 2.07s-1.1 4.1 1.4 8.43 6.6 5.43 6.6 5.43M2.8 8.07s4.1 1.1 6.6 5.43 1.4 8.43 1.4 8.43"
+            d="M13.2 2.07s-1.1 4.1 1.4 8.43 6.6 5.43 6.6 5.43"
             stroke="currentColor"
             strokeWidth={strokeWidth}
-            strokeDasharray="1.5 2"
+            strokeLinecap="round"
+            strokeDasharray="0.94 2.49 1.88 2.49 1.88 2.48 1.89 2.85 2"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="M2.8 8.07s4.1 1.1 6.6 5.43 1.4 8.43 1.4 8.43"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+            strokeDasharray="0.57 2.85 1.89 2.48 1.88 2.49 1.88 2.49 2"
           />
         </svg>
       ) : duotone ? (

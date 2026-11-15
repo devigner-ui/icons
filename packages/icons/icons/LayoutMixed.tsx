@@ -115,6 +115,7 @@ const IconLayoutMixed = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
+              opacity={duotone ? "0.4" : "1"}
               fillRule="evenodd"
               clipRule="evenodd"
               d="M2 6.63a4.63 4.63 0 1 1 9.27 0 4.63 4.63 0 0 1-9.27 0"
@@ -132,7 +133,6 @@ const IconLayoutMixed = forwardRef<SVGSVGElement, IconProps>(
               fill="currentColor"
             />
             <path
-              opacity={duotone ? "0.4" : "1"}
               d="M13 6.5c0-2.12 0-3.18.66-3.84S15.38 2 17.5 2s3.18 0 3.84.66S22 4.38 22 6.5s0 3.18-.66 3.84-1.72.66-3.84.66-3.18 0-3.84-.66S13 8.62 13 6.5"
               fill="currentColor"
             />

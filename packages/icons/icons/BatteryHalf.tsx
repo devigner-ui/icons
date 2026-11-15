@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useId } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
@@ -20,6 +20,10 @@ const IconBatteryHalf = forwardRef<SVGSVGElement, IconProps>(
     const a11y: SVGProps<SVGSVGElement> = labelled
       ? { role: "img" }
       : { "aria-hidden": true };
+
+    /* Bold cuts the two bars out of the body; Bulk trims the terminal to the
+       body's edge so the solid terminal meets the dimmed body without a gap. */
+    const cut = useId();
 
     return (
       <>
@@ -113,20 +117,24 @@ const IconBatteryHalf = forwardRef<SVGSVGElement, IconProps>(
           >
             <path
               opacity={duotone ? "0.4" : "1"}
-              d="M3.17 5.17C2 6.34 2 8.23 2 12s0 5.66 1.17 6.83S6.23 20 10 20h1.5c3.77 0 5.66 0 6.83-1.17S19.5 15.77 19.5 12s0-5.66-1.17-6.83S15.27 4 11.5 4H10C6.23 4 4.34 4 3.17 5.17"
+              d="M1.25 12c0-4.12 0-6.19 1.28-7.47S5.88 3.25 10 3.25h1.5c4.12 0 6.19 0 7.47 1.28s1.28 3.35 1.28 7.47 0 6.19-1.28 7.47-3.35 1.28-7.47 1.28H10c-4.12 0-6.19 0-7.47-1.28S1.25 16.12 1.25 12z"
+              fill="currentColor"
+            />
+            <mask id={cut} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+              <rect width="24" height="24" fill="white" />
+              <path d="M1.25 12c0-4.12 0-6.19 1.28-7.47S5.88 3.25 10 3.25h1.5c4.12 0 6.19 0 7.47 1.28s1.28 3.35 1.28 7.47 0 6.19-1.28 7.47-3.35 1.28-7.47 1.28H10c-4.12 0-6.19 0-7.47-1.28S1.25 16.12 1.25 12z" fill="black" />
+            </mask>
+            <path
+              d="M19.5 9.25h.75c1.05 0 1.69 0 2.09.41.41.4.41 1.04.41 2.34s0 1.94-.41 2.34c-.4.41-1.04.41-2.09.41h-.75z"
+              mask={`url(#${cut})`}
               fill="currentColor"
             />
             <path
-              d="M19.5 14v-4h.5c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7s0 1.41-.3 1.7c-.29.3-.76.3-1.7.3z"
-              fill="currentColor"
-            />
-            <path
-              d="M6.64 8.34a.75.75 0 0 1 1.02.3L7 9l.66-.36.01.03.1.23q.1.21.2.63A10 10 0 0 1 8.26 12a10 10 0 0 1-.27 2.47 5 5 0 0 1-.3.86l-.02.02v.01a.75.75 0 0 1-1.32-.71v-.02l.04-.08q.06-.13.14-.45c.11-.42.23-1.11.23-2.1a9 9 0 0 0-.37-2.55l-.04-.08v-.01a.75.75 0 0 1 .3-1.02"
-              fill="currentColor"
-            />
-            <path
-              d="M11.16 8.64a.75.75 0 0 0-1.32.72l.04.1q.06.12.14.44c.11.42.23 1.11.23 2.1a9 9 0 0 1-.37 2.55l-.04.08v.02a.75.75 0 0 0 1.32.71L10.5 15l.66.36.01-.03.1-.22q.1-.22.2-.64a10 10 0 0 0 .28-2.47 10 10 0 0 0-.27-2.47 5 5 0 0 0-.3-.86z"
-              fill="currentColor"
+              d="M7 9s.5.9.5 3-.5 3-.5 3m3.5-6s.5.9.5 3-.5 3-.5 3"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </svg>
         ) : (
@@ -142,10 +150,17 @@ const IconBatteryHalf = forwardRef<SVGSVGElement, IconProps>(
             {...a11y}
             {...rest}
           >
+            <mask id={cut} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+              <rect width="24" height="24" fill="white" />
+              <path d="M7 9s.5.9.5 3-.5 3-.5 3m3.5-6s.5.9.5 3-.5 3-.5 3" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </mask>
             <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M3.17 5.17C2 6.34 2 8.23 2 12s0 5.66 1.17 6.83S6.23 20 10 20h1.5c3.77 0 5.66 0 6.83-1.17.94-.94 1.13-2.35 1.16-4.83H20c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7s0-1.41-.3-1.7c-.29-.3-.76-.3-1.7-.3h-.5c-.04-2.48-.23-3.89-1.17-4.83C17.16 4 15.27 4 11.5 4H10C6.23 4 4.34 4 3.17 5.17m4.49 3.47a.75.75 0 0 0-1.32.71v.02l.04.08q.06.13.14.45c.11.42.23 1.11.23 2.1a9 9 0 0 1-.37 2.55l-.04.08v.01a.75.75 0 0 0 1.32.72L7 15l.66.36.01-.03.1-.22q.1-.22.2-.64A10 10 0 0 0 8.26 12a10 10 0 0 0-.27-2.47 5 5 0 0 0-.3-.86zM7 9l.66-.36zm3.14-.66a.75.75 0 0 1 1.02.3L10.5 9l.66-.36.01.03.1.22q.1.22.2.64a10 10 0 0 1 .28 2.47 10 10 0 0 1-.27 2.47 5 5 0 0 1-.3.86l-.02.02v.01L10.5 15l.66.36a.75.75 0 0 1-1.32-.71v-.02l.04-.08q.06-.13.14-.45c.11-.42.23-1.11.23-2.1a9 9 0 0 0-.37-2.55l-.04-.08v-.02a.75.75 0 0 1 .3-1"
+              d="M1.25 12c0-4.12 0-6.19 1.28-7.47S5.88 3.25 10 3.25h1.5c4.12 0 6.19 0 7.47 1.28s1.28 3.35 1.28 7.47 0 6.19-1.28 7.47-3.35 1.28-7.47 1.28H10c-4.12 0-6.19 0-7.47-1.28S1.25 16.12 1.25 12z"
+              mask={`url(#${cut})`}
+              fill="currentColor"
+            />
+            <path
+              d="M19.5 9.25h.75c1.05 0 1.69 0 2.09.41.41.4.41 1.04.41 2.34s0 1.94-.41 2.34c-.4.41-1.04.41-2.09.41h-.75z"
               fill="currentColor"
             />
           </svg>

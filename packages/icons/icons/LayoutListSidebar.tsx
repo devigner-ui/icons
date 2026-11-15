@@ -123,12 +123,12 @@ const IconLayoutListSidebar = forwardRef<SVGSVGElement, IconProps>(
             {...rest}
           >
             <path
-              opacity={duotone ? "0.4" : "1"}
+              opacity="0.7"
               d="M22 7.81v.69H9V2h7.19C19.83 2 22 4.17 22 7.81"
               fill="currentColor"
             />
             <path
-              opacity={duotone ? "0.4" : "1"}
+              opacity="0.25"
               d="M22 15.5v.69c0 3.64-2.17 5.81-5.81 5.81H9v-6.5z"
               fill="currentColor"
             />

@@ -2,6 +2,7 @@ import { defineConfig } from 'tsup';
 import fs from 'fs';
 import path from 'path';
 import { activeRenames } from './scripts/renames.mjs';
+import { compileIcons } from './scripts/compile-icons.mjs';
 
 /*
  * There is no build-time gate any more. Bulk used to be stripped from 1,682
@@ -31,11 +32,13 @@ export default defineConfig({
     index: 'src/index.ts',
     /* Shared by every deprecated alias written in onSuccess below. */
     renamed: 'icons/renamed.ts',
+    /* Shared by every icon scripts/compile-icons.mjs rewrites in onSuccess. */
+    runtime: 'icons/runtime.ts',
     ...iconEntries,
   },
   format: ['esm', 'cjs'],
-  /* Only the root goes through the declaration bundler. Rolling up 2,112
-     more entries takes minutes and would emit the same three lines each time,
+  /* Only the root goes through the declaration bundler. Rolling up every
+     icon entry takes minutes and would emit the same three lines each time,
      so onSuccess writes those by hand below. */
   dts: { entry: 'src/index.ts' },
   splitting: false,
@@ -152,6 +155,10 @@ export default defineConfig({
        and anyone's own tooling read old names from it long after the aliases
        are gone. */
     fs.copyFileSync(path.resolve('scripts/renames.json'), path.resolve('dist/renames.json'));
+
+    /* Last, once every file above is final: rewrite each built icon as data
+       for the shared renderer and write the per-style entries beside them. */
+    await compileIcons();
   },
   esbuildOptions(esbuild) {
     esbuild.alias = {

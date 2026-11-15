@@ -269,23 +269,15 @@ fails and step 5 passed, the artwork is the cause, not the plumbing.
 
 ## 7. Update the counts
 
-> `pnpm add-icons` does this. By hand:
+> Automatic. Nothing to type.
 
-Several descriptions and READMEs state the totals in prose, and nothing
-regenerates them:
+The READMEs, package descriptions, `PRODUCT.md` and `DESIGN.md` state the
+symbol and drawing totals in prose. `scripts/counts.mjs` rewrites them from the
+set itself every time `generate:metadata` runs (step 4, and every `pnpm build`),
+so an icon added by hand moves them too. To make another file follow, add it to
+`COUNTED` in that script.
 
-```bash
-grep -rn "2,142\|8,568" --include="*.md" --include="*.json" \
-  README.md packages/*/README.md packages/*/package.json
-```
-
-The new totals are the symbol count and symbols × 4. Both appear in the five
-published `package.json` descriptions and in the six READMEs. The generated
-number to copy from is `totalIcons` in `packages/icons/src/metadata.json`, which
-step 4 just rewrote.
-
-Comments in the scripts also say 2,142. They are prose about a past bug, not
-assertions — leave them.
+CHANGELOGs are left alone on purpose: their totals are history.
 
 ## 8. Changeset
 

@@ -33,6 +33,7 @@ const SUPPORTED = new Set([
   "rect",
   "defs",
   "clipPath",
+  "mask",
 ]);
 
 function assertSupported(nodes, where) {

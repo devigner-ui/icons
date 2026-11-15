@@ -14,7 +14,7 @@
  * second copy of the artwork to drift away from dist/index.js.
  *
  * A library, not a writer: @devigner-ui/icons-svg is what turns this into files
- * on disk, because 8,568 drawings are 5.6MB that every React consumer would
+ * on disk, because the whole set of drawings is megabytes that every React consumer would
  * otherwise install to never open. Run directly, it renders the whole set and
  * asserts on it, the check that the build did not lose artwork.
  *
@@ -66,6 +66,21 @@ function forFile(markup) {
     .replace(' focusable="false"', "");
 }
 
+/*
+ * A mask or clip drawn with useId() renders with React's generated id (":R0:",
+ * "«r0»"), the same in every static render. Inlined beside another icon on one
+ * page, the second icon's url(#…) would find the first icon's mask. Each file
+ * gets ids of its own instead: `${prefix}-0`, `${prefix}-1`, in order.
+ */
+const GENERATED_ID = /id="((?::[^"]*:)|(?:«[^"]*»))"/g;
+function ownIds(markup, prefix) {
+  const ids = [...new Set([...markup.matchAll(GENERATED_ID)].map((m) => m[1]))];
+  return ids.reduce(
+    (out, id, i) => out.split(`id="${id}"`).join(`id="${prefix}-${i}"`).split(`url(#${id})`).join(`url(#${prefix}-${i})`),
+    markup,
+  );
+}
+
 /** Every drawing, keyed by icon name then style. Renders, never parses. */
 export async function allSvgs(only) {
   const bundle = new URL("index.js", DIST);
@@ -90,9 +105,11 @@ export async function allSvgs(only) {
 
     const drawings = {};
     for (const style of [...STANDARD_STYLES, ...(broken.has(name) ? ["broken"] : [])]) {
-      const markup = forFile(
-        renderToStaticMarkup(h(Icon, { variant: VARIANT[style] })),
+      const markup = ownIds(
+        forFile(renderToStaticMarkup(h(Icon, { variant: VARIANT[style] }))),
+        `${name}-${style}`,
       );
+      assert.doesNotMatch(markup, new RegExp(GENERATED_ID.source), `${name} ${style} kept a React-generated id`);
       /* A style that renders to nothing is a build that lost artwork, which is
          the failure this whole file exists to make impossible to ship. */
       assert.match(markup, /^<svg[\s>]/, `${name} ${style} is not an <svg>`);

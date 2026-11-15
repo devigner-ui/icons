@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useId } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
@@ -19,6 +19,9 @@ const IconHeartAdd = forwardRef<SVGSVGElement, IconProps>(function IconHeartAdd(
   const a11y: SVGProps<SVGSVGElement> = labelled
     ? { role: "img" }
     : { "aria-hidden": true };
+
+  /* Bold cuts the heart around the plus disc with an even gap. */
+  const cut = useId();
 
   return (
     <>
@@ -128,7 +131,7 @@ const IconHeartAdd = forwardRef<SVGSVGElement, IconProps>(function IconHeartAdd(
         >
           <path
             fill="currentColor"
-            d="M20.68 13.91a4.8 4.8 0 1 0 0 .01m-1.69 4.1h-1.04v1.09c0 .41-.34.75-.75.75s-.75-.34-.75-.75v-1.09h-1.04a.74.74 0 0 1-.75-.75c0-.41.32-.74.74-.75h1.05v-1l.01-.06a.74.74 0 0 1 .74-.69c.4 0 .73.32.75.72v1.03h1.04c.42 0 .75.34.75.75 0 .42-.33.75-.75.75"
+            d="M17.2 10.98a5.55 5.55 0 1 0 0 11.1 5.55 5.55 0 0 0 0-11.1zm-.75 3.76a.75.75 0 0 1 1.5 0v1.04h1.04a.75.75 0 0 1 0 1.5h-1.04v1.04a.75.75 0 0 1-1.5 0v-1.04h-1.04a.75.75 0 0 1 0-1.5h1.04z"
           />
           <path
             fill="currentColor"
@@ -151,11 +154,16 @@ const IconHeartAdd = forwardRef<SVGSVGElement, IconProps>(function IconHeartAdd(
         >
           <path
             fill="currentColor"
-            d="M20.68 13.9a4.8 4.8 0 1 0 0 .01M18.99 18h-1.04v1.09c0 .4-.34.75-.75.75s-.75-.34-.75-.75V18h-1.04a.74.74 0 0 1-.75-.74c0-.41.32-.74.74-.75h1.05v-1l.01-.06a.74.74 0 0 1 .74-.7c.4 0 .73.33.75.73v1.03h1.04c.42 0 .75.34.75.75 0 .42-.33.75-.75.75"
+            d="M17.2 10.98a5.55 5.55 0 1 0 0 11.1 5.55 5.55 0 0 0 0-11.1zm-.75 3.76a.75.75 0 0 1 1.5 0v1.04h1.04a.75.75 0 0 1 0 1.5h-1.04v1.04a.75.75 0 0 1-1.5 0v-1.04h-1.04a.75.75 0 0 1 0-1.5h1.04z"
           />
+          <mask id={cut} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+              <rect width="24" height="24" fill="white" />
+              <circle cx="17.2" cy="16.53" r="6.3" fill="black" />
+            </mask>
           <path
             fill="currentColor"
-            d="M22 8.73q-.01 1.78-.52 3.31c-.06.21-.31.27-.49.14a6.4 6.4 0 0 0-3.79-1.24 6.3 6.3 0 0 0-5.49 9.38c.16.28-.03.64-.33.53-2.41-.82-7.28-3.81-8.86-8.81A11 11 0 0 1 2 8.73a5.55 5.55 0 0 1 10-3.36 5.6 5.6 0 0 1 4.44-2.23c3.07 0 5.56 2.5 5.56 5.59"
+            d="M22 8.69a11 11 0 0 1-1.32 5.21 4.8 4.8 0 0 0-7.05 6.5q-.56.26-1.01.41c-.34.12-.9.12-1.24 0C8.97 19.99 4.1 17 2.52 12A11 11 0 0 1 2 8.69a5.55 5.55 0 0 1 10-3.36 5.6 5.6 0 0 1 4.44-2.23C19.51 3.1 22 5.6 22 8.69"
+            mask={`url(#${cut})`}
           />
         </svg>
       )}

@@ -1,6 +1,6 @@
 # Devigner.Icons.Blazor
 
-10,560 drawings for Blazor: 2,112 symbols, each in outline, twotone, bold, bulk and broken. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn. .NET 8 and newer, in every render mode.
+12,480 drawings for Blazor: 2,496 symbols, each in outline, twotone, bold, bulk and broken. The same artwork as [`@devigner-ui/icons`](https://www.npmjs.com/package/@devigner-ui/icons), rendered from it rather than redrawn. .NET 8 and newer, in every render mode.
 
 ```bash
 dotnet add package Devigner.Icons.Blazor
@@ -30,6 +30,17 @@ Names are the icon's name; one that starts with a digit gets a `_` in front (`Dv
 ## Accessibility
 
 Icons render `aria-hidden="true"` by default, because an icon beside its own label is otherwise read out twice. An `aria-label` promotes one to an image.
+
+## Sponsors
+
+<a href="https://icons.devigner.cc/docs/guide/sponsors/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://sponsors.devigner.cc/sponsors.svg?theme=dark">
+    <img alt="Featured sponsors of Devigner Icons" src="https://sponsors.devigner.cc/sponsors.svg?theme=light">
+  </picture>
+</a>
+
+Devigner Icons is free. [Become a sponsor](https://icons.devigner.cc/docs/guide/sponsors/) to show your logo here.
 
 ## Licence
 

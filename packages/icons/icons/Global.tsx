@@ -36,19 +36,13 @@ const IconGlobal = forwardRef<SVGSVGElement, IconProps>(function IconGlobal(
           {...rest}
         >
           <path
-            d="M7 3.34A10 10 0 1 1 3.34 7"
+            d="M5.83 4.13a10 10 0 1 1-1.7 1.7"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M14.83 19.07a7 7 0 0 1-1.3 2.17Q12.8 22 12 22t-1.53-.76a7 7 0 0 1-1.3-2.17q-.55-1.41-.87-3.24a24 24 0 0 1 0-7.66q.3-1.83.87-3.24.56-1.4 1.3-2.17Q11.2 2.01 12 2q.8 0 1.53.76.74.76 1.3 2.17.55 1.41.87 3.24a24 24 0 0 1 0 7.66"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-          <path
-            d="M2 12h8m12 0h-8"
+            d="M2 12h20m-6 0q0 1.98-.3 3.83-.3 1.83-.87 3.24a7 7 0 0 1-1.3 2.17q-.73.75-1.53.76-.8 0-1.53-.76a7 7 0 0 1-1.3-2.17q-.55-1.41-.87-3.24a24 24 0 0 1 0-7.66q.3-1.83.87-3.24.56-1.4 1.3-2.17Q11.2 2.01 12 2q.8 0 1.53.76.74.76 1.3 2.17.55 1.41.87 3.24.3 1.85.3 3.83"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"

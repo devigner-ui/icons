@@ -42,49 +42,49 @@ const IconSunLongRays = forwardRef<SVGSVGElement, IconProps>(function IconSunLon
             strokeLinecap="round"
           />
           <path
-            d="M12 2v2"
+            d="M12 2v3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M12 20v2"
+            d="M12 19v3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M4 12H2"
+            d="M5 12H2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M22 12h-2"
+            d="M22 12h-3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="m19.78 4.22-2.22 2.03"
+            d="m19.07 4.93-2.12 2.12"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="m4.22 4.22 2.22 2.03"
+            d="m4.93 4.93 2.12 2.12"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="m6.44 17.56-2.22 2.22"
+            d="m7.05 16.95-2.12 2.12"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="m19.78 19.78-2.22-2.22"
+            d="m19.07 19.07-2.12-2.12"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -111,53 +111,53 @@ const IconSunLongRays = forwardRef<SVGSVGElement, IconProps>(function IconSunLon
             strokeWidth={strokeWidth}
           />
           <path
-            d="M12 2v2"
+            d="M12 2v3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M12 20v2"
+            d="M12 19v3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M4 12H2"
+            d="M5 12H2"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
-            d="M22 12h-2"
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-          />
-          <path
-            opacity={duotone ? "0.4" : "1"}
-            d="m19.78 4.22-2.22 2.03"
+            d="M22 12h-3"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m4.22 4.22 2.22 2.03"
+            d="m19.07 4.93-2.12 2.12"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m6.44 17.56-2.22 2.22"
+            d="m4.93 4.93 2.12 2.12"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
           <path
             opacity={duotone ? "0.4" : "1"}
-            d="m19.78 19.78-2.22-2.22"
+            d="m7.05 16.95-2.12 2.12"
+            stroke="currentColor"
+            strokeWidth={strokeWidth}
+            strokeLinecap="round"
+          />
+          <path
+            opacity={duotone ? "0.4" : "1"}
+            d="m19.07 19.07-2.12-2.12"
             stroke="currentColor"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
@@ -180,24 +180,24 @@ const IconSunLongRays = forwardRef<SVGSVGElement, IconProps>(function IconSunLon
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M12 1.25c.41 0 .75.34.75.75v2a.75.75 0 0 1-1.5 0V2c0-.41.34-.75.75-.75M1.25 12c0-.41.34-.75.75-.75h2a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m18 0c0-.41.34-.75.75-.75h2a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1-.75-.75M12 19.25c.41 0 .75.34.75.75v2a.75.75 0 0 1-1.5 0v-2c0-.41.34-.75.75-.75"
+            d="M12.75 5V2a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0ZM5 11.25H2a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5Zm14 1.5h3a.75.75 0 0 0 0-1.5h-3a.75.75 0 0 0 0 1.5ZM11.25 19v3a.75.75 0 0 0 1.5 0v-3a.75.75 0 0 0-1.5 0Z"
             fill="currentColor"
           />
           <g opacity={duotone ? "0.4" : "1"}>
             <path
-              d="M3.67 3.72a.75.75 0 0 1 1.06-.05L6.95 5.7a.75.75 0 0 1-1.01 1.1L3.72 4.79a.75.75 0 0 1-.05-1.06"
+              d="M7.58 6.52 5.46 4.4A.75.75 0 0 0 4.4 5.46l2.12 2.12a.75.75 0 0 0 1.06-1.06Z"
               fill="currentColor"
             />
             <path
-              d="M20.33 3.72c.28.3.26.78-.05 1.06L18.06 6.8a.75.75 0 0 1-1.01-1.11l2.22-2.03a.75.75 0 0 1 1.06.05"
+              d="m17.48 7.58 2.12-2.12a.75.75 0 0 0-1.06-1.06l-2.12 2.12a.75.75 0 0 0 1.06 1.06Z"
               fill="currentColor"
             />
             <path
-              d="M17.03 17.02a.75.75 0 0 1 1.06 0l2.22 2.23a.75.75 0 1 1-1.06 1.06l-2.22-2.22a.75.75 0 0 1 0-1.07"
+              d="m16.42 17.48 2.12 2.12a.75.75 0 0 0 1.06-1.06l-2.12-2.12a.75.75 0 0 0-1.06 1.06Z"
               fill="currentColor"
             />
             <path
-              d="M6.97 17.02c.3.3.3.77 0 1.07L4.75 20.3a.75.75 0 0 1-1.06-1.06l2.22-2.23a.75.75 0 0 1 1.06 0"
+              d="M6.52 16.42 4.4 18.54a.75.75 0 0 0 1.06 1.06l2.12-2.12a.75.75 0 0 0-1.06-1.06Z"
               fill="currentColor"
             />
           </g>
@@ -219,7 +219,7 @@ const IconSunLongRays = forwardRef<SVGSVGElement, IconProps>(function IconSunLon
           <path
             fillRule="evenodd"
             clipRule="evenodd"
-            d="M12 1.25c.41 0 .75.34.75.75v2a.75.75 0 0 1-1.5 0V2c0-.41.34-.75.75-.75M3.67 3.72a.75.75 0 0 1 1.06-.05L6.95 5.7a.75.75 0 1 1-1.01 1.1L3.72 4.79a.75.75 0 0 1-.05-1.06m16.66 0c.28.3.26.78-.05 1.06L18.06 6.8a.75.75 0 0 1-1.01-1.11l2.22-2.03a.75.75 0 0 1 1.06.05M1.25 12c0-.41.34-.75.75-.75h2a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75m18 0c0-.41.34-.75.75-.75h2a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1-.75-.75m-2.22 5.03c.29-.3.76-.3 1.06 0l2.22 2.22a.75.75 0 0 1-1.06 1.06l-2.22-2.22a.75.75 0 0 1 0-1.06m-10.06 0c.3.29.3.76 0 1.06L4.75 20.3a.75.75 0 0 1-1.06-1.06l2.22-2.22c.3-.3.77-.3 1.06 0M12 19.25c.41 0 .75.34.75.75v2a.75.75 0 0 1-1.5 0v-2c0-.41.34-.75.75-.75"
+            d="M12.75 5V2a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0ZM5 11.25H2a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5Zm14 1.5h3a.75.75 0 0 0 0-1.5h-3a.75.75 0 0 0 0 1.5ZM11.25 19v3a.75.75 0 0 0 1.5 0v-3a.75.75 0 0 0-1.5 0ZM7.58 6.52 5.46 4.4A.75.75 0 0 0 4.4 5.46l2.12 2.12a.75.75 0 0 0 1.06-1.06Zm9.9 1.06 2.12-2.12a.75.75 0 0 0-1.06-1.06l-2.12 2.12a.75.75 0 0 0 1.06 1.06Zm-1.06 9.9 2.12 2.12a.75.75 0 0 0 1.06-1.06l-2.12-2.12a.75.75 0 0 0-1.06 1.06Zm-9.9-1.06L4.4 18.54a.75.75 0 0 0 1.06 1.06l2.12-2.12a.75.75 0 0 0-1.06-1.06Z"
             fill="currentColor"
           />
         </svg>

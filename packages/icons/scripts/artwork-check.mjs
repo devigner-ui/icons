@@ -60,6 +60,7 @@ function check() {
   }
 
   const wrong = [];
+  const uncompiled = [];
   for (const file of sources) {
     const name = file.slice(0, -4);
     const out = path.join(dist, `${name}.js`);
@@ -68,6 +69,18 @@ function check() {
       continue;
     }
     const component = readFileSync(out, "utf8");
+    /* compile-icons.mjs rewrites most icons as data for the shared renderer:
+       outline (which is also twotone), bold, bulk, broken, always four. It
+       counts the branches tsup built before it does, and renders every style
+       against the original, so a rewritten module only has to still be one,
+       with the data its CommonJS twin requires beside it. */
+    if (/= \/\* #__PURE__ \*\/ icon\(\[\[\[/.test(component)) {
+      if (!existsSync(path.join(ROOT, "dist", "data", `${name}.cjs`))) {
+        wrong.push(`${name} has no dist/data/${name}.cjs`);
+      }
+      continue;
+    }
+    uncompiled.push(name);
     const branches = (component.match(/viewBox:/g) ?? []).length;
     const expected = expectedBranches(readFileSync(path.join(ICONS_DIR, file), "utf8"));
     if (!new RegExp(`var Icon${name}\\s*=\\s*forwardRef\\(`).test(component)) {
@@ -85,6 +98,27 @@ function check() {
   }
 
   console.log(`ok  dist/icons: all ${sources.length} components complete`);
+
+  /*
+   * An icon compile-icons.mjs could not turn into data still ships, as the
+   * component it was written as: correct, but all four drawings come along in
+   * every style entry. Nothing else notices one more of those, so a change
+   * that quietly stops the compiler from handling a common pattern would ship
+   * hundreds. The ones today do arithmetic on the stroke width.
+   *
+   * Lower this when the count drops. Raise it only for an icon that cannot be
+   * drawn any other way, and name the reason.
+   */
+  /* 38: AiBookmarkPage calls useId() twice, for the TwoTone cut and the
+     Bold/Bulk gap, which compile-icons.mjs cannot turn into data. */
+  const MAX_UNCOMPILED = 38;
+  if (uncompiled.length > MAX_UNCOMPILED) {
+    throw new Error(
+      `${uncompiled.length} icons were not compiled to data, the ceiling is ${MAX_UNCOMPILED}: ` +
+        uncompiled.join(", "),
+    );
+  }
+  console.log(`ok  ${sources.length - uncompiled.length} icons compiled to data, ${uncompiled.length} kept as written`);
 }
 
 try {

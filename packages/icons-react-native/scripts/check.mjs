@@ -15,7 +15,7 @@
  * itself is not this package's code and is not tested here.
  *
  * The artwork is covered elsewhere and more strictly: build.mjs round-trips
- * every one of the 8,568 drawings through the parser and back to markup.
+ * every drawing in the set through the parser and back to markup.
  *
  *   node scripts/check.mjs        (after a build)
  */
@@ -47,7 +47,7 @@ process.on("exit", () => rmSync(work, { recursive: true, force: true }));
    renderer. */
 writeFileSync(
   path.join(work, "stub.js"),
-  ["Circle", "ClipPath", "Defs", "Ellipse", "G", "Path", "Rect"]
+  ["Circle", "ClipPath", "Defs", "Ellipse", "G", "Mask", "Path", "Rect"]
     .map((name) => `export const ${name} = "${name}";\n`)
     .join("") + `export default "Svg";\n`,
 );
@@ -78,6 +78,7 @@ const IconActivity = await load("Activity");
 /* AddItem is one of the 51 drawings with <defs> and a <clipPath>, so it is the
    one that proves nesting survived the parse. */
 const IconAddItem = await load("AddItem");
+const IconAiWriting = await load("AiWriting");
 
 /* Bag2 was renamed to BagStraps; the old name wraps the new component until
    the next major. Loaded beside its target so the relative import resolves. */
@@ -177,6 +178,17 @@ check("nested defs and clipPath survive the parse", () => {
   assert.ok(
     shapes(nested).some((e) => /^url\(#/.test(e.props.clipPath ?? "")),
     "nothing references the clip path",
+  );
+});
+
+check("a mask survives the parse, under the icon's own id", () => {
+  const masked = IconAiWriting({ variant: "bold" });
+  const mask = shapes(masked).find((e) => e.type === "Mask");
+  assert.ok(mask, "no Mask");
+  assert.equal(mask.props.id, "AiWriting-bold-0");
+  assert.ok(
+    shapes(masked).some((e) => e.props.mask === "url(#AiWriting-bold-0)"),
+    "nothing references the mask",
   );
 });
 

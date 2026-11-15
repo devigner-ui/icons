@@ -5,6 +5,7 @@ import Svg, {
   Defs,
   Ellipse,
   G,
+  Mask,
   Path,
   Rect,
 } from "react-native-svg";
@@ -26,6 +27,7 @@ const TAGS = {
   rect: Rect,
   defs: Defs,
   clipPath: ClipPath,
+  mask: Mask,
 };
 
 /** The styles strokeWidth reaches. */

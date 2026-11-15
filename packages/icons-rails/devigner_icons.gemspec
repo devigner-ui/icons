@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name = "devigner_icons"
   spec.version = DevignerIcons::VERSION
   spec.authors = ["Devigner"]
-  spec.summary = "10,560 open-source SVG icons for Rails: 2,112 symbols in outline, twotone, bold, bulk and broken."
+  spec.summary = "12,480 open-source SVG icons for Rails: 2,496 symbols in outline, twotone, bold, bulk and broken."
   spec.description = "Devigner Icons as an inline-SVG view helper for Rails and any other Ruby app. Built on Solar Icon Set and Iconsax."
   spec.homepage = "https://icons.devigner.cc"
   spec.licenses = ["MIT", "CC-BY-4.0"]

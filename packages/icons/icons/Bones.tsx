@@ -1,4 +1,4 @@
-import { forwardRef } from "react";
+import { forwardRef, useId } from "react";
 import type { SVGProps } from "react";
 import type { IconProps } from "./types";
 
@@ -19,6 +19,8 @@ const IconBones = forwardRef<SVGSVGElement, IconProps>(function IconBones(
   const a11y: SVGProps<SVGSVGElement> = labelled
     ? { role: "img" }
     : { "aria-hidden": true };
+
+  const clip = useId();
 
   return (
     <>
@@ -69,7 +71,14 @@ const IconBones = forwardRef<SVGSVGElement, IconProps>(function IconBones(
           {...a11y}
           {...rest}
         >
+          {/* TwoTone dims the bones instead of the frame and keeps them inside the
+             frame's centerline, so their ends sit under the solid stroke. */}
+          <clipPath id={clip}>
+            <path d="M2 12c0-4.71 0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46C22 4.93 22 7.3 22 12s0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12z" />
+          </clipPath>
           <path
+            opacity={duotone ? "0.4" : "1"}
+            clipPath={duotone ? `url(#${clip})` : undefined}
             d="M9.48 2.05v2.01c0 .56-.48 1-.96 1.27A3.4 3.4 0 0 0 6.96 8.1a2.52 2.52 0 0 0 5.04 0 2.52 2.52 0 0 0 5.04 0c0-1.05-.65-2.24-1.56-2.76-.48-.27-.96-.71-.96-1.27V2.05"
             stroke="currentColor"
             strokeWidth={strokeWidth}
@@ -77,6 +86,8 @@ const IconBones = forwardRef<SVGSVGElement, IconProps>(function IconBones(
             strokeLinejoin="round"
           />
           <path
+            opacity={duotone ? "0.4" : "1"}
+            clipPath={duotone ? `url(#${clip})` : undefined}
             d="M9.52 22v-2.01c0-.56-.48-1-.96-1.28A3.4 3.4 0 0 1 7 15.95a2.52 2.52 0 1 1 5.04 0 2.52 2.52 0 0 1 5.04 0c0 1.06-.65 2.24-1.56 2.76-.49.28-.96.72-.96 1.28V22"
             stroke="currentColor"
             strokeWidth={strokeWidth}
@@ -84,7 +95,6 @@ const IconBones = forwardRef<SVGSVGElement, IconProps>(function IconBones(
             strokeLinejoin="round"
           />
           <path
-            opacity={duotone ? "0.4" : "1"}
             d="M2 12c0-4.71 0-7.07 1.46-8.54C4.93 2 7.3 2 12 2s7.07 0 8.54 1.46C22 4.93 22 7.3 22 12s0 7.07-1.46 8.54C19.07 22 16.7 22 12 22s-7.07 0-8.54-1.46C2 19.07 2 16.7 2 12"
             stroke="currentColor"
             strokeWidth={strokeWidth}

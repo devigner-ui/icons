@@ -7,8 +7,8 @@ const IconMore = forwardRef<SVGSVGElement, IconProps>(function IconMore(
   ref,
 ) {
   /* One stroked glyph in all four core styles. Bold and Bulk fix the weight
-     at 2, the Text icons' Bold; Bulk keeps TwoTone's half-tone parts. They
-     used to cut the glyph out of a filled square the outline never had. */
+     at 2, the Text icons' Bold, and fill the dots solid; Bulk keeps
+     TwoTone's half-tone parts. */
   const fill = variant === "Bold" || variant === "Bulk";
   const duotone = variant === "TwoTone" || variant === "Bulk";
 
@@ -71,17 +71,20 @@ const IconMore = forwardRef<SVGSVGElement, IconProps>(function IconMore(
             d="M5 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2"
             stroke="currentColor"
             strokeWidth={fill ? "2" : strokeWidth}
+            fill={fill ? "currentColor" : "none"}
           />
           <path
             d="M19 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2"
             stroke="currentColor"
             strokeWidth={fill ? "2" : strokeWidth}
+            fill={fill ? "currentColor" : "none"}
           />
           <path
             opacity={duotone ? "0.4" : "1"}
             d="M12 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2"
             stroke="currentColor"
             strokeWidth={fill ? "2" : strokeWidth}
+            fill={fill ? "currentColor" : "none"}
           />
         </svg>
       )}

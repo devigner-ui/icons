@@ -118,7 +118,7 @@ const IconLayoutHeader = forwardRef<SVGSVGElement, IconProps>(
               fill="currentColor"
             />
             <path
-              opacity={duotone ? "0.4" : "1"}
+              opacity="0.7"
               d="M22 10v6.19c0 3.64-2.17 5.81-5.81 5.81H12V10z"
               fill="currentColor"
             />
